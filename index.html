@@ -1135,26 +1135,55 @@ function closeSearch() {
     document.getElementById("tinoText").focus();
   }
 
-  function sendTino(event) {
-    event.preventDefault();
-    const input = document.getElementById("tinoText");
-    const message = input.value.trim();
-    if (!message) return;
+ 
+async function sendTino(event) {
+  event.preventDefault();
 
-    const bubble = document.createElement("div");
-    bubble.className = "tino-bubble";
-    bubble.textContent = message;
-    bubble.style.background = "#e8f3f0";
+  const input = document.getElementById("tinoText");
+  const message = input.value.trim();
+  if (!message) return;
 
-    document.getElementById("tinoMessages").appendChild(bubble);
-    input.value = "";
+  const messages = document.getElementById("tinoMessages");
 
-    const notice = document.createElement("div");
-    notice.className = "tino-bubble";
-    notice.textContent = "Thanks for your message. The virtual assistant is being connected and cannot answer questions yet.";
-    document.getElementById("tinoMessages").appendChild(notice);
-    notice.scrollIntoView({ behavior: "smooth", block: "end" });
+  const bubble = document.createElement("div");
+  bubble.className = "tino-bubble";
+  bubble.textContent = message;
+  bubble.style.background = "#e8f3f0";
+  messages.appendChild(bubble);
+
+  input.value = "";
+
+  const reply = document.createElement("div");
+  reply.className = "tino-bubble";
+  reply.textContent = "Tino is thinking...";
+  messages.appendChild(reply);
+  reply.scrollIntoView({ behavior: "smooth", block: "end" });
+
+  try {
+    const response = await fetch(
+      "https://ask-tino-ai.scampilii.workers.dev/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Request failed");
+    }
+
+    reply.textContent = data.reply || "Please try again.";
+  } catch (error) {
+    reply.textContent =
+      "Tino is temporarily unavailable. Please try again.";
   }
+
+  reply.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
 </script>
 <!-- END ASK TINO -->
 </body>
