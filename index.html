@@ -160,7 +160,48 @@
 
     /* SEARCH */
 
-   .search-icon {
+  .search-icon {
+  font-size: 28px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  display: none;
+  position: absolute;
+  top: 82px;
+  right: 150px;
+  width: 420px;
+  max-width: calc(100vw - 40px);
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+  z-index: 3000;
+}
+
+.search-box.open {
+  display: flex;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+  color: #173246;
+}
+
+.search-box button {
+  border: none;
+  background: transparent;
+  color: #173246;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 0 8px;
+}
   font-size: 28px;
   line-height: 1;
   display: flex;
@@ -653,7 +694,10 @@
     <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
   </svg>
 </button>
-
+<div class="search-box" id="searchBox">
+  <input type="text" placeholder="Search properties, communities, Q&A...">
+  <button type="button" onclick="toggleSearch()">×</button>
+</div>
 
         <!-- We will replace this with the new business number -->
 
@@ -873,7 +917,11 @@
         .getElementById("sideMenu")
         .classList.remove("open");
     }
-
+function toggleSearch() {
+  document
+    .getElementById("searchBox")
+    .classList.toggle("open");
+}
   </script>
 
 </body>
