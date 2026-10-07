@@ -932,6 +932,230 @@ function closeSearch() {
   document.getElementById("searchBox").classList.remove("open");
 }
   </script>
+<!-- ASK TINO -->
+<style>
+  .tino-launcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 18px 9px 9px;
+    border: none;
+    border-radius: 60px;
+    background: #071b2d;
+    color: white;
+    font: 17px Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(0,0,0,.2);
+  }
 
+  .tino-launcher img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 22%;
+  }
+
+  .tino-dot {
+    width: 10px;
+    height: 10px;
+    background: #79dfb8;
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+
+  .tino-panel {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    height: 540px;
+    max-height: calc(100dvh - 125px);
+    background: #fafafa;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 45px rgba(0,0,0,.25);
+    z-index: 9999;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #071b2d;
+  }
+
+  .tino-panel.open { display: flex; }
+
+  .tino-header {
+    background: #071b2d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tino-header strong { font-size: 23px; font-weight: 500; }
+  .tino-header small { display: block; margin-top: 6px; color: #aab7c5; }
+
+  .tino-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .tino-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .tino-bubble {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .tino-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 20px;
+  }
+
+  .tino-options button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: #071b2d;
+  }
+
+  .tino-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .tino-input input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+  }
+
+  .tino-input button {
+    background: #071b2d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+
+  .tino-footer {
+    text-align: center;
+    font-size: 10px;
+    color: #65717c;
+    padding: 9px;
+    border-top: 1px solid #eee;
+  }
+
+  @media (max-width: 480px) {
+    .tino-launcher { right: 12px; bottom: 12px; }
+    .tino-panel {
+      right: 8px;
+      bottom: 85px;
+      max-width: calc(100vw - 16px);
+    }
+  }
+</style>
+
+<button class="tino-launcher" onclick="toggleTino()" aria-label="Open Ask Tino">
+  <img src="sabatino-campilii-i1.jpg" alt="Sabatino Campilii">
+  <span>Ask Tino</span>
+  <span class="tino-dot"></span>
+</button>
+
+<section class="tino-panel" id="tinoPanel" aria-label="Ask Tino virtual assistant">
+  <div class="tino-header">
+    <div>
+      <strong>Ask Tino</strong>
+      <small>Florida Gulf Coast Real Estate Assistant</small>
+    </div>
+    <button class="tino-close" onclick="toggleTino()" aria-label="Close chat">&times;</button>
+  </div>
+
+  <div class="tino-messages" id="tinoMessages">
+    <div class="tino-bubble">
+      Welcome! I'm Tino's virtual assistant. Are you looking to buy, sell,
+      invest, or simply explore Florida's Gulf Coast?
+    </div>
+  </div>
+
+  <div class="tino-options">
+    <button onclick="tinoSelect('I want to buy')">I want to buy</button>
+    <button onclick="tinoSelect('I want to sell')">I want to sell</button>
+    <button onclick="tinoSelect('I am investing')">I'm investing</button>
+    <button onclick="tinoSelect('Book a call')">Book a call</button>
+  </div>
+
+  <form class="tino-input" onsubmit="sendTino(event)">
+    <input id="tinoText" type="text" placeholder="Ask Tino anything..." aria-label="Your message">
+    <button type="submit" aria-label="Send message">&#8594;</button>
+  </form>
+
+  <div class="tino-footer">
+    Sabatino Campilii, Realtor® · LoKation® Real Estate · FL License #SL3363040
+    <div>Virtual assistant · Not a licensed real estate agent</div>
+  </div>
+</section>
+
+<script>
+  function toggleTino() {
+    const panel = document.getElementById("tinoPanel");
+    panel.classList.toggle("open");
+  }
+
+  function tinoSelect(message) {
+    document.getElementById("tinoText").value = message;
+    document.getElementById("tinoText").focus();
+  }
+
+  function sendTino(event) {
+    event.preventDefault();
+    const input = document.getElementById("tinoText");
+    const message = input.value.trim();
+    if (!message) return;
+
+    const bubble = document.createElement("div");
+    bubble.className = "tino-bubble";
+    bubble.textContent = message;
+    bubble.style.background = "#e8f3f0";
+
+    document.getElementById("tinoMessages").appendChild(bubble);
+    input.value = "";
+
+    const notice = document.createElement("div");
+    notice.className = "tino-bubble";
+    notice.textContent = "Thanks for your message. The virtual assistant is being connected and cannot answer questions yet.";
+    document.getElementById("tinoMessages").appendChild(notice);
+    notice.scrollIntoView({ behavior: "smooth", block: "end" });
+  }
+</script>
+<!-- END ASK TINO -->
 </body>
 </html>
