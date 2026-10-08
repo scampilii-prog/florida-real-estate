@@ -55,3 +55,25 @@ const SITE_TRANSLATIONS = {
     contact: "Contato"
   }
 };
+function applySiteLanguage() {
+  const language = getSiteLanguage();
+  const translations = SITE_TRANSLATIONS[language];
+
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.getAttribute("data-i18n");
+
+    if (translations[key]) {
+      element.textContent = translations[key];
+    }
+  });
+}
+
+window.addEventListener("siteLanguageChanged", applySiteLanguage);
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", applySiteLanguage);
+} else {
+  applySiteLanguage();
+}
