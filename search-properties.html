@@ -77,6 +77,15 @@ font-size: 12px; line-height: 1.8; }
 .location .rotonda-actions a{margin-top:14px;line-height:1.5;text-align:center}
 .location .rotonda-actions .community-info-link{background:#e5c895;color:#102b43}
 .location .rotonda-actions .community-info-link:hover{background:#d1aa68;color:#102b43}
+
+/* Consistent two-action buttons across all nine community cards */
+.location .rotonda-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.location .rotonda-actions a{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:235px;max-width:100%;min-height:48px;margin-top:0;padding:12px 14px;text-align:center;font-family:Manrope,Arial,sans-serif;font-size:12px;font-weight:700;line-height:1.4;border-radius:4px;text-decoration:none}
+.location .rotonda-actions a.community-info-link{background:#e5c895;color:#102b43}
+.location .rotonda-actions a.community-info-link:hover{background:#d1aa68;color:#102b43}
+.location .rotonda-actions a:not(.community-info-link){background:#102b43;color:#fff}
+.location .rotonda-actions a:not(.community-info-link):hover{background:#1b3d57;color:#fff}
+
 </style>
 </head>
 <body>
