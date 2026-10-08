@@ -411,7 +411,21 @@
       background: #fff;
       color: #183245;
     }
+/* Elegant button effects */
+.hero-actions a {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              transform 0.2s ease;
+}
 
+.hero-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.hero-actions a:active {
+  transform: scale(0.97);
+}
     /* =========================
        SIMPLE INTRO
     ========================== */
@@ -789,14 +803,14 @@
 
           <div class="hero-actions">
 
-            <a href="#"
+            <a href="search-properties.html"
                class="primary-button">
-              Search Properties
+              Find a House
             </a>
 
-            <a href="#explore"
+            <a href="search-properties.html?type=condo"
                class="secondary-button">
-              Explore the Gulf Coast
+              Find a Condo
             </a>
 
           </div>
