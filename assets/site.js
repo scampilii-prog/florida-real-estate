@@ -58,8 +58,8 @@ const SITE_TRANSLATIONS = {
 function applySiteLanguage() {
   const language = getSiteLanguage();
   const translations = SITE_TRANSLATIONS[language];
-
-  document.documentElement.lang = language;
+document.documentElement.lang = language;
+  document.getElementById("currentLanguage")?.textContent = language.toUpperCase();
 
   document.querySelectorAll("[data-i18n]").forEach(element => {
     const key = element.getAttribute("data-i18n");
