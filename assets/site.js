@@ -17,3 +17,41 @@ function setSiteLanguage(language) {
     detail: { language }
   }));
 }
+const SITE_TRANSLATIONS = {
+  en: {
+    search: "Search Properties",
+    buy: "Buy",
+    sell: "Sell",
+    communities: "Areas & Communities",
+    calculators: "Calculators",
+    about: "About",
+    contact: "Contact"
+  },
+  es: {
+    search: "Buscar propiedades",
+    buy: "Comprar",
+    sell: "Vender",
+    communities: "Áreas y comunidades",
+    calculators: "Calculadoras",
+    about: "Acerca de mí",
+    contact: "Contacto"
+  },
+  it: {
+    search: "Cerca immobili",
+    buy: "Acquistare",
+    sell: "Vendere",
+    communities: "Zone e comunità",
+    calculators: "Calcolatori",
+    about: "Chi sono",
+    contact: "Contatti"
+  },
+  pt: {
+    search: "Buscar imóveis",
+    buy: "Comprar",
+    sell: "Vender",
+    communities: "Áreas e comunidades",
+    calculators: "Calculadoras",
+    about: "Sobre mim",
+    contact: "Contato"
+  }
+};
