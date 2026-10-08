@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Properties | Florida Gulf Coast Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Manrope', sans-serif; color: #183245; background: #f8f9fa; }
+    header { background: #102b43; padding: 22px 6%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { color: white; font-size: 18px; font-weight: 700; text-decoration: none; }
+    .back { color: #e5c895; text-decoration: none; font-size: 13px; }
+    .intro { background: #102b43; color: white; padding: 75px 20px 85px; text-align: center; }
+    .eyebrow { color: #e5c895; text-transform: uppercase; letter-spacing: 3px; font-size: 11px; }
+    h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 500; line-height: 1.2; margin: 20px 0; }
+    .intro p { max-width: 650px; margin: auto; color: #d7e0e7; font-size: 15px; line-height: 1.9; }
+    .filters { display: flex; justify-content: center; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+    .filter { border: 1px solid #e5c895; color: white; background: transparent; border-radius: 4px; padding: 14px 27px; font: 600 13px 'Manrope', sans-serif; cursor: pointer; transition: .25s ease; }
+    .filter:hover { background: white; color: #102b43; transform: translateY(-2px); }
+    .filter.active { background: #e5c895; color: #102b43; }
+    main { max-width: 1150px; margin: auto; padding: 65px 24px 90px; }
+    h2 { font-size: 25px; font-weight: 600; margin: 0 0 12px; }
+    .description { font-size: 14px; color: #637380; line-height: 1.8; margin-bottom: 30px; }
+    .locations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .location { background: white; padding: 30px 25px; border: 1px solid #e5e9ed; border-radius: 7px; transition: .25s ease; }
+    .location:hover { box-shadow: 0 12px 30px #102b4315; transform: translateY(-3px); }
+    .location h3 { margin: 0 0 12px; font-size: 18px; font-weight: 600; }
+    .location p { font-size: 13px; color: #637380; line-height: 1.7; min-height: 45px; }
+    .location a { display: inline-block; margin-top: 14px; padding: 12px 16px; border-radius: 4px; background: #102b43; color: white; text-decoration: none; font-size: 12px; font-weight: 700; transition: .25s ease; }
+    .location a:hover { background: #c9a66b; color: #102b43; }
+    .notice { margin-top: 30px; font-size: 12px; line-height: 1.8; color: #637380; }
+    footer { background: #102b43; color: #d7e0e7; text-align: center; padding: 30px 20px; font-size: 12px; line-height: 1.8; }
+    @media(max-width: 850px) { .locations { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width: 580px) { .locations { grid-template-columns: 1fr; } header { padding: 18px 5%; } .brand { font-size: 15px; } .intro { padding: 60px 18px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Sabatino Campilii</a>
+    <a class="back" href="index.html">← Back to Home</a>
+  </header>
+
+  <section class="intro">
+    <div class="eyebrow">Florida Gulf Coast</div>
+    <h1 id="page-title">Find Your Place on the Gulf Coast</h1>
+    <p>Explore real estate opportunities in Southwest Florida's most desirable coastal communities. Choose your property type and preferred location.</p>
+    <div class="filters">
+      <button class="filter" data-type="house">Find a House</button>
+      <button class="filter" data-type="condo">Find a Condo</button>
+    </div>
+  </section>
+
+  <main>
+    <h2>Explore by Location</h2>
+    <p class="description">Select a community to view available properties through OneHome.</p>
+
+    <div class="locations">
+      <article class="location">
+        <h3>Rotonda West</h3>
+        <p>Golf communities, peaceful neighborhoods and Gulf Coast living.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930501t89184" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Boca Grande</h3>
+        <p>Island living, beaches and distinctive coastal homes.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930487I77513" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Cape Haze &amp; Placida</h3>
+        <p>Waterfront neighborhoods and access to the Gulf.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930491J56251" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Englewood &amp; Manasota Key</h3>
+        <p>Coastal communities with beaches and boating.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930496d56861" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Venice</h3>
+        <p>Historic downtown charm and Gulf Coast neighborhoods.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930502K33528" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Nokomis &amp; Casey Key</h3>
+        <p>Relaxed coastal living and waterfront properties.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930507L78648" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Punta Gorda Isles</h3>
+        <p>Canal-front neighborhoods and boating lifestyle.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930510k82865" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Siesta Key &amp; Longboat Key</h3>
+        <p>Barrier island living and coastal residences.</p>
+        <a href="https://portal.onehome.com/en-US/share/2930512R13063" target="_blank" rel="noopener noreferrer">View Properties →</a>
+      </article>
+      <article class="location">
+        <h3>Wellen Park</h3>
+        <p>Newer communities and growing Southwest Florida neighborhoods.</p>
+        <a href="mailto:scampilii@gmail.com?subject=Wellen%20Park%20Property%20Search">Request Properties →</a>
+      </article>
+    </div>
+
+    <p class="notice">Property collections are provided through OneHome. Individual collections may include multiple property types. Availability and listing details should be confirmed directly in OneHome.</p>
+  </main>
+
+  <footer>
+    Sabatino Campilii · Realtor® · LoKation® Real Estate<br>
+    Florida Gulf Coast Real Estate
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.filter');
+    function setType(type) {
+      buttons.forEach(button => {
+        const selected = button.dataset.type === type;
+        button.classList.toggle('active', selected);
+        button.setAttribute('aria-pressed', String(selected));
+      });
+      document.getElementById('page-title').textContent =
+        type === 'condo' ? 'Find a Condo on the Gulf Coast' : 'Find a House on the Gulf Coast';
+    }
+    const params = new URLSearchParams(window.location.search);
+    setType(params.get('type') === 'condo' ? 'condo' : 'house');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const type = button.dataset.type;
+      setType(type);
+      const url = new URL(window.location.href);
+      url.searchParams.set('type', type);
+      window.history.replaceState(null, '', url);
+    }));
+  </script>
+</body>
+</html>
