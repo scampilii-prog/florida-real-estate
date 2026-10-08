@@ -354,3 +354,36 @@ function applySiteLanguage() {
 window.addEventListener("siteLanguageChanged", applySiteLanguage);
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", applySiteLanguage);
 else applySiteLanguage();
+
+// Shared accessible header search: internal navigation, not a live MLS listing search.
+const SITE_SEARCH_PLACEHOLDERS = {
+ en:'Search properties or communities...', es:'Buscar propiedades o comunidades...',
+ it:'Cerca immobili o località...', pt:'Buscar imóveis ou comunidades...'
+};
+function updateSiteSearchPlaceholder(){
+ const input=document.getElementById('siteSearchInput');
+ if(input) input.placeholder=SITE_SEARCH_PLACEHOLDERS[getSiteLanguage()]||SITE_SEARCH_PLACEHOLDERS.en;
+}
+function toggleSiteSearch(button){
+ const panel=document.getElementById('searchBox'); if(!panel)return;
+ const open=panel.classList.toggle('open');
+ if(button)button.setAttribute('aria-expanded',String(open));
+ if(open){const input=document.getElementById('siteSearchInput');if(input)input.focus();}
+}
+function submitSiteSearch(event){
+ event.preventDefault();
+ const input=document.getElementById('siteSearchInput');
+ const q=(input?.value||'').trim().toLocaleLowerCase();
+ if(!q)return false;
+ const condo=/condo|condom|apartament|appartament|apartamento|condomínio|condominio/.test(q);
+ const rotonda=/rotonda/.test(q);
+ const homes=/home|house|casa|casas|immobil|imóve|property|propert|vivienda|new construction|construcci|nuova costruzione/.test(q);
+ let url=rotonda?'rotonda-west.html':condo?'search-properties.html?type=condo':homes?'search-properties.html?type=house':'search-properties.html';
+ window.location.href=url; return false;
+}
+window.addEventListener('siteLanguageChanged',updateSiteSearchPlaceholder);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateSiteSearchPlaceholder);else updateSiteSearchPlaceholder();
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('searchBox')?.classList.remove('open');document.querySelector('.search-icon')?.setAttribute('aria-expanded','false');}});
+
+// Close search after clicking outside its panel or trigger.
+document.addEventListener('click',function(e){const panel=document.getElementById('searchBox');const btn=document.querySelector('.site-header .search-icon');if(panel&&btn&&!panel.contains(e.target)&&!btn.contains(e.target)){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
