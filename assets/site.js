@@ -348,6 +348,34 @@ function applySiteLanguage() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     el.setAttribute("placeholder", siteText(el.getAttribute("data-i18n-placeholder")));
   });
+  // Keep visible headings and the browser tab title in the selected language.
+  const page = window.location.pathname.split('/').pop() || 'index.html';
+  const pageTitles = {
+    'index.html': {
+      en: 'Florida Gulf Coast Real Estate | Sabatino Campilii',
+      es: 'Bienes raíces en la costa del Golfo de Florida | Sabatino Campilii',
+      it: 'Immobili sulla costa del Golfo della Florida | Sabatino Campilii',
+      pt: 'Imóveis na costa do Golfo da Flórida | Sabatino Campilii'
+    },
+    'search-properties.html': {
+      en: 'Search Properties | Florida Gulf Coast Real Estate',
+      es: 'Buscar propiedades | Costa del Golfo de Florida',
+      it: 'Cerca immobili | Costa del Golfo della Florida',
+      pt: 'Buscar imóveis | Costa do Golfo da Flórida'
+    },
+    'rotonda-west.html': {
+      en: 'Rotonda West Homes & Condos | Sabatino Campilii',
+      es: 'Casas y condominios en Rotonda West | Sabatino Campilii',
+      it: 'Case e condomini a Rotonda West | Sabatino Campilii',
+      pt: 'Casas e condomínios em Rotonda West | Sabatino Campilii'
+    }
+  };
+  if (pageTitles[page]) document.title = pageTitles[page][lang];
+  // Search page heading depends on the currently selected property type.
+  if (page === 'search-properties.html') {
+    const heading = document.getElementById('page-title');
+    if (heading) heading.textContent = siteText(new URLSearchParams(location.search).get('type') === 'condo' ? 'searchTitleCondo' : 'searchTitleHouse');
+  }
   const footerYear = document.getElementById("footerYear");
   if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 }
