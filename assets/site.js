@@ -25,7 +25,8 @@ const SITE_TRANSLATIONS = {
     communities: "Areas & Communities",
     calculators: "Calculators",
     about: "About",
-    contact: "Contact"
+    contact: "Contact",
+heroTitle: "Find Your Place on Florida's Gulf Coast"
   },
   es: {
     search: "Buscar propiedades",
@@ -34,7 +35,8 @@ const SITE_TRANSLATIONS = {
     communities: "Áreas y comunidades",
     calculators: "Calculadoras",
     about: "Acerca de mí",
-    contact: "Contacto"
+    contact: "Contacto",
+heroTitle: "Encuentra tu lugar en la costa del Golfo de Florida"
   },
   it: {
     search: "Cerca immobili",
@@ -43,7 +45,8 @@ const SITE_TRANSLATIONS = {
     communities: "Zone e comunità",
     calculators: "Calcolatori",
     about: "Chi sono",
-    contact: "Contatti"
+    contact: "Contatti",
+heroTitle: "Trova il tuo posto sulla costa del Golfo della Florida"
   },
   pt: {
     search: "Buscar imóveis",
@@ -52,7 +55,8 @@ const SITE_TRANSLATIONS = {
     communities: "Áreas e comunidades",
     calculators: "Calculadoras",
     about: "Sobre mim",
-    contact: "Contato"
+    contact: "Contato",
+heroTitle: "Encontre o seu lugar na costa do Golfo da Flórida"
   }
 };
 function applySiteLanguage() {
