@@ -87,7 +87,16 @@ font-size: 12px; line-height: 1.8; }
 .location .rotonda-actions a:not(.community-info-link):hover{background:#1b3d57;color:#fff}
 
 </style>
-</head>
+<style>
+/* Uniform elegant community action buttons, all nine cards */
+.locations .location .rotonda-actions {display:flex;flex-direction:column;align-items:flex-start;gap:9px;margin-top:16px}
+.locations .location .rotonda-actions a {display:inline-flex;box-sizing:border-box;align-items:center;justify-content:center;width:168px;max-width:100%;height:37px;min-height:37px;margin:0;padding:7px 9px;border:1px solid transparent;border-radius:4px;font-family:Manrope,Arial,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.01em;line-height:1.25;text-decoration:none;white-space:nowrap;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+.locations .location .rotonda-actions a.community-info-link {background:#e5c895;color:#102b43;border-color:#e5c895}
+.locations .location .rotonda-actions a.community-info-link:hover {background:#d8b87f;border-color:#d8b87f;color:#102b43;transform:translateY(-1px)}
+.locations .location .rotonda-actions a:not(.community-info-link) {background:#102b43;color:#fff;border-color:#102b43}
+.locations .location .rotonda-actions a:not(.community-info-link):hover {background:#20425b;border-color:#20425b;color:#fff;transform:translateY(-1px)}
+@media(max-width:380px){.locations .location .rotonda-actions a{width:168px;font-size:10px}}
+</style></head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-name">SABATINO CAMPILII</span><span class="brand-subtitle" data-i18n="brandSubtitle">Florida Gulf Coast Real Estate</span></a><div class="header-tools"><button aria-controls="searchBox" aria-expanded="false" aria-label="Search" class="search-icon" onclick="toggleSiteSearch(this)" type="button"><svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4.5 4.5"></path></svg></button><div class="search-box" id="searchBox"><form onsubmit="return submitSiteSearch(event)" role="search"><input aria-label="Search properties or communities" id="siteSearchInput" placeholder="Search properties or communities..." type="search"/><button aria-label="Submit search" type="submit">Go</button></form></div><a class="back-home" data-i18n="backHome" href="index.html">← Back to Home</a><div class="language"><button aria-label="Choose language" class="language-button" type="button"><span id="currentLanguage">English</span> <span style="font-size:12px">⌄</span></button><div class="language-menu"><a href="#" onclick="setSiteLanguage('en');return false;">EN – English</a><a href="#" onclick="setSiteLanguage('es');return false;">ES – Español</a><a href="#" onclick="setSiteLanguage('it');return false;">IT – Italiano</a><a href="#" onclick="setSiteLanguage('pt');return false;">PT – Português</a></div></div><button aria-label="Open menu" class="menu-button" onclick="openMenu()">☰</button></div></div></header><aside class="side-menu" id="sideMenu"><button aria-label="Close menu" class="close-menu" onclick="closeMenu()">×</button><nav><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a data-i18n="buy" href="#">Buy</a><a data-i18n="sell" href="#">Sell</a><a data-i18n="newConstruction" href="#">New Construction</a><a data-i18n="waterfront" href="#">Waterfront</a><a data-i18n="communities" href="search-properties.html">Areas &amp; Communities</a><a data-i18n="calculators" href="#">Calculators</a><a data-i18n="qa" href="#">1,000 Q&amp;A</a><a data-i18n="about" href="#">About</a><a data-i18n="contact" href="#">Contact</a></nav></aside>
 <section class="intro">
@@ -124,33 +133,32 @@ communities. Choose your property type and preferred location.</p>
 <article class="location">
 <h3>Englewood &amp; Manasota Key</h3>
 <p data-i18n="locEnglewood">Coastal communities with beaches and boating.</p>
-<a class="community-info-link" href="englewood-manasota-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930496d56861" rel="noopener noreferrer">View Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="englewood-manasota-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930496d56861" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
 <h3>Venice</h3>
 <p data-i18n="locVenice">Historic downtown charm and Gulf Coast neighborhoods.</p>
-<a class="community-info-link" href="venice-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930502K33528" rel="noopener noreferrer">View Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="venice-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930502K33528" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
 <h3>Nokomis &amp; Casey Key</h3>
 <p data-i18n="locNokomis">Relaxed coastal living and waterfront properties.</p>
-<a class="community-info-link" href="nokomis-casey-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930507L78648" rel="noopener noreferrer">View Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="nokomis-casey-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930507L78648" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
 <h3>Punta Gorda Isles</h3>
 <p data-i18n="locPunta">Canal-front neighborhoods and boating lifestyle.</p>
-<a class="community-info-link" href="punta-gorda-isles-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930510k82865" rel="noopener noreferrer">View Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="punta-gorda-isles-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930510k82865" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
 <h3>Siesta Key &amp; Longboat Key</h3>
 <p data-i18n="locSiesta">Barrier island living and coastal residences.</p>
-<a class="community-info-link" href="siesta-key-longboat-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930512R13063" rel="noopener noreferrer">View Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="siesta-key-longboat-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930512R13063" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
 <h3>Wellen Park</h3>
 <p data-i18n="locWellen">Newer communities and growing Southwest Florida neighborhoods.</p>
-<a class="community-info-link" href="wellen-park-florida-real-estate.html">Explore the Community →</a><a data-i18n="requestProperties" href="mailto:scampilii@gmail.com?
-subject=Wellen%20Park%20Property%20Search">Request Properties →</a>
+<div class="rotonda-actions"><a class="community-info-link" href="wellen-park-florida-real-estate.html">Explore the Community →</a><a data-i18n="requestProperties" href="mailto:scampilii@gmail.com?subject=Wellen%20Park%20Property%20Search">Request Properties →</a></div>
 </article>
 </div>
 <p class="notice" data-i18n="searchNotice">Property collections are provided through OneHome. Individual
