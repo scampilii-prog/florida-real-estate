@@ -1062,5 +1062,12 @@ function lang(){let el=document.querySelector('select#lang,select#oc-lang-static
 function apply(){let t=tr[lang()]||tr.en;document.querySelectorAll('[data-footer-key]').forEach(el=>{let k=el.dataset.footerKey;if(t[k])el.textContent=t[k]})}
 document.querySelectorAll('select').forEach(el=>el.addEventListener('change',()=>{apply();requestAnimationFrame(apply)}));document.addEventListener('DOMContentLoaded',apply);apply();
 })();
-</script></body>
+</script><style id="final-footer-layout-fix">
+/* FINAL FOOTER FIX — overrides older conflicting logo/link rules */
+html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link {display:block!important;width:240px!important;max-width:240px!important;margin:28px 0 0!important;padding:0!important;line-height:0!important;}
+html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link > img.lokation-logo {display:block!important;width:240px!important;max-width:240px!important;height:auto!important;max-height:none!important;margin:0!important;object-fit:contain!important;}
+html body footer.footer .footer-inner > div:not(:first-child) > a {display:block!important;margin:0 0 12px 0!important;padding:0!important;line-height:1.45!important;text-align:left!important;}
+html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 20px 0!important;text-align:left!important;}
+@media(max-width:480px){html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link,html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link > img.lokation-logo{width:220px!important;max-width:220px!important;}}
+</style></body>
 </html>
