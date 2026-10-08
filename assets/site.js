@@ -415,3 +415,54 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElement
 
 // Close search after clicking outside its panel or trigger.
 document.addEventListener('click',function(e){const panel=document.getElementById('searchBox');const btn=document.querySelector('.site-header .search-icon');if(panel&&btn&&!panel.contains(e.target)&&!btn.contains(e.target)){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+
+// Close the language dropdown after selecting a language on touch and desktop.
+// The existing CSS uses :hover and :focus-within; both can remain active on iOS.
+(function initializeLanguageMenuAutoClose() {
+  function install() {
+    document.querySelectorAll('.language').forEach(function (wrapper) {
+      if (wrapper.dataset.autoCloseInstalled === 'true') return;
+      wrapper.dataset.autoCloseInstalled = 'true';
+      var menu = wrapper.querySelector('.language-menu');
+      var trigger = wrapper.querySelector('.language-button');
+      if (!menu || !trigger) return;
+
+      function closeLanguageMenu() {
+        menu.style.setProperty('display', 'none', 'important');
+        trigger.setAttribute('aria-expanded', 'false');
+        if (document.activeElement && wrapper.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+      }
+      function restoreLanguageMenu() {
+        menu.style.removeProperty('display');
+      }
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeLanguageMenu);
+      });
+      trigger.addEventListener('click', function () {
+        var wasHidden = menu.style.display === 'none';
+        if (wasHidden) {
+          restoreLanguageMenu();
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+      wrapper.addEventListener('pointerleave', function () {
+        restoreLanguageMenu();
+      });
+      document.addEventListener('pointerdown', function (event) {
+        if (!wrapper.contains(event.target)) {
+          closeLanguageMenu();
+          // Allow the menu to reopen normally on the next interaction.
+          restoreLanguageMenu();
+        }
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') closeLanguageMenu();
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install);
+  else install();
+})();
