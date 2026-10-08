@@ -70,7 +70,7 @@ font-size: 12px; line-height: 1.8; }
 .ocean-footer .broker{color:#fff;font-weight:700}.ocean-footer-bottom{max-width:1160px;margin:34px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.17);display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#b7c6d1}
 @media(max-width:800px){.site-header{height:72px}.header-inner{padding:0 18px}.brand-name{font-size:18px}.brand-subtitle{font-size:7px;letter-spacing:1.2px}.header-tools{gap:12px}.ocean-footer-inner{grid-template-columns:1fr;gap:26px}.ocean-footer-bottom{flex-direction:column;gap:5px}.back-home{display:none!important}}
 @media(max-width:390px){.language-button{font-size:12px!important}.brand-name{font-size:16px}.header-tools{gap:8px}}
-</style><link rel="stylesheet" href="assets/site.css?v=20261008b"/>
+</style><link href="assets/site.css?v=20261008b" rel="stylesheet"/>
 <style>
 /* Two clear actions for communities with an available local guide. */
 .rotonda-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:stretch}
@@ -80,15 +80,15 @@ font-size: 12px; line-height: 1.8; }
 </style>
 </head>
 <body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-name">SABATINO CAMPILII</span><span class="brand-subtitle" data-i18n="brandSubtitle">Florida Gulf Coast Real Estate</span></a><div class="header-tools"><button type="button" class="search-icon" aria-label="Search" aria-controls="searchBox" aria-expanded="false" onclick="toggleSiteSearch(this)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></svg></button><div class="search-box" id="searchBox"><form role="search" onsubmit="return submitSiteSearch(event)"><input id="siteSearchInput" type="search" aria-label="Search properties or communities" placeholder="Search properties or communities..."/><button type="submit" aria-label="Submit search">Go</button></form></div><a class="back-home" data-i18n="backHome" href="index.html">← Back to Home</a><div class="language"><button aria-label="Choose language" class="language-button" type="button"><span id="currentLanguage">English</span> <span style="font-size:12px">⌄</span></button><div class="language-menu"><a href="#" onclick="setSiteLanguage('en');return false;">EN – English</a><a href="#" onclick="setSiteLanguage('es');return false;">ES – Español</a><a href="#" onclick="setSiteLanguage('it');return false;">IT – Italiano</a><a href="#" onclick="setSiteLanguage('pt');return false;">PT – Português</a></div></div><button aria-label="Open menu" class="menu-button" onclick="openMenu()">☰</button></div></div></header><aside class="side-menu" id="sideMenu"><button aria-label="Close menu" class="close-menu" onclick="closeMenu()">×</button><nav><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a data-i18n="buy" href="#">Buy</a><a data-i18n="sell" href="#">Sell</a><a data-i18n="newConstruction" href="#">New Construction</a><a data-i18n="waterfront" href="#">Waterfront</a><a data-i18n="communities" href="search-properties.html">Areas &amp; Communities</a><a data-i18n="calculators" href="#">Calculators</a><a data-i18n="qa" href="#">1,000 Q&amp;A</a><a data-i18n="about" href="#">About</a><a data-i18n="contact" href="#">Contact</a></nav></aside>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-name">SABATINO CAMPILII</span><span class="brand-subtitle" data-i18n="brandSubtitle">Florida Gulf Coast Real Estate</span></a><div class="header-tools"><button aria-controls="searchBox" aria-expanded="false" aria-label="Search" class="search-icon" onclick="toggleSiteSearch(this)" type="button"><svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4.5 4.5"></path></svg></button><div class="search-box" id="searchBox"><form onsubmit="return submitSiteSearch(event)" role="search"><input aria-label="Search properties or communities" id="siteSearchInput" placeholder="Search properties or communities..." type="search"/><button aria-label="Submit search" type="submit">Go</button></form></div><a class="back-home" data-i18n="backHome" href="index.html">← Back to Home</a><div class="language"><button aria-label="Choose language" class="language-button" type="button"><span id="currentLanguage">English</span> <span style="font-size:12px">⌄</span></button><div class="language-menu"><a href="#" onclick="setSiteLanguage('en');return false;">EN – English</a><a href="#" onclick="setSiteLanguage('es');return false;">ES – Español</a><a href="#" onclick="setSiteLanguage('it');return false;">IT – Italiano</a><a href="#" onclick="setSiteLanguage('pt');return false;">PT – Português</a></div></div><button aria-label="Open menu" class="menu-button" onclick="openMenu()">☰</button></div></div></header><aside class="side-menu" id="sideMenu"><button aria-label="Close menu" class="close-menu" onclick="closeMenu()">×</button><nav><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a data-i18n="buy" href="#">Buy</a><a data-i18n="sell" href="#">Sell</a><a data-i18n="newConstruction" href="#">New Construction</a><a data-i18n="waterfront" href="#">Waterfront</a><a data-i18n="communities" href="search-properties.html">Areas &amp; Communities</a><a data-i18n="calculators" href="#">Calculators</a><a data-i18n="qa" href="#">1,000 Q&amp;A</a><a data-i18n="about" href="#">About</a><a data-i18n="contact" href="#">Contact</a></nav></aside>
 <section class="intro">
 <div class="eyebrow" data-i18n="heroLabel">Florida Gulf Coast</div>
-<h1 id="page-title" data-i18n="searchTitleHouse">Find Your Place on the Gulf Coast</h1>
+<h1 data-i18n="search" id="page-title">Search Properties</h1>
 <p data-i18n="searchIntro">Explore real estate opportunities in Southwest Florida's most desirable coastal
 communities. Choose your property type and preferred location.</p>
 <div class="filters">
-<button class="filter" data-i18n="findHouse" data-type="house">Find a House</button>
-<button class="filter" data-i18n="findCondo" data-type="condo">Find a Condo</button>
+<a class="filter" data-i18n="findHouse" href="florida-gulf-coast-homes-for-sale.html">Find a House</a>
+<a class="filter" data-i18n="findCondo" href="florida-gulf-coast-condos-for-sale.html">Find a Condo</a>
 </div>
 </section>
 <main>
@@ -150,29 +150,8 @@ subject=Wellen%20Park%20Property%20Search">Request Properties →</a>
 collections may include multiple property types. Availability and listing details should be
 confirmed directly in OneHome.</p>
 </main>
-<footer class="ocean-footer"><div class="ocean-footer-inner"><div><h3>Sabatino Campilii</h3><p>Realtor®</p><p data-i18n="footerTagline">Your guide to real estate on Florida’s Gulf Coast.</p></div><div><h4 data-i18n="footerExplore">Explore</h4><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a href="rotonda-west.html">Rotonda West</a><a data-i18n="findCondo" href="search-properties.html?type=condo">Find a Condo</a></div><div><h4 data-i18n="footerContact">Contact &amp; Brokerage</h4><p class="broker">LoKation® Real Estate</p><p data-i18n="footerLicense">Florida License #SL3363040</p><a href="mailto:scampilii@gmail.com">scampilii@gmail.com</a><p>1500 E Atlantic Blvd, Building B<br/>Pompano Beach, FL 33060</p></div></div><div class="ocean-footer-bottom"><span>© <span id="footerYear">2026</span> Sabatino Campilii · <span data-i18n="footerRights">All rights reserved.</span></span><span data-i18n="footerDisclaimer">Information is for general purposes and is not a guarantee of property availability.</span></div></footer>
-<script>
-    const buttons = document.querySelectorAll('.filter');
-    function setType(type) {
-      buttons.forEach(button => {
-         const selected = button.dataset.type === type;
-         button.classList.toggle('active', selected);
-         button.setAttribute('aria-pressed', String(selected));
-      });
-      document.getElementById('page-title').textContent = siteText(type === 'condo' ? 'searchTitleCondo' : 'searchTitleHouse');
-    }
-    const params = new URLSearchParams(window.location.search);
-    document.addEventListener('DOMContentLoaded', () => setType(params.get('type') === 'condo' ? 'condo' : 'house'));
-    buttons.forEach(button => button.addEventListener('click', () => {
-      const type = button.dataset.type;
-      setType(type);
-      const url = new URL(window.location.href);
-      url.searchParams.set('type', type);
-      window.history.replaceState(null, '', url);
-    }));
-  
-window.addEventListener("siteLanguageChanged",()=>setType(new URLSearchParams(window.location.search).get("type")==="condo"?"condo":"house"));
-</script>
+<footer class="ocean-footer"><div class="ocean-footer-inner"><div><h3>Sabatino Campilii</h3><p>Realtor®</p><p data-i18n="footerTagline">Your guide to real estate on Florida’s Gulf Coast.</p></div><div><h4 data-i18n="footerExplore">Explore</h4><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a href="rotonda-west.html">Rotonda West</a><a data-i18n="findCondo" href="florida-gulf-coast-condos-for-sale.html">Find a Condo</a></div><div><h4 data-i18n="footerContact">Contact &amp; Brokerage</h4><p class="broker">LoKation® Real Estate</p><p data-i18n="footerLicense">Florida License #SL3363040</p><a href="mailto:scampilii@gmail.com">scampilii@gmail.com</a><p>1500 E Atlantic Blvd, Building B<br/>Pompano Beach, FL 33060</p></div></div><div class="ocean-footer-bottom"><span>© <span id="footerYear">2026</span> Sabatino Campilii · <span data-i18n="footerRights">All rights reserved.</span></span><span data-i18n="footerDisclaimer">Information is for general purposes and is not a guarantee of property availability.</span></div></footer>
+
 <script>function openMenu(){document.getElementById("sideMenu").classList.add("open");} function closeMenu(){document.getElementById("sideMenu").classList.remove("open");}</script><style>
   .tino-launcher {
     position: fixed;
@@ -437,4 +416,3 @@ async function sendTino(event) {
 })();
 </script></body>
 </html>
-
