@@ -71,6 +71,13 @@ font-size: 12px; line-height: 1.8; }
 @media(max-width:800px){.site-header{height:72px}.header-inner{padding:0 18px}.brand-name{font-size:18px}.brand-subtitle{font-size:7px;letter-spacing:1.2px}.header-tools{gap:12px}.ocean-footer-inner{grid-template-columns:1fr;gap:26px}.ocean-footer-bottom{flex-direction:column;gap:5px}.back-home{display:none!important}}
 @media(max-width:390px){.language-button{font-size:12px!important}.brand-name{font-size:16px}.header-tools{gap:8px}}
 </style><link rel="stylesheet" href="assets/site.css?v=20261008b"/>
+<style>
+/* Two clear actions for communities with an available local guide. */
+.rotonda-actions{display:flex;flex-wrap:wrap;gap:9px;align-items:stretch}
+.location .rotonda-actions a{margin-top:14px;line-height:1.5;text-align:center}
+.location .rotonda-actions .community-info-link{background:#e5c895;color:#102b43}
+.location .rotonda-actions .community-info-link:hover{background:#d1aa68;color:#102b43}
+</style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-name">SABATINO CAMPILII</span><span class="brand-subtitle" data-i18n="brandSubtitle">Florida Gulf Coast Real Estate</span></a><div class="header-tools"><button type="button" class="search-icon" aria-label="Search" aria-controls="searchBox" aria-expanded="false" onclick="toggleSiteSearch(this)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4.5 4.5"/></svg></button><div class="search-box" id="searchBox"><form role="search" onsubmit="return submitSiteSearch(event)"><input id="siteSearchInput" type="search" aria-label="Search properties or communities" placeholder="Search properties or communities..."/><button type="submit" aria-label="Submit search">Go</button></form></div><a class="back-home" data-i18n="backHome" href="index.html">← Back to Home</a><div class="language"><button aria-label="Choose language" class="language-button" type="button"><span id="currentLanguage">English</span> <span style="font-size:12px">⌄</span></button><div class="language-menu"><a href="#" onclick="setSiteLanguage('en');return false;">EN – English</a><a href="#" onclick="setSiteLanguage('es');return false;">ES – Español</a><a href="#" onclick="setSiteLanguage('it');return false;">IT – Italiano</a><a href="#" onclick="setSiteLanguage('pt');return false;">PT – Português</a></div></div><button aria-label="Open menu" class="menu-button" onclick="openMenu()">☰</button></div></div></header><aside class="side-menu" id="sideMenu"><button aria-label="Close menu" class="close-menu" onclick="closeMenu()">×</button><nav><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a data-i18n="buy" href="#">Buy</a><a data-i18n="sell" href="#">Sell</a><a data-i18n="newConstruction" href="#">New Construction</a><a data-i18n="waterfront" href="#">Waterfront</a><a data-i18n="communities" href="search-properties.html">Areas &amp; Communities</a><a data-i18n="calculators" href="#">Calculators</a><a data-i18n="qa" href="#">1,000 Q&amp;A</a><a data-i18n="about" href="#">About</a><a data-i18n="contact" href="#">Contact</a></nav></aside>
@@ -92,7 +99,10 @@ communities. Choose your property type and preferred location.</p>
 <article class="location">
 <h3>Rotonda West</h3>
 <p data-i18n="locRotonda">Golf communities, peaceful neighborhoods and Gulf Coast living.</p>
+<div class="rotonda-actions">
+<a class="community-info-link" href="rotonda-west.html" id="exploreRotondaCommunity">Explore the Community →</a>
 <a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930501t89184" rel="noopener noreferrer">View Properties →</a>
+</div>
 </article>
 <article class="location">
 <h3>Boca Grande</h3>
@@ -409,6 +419,22 @@ async function sendTino(event) {
     reply.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
-</script><script src="assets/site.js?v=20261008b"></script></body>
+</script><script src="assets/site.js?v=20261008b"></script><script>
+(function(){
+  const labels={
+    en:'Explore the Community →',
+    es:'Descubre la comunidad →',
+    it:'Scopri la comunità →',
+    pt:'Conheça a comunidade →'
+  };
+  function updateCommunityLink(){
+    const link=document.getElementById('exploreRotondaCommunity');
+    if(link) link.textContent=labels[typeof getSiteLanguage==='function'?getSiteLanguage():'en']||labels.en;
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',updateCommunityLink);
+  else updateCommunityLink();
+  window.addEventListener('siteLanguageChanged',updateCommunityLink);
+})();
+</script></body>
 </html>
 
