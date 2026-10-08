@@ -96,6 +96,33 @@ font-size: 12px; line-height: 1.8; }
 .locations .location .rotonda-actions a:not(.community-info-link) {background:#102b43;color:#fff;border-color:#102b43}
 .locations .location .rotonda-actions a:not(.community-info-link):hover {background:#20425b;border-color:#20425b;color:#fff;transform:translateY(-1px)}
 @media(max-width:380px){.locations .location .rotonda-actions a{width:168px;font-size:10px}}
+</style><style>
+/* Community title acts as the clearly marked local guide link. */
+.locations .location .community-title-link {
+ display:block; margin:0 0 14px; padding:13px 15px; border:1px solid #dce5ec;
+ border-radius:7px; background:#eaf0f4; color:#102b43; text-decoration:none;
+ font-family:Manrope,Arial,sans-serif; box-shadow:none; transition:background .2s,border-color .2s,transform .2s;
+}
+.locations .location .community-title-link:hover,
+.locations .location .community-title-link:focus-visible {
+ background:#dde9f0; border-color:#adc3d2; color:#102b43; transform:translateY(-1px);
+}
+.locations .location .community-title-link:focus-visible {outline:2px solid #b8914c;outline-offset:2px}
+.community-title-row {display:flex;justify-content:space-between;align-items:center;gap:10px}
+.community-title-text {font-size:17px;font-weight:700;line-height:1.35}
+.community-title-arrow {font-size:21px;font-weight:500;line-height:1;transition:transform .2s}
+.community-title-link:hover .community-title-arrow {transform:translate(2px,-2px)}
+.community-title-hint {display:block;margin-top:4px;color:#536e7e;font-size:11px;font-weight:500;line-height:1.4}
+.locations .location .property-actions {display:flex;align-items:flex-start;margin-top:14px}
+.locations .location .property-actions a {
+ display:inline-flex;justify-content:center;align-items:center;width:auto;min-width:145px;max-width:100%;
+ height:36px;min-height:36px;padding:8px 14px;margin:0;background:#102b43;color:#fff;
+ border:1px solid #102b43;border-radius:4px;text-decoration:none;
+ font-family:Manrope,Arial,sans-serif;font-size:11px;font-weight:600;line-height:1.2;
+ transition:background .2s,transform .2s;
+}
+.locations .location .property-actions a:hover {background:#20425b;color:#fff;transform:translateY(-1px)}
+@media(max-width:580px){.locations .location .community-title-link{padding:13px 14px}}
 </style></head>
 <body>
 <header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-name">SABATINO CAMPILII</span><span class="brand-subtitle" data-i18n="brandSubtitle">Florida Gulf Coast Real Estate</span></a><div class="header-tools"><button aria-controls="searchBox" aria-expanded="false" aria-label="Search" class="search-icon" onclick="toggleSiteSearch(this)" type="button"><svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4.5 4.5"></path></svg></button><div class="search-box" id="searchBox"><form onsubmit="return submitSiteSearch(event)" role="search"><input aria-label="Search properties or communities" id="siteSearchInput" placeholder="Search properties or communities..." type="search"/><button aria-label="Submit search" type="submit">Go</button></form></div><a class="back-home" data-i18n="backHome" href="index.html">← Back to Home</a><div class="language"><button aria-label="Choose language" class="language-button" type="button"><span id="currentLanguage">English</span> <span style="font-size:12px">⌄</span></button><div class="language-menu"><a href="#" onclick="setSiteLanguage('en');return false;">EN – English</a><a href="#" onclick="setSiteLanguage('es');return false;">ES – Español</a><a href="#" onclick="setSiteLanguage('it');return false;">IT – Italiano</a><a href="#" onclick="setSiteLanguage('pt');return false;">PT – Português</a></div></div><button aria-label="Open menu" class="menu-button" onclick="openMenu()">☰</button></div></div></header><aside class="side-menu" id="sideMenu"><button aria-label="Close menu" class="close-menu" onclick="closeMenu()">×</button><nav><a data-i18n="backHome" href="index.html">← Back to Home</a><a data-i18n="search" href="search-properties.html">Search Properties</a><a data-i18n="buy" href="#">Buy</a><a data-i18n="sell" href="#">Sell</a><a data-i18n="newConstruction" href="#">New Construction</a><a data-i18n="waterfront" href="#">Waterfront</a><a data-i18n="communities" href="search-properties.html">Areas &amp; Communities</a><a data-i18n="calculators" href="#">Calculators</a><a data-i18n="qa" href="#">1,000 Q&amp;A</a><a data-i18n="about" href="#">About</a><a data-i18n="contact" href="#">Contact</a></nav></aside>
@@ -115,50 +142,50 @@ communities. Choose your property type and preferred location.</p>
 </p>
 <div class="locations">
 <article class="location">
-<h3>Rotonda West</h3>
+<a aria-label="Discover Rotonda West" class="community-title-link" href="rotonda-west.html"><span class="community-title-row"><span class="community-title-text">Rotonda West</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locRotonda">Golf communities, peaceful neighborhoods and Gulf Coast living.</p>
-<div class="rotonda-actions">
-<a class="community-info-link" href="rotonda-west.html" id="exploreRotondaCommunity">Explore the Community →</a>
+<div class="property-actions">
+
 <a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930501t89184" rel="noopener noreferrer">View Properties →</a>
 </div>
 </article>
 <article class="location">
-<h3>Boca Grande</h3>
+<a aria-label="Discover Boca Grande" class="community-title-link" href="boca-grande-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Boca Grande</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locBoca">Island living, beaches and distinctive coastal homes.</p>
-<div class="rotonda-actions"><a class="community-info-link" data-community-guide="1" href="boca-grande-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930487I77513" rel="noopener noreferrer">View Properties →</a></div></article>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930487I77513" rel="noopener noreferrer">View Properties →</a></div></article>
 <article class="location">
-<h3>Cape Haze &amp; Placida</h3>
+<a aria-label="Discover Cape Haze &amp; Placida" class="community-title-link" href="cape-haze-placida-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Cape Haze &amp; Placida</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locCape">Waterfront neighborhoods and access to the Gulf.</p>
-<div class="rotonda-actions"><a class="community-info-link" data-community-guide="1" href="cape-haze-placida-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930491J56251" rel="noopener noreferrer">View Properties →</a></div></article>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930491J56251" rel="noopener noreferrer">View Properties →</a></div></article>
 <article class="location">
-<h3>Englewood &amp; Manasota Key</h3>
+<a aria-label="Discover Englewood &amp; Manasota Key" class="community-title-link" href="englewood-manasota-key-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Englewood &amp; Manasota Key</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locEnglewood">Coastal communities with beaches and boating.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="englewood-manasota-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930496d56861" rel="noopener noreferrer">View Properties →</a></div>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930496d56861" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
-<h3>Venice</h3>
+<a aria-label="Discover Venice" class="community-title-link" href="venice-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Venice</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locVenice">Historic downtown charm and Gulf Coast neighborhoods.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="venice-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930502K33528" rel="noopener noreferrer">View Properties →</a></div>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930502K33528" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
-<h3>Nokomis &amp; Casey Key</h3>
+<a aria-label="Discover Nokomis &amp; Casey Key" class="community-title-link" href="nokomis-casey-key-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Nokomis &amp; Casey Key</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locNokomis">Relaxed coastal living and waterfront properties.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="nokomis-casey-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930507L78648" rel="noopener noreferrer">View Properties →</a></div>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930507L78648" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
-<h3>Punta Gorda Isles</h3>
+<a aria-label="Discover Punta Gorda Isles" class="community-title-link" href="punta-gorda-isles-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Punta Gorda Isles</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locPunta">Canal-front neighborhoods and boating lifestyle.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="punta-gorda-isles-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930510k82865" rel="noopener noreferrer">View Properties →</a></div>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930510k82865" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
-<h3>Siesta Key &amp; Longboat Key</h3>
+<a aria-label="Discover Siesta Key &amp; Longboat Key" class="community-title-link" href="siesta-key-longboat-key-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Siesta Key &amp; Longboat Key</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locSiesta">Barrier island living and coastal residences.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="siesta-key-longboat-key-florida-real-estate.html">Explore the Community →</a><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930512R13063" rel="noopener noreferrer">View Properties →</a></div>
+<div class="property-actions"><a data-i18n="viewProperties" href="https://portal.onehome.com/en-US/share/2930512R13063" rel="noopener noreferrer">View Properties →</a></div>
 </article>
 <article class="location">
-<h3>Wellen Park</h3>
+<a aria-label="Discover Wellen Park" class="community-title-link" href="wellen-park-florida-real-estate.html"><span class="community-title-row"><span class="community-title-text">Wellen Park</span><span aria-hidden="true" class="community-title-arrow">↗</span></span><span class="community-title-hint" data-community-hint="">Discover the community</span></a>
 <p data-i18n="locWellen">Newer communities and growing Southwest Florida neighborhoods.</p>
-<div class="rotonda-actions"><a class="community-info-link" href="wellen-park-florida-real-estate.html">Explore the Community →</a><a data-i18n="requestProperties" href="mailto:scampilii@gmail.com?subject=Wellen%20Park%20Property%20Search">Request Properties →</a></div>
+<div class="property-actions"><a data-i18n="requestProperties" href="mailto:scampilii@gmail.com?subject=Wellen%20Park%20Property%20Search">Request Properties →</a></div>
 </article>
 </div>
 <p class="notice" data-i18n="searchNotice">Property collections are provided through OneHome. Individual
@@ -412,5 +439,10 @@ async function sendTino(event) {
     reply.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
-</script><script src="assets/site.js?v=20261008b"></script><script>(function(){const labels={en:'Explore the Community →',es:'Descubre la comunidad →',it:'Scopri la comunità →',pt:'Conheça a comunidade →'};function update(){let lang=typeof getSiteLanguage==='function'?getSiteLanguage():'en';document.querySelectorAll('.community-info-link').forEach(a=>a.textContent=labels[lang]||labels.en);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',update);else update();window.addEventListener('siteLanguageChanged',update);})();</script></body>
+</script><script src="assets/site.js?v=20261008b"></script><script>(function(){
+const hints={en:'Discover the community',es:'Descubre la comunidad',it:'Scopri la comunità',pt:'Conheça a comunidade'};
+function updateCommunityHints(){const lang=(typeof getSiteLanguage==='function'?getSiteLanguage():'en');document.querySelectorAll('[data-community-hint]').forEach(el=>el.textContent=hints[lang]||hints.en);}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateCommunityHints);else updateCommunityHints();
+window.addEventListener('siteLanguageChanged',updateCommunityHints);
+})();</script></body>
 </html>
