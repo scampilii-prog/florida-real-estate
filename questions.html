@@ -387,4 +387,26 @@ html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 2
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script></body></html>
+</script>
+<script id="ask-tino-cta-fix">
+(function(){
+  document.addEventListener('click',function(event){
+    var target=event.target.closest('a,button');
+    if(!target || !/ask\s+sabatino/i.test(target.textContent||''))return;
+    event.preventDefault();
+    var panel=document.getElementById('tinoPanel');
+    if(panel){
+      if(!panel.classList.contains('open')){
+        if(typeof window.toggleTino==='function')window.toggleTino();
+        else panel.classList.add('open');
+      }
+      var input=document.getElementById('tinoText');
+      if(input)input.focus();
+    }else{
+      var launcher=document.querySelector('.tino-launcher');
+      if(launcher)launcher.click();
+    }
+  });
+})();
+</script>
+</body></html>
