@@ -867,6 +867,39 @@ font-size:29px!important;line-height:1!important;cursor:pointer!important}
 .coast-actions p{color:#b8c9d5;font-size:12px;max-width:400px;line-height:1.5}
 @media(max-width:640px){.coast-inquiry{padding:60px 18px}.coast-grid,.coast-form-fields{grid-template-columns:1fr}.coast-grid span{padding:18px 20px}.coast-grid input:checked+span{padding:17px 19px}}
 </style>
+<style id="coast-footer-elegance-20261009">
+/* Home-only refinement of inquiry and footer; preserves original markup and form behavior. */
+.coast-inquiry{background:linear-gradient(145deg,#0b2234 0%,#0a1b2b 100%)!important;padding:100px 28px 95px!important;font-family:Manrope,Arial,sans-serif!important}
+.coast-wrap{max-width:980px!important}
+.coast-eyebrow{font-family:Manrope,Arial,sans-serif!important;font-size:11px!important;font-weight:750!important;letter-spacing:.21em!important;margin-bottom:19px!important;color:#d7b47c!important}
+.coast-inquiry h2{font-family:Manrope,Arial,sans-serif!important;font-size:clamp(33px,4vw,52px)!important;line-height:1.2!important;letter-spacing:-.04em!important;font-weight:650!important;max-width:760px!important;margin:0 0 20px!important;text-wrap:balance}
+.coast-lead{font-family:Manrope,Arial,sans-serif!important;font-size:15px!important;line-height:1.85!important;color:#cad7df!important;margin-bottom:39px!important}
+.coast-areas legend{font-family:Manrope,Arial,sans-serif!important;font-size:12px!important;letter-spacing:.035em!important;color:#dce5ec!important;margin-bottom:15px!important}
+.coast-grid{gap:12px!important}
+.coast-grid label span{font-family:Manrope,Arial,sans-serif!important;font-size:14px!important;font-weight:600!important;letter-spacing:0!important;line-height:1.4!important;padding:18px 21px!important;border-radius:6px!important;border:1px solid rgba(188,207,222,.32)!important;background:rgba(255,255,255,.035)!important;transition:background .2s,border-color .2s,transform .2s!important}
+.coast-grid label:hover span{background:rgba(255,255,255,.085)!important;border-color:#d2ad74!important;transform:translateY(-1px)!important}
+.coast-grid input:checked+span{background:rgba(207,167,108,.16)!important;border:1px solid #d7b47c!important;padding:18px 21px!important;color:#fff!important;box-shadow:inset 0 0 0 1px #d7b47c!important}
+.coast-grid input:focus-visible+span{outline:3px solid #f2d4a3!important;outline-offset:3px!important}
+.coast-form-fields{gap:21px 18px!important;margin-top:36px!important}
+.coast-form-fields label{font-family:Manrope,Arial,sans-serif!important;font-size:12px!important;font-weight:650!important;letter-spacing:.01em!important;gap:9px!important}
+.coast-form-fields input,.coast-form-fields select,.coast-form-fields textarea{font-family:Manrope,Arial,sans-serif!important;font-size:14px!important;line-height:1.5!important;padding:14px 16px!important;border-radius:5px!important;border:1px solid #cbd6dc!important;min-height:48px!important;box-shadow:none!important}
+.coast-form-fields textarea{min-height:112px!important}
+.coast-form-fields input:focus,.coast-form-fields select:focus,.coast-form-fields textarea:focus{outline:2px solid #d9b57e!important;outline-offset:2px!important}
+.coast-actions{margin-top:29px!important;gap:19px!important}
+.coast-actions button{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:50px!important;background:#d7b47c!important;color:#0b263c!important;border:1px solid #d7b47c!important;border-radius:5px!important;padding:15px 27px!important;font-family:Manrope,Arial,sans-serif!important;font-size:13px!important;font-weight:750!important;letter-spacing:.01em!important;transition:background .2s,transform .2s!important}
+.coast-actions button:hover{background:#e9ca98!important;transform:translateY(-2px)!important}
+.coast-actions p{font-family:Manrope,Arial,sans-serif!important;font-size:11px!important;line-height:1.7!important;max-width:390px!important;color:#b8c8d4!important}
+.footer{font-family:Manrope,Arial,sans-serif!important}
+.footer .footer-inner{max-width:1120px!important;margin:auto!important;padding-top:62px!important;padding-bottom:55px!important;column-gap:42px!important;row-gap:35px!important}
+.footer .footer-inner .brand{font-family:Manrope,Arial,sans-serif!important;font-size:19px!important;font-weight:750!important;letter-spacing:-.02em!important}
+.footer .footer-inner h3{font-family:Manrope,Arial,sans-serif!important;font-size:11px!important;font-weight:800!important;letter-spacing:.13em!important;color:#d7b47c!important;margin-bottom:20px!important}
+.footer .footer-inner p,.footer .footer-inner a{font-family:Manrope,Arial,sans-serif!important;font-size:12px!important;line-height:1.9!important}
+.footer .footer-inner a{transition:color .2s!important}
+.footer .footer-inner a:hover{color:#e4c38e!important}
+.footer .footnote{font-family:Manrope,Arial,sans-serif!important;font-size:11px!important;line-height:1.8!important;letter-spacing:.015em!important;padding-top:23px!important;padding-bottom:23px!important}
+@media(max-width:700px){.coast-inquiry{padding:65px 21px!important}.coast-inquiry h2{font-size:clamp(30px,8vw,39px)!important}.coast-grid{grid-template-columns:1fr!important}.coast-form-fields{grid-template-columns:1fr!important}.coast-grid label span,.coast-grid input:checked+span{padding:16px 18px!important}.coast-actions{align-items:stretch!important;flex-direction:column!important}.coast-actions button{width:100%!important}.footer .footer-inner{padding-top:45px!important;padding-bottom:35px!important}}
+@media(prefers-reduced-motion:reduce){.coast-grid label span,.coast-actions button{transition:none!important}}
+</style>
 <script id="coast-inquiry-script">
 (function(){
 var form=document.getElementById('coast-lead-form');if(!form)return;
