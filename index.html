@@ -939,6 +939,17 @@ body .coast-inquiry h2{font-size:clamp(30px,3.25vw,42px)!important;font-weight:6
 .coast-actions button:hover{background:#28516c!important;color:#fff!important;transform:translateY(-2px)!important}
 .coast-actions p{color:#667c88!important}
 </style>
+<style id="coast-form-spacing-20261009">
+/* More breathing room between each community choice and each form field. */
+.coast-grid{column-gap:22px!important;row-gap:19px!important}
+.coast-grid label span{min-height:64px!important;display:flex!important;align-items:center!important}
+.coast-form-fields{column-gap:25px!important;row-gap:27px!important;margin-top:48px!important}
+.coast-form-fields label{gap:11px!important}
+.coast-form-fields input,.coast-form-fields select{min-height:55px!important}
+.coast-form-fields textarea{min-height:135px!important}
+.coast-actions{margin-top:36px!important}
+@media(max-width:700px){.coast-grid{row-gap:13px!important}.coast-form-fields{row-gap:22px!important;margin-top:37px!important}.coast-grid label span{min-height:56px!important}}
+</style>
 <script id="coast-inquiry-script">
 (function(){
 var form=document.getElementById('coast-lead-form');if(!form)return;
