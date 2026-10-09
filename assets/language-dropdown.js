@@ -67,7 +67,11 @@
       function syncFooter(){footSelect.value=select.value;}
       footSelect.addEventListener('change',function(){select.value=footSelect.value;select.dispatchEvent(new Event('change',{bubbles:true}));refresh();});
       select.addEventListener('change',syncFooter);
-      foot.append(caption,footSelect);footer.appendChild(foot);syncFooter();
+      var footnote=footer.querySelector('.footnote');
+      var languageSide=document.createElement('div');languageSide.className='sc-footer-language-side';
+      languageSide.append(caption,footSelect);
+      if(footnote){footnote.classList.add('sc-footer-copyright');foot.appendChild(footnote);}
+      foot.appendChild(languageSide);footer.appendChild(foot);syncFooter();
     }
     /* Sitewide legal footer: central source for existing and future pages. */
     var legalFooter=document.querySelector('footer.footer,footer');
@@ -127,6 +131,12 @@
   '.sc-legal-disclosure p{max-width:880px!important;margin:0 auto!important;color:#aebbc6!important;font:400 11px/1.95 Manrope,Arial,sans-serif!important;text-align:center!important}'+
   '.sc-legal-bottom{border-top:0!important;padding-top:0!important}'+
   '@media(max-width:620px){.sc-legal-disclosure{padding-left:4px!important;padding-right:4px!important}.sc-legal-identity span{line-height:2!important}.sc-legal-identity i{margin:0 4px!important}}';
+  css += '.sc-footer-language{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:16px 28px!important;padding:22px clamp(22px,5vw,70px)!important;max-width:100%!important}'+
+  '.sc-footer-language .sc-footer-copyright{flex:1 1 340px!important;margin:0!important;padding:0!important;border:0!important;text-align:left!important;background:transparent!important;color:#aebcc9!important;font:500 12px/1.6 Manrope,Arial,sans-serif!important}'+
+  '.sc-footer-language-side{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important;flex:0 1 auto!important}'+
+  '.sc-footer-language-caption{font-size:11px!important;white-space:nowrap!important;letter-spacing:.08em!important}'+
+  '.sc-footer-language-select{min-width:145px!important}'+
+  '@media(max-width:800px){.sc-footer-language{justify-content:center!important;padding:22px 18px!important}.sc-footer-language .sc-footer-copyright{flex:1 1 100%!important;text-align:center!important}.sc-footer-language-side{justify-content:center!important;flex-wrap:wrap!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
