@@ -260,6 +260,9 @@
     var tiles=document.createElement('div');tiles.className='sc-editorial-tiles';shortcuts.forEach(function(it){var a=link(it[0],it[1]);var sub=document.createElement('span');sub.textContent=it[2];a.appendChild(sub);tiles.appendChild(a);});quick.appendChild(tiles);wrap.appendChild(quick);
     var bottom=document.createElement('div');bottom.className='sc-editorial-bottom';var prompt=document.createElement('div');prompt.innerHTML='<strong>Ready to make your move?</strong><span>Let’s talk about your plans on Florida’s Gulf Coast.</span>';bottom.append(prompt,link('Send an Inquiry ↗','contact.html#tell-us-your-plans'));wrap.appendChild(bottom);
     menu.appendChild(wrap);
+    var toTop=document.createElement('button');toTop.type='button';toTop.className='sc-editorial-top';toTop.setAttribute('aria-label','Back to top of menu');toTop.title='Back to top · Close with ×';toTop.textContent='↑';menu.appendChild(toTop);
+    toTop.addEventListener('click',function(){menu.scrollTo({top:0,behavior:'smooth'});});
+    menu.addEventListener('scroll',function(){toTop.hidden=menu.scrollTop<260;},{passive:true});toTop.hidden=true;
     function shut(){menu.hidden=true;document.body.style.overflow='';var t=document.querySelector('[data-oc-menu],.menu-button');if(t){t.setAttribute('aria-expanded','false');t.focus();}}
     close.addEventListener('click',shut);
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)shut();});
@@ -319,6 +322,9 @@
   '.oc-shell .oc-menu .sc-editorial-main a{font:700 13px/1.5 Manrope,Arial,sans-serif!important;color:#102b43!important;text-decoration:none!important;padding:7px 0!important;border:0!important;white-space:nowrap!important}'+
   '.oc-shell .oc-menu .sc-editorial-main a:first-child{color:#a4793e!important}'+
   '@media(max-width:550px){.oc-shell .oc-menu .sc-editorial-main{gap:7px 15px!important}.oc-shell .oc-menu .sc-editorial-main a{font-size:12px!important}}';
+  css += '.oc-shell .oc-menu .sc-editorial-top{position:fixed!important;right:clamp(16px,3vw,44px)!important;bottom:24px!important;width:49px!important;height:49px!important;z-index:100002!important;border:1px solid #c6a46d!important;border-radius:50%!important;background:#102b43!important;color:#fff!important;font-size:25px!important;cursor:pointer!important;box-shadow:0 6px 20px #102b432c!important}'+
+  '.oc-shell .oc-menu .sc-editorial-top[hidden]{display:none!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head button{cursor:pointer!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
