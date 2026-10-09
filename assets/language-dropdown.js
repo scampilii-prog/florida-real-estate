@@ -212,6 +212,57 @@
   '@media(max-width:850px){html body footer.footer .sc-footer-language{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}html body footer.footer .sc-footer-language>.sc-footer-copyright,html body footer.footer .sc-footer-language>.sc-footer-bottom-logo,html body footer.footer .sc-footer-language>.sc-footer-language-side{grid-column:1!important;justify-self:center!important}}';
   css += 'html body footer.footer .sc-legal-bottom nav a.sc-send-inquiry{color:#e0be7b!important;font-weight:750!important;text-decoration:none!important;white-space:nowrap!important}html body footer.footer .sc-legal-bottom nav a.sc-send-inquiry:hover{text-decoration:underline!important;text-underline-offset:4px!important}';
   css += 'html body footer.footer .footer-inner a.sc-inquiry-footer-link{display:block!important;color:#e0be7b!important;font-weight:750!important;text-decoration:none!important;margin-top:9px!important}html body footer.footer .footer-inner a.sc-inquiry-footer-link:hover{text-decoration:underline!important;text-underline-offset:4px!important}';
+
+  function installFullScreenMenu(){
+    var menu=document.querySelector('.oc-shell .oc-menu');
+    if(!menu || menu.dataset.scFullMenu)return;
+    menu.dataset.scFullMenu='1';
+    var groups=[
+      {title:'Properties',items:[['Search Properties','search-properties.html'],['Homes for Sale','florida-gulf-coast-homes-for-sale.html'],['Condos for Sale','florida-gulf-coast-condos-for-sale.html'],['Waterfront','waterfront.html'],['New Construction','new-construction.html']]},
+      {title:'Communities',items:[['Rotonda West','rotonda-west.html'],['Boca Grande','boca-grande-florida-real-estate.html'],['Cape Haze & Placida','cape-haze-placida-florida-real-estate.html'],['Englewood & Manasota Key','englewood-manasota-key-florida-real-estate.html'],['Venice','venice-florida-real-estate.html'],['Wellen Park','wellen-park-florida-real-estate.html'],['Nokomis & Casey Key','nokomis-casey-key-florida-real-estate.html'],['Punta Gorda Isles','punta-gorda-isles-florida-real-estate.html'],['Siesta Key & Longboat Key','siesta-key-longboat-key-florida-real-estate.html']]},
+      {title:'Buying',items:[['Buy a Home','buy.html'],['Buyers Guide','buyers-guide.html'],['Preparing to Buy','buyer-preparation.html'],['Property Search','buyer-property-search.html'],['Financing & Pre-Approval','buyer-financing-preapproval.html'],['Offers & Contracts','buyer-offers-contracts.html'],['Inspections & Appraisals','buyer-inspections-appraisals.html'],['Title & Financing','buyer-title-financing.html']]},
+      {title:'Selling',items:[['Sell Your Property','sell.html'],['Sellers Guide','sellers-guide.html'],['Home Valuation','home-valuation.html'],['Seller Closing Costs','seller-closing-costs.html']]},
+      {title:'Calculators & Resources',items:[['All Calculators','calculators.html'],['Mortgage Calculator','mortgage-calculator.html'],['Buyer Closing Costs','buyer-closing-costs.html'],['Seller Closing Costs','seller-closing-costs.html'],['1,000 Q&A','questions.html']]},
+      {title:'About & Contact',items:[['About Sabatino','about.html'],['Contact','contact.html'],['Send an Inquiry','contact.html#tell-us-your-plans']]}
+    ];
+    function link(label,url,klass){var a=document.createElement('a');a.href=url;a.textContent=label;if(klass)a.className=klass;return a;}
+    menu.replaceChildren();
+    var header=document.createElement('div');header.className='sc-mega-head';
+    var heading=document.createElement('div');heading.innerHTML='<small>FLORIDA GULF COAST REAL ESTATE</small><strong>Explore the coast</strong>';
+    var close=document.createElement('button');close.type='button';close.setAttribute('data-oc-close','');close.setAttribute('aria-label','Close menu');close.textContent='×';
+    header.append(heading,close);menu.appendChild(header);
+    var body=document.createElement('div');body.className='sc-mega-body';
+    var primary=document.createElement('div');primary.className='sc-mega-primary';
+    [['01','Home','index.html'],['02','Search Properties','search-properties.html'],['03','Buy','buy.html'],['04','Sell','sell.html'],['05','Communities','communities.html'],['06','New Construction','new-construction.html'],['07','Calculators','calculators.html'],['08','Guides','buyers-guide.html'],['09','1,000 Q&A','questions.html'],['10','About','about.html'],['11','Contact','contact.html']].forEach(function(item){var a=link(item[1],item[2]);var num=document.createElement('span');num.textContent=item[0];a.prepend(num);primary.appendChild(a);});
+    var details=document.createElement('div');details.className='sc-mega-groups';
+    groups.forEach(function(group){var section=document.createElement('section');var h=document.createElement('h2');h.textContent=group.title;section.appendChild(h);group.items.forEach(function(item){section.appendChild(link(item[0],item[1],item[0]==='Send an Inquiry'?'sc-mega-inquiry':''));});details.appendChild(section);});
+    body.append(primary,details);menu.appendChild(body);
+    var foot=document.createElement('div');foot.className='sc-mega-foot';foot.textContent='SABATINO CAMPILII  ·  REALTOR®  ·  LOKATION® REAL ESTATE';menu.appendChild(foot);
+    close.addEventListener('click',function(){menu.hidden=true;var toggle=document.querySelector('[data-oc-menu]');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+    menu.addEventListener('click',function(e){if(e.target===menu)close.click();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close.click();});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installFullScreenMenu);else installFullScreenMenu();
+
+  css += '.oc-shell .oc-menu[data-sc-full-menu="1"]{position:fixed!important;inset:0!important;width:100vw!important;max-width:none!important;height:100dvh!important;max-height:none!important;overflow-y:auto!important;overflow-x:hidden!important;box-sizing:border-box!important;background:linear-gradient(130deg,#102b43,#0b2032 70%)!important;color:#f7f8fa!important;padding:0!important;z-index:99999!important;border:0!important;border-radius:0!important;box-shadow:none!important;font-family:Manrope,Arial,sans-serif!important}'+
+  '.oc-shell .oc-menu[data-sc-full-menu="1"][hidden]{display:none!important}'+
+  '.oc-shell .oc-menu .sc-mega-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;max-width:1450px!important;margin:auto!important;padding:32px clamp(24px,5vw,75px) 20px!important;border-bottom:1px solid #ffffff2a!important}'+
+  '.oc-shell .oc-menu .sc-mega-head small{display:block!important;color:#c6a46d!important;font-size:10px!important;letter-spacing:.21em!important;margin-bottom:8px!important}'+
+  '.oc-shell .oc-menu .sc-mega-head strong{display:block!important;font-size:clamp(22px,3vw,37px)!important;font-weight:700!important;color:#fff!important}'+
+  '.oc-shell .oc-menu .sc-mega-head button{background:transparent!important;border:1px solid #ffffff55!important;border-radius:50%!important;width:46px!important;height:46px!important;min-width:46px!important;color:white!important;font-size:31px!important;cursor:pointer!important}'+
+  '.oc-shell .oc-menu .sc-mega-body{display:grid!important;grid-template-columns:minmax(220px,.85fr) minmax(0,1.6fr)!important;gap:clamp(30px,5vw,95px)!important;max-width:1450px!important;margin:0 auto!important;padding:32px clamp(24px,5vw,75px) 42px!important}'+
+  '.oc-shell .oc-menu .sc-mega-primary{display:flex!important;flex-direction:column!important;gap:0!important}'+
+  '.oc-shell .oc-menu .sc-mega-primary a{display:flex!important;align-items:center!important;gap:19px!important;padding:11px 0!important;border-bottom:1px solid #ffffff29!important;color:#fff!important;text-decoration:none!important;font-size:clamp(18px,2.2vw,30px)!important;line-height:1.3!important;font-weight:500!important}'+
+  '.oc-shell .oc-menu .sc-mega-primary a span{font-size:10px!important;letter-spacing:.1em!important;color:#c6a46d!important;min-width:22px!important}'+
+  '.oc-shell .oc-menu .sc-mega-groups{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px 42px!important;align-content:start!important}'+
+  '.oc-shell .oc-menu .sc-mega-groups section{display:flex!important;flex-direction:column!important;min-width:0!important}'+
+  '.oc-shell .oc-menu .sc-mega-groups h2{color:#c6a46d!important;font:700 11px/1.5 Manrope,Arial,sans-serif!important;letter-spacing:.18em!important;text-transform:uppercase!important;margin:0 0 12px!important}'+
+  '.oc-shell .oc-menu .sc-mega-groups a{display:block!important;color:#e3ebf0!important;font:500 12px/1.5 Manrope,Arial,sans-serif!important;text-decoration:none!important;padding:7px 0!important;border-bottom:1px solid #ffffff1d!important}'+
+  '.oc-shell .oc-menu a:hover,.oc-shell .oc-menu a:focus-visible{color:#e7c583!important}'+
+  '.oc-shell .oc-menu .sc-mega-groups a.sc-mega-inquiry{color:#e7c583!important;font-weight:800!important}'+
+  '.oc-shell .oc-menu .sc-mega-foot{text-align:center!important;color:#ffffff75!important;font-size:10px!important;letter-spacing:.12em!important;padding:18px!important;border-top:1px solid #ffffff21!important}'+
+  '@media(max-width:750px){.oc-shell .oc-menu .sc-mega-body{grid-template-columns:1fr!important;gap:30px!important}.oc-shell .oc-menu .sc-mega-primary a{font-size:21px!important;padding:10px 0!important}.oc-shell .oc-menu .sc-mega-groups{grid-template-columns:1fr 1fr!important;gap:24px!important}}'+
+  '@media(max-width:420px){.oc-shell .oc-menu .sc-mega-groups{grid-template-columns:1fr!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
