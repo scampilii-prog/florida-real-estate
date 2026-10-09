@@ -63,7 +63,7 @@
       caption.textContent='LANGUAGE / IDIOMA / LINGUA / IDIOMA';
       var footSelect=document.createElement('select');footSelect.className='sc-footer-language-select';
       footSelect.setAttribute('aria-label','Change website language');
-      options.forEach(function(o){var copy=document.createElement('option');copy.value=o.value;copy.textContent=o.textContent.trim().replace(/^(EN|ES|IT|PT)\\s*[—–-]\\s*/i,'');footSelect.appendChild(copy);});
+      options.forEach(function(o){var copy=document.createElement('option');copy.value=o.value;copy.textContent=o.textContent.trim();footSelect.appendChild(copy);});
       function syncFooter(){footSelect.value=select.value;}
       footSelect.addEventListener('change',function(){select.value=footSelect.value;select.dispatchEvent(new Event('change',{bubbles:true}));refresh();});
       select.addEventListener('change',syncFooter);
