@@ -1,0 +1,5 @@
+/* Florida Real Estate — approved typography: Google Fonts Manrope everywhere. */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root{--site-font:'Manrope',Arial,sans-serif}
+html,body,body *,body *::before,body *::after{font-family:var(--site-font)!important}
+button,input,select,textarea,option{font-family:var(--site-font)!important}
