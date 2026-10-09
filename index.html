@@ -646,7 +646,7 @@ footer.footer .lokation-logo-link img.lokation-logo,
 footer.footer .lokation-logo-link{display:block!important;width:240px!important;max-width:100%!important;margin:28px 0 0!important;padding:0!important;}
 footer.footer .lokation-logo{display:block!important;width:240px!important;max-width:100%!important;height:auto!important;margin:0!important;}
 @media(max-width:480px){footer.footer .lokation-logo-link,footer.footer .lokation-logo{width:240px!important;max-width:100%!important;}}
-</style></head>
+</style><style id="floating-left-top-style">#siteBackTop{display:none!important}#floatingLeftBackTop{position:fixed!important;left:18px!important;bottom:24px!important;right:auto!important;top:auto!important;z-index:2147483000!important;display:flex!important;align-items:center!important;justify-content:center!important;width:54px!important;height:54px!important;padding:0!important;border:2px solid #fff!important;border-radius:50%!important;background:#efc77e!important;color:#102c43!important;box-shadow:0 4px 18px #0005!important;font:800 26px/1 Arial,sans-serif!important;cursor:pointer!important;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}#floatingLeftBackTop.is-visible{opacity:1!important;visibility:visible!important;transform:translateY(0)!important}#floatingLeftBackTop:focus-visible{outline:3px solid #fff;outline-offset:3px}@media(max-width:600px){#floatingLeftBackTop{left:12px!important;bottom:18px!important;width:48px!important;height:48px!important}}</style></head>
 <body>
 <!-- FIXED HEADER -->
 <header class="site-header">
@@ -1069,5 +1069,5 @@ html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link >
 html body footer.footer .footer-inner > div:not(:first-child) > a {display:block!important;margin:0 0 12px 0!important;padding:0!important;line-height:1.45!important;text-align:left!important;}
 html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 20px 0!important;text-align:left!important;}
 @media(max-width:480px){html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link,html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link > img.lokation-logo{width:220px!important;max-width:220px!important;}}
-</style></body>
+</style><button id="floatingLeftBackTop" type="button" aria-label="Back to top" title="Back to top">↑</button><script id="floating-left-top-script">(function(){var b=document.getElementById('floatingLeftBackTop');if(!b)return;function refresh(){b.classList.toggle('is-visible',window.scrollY>240)}window.addEventListener('scroll',refresh,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});refresh()})();</script></body>
 </html>
