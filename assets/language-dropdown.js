@@ -137,6 +137,10 @@
   '.sc-footer-language-caption{font-size:11px!important;white-space:nowrap!important;letter-spacing:.08em!important}'+
   '.sc-footer-language-select{min-width:145px!important}'+
   '@media(max-width:800px){.sc-footer-language{justify-content:center!important;padding:22px 18px!important}.sc-footer-language .sc-footer-copyright{flex:1 1 100%!important;text-align:center!important}.sc-footer-language-side{justify-content:center!important;flex-wrap:wrap!important}}';
+  css += 'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{width:190px!important;max-width:190px!important;margin:22px 0 32px!important;padding:0!important;line-height:0!important}'+
+  'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>img.lokation-logo{width:190px!important;max-width:190px!important;height:auto!important;max-height:none!important;object-fit:contain!important}'+
+  'html body footer.footer .footer-inner{padding-bottom:18px!important}'+
+  '@media(max-width:480px){html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link,html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>img.lokation-logo{width:175px!important;max-width:175px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
