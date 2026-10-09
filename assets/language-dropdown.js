@@ -82,6 +82,13 @@
       var wordmark=footer.querySelector('a.lokation-logo-link');
       if(wordmark){wordmark.classList.add('sc-footer-bottom-logo');foot.insertBefore(wordmark,languageSide);}
     }
+    /* Prominent inquiry link in Connect column, also on pages with older footer HTML. */
+    document.querySelectorAll('footer.footer .footer-inner>div').forEach(function(column){
+      var heading=column.querySelector('h3');
+      if(heading && heading.textContent.trim().toLowerCase()==='connect' && !column.querySelector('.sc-inquiry-footer-link')){
+        var inquiry=document.createElement('a');inquiry.className='sc-inquiry-footer-link';inquiry.href='/contact#tell-us-your-plans';inquiry.textContent='Send an Inquiry ↗';column.appendChild(inquiry);
+      }
+    });
     /* Sitewide legal footer: central source for existing and future pages. */
     var legalFooter=document.querySelector('footer.footer,footer');
     if(legalFooter && !legalFooter.querySelector('.sc-legal-footer')){
@@ -204,6 +211,7 @@
   'html body footer.footer .sc-footer-language>.sc-footer-bottom-logo .sc-lokation-wordmark small{font-size:8px!important}'+
   '@media(max-width:850px){html body footer.footer .sc-footer-language{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}html body footer.footer .sc-footer-language>.sc-footer-copyright,html body footer.footer .sc-footer-language>.sc-footer-bottom-logo,html body footer.footer .sc-footer-language>.sc-footer-language-side{grid-column:1!important;justify-self:center!important}}';
   css += 'html body footer.footer .sc-legal-bottom nav a.sc-send-inquiry{color:#e0be7b!important;font-weight:750!important;text-decoration:none!important;white-space:nowrap!important}html body footer.footer .sc-legal-bottom nav a.sc-send-inquiry:hover{text-decoration:underline!important;text-underline-offset:4px!important}';
+  css += 'html body footer.footer .footer-inner a.sc-inquiry-footer-link{display:block!important;color:#e0be7b!important;font-weight:750!important;text-decoration:none!important;margin-top:9px!important}html body footer.footer .footer-inner a.sc-inquiry-footer-link:hover{text-decoration:underline!important;text-underline-offset:4px!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
