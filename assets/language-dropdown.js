@@ -78,6 +78,9 @@
       languageSide.append(caption,footSelect);
       if(footnote){footnote.classList.add('sc-footer-copyright');foot.appendChild(footnote);}
       foot.appendChild(languageSide);footer.appendChild(foot);syncFooter();
+      /* Keep brokerage wordmark in the slim bottom row, between the copyright and language selector. */
+      var wordmark=footer.querySelector('a.lokation-logo-link');
+      if(wordmark){wordmark.classList.add('sc-footer-bottom-logo');foot.insertBefore(wordmark,languageSide);}
     }
     /* Sitewide legal footer: central source for existing and future pages. */
     var legalFooter=document.querySelector('footer.footer,footer');
@@ -193,6 +196,13 @@
     'html body section.hero:not(.contact-feature-hero) p,html body section.hero:not(.contact-feature-hero) .subtitle,html body section.hero:not(.contact-feature-hero) #lead{color:#435a70!important;text-shadow:none!important}'+
     'html body section.hero:not(.contact-feature-hero) .eyebrow,html body section.hero:not(.contact-feature-hero) small{color:#ad8039!important}';
   }
+  css += 'html body footer.footer .sc-footer-language{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important;column-gap:24px!important;row-gap:12px!important}'+
+  'html body footer.footer .sc-footer-language>.sc-footer-copyright{grid-column:1!important;justify-self:start!important}'+
+  'html body footer.footer .sc-footer-language>.sc-footer-bottom-logo{grid-column:2!important;justify-self:center!important;margin:0!important;padding:0!important;min-height:34px!important}'+
+  'html body footer.footer .sc-footer-language>.sc-footer-language-side{grid-column:3!important;justify-self:end!important}'+
+  'html body footer.footer .sc-footer-language>.sc-footer-bottom-logo .sc-lokation-wordmark strong{font-size:20px!important;letter-spacing:.16em!important}'+
+  'html body footer.footer .sc-footer-language>.sc-footer-bottom-logo .sc-lokation-wordmark small{font-size:8px!important}'+
+  '@media(max-width:850px){html body footer.footer .sc-footer-language{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important}html body footer.footer .sc-footer-language>.sc-footer-copyright,html body footer.footer .sc-footer-language>.sc-footer-bottom-logo,html body footer.footer .sc-footer-language>.sc-footer-language-side{grid-column:1!important;justify-self:center!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
