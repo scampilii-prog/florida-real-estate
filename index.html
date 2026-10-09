@@ -683,7 +683,25 @@ font-size:29px!important;line-height:1!important;cursor:pointer!important}
 .oc-actions .oc-icon,.header-tools .search-icon,.header-tools .menu-button{width:32px!important}
 }
 </style>
-<style id="universal-language-css">#google_translate_element{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}body>.skiptranslate{display:none!important}.goog-te-banner-frame{display:none!important}body{top:0!important}html{scroll-padding-top:80px}</style></head>
+<style id="universal-language-css">#google_translate_element{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important}body>.skiptranslate{display:none!important}.goog-te-banner-frame{display:none!important}body{top:0!important}html{scroll-padding-top:80px}</style><style id="gulf-mobile-header-v2">
+/* Compact, consistently visible mobile navigation */
+.oc-lang select,.header-tools #oc-lang-static{width:145px!important;min-width:0!important;max-width:145px!important;height:43px!important;padding:0 26px 0 10px!important;font-size:13px!important}
+.oc-lang:after,.header-tools .language:after{right:10px!important;top:15px!important}
+@media(max-width:700px){
+.oc-top,.header-inner{padding-left:10px!important;padding-right:10px!important;gap:4px!important}
+.oc-brand,.header-inner .brand{flex:1 1 0!important;min-width:0!important;max-width:none!important;overflow:hidden!important}
+.oc-brand strong,.brand-name{display:block!important;font-size:clamp(10px,3.2vw,15px)!important;letter-spacing:0!important;white-space:nowrap!important}
+.oc-brand small,.brand-subtitle{display:block!important;font-size:clamp(6px,1.5vw,9px)!important;letter-spacing:0!important;white-space:nowrap!important}
+.oc-actions,.header-tools{display:flex!important;flex:0 0 auto!important;align-items:center!important;gap:3px!important;min-width:0!important}
+.oc-lang{flex:0 0 auto!important;min-width:0!important}
+.oc-lang select,.header-tools #oc-lang-static{width:115px!important;min-width:0!important;max-width:115px!important;height:40px!important;padding:0 19px 0 6px!important;font-size:11px!important}
+.oc-lang:after,.header-tools .language:after{right:7px!important;top:14px!important;width:6px!important;height:6px!important}
+.oc-actions .oc-icon,.header-tools .search-icon,.header-tools .menu-button{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:relative!important;flex:0 0 30px!important;width:30px!important;min-width:30px!important;max-width:30px!important;height:40px!important;min-height:40px!important;font-size:25px!important;align-items:center!important;justify-content:center!important}
+.oc-actions [data-oc-menu],.header-tools .menu-button{display:inline-flex!important;visibility:visible!important;opacity:1!important}
+}
+@media(max-width:360px){.oc-brand small,.brand-subtitle{display:none!important}.oc-lang select,.header-tools #oc-lang-static{width:111px!important;max-width:111px!important}}
+</style>
+</head>
 <body>
 <!-- FIXED HEADER -->
 <header class="site-header">
@@ -697,7 +715,7 @@ font-size:29px!important;line-height:1!important;cursor:pointer!important}
         </span>
 </a>
 <div class="header-tools">
-<span class="oc-lang"><select aria-label="Choose language" id="oc-lang-static"><option>EN — English</option><option>ES — Español</option><option>IT — Italiano</option><option>PT — Português</option></select></span>
+<span class="oc-lang"><select aria-label="Choose language" id="oc-lang-static"><option value="en">English</option><option value="es">Español</option><option value="it">Italiano</option><option value="pt">Português</option></select></span>
 <button aria-label="Search" class="search-icon" onclick="toggleSearch()" onmouseenter="openSearch()"><svg aria-hidden="true" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
 <div class="search-box" id="searchBox" onmouseleave="closeSearch()">
 <input placeholder="Search properties, communities, Q&amp;A..." type="text"/>
