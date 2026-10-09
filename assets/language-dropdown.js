@@ -55,22 +55,16 @@
     select.style.setProperty('display','none','important');
     select.addEventListener('change',refresh);
 
-    /* Render the approved compact symbol and wordmark side-by-side, without any leftover original icon. */
-    document.querySelectorAll('footer.footer a.lokation-logo-link img.lokation-logo').forEach(function(img){
-      var link=img.closest('a.lokation-logo-link');
-      if(!link || link.querySelector('.sc-lokation-mark'))return;
-      var original=img.getAttribute('src');
-      var mark=document.createElement('span');
-      mark.className='sc-lokation-mark';
-      mark.setAttribute('aria-hidden','true');
-      mark.style.backgroundImage='url("'+original+'")';
-      var word=document.createElement('span');
-      word.className='sc-lokation-word';
-      word.setAttribute('aria-hidden','true');
-      word.style.backgroundImage='url("'+original+'")';
+    /* Stable footer brokerage wordmark: real text beside a single cropped icon. */
+    document.querySelectorAll('footer.footer a.lokation-logo-link').forEach(function(link){
+      var img=link.querySelector('img.lokation-logo');
+      if(!img)return;
+      var source=img.getAttribute('src');
+      link.querySelectorAll('.sc-lokation-mark,.sc-lokation-word,.sc-lokation-wordmark').forEach(function(el){el.remove();});
       img.style.setProperty('display','none','important');
-      link.appendChild(mark);
-      link.appendChild(word);
+      var icon=document.createElement('span');icon.className='sc-lokation-icon-only';icon.setAttribute('aria-hidden','true');icon.style.backgroundImage='url("'+source+'")';
+      var lettering=document.createElement('span');lettering.className='sc-lokation-wordmark';lettering.innerHTML='<strong>LOKATION</strong><small>REAL ESTATE</small>';
+      link.appendChild(icon);link.appendChild(lettering);
     });
     /* Mirror the header language control in the footer, using the same real translator. */
     var footer=document.querySelector('footer.footer, footer');
@@ -179,6 +173,12 @@
   'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>.sc-lokation-word{display:block!important;flex:0 0 160px!important;width:160px!important;height:43px!important;background-size:214px 49px!important;background-position:-56px center!important;background-repeat:no-repeat!important;overflow:hidden!important}'+
   'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>img.lokation-logo{display:none!important}';
   css += 'html body footer.footer a.lokation-logo-link,html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{display:none!important}';
+  css += 'html body footer.footer a.lokation-logo-link,html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{display:inline-flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;width:auto!important;max-width:none!important;height:auto!important;min-height:46px!important;overflow:visible!important;text-decoration:none!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-icon-only{display:block!important;flex:0 0 40px!important;width:40px!important;height:40px!important;background-repeat:no-repeat!important;background-position:0 0!important;background-size:175px 40px!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:0!important;color:white!important;line-height:1!important;white-space:nowrap!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark strong{display:block!important;font:700 23px/1.05 Manrope,Arial,sans-serif!important;letter-spacing:.20em!important;color:#fff!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark small{display:block!important;font:600 10px/1.3 Manrope,Arial,sans-serif!important;letter-spacing:.19em!important;color:#fff!important;margin-top:3px!important}'+
+  'html body footer.footer a.lokation-logo-link img.lokation-logo,html body footer.footer a.lokation-logo-link .sc-lokation-mark,html body footer.footer a.lokation-logo-link .sc-lokation-word{display:none!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
