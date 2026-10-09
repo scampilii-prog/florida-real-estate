@@ -65,6 +65,20 @@
       img.parentNode.insertBefore(mark,img);
       img.parentNode.insertBefore(word,img);
       word.appendChild(img);
+      var link=img.parentElement;
+      link.style.setProperty('display','flex','important');
+      link.style.setProperty('flex-direction','row','important');
+      link.style.setProperty('align-items','center','important');
+      link.style.setProperty('gap','8px','important');
+      link.style.setProperty('width','215px','important');
+      link.style.setProperty('height','44px','important');
+      link.style.setProperty('overflow','hidden','important');
+      mark.style.setProperty('display','block','important');
+      word.style.setProperty('display','block','important');
+      word.style.setProperty('height','43px','important');
+      word.style.setProperty('overflow','hidden','important');
+      img.style.setProperty('left','-55px','important');
+      img.style.setProperty('top','0px','important');
     });
     /* Mirror the header language control in the footer, using the same real translator. */
     var footer=document.querySelector('footer.footer, footer');
@@ -157,6 +171,10 @@
   '.sc-lokation-word{display:block!important;position:relative!important;flex:0 0 170px!important;width:170px!important;height:43px!important;overflow:hidden!important}'+
   'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link .sc-lokation-word>img.lokation-logo{position:absolute!important;left:-44px!important;top:0!important;width:214px!important;max-width:none!important;height:auto!important;max-height:none!important}'+
   '@media(max-width:480px){html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{width:205px!important;max-width:205px!important}}';
+  css += 'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;width:215px!important;max-width:215px!important;height:44px!important;overflow:hidden!important}'+
+  'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>.sc-lokation-mark{display:block!important;flex:0 0 27px!important;width:27px!important;height:27px!important;align-self:center!important;background-size:118px 27px!important}'+
+  'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>.sc-lokation-word{display:block!important;position:relative!important;flex:0 0 170px!important;width:170px!important;height:43px!important;overflow:hidden!important}'+
+  'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>.sc-lokation-word>img.lokation-logo{position:absolute!important;left:-55px!important;top:0!important;width:214px!important;max-width:none!important;height:auto!important;margin:0!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
