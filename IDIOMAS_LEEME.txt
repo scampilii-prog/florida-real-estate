@@ -1,0 +1,4 @@
+IDIOMAS EN/ES/IT/PT — actualización de 34 páginas.
+El selector ahora conserva el idioma elegido entre páginas y traduce las etiquetas y textos principales incluidos en el diccionario.
+IMPORTANTE: el contenido completo de las 119 respuestas de Questions y los textos dinámicos de resultados de Calculators aún no están traducidos íntegramente. Este paquete no usa un servicio de traducción automática.
+Descomprime y sube los archivos a GitHub. Antes de sustituir cambios recientes, conserva una copia del repositorio.
