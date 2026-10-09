@@ -215,6 +215,15 @@
 
   function installFullScreenMenu(){
     var menu=document.querySelector('.oc-shell .oc-menu');
+    if(!menu){
+      var legacyToggle=document.querySelector('.menu-button,button[onclick*="openMenu"]');
+      if(legacyToggle){
+        document.body.classList.add('oc-shell');
+        menu=document.createElement('nav');menu.className='oc-menu';menu.hidden=true;menu.setAttribute('aria-label','Main navigation');document.body.appendChild(menu);
+        legacyToggle.setAttribute('aria-expanded','false');
+        legacyToggle.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();menu.hidden=!menu.hidden;legacyToggle.setAttribute('aria-expanded',String(!menu.hidden));document.body.style.overflow=menu.hidden?'':'hidden';},true);
+      }
+    }
     if(!menu || menu.dataset.scFullMenu)return;
     menu.dataset.scFullMenu='1';
     var groups=[
@@ -233,12 +242,12 @@
     header.append(heading,close);menu.appendChild(header);
     var body=document.createElement('div');body.className='sc-mega-body';
     var primary=document.createElement('div');primary.className='sc-mega-primary';
-    [['01','Home','index.html'],['02','Search Properties','search-properties.html'],['03','Buy','buy.html'],['04','Sell','sell.html'],['05','Communities','communities.html'],['06','New Construction','new-construction.html'],['07','Calculators','calculators.html'],['08','Guides','buyers-guide.html'],['09','1,000 Q&A','questions.html'],['10','About','about.html'],['11','Contact','contact.html']].forEach(function(item){var a=link(item[1],item[2]);var num=document.createElement('span');num.textContent=item[0];a.prepend(num);primary.appendChild(a);});
+    [['01','Home','/'],['02','Search Properties','search-properties.html'],['03','Buy','buy.html'],['04','Sell','sell.html'],['05','Communities','communities.html'],['06','New Construction','new-construction.html'],['07','Calculators','calculators.html'],['08','Guides','buyers-guide.html'],['09','1,000 Q&A','questions.html'],['10','About','about.html'],['11','Contact','contact.html']].forEach(function(item){var a=link(item[1],item[2]);var num=document.createElement('span');num.textContent=item[0];a.prepend(num);primary.appendChild(a);});
     var details=document.createElement('div');details.className='sc-mega-groups';
     groups.forEach(function(group){var section=document.createElement('section');var h=document.createElement('h2');h.textContent=group.title;section.appendChild(h);group.items.forEach(function(item){section.appendChild(link(item[0],item[1],item[0]==='Send an Inquiry'?'sc-mega-inquiry':''));});details.appendChild(section);});
     body.append(primary,details);menu.appendChild(body);
     var foot=document.createElement('div');foot.className='sc-mega-foot';foot.textContent='SABATINO CAMPILII  ·  REALTOR®  ·  LOKATION® REAL ESTATE';menu.appendChild(foot);
-    close.addEventListener('click',function(){menu.hidden=true;var toggle=document.querySelector('[data-oc-menu]');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+    close.addEventListener('click',function(){menu.hidden=true;document.body.style.overflow='';var toggle=document.querySelector('[data-oc-menu]');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.focus();}});
     menu.addEventListener('click',function(e){if(e.target===menu)close.click();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close.click();});
   }
