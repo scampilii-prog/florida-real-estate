@@ -781,6 +781,75 @@ footer.footer .lokation-logo{display:block!important;width:240px!important;max-w
 </div>
 </section>
 </main>
+<section aria-labelledby="coast-title" class="coast-inquiry" id="coast-inquiry">
+<div class="coast-wrap">
+<div class="coast-eyebrow">YOUR FLORIDA GULF COAST</div>
+<h2 id="coast-title">Which stretch of coast feels like home?</h2>
+<p class="coast-lead">Select a community and tell me what matters most. I'll help you explore your next step.</p>
+<form id="coast-lead-form">
+<fieldset class="coast-areas"><legend>Choose your preferred area</legend>
+<div class="coast-grid">
+<label><input name="coastArea" required="" type="radio" value="Boca Grande"/><span>Boca Grande</span></label>
+<label><input name="coastArea" type="radio" value="Cape Haze"/><span>Cape Haze</span></label>
+<label><input name="coastArea" type="radio" value="Englewood"/><span>Englewood</span></label>
+<label><input name="coastArea" type="radio" value="Rotonda West"/><span>Rotonda West</span></label>
+<label><input name="coastArea" type="radio" value="Venice"/><span>Venice</span></label>
+<label><input name="coastArea" type="radio" value="Nokomis &amp; Casey Key"/><span>Nokomis &amp; Casey Key</span></label>
+<label><input name="coastArea" type="radio" value="Punta Gorda Isles"/><span>Punta Gorda Isles</span></label>
+<label><input name="coastArea" type="radio" value="Help me decide"/><span>Help me decide</span></label>
+</div>
+</fieldset>
+<div class="coast-form-fields">
+<label>I'm interested in
+          <select name="intent" required=""><option value="Buying a home">Buying a home</option><option value="Selling a property">Selling a property</option><option value="Exploring communities">Exploring communities</option><option value="New construction">New construction</option></select>
+</label>
+<label>Your name <input autocomplete="name" name="name" placeholder="Full name" required=""/></label>
+<label>Your email <input autocomplete="email" name="email" placeholder="you@example.com" required="" type="email"/></label>
+<label>Phone (optional) <input autocomplete="tel" name="phone" placeholder="Best number to reach you" type="tel"/></label>
+<label class="coast-full">What are you looking for? <textarea name="message" placeholder="Budget, bedrooms, timeline, waterfront preferences, or any questions..." rows="3"></textarea></label>
+</div>
+<div class="coast-actions"><button type="submit">Contact Sabatino <span aria-hidden="true">→</span></button><p>Opens your email app with your selections ready to send. No message is sent until you confirm it.</p></div>
+</form>
+</div>
+</section>
+<style id="coast-inquiry-style">
+.coast-inquiry{background:#0b1e2e;color:#fff;padding:88px 22px;font-family:inherit}
+.coast-wrap{max-width:1120px;margin:0 auto}
+.coast-eyebrow{color:#e1bd72;letter-spacing:.19em;font-size:12px;font-weight:750;text-transform:uppercase;margin-bottom:18px}
+.coast-inquiry h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(36px,5.3vw,70px);line-height:1.1;max-width:860px;margin:0 0 20px;color:#fff}
+.coast-lead{color:#c5d2df;font-size:17px;line-height:1.6;max-width:690px;margin:0 0 34px}
+.coast-areas{border:0;margin:0;padding:0}
+.coast-areas legend{font-size:14px;color:#d7e2eb;margin-bottom:14px}
+.coast-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.coast-grid label{display:block;position:relative;cursor:pointer}
+.coast-grid input{position:absolute;opacity:0;inset:0}
+.coast-grid span{display:block;padding:23px 26px;border:1px solid #526272;border-radius:13px;font-family:Georgia,serif;font-size:clamp(18px,2.2vw,25px);background:rgba(255,255,255,.025);transition:background .2s,border-color .2s}
+.coast-grid label:hover span,.coast-grid input:focus-visible+span{border-color:#e1bd72;background:#17364c}
+.coast-grid input:checked+span{border:2px solid #e1bd72;background:#203e52;padding:22px 25px}
+.coast-form-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.coast-form-fields label{display:flex;flex-direction:column;gap:9px;color:#e7edf3;font-size:14px}
+.coast-form-fields input,.coast-form-fields select,.coast-form-fields textarea{box-sizing:border-box;width:100%;background:#fff;color:#112b3e;border:1px solid #b9c9d5;border-radius:9px;padding:13px 14px;font:inherit;font-size:15px}
+.coast-form-fields textarea{resize:vertical}
+.coast-full{grid-column:1/-1}
+.coast-actions{display:flex;align-items:center;gap:22px;margin-top:25px;flex-wrap:wrap}
+.coast-actions button{border:0;background:#e7c57e;color:#0b263c;border-radius:9px;padding:16px 26px;font-weight:800;cursor:pointer;font:inherit}
+.coast-actions button:hover{background:#f1d69c}
+.coast-actions p{color:#b8c9d5;font-size:12px;max-width:400px;line-height:1.5}
+@media(max-width:640px){.coast-inquiry{padding:60px 18px}.coast-grid,.coast-form-fields{grid-template-columns:1fr}.coast-grid span{padding:18px 20px}.coast-grid input:checked+span{padding:17px 19px}}
+</style>
+<script id="coast-inquiry-script">
+(function(){
+var form=document.getElementById('coast-lead-form');if(!form)return;
+form.addEventListener('submit',function(e){
+e.preventDefault();
+if(!form.reportValidity())return;
+var d=new FormData(form), area=d.get('coastArea')||'Not specified';
+var body=['Area: '+area,'Interest: '+d.get('intent'),'Name: '+d.get('name'),'Email: '+d.get('email'),'Phone: '+(d.get('phone')||'Not provided'),'','What I am looking for:',''+(d.get('message')||'Please contact me to discuss my options.')].join('\n');
+window.location.href='mailto:scampilii@gmail.com?subject='+encodeURIComponent('Gulf Coast real estate inquiry — '+area)+'&body='+encodeURIComponent(body);
+});
+})();
+</script>
+
 <footer class="footer"><div class="footer-inner"><div><div class="brand">Sabatino Campilii</div><p>Realtor® · LoKation® Real Estate<br/>Florida License #SL3363040</p><p class="tag" data-footer-key="tag">Your guide to real estate on Florida’s Gulf Coast.</p><a aria-label="LoKation Real Estate" class="lokation-logo-link" href="https://www.lokationre.com/"><img alt="LoKation Real Estate" class="lokation-logo" loading="lazy" src="lokation-logo-horizontal-blanco.png"/></a></div><div><h3 data-footer-key="Explore">Explore</h3><a data-footer-key="Search Properties" href="search-properties.html">Search Properties</a><a data-footer-key="Homes for Sale" href="florida-gulf-coast-homes-for-sale.html">Homes for Sale</a><a data-footer-key="Condos for Sale" href="florida-gulf-coast-condos-for-sale.html">Condos for Sale</a><a data-footer-key="Communities" href="communities.html">Communities</a></div><div><h3 data-footer-key="Resources">Resources</h3><a data-footer-key="Buy" href="buy.html">Buy</a><a data-footer-key="Buyers Guide" href="buyers-guide.html">Buyers Guide</a><a data-footer-key="Sell" href="sell.html">Sell</a><a data-footer-key="Sellers Guide" href="sellers-guide.html">Sellers Guide</a><a data-footer-key="Calculators" href="calculators.html">Calculators</a><a data-footer-key="1,000 Q&amp;A" href="questions.html">1,000 Q&amp;A</a></div><div><h3 data-footer-key="Connect">Connect</h3><a data-footer-key="About" href="about.html">About</a><a data-footer-key="Contact" href="contact.html">Contact</a></div></div><div class="footnote">© 2026 Sabatino Campilii · LoKation® Real Estate · Florida License #SL3363040</div></footer>
 <script>
 
@@ -1069,5 +1138,5 @@ html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link >
 html body footer.footer .footer-inner > div:not(:first-child) > a {display:block!important;margin:0 0 12px 0!important;padding:0!important;line-height:1.45!important;text-align:left!important;}
 html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 20px 0!important;text-align:left!important;}
 @media(max-width:480px){html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link,html body footer.footer .footer-inner > div:first-child > a.lokation-logo-link > img.lokation-logo{width:220px!important;max-width:220px!important;}}
-</style><button id="floatingLeftBackTop" type="button" aria-label="Back to top" title="Back to top">↑</button><script id="floating-left-top-script">(function(){var b=document.getElementById('floatingLeftBackTop');if(!b)return;function refresh(){b.classList.toggle('is-visible',window.scrollY>240)}window.addEventListener('scroll',refresh,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});refresh()})();</script></body>
+</style><button aria-label="Back to top" id="floatingLeftBackTop" title="Back to top" type="button">↑</button><script id="floating-left-top-script">(function(){var b=document.getElementById('floatingLeftBackTop');if(!b)return;function refresh(){b.classList.toggle('is-visible',window.scrollY>240)}window.addEventListener('scroll',refresh,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});refresh()})();</script></body>
 </html>
