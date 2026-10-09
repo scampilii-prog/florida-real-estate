@@ -55,6 +55,17 @@
     select.style.setProperty('display','none','important');
     select.addEventListener('change',refresh);
 
+    /* Resize the LoKation mark independently from its wordmark. */
+    document.querySelectorAll('footer.footer a.lokation-logo-link img.lokation-logo').forEach(function(img){
+      if(img.parentElement.querySelector('.sc-lokation-mark'))return;
+      var original=img.getAttribute('src');
+      var mark=document.createElement('span');mark.className='sc-lokation-mark';mark.setAttribute('aria-hidden','true');
+      mark.style.backgroundImage='url("'+original+'")';
+      var word=document.createElement('span');word.className='sc-lokation-word';
+      img.parentNode.insertBefore(mark,img);
+      img.parentNode.insertBefore(word,img);
+      word.appendChild(img);
+    });
     /* Mirror the header language control in the footer, using the same real translator. */
     var footer=document.querySelector('footer.footer, footer');
     if(footer && !footer.querySelector('.sc-footer-language')){
@@ -141,6 +152,11 @@
   'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>img.lokation-logo{width:190px!important;max-width:190px!important;height:auto!important;max-height:none!important;object-fit:contain!important}'+
   'html body footer.footer .footer-inner{padding-bottom:18px!important}'+
   '@media(max-width:480px){html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link,html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link>img.lokation-logo{width:175px!important;max-width:175px!important}}';
+  css += 'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{display:flex!important;align-items:center!important;gap:8px!important;width:205px!important;max-width:205px!important;height:45px!important;margin:20px 0 34px!important;overflow:visible!important}'+
+  '.sc-lokation-mark{display:block!important;flex:0 0 27px!important;width:27px!important;height:27px!important;background-repeat:no-repeat!important;background-position:left center!important;background-size:118px 27px!important}'+
+  '.sc-lokation-word{display:block!important;position:relative!important;flex:0 0 170px!important;width:170px!important;height:43px!important;overflow:hidden!important}'+
+  'html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link .sc-lokation-word>img.lokation-logo{position:absolute!important;left:-44px!important;top:0!important;width:214px!important;max-width:none!important;height:auto!important;max-height:none!important}'+
+  '@media(max-width:480px){html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{width:205px!important;max-width:205px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
