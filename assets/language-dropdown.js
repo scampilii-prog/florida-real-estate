@@ -258,7 +258,7 @@
     force(headcopy.querySelector('p'),{'display':'block','visibility':'visible','opacity':'1','color':'#617587','font-family':'Manrope,Arial,sans-serif','font-size':'14px','font-weight':'400','line-height':'1.6','margin':'0','text-align':'left'});
     force(close,{'position':'static','display':'block','visibility':'visible','opacity':'1','width':'46px','height':'46px','min-width':'46px','flex':'0 0 46px','background':'#eae5db','color':'#102b43','border':'0','border-radius':'50%','font-size':'30px','line-height':'1','cursor':'pointer'});
     var main=document.createElement('nav');main.className='sc-editorial-main';main.setAttribute('aria-label','Main pages');
-    [['Home','/'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(it){main.appendChild(link(it[0],it[1]));});
+    [['Home','/index.html'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(it){main.appendChild(link(it[0],it[1]));});
     wrap.appendChild(main);
     var feature=document.createElement('div');feature.className='sc-editorial-feature';feature.innerHTML='<span>COASTAL LIVING · PERSONAL GUIDANCE</span><strong>Find a place that feels like home.</strong>';wrap.appendChild(feature);
     var nav=document.createElement('div');nav.className='sc-editorial-grid';
@@ -346,15 +346,15 @@
     var title=names[path]||document.title.split(/[|–—]/)[0].trim().replace(/\\s*[-]\\s*Florida.*/i,'');
     var bar=document.createElement('nav');bar.className='sc-context-nav';bar.setAttribute('aria-label','Page navigation');
     var inner=document.createElement('div');inner.className='sc-context-inner';
-    var back=document.createElement('a');back.href='/';back.className='sc-context-back';back.textContent='← Back';
+    var back=document.createElement('a');back.href='/index.html';back.className='sc-context-back';back.textContent='← Back';
     try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&new URL(document.referrer).pathname!==location.pathname){back.href=document.referrer;back.textContent='← Previous page';}}catch(e){}
     inner.appendChild(back);
     var trail=document.createElement('span');trail.className='sc-context-trail';trail.appendChild(document.createTextNode('You are here: '));
-    var home=document.createElement('a');home.href='/';home.textContent='Home';trail.appendChild(home);
+    var home=document.createElement('a');home.href='/index.html';home.textContent='Home';trail.appendChild(home);
     if(path!=='index.html'){trail.appendChild(document.createTextNode(' / '+title));}
     inner.appendChild(trail);
     var links=document.createElement('div');links.className='sc-context-links';
-    [['Home','/'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(item){var a=document.createElement('a');a.href=item[1];a.textContent=item[0];if((path==='index.html'&&item[0]==='Home')||item[1]==='/'+path){a.setAttribute('aria-current','page');}links.appendChild(a);});
+    [['Home','/index.html'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(item){var a=document.createElement('a');a.href=item[1];a.textContent=item[0];if((path==='index.html'&&item[0]==='Home')||item[1]==='/'+path){a.setAttribute('aria-current','page');}links.appendChild(a);});
     inner.appendChild(links);bar.appendChild(inner);
     hero.insertAdjacentElement('afterend',bar);
   }
