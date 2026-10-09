@@ -54,6 +54,21 @@
     widget.appendChild(select);widget.append(trigger,menu);
     select.style.setProperty('display','none','important');
     select.addEventListener('change',refresh);
+
+    /* Mirror the header language control in the footer, using the same real translator. */
+    var footer=document.querySelector('footer.footer, footer');
+    if(footer && !footer.querySelector('.sc-footer-language')){
+      var foot=document.createElement('div');foot.className='sc-footer-language';
+      var caption=document.createElement('span');caption.className='sc-footer-language-caption';
+      caption.textContent='LANGUAGE / IDIOMA / LINGUA / IDIOMA';
+      var footSelect=document.createElement('select');footSelect.className='sc-footer-language-select';
+      footSelect.setAttribute('aria-label','Change website language');
+      options.forEach(function(o){var copy=document.createElement('option');copy.value=o.value;copy.textContent=o.textContent.trim().replace(/^(EN|ES|IT|PT)\\s*[—–-]\\s*/i,'');footSelect.appendChild(copy);});
+      function syncFooter(){footSelect.value=select.value;}
+      footSelect.addEventListener('change',function(){select.value=footSelect.value;select.dispatchEvent(new Event('change',{bubbles:true}));refresh();});
+      select.addEventListener('change',syncFooter);
+      foot.append(caption,footSelect);footer.appendChild(foot);syncFooter();
+    }
     refresh();
   }
   var css='.sc-language-widget{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;z-index:1002;font-family:Manrope,Arial,sans-serif!important}'+
@@ -66,6 +81,11 @@
   '.sc-language-widget select{display:none!important}'+
   '.sc-language-widget::after,.oc-lang:has(.sc-language-widget)::after,.header-tools .language:has(.sc-language-widget)::after{display:none!important;content:none!important}'+
   '@media(max-width:390px){.sc-language-trigger{width:112px!important;min-width:112px!important;max-width:112px!important;padding:0 6px!important;font-size:11px!important}.sc-language-options{width:112px!important;min-width:112px!important;max-width:112px!important}.sc-language-option{font-size:11px!important;padding:9px 4px!important}}';
+  css += '.sc-footer-language{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;padding:24px 16px 30px;border-top:1px solid rgba(255,255,255,.18);background:#102b43;color:#fff;font-family:Manrope,Arial,sans-serif!important}'+
+  '.sc-footer-language-caption{font-size:11px;font-weight:650;letter-spacing:.11em;color:#dfc48c}'+
+  '.sc-footer-language-select{appearance:auto!important;min-width:160px!important;max-width:230px!important;background:#102b43!important;color:#fff!important;border:1px solid #b99b63!important;border-radius:7px!important;padding:10px 13px!important;font:600 13px Manrope,Arial,sans-serif!important;cursor:pointer!important}'+
+  '.sc-footer-language-select option{background:#102b43!important;color:#fff!important}'+
+  '.sc-footer-language-select:focus-visible{outline:2px solid #dfc48c!important;outline-offset:3px!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
