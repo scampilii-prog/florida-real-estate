@@ -55,16 +55,11 @@
     select.style.setProperty('display','none','important');
     select.addEventListener('change',refresh);
 
-    /* Stable footer brokerage wordmark: real text beside a single cropped icon. */
+    /* Accessible LoKation lettering, no icon or duplicate graphic. */
     document.querySelectorAll('footer.footer a.lokation-logo-link').forEach(function(link){
-      var img=link.querySelector('img.lokation-logo');
-      if(!img)return;
-      var source=img.getAttribute('src');
-      link.querySelectorAll('.sc-lokation-mark,.sc-lokation-word,.sc-lokation-wordmark').forEach(function(el){el.remove();});
-      img.style.setProperty('display','none','important');
-      var icon=document.createElement('span');icon.className='sc-lokation-icon-only';icon.setAttribute('aria-hidden','true');icon.style.backgroundImage='url("'+source+'")';
+      link.querySelectorAll('img,.sc-lokation-icon-only,.sc-lokation-mark,.sc-lokation-word,.sc-lokation-wordmark').forEach(function(el){el.remove();});
       var lettering=document.createElement('span');lettering.className='sc-lokation-wordmark';lettering.innerHTML='<strong>LOKATION</strong><small>REAL ESTATE</small>';
-      link.appendChild(icon);link.appendChild(lettering);
+      link.appendChild(lettering);
     });
     /* Mirror the header language control in the footer, using the same real translator. */
     var footer=document.querySelector('footer.footer, footer');
@@ -179,6 +174,25 @@
   'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark strong{display:block!important;font:700 23px/1.05 Manrope,Arial,sans-serif!important;letter-spacing:.20em!important;color:#fff!important}'+
   'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark small{display:block!important;font:600 10px/1.3 Manrope,Arial,sans-serif!important;letter-spacing:.19em!important;color:#fff!important;margin-top:3px!important}'+
   'html body footer.footer a.lokation-logo-link img.lokation-logo,html body footer.footer a.lokation-logo-link .sc-lokation-mark,html body footer.footer a.lokation-logo-link .sc-lokation-word{display:none!important}';
+  /* Approved global visual system: navy headings, muted supporting text, gold primary CTAs, outlined secondary CTAs. */
+  css += 'html body footer.footer a.lokation-logo-link .sc-lokation-icon-only{display:none!important}'+
+  'html body footer.footer a.lokation-logo-link,html body footer.footer .footer-inner>div:first-child>a.lokation-logo-link{display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;min-height:42px!important;width:auto!important;max-width:none!important;height:auto!important;gap:0!important;overflow:visible!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark{display:flex!important;flex-direction:column!important;align-items:center!important;color:#fff!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark strong{font:700 25px/1.08 Manrope,Arial,sans-serif!important;letter-spacing:.18em!important;color:#fff!important}'+
+  'html body footer.footer a.lokation-logo-link .sc-lokation-wordmark small{font:600 10px/1.35 Manrope,Arial,sans-serif!important;letter-spacing:.20em!important;color:#fff!important}';
+  var page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  var image='';
+  if(/rotonda|golf/.test(page))image='images/florida-golf-course.webp';
+  else if(/waterfront|boca-grande|cape-haze|punta-gorda|condos/.test(page))image='images/florida-waterfront-homes.webp';
+  else if(/venice|englewood|siesta|nokomis|wellen|communities/.test(page))image='images/florida-gulf-coast-beach.webp';
+  else if(/calculat|mortgage|closing-cost|financing|offers|title|inspections|preparation|questions/.test(page))image='questions_real_estate_consultation.jpg';
+  else image='about-gulf-coast-hero.jpg';
+  if(page!=='index.html' && page!=='about.html' && page!=='privacy.html' && page!=='terms.html'){
+    css += 'html body section.hero:not(.contact-feature-hero){background:linear-gradient(90deg,rgba(248,251,253,.97),rgba(248,251,253,.84) 51%,rgba(248,251,253,.17)),url("'+image+'") center/cover no-repeat!important;color:#102b43!important;min-height:300px!important;padding-top:65px!important;padding-bottom:65px!important}'+
+    'html body section.hero:not(.contact-feature-hero) h1,html body section.hero:not(.contact-feature-hero) h1 *{color:#102b43!important;text-shadow:none!important}'+
+    'html body section.hero:not(.contact-feature-hero) p,html body section.hero:not(.contact-feature-hero) .subtitle,html body section.hero:not(.contact-feature-hero) #lead{color:#435a70!important;text-shadow:none!important}'+
+    'html body section.hero:not(.contact-feature-hero) .eyebrow,html body section.hero:not(.contact-feature-hero) small{color:#ad8039!important}';
+  }
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
