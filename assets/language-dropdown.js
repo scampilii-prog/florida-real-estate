@@ -73,7 +73,7 @@
     var legalFooter=document.querySelector('footer.footer,footer');
     if(legalFooter && !legalFooter.querySelector('.sc-legal-footer')){
       var legal=document.createElement('div');legal.className='sc-legal-footer';
-      legal.innerHTML='<div class="sc-legal-disclosure"><strong>Florida Gulf Coast Real Estate · Sabatino Campilii, Realtor® · LoKation® Real Estate · Florida License #SL3363040</strong><p>Real estate information is for general informational purposes only and is not legal, tax, financial, lending, insurance, or appraisal advice. Listings, prices, availability, property details and estimates may change and should be independently verified. Equal Housing Opportunity. No agency relationship is created solely by using this website.</p></div><div class="sc-legal-bottom"><span>© 2026 Sabatino Campilii · LoKation® Real Estate</span><nav aria-label="Legal links"><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a></nav><a class="sc-acromatico" href="https://acromatico.com/" target="_blank" rel="noopener noreferrer">Created with <span aria-label="love">♥</span> by Acromatico</a><span>Equal Housing Opportunity</span></div>';
+      legal.innerHTML='<div class="sc-legal-disclosure"><div class="sc-legal-identity"><strong>Florida Gulf Coast Real Estate</strong><span>Sabatino Campilii, Realtor® <i aria-hidden="true">·</i> LoKation® Real Estate <i aria-hidden="true">·</i> Florida License #SL3363040</span></div><p>Real estate information is for general informational purposes only and is not legal, tax, financial, lending, insurance, or appraisal advice. Listings, prices, availability, property details and estimates may change and should be independently verified. No agency relationship is created solely by using this website.</p></div><div class="sc-legal-bottom"><span>© 2026 Sabatino Campilii · LoKation® Real Estate</span><nav aria-label="Legal links"><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a></nav><a class="sc-acromatico" href="https://acromatico.com/" target="_blank" rel="noopener noreferrer">Created with <span aria-label="love">♥</span> by Acromatico</a><span>Equal Housing Opportunity</span></div>';
       legalFooter.appendChild(legal);
     }
     refresh();
@@ -118,6 +118,15 @@
   '.sc-legal-bottom>span{color:#aab9c6!important;font-weight:400!important;cursor:default!important}'+
   '.sc-legal-bottom a:hover,.sc-legal-bottom a:focus-visible{color:#e6c98c!important;text-decoration:none!important}'+
   '.sc-legal-bottom .sc-acromatico span{color:#e8826b!important}';
+  css += '.sc-legal-footer{background:#0b2134!important;border-top:1px solid rgba(198,164,109,.26)!important}'+
+  '.sc-legal-disclosure{max-width:980px!important;margin:0 auto 27px!important;text-align:center!important;padding:6px 12px 25px!important;border-bottom:1px solid rgba(198,164,109,.24)!important}'+
+  '.sc-legal-identity{display:flex!important;flex-direction:column!important;align-items:center!important;gap:5px!important;margin-bottom:15px!important}'+
+  '.sc-legal-identity strong{color:#dbe3e9!important;font:700 clamp(14px,1.3vw,17px) Manrope,Arial,sans-serif!important;letter-spacing:.025em!important}'+
+  '.sc-legal-identity span{color:#aab9c5!important;font:500 12px/1.9 Manrope,Arial,sans-serif!important;letter-spacing:.012em!important}'+
+  '.sc-legal-identity i{font-style:normal!important;color:#c6a46d!important;margin:0 8px!important}'+
+  '.sc-legal-disclosure p{max-width:880px!important;margin:0 auto!important;color:#aebbc6!important;font:400 11px/1.95 Manrope,Arial,sans-serif!important;text-align:center!important}'+
+  '.sc-legal-bottom{border-top:0!important;padding-top:0!important}'+
+  '@media(max-width:620px){.sc-legal-disclosure{padding-left:4px!important;padding-right:4px!important}.sc-legal-identity span{line-height:2!important}.sc-legal-identity i{margin:0 4px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
