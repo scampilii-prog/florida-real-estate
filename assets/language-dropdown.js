@@ -325,6 +325,42 @@
   css += '.oc-shell .oc-menu .sc-editorial-top{position:fixed!important;right:clamp(16px,3vw,44px)!important;bottom:24px!important;width:49px!important;height:49px!important;z-index:100002!important;border:1px solid #c6a46d!important;border-radius:50%!important;background:#102b43!important;color:#fff!important;font-size:25px!important;cursor:pointer!important;box-shadow:0 6px 20px #102b432c!important}'+
   '.oc-shell .oc-menu .sc-editorial-top[hidden]{display:none!important}'+
   '.oc-shell .oc-menu .sc-editorial-head button{cursor:pointer!important}';
+
+  function installContextNavigation(){
+    if(document.querySelector('.sc-context-nav'))return;
+    var main=document.querySelector('main');
+    if(!main)return;
+    var hero=main.querySelector('section[class*="hero"],header[class*="hero"],section[class*="banner"]');
+    if(!hero)hero=document.querySelector('main + section[class*="hero"]');
+    if(!hero)return;
+    var path=location.pathname.split('/').pop()||'index.html';
+    var names={'index.html':'Home','about.html':'About','contact.html':'Contact','buy.html':'Buy','sell.html':'Sell','search-properties.html':'Search Properties','communities.html':'Communities','questions.html':'1,000 Q&A','calculators.html':'Calculators','buyers-guide.html':'Buyers Guide','sellers-guide.html':'Sellers Guide','new-construction.html':'New Construction','waterfront.html':'Waterfront Homes'};
+    var title=names[path]||document.title.split(/[|–—]/)[0].trim().replace(/\\s*[-]\\s*Florida.*/i,'');
+    var bar=document.createElement('nav');bar.className='sc-context-nav';bar.setAttribute('aria-label','Page navigation');
+    var inner=document.createElement('div');inner.className='sc-context-inner';
+    var back=document.createElement('a');back.href='/';back.className='sc-context-back';back.textContent='← Back';
+    try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&new URL(document.referrer).pathname!==location.pathname){back.href=document.referrer;back.textContent='← Previous page';}}catch(e){}
+    inner.appendChild(back);
+    var trail=document.createElement('span');trail.className='sc-context-trail';trail.appendChild(document.createTextNode('You are here: '));
+    var home=document.createElement('a');home.href='/';home.textContent='Home';trail.appendChild(home);
+    if(path!=='index.html'){trail.appendChild(document.createTextNode(' / '+title));}
+    inner.appendChild(trail);
+    var links=document.createElement('div');links.className='sc-context-links';
+    [['Home','/'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(item){var a=document.createElement('a');a.href=item[1];a.textContent=item[0];if((path==='index.html'&&item[0]==='Home')||item[1]==='/'+path){a.setAttribute('aria-current','page');}links.appendChild(a);});
+    inner.appendChild(links);bar.appendChild(inner);
+    hero.insertAdjacentElement('afterend',bar);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installContextNavigation);else installContextNavigation();
+  css += '.sc-context-nav{background:#f8f6f1!important;color:#102b43!important;border:0!important;font-family:Manrope,Arial,sans-serif!important;position:relative!important;z-index:3!important}'+
+  '.sc-context-inner{max-width:1320px!important;margin:auto!important;padding:17px clamp(20px,4vw,56px)!important;display:flex!important;align-items:center!important;flex-wrap:wrap!important;column-gap:28px!important;row-gap:13px!important}'+
+  '.sc-context-back{font-size:12px!important;font-weight:700!important;color:#aa8046!important;text-decoration:none!important;white-space:nowrap!important}'+
+  '.sc-context-trail{font-size:11px!important;color:#74818b!important;white-space:normal!important}'+
+  '.sc-context-trail a{color:#aa8046!important;text-decoration:none!important}'+
+  '.sc-context-links{display:flex!important;align-items:center!important;justify-content:center!important;flex-wrap:wrap!important;gap:12px 24px!important;flex:1 1 100%!important}'+
+  '.sc-context-links a{color:#102b43!important;font-size:clamp(12px,1.15vw,15px)!important;font-weight:700!important;text-decoration:none!important;white-space:nowrap!important}'+
+  '.sc-context-links a[aria-current="page"]{color:#aa8046!important}'+
+  '.sc-context-links a:hover,.sc-context-back:hover{text-decoration:underline!important;text-underline-offset:5px!important}'+
+  '@media(max-width:600px){.sc-context-inner{padding:14px 17px!important}.sc-context-links{justify-content:flex-start!important;gap:10px 17px!important}.sc-context-links a{font-size:12px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
