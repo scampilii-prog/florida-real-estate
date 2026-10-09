@@ -249,6 +249,14 @@
     var head=document.createElement('header');head.className='sc-editorial-head';
     var headcopy=document.createElement('div');headcopy.innerHTML='<small>SABATINO CAMPILII · FLORIDA GULF COAST</small><h2>Discover your Florida</h2><p>Explore homes, communities and expert guidance, all in one place.</p>';
     var close=document.createElement('button');close.type='button';close.setAttribute('data-oc-close','');close.setAttribute('aria-label','Close menu');close.textContent='×';head.append(headcopy,close);wrap.appendChild(head);
+    // Force the same editorial heading on pages with legacy global header rules.
+    function force(el,props){Object.keys(props).forEach(function(k){el.style.setProperty(k,props[k],'important');});}
+    force(head,{'display':'flex','flex-direction':'row','align-items':'flex-start','justify-content':'space-between','background':'transparent','background-image':'none','color':'#102b43','width':'100%','height':'auto','min-height':'0','max-height':'none','padding':'0','margin':'0 0 24px','border':'0','box-shadow':'none','position':'relative','overflow':'visible','text-align':'left'});
+    force(headcopy,{'display':'block','visibility':'visible','opacity':'1','background':'transparent','width':'auto','height':'auto','padding':'0','margin':'0','color':'#102b43','text-align':'left'});
+    force(headcopy.querySelector('small'),{'display':'block','visibility':'visible','opacity':'1','color':'#ae8346','font-size':'10px','font-weight':'700','line-height':'1.5','letter-spacing':'.17em','margin':'0'});
+    force(headcopy.querySelector('h2'),{'display':'block','visibility':'visible','opacity':'1','color':'#102b43','font-family':'Manrope,Arial,sans-serif','font-size':'clamp(30px,4vw,52px)','font-weight':'700','line-height':'1.2','letter-spacing':'-.035em','margin':'9px 0 6px','text-align':'left','background':'none','-webkit-text-fill-color':'#102b43'});
+    force(headcopy.querySelector('p'),{'display':'block','visibility':'visible','opacity':'1','color':'#617587','font-family':'Manrope,Arial,sans-serif','font-size':'14px','font-weight':'400','line-height':'1.6','margin':'0','text-align':'left'});
+    force(close,{'position':'static','display':'block','visibility':'visible','opacity':'1','width':'46px','height':'46px','min-width':'46px','flex':'0 0 46px','background':'#eae5db','color':'#102b43','border':'0','border-radius':'50%','font-size':'30px','line-height':'1','cursor':'pointer'});
     var main=document.createElement('nav');main.className='sc-editorial-main';main.setAttribute('aria-label','Main pages');
     [['Home','/'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(it){main.appendChild(link(it[0],it[1]));});
     wrap.appendChild(main);
