@@ -378,3 +378,47 @@
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
+/* Shared Gulf Coast inquiry: language parity and relevant area preselection. */
+(function(){
+ var dict={
+ es:{eyebrow:"TU COSTA DEL GOLFO DE FLORIDA",title:"¿Qué zona de la costa te gustaría llamar hogar?",lead:"Elige una comunidad y cuéntame qué es lo más importante para ti. Te ayudaré a explorar tus opciones.",legend:"Elige tu zona preferida",decide:"Ayúdame a decidir",interest:"Me interesa",intent:["Comprar una casa","Vender una propiedad","Explorar comunidades","Construcción nueva"],name:"Tu nombre",namePh:"Nombre completo",email:"Tu correo electrónico",phone:"Teléfono (opcional)",phonePh:"Mejor número para contactarte",message:"¿Qué estás buscando?",messagePh:"Presupuesto, habitaciones, fechas, preferencias de costa o cualquier pregunta...",send:"Contactar a Sabatino",note:"Se abrirá tu aplicación de correo con la información lista. No se enviará nada hasta que lo confirmes."},
+ it:{eyebrow:"LA TUA COSTA DEL GOLFO IN FLORIDA",title:"Quale zona della costa vorresti chiamare casa?",lead:"Scegli una comunità e raccontami cosa conta di più per te. Ti aiuterò a valutare le possibilità.",legend:"Scegli la zona che preferisci",decide:"Aiutami a decidere",interest:"Mi interessa",intent:["Acquistare una casa","Vendere un immobile","Esplorare le comunità","Nuove costruzioni"],name:"Il tuo nome",namePh:"Nome e cognome",email:"La tua email",phone:"Telefono (facoltativo)",phonePh:"Numero migliore per contattarti",message:"Che cosa stai cercando?",messagePh:"Budget, camere, tempistiche, preferenze sul lungomare o domande...",send:"Contatta Sabatino",note:"Si aprirà l'app email con le tue scelte pronte. Nessun messaggio verrà inviato senza la tua conferma."},
+ pt:{eyebrow:"SUA COSTA DO GOLFO DA FLÓRIDA",title:"Qual trecho do litoral você gostaria de chamar de lar?",lead:"Escolha uma comunidade e conte o que é mais importante. Vou ajudar você a explorar suas opções.",legend:"Escolha sua região preferida",decide:"Ajude-me a decidir",interest:"Tenho interesse em",intent:["Comprar uma casa","Vender um imóvel","Conhecer comunidades","Construção nova"],name:"Seu nome",namePh:"Nome completo",email:"Seu e-mail",phone:"Telefone (opcional)",phonePh:"Melhor número para contato",message:"O que você está procurando?",messagePh:"Orçamento, quartos, prazo, preferências à beira-mar ou dúvidas...",send:"Fale com Sabatino",note:"Seu aplicativo de e-mail será aberto com as informações prontas. Nada será enviado até você confirmar."}
+ };
+ var en={eyebrow:"YOUR FLORIDA GULF COAST",title:"Which stretch of coast feels like home?",lead:"Select a community and tell me what matters most. I'll help you explore your next step.",legend:"Choose your preferred area",decide:"Help me decide",interest:"I'm interested in",intent:["Buying a home","Selling a property","Exploring communities","New construction"],name:"Your name",namePh:"Full name",email:"Your email",phone:"Phone (optional)",phonePh:"Best number to reach you",message:"What are you looking for?",messagePh:"Budget, bedrooms, timeline, waterfront preferences, or any questions...",send:"Contact Sabatino",note:"Opens your email app with your selections ready to send. No message is sent until you confirm it."};
+ function setText(el,value){if(el)el.textContent=value;}
+ function render(){
+  var form=document.getElementById('coast-lead-form');if(!form)return;
+  var selector=document.querySelector('#oc-lang-static,#lang');
+  var language=(selector&&selector.value||document.documentElement.lang||'en').toLowerCase().slice(0,2);
+  var t=dict[language]||en,root=form.closest('.coast-inquiry');if(!root)return;
+  setText(root.querySelector('.coast-eyebrow'),t.eyebrow);setText(root.querySelector('#coast-title'),t.title);setText(root.querySelector('.coast-lead'),t.lead);
+  setText(root.querySelector('legend'),t.legend);
+  var labels=root.querySelectorAll('.coast-form-fields>label');
+  if(labels.length>=5){
+   labels[0].firstChild.textContent=t.interest+' ';
+   labels[1].firstChild.textContent=t.name+' ';
+   labels[2].firstChild.textContent=t.email+' ';
+   labels[3].firstChild.textContent=t.phone+' ';
+   labels[4].firstChild.textContent=t.message+' ';
+  }
+  var options=form.querySelectorAll('select[name="intent"] option');options.forEach(function(o,i){if(t.intent[i])o.textContent=t.intent[i]});
+  var name=form.querySelector('[name="name"]'),phone=form.querySelector('[name="phone"]'),msg=form.querySelector('[name="message"]');
+  if(name)name.placeholder=t.namePh;if(phone)phone.placeholder=t.phonePh;if(msg)msg.placeholder=t.messagePh;
+  setText(form.querySelector('input[value="Help me decide"]+span'),t.decide);
+  var send=form.querySelector('.coast-actions button');if(send)send.innerHTML=t.send+' <span aria-hidden="true">→</span>';
+  setText(form.querySelector('.coast-actions p'),t.note);
+ }
+ function preselect(){
+  var form=document.getElementById('coast-lead-form');if(!form)return;
+  var file=(location.pathname.split('/').pop()||'').toLowerCase();
+  var areas={'boca-grande.html':'Boca Grande','cape-haze.html':'Cape Haze','englewood.html':'Englewood','rotonda-west.html':'Rotonda West','venice.html':'Venice','nokomis-casey-key.html':'Nokomis & Casey Key','punta-gorda-isles.html':'Punta Gorda Isles'};
+  var chosen=areas[file];if(chosen){var radio=Array.from(form.querySelectorAll('input[name="coastArea"]')).find(function(x){return x.value===chosen});if(radio)radio.checked=true}
+ }
+ function init(){
+  preselect();render();
+  var selector=document.querySelector('#oc-lang-static,#lang');if(selector)selector.addEventListener('change',function(){render();setTimeout(render,80)});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
