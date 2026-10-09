@@ -249,6 +249,9 @@
     var head=document.createElement('header');head.className='sc-editorial-head';
     var headcopy=document.createElement('div');headcopy.innerHTML='<small>SABATINO CAMPILII · FLORIDA GULF COAST</small><h2>Discover your Florida</h2><p>Explore homes, communities and expert guidance, all in one place.</p>';
     var close=document.createElement('button');close.type='button';close.setAttribute('data-oc-close','');close.setAttribute('aria-label','Close menu');close.textContent='×';head.append(headcopy,close);wrap.appendChild(head);
+    var main=document.createElement('nav');main.className='sc-editorial-main';main.setAttribute('aria-label','Main pages');
+    [['Home','/'],['Search Properties','/search-properties.html'],['Buy','/buy.html'],['Sell','/sell.html'],['Communities','/communities.html'],['About','/about.html'],['Contact','/contact.html']].forEach(function(it){main.appendChild(link(it[0],it[1]));});
+    wrap.appendChild(main);
     var feature=document.createElement('div');feature.className='sc-editorial-feature';feature.innerHTML='<span>COASTAL LIVING · PERSONAL GUIDANCE</span><strong>Find a place that feels like home.</strong>';wrap.appendChild(feature);
     var nav=document.createElement('div');nav.className='sc-editorial-grid';
     groups.forEach(function(g){var section=document.createElement('section');section.className='sc-editorial-category';var h=document.createElement('h3');h.textContent=g.title;var intro=document.createElement('p');intro.textContent=g.intro;section.append(h,intro);var links=document.createElement('div');links.className='sc-editorial-links';g.items.forEach(function(it){links.appendChild(link(it[0],it[1],it[0]==='Send an Inquiry'?'sc-editorial-gold':''));});section.appendChild(links);nav.appendChild(section);});
@@ -312,6 +315,10 @@
   '.oc-shell .oc-menu .sc-editorial-bottom>a:hover{color:#fff!important;background:#244963!important}'+
   '@media(max-width:850px){.oc-shell .oc-menu .sc-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px!important}.oc-shell .oc-menu .sc-editorial-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}'+
   '@media(max-width:550px){.oc-shell .oc-menu .sc-editorial-grid{grid-template-columns:1fr!important}.oc-shell .oc-menu .sc-editorial-feature{min-height:115px!important;padding:20px!important}.oc-shell .oc-menu .sc-editorial-quick{padding:20px!important}.oc-shell .oc-menu .sc-editorial-bottom{flex-direction:column!important;align-items:stretch!important}.oc-shell .oc-menu .sc-editorial-tiles{grid-template-columns:1fr 1fr!important}.oc-shell .oc-menu .sc-editorial-head h2{font-size:30px!important}}';
+  css += '.oc-shell .oc-menu .sc-editorial-main{display:flex!important;flex-wrap:wrap!important;gap:9px 21px!important;align-items:center!important;margin:0 0 24px!important;padding:0!important;border:0!important}'+
+  '.oc-shell .oc-menu .sc-editorial-main a{font:700 13px/1.5 Manrope,Arial,sans-serif!important;color:#102b43!important;text-decoration:none!important;padding:7px 0!important;border:0!important;white-space:nowrap!important}'+
+  '.oc-shell .oc-menu .sc-editorial-main a:first-child{color:#a4793e!important}'+
+  '@media(max-width:550px){.oc-shell .oc-menu .sc-editorial-main{gap:7px 15px!important}.oc-shell .oc-menu .sc-editorial-main a{font-size:12px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
