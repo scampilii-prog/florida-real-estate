@@ -753,6 +753,12 @@ font-size:29px!important;line-height:1!important;cursor:pointer!important}
 @media(max-width:420px){.home-actions{flex-direction:column!important;align-items:stretch!important}.home-actions a{width:100%!important}.home-community-links a{font-size:12px!important;padding:10px 13px!important}}
 @media(prefers-reduced-motion:reduce){.home-actions a,.home-card,.home-community-links a{transition:none!important}}
 </style>
+<style id="home-community-single-row-20261009">
+/* Nine community links stay in one horizontal row on desktop, with graceful mobile scrolling. */
+.home-community-links{display:flex!important;flex-wrap:nowrap!important;gap:8px!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;overscroll-behavior-x:contain!important;scrollbar-width:thin!important;padding:5px 1px 12px!important;-webkit-overflow-scrolling:touch!important}
+.home-community-links a{flex:1 0 auto!important;min-width:0!important;white-space:nowrap!important;justify-content:center!important;text-align:center!important;padding:12px clamp(7px,.72vw,14px)!important;font-size:clamp(10px,.79vw,12px)!important;letter-spacing:0!important;line-height:1.35!important}
+@media(max-width:900px){.home-community-links{gap:9px!important}.home-community-links a{flex:0 0 auto!important;font-size:12px!important;padding:12px 15px!important}}
+</style>
 </head>
 <body>
 <!-- FIXED HEADER -->
