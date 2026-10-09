@@ -216,40 +216,51 @@
   function installFullScreenMenu(){
     var menu=document.querySelector('.oc-shell .oc-menu');
     if(!menu){
-      var legacyToggle=document.querySelector('.menu-button,button[onclick*="openMenu"]');
-      if(legacyToggle){
+      var toggle=document.querySelector('.menu-button,button[onclick*="openMenu"]');
+      if(toggle){
         document.body.classList.add('oc-shell');
-        menu=document.createElement('nav');menu.className='oc-menu';menu.hidden=true;menu.setAttribute('aria-label','Main navigation');document.body.appendChild(menu);
-        legacyToggle.setAttribute('aria-expanded','false');
-        legacyToggle.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();menu.hidden=!menu.hidden;legacyToggle.setAttribute('aria-expanded',String(!menu.hidden));document.body.style.overflow=menu.hidden?'':'hidden';},true);
+        menu=document.createElement('nav');menu.className='oc-menu';menu.hidden=true;menu.setAttribute('aria-label','Explore the website');document.body.appendChild(menu);
+        toggle.addEventListener('click',function(e){e.preventDefault();e.stopImmediatePropagation();menu.hidden=!menu.hidden;toggle.setAttribute('aria-expanded',String(!menu.hidden));document.body.style.overflow=menu.hidden?'':'hidden';},true);
       }
     }
-    if(!menu || menu.dataset.scFullMenu)return;
+    if(!menu||menu.dataset.scFullMenu)return;
     menu.dataset.scFullMenu='1';
     var groups=[
-      {title:'Properties',items:[['Search Properties','search-properties.html'],['Homes for Sale','florida-gulf-coast-homes-for-sale.html'],['Condos for Sale','florida-gulf-coast-condos-for-sale.html'],['Waterfront','waterfront.html'],['New Construction','new-construction.html']]},
-      {title:'Communities',items:[['Rotonda West','rotonda-west.html'],['Boca Grande','boca-grande-florida-real-estate.html'],['Cape Haze & Placida','cape-haze-placida-florida-real-estate.html'],['Englewood & Manasota Key','englewood-manasota-key-florida-real-estate.html'],['Venice','venice-florida-real-estate.html'],['Wellen Park','wellen-park-florida-real-estate.html'],['Nokomis & Casey Key','nokomis-casey-key-florida-real-estate.html'],['Punta Gorda Isles','punta-gorda-isles-florida-real-estate.html'],['Siesta Key & Longboat Key','siesta-key-longboat-key-florida-real-estate.html']]},
-      {title:'Buying',items:[['Buy a Home','buy.html'],['Buyers Guide','buyers-guide.html'],['Preparing to Buy','buyer-preparation.html'],['Property Search','buyer-property-search.html'],['Financing & Pre-Approval','buyer-financing-preapproval.html'],['Offers & Contracts','buyer-offers-contracts.html'],['Inspections & Appraisals','buyer-inspections-appraisals.html'],['Title & Financing','buyer-title-financing.html']]},
-      {title:'Selling',items:[['Sell Your Property','sell.html'],['Sellers Guide','sellers-guide.html'],['Home Valuation','home-valuation.html'],['Seller Closing Costs','seller-closing-costs.html']]},
-      {title:'Calculators & Resources',items:[['All Calculators','calculators.html'],['Mortgage Calculator','mortgage-calculator.html'],['Buyer Closing Costs','buyer-closing-costs.html'],['Seller Closing Costs','seller-closing-costs.html'],['1,000 Q&A','questions.html']]},
-      {title:'About & Contact',items:[['About Sabatino','about.html'],['Contact','contact.html'],['Send an Inquiry','contact.html#tell-us-your-plans']]}
+      {title:'Find Your Property',intro:'Explore homes along the coast',items:[['Search All Properties','search-properties.html'],['Homes for Sale','florida-gulf-coast-homes-for-sale.html'],['Condos for Sale','florida-gulf-coast-condos-for-sale.html'],['Waterfront Living','waterfront.html'],['New Construction','new-construction.html']]},
+      {title:'Discover Communities',intro:'Nine destinations, one beautiful coast',items:[['All Communities','communities.html'],['Boca Grande','boca-grande-florida-real-estate.html'],['Cape Haze & Placida','cape-haze-placida-florida-real-estate.html'],['Englewood & Manasota Key','englewood-manasota-key-florida-real-estate.html'],['Rotonda West','rotonda-west.html'],['Venice','venice-florida-real-estate.html'],['Wellen Park','wellen-park-florida-real-estate.html'],['Nokomis & Casey Key','nokomis-casey-key-florida-real-estate.html'],['Punta Gorda Isles','punta-gorda-isles-florida-real-estate.html'],['Siesta Key & Longboat Key','siesta-key-longboat-key-florida-real-estate.html']]},
+      {title:'Buying a Home',intro:'From your first search to closing',items:[['Buying Overview','buy.html'],['Complete Buyers Guide','buyers-guide.html'],['Getting Ready to Buy','buyer-preparation.html'],['Finding the Right Property','buyer-property-search.html'],['Financing & Pre-Approval','buyer-financing-preapproval.html'],['Making an Offer','buyer-offers-contracts.html'],['Inspections & Appraisals','buyer-inspections-appraisals.html'],['Title & Financing','buyer-title-financing.html']]},
+      {title:'Selling a Home',intro:'Plan your sale with confidence',items:[['Selling Overview','sell.html'],['Complete Sellers Guide','sellers-guide.html'],['Home Valuation','home-valuation.html'],['Seller Closing Costs','seller-closing-costs.html']]},
+      {title:'Calculators & Answers',intro:'Helpful numbers and clear explanations',items:[['All Calculators','calculators.html'],['Mortgage Calculator','mortgage-calculator.html'],['Buyer Closing Costs','buyer-closing-costs.html'],['Seller Closing Costs','seller-closing-costs.html'],['1,000 Questions & Answers','questions.html']]},
+      {title:'Meet & Connect',intro:'Personal guidance, your way',items:[['About Sabatino','about.html'],['Contact','contact.html'],['Send an Inquiry','contact.html#tell-us-your-plans']]}
     ];
-    function link(label,url,klass){var a=document.createElement('a');a.href=url;a.textContent=label;if(klass)a.className=klass;return a;}
+    var shortcuts=[
+      ['First-Time Buyer','questions.html?q=before%20looking%20at%20homes','Start with the essentials'],
+      ['Pre-Approval & Financing','buyer-financing-preapproval.html','Know your buying power'],
+      ['Buying a Waterfront Home','waterfront.html','Explore coastal living'],
+      ['New Construction','new-construction.html','Find newly built homes'],
+      ['What Is My Home Worth?','home-valuation.html','Plan a smart sale'],
+      ['Closing Costs','calculators.html','Estimate your expenses'],
+      ['Home Inspections','buyer-inspections-appraisals.html','Know what to check'],
+      ['Ask a Real Estate Question','questions.html','Explore the answers']
+    ];
+    function link(label,url,klass){var el=document.createElement('a');el.href=url;el.textContent=label;if(klass)el.className=klass;return el;}
     menu.replaceChildren();
-    var header=document.createElement('div');header.className='sc-mega-head';
-    var heading=document.createElement('div');heading.innerHTML='<small>FLORIDA GULF COAST REAL ESTATE</small><strong>Explore the coast</strong>';
-    var close=document.createElement('button');close.type='button';close.setAttribute('data-oc-close','');close.setAttribute('aria-label','Close menu');close.textContent='×';
-    header.append(heading,close);menu.appendChild(header);
-    var body=document.createElement('div');body.className='sc-mega-body';
-    var primary=document.createElement('div');primary.className='sc-mega-primary';
-    [['01','Home','/'],['02','Search Properties','search-properties.html'],['03','Buy','buy.html'],['04','Sell','sell.html'],['05','Communities','communities.html'],['06','New Construction','new-construction.html'],['07','Calculators','calculators.html'],['08','Guides','buyers-guide.html'],['09','1,000 Q&A','questions.html'],['10','About','about.html'],['11','Contact','contact.html']].forEach(function(item){var a=link(item[1],item[2]);var num=document.createElement('span');num.textContent=item[0];a.prepend(num);primary.appendChild(a);});
-    var details=document.createElement('div');details.className='sc-mega-groups';
-    groups.forEach(function(group){var section=document.createElement('section');var h=document.createElement('h2');h.textContent=group.title;section.appendChild(h);group.items.forEach(function(item){section.appendChild(link(item[0],item[1],item[0]==='Send an Inquiry'?'sc-mega-inquiry':''));});details.appendChild(section);});
-    body.append(primary,details);menu.appendChild(body);
-    var foot=document.createElement('div');foot.className='sc-mega-foot';foot.textContent='SABATINO CAMPILII  ·  REALTOR®  ·  LOKATION® REAL ESTATE';menu.appendChild(foot);
-    close.addEventListener('click',function(){menu.hidden=true;document.body.style.overflow='';var toggle=document.querySelector('[data-oc-menu]');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.focus();}});
-    menu.addEventListener('click',function(e){if(e.target===menu)close.click();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close.click();});
+    var wrap=document.createElement('div');wrap.className='sc-editorial';
+    var head=document.createElement('header');head.className='sc-editorial-head';
+    var headcopy=document.createElement('div');headcopy.innerHTML='<small>SABATINO CAMPILII · FLORIDA GULF COAST</small><h2>Discover your Florida</h2><p>Explore homes, communities and expert guidance, all in one place.</p>';
+    var close=document.createElement('button');close.type='button';close.setAttribute('data-oc-close','');close.setAttribute('aria-label','Close menu');close.textContent='×';head.append(headcopy,close);wrap.appendChild(head);
+    var feature=document.createElement('div');feature.className='sc-editorial-feature';feature.innerHTML='<span>COASTAL LIVING · PERSONAL GUIDANCE</span><strong>Find a place that feels like home.</strong>';wrap.appendChild(feature);
+    var nav=document.createElement('div');nav.className='sc-editorial-grid';
+    groups.forEach(function(g){var section=document.createElement('section');section.className='sc-editorial-category';var h=document.createElement('h3');h.textContent=g.title;var intro=document.createElement('p');intro.textContent=g.intro;section.append(h,intro);var links=document.createElement('div');links.className='sc-editorial-links';g.items.forEach(function(it){links.appendChild(link(it[0],it[1],it[0]==='Send an Inquiry'?'sc-editorial-gold':''));});section.appendChild(links);nav.appendChild(section);});
+    wrap.appendChild(nav);
+    var quick=document.createElement('section');quick.className='sc-editorial-quick';quick.innerHTML='<small>QUICK ANSWERS & NEXT STEPS</small><h3>What can we help you with?</h3><p>Go straight to the information you need.</p>';
+    var tiles=document.createElement('div');tiles.className='sc-editorial-tiles';shortcuts.forEach(function(it){var a=link(it[0],it[1]);var sub=document.createElement('span');sub.textContent=it[2];a.appendChild(sub);tiles.appendChild(a);});quick.appendChild(tiles);wrap.appendChild(quick);
+    var bottom=document.createElement('div');bottom.className='sc-editorial-bottom';var prompt=document.createElement('div');prompt.innerHTML='<strong>Ready to make your move?</strong><span>Let’s talk about your plans on Florida’s Gulf Coast.</span>';bottom.append(prompt,link('Send an Inquiry ↗','contact.html#tell-us-your-plans'));wrap.appendChild(bottom);
+    menu.appendChild(wrap);
+    function shut(){menu.hidden=true;document.body.style.overflow='';var t=document.querySelector('[data-oc-menu],.menu-button');if(t){t.setAttribute('aria-expanded','false');t.focus();}}
+    close.addEventListener('click',shut);
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)shut();});
+    menu.addEventListener('click',function(e){if(e.target===menu)shut();});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installFullScreenMenu);else installFullScreenMenu();
 
@@ -272,6 +283,35 @@
   '.oc-shell .oc-menu .sc-mega-foot{text-align:center!important;color:#ffffff75!important;font-size:10px!important;letter-spacing:.12em!important;padding:18px!important;border-top:1px solid #ffffff21!important}'+
   '@media(max-width:750px){.oc-shell .oc-menu .sc-mega-body{grid-template-columns:1fr!important;gap:30px!important}.oc-shell .oc-menu .sc-mega-primary a{font-size:21px!important;padding:10px 0!important}.oc-shell .oc-menu .sc-mega-groups{grid-template-columns:1fr 1fr!important;gap:24px!important}}'+
   '@media(max-width:420px){.oc-shell .oc-menu .sc-mega-groups{grid-template-columns:1fr!important}}';
+  css += '.oc-shell .oc-menu[data-sc-full-menu="1"]{background:#f7f5f0!important;color:#102b43!important;font-family:Manrope,Arial,sans-serif!important}'+
+  '.oc-shell .oc-menu[data-sc-full-menu="1"] .sc-editorial{max-width:1370px!important;margin:0 auto!important;padding:35px clamp(20px,5vw,72px) 50px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head{display:flex!important;justify-content:space-between!important;align-items:flex-start!important;gap:20px!important;margin-bottom:24px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head small,.oc-shell .oc-menu .sc-editorial-quick>small{display:block!important;font:700 10px/1.5 Manrope,Arial,sans-serif!important;letter-spacing:.17em!important;color:#ae8346!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head h2{font:700 clamp(30px,4vw,52px)/1.2 Manrope,Arial,sans-serif!important;color:#102b43!important;letter-spacing:-.035em!important;margin:9px 0 6px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head p,.oc-shell .oc-menu .sc-editorial-quick>p{font:400 14px/1.6 Manrope,Arial,sans-serif!important;color:#617587!important;margin:0!important}'+
+  '.oc-shell .oc-menu .sc-editorial-head button{position:static!important;flex:0 0 46px!important;width:46px!important;height:46px!important;border:0!important;border-radius:50%!important;background:#eae5db!important;color:#102b43!important;font-size:30px!important;cursor:pointer!important}'+
+  '.oc-shell .oc-menu .sc-editorial-feature{display:flex!important;flex-direction:column!important;justify-content:end!important;min-height:155px!important;padding:24px 32px!important;border-radius:13px!important;background:linear-gradient(90deg,rgba(16,43,67,.79),rgba(16,43,67,.04)),url("images/florida-gulf-coast-beach.webp") center 52%/cover no-repeat!important;margin-bottom:38px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-feature span{color:#f1d49e!important;font-size:10px!important;letter-spacing:.18em!important;font-weight:700!important}'+
+  '.oc-shell .oc-menu .sc-editorial-feature strong{color:#fff!important;font-size:clamp(19px,2.6vw,33px)!important;line-height:1.3!important;margin-top:9px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:36px 52px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-category h3{color:#102b43!important;font:700 23px/1.3 Manrope,Arial,sans-serif!important;letter-spacing:-.025em!important;margin:0 0 6px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-category p{color:#7b8891!important;font:400 12px/1.5 Manrope,Arial,sans-serif!important;margin:0 0 17px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-links{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:10px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-links a{display:block!important;color:#29455b!important;font:500 13px/1.5 Manrope,Arial,sans-serif!important;text-decoration:none!important;border:0!important;padding:0!important}'+
+  '.oc-shell .oc-menu .sc-editorial-links a.sc-editorial-gold{color:#a4793e!important;font-weight:800!important}'+
+  '.oc-shell .oc-menu .sc-editorial-quick{margin-top:48px!important;padding:30px!important;border-radius:15px!important;background:#eee9df!important}'+
+  '.oc-shell .oc-menu .sc-editorial-quick h3{color:#102b43!important;font:700 clamp(23px,3vw,34px)/1.25 Manrope,Arial,sans-serif!important;margin:8px 0!important}'+
+  '.oc-shell .oc-menu .sc-editorial-tiles{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-top:24px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-tiles a{display:flex!important;flex-direction:column!important;gap:5px!important;padding:17px!important;border-radius:10px!important;background:#fff!important;color:#102b43!important;text-decoration:none!important;font:700 13px/1.35 Manrope,Arial,sans-serif!important;min-height:76px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-tiles a span{font:400 11px/1.5 Manrope,Arial,sans-serif!important;color:#708092!important}'+
+  '.oc-shell .oc-menu .sc-editorial-bottom{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;background:#e7dfd1!important;border-radius:12px!important;padding:25px 30px!important;margin-top:25px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-bottom strong,.oc-shell .oc-menu .sc-editorial-bottom span{display:block!important;color:#102b43!important}'+
+  '.oc-shell .oc-menu .sc-editorial-bottom strong{font-size:17px!important}.oc-shell .oc-menu .sc-editorial-bottom span{font-size:12px!important;margin-top:5px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-bottom>a{display:inline-block!important;background:#102b43!important;color:#fff!important;border-radius:7px!important;padding:14px 20px!important;font-size:13px!important;font-weight:700!important;text-decoration:none!important;white-space:nowrap!important}'+
+  '.oc-shell .oc-menu .sc-editorial a:hover,.oc-shell .oc-menu .sc-editorial a:focus-visible{color:#b18a4d!important;text-decoration:underline!important;text-underline-offset:4px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-bottom>a:hover{color:#fff!important;background:#244963!important}'+
+  '@media(max-width:850px){.oc-shell .oc-menu .sc-editorial-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px!important}.oc-shell .oc-menu .sc-editorial-tiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}'+
+  '@media(max-width:550px){.oc-shell .oc-menu .sc-editorial-grid{grid-template-columns:1fr!important}.oc-shell .oc-menu .sc-editorial-feature{min-height:115px!important;padding:20px!important}.oc-shell .oc-menu .sc-editorial-quick{padding:20px!important}.oc-shell .oc-menu .sc-editorial-bottom{flex-direction:column!important;align-items:stretch!important}.oc-shell .oc-menu .sc-editorial-tiles{grid-template-columns:1fr 1fr!important}.oc-shell .oc-menu .sc-editorial-head h2{font-size:30px!important}}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
