@@ -3,3 +3,13 @@
 :root{--site-font:'Manrope',Arial,sans-serif}
 html,body,body *,body *::before,body *::after{font-family:var(--site-font)!important}
 button,input,select,textarea,option{font-family:var(--site-font)!important}
+
+/* Shared premium button treatment — all site pages. */
+:where(a.button,a.btn,a.cta,a[class*="button"],a[class*="btn"],button:not(.tino-close):not(.oc-close):not(.oc-icon):not(.oc-menu-button):not(.tino-launcher)):hover,
+:where(a.button,a.btn,a.cta,a[class*="button"],a[class*="btn"],button:not(.tino-close):not(.oc-close):not(.oc-icon):not(.oc-menu-button):not(.tino-launcher)):focus-visible{
+ background-color:#102b43!important;color:#fff!important;-webkit-text-fill-color:#fff!important;border-color:#c6a46d!important;
+ transition:background-color .2s ease,color .2s ease,border-color .2s ease;
+}
+:where(a.button,a.btn,a.cta,a[class*="button"],a[class*="btn"],button):active{
+ background-color:#102b43!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+}
