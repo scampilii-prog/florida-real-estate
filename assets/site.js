@@ -1,4 +1,4 @@
-// OceanFL multilingual site translations — English, Español, Italiano, Português.
+// Florida Gulf Coast multilingual site translations — English, Español, Italiano, Português.
 const SITE_LANGUAGES = ["en", "es", "it", "pt"];
 function getSiteLanguage() {
   try { const lang=localStorage.getItem("siteLanguage"); return SITE_LANGUAGES.includes(lang) ? lang : "en"; }

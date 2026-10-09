@@ -12,7 +12,11 @@
   function apply(){
     var brandSelectors=['.brand-name','.brand-subtitle','.oc-brand strong','.oc-brand small'];
     document.querySelectorAll('.brand-name,.oc-brand strong').forEach(function(el){el.textContent=config.agentDisplay});
-    document.querySelectorAll('.brand-subtitle,.oc-brand small').forEach(function(el){el.textContent=config.siteName});
+    document.querySelectorAll('.brand-subtitle,.oc-brand small').forEach(function(el){
+      var lang=(typeof getSiteLanguage==='function')?getSiteLanguage():'en';
+      var translated=(typeof SITE_TRANSLATIONS!=='undefined' && SITE_TRANSLATIONS[lang] && SITE_TRANSLATIONS[lang].brandSubtitle);
+      el.textContent=(config.siteName==='Florida Gulf Coast Real Estate' && translated)?translated:config.siteName;
+    });
     document.querySelectorAll('meta[property="og:site_name"]').forEach(function(el){el.setAttribute('content',config.siteName)});
     if(config.domain){
       var base=config.domain.replace(/\/$/,'');
@@ -30,5 +34,6 @@
       }
     }
   }
+  window.addEventListener('siteLanguageChanged',apply);
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
 })();
