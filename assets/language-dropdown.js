@@ -493,3 +493,14 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',applyFooterColumns);else applyFooterColumns();
 })();
+
+/* Four-column footer: left-align every column, preserving the grid. */
+(function(){
+ function alignFooterLeft(){
+  if(document.getElementById('sc-footer-left-align'))return;
+  var st=document.createElement('style');st.id='sc-footer-left-align';
+  st.textContent='html body footer.footer .footer-inner{text-align:left!important}html body footer.footer .sc-footer-brand,html body footer.footer .sc-footer-col{text-align:left!important}html body footer.footer .sc-footer-brand .lokation-logo-link{justify-content:flex-start!important;margin:8px 0 0!important}html body footer.footer .sc-footer-links{align-items:flex-start!important}html body footer.footer .sc-footer-links a{text-align:left!important}html body footer.footer .sc-footer-heading{text-align:left!important}';
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',alignFooterLeft);else alignFooterLeft();
+})();
