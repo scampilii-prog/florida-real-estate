@@ -42,3 +42,95 @@
 - User speaks Spanish, prefers concise, clear progress and real GitHub edits rather than promises.
 - When a new ZIP is necessary, specify each filename, whether new/replaced, repository destination, and upload/commit steps.
 - Never say fully verified when only source code has been inspected.
+
+
+---
+
+# CONTINUATION NOTE — HEADER / HERO REDESIGN PLAN (approved for future work, 2026-10-10)
+
+## MOST IMPORTANT: status
+- User explicitly asked to **save this entire plan and continue in a new chat**. This note is a written handoff, not implementation.
+- **Do not claim hero/header redesign completed.** The planned new imagery and hero layouts have NOT been uploaded, modified, or deployed.
+- Start next chat by opening this file and verifying the latest GitHub contents; do not ask user to restate agreed requirements.
+- User wants **all website pages** reviewed, with sky/soft clouds and clear overlaid headline like current Home screenshot. Professional and cohesive, not giant empty hero spaces.
+- Preserve Home as reference; maintain approved site features, forms, calculators, links, language dropdown, mobile hamburger, footer and Ask Tino; use targeted, verifiable commits, group small batches and validate.
+- Reference screenshot shows Home at https://florida-real-estate.pages.dev/ with navy fixed navigation, waterfront pool image, dark blue overlay, small uppercase gold eyebrow, large left-aligned white H1 "Find Your Place on Florida’s Gulf Coast", short text and buttons.
+- Avoid reusing a single generic unrelated photo across every community. Photograph and locale must match context. Any new assets should be licensed/permitted for site publishing; save them into repo with stable paths, responsive sizes and accessible alt text. Don't use remote temporary image-search URLs as long-lived website assets.
+- Do not modify OceanFL (oceanfl.com), which is **separate**. Do not rename website/brand yet: prior domain brainstorming is undecided. User is a REALTOR® with LoKation Real Estate, NOT an independent broker; preserve clear brokerage disclosure.
+
+## Three hero types
+1. **A · Main hero (480–550 px)** — Home only, existing photo/position as visual template; panoramic coastal property, blue sky/soft clouds, dark navy gradient, small gold eyebrow, large heading, concise subheading, 1–2 CTAs.
+2. **B · Medium hero (270–340 px)** — Buy, Sell, Search Properties, Communities, About, Investment Center, New Construction, waterfront, listing pages, guides, and community pages. Subject-appropriate real photography with some sky/clouds, dark gradient and heading, normally one CTA.
+3. **C · Compact hero (150–210 px)** — Calculators, title/financing/contract pages, forms, closing timelines, FAQ, legal, contact/appointment, valuation. Restrained soft sky/cloud background or neutral gradient; navy text unless dark overlay; show actual working form/tool immediately below, avoid large whitespace.
+
+## Main pages — exact draft English hero copy; still proposals, not yet installed
+- index.html — A, KEEP CURRENT: "Find Your Place on Florida’s Gulf Coast"; Search Properties / Explore Communities.
+- buy.html — B, coastal house under blue/cloud sky: "Find the Right Home, With Confidence"; CTA Search Properties. The internal #buyer-contract-timeline needs compact header, NOT another large photographic hero.
+- sell.html — B, elegantly presented Florida home and sky: "Sell Your Property With a Clear Plan"; CTA Request a Home Valuation.
+- search-properties.html — B, coastal residential aerial: "Explore Homes on Florida’s Gulf Coast"; CTA Search Properties.
+- communities.html — B, broad authentic Florida coast panorama: "Explore the Communities We Call Home"; CTA Explore Communities.
+- about.html — B, tasteful coast/marina scene; preserve existing personal portraits lower on page: "Local Knowledge. Personal Guidance."; CTA Meet Sabatino.
+- contact.html — C, subtle soft sky: "Tell Me About Your Real Estate Plans"; CTA anchor #tell-us-your-plans.
+- investment-center.html — B, professional waterfront/marina: "Invest With Better Information"; CTA #investment-calculator.
+- new-construction.html — B, Florida new build + sky: "Discover New Construction in Southwest Florida"; CTA Explore New Homes (must point to a real existing destination).
+- waterfront.html — B, canal-side/waterfront home: "Find Your Place on the Water"; CTA Explore Waterfront Properties.
+- florida-gulf-coast-homes-for-sale.html — B, elegant house and garden: "Explore Gulf Coast Homes for Sale"; CTA Search Homes.
+- florida-gulf-coast-condos-for-sale.html — B, tasteful coastal condominium: "Discover Coastal Condo Living"; CTA Search Condos.
+- questions.html — C, subtle sky: "1,000 Questions. Honest Answers."; CTA Explore Answers.
+- request-appointment.html — C, sky: "Let's Talk About Your Next Move"; SimplyBook.me form must appear immediately below; complimentary 30 min consultations; do not break booking widget.
+- site-map.html — C, restrained soft background: "Explore Our Website"; preserve recently approved high-visibility cream-and-gold link buttons.
+
+## Buyer guide and utilities — proposed copy
+- buyers-guide.html — B: "Your Guide to Buying in Florida" / "From planning to closing".
+- buyer-preparation.html — C: "Prepare to Buy With Confidence" / "Start with the essentials".
+- buyer-property-search.html — B: "Find a Home That Fits Your Life" / "Compare locations and properties".
+- buyer-financing-preapproval.html — C: "Understand Your Buying Power" / "Financing and pre-approval".
+- buyer-offers-contracts.html — C: "Make an Offer With Confidence" / "Understand the important terms".
+- buyer-inspections-appraisals.html — C: "Know What You're Buying" / "Inspections and appraisals".
+- buyer-title-financing.html — C: "From Contract to Closing" / "Title, financing and final steps".
+- buyer-closing-costs.html — C: "Understand Your Buying Costs" / "Plan beyond the purchase price".
+- buy.html#buyer-contract-timeline — separate C-style internal intro, preserving JS table and email export, not a second hero photo.
+
+## Sellers, calculators and legal — proposed copy
+- sellers-guide.html — B: "Your Guide to Selling With Confidence" / "From pricing to closing".
+- home-valuation.html — C: "What Is Your Home Worth?" / "Understand your property's market value".
+- seller-closing-costs.html — C: "Know Your Costs Before You Sell" / "Estimate your net proceeds".
+- calculators.html — C: "Plan Your Next Move With Confidence" / "Helpful real estate calculators".
+- mortgage-calculator.html — C: "Understand Your Monthly Payment" / "Explore mortgage scenarios".
+- privacy.html — C neutral "Privacy Policy".
+- terms.html — C neutral "Terms of Use".
+- seller contract overview is embedded in sell.html; keep compact, no giant header.
+
+## Communities: visually match each place, B type, with recognizable genuine coastal photography
+- boca-grande.html and boca-grande-florida-real-estate.html — island, historic buildings, beach — "Discover Boca Grande".
+- cape-haze.html and cape-haze-placida-florida-real-estate.html — canals/coast — "Explore Cape Haze & Placida".
+- englewood.html and englewood-manasota-key-florida-real-estate.html — Manasota beach/neighborhood — "Discover Englewood & Manasota Key".
+- rotonda-west.html — golf/residential greenery — "Explore Rotonda West".
+- venice.html and venice-florida-real-estate.html — downtown/coast — "Discover Venice, Florida".
+- wellen-park-florida-real-estate.html — new homes and landscape — "Explore Wellen Park".
+- nokomis-casey-key.html and nokomis-casey-key-florida-real-estate.html — Nokomis and Casey Key coast — "Discover Nokomis & Casey Key".
+- punta-gorda-isles.html and punta-gorda-isles-florida-real-estate.html — boating/canals — "Explore Punta Gorda Isles".
+- sarasota.html — bay/skyline — "Discover Sarasota".
+- siesta-key-longboat-key-florida-real-estate.html — white-sand beaches — "Explore Siesta Key & Longboat Key".
+- Review duplicate/alternate community URL pairs for content/SEO, but DO NOT delete pages or break existing URLs.
+
+## Repository images EXISTING as of 2026-10-10
+about-gulf-coast-hero.jpg, about-italo-photo.jpg, about-sabatino-photo.jpg, assets/search-properties-hero.webp, search-properties-hero.webp, florida-gulf-coast-luxury-waterfront-home..jpg, images/florida-golf-course.webp, images/florida-gulf-coast-beach.webp, images/florida-waterfront-homes.webp, pexels-kelly-3845102.jpg, calculators_person_using_calculator.jpg, questions_real_estate_consultation.jpg, sabatino-campilii-i.jpg; LoKation logo images. Inspect actual image subject/copyright/quality before reusing; a photo filename alone does not prove suitability. Need to source/create additional community-specific licensed images before deployment.
+
+## Recently COMPLETED (not part of pending hero redesign)
+- source audit: all 46 public pages' footer HTML matched the approved five-column footer after removing duplicated "Invest & Discover" on site-map.html, sell.html, seller-closing-costs.html, sellers-guide.html and siesta-key-longboat-key-florida-real-estate.html.
+- Site Map has a direct buyer timeline link, 30-minute Request an Appointment link in "Meet & Connect", and larger gold/cream prominent main navigation buttons.
+- Buy empty "Choose where to begin" section removed; timeline spacing tightened, JS render guarded.
+- Sell sections reorganized 04 Marketing → 05 Offers → 06 Closing and whitespace reduced. Seller contact copy adapted.
+- Investment Center gained alternative insurance scenario, printable report button and due diligence guidance.
+- Offline standalone buyer timeline created as Florida-Closing-Timeline-OFFLINE.html (actual working macOS file downloaded to user's Documents and moved to Real Estate - Buyers folder). Offline worksheet does not persist entries automatically.
+- These were GitHub source verifications. Live responsive browser QA across all 46 is still outstanding; do not claim otherwise.
+- Appointment form: https://florida-real-estate.pages.dev/request-appointment. Uses SimplyBook.me (https://gulfcoastestates.simplybook.me), 30-minute consultation and published Mon–Fri 9–5 Florida time; preserve calendar.
+
+## Immediate execution order for next chat
+1. Fetch live GitHub files, enumerate all 46 production .html pages (exclude backup/offline/demo "calculators_seis_funcionales_footer_aprobado.html" and Florida-Closing-Timeline-OFFLINE.html), map actual current hero/header structure & background asset references. Verify presence of existing H1 and section anchors.
+2. Implement Home-inspired **reusable styling** using scoped selectors, without overriding working header/footer components. Start 5–6 high-impact pages in a batch (Buy/Sell/Search Properties/Communities/About/Contact), check syntax and links, avoid giant gaps.
+3. Add only valid/verified local photo assets to repo; use subject-appropriate images with cloud sky. Obtain new generated/source images if appropriate, otherwise ask before committing mismatched placeholders. Check rights.
+4. Then do Investment Center, Guides, category listings, calculators/legal, and every community/alternate URL. Document each commit and QA.
+5. Check anchors, mobile menu, four languages, header/footer, OneHome, calculators, forms, Ask Tino and booking; do not break anything. Provide concise summary and URLs. If cannot test live deployment, say exactly what is verified.
+6. Do NOT interpret this handoff as permission to change brand/name/domain; user has NOT selected one yet.
