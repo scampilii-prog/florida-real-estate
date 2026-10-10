@@ -321,4 +321,251 @@
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script><script src="assets/language-dropdown.js?v=20261010-luxe-footer" defer></script></body></html>
+</script><script src="assets/language-dropdown.js?v=20261010-luxe-footer" defer></script><!-- ASK TINO: shared Home implementation -->
+<style>
+  .tino-launcher {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 18px 9px 9px;
+    border: none;
+    border-radius: 60px;
+    background: #071b2d;
+    color: white;
+    font: 600 16px 'Manrope', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(0,0,0,.2);
+  }
+
+  .tino-launcher img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 22%;
+  }
+
+  .tino-dot {
+    width: 10px;
+    height: 10px;
+    background: #79dfb8;
+    border-radius: 50%;
+    margin-left: 4px;
+  }
+
+  .tino-panel {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    height: 540px;
+    max-height: calc(100dvh - 125px);
+    background: #fafafa;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 45px rgba(0,0,0,.25);
+    z-index: 9999;
+    flex-direction: column;
+    font-family: 'Manrope', sans-serif;
+    color: #071b2d;
+  }
+
+  .tino-panel.open { display: flex; }
+
+  .tino-header {
+    background: #071b2d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tino-header strong { font-size: 23px; font-weight: 500; }
+  .tino-header small { display: block; margin-top: 6px; color: #aab7c5; }
+
+  .tino-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .tino-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .tino-bubble {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .tino-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 20px;
+  }
+
+  .tino-options button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 13px;
+    cursor: pointer;
+    color: #071b2d;
+  }
+
+  .tino-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .tino-input input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+  }
+
+  .tino-input button {
+    background: #071b2d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+  }
+
+  .tino-footer {
+    text-align: center;
+    font-size: 10px;
+    color: #65717c;
+    padding: 9px;
+    border-top: 1px solid #eee;
+  }
+
+  @media (max-width: 480px) {
+    .tino-launcher { right: 12px; bottom: 12px; }
+    .tino-panel {
+      right: 8px;
+      bottom: 85px;
+      max-width: calc(100vw - 16px);
+    }
+  }
+</style>
+<button aria-label="Open Ask Tino" class="tino-launcher" onclick="toggleTino()">
+<img alt="Sabatino Campilii" src="sabatino-campilii-i.jpg"/>
+<span>Ask Tino</span>
+<span class="tino-dot"></span>
+</button>
+<section aria-label="Ask Tino virtual assistant" class="tino-panel" id="tinoPanel">
+<div class="tino-header">
+<div>
+<strong>Ask Tino</strong>
+<small>Florida Gulf Coast Real Estate Assistant</small>
+</div>
+<button aria-label="Close chat" class="tino-close" onclick="toggleTino()">×</button>
+</div>
+<div class="tino-messages" id="tinoMessages">
+<div class="tino-bubble">
+      Welcome! I'm Tino's virtual assistant. Are you looking to buy, sell,
+      invest, or simply explore Florida's Gulf Coast?
+    </div>
+</div>
+<div class="tino-options">
+<button onclick="tinoSelect('I want to buy')">I want to buy</button>
+<button onclick="tinoSelect('I want to sell')">I want to sell</button>
+<button onclick="tinoSelect('I am investing')">I'm investing</button>
+<button onclick="tinoSelect('Book a call')">Book a call</button>
+</div>
+<form class="tino-input" onsubmit="sendTino(event)">
+<input aria-label="Your message" id="tinoText" placeholder="Ask Tino anything..." type="text"/>
+<button aria-label="Send message" type="submit">→</button>
+</form>
+<div class="tino-footer">
+    Sabatino Campilii, Realtor® · LoKation® Real Estate · FL License #SL3363040
+    <div>Virtual assistant · Not a licensed real estate agent</div>
+</div>
+</section>
+<script>
+  function toggleTino() {
+    const panel = document.getElementById("tinoPanel");
+    panel.classList.toggle("open");
+  }
+
+  function tinoSelect(message) {
+    document.getElementById("tinoText").value = message;
+    document.getElementById("tinoText").focus();
+  }
+
+ 
+async function sendTino(event) {
+  event.preventDefault();
+
+  const input = document.getElementById("tinoText");
+  const message = input.value.trim();
+  if (!message) return;
+
+  const messages = document.getElementById("tinoMessages");
+
+  const bubble = document.createElement("div");
+  bubble.className = "tino-bubble";
+  bubble.textContent = message;
+  bubble.style.background = "#e8f3f0";
+  messages.appendChild(bubble);
+
+  input.value = "";
+
+  const reply = document.createElement("div");
+  reply.className = "tino-bubble";
+  reply.textContent = "Tino is thinking...";
+  messages.appendChild(reply);
+  reply.scrollIntoView({ behavior: "smooth", block: "end" });
+
+  try {
+    const response = await fetch(
+      "https://ask-tino-ai.scampilii.workers.dev/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message })
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Request failed");
+    }
+
+    reply.textContent = data.reply || "Please try again.";
+  } catch (error) {
+    reply.textContent =
+      "Tino is temporarily unavailable. Please try again.";
+  }
+
+  reply.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
+</script>
+<!-- END ASK TINO -->
+</body></html>
