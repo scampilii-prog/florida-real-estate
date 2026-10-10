@@ -55,47 +55,7 @@
     select.style.setProperty('display','none','important');
     select.addEventListener('change',refresh);
 
-    /* Accessible LoKation lettering, no icon or duplicate graphic. */
-    document.querySelectorAll('footer.footer a.lokation-logo-link').forEach(function(link){
-      link.querySelectorAll('img,.sc-lokation-icon-only,.sc-lokation-mark,.sc-lokation-word,.sc-lokation-wordmark').forEach(function(el){el.remove();});
-      var lettering=document.createElement('span');lettering.className='sc-lokation-wordmark';lettering.innerHTML='<strong>LOKATION</strong><small>REAL ESTATE</small>';
-      link.appendChild(lettering);
-    });
-    /* Mirror the header language control in the footer, using the same real translator. */
-    var footer=document.querySelector('footer.footer, footer');
-    if(footer && !footer.querySelector('.sc-footer-language')){
-      var foot=document.createElement('div');foot.className='sc-footer-language';
-      var caption=document.createElement('span');caption.className='sc-footer-language-caption';
-      caption.textContent='LANGUAGE / IDIOMA / LINGUA / IDIOMA';
-      var footSelect=document.createElement('select');footSelect.className='sc-footer-language-select';
-      footSelect.setAttribute('aria-label','Change website language');
-      options.forEach(function(o){var copy=document.createElement('option');copy.value=o.value;copy.textContent=o.textContent.trim();footSelect.appendChild(copy);});
-      function syncFooter(){footSelect.value=select.value;}
-      footSelect.addEventListener('change',function(){select.value=footSelect.value;select.dispatchEvent(new Event('change',{bubbles:true}));refresh();});
-      select.addEventListener('change',syncFooter);
-      var footnote=footer.querySelector('.footnote');
-      var languageSide=document.createElement('div');languageSide.className='sc-footer-language-side';
-      languageSide.append(caption,footSelect);
-      if(footnote){footnote.classList.add('sc-footer-copyright');foot.appendChild(footnote);}
-      foot.appendChild(languageSide);footer.appendChild(foot);syncFooter();
-      /* Keep brokerage wordmark in the slim bottom row, between the copyright and language selector. */
-      var wordmark=footer.querySelector('a.lokation-logo-link');
-      if(wordmark){wordmark.classList.add('sc-footer-bottom-logo');foot.insertBefore(wordmark,languageSide);}
-    }
-    /* Prominent inquiry link in Connect column, also on pages with older footer HTML. */
-    document.querySelectorAll('footer.footer .footer-inner>div').forEach(function(column){
-      var heading=column.querySelector('h3');
-      if(heading && heading.textContent.trim().toLowerCase()==='connect' && !column.querySelector('.sc-inquiry-footer-link')){
-        var inquiry=document.createElement('a');inquiry.className='sc-inquiry-footer-link';inquiry.href='/contact#tell-us-your-plans';inquiry.textContent='Send an Inquiry ↗';column.appendChild(inquiry);
-      }
-    });
-    /* Sitewide legal footer: central source for existing and future pages. */
-    var legalFooter=document.querySelector('footer.footer,footer');
-    if(legalFooter && !legalFooter.querySelector('.sc-legal-footer')){
-      var legal=document.createElement('div');legal.className='sc-legal-footer';
-      legal.innerHTML='<div class="sc-legal-disclosure"><div class="sc-legal-identity"><strong>Florida Gulf Coast Real Estate</strong><span>Sabatino Campilii, Realtor® <i aria-hidden="true">·</i> LoKation® Real Estate <i aria-hidden="true">·</i> Florida License #SL3363040</span></div><p>Real estate information is for general informational purposes only and is not legal, tax, financial, lending, insurance, or appraisal advice. Listings, prices, availability, property details and estimates may change and should be independently verified. No agency relationship is created solely by using this website.</p></div><div class="sc-legal-bottom"><span>© 2026 Sabatino Campilii · LoKation® Real Estate</span><nav aria-label="Legal links"><a class="sc-send-inquiry" href="/contact#tell-us-your-plans">Send an Inquiry ↗</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a></nav><a class="sc-acromatico" href="https://acromatico.com/" target="_blank" rel="noopener noreferrer">Created with <span aria-label="love">♥</span> by Acromatico</a><span>Equal Housing Opportunity</span></div>';
-      legalFooter.appendChild(legal);
-    }
+    /* Footer is authored directly in HTML. Do not duplicate it. */
     refresh();
   }
   var css='.sc-language-widget{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;z-index:1002;font-family:Manrope,Arial,sans-serif!important}'+
@@ -450,57 +410,3 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',styleAskTino);else styleAskTino();
 })();
 
-/* Unified compact footer: primary destinations plus full Site Map. */
-(function(){
- function compactFooter(){
-  if(!document.getElementById('sc-compact-footer-style')){
-   var st=document.createElement('style');st.id='sc-compact-footer-style';
-   st.textContent='html body footer.footer{padding:31px 24px 14px!important}html body footer.footer .footer-inner{max-width:1160px!important;margin:auto!important;display:grid!important;grid-template-columns:minmax(220px,1.4fr) minmax(270px,1.5fr) minmax(160px,.8fr)!important;gap:24px!important;align-items:start!important}html body footer.footer .sc-footer-brand .brand{font-size:19px!important;line-height:1.3!important;margin-bottom:7px!important}html body footer.footer .sc-footer-brand p{margin:5px 0!important;font-size:12px!important;line-height:1.65!important}html body footer.footer .sc-footer-brand .tag{opacity:.78!important}html body footer.footer .sc-footer-brand .lokation-logo{max-width:125px!important;max-height:34px!important;object-fit:contain!important;margin-top:8px!important}html body footer.footer .sc-footer-heading{color:#d5b47e!important;font-size:12px!important;letter-spacing:.09em!important;text-transform:uppercase!important;margin:2px 0 12px!important;font-weight:800!important}html body footer.footer .sc-footer-links{display:flex!important;flex-wrap:wrap!important;column-gap:18px!important;row-gap:9px!important}html body footer.footer .sc-footer-links a,html body footer.footer .sc-footer-contact a{display:inline-block!important;color:#eaf1f6!important;font-size:12px!important;line-height:1.6!important;text-decoration:none!important;margin:0!important}html body footer.footer .sc-footer-links a:hover,html body footer.footer .sc-footer-contact a:hover{color:#e6c18c!important;text-decoration:underline!important;text-underline-offset:4px!important}html body footer.footer .sc-footer-links a[href$="site-map.html"]{color:#f0c78a!important;font-weight:800!important}html body footer.footer .sc-footer-contact{display:flex!important;flex-direction:column!important;gap:9px!important}html body footer.footer .footnote{max-width:1160px!important;margin:22px auto 0!important;padding:14px 0 5px!important;border-top:1px solid #ffffff30!important;font-size:11px!important;line-height:1.5!important;opacity:.75!important;text-align:center!important}@media(max-width:760px){html body footer.footer .footer-inner{grid-template-columns:1fr 1fr!important;gap:22px!important}html body footer.footer .sc-footer-brand{grid-column:1/-1!important}}@media(max-width:480px){html body footer.footer{padding:26px 18px 14px!important}html body footer.footer .footer-inner{grid-template-columns:1fr!important;gap:20px!important}html body footer.footer .sc-footer-brand{grid-column:auto!important}html body footer.footer .sc-footer-links{column-gap:15px!important}}';
-   document.head.appendChild(st);
-  }
-  document.querySelectorAll('footer.footer').forEach(function(footer){
-   if(footer.dataset.scCompactFooter)return;
-   var inner=footer.querySelector('.footer-inner');if(!inner)return;
-   footer.dataset.scCompactFooter='1';
-   footer.querySelectorAll('.sc-legal-footer,.sc-footer-language').forEach(function(el){el.remove()});
-   inner.innerHTML='<div class="sc-footer-brand"><div class="brand">Sabatino Campilii</div><p>Realtor® · LoKation® Real Estate<br>Florida License #SL3363040</p><p class="tag" data-footer-key="tag">Your guide to real estate on Florida’s Gulf Coast.</p><a class="lokation-logo-link" aria-label="LoKation Real Estate" href="https://www.lokationre.com/"><img class="lokation-logo" alt="LoKation Real Estate" loading="lazy" src="lokation-logo-horizontal-blanco.png"></a></div><nav class="sc-footer-col" aria-label="Main pages"><h3 class="sc-footer-heading">Main Pages</h3><div class="sc-footer-links"><a href="index.html">Home</a><a href="search-properties.html" data-footer-key="Search Properties">Search Properties</a><a href="buy.html" data-footer-key="Buy">Buy</a><a href="sell.html" data-footer-key="Sell">Sell</a><a href="communities.html" data-footer-key="Communities">Communities</a><a href="site-map.html">Site Map</a></div></nav><nav class="sc-footer-col" aria-label="Connect with an agent"><h3 class="sc-footer-heading">Let's Connect</h3><div class="sc-footer-links"><a href="contact.html#tell-us-your-plans">Send an Inquiry ↗</a><a href="contact.html" data-footer-key="Contact">Contact</a><a href="about.html" data-footer-key="About">About Sabatino</a><a href="buyers-guide.html">Buyers Guide</a><a href="sellers-guide.html">Sellers Guide</a></div></nav><nav class="sc-footer-col" aria-label="Helpful resources"><h3 class="sc-footer-heading">Discover More</h3><div class="sc-footer-links"><a href="florida-gulf-coast-homes-for-sale.html">Homes for Sale</a><a href="florida-gulf-coast-condos-for-sale.html">Condos for Sale</a><a href="new-construction.html">New Construction</a><a href="calculators.html" data-footer-key="Calculators">Calculators</a><a href="questions.html" data-footer-key="1,000 Q&amp;A">1,000 Q&amp;A</a></div></nav>';
-   var note=footer.querySelector('.footnote');if(note){note.innerHTML='<div class="sc-footer-legal-links"><a href="contact.html#tell-us-your-plans">Send an Inquiry ↗</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><span>Equal Housing Opportunity</span></div><div class="sc-footer-copyright">© 2026 Sabatino Campilii · LoKation® Real Estate · Florida License #SL3363040</div><div class="sc-footer-credit"><a href="https://acromatico.com/" target="_blank" rel="noopener noreferrer">Created with ♥ by Acromatico</a></div>';}
-  });
- }
- if(!document.getElementById('sc-footer-legal-style')){var legalStyle=document.createElement('style');legalStyle.id='sc-footer-legal-style';legalStyle.textContent='html body footer.footer .sc-footer-legal-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px 22px;margin-bottom:12px}html body footer.footer .sc-footer-legal-links a,html body footer.footer .sc-footer-legal-links span,html body footer.footer .sc-footer-credit a{font-size:11px!important;color:#dce7ee!important;text-decoration:none!important}html body footer.footer .sc-footer-legal-links a:hover,html body footer.footer .sc-footer-credit a:hover{color:#e6c18c!important;text-decoration:underline!important;text-underline-offset:3px!important}html body footer.footer .sc-footer-copyright{font-size:11px!important}html body footer.footer .sc-footer-credit{margin-top:8px!important}html body footer.footer .sc-footer-credit a{color:#d5b47e!important}@media(max-width:480px){html body footer.footer .sc-footer-legal-links{gap:9px 15px}}';document.head.appendChild(legalStyle)}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',compactFooter);else compactFooter();
-})();
-/* Refined unified footer, without duplicate legacy disclosures or language controls. */
-(function(){
- function refine(){
-  var style=document.getElementById('sc-footer-refined-20261010');
-  if(!style){style=document.createElement('style');style.id='sc-footer-refined-20261010';
-   style.textContent='html body footer.footer{background:#102b43!important;padding:48px 28px 23px!important}html body footer.footer .footer-inner{max-width:1100px!important;grid-template-columns:minmax(260px,1.3fr) minmax(340px,1.6fr) minmax(145px,.7fr)!important;gap:55px!important}html body footer.footer .sc-footer-brand .brand{font-size:22px!important;font-weight:800!important;letter-spacing:-.02em!important}html body footer.footer .sc-footer-brand p{font-size:13px!important;line-height:1.8!important}html body footer.footer .sc-footer-brand .tag{font-size:13px!important}html body footer.footer .sc-footer-brand .lokation-logo{max-width:185px!important;max-height:55px!important;margin-top:16px!important}html body footer.footer .sc-footer-heading{font-size:13px!important;letter-spacing:.1em!important;margin-bottom:17px!important}html body footer.footer .sc-footer-links{gap:12px 22px!important}html body footer.footer .sc-footer-links a,html body footer.footer .sc-footer-contact a{font-size:14px!important;line-height:1.65!important}html body footer.footer .footnote{max-width:1100px!important;margin-top:36px!important;padding-top:21px!important}html body footer.footer .sc-footer-legal-links{gap:12px 26px!important;margin-bottom:17px!important}html body footer.footer .sc-footer-legal-links a,html body footer.footer .sc-footer-legal-links span,html body footer.footer .sc-footer-credit a,html body footer.footer .sc-footer-copyright{font-size:12px!important;line-height:1.6!important}html body footer.footer .sc-footer-credit{margin-top:10px!important}html body footer.footer .sc-legal-footer,html body footer.footer .sc-footer-language{display:none!important}@media(max-width:820px){html body footer.footer .footer-inner{grid-template-columns:1fr 1fr!important;gap:28px!important}html body footer.footer .sc-footer-brand{grid-column:1/-1!important}}@media(max-width:520px){html body footer.footer{padding:35px 21px 20px!important}html body footer.footer .footer-inner{grid-template-columns:1fr!important;gap:28px!important}html body footer.footer .sc-footer-brand{grid-column:auto!important}html body footer.footer .sc-footer-legal-links{gap:12px 18px!important}}';
-   document.head.appendChild(style);
-  }
-  document.querySelectorAll('footer.footer').forEach(function(f){f.querySelectorAll('.sc-legal-footer,.sc-footer-language').forEach(function(el){el.remove()})});
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',refine);else refine();
-})();
-
-
-(function(){
- function applyFooterColumns(){
-  if(document.getElementById('sc-footer-four-columns'))return;
-  var st=document.createElement('style');st.id='sc-footer-four-columns';
-  st.textContent='html body footer.footer .footer-inner{max-width:1240px!important;display:grid!important;grid-template-columns:1.28fr 1fr 1fr 1fr!important;gap:34px!important;align-items:start!important;text-align:center!important}html body footer.footer .sc-footer-brand,html body footer.footer .sc-footer-col{text-align:center!important;min-width:0!important}html body footer.footer .sc-footer-brand .lokation-logo-link{display:inline-flex!important;justify-content:center!important;margin:8px auto 0!important}html body footer.footer .sc-footer-links{display:flex!important;flex-direction:column!important;align-items:center!important;flex-wrap:nowrap!important;gap:11px!important}html body footer.footer .sc-footer-links a{display:block!important;font-size:14px!important;line-height:1.5!important;text-align:center!important;padding:2px 4px!important}html body footer.footer .sc-footer-heading{font-size:14px!important;letter-spacing:.075em!important;margin:2px 0 19px!important}html body footer.footer .footnote{max-width:1240px!important;margin-top:32px!important}html body footer.footer .sc-footer-legal-links{justify-content:center!important}@media(max-width:900px){html body footer.footer .footer-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px 20px!important}html body footer.footer .sc-footer-brand{grid-column:auto!important}}@media(max-width:520px){html body footer.footer .footer-inner{grid-template-columns:1fr!important;gap:30px!important}html body footer.footer .sc-footer-brand{grid-column:auto!important}}';
-  document.head.appendChild(st);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',applyFooterColumns);else applyFooterColumns();
-})();
-
-/* Four-column footer: left-align every column, preserving the grid. */
-(function(){
- function alignFooterLeft(){
-  if(document.getElementById('sc-footer-left-align'))return;
-  var st=document.createElement('style');st.id='sc-footer-left-align';
-  st.textContent='html body footer.footer .footer-inner{text-align:left!important}html body footer.footer .sc-footer-brand,html body footer.footer .sc-footer-col{text-align:left!important}html body footer.footer .sc-footer-brand .lokation-logo-link{justify-content:flex-start!important;margin:8px 0 0!important}html body footer.footer .sc-footer-links{align-items:flex-start!important}html body footer.footer .sc-footer-links a{text-align:left!important}html body footer.footer .sc-footer-heading{text-align:left!important}';
-  document.head.appendChild(st);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',alignFooterLeft);else alignFooterLeft();
-})();
