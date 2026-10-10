@@ -437,3 +437,15 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wire);else wire();
 })();
+
+/* Consistent, high-contrast Ask Tino outline on light and dark backgrounds. */
+(function(){
+  function styleAskTino(){
+    if(document.getElementById('sc-ask-tino-outline'))return;
+    var style=document.createElement('style');
+    style.id='sc-ask-tino-outline';
+    style.textContent='html body .tino-launcher{border:3px solid #fff!important;box-shadow:0 4px 18px rgba(0,0,0,.38),0 0 0 1px rgba(10,28,44,.16)!important;box-sizing:border-box!important}html body .tino-launcher:hover{box-shadow:0 6px 24px rgba(0,0,0,.45),0 0 0 1px rgba(10,28,44,.20)!important}';
+    document.head.appendChild(style);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',styleAskTino);else styleAskTino();
+})();
