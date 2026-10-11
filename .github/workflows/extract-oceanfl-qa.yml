@@ -1,0 +1,70 @@
+name: Extract OceanFL public Q&A
+on:
+  push:
+    paths:
+      - .github/workflows/extract-oceanfl-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract and validate Q&A
+        shell: bash
+        run: |
+          python -m pip install --quiet beautifulsoup4 requests
+          python - <<'PY'
+          import requests, re, json, html, pathlib, sys, collections
+          from bs4 import BeautifulSoup
+          url='https://oceanfl.com/questions/'
+          response=requests.get(url,headers={'User-Agent':'Mozilla/5.0 (compatible; site-content-migration/1.0)'},timeout=60)
+          response.raise_for_status()
+          soup=BeautifulSoup(response.text,'html.parser')
+          details=soup.select('details')
+          print('HTML bytes:',len(response.content),'details:',len(details),flush=True)
+          topics=[]
+          for el in details:
+              summary=el.find('summary')
+              if not summary: continue
+              question=summary.get_text(' ',strip=True)
+              question=re.sub(r'^\\s*\\d{1,2}\\s+', '',question)
+              answer_parts=[]
+              for child in el.children:
+                  if child is summary: continue
+                  if getattr(child,'name',None) in ('script','style'):continue
+                  if getattr(child,'name',None):
+                      txt=child.get_text(' ',strip=True)
+                  else:
+                      txt=str(child).strip()
+                  if txt:answer_parts.append(txt)
+              answer='\\n\\n'.join(answer_parts)
+              section=el.find_parent('section')
+              title=''
+              if section:
+                  heading=section.find(['h2','h3'])
+                  if heading:title=heading.get_text(' ',strip=True)
+              if not title:
+                  h=el.find_previous(['h2','h3'])
+                  title=h.get_text(' ',strip=True) if h else 'Uncategorized'
+              title=re.sub(r'^\\s*\\d{1,2}\\s+', '',title).strip()
+              if question and answer:
+                  if not topics or topics[-1]['name']!=title:topics.append({'name':title,'items':[]})
+                  topics[-1]['items'].append({'q':question,'a':answer})
+          counts=[len(x['items']) for x in topics]
+          print('Extracted topics:',len(topics),'entries:',sum(counts),'topic counts:',counts,flush=True)
+          if len(topics)!=19 or sum(counts)!=1010 or not all(x['a'] for g in topics for x in g['items']):
+              pathlib.Path('oceanfl-import-debug.txt').write_text('HTML size: '+str(len(response.content))+'; details: '+str(len(details))+'; counts: '+str(counts)+'; topic names: '+repr([x['name'] for x in topics]),encoding='utf-8')
+              sys.exit('Validation did not pass; existing website untouched.')
+          path=pathlib.Path('assets/oceanfl-qa-1010.json')
+          path.write_text(json.dumps({'source':url,'topics':topics},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+          print('Validated data file:',path,'bytes:',path.stat().st_size,flush=True)
+          PY
+      - name: Commit verified data only
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/oceanfl-qa-1010.json
+          git diff --cached --quiet || (git commit -m "Import validated 1010 OceanFL Q&A into standalone data" && git push)
