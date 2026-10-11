@@ -407,3 +407,17 @@
 
 /* 2026-10: compact header language selector on all viewport sizes, retaining Português and mobile icons. */
 (function(){function apply(){if(document.getElementById('sc-compact-header-language'))return;var el=document.createElement('style');el.id='sc-compact-header-language';el.textContent='html body .sc-language-widget{width:auto!important;min-width:0!important;max-width:none!important}html body .sc-language-widget .sc-language-trigger{box-sizing:border-box!important;width:100px!important;min-width:100px!important;max-width:100px!important;padding:0 7px!important;gap:3px!important;font-size:11px!important}html body .sc-language-widget .sc-language-options{box-sizing:border-box!important;left:0!important;right:auto!important;width:100px!important;min-width:100px!important;max-width:100px!important;padding:3px!important}html body .sc-language-widget .sc-language-option{box-sizing:border-box!important;width:100%!important;padding:8px 4px!important;font-size:11px!important}html body .sc-language-widget .sc-language-label{white-space:nowrap!important;overflow:visible!important}html body .oc-actions,html body .header-tools{min-width:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
+
+/* 2026-10-10: open the real Site Map from the hamburger.
+   A transient JS overlay vanishes on browser reload and can show an older
+   duplicate navigation. A real page keeps the approved eight buttons and
+   supports ordinary browser reload/back. Do not intercept Site Map's own menu. */
+(function(){
+  window.addEventListener('click',function(event){
+    var button=event.target.closest && event.target.closest('[data-oc-menu], .menu-button');
+    if(!button || button.closest('.sc-sitemap-header'))return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.location.assign('/site-map.html');
+  },true);
+})();
