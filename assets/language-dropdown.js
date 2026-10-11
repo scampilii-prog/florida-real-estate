@@ -67,7 +67,7 @@
   '.sc-language-trigger:focus-visible{outline:2px solid #d8b66b!important;outline-offset:2px!important}'+
   '.sc-language-widget select{display:none!important}'+
   '.sc-language-widget::after,.oc-lang:has(.sc-language-widget)::after,.header-tools .language:has(.sc-language-widget)::after{display:none!important;content:none!important}'+
-  '@media(max-width:390px){.sc-language-trigger{width:112px!important;min-width:112px!important;max-width:112px!important;padding:0 6px!important;font-size:11px!important}.sc-language-options{width:112px!important;min-width:112px!important;max-width:112px!important}.sc-language-option{font-size:11px!important;padding:9px 4px!important}}';
+  '@media(max-width:390px){.sc-language-trigger{width:105px!important;min-width:105px!important;max-width:105px!important;padding:0 7px!important;gap:4px!important;font-size:11px!important}.sc-language-options{width:112px!important;min-width:112px!important;max-width:112px!important}.sc-language-option{font-size:11px!important;padding:9px 4px!important}}';
   css += '.sc-footer-language{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;padding:24px 16px 30px;border-top:1px solid rgba(255,255,255,.18);background:#102b43;color:#fff;font-family:Manrope,Arial,sans-serif!important}'+
   '.sc-footer-language-caption{font-size:11px;font-weight:650;letter-spacing:.11em;color:#dfc48c}'+
   '.sc-footer-language-select{appearance:auto!important;min-width:160px!important;max-width:230px!important;background:#102b43!important;color:#fff!important;border:1px solid #b99b63!important;border-radius:7px!important;padding:10px 13px!important;font:600 13px Manrope,Arial,sans-serif!important;cursor:pointer!important}'+
@@ -410,3 +410,6 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',styleAskTino);else styleAskTino();
 })();
 
+
+/* 2026-10: compact header language selector on all viewport sizes, retaining Português and mobile icons. */
+(function(){function apply(){if(document.getElementById('sc-compact-header-language'))return;var el=document.createElement('style');el.id='sc-compact-header-language';el.textContent='html body .sc-language-widget{width:auto!important;min-width:0!important;max-width:none!important}html body .sc-language-widget .sc-language-trigger{width:105px!important;min-width:105px!important;max-width:105px!important;padding:0 7px!important;gap:4px!important;font-size:11px!important}html body .sc-language-widget .sc-language-label{white-space:nowrap!important;overflow:visible!important}html body .oc-actions,html body .header-tools{min-width:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
