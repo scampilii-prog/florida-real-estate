@@ -27,7 +27,7 @@
  ];
  function init(){
   var path=location.pathname.split('/').pop().toLowerCase(),hero=document.querySelector('.lead-intake, .area-hero, .qa-hero, .intro, .hero, .about-hero');
-  if(path==='contact.html'||path==='buy.html')return;if(!hero)return;
+  if(path==='contact.html')return;if(!hero)return;
   var photo=photos.find(function(row){return path.indexOf(row[0])!==-1;});
   var id=photo?photo[1]:'photo-1512917774080-9991f1c4c750';
   if(hero.classList.contains('about-hero')||hero.querySelector('img,video,picture')||hero.classList.contains('sc-photo-added'))return;
