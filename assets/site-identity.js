@@ -2,10 +2,10 @@
 (function(){
   "use strict";
   var config={
-    siteName:"Florida Gulf Coast Real Estate",
+    siteName:"Florida Costiera",
     domain:"", // Example after launch: "https://your-new-domain.com"
     agentName:"Sabatino Campilii",
-    agentDisplay:"SABATINO CAMPILII",
+    agentDisplay:"FLORIDA COSTIERA",
     brokerage:"LoKation® Real Estate"
   };
   window.FLORIDA_SITE_CONFIG=config;
@@ -15,7 +15,7 @@
     document.querySelectorAll('.brand-subtitle,.oc-brand small').forEach(function(el){
       var lang=(typeof getSiteLanguage==='function')?getSiteLanguage():'en';
       var translated=(typeof SITE_TRANSLATIONS!=='undefined' && SITE_TRANSLATIONS[lang] && SITE_TRANSLATIONS[lang].brandSubtitle);
-      el.textContent=(config.siteName==='Florida Gulf Coast Real Estate' && translated)?translated:config.siteName;
+      el.textContent='SOUTHWEST FLORIDA GULF COAST REAL ESTATE';
     });
     document.querySelectorAll('meta[property="og:site_name"]').forEach(function(el){el.setAttribute('content',config.siteName)});
     if(config.domain){
