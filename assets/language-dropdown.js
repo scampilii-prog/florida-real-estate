@@ -413,7 +413,7 @@
   document.addEventListener('click',function(event){
     var target=event.target;
     var trigger=target && target.closest && target.closest('[data-oc-menu], .menu-button, .sc-sitemap-menu-btn');
-    if(!trigger || trigger.closest('.sc-sitemap-header') || location.pathname.replace(/\\/$/,'').endsWith('/site-map.html')) return;
+    if(!trigger || trigger.closest('.sc-sitemap-header') || location.pathname.endsWith('/site-map.html')) return;
     event.preventDefault();
     event.stopImmediatePropagation();
     window.location.assign('/site-map.html');
