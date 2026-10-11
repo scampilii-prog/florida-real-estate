@@ -134,3 +134,35 @@ about-gulf-coast-hero.jpg, about-italo-photo.jpg, about-sabatino-photo.jpg, asse
 4. Then do Investment Center, Guides, category listings, calculators/legal, and every community/alternate URL. Document each commit and QA.
 5. Check anchors, mobile menu, four languages, header/footer, OneHome, calculators, forms, Ask Tino and booking; do not break anything. Provide concise summary and URLs. If cannot test live deployment, say exactly what is verified.
 6. Do NOT interpret this handoff as permission to change brand/name/domain; user has NOT selected one yet.
+
+
+---
+
+# CRITICAL NEW-CHAT UPDATE — 2026-10-10 8:36 PM Eastern (LATEST PRIORITY)
+
+USER explicitly asked for everything saved and a new-chat starter. This section supersedes older conflicting plans. The user is understandably upset after several visual regressions. Be direct, fix bugs in GitHub, verify rendered outcomes, and do not promise success merely because a commit succeeded.
+
+## FIRST PRIORITY: BUY PAGE BROKEN IN LAST SCREENSHOT
+- At 8:36 PM, screenshot of https://florida-real-estate.pages.dev/buy shows hero/photo and white content constrained to approximately HALF the browser width, leaving large blank white region to right; hero heading and subtitle are nearly invisible DARK TEXT over dark navy overlay. User only wanted white hero text; regression is NOT approved. Fix full-width layout AND WHITE hero heading, kicker and subtitle BEFORE any other design work.
+- Preserve the approved modern angular WHITE HOUSE WITH POOL hero photograph from original Buy design and full-width tall banner. User chose this over a Florida marina photo and over the earlier Home pool image. Headline reasonably SMALLER and LEFT-ALIGNED; left third photo subtly shaded dark navy; WHITE texts visible, on desktops and phones. No duplicate photo, no photo above title, no half-width page. No other content changes.
+- At last GitHub fetch, buy.html includes CSS style IDs gce-buy-left-title-20261010 and gce-buy-white-text-only-20261010. Hero overrides target .hero.sc-standard-photo with ::before image coming from --sc-hero-photo and ::after gradient. Script assets/hero-photos.js?v=20261010-buy-modern-restored injects .sc-standard-photo and styling. assets/language-dropdown.js is also global with substantial CSS and menu changes. Audit style collisions, parent widths, responsive handling, translation-specific styling, caching and JS before applying targeted correction. Repeated appending of !important rules caused regressions; simplify instead.
+- Original screenshot at ~7:55 PM of modern white house was tall and wide but duplicated above title; at ~8:14 PM marina image smaller and pale, unwanted; at ~8:31 PM photo duplicated top, wanted modern house but in ONE banner; at ~8:33 PM dark left overlay and title was DARK unreadable; at ~8:36 PM half-width page with dark letters. Use user's latest screenshot as evidence of failure, not confirmation of success.
+- Do actual rendered QA if possible; GitHub file verification alone does NOT prove browser view; report what was tested honestly.
+
+## HEADER LANGUAGE AND MENU
+- On ALL pages, language dropdown options exactly English, Español, Italiano, Português, WITHOUT EN/ES/IT/PT prefixes. Button upper width minimum for Português plus arrow; dropdown SAME WIDTH and exact same left/right edges. Current shared assets/language-dropdown.js recently configured 100px. Check label does not clip.
+- Keep 3-line menu and magnifier visible on iPhone. At ~8:29 PM hamburger did not work. Root cause: capture click interception to site-map.html in assets/language-dropdown.js was removed in commit c299ff693e100b8a6be55f9cf6a0bb9884543f49. But native menu/overlay STILL needs visual functional QA. The script is large ~60 KB; inspect closely before modifications.
+
+## HOME PHOTOS AND ANIMATION
+- DO NOT DELETE/REPLACE the ORIGINAL Home photo file florida-gulf-coast-luxury-waterfront-home..jpg (two periods before jpg) in repo root; 3.74 MB, blob SHA verified earlier 44029ff2529fa812706084e5355da30937744f57. User loves photo of luxury house and pool, asked to keep EXACT image. Different from modern WHITE HOUSE photo preferred for Buy.
+- User liked moving original Home photo to another page and new SeaGlass-style gentle zoom Home hero with generated sunset coastal villa photo. BUT subsequently asked NOT TO PUBLISH new image on Home without preview and approval, concerned photo might be lost. Respect this later approval condition. Current index.html has a zoom animation with fallback to original image; references new assets/luxury-coastal-villa-at-sunset.webp, not yet verified present in GitHub. Generated WebP exists in earlier local session and ChatGPT Library root /luxury-coastal-villa-at-sunset.webp, but NOT in GitHub as of last check. Do not claim published.
+- IMPORTANT newer user decision: Buy must show its prior MODERN WHITE HOUSE photo, not original Home house/pool. Original Home photograph can be kept on Home pending approval and eventually reused on another suitable page. Never substitute an AI-edited screenshot for original image file.
+
+## WEBSITE AND PRIOR APPROVALS
+- Read the ENTIRE earlier PROJECT_HANDOFF.md; all existing previous detailed page-by-page hero/photo/title/CTA matrix still applies except where superseded above.
+- Repo scampilii-prog/florida-real-estate; live https://florida-real-estate.pages.dev/. OceanFL/oceanfl.com is a completely separate site and MUST NOT BE MODIFIED.
+- BRAND NAME/DOMAIN UNDECIDED: WestGulfCoast.com, CheersToHome.com etc were discussed; no approved rename/domain transition. User is Sabatino Campilii, REALTOR® affiliated with LoKation Real Estate, not independent broker. LoKation identity required.
+- Manrope font, navy and gold brand, consistent header, identical 5-column footer across ~46 public pages, four languages, functional links and OneHome, same-tab internal navigation, proper anchors, Site Map, Search, Ask Tino, mobile hamburger.
+- Keep complete Buy AS-IS contract timeline with editable rows/email/export and offline Florida-Closing-Timeline-OFFLINE.html; seller step 04/05/06; Investment Center calculator/insurance sensitivity/print report; site-map approved cream/navy main buttons; request-appointment SimplyBook.me; all existing forms and QA content.
+- New header project across all public pages (A large Home, B medium commercial/community, C short tools/forms) previously planned but NOT deployed throughout; see prior handoff matrix. Fix Buy regression BEFORE pursuing broad redesign.
+- Perform changes directly via GitHub connector, not asking user to edit HTML or CSS. Confirm source fetch after commits and rendered page when possible. Do NOT say a page is fixed if still visually broken.
