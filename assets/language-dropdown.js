@@ -386,13 +386,7 @@
 /* Site Map is a real page; intercept legacy menu overlays sitewide. */
 (function(){
  function wire(){
-  document.addEventListener('click',function(e){
-   var btn=e.target.closest&&e.target.closest('[data-oc-menu],.menu-button');
-   if(!btn)return;
-   e.preventDefault();e.stopImmediatePropagation();
-   if(location.pathname.endsWith('/site-map')||location.pathname.endsWith('/site-map.html'))return;
-   location.assign('site-map.html');
-  },true);
+  // Preserve each page's native hamburger menu. Site Map remains linked in the footer.
   document.querySelectorAll('footer').forEach(function(f){if(f.querySelector('.sc-site-map-footer'))return;var a=document.createElement('a');a.className='sc-site-map-footer';a.href='site-map.html';a.textContent='Site Map';a.style.cssText='display:inline-block;margin:12px 18px;color:inherit;text-decoration:underline;text-underline-offset:3px';f.appendChild(a);});
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',wire);else wire();
