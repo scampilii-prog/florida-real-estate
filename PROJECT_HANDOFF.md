@@ -311,3 +311,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit `f54c4b0b3431b2f4ed045393adab4cfae785aba2` adds narrowly scoped responsive style for `section.hero.sc-standard-photo` with immediate static H1: 270px desktop, 220px mobile, with reduced padding. Preserves selected photo and other photo-hero types. This is source-code correction, NOT visual/browser certification. Cached `?v=20261009a` references may require coordinated cache version bump after QA.
 - Identified duplicate semantic H1 on Sell and Home Valuation (photo and body); follow up cautiously by changing secondary body H1 to H2 while preserving CSS design, after checking dependencies.
 - External live fetch of `/sell` returned DisabledError, `/sitemap.xml` inaccessible; therefore not verified public deployment, www redirect, actual responsive appearance or end-to-end links. Remaining tasks include full 47-page source and mobile/browser QA, translations, menus, email delivery, tools and Cloudflare rules. Do not declare complete, change photographs, or edit OceanFL.
+
+
+## Nuevo Website 10 — 12 Oct 2026 — GitHub Actions notification flood corrected
+- User received many automated GitHub emails about failed `.github/workflows/extract-oceanfl-qa.yml` runs, some reporting `No jobs were run`.
+- Direct repo inspection revealed malformed duplicated YAML with stray content following the valid steps, causing parse/run failures. Original Q&A data had already been imported successfully (1010 entries recorded above).
+- Replaced the obsolete import workflow in commit `b4d9337b20cd132f839dd4bc28abda70df16f04e` with a minimal valid manual-only archived action (`workflow_dispatch`, one echo job). No push or scheduled triggers. This avoids future automatic failed-run notifications from this workflow, without changing questions.html or Q&A JSON.
+- Existing queued notifications may still arrive; other workflows, if present, need separate investigation. The fix is confirmed in GitHub source, not a confirmation of users' email inbox state.
