@@ -738,7 +738,7 @@
   if(!document.getElementById('fc-acromatico-credit-style')){
    var style=document.createElement('style');
    style.id='fc-acromatico-credit-style';
-   style.textContent='html body footer a.fc-acromatico-credit{font-family:Manrope,Arial,sans-serif!important;font-size:clamp(16px,1.45vw,19px)!important;font-weight:750!important;line-height:1.6!important;color:#e6c58c!important;text-decoration:underline;text-underline-offset:4px}html body footer .fc-acromatico-heart{color:#ed4149!important;font-size:1.2em!important;text-shadow:0 0 1px #ed4149}';
+   style.textContent='html body footer a.fc-acromatico-credit{font-family:Manrope,Arial,sans-serif!important;font-size:14px!important;font-weight:650!important;line-height:1.5!important;color:#e6c58c!important;text-decoration:underline;text-underline-offset:4px}html body footer .fc-acromatico-heart{color:#ed4149!important;font-size:1.08em!important;text-shadow:none}';
    document.head.appendChild(style);
   }
  }
