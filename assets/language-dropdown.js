@@ -478,6 +478,7 @@
    Google may inject both a top-positioned iframe and a body top offset. */
 (function(){
   function fix(){
+    if(!/^\/site-map(?:\.html)?\/?$/.test(location.pathname))return;
     if(!document.getElementById('fc-google-banner-layout')){
       var st=document.createElement('style');st.id='fc-google-banner-layout';
       st.textContent='html,html body{top:0!important;margin-top:0!important}body.translated-ltr,body.translated-rtl{top:0!important}iframe.goog-te-banner-frame,iframe.goog-te-banner-frame.skiptranslate,.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,body>iframe.skiptranslate,body>.skiptranslate.goog-te-banner-frame{display:none!important;height:0!important;visibility:hidden!important}html body header.fc-ready,html body .sc-sitemap-header{top:0!important}';
