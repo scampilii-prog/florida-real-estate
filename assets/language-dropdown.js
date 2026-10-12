@@ -630,3 +630,16 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();
+
+/* Clean phone control and fast accessible desktop hint. */
+(function(){
+ function ready(){
+  var a=document.querySelector('header .fc-header-phone');
+  if(!a||document.getElementById('fc-phone-hover-polish'))return;
+  a.setAttribute('data-fc-phone-tip','Speak directly with Sabatino · (941) 270-4877');
+  var st=document.createElement('style');st.id='fc-phone-hover-polish';
+  st.textContent='html body header .fc-unified-header-tools a.fc-header-phone{background:transparent!important;border:0!important;box-shadow:none!important;color:#fff!important;position:relative!important;outline-offset:2px!important}html body header .fc-unified-header-tools a.fc-header-phone:hover,html body header .fc-unified-header-tools a.fc-header-phone:focus-visible{background:rgba(255,255,255,.14)!important}html body header .fc-unified-header-tools a.fc-header-phone::after{content:attr(data-fc-phone-tip);position:absolute;z-index:9999;top:calc(100% + 14px);right:0;padding:11px 15px;border:1px solid rgba(225,196,143,.7);border-radius:8px;background:#152e42;color:white;font:650 12px/1.4 Manrope,Arial,sans-serif;white-space:nowrap;box-shadow:0 8px 20px #0004;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .12s ease,visibility .12s ease}html body header .fc-unified-header-tools a.fc-header-phone:hover::after,html body header .fc-unified-header-tools a.fc-header-phone:focus-visible::after{opacity:1;visibility:visible}@media(hover:none),(max-width:620px){html body header .fc-unified-header-tools a.fc-header-phone::after{display:none!important}}';
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
+})();
