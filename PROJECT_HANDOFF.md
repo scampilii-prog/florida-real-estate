@@ -166,3 +166,12 @@ USER explicitly asked for everything saved and a new-chat starter. This section 
 - Keep complete Buy AS-IS contract timeline with editable rows/email/export and offline Florida-Closing-Timeline-OFFLINE.html; seller step 04/05/06; Investment Center calculator/insurance sensitivity/print report; site-map approved cream/navy main buttons; request-appointment SimplyBook.me; all existing forms and QA content.
 - New header project across all public pages (A large Home, B medium commercial/community, C short tools/forms) previously planned but NOT deployed throughout; see prior handoff matrix. Fix Buy regression BEFORE pursuing broad redesign.
 - Perform changes directly via GitHub connector, not asking user to edit HTML or CSS. Confirm source fetch after commits and rendered page when possible. Do NOT say a page is fixed if still visually broken.
+
+
+## Grupo 1 — Diseño general y fotografías (2026-10-12)
+- Unified main header brand FLORIDA COSTIERA (navy/gold) across ten previously missed property/area landing pages: florida-gulf-coast-homes-for-sale, florida-gulf-coast-condos-for-sale, boca-grande-florida-real-estate, cape-haze-placida-florida-real-estate, englewood-manasota-key-florida-real-estate, venice-florida-real-estate, wellen-park-florida-real-estate, siesta-key-longboat-key-florida-real-estate, nokomis-casey-key-florida-real-estate, punta-gorda-isles-florida-real-estate.
+- Standardized clean English/Español/Italiano/Português option labels on nine buyer/seller guide pages.
+- Added a four-language header selector and existing shared language script (where previously absent) to privacy.html, terms.html, closing-costs.html and request-appointment.html.
+- Home: removed reference to uncommitted/unapproved assets/luxury-coastal-villa-at-sunset.webp; original florida-gulf-coast-luxury-waterfront-home..jpg is now the sole configured hero image. Preserved cinematic movement and overlay, no image replacement without owner approval.
+- Source checked: primary page headers, menu/search presence, existing five-column footer blocks, original hero image repo existence, and language selector fields. Responsive/live browser visual checks and language translations still require actual browser QA; source checks are not proof of visual functionality.
+- Follow-ups in Grupo 4: browser QA on desktop/iPhone/tablet, photo licensing/source and hero layouts; avoid claiming live rendering verified.
