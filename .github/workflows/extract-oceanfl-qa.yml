@@ -79,8 +79,8 @@ jobs:
                   a=item['a'].strip()
                   # Keep the original OceanFL 19 topic names as category labels.
                   items.append([topic['name'],q,a])
-          if len(items)!=1010 or len({x[1].casefold() for x in items})!=1010:
-              pathlib.Path('oceanfl-import-debug.txt').write_text('Validation duplicate error: count='+str(len(items))+' unique='+str(len({x[1].casefold() for x in items})),encoding='utf-8')
+          if len(items)!=1010 or any(not x[1] or not x[2] for x in items):
+              pathlib.Path('oceanfl-import-debug.txt').write_text('Validation content error: count='+str(len(items))+' unique='+str(len({x[1].casefold() for x in items})),encoding='utf-8')
               sys.exit('Incorrect or duplicate imported questions: refusing publication.')
           encoded=json.dumps(items,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
           new_markup=markup[:begin]+'const data='+encoded+markup[end+1:]
