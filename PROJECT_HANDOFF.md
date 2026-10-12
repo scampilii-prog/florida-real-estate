@@ -361,3 +361,8 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Direct inspection found malformed literal concatenation in `assets/hero-photos.js` after the earlier 270/220px compact hero patch: a stray `'+` following a comment broke the JavaScript expression. Corrected source in commit `a6b1cd5720f7a92cf5166aa5902622863a6149c7`, preserving the image mapping and styling.
 - Cache-busted repaired asset on Sell, Sellers Guide, Home Valuation, Buyer Preparation, Questions and Waterfront with `?v=20261012-js-repaired` so their scripts reload. Other pages that reference the shared asset may still require a coordinated cache refresh; verify before claiming all deployments.
 - GitHub source recheck confirms the malformed fragment is gone and compact CSS rules persist. Interactive browser/mobile verification is still unavailable and cannot be asserted.
+
+
+## Nuevo Website 10 — staged finalization / Etapa 1 started (12 Oct 2026)
+- User explicitly requested five complete, user-sequenced phases, with brief description of each and no piecemeal authorizations: (1) visual design/hero/footer/table, (2) content/navigation across 47 pages, (3) tools/contact, (4) languages/SEO, (5) live deployment/Cloudflare/mobile/email acceptance. Do not advance between phases without user's next phase cue.
+- Etapa 1: found shared `assets/hero-photos.js` compact CSS 220px mobile rule was overridden by a later 340px mobile media rule with important declarations; fixed cascade with a final, more-specific 220px style in commit `e7df56b7d4886a1609cd025c4c1c22231052e3fc`. Shared syntax error fixed in preceding commit a6b1cd5. Approved images and content unchanged. Live device rendering still not certified.
