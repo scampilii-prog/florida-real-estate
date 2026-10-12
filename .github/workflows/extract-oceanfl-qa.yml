@@ -68,3 +68,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/oceanfl-qa-1010.json
           git diff --cached --quiet || (git commit -m "Import validated 1010 OceanFL Q&A into standalone data" && git push)
+
+# Trigger verified extraction for Florida Costiera, 2026-10-12.
