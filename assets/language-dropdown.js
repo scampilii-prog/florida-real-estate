@@ -654,3 +654,21 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add,{once:true});else add();
 })();
+
+/* Approved FloridaCostiera brand refresh, Oct 12: icon to the left, no ornaments. */
+(function(){
+ function apply(){
+  var h=document.querySelector('header.fc-ready');
+  if(!h || h.querySelector('.fc-name.fc-wordmark-new'))return;
+  var label=h.querySelector('.fc-name');
+  if(label){label.classList.add('fc-wordmark-new');label.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong>';}
+  var iconLink=document.querySelector('link[rel="icon"]');
+  if(!iconLink){iconLink=document.createElement('link');iconLink.rel='icon';document.head.appendChild(iconLink);}
+  iconLink.type='image/svg+xml';iconLink.href='/assets/florida-costiera-coastal-mark.svg?v=20261012';
+  var st=document.createElement('style');st.id='fc-new-coastal-brand';
+  st.textContent='html body header.fc-ready .fc-mark{border-right:1px solid #d4ab6c70!important;flex-basis:62px!important;width:62px!important;height:57px!important;padding-right:10px!important;background:url("/assets/florida-costiera-coastal-mark.svg?v=20261012") center left / 51px 51px no-repeat!important}html body header.fc-ready .fc-mark svg{display:none!important}html body header.fc-ready .fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-size:clamp(19px,2.05vw,29px)!important;font-weight:500!important;letter-spacing:-.045em!important;line-height:1.12!important;text-transform:none!important}html body header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}html body header.fc-ready .fc-wordmark-new .fc-costiera{color:#e9bf78!important;font:inherit!important;font-weight:500!important;letter-spacing:inherit!important}@media(max-width:860px){html body header.fc-ready .fc-mark{flex-basis:41px!important;width:41px!important;background-size:33px 33px!important;padding-right:4px!important}html body header.fc-ready .fc-wordmark-new{font-size:clamp(13px,2.7vw,20px)!important}}@media(max-width:620px){html body header.fc-ready .fc-mark{display:none!important}html body header.fc-ready .fc-wordmark-new{font-size:clamp(11px,3.1vw,16px)!important;letter-spacing:-.06em!important}}';
+  document.head.appendChild(st);
+ }
+ if(!document.getElementById('fc-bodoni-font')){var l=document.createElement('link');l.id='fc-bodoni-font';l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap';document.head.appendChild(l);}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
