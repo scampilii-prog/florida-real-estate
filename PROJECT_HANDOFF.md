@@ -217,3 +217,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 ## Footer refinado — 12 Oct 2026
 - Usuario aprobó reorganización elegante del footer, con cinco columnas sobre azul marino y franja legal inferior en tono azul ligeramente más claro (#1a3b52). El enlace Site Map debe quedar centrado dentro de esa franja y separado del botón flotante izquierdo Back to Top. Se aplicó vía assets/language-dropdown.js y se actualizaron referencias de script en las 47 páginas HTML. Closing Costs era la excepción (footer .sc-cc-footer) y recibió tratamiento de diseño equivalente en el script compartido y referencia renovada en closing-costs.html.
 - Auditoría en GitHub confirmó referencias de versión refinada en 47 páginas; 46 cuentan con .sc-unified-footer y Closing Costs tiene .sc-cc-footer por diseño. Validación visual en navegador real aún pendiente, así como los tests end-to-end del Grupo 4. Evitar volver a retocar sin petición o evidencia visual.
+
+
+## Grupo 4 — cierre de trabajo en GitHub, 12 Oct 2026
+- El propietario confirmó visualmente el footer renovado y el enlace Site Map centrado; pidió avanzar al Grupo 5.
+- Última revisión de GitHub: calculadoras, formulario de Contact, enlaces OneHome de Search Properties y widget/enlace SimplyBook presentes en HTML; las comprobaciones de código de enlaces locales/SEO de las 47 páginas ya están registradas arriba.
+- `robots.txt` y `sitemap.xml` recuperados de GitHub: 47 URLs únicas, Home raíz incluida, referencia del sitemap correcta.
+- El sitio vivo florida-real-estate.pages.dev no es accesible mediante la herramienta de consulta web disponible (Home, Site Map y sitemap.xml rechazados). Por tanto NO están certificadas mediante navegación real las pruebas end-to-end de calculadoras, OneHome, reservas, Ask Tino, formularios y visuales móviles; NO afirmar que se hayan probado. El trabajo verificable en repositorio del Grupo 4 queda cerrado, con QA en navegador real explícitamente pendiente y documentado.
+- La próxima fase autorizada es Grupo 5: teléfono empresarial/Twilio. Antes de contratar, adquirir números o generar cargos, confirmar con el propietario servicio, presupuesto, disponibilidad, identidad y destino de llamadas; consultar herramientas actuales. No confundir avance al Grupo 5 con aprobación para pagar o comprar automáticamente.
