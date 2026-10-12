@@ -175,3 +175,11 @@ USER explicitly asked for everything saved and a new-chat starter. This section 
 - Home: removed reference to uncommitted/unapproved assets/luxury-coastal-villa-at-sunset.webp; original florida-gulf-coast-luxury-waterfront-home..jpg is now the sole configured hero image. Preserved cinematic movement and overlay, no image replacement without owner approval.
 - Source checked: primary page headers, menu/search presence, existing five-column footer blocks, original hero image repo existence, and language selector fields. Responsive/live browser visual checks and language translations still require actual browser QA; source checks are not proof of visual functionality.
 - Follow-ups in Grupo 4: browser QA on desktop/iPhone/tablet, photo licensing/source and hero layouts; avoid claiming live rendering verified.
+
+
+## Grupo 2 — Contenido y páginas (2026-10-12)
+- Audited top-level content structure of Home, Buy, Sell, Communities, About, Contact, New Construction, financing/buyer and seller guides, Questions and Investment Center. Existing content was preserved; no approved hero or page structure replaced.
+- Added short substantive guidance sections to buyer-financing-preapproval.html (DU/LPA not final approval and secure verification), buyers-guide.html (Florida flood/wind, waterfront and condo due diligence), new-construction.html (builder contract/incentive due diligence), sellers-guide.html (offer terms, financing and lawful screening), investment-center.html (ownership expenses, rentals, insurance, yield caveats).
+- questions.html: added 10 factual, educational questions and answers with existing category names; parsed FAQ database now contains 129 unique questions. Public marketing tagline “1,000 Questions. Honest Answers.” remains aspirational; do not claim 1,000 indexed answers. Prior count was 119.
+- Verified the modified pages' inline JavaScript syntax, ignoring schema.org application/ld+json metadata (which is valid JSON not executable JS). Questions data JSON parses without error and entries are unique. Live translation, browser interaction and responsive rendering still require QA in Group 4.
+- Website visitor destinations/forms/calculators are separate Group 3; SEO, visuals and publication are Group 4. Never claim full multilingual content translation without testing it.
