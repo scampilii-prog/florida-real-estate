@@ -511,3 +511,31 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',placeSiteMap);else placeSiteMap();
 })();
+
+
+/* Florida Costiera refined five-column footer and understated lighter bottom zone. */
+(function(){
+ function install(){
+  if(document.getElementById('fc-refined-footer-20261012'))return;
+  var st=document.createElement('style');st.id='fc-refined-footer-20261012';
+  st.textContent=`
+  html body footer.sc-unified-footer{background:#102b43!important;padding:66px 0 0!important;overflow:hidden!important}
+  html body footer.sc-unified-footer .sc-uf-grid{max-width:1320px!important;padding:0 clamp(22px,4vw,52px) 50px!important;grid-template-columns:minmax(220px,1.33fr) repeat(4,minmax(135px,1fr))!important;gap:clamp(22px,2.8vw,42px)!important}
+  html body footer.sc-unified-footer .sc-uf-grid h3{font-size:11px!important;letter-spacing:.14em!important;margin-bottom:19px!important;color:#e3c38b!important}
+  html body footer.sc-unified-footer .sc-uf-grid nav a{line-height:1.6!important;margin-bottom:12px!important;transition:color .18s ease!important}
+  html body footer.sc-unified-footer .sc-uf-grid nav{min-width:0!important}
+  html body footer.sc-unified-footer .sc-uf-legal{max-width:none!important;margin:0!important;padding:27px clamp(22px,5vw,62px) 28px!important;background:#1a3b52!important;border-top:1px solid rgba(222,192,137,.42)!important;text-align:center!important}
+  html body footer.sc-unified-footer .sc-uf-legal .fc-footer-sitemap-center{padding:0!important;margin:0 auto 24px!important;border:0!important}
+  html body footer.sc-unified-footer .sc-uf-legal .fc-footer-sitemap-center a{font-size:13px!important;font-weight:800!important;color:#f0d5a6!important;text-decoration:none!important;border-bottom:1px solid rgba(240,213,166,.72)!important;padding:0 2px 5px!important}
+  html body footer.sc-unified-footer .sc-uf-legal .sc-uf-policies{gap:13px 27px!important;justify-content:center!important;align-items:center!important}
+  html body footer.sc-unified-footer .sc-uf-legal .sc-uf-policies>*+*{position:relative}
+  html body footer.sc-unified-footer .sc-uf-legal .sc-uf-policies>*+*::before{content:"";position:absolute;left:-14px;top:50%;height:13px;width:1px;background:rgba(220,230,237,.35);transform:translateY(-50%)}
+  html body footer.sc-unified-footer .sc-uf-legal p{max-width:960px!important;margin:14px auto!important;color:#d0dce5!important;line-height:1.8!important}
+  html body footer.sc-unified-footer .sc-uf-legal p:last-child{margin-bottom:0!important}
+  @media(max-width:1060px){html body footer.sc-unified-footer .sc-uf-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:35px!important}html body footer.sc-unified-footer .sc-uf-brand{grid-column:1/-1!important}}
+  @media(max-width:600px){html body footer.sc-unified-footer{padding-top:44px!important}html body footer.sc-unified-footer .sc-uf-grid{grid-template-columns:1fr!important;padding:0 25px 32px!important;gap:24px!important}html body footer.sc-unified-footer .sc-uf-brand{grid-column:auto!important}html body footer.sc-unified-footer .sc-uf-legal{padding:28px 23px 33px!important}html body footer.sc-unified-footer .sc-uf-legal .sc-uf-policies{gap:9px 16px!important}html body footer.sc-unified-footer .sc-uf-legal .sc-uf-policies>*+*::before{display:none!important}}
+  `;
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+})();
