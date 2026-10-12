@@ -93,6 +93,7 @@ jobs:
           # categories appear automatically. Translation dictionary may add labels later.
           page.write_text(new_markup,encoding='utf-8')
           print('Updated questions.html:',len(items),'complete Q&A records',flush=True)
+          print('CLEAN_PUBLICATION_VERSION_2',flush=True)
           PY
       - name: Commit verified data only
         if: success()
