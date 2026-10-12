@@ -60,13 +60,35 @@ jobs:
           path=pathlib.Path('assets/oceanfl-qa-1010.json')
           path.write_text(json.dumps({'source':url,'topics':topics},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
           print('Validated data file:',path,'bytes:',path.stat().st_size,flush=True)
+          # Publish the validated OceanFL question bank inside Florida Costiera's existing
+          # interactive Q&A page without changing its header, footer, search or Ask Tino.
+          page=pathlib.Path('questions.html')
+          markup=page.read_text(encoding='utf-8')
+          begin=markup.find('const data=[')
+          end=markup.find('];const catDict=',begin)
+          if begin<0 or end<0:sys.exit('Florida Costiera Q&A data markers changed: refusing to overwrite.')
+          items=[]
+          for topic in topics:
+              for item in topic['items']:
+                  q=re.sub(r'^\\s*\\d{1,3}\\s+', '',item['q']).strip()
+                  a=item['a'].strip()
+                  # Keep the original OceanFL 19 topic names as category labels.
+                  items.append([topic['name'],q,a])
+          if len(items)!=1010 or len({x[1].casefold() for x in items})!=1010:
+              sys.exit('Incorrect or duplicate imported questions: refusing publication.')
+          encoded=json.dumps(items,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+          new_markup=markup[:begin]+'const data='+encoded+markup[end+1:]
+          # Existing UI enumerates dataset category values, so these 19 original
+          # categories appear automatically. Translation dictionary may add labels later.
+          page.write_text(new_markup,encoding='utf-8')
+          print('Updated questions.html:',len(items),'complete Q&A records',flush=True)
           PY
       - name: Commit verified data only
         if: success()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/oceanfl-qa-1010.json
-          git diff --cached --quiet || (git commit -m "Import validated 1010 OceanFL Q&A into standalone data" && git push)
+          git add assets/oceanfl-qa-1010.json questions.html
+          git diff --cached --quiet || (git commit -m "Publish verified 1010 OceanFL Q&A in Florida Costiera" && git push)
 
 # Trigger verified extraction for Florida Costiera, 2026-10-12.
