@@ -726,3 +726,21 @@
 
 /* Lift Site Map above the contact cards, leaving the existing five-column footer untouched. */
 (function(){function apply(){document.querySelectorAll('footer.sc-unified-footer,footer.sc-cc-footer').forEach(function(footer){var directory=footer.querySelector('.fc-email-directory');if(!directory)return;var old=footer.querySelectorAll('.fc-footer-sitemap-center,.fc-cc-site-map-center');old.forEach(function(node){node.remove()});footer.querySelectorAll('nav a[href="site-map.html"]').forEach(function(a){a.remove()});var bar=footer.querySelector('.fc-sitemap-prominent');if(!bar){bar=document.createElement('div');bar.className='fc-sitemap-prominent';bar.innerHTML='<a href="site-map.html" aria-label="Explore the Florida Costiera site map">Explore Our Site Map <span aria-hidden="true">↗</span></a>';}directory.insertAdjacentElement('beforebegin',bar)});if(!document.getElementById('fc-sitemap-prominent-css')){var st=document.createElement('style');st.id='fc-sitemap-prominent-css';st.textContent='html body footer .fc-sitemap-prominent{max-width:1240px;margin:0 auto!important;padding:0 24px 8px;text-align:center}html body footer .fc-sitemap-prominent a{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(230,197,140,.65);border-radius:999px;background:rgba(230,197,140,.08);padding:12px 24px;color:#f5d69c!important;text-decoration:none!important;font:800 13px/1.3 Manrope,Arial,sans-serif;letter-spacing:.025em;box-shadow:0 5px 18px #0617261f}html body footer .fc-sitemap-prominent a:hover,html body footer .fc-sitemap-prominent a:focus-visible{background:rgba(230,197,140,.18);border-color:#f5d69c;outline-offset:3px}@media(max-width:650px){html body footer .fc-sitemap-prominent{padding:0 18px 14px}}';document.head.appendChild(st)}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
+
+/* Florida Costiera: consistent tasteful Acromatico credit on shared footers. */
+(function(){
+ function apply(){
+  document.querySelectorAll('footer a[href*="acromatico.com"]').forEach(function(a){
+   if(!/Created with\s*[♥❤]\s*by Acromatico/i.test(a.textContent||''))return;
+   a.classList.add('fc-acromatico-credit');
+   a.innerHTML='Created with <span class="fc-acromatico-heart" aria-label="love">♥</span> by Acromatico';
+  });
+  if(!document.getElementById('fc-acromatico-credit-style')){
+   var style=document.createElement('style');
+   style.id='fc-acromatico-credit-style';
+   style.textContent='html body footer a.fc-acromatico-credit{font-family:Manrope,Arial,sans-serif!important;font-size:clamp(16px,1.45vw,19px)!important;font-weight:750!important;line-height:1.6!important;color:#e6c58c!important;text-decoration:underline;text-underline-offset:4px}html body footer .fc-acromatico-heart{color:#ed4149!important;font-size:1.2em!important;text-shadow:0 0 1px #ed4149}';
+   document.head.appendChild(style);
+  }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
