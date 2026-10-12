@@ -504,9 +504,9 @@
   links.forEach(function(a){a.remove()});
   var wrap=document.createElement('div');wrap.className='fc-footer-sitemap-center';
   var link=document.createElement('a');link.href='site-map.html';link.textContent='Site Map';wrap.appendChild(link);
-  legal.insertBefore(wrap,legal.firstChild);
+  legal.appendChild(wrap);
   var st=document.createElement('style');st.id='fc-footer-sitemap-center-style';
-  st.textContent='html body footer.sc-unified-footer .fc-footer-sitemap-center{text-align:center!important;margin:0 auto 24px!important;padding:17px 12px 0!important;border-top:1px solid rgba(230,197,140,.25)!important}html body footer.sc-unified-footer .fc-footer-sitemap-center a{display:inline-block!important;color:#e6c58c!important;text-decoration:underline!important;text-underline-offset:5px!important;font:700 13px/1.4 Manrope,Arial,sans-serif!important;letter-spacing:.02em!important;margin:0!important}html body footer.sc-unified-footer .fc-footer-sitemap-center a:hover{color:#fff!important}';
+  st.textContent='html body footer.sc-unified-footer .fc-footer-sitemap-center{text-align:center!important;margin:22px auto 0!important;padding:17px 12px 0!important;border-top:1px solid rgba(230,197,140,.25)!important}html body footer.sc-unified-footer .fc-footer-sitemap-center a{display:inline-block!important;color:#e6c58c!important;text-decoration:underline!important;text-underline-offset:5px!important;font:700 13px/1.4 Manrope,Arial,sans-serif!important;letter-spacing:.02em!important;margin:0!important}html body footer.sc-unified-footer .fc-footer-sitemap-center a:hover{color:#fff!important}';
   document.head.appendChild(st);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',placeSiteMap);else placeSiteMap();
