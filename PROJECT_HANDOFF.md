@@ -318,3 +318,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Direct repo inspection revealed malformed duplicated YAML with stray content following the valid steps, causing parse/run failures. Original Q&A data had already been imported successfully (1010 entries recorded above).
 - Replaced the obsolete import workflow in commit `b4d9337b20cd132f839dd4bc28abda70df16f04e` with a minimal valid manual-only archived action (`workflow_dispatch`, one echo job). No push or scheduled triggers. This avoids future automatic failed-run notifications from this workflow, without changing questions.html or Q&A JSON.
 - Existing queued notifications may still arrive; other workflows, if present, need separate investigation. The fix is confirmed in GitHub source, not a confirmation of users' email inbox state.
+
+
+## Nuevo Website 10 — 12 Oct 2026 — continuation of Group 1 hero SEO repairs
+- Direct GitHub changes: Sell (`84e548e`), Home Valuation (`25de37a`), Buyer Preparation (`bc1c534`), Buy (`cc50a14`) converted duplicate content-level H1 into H2, while retaining static hero H1; updated `.oc-real-content` CSS selector to keep size/visual style. Buy still contains a separate H1 inside its closing timeline report; assess context before changing.
+- Earlier shared `assets/hero-photos.js` compact-photo patch `f54c4b0` now cache-busted on Sell (`f9bf814`), Home Valuation (`dc870ad`), Buyer Preparation (`629025c`), Sellers Guide (`999d26c`), by using `?v=20261012-compact-h1`. Remaining pages referencing old script cache may require measured updating after verification; Buy skips shared photo injector.
+- Attempted public fetch for `/sell` and `/buy`; both inaccessible through web tool (DisabledError or unavailable), so no visual/cross-device/deployment certification. Do not claim successful rendering solely from GitHub commits. Full 47-page practical QA remains, while preserving approved photographs, logo, and layout.
