@@ -425,3 +425,38 @@
 
 /* Approved slightly lighter slate-navy for language control, 2026-10-11. */
 (function(){function apply(){if(document.getElementById('fc-slate-navy-language'))return;var st=document.createElement('style');st.id='fc-slate-navy-language';st.textContent='html body .sc-language-widget .sc-language-trigger,html body .sc-language-widget .sc-language-options{background:#24445e!important;border-color:#90a4b4!important}html body .sc-language-widget .sc-language-option:hover,html body .sc-language-widget .sc-language-option:focus-visible,html body .sc-language-widget .sc-language-option[aria-selected=true]{background:#365973!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
+
+
+/* Florida Costiera — stable translated header and multilingual Back to Top, 2026-10-12. */
+(function(){
+  function install(){
+    if(document.getElementById('fc-translate-layout-fix'))return;
+    var style=document.createElement('style');
+    style.id='fc-translate-layout-fix';
+    style.textContent='html body{top:0!important}html.translated-ltr body,html.translated-rtl body{top:0!important}html body .goog-te-banner-frame,html body iframe.goog-te-banner-frame,html body iframe.skiptranslate[src*="translate.google"]{display:none!important}html body header.fc-ready,html body .sc-sitemap-header{top:0!important}html body #floatingLeftBackTop .fc-top-label{white-space:nowrap!important}';
+    document.head.appendChild(style);
+    var dict={en:'Back to Top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
+    var labels={en:'Back to top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
+    function current(){
+      var sel=document.querySelector('#oc-lang-static, #lang');
+      if(sel&&dict[sel.value])return sel.value;
+      try{var stored=localStorage.getItem('sc_site_language');if(dict[stored])return stored;}catch(e){}
+      var lang=document.documentElement.lang.split('-')[0];return dict[lang]?lang:'en';
+    }
+    function sync(){
+      var b=document.getElementById('floatingLeftBackTop');if(!b)return;
+      var lang=current(),label=b.querySelector('.fc-top-label');
+      if(!label)return;
+      b.classList.add('notranslate');b.setAttribute('translate','no');
+      label.classList.add('notranslate');label.setAttribute('translate','no');
+      if(label.textContent!==dict[lang])label.textContent=dict[lang];
+      b.setAttribute('aria-label',labels[lang]);b.title=labels[lang];
+    }
+    document.addEventListener('change',function(e){if(e.target.matches('#oc-lang-static, #lang')){sync();setTimeout(sync,100);setTimeout(sync,850);}},true);
+    document.addEventListener('click',function(e){if(e.target.closest('.sc-language-option')){setTimeout(sync,0);setTimeout(sync,350);}},true);
+    window.addEventListener('pageshow',sync);
+    new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang','class']});
+    sync();
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+})();
