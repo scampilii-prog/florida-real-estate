@@ -355,3 +355,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Corrected a misleading Buy quick navigation item: previously `Homes & Condos` linked only to homes. Commit `36dd2285d4aca89605065be38e3df26783948a9e` replaces it with distinct `Homes for Sale` and `Condos for Sale` links to their respective existing pages. Buy quick navigation now has seven anchors plus the Ask Tino button; prominent contract timeline jump targets existing `#contract-deadline-planner`.
 - Re-fetched buy.html and confirmed quick nav targets, CSS and Ask Tino invocation remain present. No photo, calculation, timeline script or shared global components changed.
 - Final acceptance remains limited by unavailable live-browser testing and absent authenticated Cloudflare controls. Must test actual layout, mobile languages, appointment, email forwarding and www redirect before declaring website fully complete. Do not call untested behavior verified.
+
+
+## Nuevo Website 10 — critical hero script syntax repair, 12 Oct 2026
+- Direct inspection found malformed literal concatenation in `assets/hero-photos.js` after the earlier 270/220px compact hero patch: a stray `'+` following a comment broke the JavaScript expression. Corrected source in commit `a6b1cd5720f7a92cf5166aa5902622863a6149c7`, preserving the image mapping and styling.
+- Cache-busted repaired asset on Sell, Sellers Guide, Home Valuation, Buyer Preparation, Questions and Waterfront with `?v=20261012-js-repaired` so their scripts reload. Other pages that reference the shared asset may still require a coordinated cache refresh; verify before claiming all deployments.
+- GitHub source recheck confirms the malformed fragment is gone and compact CSS rules persist. Interactive browser/mobile verification is still unavailable and cannot be asserted.
