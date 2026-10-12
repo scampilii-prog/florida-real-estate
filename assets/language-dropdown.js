@@ -603,3 +603,30 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();
+
+/* One refined slate-navy frame for language, search, phone and menu.
+   Keep existing controls independent and fully usable on narrow screens. */
+(function(){
+ function install(){
+  if(document.getElementById('fc-unified-header-tools-style'))return;
+  var header=document.querySelector('header.site-header,header.oc-top');
+  if(!header)return;
+  var group=header.querySelector('.header-tools,.oc-actions');
+  if(!group)return;
+  group.classList.add('fc-unified-header-tools');
+  var style=document.createElement('style');style.id='fc-unified-header-tools-style';
+  style.textContent=[
+   'html body header .fc-unified-header-tools{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:5px!important;min-width:0!important;padding:5px 8px!important;border:1px solid rgba(166,187,201,.72)!important;border-radius:11px!important;background:#24445e!important;box-shadow:0 3px 11px rgba(0,0,0,.12)!important}',
+   'html body header .fc-unified-header-tools .sc-language-trigger,html body header .fc-unified-header-tools .fc-header-phone{background:transparent!important;color:white!important;border:0!important;box-shadow:none!important}',
+   'html body header .fc-unified-header-tools .fc-header-phone{border-radius:6px!important;padding:5px 7px!important}',
+   'html body header .fc-unified-header-tools .sc-language-trigger:hover,html body header .fc-unified-header-tools .fc-header-phone:hover{background:#365973!important}',
+   'html body header .fc-unified-header-tools .sc-language-trigger{min-height:36px!important;height:36px!important}',
+   'html body header .fc-unified-header-tools .search-icon,html body header .fc-unified-header-tools .menu-button,html body header .fc-unified-header-tools .oc-icon{color:white!important}',
+   'html body header .fc-unified-header-tools .search-icon:hover,html body header .fc-unified-header-tools .menu-button:hover,html body header .fc-unified-header-tools .oc-icon:hover{color:#efd49b!important}',
+   '@media(max-width:620px){html body header .fc-unified-header-tools{gap:2px!important;padding:3px 4px!important;border-radius:9px!important}html body header .fc-unified-header-tools .fc-header-phone{width:27px!important;min-width:27px!important;height:34px!important}html body header .fc-unified-header-tools .sc-language-trigger{height:34px!important;min-height:34px!important}}',
+   '@media(max-width:390px){html body header .fc-unified-header-tools{gap:1px!important;padding:2px 3px!important}}'
+  ].join('');
+  document.head.appendChild(style);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
