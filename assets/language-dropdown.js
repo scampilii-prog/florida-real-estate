@@ -672,3 +672,34 @@
  if(!document.getElementById('fc-bodoni-font')){var l=document.createElement('link');l.id='fc-bodoni-font';l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap';document.head.appendChild(l);}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+
+/* Site Map only — retain the approved custom header and its Google Translate guard.
+   Restore a reliable call control beside search after the shared brand is mounted. */
+(function(){
+ function restoreSiteMapPhone(){
+  var header=document.querySelector('header.sc-sitemap-header');
+  if(!header)return;
+  var tools=header.querySelector('.sc-sitemap-tools');
+  var search=tools&&tools.querySelector('.sc-sitemap-search-btn');
+  if(!tools||!search)return;
+  var phone=tools.querySelector('.fc-sitemap-phone');
+  if(!phone){
+   phone=document.createElement('a');
+   phone.className='fc-sitemap-phone notranslate';
+   search.insertAdjacentElement('afterend',phone);
+  }
+  phone.href='tel:+19412704877';
+  phone.title='Call Florida Costiera: (941) 270-4877';
+  phone.setAttribute('aria-label','Call Florida Costiera at 941 270 4877');
+  phone.setAttribute('translate','no');
+  phone.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.6a2 2 0 0 1 1.8 2.1Z"/></svg><span class="fc-sitemap-phone-label">(941) 270-4877</span>';
+  if(phone.previousElementSibling!==search)search.insertAdjacentElement('afterend',phone);
+  if(!document.getElementById('fc-sitemap-phone-restored-css')){
+   var css=document.createElement('style');
+   css.id='fc-sitemap-phone-restored-css';
+   css.textContent='html body header.sc-sitemap-header .sc-sitemap-tools .fc-sitemap-phone{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:relative!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;gap:7px!important;min-width:36px!important;padding:7px 9px!important;color:#fff!important;background:#24445e!important;border:1px solid #90a4b4!important;border-radius:22px!important;text-decoration:none!important;font:800 13px/1.2 Manrope,Arial,sans-serif!important;white-space:nowrap!important}html body header.sc-sitemap-header .fc-sitemap-phone svg{display:block!important;width:19px!important;height:19px!important;flex:0 0 19px!important}html body header.sc-sitemap-header .fc-sitemap-phone:hover{background:#365973!important}html body header.sc-sitemap-header .sc-sitemap-tools{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;min-width:0!important}@media(max-width:1050px){html body header.sc-sitemap-header .fc-sitemap-phone-label{display:none!important}html body header.sc-sitemap-header .fc-sitemap-phone{width:36px!important;height:36px!important;padding:7px!important;border-radius:8px!important}}@media(max-width:620px){html body header.sc-sitemap-header .sc-sitemap-tools{gap:4px!important}html body header.sc-sitemap-header .fc-sitemap-phone{min-width:31px!important;width:31px!important;height:34px!important;padding:5px!important}html body header.sc-sitemap-header .fc-sitemap-phone svg{width:19px!important;height:19px!important}}';
+   document.head.appendChild(css);
+  }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restoreSiteMapPhone,{once:true});else restoreSiteMapPhone();
+})();
