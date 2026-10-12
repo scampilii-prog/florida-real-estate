@@ -92,3 +92,13 @@ jobs:
           git diff --cached --quiet || (git commit -m "Publish verified 1010 OceanFL Q&A in Florida Costiera" && git push)
 
 # Trigger verified extraction for Florida Costiera, 2026-10-12.
+
+      - name: Save extraction diagnostics if validation fails
+        if: failure()
+        run: |
+          if [ -f oceanfl-import-debug.txt ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add oceanfl-import-debug.txt
+            git diff --cached --quiet || (git commit -m "Record OceanFL Q&A import validation diagnostics" && git push)
+          fi
