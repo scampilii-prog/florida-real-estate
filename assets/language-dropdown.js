@@ -460,3 +460,15 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
+
+
+/* Align the left Back to Top pill to the top edge of Ask Tino on desktop/mobile. */
+(function(){
+ function apply(){
+  if(document.getElementById('fc-top-align-with-tino'))return;
+  var st=document.createElement('style');st.id='fc-top-align-with-tino';
+  st.textContent='html body #floatingLeftBackTop,html body a.top{bottom:54px!important}@media(max-width:600px){html body #floatingLeftBackTop,html body a.top{bottom:49px!important}}';
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+})();
