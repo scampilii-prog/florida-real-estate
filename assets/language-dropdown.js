@@ -539,3 +539,20 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
+
+
+/* Match the standalone Closing Costs footer to the approved refined design. */
+(function(){
+ function apply(){
+  var foot=document.querySelector('footer.sc-cc-footer');
+  if(!foot||document.getElementById('fc-closing-footer-refined'))return;
+  var legal=foot.querySelector('.sc-cc-legal');if(!legal)return;
+  var links=Array.from(foot.querySelectorAll('a[href="site-map.html"]'));links.forEach(function(a){a.remove()});
+  var wrap=document.createElement('div');wrap.className='fc-cc-site-map-center';
+  var link=document.createElement('a');link.href='site-map.html';link.textContent='Site Map';wrap.appendChild(link);legal.insertBefore(wrap,legal.firstChild);
+  var st=document.createElement('style');st.id='fc-closing-footer-refined';
+  st.textContent='html body footer.sc-cc-footer{background:#102b43!important;color:#eaf0f5!important;padding:66px 0 0!important;overflow:hidden!important}html body footer.sc-cc-footer .sc-cc-footer-grid{max-width:1320px!important;margin:0 auto!important;padding:0 clamp(22px,4vw,52px) 50px!important;display:grid!important;grid-template-columns:minmax(220px,1.33fr) repeat(4,minmax(135px,1fr))!important;gap:clamp(22px,2.8vw,42px)!important}html body footer.sc-cc-footer .sc-cc-footer-grid h3{color:#e3c38b!important;letter-spacing:.14em!important}html body footer.sc-cc-footer .sc-cc-legal{max-width:none!important;margin:0!important;padding:27px clamp(22px,5vw,62px) 28px!important;background:#1a3b52!important;border-top:1px solid rgba(222,192,137,.42)!important;text-align:center!important}html body footer.sc-cc-footer .sc-cc-legal p{text-align:center!important;max-width:960px!important;margin:14px auto!important}html body footer.sc-cc-footer .fc-cc-site-map-center{text-align:center!important;margin:0 auto 24px!important}html body footer.sc-cc-footer .fc-cc-site-map-center a{color:#f0d5a6!important;text-decoration:none!important;border-bottom:1px solid rgba(240,213,166,.72)!important;padding:0 2px 5px!important;font:800 13px/1.4 Manrope,Arial,sans-serif!important}@media(max-width:1060px){html body footer.sc-cc-footer .sc-cc-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}html body footer.sc-cc-footer .sc-cc-footer-grid>section:first-child{grid-column:1/-1!important}}@media(max-width:600px){html body footer.sc-cc-footer .sc-cc-footer-grid{grid-template-columns:1fr!important;padding:0 25px 32px!important}html body footer.sc-cc-footer .sc-cc-footer-grid>section:first-child{grid-column:auto!important}html body footer.sc-cc-footer .sc-cc-legal{padding:28px 23px 33px!important}}';
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
+})();
