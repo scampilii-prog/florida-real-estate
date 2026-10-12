@@ -256,3 +256,8 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit `7b9f285389ae7ff62ecd94206e3f1bb33d0a27e3` cache-busted `site-map.html` to `language-dropdown.js?v=20261012-sitemap-phone-restored`. Re-fetched both files: patch present, script ref updated, translation guard remains present.
 - SEO source recheck: `robots.txt` points to `https://floridacostiera.com/sitemap.xml`; sitemap enumerates 47 URLs with no old pages.dev domain. The new coastal SVG favicon exists.
 - Remaining mandatory external confirmations: live desktop/mobile rendering and tap-to-call; check standard headers in browser; www → apex 301 redirect in Cloudflare; delivery tests for info/sabatino routing, Italo destination verification before activation; end-to-end forms, booking, Ask Tino, calculators, language UI, exact canonical response and all professional brokerage disclosures. The web URL fetch tool returned DisabledError/inaccessible for floridacostiera.com, so none of these external behaviors was claimed tested. Cloudflare DNS/routing settings cannot be changed through GitHub. Preserve approved design and do not touch OceanFL.
+
+## Nuevo Website 9 — subtitle legibility (12 Oct 2026)
+- Owner requested slightly larger text underneath FloridaCostiera wordmark, without modifying icon or main wordmark.
+- Shared CSS patch committed as `612ad362`: .fc-area subtitle now 10–12 px desktop, 8–10 px medium, 7–8 px mobile, with proportionate spacing. Site Map and Home script cache references bumped in `5674bd6` and `ab52c7b`; other pages retain previous cache URL until normal cache refresh or future coordinated bump.
+- Source change only; visual browser QA remains outstanding. Preserve approved header, sitemap-specific translation guard and phone controls.
