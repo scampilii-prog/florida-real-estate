@@ -40,14 +40,10 @@ jobs:
                       txt=str(child).strip()
                   if txt:answer_parts.append(txt)
               answer='\\n\\n'.join(answer_parts)
-              section=el.find_parent('section')
-              title=''
-              if section:
-                  heading=section.find(['h2','h3'])
-                  if heading:title=heading.get_text(' ',strip=True)
-              if not title:
-                  h=el.find_previous(['h2','h3'])
-                  title=h.get_text(' ',strip=True) if h else 'Uncategorized'
+              # All 1010 accordions share one outer section; determine category
+              # from the closest PRECEDING h2 (19 heading blocks, one per topic).
+              h=el.find_previous('h2')
+              title=h.get_text(' ',strip=True) if h else 'Uncategorized'
               title=re.sub(r'^\s*\d{1,2}\s+', '',title).strip()
               if question and answer:
                   if not topics or topics[-1]['name']!=title:topics.append({'name':title,'items':[]})
