@@ -392,3 +392,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Added three purpose-specific, visible mailto contact cards on `contact.html` (commit `bf1e25e`) and `about.html` (`2f8c930`) with suitable role separation and mobile styles. Kept Sabatino as exclusively identified REALTOR® for licensed activities, Italo as technical/advertising/photography support.
 - Replaced remaining direct Gmail `mailto:` for inquiry forms in Home, Contact and Questions with `mailto:sabatino@floridacostiera.com?subject=` (and About already adjusted). Note that the user's mail program must still complete sending; mailto is not a server-side web submission.
 - No modification to OceanFL; no authenticated Cloudflare settings changed. Live browser and email delivery confirmation remains pending.
+
+
+## 12 Oct 2026 — Refined contact presentation requested from screenshots
+- Owner showed live footer where emails were too small and crammed together. Corrected centrally in assets/language-dropdown.js, commit `c972edc67`, by rendering a legible, elegant three-card contact directory (general inquiries, Sabatino as REALTOR®, Italo for technical support/advertising/photography) with navy/gold compatible styling and mobile one-column layout. No OceanFL edits.
+- Added an explicit, elegant three-card contact directory on Site Map, commit `bfeb4124`. Existing dedicated contact cards on Contact and About remain.
+- Bumped shared script cache on Home, About, Contact, Site Map, Buy, Sell and Closing Costs to `v=20261012-contact-cards`. Remaining pages may load revised shared asset after previous cache version expires; further coordinated bump possible if needed.
+- Source changes confirmed in GitHub; screenshots / interactive live validation pending. Email forwarding routing is configured in user's screenshot, but end-to-end delivery still not independently verified.
