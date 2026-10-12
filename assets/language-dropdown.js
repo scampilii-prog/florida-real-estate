@@ -581,3 +581,25 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();
+
+
+/* Telephone beside header search; compact touch-to-call icon on phones.
+   No change to Site Map's independently approved header. */
+(function(){
+ function install(){
+  var header=document.querySelector('header.site-header,header.oc-top');
+  if(!header||header.querySelector('.fc-header-phone'))return;
+  var actions=header.querySelector('.header-tools,.oc-actions');
+  if(!actions)return;
+  var search=actions.querySelector('.search-icon,.oc-icon[data-oc-search],button[aria-label*="Search"],button[aria-label*="search"]');
+  if(!search)return;
+  var style=document.createElement('style');style.id='fc-header-phone-css';
+  style.textContent='html body header .fc-header-phone{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;flex:0 0 auto!important;min-height:34px!important;padding:5px 8px!important;color:#ead09b!important;border:1px solid rgba(224,192,135,.48)!important;border-radius:20px!important;text-decoration:none!important;font:750 12px/1.2 Manrope,Arial,sans-serif!important;white-space:nowrap!important}html body header .fc-header-phone svg{display:block;width:16px;height:16px;flex:none}html body header .fc-header-phone:hover{background:rgba(16,43,67,.68)!important;color:white!important}@media(max-width:1050px){html body header .fc-header-phone{padding:5px!important;min-width:30px!important;width:30px!important;height:34px!important}html body header .fc-header-phone-label{display:none!important}}@media(max-width:620px){html body header .fc-header-phone{border:0!important;width:24px!important;min-width:24px!important;height:32px!important;min-height:32px!important;padding:3px!important}html body header .fc-header-phone svg{width:19px;height:19px}html body header .header-tools,html body header .oc-actions{gap:3px!important}}';
+  document.head.appendChild(style);
+  var a=document.createElement('a');a.className='fc-header-phone notranslate';a.href='tel:+19412704877';
+  a.title='Call Florida Costiera: (941) 270-4877';a.setAttribute('aria-label','Call Florida Costiera at 941 270 4877');a.setAttribute('translate','no');
+  a.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 5.18 2 2 0 0 1 5.09 3h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.82a2 2 0 0 1-.45 2.11L9.03 10.9a16 16 0 0 0 4.07 4.07l1.25-1.27a2 2 0 0 1 2.11-.45c.91.32 1.86.54 2.82.66A2 2 0 0 1 22 16.92Z"/></svg><span class="fc-header-phone-label">(941) 270-4877</span>';
+  search.insertAdjacentElement('afterend',a);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
