@@ -261,3 +261,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Owner requested slightly larger text underneath FloridaCostiera wordmark, without modifying icon or main wordmark.
 - Shared CSS patch committed as `612ad362`: .fc-area subtitle now 10–12 px desktop, 8–10 px medium, 7–8 px mobile, with proportionate spacing. Site Map and Home script cache references bumped in `5674bd6` and `ab52c7b`; other pages retain previous cache URL until normal cache refresh or future coordinated bump.
 - Source change only; visual browser QA remains outstanding. Preserve approved header, sitemap-specific translation guard and phone controls.
+
+
+## NUEVO WEBSITE 9 — Q&A expansion phase, 12 Oct 2026
+- User explicitly reiterated: DO NOT FORGET **1,000 Q&A** and continue completing Florida Costiera. Treat as substantive target: 1,000 distinct, useful answers, not misleading headline count.
+- Commit `926165c7541e0d9853d9471e4b75455d4c394328`: added **37 new distinct** professionally cautious English Q&A items to the existing 129, now **166 questions, 19 topics**. Questions cover buying, financing, selling, contracts, inspections, insurance, HOA/condo, waterfront, closing, taxes, new construction, investment, rental, relocation, ownership, disclosures, budgeting, moving.
+- Re-read questions.html from GitHub; parsed data successfully as JSON array: **166 entries; 166 unique question titles; zero blank entries**, 19 populated categories. Kept category/search and Ask Tino integration. Source validation only; interactive browser behavior and translations not live-verified.
+- Still **834 genuinely new questions and answers** required to complete 1,000. Avoid low-quality filler, duplicates, invented laws, unsourced market figures or claiming 1,000 answers are live. Existing headline `1,000 Questions. Honest Answers.` is a project tagline, not current factual answer count. Page description already says the resource grows.
+- Final website QA remains outstanding: header mobile/desktop, Google Translate, canonicals, www redirect, routing delivery, calculators, appointment, Ask Tino, real phone click-to-call and property links. Email routing to Italo needs destination verification first. Do not touch oceanfl.com or its telephone systems.
