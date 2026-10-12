@@ -53,6 +53,67 @@ jobs:
                       txt=child.get_text(' ',strip=True) if getattr(child,'name',None) else str(child).strip()
                       if txt:answer_parts.append(txt)
                   answer='\\n\\n'.join(answer_parts).strip()
+                  # Remove print/navigation artifacts and update brand mentions
+                  # without changing the factual substance of an answer.
+                  answer=re.sub(r'(?:\\n|\n){2,}[^\\n\n]{2,70}\\s*→\\s*
+                  group['items'].append({'q':question,'a':answer})
+              idx+=expected
+          if len(details)!=idx:sys.exit('Unexpected question count')
+          counts=[len(x['items']) for x in topics]
+          print('Extracted topics:',len(topics),'entries:',sum(counts),'topic counts:',counts,flush=True)
+          if len(topics)!=19 or sum(counts)!=1010 or not all(x['a'] for g in topics for x in g['items']):
+              pathlib.Path('oceanfl-import-debug.txt').write_text('HTML size: '+str(len(response.content))+'; details: '+str(len(details))+'; counts: '+str(counts)+'; topic names: '+repr([x['name'] for x in topics]),encoding='utf-8')
+              sys.exit('Validation did not pass; existing website untouched.')
+          path=pathlib.Path('assets/oceanfl-qa-1010.json')
+          path.write_text(json.dumps({'source':url,'topics':topics},ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+          print('Validated data file:',path,'bytes:',path.stat().st_size,flush=True)
+          # Publish the validated OceanFL question bank inside Florida Costiera's existing
+          # interactive Q&A page without changing its header, footer, search or Ask Tino.
+          page=pathlib.Path('questions.html')
+          markup=page.read_text(encoding='utf-8')
+          begin=markup.find('const data=[')
+          end=markup.find('];const catDict=',begin)
+          if begin<0 or end<0:sys.exit('Florida Costiera Q&A data markers changed: refusing to overwrite.')
+          items=[]
+          for topic in topics:
+              for item in topic['items']:
+                  q=re.sub(r'^\s*\d{1,3}\s+', '',item['q']).strip()
+                  a=item['a'].strip()
+                  # Keep the original OceanFL 19 topic names as category labels.
+                  items.append([topic['name'],q,a])
+          if len(items)!=1010 or any(not x[1] or not x[2] for x in items):
+              pathlib.Path('oceanfl-import-debug.txt').write_text('Validation content error: count='+str(len(items))+' unique='+str(len({x[1].casefold() for x in items})),encoding='utf-8')
+              sys.exit('Incorrect or duplicate imported questions: refusing publication.')
+          encoded=json.dumps(items,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+          new_markup=markup[:begin]+'const data='+encoded+markup[end+1:]
+          # Existing UI enumerates dataset category values, so these 19 original
+          # categories appear automatically. Translation dictionary may add labels later.
+          page.write_text(new_markup,encoding='utf-8')
+          print('Updated questions.html:',len(items),'complete Q&A records',flush=True)
+          PY
+      - name: Commit verified data only
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/oceanfl-qa-1010.json questions.html
+          git diff --cached --quiet || (git commit -m "Publish verified 1010 OceanFL Q&A in Florida Costiera" && git push)
+
+# Trigger verified extraction for Florida Costiera, 2026-10-12.
+
+      - name: Save extraction diagnostics if validation fails
+        if: failure()
+        run: |
+          if [ -f oceanfl-import-debug.txt ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add oceanfl-import-debug.txt
+            git diff --cached --quiet || (git commit -m "Record OceanFL Q&A import validation diagnostics" && git push)
+          fi
+, '',answer).strip()
+                  answer=answer.replace("OceanFL's licensed Realtor","Florida Costiera's REALTOR®")
+                  answer=answer.replace("OceanFL team","Florida Costiera team")
+                  answer=answer.replace("OceanFL","Florida Costiera")
                   if not question or not answer:sys.exit('Empty question or answer')
                   group['items'].append({'q':question,'a':answer})
               idx+=expected
