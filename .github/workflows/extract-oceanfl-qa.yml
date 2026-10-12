@@ -45,17 +45,20 @@ jobs:
               for el in details[idx:idx+expected]:
                   summary=el.find('summary')
                   if not summary:sys.exit('Missing question summary')
-                  question=re.sub(r'^\\s*\\d{1,3}\\s+', '', summary.get_text(' ',strip=True))
+                  question=re.sub(r'^\s*\d{1,3}\s+', '',summary.get_text(' ',strip=True))
+                  question=question.rstrip(' +').strip()
                   answer_parts=[]
                   for child in el.children:
                       if child is summary:continue
                       if getattr(child,'name',None) in ('script','style'):continue
                       txt=child.get_text(' ',strip=True) if getattr(child,'name',None) else str(child).strip()
                       if txt:answer_parts.append(txt)
-                  answer='\\n\\n'.join(answer_parts).strip()
-                  # Remove print/navigation artifacts and update brand mentions
-                  # without changing the factual substance of an answer.
-                  answer=re.sub(r'(?:\\n|\n){2,}[^\\n\n]{2,70}\\s*→\\s*
+                  answer='\n\n'.join(answer_parts).strip()
+                  answer=re.sub(r'\n\n[^\n]{2,70}\s*→\s*$', '',answer).strip()
+                  answer=answer.replace("OceanFL's licensed Realtor","Florida Costiera's REALTOR®")
+                  answer=answer.replace("OceanFL team","Florida Costiera team")
+                  answer=answer.replace("OceanFL","Florida Costiera")
+                  if not question or not answer:sys.exit('Empty question or answer')
                   group['items'].append({'q':question,'a':answer})
               idx+=expected
           if len(details)!=idx:sys.exit('Unexpected question count')
