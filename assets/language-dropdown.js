@@ -616,7 +616,7 @@
   group.classList.add('fc-unified-header-tools');
   var style=document.createElement('style');style.id='fc-unified-header-tools-style';
   style.textContent=[
-   'html body header .fc-unified-header-tools{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:5px!important;min-width:0!important;padding:3px 7px!important;border:1px solid rgba(255,255,255,.36)!important;border-radius:11px!important;background:rgba(19,43,64,.57)!important;backdrop-filter:blur(7px) saturate(115%)!important;-webkit-backdrop-filter:blur(7px) saturate(115%)!important;box-shadow:0 3px 12px rgba(0,0,0,.13)!important}',
+   'html body header .fc-unified-header-tools{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:5px!important;min-width:0!important;padding:3px 7px!important;border:0!important;border-radius:11px!important;background:rgba(19,43,64,.43)!important;backdrop-filter:blur(5px) saturate(110%)!important;-webkit-backdrop-filter:blur(5px) saturate(110%)!important;box-shadow:0 7px 15px -10px rgba(0,0,0,.4)!important;text-shadow:0 1px 3px rgba(0,0,0,.33)!important}',
    'html body header .fc-unified-header-tools .sc-language-trigger,html body header .fc-unified-header-tools .fc-header-phone{background:transparent!important;color:white!important;border:0!important;box-shadow:none!important}',
    'html body header .fc-unified-header-tools .fc-header-phone{border-radius:6px!important;padding:5px 7px!important}',
    'html body header .fc-unified-header-tools .sc-language-trigger:hover,html body header .fc-unified-header-tools .fc-header-phone:hover{background:#365973!important}',
