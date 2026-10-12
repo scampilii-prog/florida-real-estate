@@ -375,3 +375,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Existing Buy quick nav and editor table refinement preserved. No new photograph assets, sitewide logo redesign, or global footer change. SEO source H1 and earlier semantic hierarchy fixes preserved.
 - Stage 1 is complete at source-review and targeted-change level only. Real browser-based cross-device screenshot comparisons, interactions, loading of remote photographs, footer/back-top behavior and published Cloudflare deployment are NOT independently verified. Do not claim live QA; carry browser acceptance tests to Stage 5.
 - Await user cue `Etapa 2` before changing navigation or content. OceanFL untouched.
+
+
+## ETAPA 2 — navigation and content pass, 12 October 2026
+- Approved plan: Stage 2 adds useful visible quick navigation without changing approved images, calculator logic or OceanFL.com (owned by Italo; never modify).
+- Added hero-adjacent, mobile-responsive, accessible pill navigation links to Sell, Sellers Guide, Home Valuation, Investment Center, Buyers Guide, Buyer Preparation, Financing/Pre-Approval, Buyer Property Search, Buyer Offers/Contracts, Inspections/Appraisals, Buyer Title/Financing, Buyer Closing Costs, Communities, Waterfront, and New Construction. Existing Buy quick nav from earlier phase retained. Highlights pertinent links, targets existing internal anchors and known public pages, includes Contact when relevant.
+- Sell navigation specifically links Seller's Guide, Home Valuation, pricing evidence, preparation, offer review, closing milestones, costs, contact. Anchor presence verified in GitHub source before inserting.
+- Did not indiscriminately insert another navigation row on 47/47 pages: individual community and legal pages retain existing link cards/footers; avoid clutter and disruption to approved layouts. No edits to OceanFL or Q&A 1010 dataset.
+- GitHub source updated and targeted items checked. Real user interaction, mobile rendering, JavaScript behavior and actual published availability still require Stage 5 live browser QA; do not call these browser-verified.
