@@ -1,1 +1,1 @@
-HTML size: 1970778; details: 1010; counts: [1010]; topic names: ['Boca Grande & Gasparilla Island']
+Validation duplicate error: count=1010 unique=1005
