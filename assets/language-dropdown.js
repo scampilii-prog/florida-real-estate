@@ -556,3 +556,28 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
 })();
+
+
+/* Florida Costiera business telephone — shared site contact, 2026-10-12.
+   Add contact information without changing the approved five-column footer. */
+(function(){
+ function install(){
+  if(document.getElementById('fc-business-phone-style'))return;
+  var style=document.createElement('style');
+  style.id='fc-business-phone-style';
+  style.textContent='html body .fc-business-phone{margin:12px 0 14px!important;font:650 13px/1.6 Manrope,Arial,sans-serif!important}html body .fc-business-phone a{color:#ead09b!important;text-decoration:underline!important;text-underline-offset:3px!important;font-weight:800!important;white-space:nowrap!important}html body .fc-business-phone a:hover{color:#fff!important}html body .fc-business-phone small{display:block;color:#c5d1db;font-size:11px}';
+  document.head.appendChild(style);
+  var f=document.querySelector('footer.sc-unified-footer,footer.sc-cc-footer');
+  if(!f)return;
+  var brand=f.querySelector('.sc-uf-brand')||(f.querySelector('.sc-cc-footer-grid')&&f.querySelector('.sc-cc-footer-grid > section:first-child'));
+  if(!brand||brand.querySelector('.fc-business-phone'))return;
+  var p=document.createElement('p');p.className='fc-business-phone notranslate';
+  p.setAttribute('translate','no');
+  var a=document.createElement('a');a.href='tel:+19412704877';a.textContent='(941) 270-4877';a.setAttribute('aria-label','Call Florida Costiera at 941 270 4877');
+  var hint=document.createElement('small');hint.textContent='Florida Costiera · Direct phone';
+  p.appendChild(hint);p.appendChild(a);
+  var logo=brand.querySelector('.sc-uf-logo, a:has(img)');
+  if(logo)brand.insertBefore(p,logo);else brand.appendChild(p);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
