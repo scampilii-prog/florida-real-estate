@@ -183,3 +183,15 @@ USER explicitly asked for everything saved and a new-chat starter. This section 
 - questions.html: added 10 factual, educational questions and answers with existing category names; parsed FAQ database now contains 129 unique questions. Public marketing tagline “1,000 Questions. Honest Answers.” remains aspirational; do not claim 1,000 indexed answers. Prior count was 119.
 - Verified the modified pages' inline JavaScript syntax, ignoring schema.org application/ld+json metadata (which is valid JSON not executable JS). Questions data JSON parses without error and entries are unique. Live translation, browser interaction and responsive rendering still require QA in Group 4.
 - Website visitor destinations/forms/calculators are separate Group 3; SEO, visuals and publication are Group 4. Never claim full multilingual content translation without testing it.
+
+
+## Grupo 3 — Enlaces, formularios y herramientas (2026-10-12)
+- Revisited all 47 production HTML pages and source-audited literal internal page href targets against actual repository filenames. No unresolved internal HTML-page destinations were found.
+- Source-audited local fragment links on all 47 pages; no missing same-page ID targets found.
+- Confirmed Ask Tino widget markup appears on most content pages, including Investment Center. It is absent from request-appointment, closing-costs, privacy and terms. Do not claim it is present everywhere.
+- Confirmed the main Contact lead form is mailto-based: it opens the visitor's mail app to review and send, not an automatic server-side submission. UI wording already states that. Other property-preference form is also mailto-based. Do not call email sent unless independently confirmed.
+- Confirmed the SimplyBook.me booking page embeds a widget and contains an external calendar fallback. Booking and real-time confirmation were not tested.
+- Confirmed Search Properties contains OneHome share links. Their live validity/login requirements and individual searches were NOT independently confirmed.
+- Confirmed six calculator disclosure labels appear in calculators.html, and the Investment Center calculator target #investment-calculator exists. Actual calculations, date logic and mobile interaction require live functional test.
+- Fixed obsolete visible 'Gulf Coast Estates' name in Investment Center title/eyebrow to FLORIDA COSTIERA; preserved #investment-calculator.
+- Status: **code-based Group 3 review completed, but live end-to-end functional verification NOT completed**. Explicit outstanding tests must carry to Group 4: live Cloudflare/browser tests for all OneHome shares, SimplyBook scheduling, Ask Tino backend responses, mailto workflows, six calculator numerical cases including date rules, all form submission behaviors, mobile menus and 4-language translations. Do not equate HTML structure or source checks with functional success.
