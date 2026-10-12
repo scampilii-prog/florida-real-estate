@@ -24,30 +24,39 @@ jobs:
           soup=BeautifulSoup(response.text,'html.parser')
           details=soup.select('details')
           print('HTML bytes:',len(response.content),'details:',len(details),flush=True)
-          topics=[]
-          for el in details:
-              summary=el.find('summary')
-              if not summary: continue
-              question=summary.get_text(' ',strip=True)
-              question=re.sub(r'^\s*\d{1,2}\s+', '',question)
-              answer_parts=[]
-              for child in el.children:
-                  if child is summary: continue
-                  if getattr(child,'name',None) in ('script','style'):continue
-                  if getattr(child,'name',None):
-                      txt=child.get_text(' ',strip=True)
-                  else:
-                      txt=str(child).strip()
-                  if txt:answer_parts.append(txt)
-              answer='\\n\\n'.join(answer_parts)
-              # All 1010 accordions share one outer section; determine category
-              # from the closest PRECEDING h2 (19 heading blocks, one per topic).
-              h=el.find_previous('h2')
-              title=h.get_text(' ',strip=True) if h else 'Uncategorized'
-              title=re.sub(r'^\s*\d{1,2}\s+', '',title).strip()
-              if question and answer:
-                  if not topics or topics[-1]['name']!=title:topics.append({'name':title,'items':[]})
-                  topics[-1]['items'].append({'q':question,'a':answer})
+          # The live OceanFL navigation publicly defines 19 categories and
+          # exact category sizes. This is more robust than relying on HTML heading nesting.
+          topic_names=[
+            'Boca Grande & Gasparilla Island','Buying & Buyer Representation',
+            'Cape Haze, Placida & Englewood','Financing, Taxes & Closing Costs',
+            'Insurance, Flood & Hurricane Code','Investing, Rentals & ROI',
+            'Coastal Lifestyle, Boating & Relocation','Market Trends, Timing & Value',
+            'Offers, Negotiation & Closing','New Construction & Builders',
+            'Property Management & Rentals','Punta Gorda Isles & Rotonda West',
+            'Relocation & Moving Logistics','Schools, Families & Moving With Kids',
+            'Second Homes, Snowbirds & Seasonal Living','Selling on the Gulf Coast',
+            'Title, HOA, Condos & Legal Basics','Venice, Nokomis, Casey Key & Wellen Park',
+            'Waterfront, Docks & Boating']
+          expected_counts=[55,55,55,55,55,55,55,50,50,55,50,55,50,55,50,55,50,55,50]
+          assert sum(expected_counts)==1010
+          topics=[{'name':name,'items':[]} for name in topic_names]
+          idx=0
+          for group,expected in zip(topics,expected_counts):
+              for el in details[idx:idx+expected]:
+                  summary=el.find('summary')
+                  if not summary:sys.exit('Missing question summary')
+                  question=re.sub(r'^\\s*\\d{1,3}\\s+', '', summary.get_text(' ',strip=True))
+                  answer_parts=[]
+                  for child in el.children:
+                      if child is summary:continue
+                      if getattr(child,'name',None) in ('script','style'):continue
+                      txt=child.get_text(' ',strip=True) if getattr(child,'name',None) else str(child).strip()
+                      if txt:answer_parts.append(txt)
+                  answer='\\n\\n'.join(answer_parts).strip()
+                  if not question or not answer:sys.exit('Empty question or answer')
+                  group['items'].append({'q':question,'a':answer})
+              idx+=expected
+          if len(details)!=idx:sys.exit('Unexpected question count')
           counts=[len(x['items']) for x in topics]
           print('Extracted topics:',len(topics),'entries:',sum(counts),'topic counts:',counts,flush=True)
           if len(topics)!=19 or sum(counts)!=1010 or not all(x['a'] for g in topics for x in g['items']):
