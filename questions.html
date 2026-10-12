@@ -566,7 +566,7 @@ e.preventDefault();
 if(!form.reportValidity())return;
 var d=new FormData(form), area=d.get('coastArea')||'Not specified';
 var body=['Area: '+area,'Interest: '+d.get('intent'),'Name: '+d.get('name'),'Email: '+d.get('email'),'Phone: '+(d.get('phone')||'Not provided'),'','What I am looking for:',''+(d.get('message')||'Please contact me to discuss my options.')].join('\n');
-window.location.href='mailto:scampilii@gmail.com?subject='+encodeURIComponent('Gulf Coast real estate inquiry — '+area)+'&body='+encodeURIComponent(body);
+window.location.href='mailto:sabatino@floridacostiera.com?subject='+encodeURIComponent('Gulf Coast real estate inquiry — '+area)+'&body='+encodeURIComponent(body);
 });
 })();
 </script>
