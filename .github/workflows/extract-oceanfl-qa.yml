@@ -38,7 +38,7 @@ jobs:
             'Title, HOA, Condos & Legal Basics','Venice, Nokomis, Casey Key & Wellen Park',
             'Waterfront, Docks & Boating']
           expected_counts=[55,55,55,55,55,55,55,50,50,55,50,55,50,55,50,55,50,55,50]
-          assert sum(expected_counts)==1010
+          assert sum(expected_counts)==1010, sum(expected_counts)
           topics=[{'name':name,'items':[]} for name in topic_names]
           idx=0
           for group,expected in zip(topics,expected_counts):
@@ -80,6 +80,7 @@ jobs:
                   # Keep the original OceanFL 19 topic names as category labels.
                   items.append([topic['name'],q,a])
           if len(items)!=1010 or len({x[1].casefold() for x in items})!=1010:
+              pathlib.Path('oceanfl-import-debug.txt').write_text('Validation duplicate error: count='+str(len(items))+' unique='+str(len({x[1].casefold() for x in items})),encoding='utf-8')
               sys.exit('Incorrect or duplicate imported questions: refusing publication.')
           encoded=json.dumps(items,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
           new_markup=markup[:begin]+'const data='+encoded+markup[end+1:]
