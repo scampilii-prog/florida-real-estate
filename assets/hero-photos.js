@@ -42,7 +42,6 @@
  }
  var style=document.createElement('style');style.textContent=
  '.sc-standard-photo,.sc-contact-photo{position:relative!important;isolation:isolate;overflow:hidden!important;min-height:430px!important;background-image:linear-gradient(90deg,rgba(10,35,54,.80) 0%,rgba(10,35,54,.35) 63%,rgba(10,35,54,.15) 100%),var(--sc-hero-photo)!important;background-size:cover!important;background-position:center!important;color:#fff!important;padding:clamp(105px,10vw,150px) clamp(24px,5vw,80px) clamp(54px,7vw,88px)!important;text-align:left!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important}'+
- /* Compact photo heroes with static SEO headings: preserve the image, avoid oversized empty banners. */'+
  'html body section.hero.sc-standard-photo:has(> h1),html body section.hero.sc-standard-photo:has(> .hero-content h1){min-height:270px!important;padding:64px clamp(22px,6vw,90px) 48px!important}'+
  '@media(max-width:620px){html body section.hero.sc-standard-photo:has(> h1),html body section.hero.sc-standard-photo:has(> .hero-content h1){min-height:220px!important;padding:45px 22px 38px!important}}'+
  '.sc-standard-photo::before,.sc-contact-photo::before{content:none!important;display:none!important}'+
