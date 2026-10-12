@@ -703,3 +703,14 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restoreSiteMapPhone,{once:true});else restoreSiteMapPhone();
 })();
+
+/* FloridaCostiera: slightly larger subtitle, restrained across breakpoints. */
+(function(){
+ function apply(){
+  if(document.getElementById('fc-brand-subtitle-readable'))return;
+  var s=document.createElement('style');s.id='fc-brand-subtitle-readable';
+  s.textContent='html body header.fc-ready .fc-area{font-size:clamp(10px,.9vw,12px)!important;font-weight:600!important;letter-spacing:.055em!important;line-height:1.35!important}@media(max-width:860px){html body header.fc-ready .fc-area{font-size:clamp(8px,1.12vw,10px)!important;letter-spacing:.025em!important}}@media(max-width:620px){html body header.fc-ready .fc-area{font-size:clamp(7px,1.8vw,8px)!important;letter-spacing:0!important;line-height:1.25!important}}';
+  document.head.appendChild(s);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
