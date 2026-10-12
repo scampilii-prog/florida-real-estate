@@ -349,3 +349,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - User asked to place section links directly below Buy photo so visitors discover resources and jump to 'Track Your Purchase from Contract to Closing'. Commit `23089e0e18159da6af50a8331dbeba069185d77b` adds elegant ivory quick-navigation row beneath Buy hero; pill links to Buyers Guide, Search Properties, Homes & Condos, Financing & Pre-Approval, Buyer Closing Costs, a highlighted in-page `#contract-deadline-planner` link, and Ask Tino button calling the existing `toggleTino()`.
 - The target anchor and Ask Tino function are present in buy.html. Responsive wrap, clear focus indication and sticky-header scroll offset included. No timeline calculations or photos changed.
 - Re-fetched GitHub source confirms nav, six links and Ask Tino button. Live browser rendering and actual clicks still require external QA; do not claim tested deployment.
+
+
+## Nuevo Website 10 — Buy link refinement and final source checkpoint (12 Oct 2026)
+- Corrected a misleading Buy quick navigation item: previously `Homes & Condos` linked only to homes. Commit `36dd2285d4aca89605065be38e3df26783948a9e` replaces it with distinct `Homes for Sale` and `Condos for Sale` links to their respective existing pages. Buy quick navigation now has seven anchors plus the Ask Tino button; prominent contract timeline jump targets existing `#contract-deadline-planner`.
+- Re-fetched buy.html and confirmed quick nav targets, CSS and Ask Tino invocation remain present. No photo, calculation, timeline script or shared global components changed.
+- Final acceptance remains limited by unavailable live-browser testing and absent authenticated Cloudflare controls. Must test actual layout, mobile languages, appointment, email forwarding and www redirect before declaring website fully complete. Do not call untested behavior verified.
