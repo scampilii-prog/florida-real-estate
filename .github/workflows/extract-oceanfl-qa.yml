@@ -29,7 +29,7 @@ jobs:
               summary=el.find('summary')
               if not summary: continue
               question=summary.get_text(' ',strip=True)
-              question=re.sub(r'^\\s*\\d{1,2}\\s+', '',question)
+              question=re.sub(r'^\s*\d{1,2}\s+', '',question)
               answer_parts=[]
               for child in el.children:
                   if child is summary: continue
@@ -48,7 +48,7 @@ jobs:
               if not title:
                   h=el.find_previous(['h2','h3'])
                   title=h.get_text(' ',strip=True) if h else 'Uncategorized'
-              title=re.sub(r'^\\s*\\d{1,2}\\s+', '',title).strip()
+              title=re.sub(r'^\s*\d{1,2}\s+', '',title).strip()
               if question and answer:
                   if not topics or topics[-1]['name']!=title:topics.append({'name':title,'items':[]})
                   topics[-1]['items'].append({'q':question,'a':answer})
@@ -70,7 +70,7 @@ jobs:
           items=[]
           for topic in topics:
               for item in topic['items']:
-                  q=re.sub(r'^\\s*\\d{1,3}\\s+', '',item['q']).strip()
+                  q=re.sub(r'^\s*\d{1,3}\s+', '',item['q']).strip()
                   a=item['a'].strip()
                   # Keep the original OceanFL 19 topic names as category labels.
                   items.append([topic['name'],q,a])
