@@ -995,8 +995,8 @@ function install(){
   ].join('');document.head.appendChild(style);
  }
  // The Site Map previously had a sticky header and 94px body offset; keep its content offset only.
+ document.body.style.paddingTop='94px';
  if(sitemap){
-  document.body.style.paddingTop='94px';
   var b=next.querySelector('.fc-unified-menu'),panel=next.querySelector('#fc-sitemap-nav-popover');
   if(b&&panel){
    b.addEventListener('click',function(){panel.hidden=!panel.hidden;b.setAttribute('aria-expanded',String(!panel.hidden))});
