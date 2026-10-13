@@ -175,7 +175,21 @@
 
   function installFullScreenMenu(){
     // Questions retains its approved compact slide-out menu; do not replace it with the site-wide editorial megamenu.
-    if(/(?:^|\/)questions(?:\.html)?\/?$/.test(location.pathname))return;
+    if(/(?:^|\\/)questions(?:\\.html)?\\/?$/.test(location.pathname)){
+      var root=document.querySelector('.oc-shell');
+      var compact=root&&root.querySelector('.oc-menu');
+      var trigger=root&&root.querySelector('[data-oc-menu]');
+      var closer=compact&&compact.querySelector('[data-oc-close]');
+      if(compact&&trigger&&!trigger.dataset.fcCompactBound){
+        trigger.dataset.fcCompactBound='1';
+        function closeCompact(restoreFocus){compact.hidden=true;trigger.setAttribute('aria-expanded','false');document.body.style.overflow='';if(restoreFocus)trigger.focus();}
+        trigger.addEventListener('click',function(event){event.preventDefault();event.stopImmediatePropagation();var open=compact.hidden;compact.hidden=!open;trigger.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':'';},true);
+        if(closer)closer.addEventListener('click',function(event){event.preventDefault();closeCompact(true);});
+        document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!compact.hidden)closeCompact(true);});
+        compact.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeCompact(false);});});
+      }
+      return;
+    }
     if(document.querySelector('header.site-header[data-fc-shared-special]'))return;
     var menu=document.querySelector('.oc-shell .oc-menu');
     if(!menu){
