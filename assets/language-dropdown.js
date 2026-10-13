@@ -973,9 +973,9 @@ function install(){
   var style=document.createElement('style');style.id=styleId;
   style.textContent=[
   'html body header.fc-unified-home-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9999!important;width:100%!important;height:94px!important;min-height:94px!important;max-height:94px!important;box-sizing:border-box!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;background:linear-gradient(90deg,rgba(12,34,51,.99),rgba(12,34,51,.90) 32%,rgba(12,34,51,.55) 60%,rgba(12,34,51,.06)),url("/assets/florida-costiera-header-sunset.webp") center/100% 100% no-repeat!important;border-bottom:1px solid #ffffff26!important}',
-  'html body header.fc-unified-home-header .fc-unified-inner{width:100%!important;max-width:1450px!important;margin:0 auto!important;box-sizing:border-box!important;padding:0 10px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important}',
+  'html body header.fc-unified-home-header .fc-unified-inner{width:100%!important;max-width:1450px!important;margin:0 auto!important;box-sizing:border-box!important;padding:0 30px!important 0 30px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important}',
   'html body header.fc-unified-home-header .fc-unified-brand{display:flex!important;align-items:center!important;gap:9px!important;min-width:0!important;text-decoration:none!important;color:#fff!important;flex:1 1 auto!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand img{width:40px!important;height:40px!important;flex:0 0 40px!important}',
+  'html body header.fc-unified-home-header .fc-unified-brand img{width:40px!important;height:40px!important;flex:0 0 40px!important;padding-right:9px!important;border-right:1px solid rgba(255,255,255,.28)!important;box-sizing:content-box!important}',
   'html body header.fc-unified-home-header .fc-unified-brand strong{display:block!important;font:400 23px/1.15 Georgia,serif!important;color:#fff!important;white-space:nowrap!important}',
   'html body header.fc-unified-home-header .fc-unified-brand em{font-style:normal!important;font-weight:700!important;color:#e5c895!important}',
   'html body header.fc-unified-home-header .fc-unified-brand small{display:block!important;font:600 9px/1.4 Manrope,Arial,sans-serif!important;letter-spacing:.04em!important;color:#fff!important;white-space:nowrap!important}',
@@ -1008,16 +1008,3 @@ function install(){
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
 
-/* Pixel-alignment with approved Home header: use Home's brand separator and its full-width tool rail. */
-(function(){function apply(){var header=document.querySelector('header.fc-unified-home-header');if(!header)return;var id='fc-unified-match-actual-home-20261013';if(document.getElementById(id))return;var st=document.createElement('style');st.id=id;st.textContent=[
-'html body header.fc-unified-home-header .fc-unified-inner{padding:0 32px 0 10px!important;max-width:none!important;gap:8px!important}',
-'html body header.fc-unified-home-header .fc-unified-brand{gap:9px!important;overflow:hidden!important}',
-'html body header.fc-unified-home-header .fc-unified-brand img{box-sizing:content-box!important;width:39px!important;height:39px!important;flex:0 0 39px!important;object-fit:contain!important;padding-right:9px!important;border-right:1px solid rgba(255,255,255,.28)!important}',
-'html body header.fc-unified-home-header .fc-unified-brand strong{font:400 23px/1.18 Georgia,serif!important;letter-spacing:-.025em!important}',
-'html body header.fc-unified-home-header .fc-unified-brand small{font:600 9px/1.45 Manrope,Arial,sans-serif!important;letter-spacing:.025em!important}',
-'html body header.fc-unified-home-header .fc-unified-actions{width:332px!important;min-width:332px!important;flex:0 0 332px!important;justify-content:space-between!important;gap:0!important}',
-'html body header.fc-unified-home-header .fc-unified-language{min-width:105px!important;max-width:105px!important;flex:0 0 105px!important}',
-'html body header.fc-unified-home-header .fc-unified-actions .sc-language-widget{min-width:105px!important;max-width:105px!important;flex:0 0 105px!important}',
-'html body header.fc-unified-home-header .fc-unified-phone{gap:6px!important}',
-'@media(max-width:760px){html body header.fc-unified-home-header .fc-unified-inner{padding-right:10px!important}html body header.fc-unified-home-header .fc-unified-actions{width:auto!important;min-width:0!important;flex:0 0 auto!important;gap:7px!important}html body header.fc-unified-home-header .fc-unified-language,html body header.fc-unified-home-header .fc-unified-actions .sc-language-widget{min-width:75px!important;max-width:90px!important;flex:0 0 auto!important}html body header.fc-unified-home-header .fc-unified-brand img{width:32px!important;height:32px!important;flex-basis:32px!important}}'
-].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
