@@ -175,7 +175,7 @@
 
   function installFullScreenMenu(){
     // Questions retains its approved compact slide-out menu; do not replace it with the site-wide editorial megamenu.
-    if(/(?:^|\\/)questions(?:\\.html)?\\/?$/.test(location.pathname)){
+    if(['/questions','/questions.html','/questions/'].includes(location.pathname)){
       var root=document.querySelector('.oc-shell');
       var compact=root&&root.querySelector('.oc-menu');
       var trigger=root&&root.querySelector('[data-oc-menu]');
