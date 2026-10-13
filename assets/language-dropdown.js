@@ -820,3 +820,24 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  '@media(max-width:720px){html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-widget,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-trigger,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-options{width:108px!important;min-width:108px!important;max-width:108px!important}html body header.sc-cc-header .sc-cc-call span,html body header.sc-sitemap-header .fc-sitemap-phone b{display:none!important}html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header a.fc-sitemap-phone{width:36px!important;min-width:36px!important;padding:5px!important}}'
  ].join('');document.head.appendChild(style);
 }if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
+/* Restore approved unboxed Home header controls, Oct 13 2026 */
+(function(){
+function apply(){
+ if(document.getElementById('fc-home-control-reference-final'))return;
+ var css=document.createElement('style');css.id='fc-home-control-reference-final';
+ css.textContent=[
+ 'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){background:transparent!important;background-color:transparent!important;border:0!important;border-color:transparent!important;box-shadow:none!important;border-radius:0!important;outline-offset:3px!important;color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.65)!important;font-family:Manrope,Arial,sans-serif!important;font-weight:800!important}',
+ 'html body header .sc-language-widget{background:transparent!important;border:0!important;box-shadow:none!important}',
+ 'html body header .sc-language-trigger{display:inline-flex!important;justify-content:space-between!important;align-items:center!important;height:35px!important;min-height:35px!important;padding:0 3px!important;font-size:12px!important}',
+ 'html body header .sc-language-label{font-weight:800!important;font-size:12px!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
+ 'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){display:inline-flex!important;align-items:center!important;gap:6px!important;justify-content:center!important;font-size:12px!important;font-weight:800!important;height:35px!important;min-height:35px!important;padding:0 3px!important}',
+ 'html body header .fc-header-phone-label,html body header .sc-cc-call span,html body header .fc-sitemap-phone b{font-weight:800!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
+ 'html body header .sc-language-options{border:1px solid #c4a06b!important;border-radius:7px!important;background:#19384f!important}',
+ 'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone):hover{background:rgba(10,30,46,.17)!important}',
+ '@media(max-width:720px){html body header .sc-cc-call span,html body header .fc-sitemap-phone b{display:none!important}}'
+ ].join('');
+ document.head.appendChild(css);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
