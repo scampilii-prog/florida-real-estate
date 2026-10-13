@@ -754,3 +754,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Verificada existencia de los destinos `calculators.html#buyer-costs` e `investment-center.html#investment-calculator`. Los formularios de contacto previamente documentados utilizan `mailto:` y requieren una aplicación de correo; no se representan como envíos automáticos a un servidor.
 - Se amplió `scripts/check-website14.mjs` para vigilar ambos destinos de calculadoras y la estructura de Ask Tino en seis páginas. Commit `ab88c3d`. Validación estática de condiciones comprobada por relectura de archivos; la ejecución mediante Node y las pruebas funcionales reales aún están pendientes.
 - No se modificaron fórmulas, interfaces, fotografías ni formularios. Pendiente revisión de cálculos reales, correo, conectividad de Ask Tino y verificación en Cloudflare y móviles.
+
+
+## Website 14 — SEO y accesibilidad, 13 Oct 2026
+- Auditado el código fuente de once páginas principales: Home, Buy, Sell, Communities, Contact, Site Map, Closing Costs, Calculators, Investment Center, New Construction y About. Cada una tiene un H1, título, descripción meta y canonical; las etiquetas img examinadas tienen atributo alt. Las cinco descripciones que inicialmente parecían faltar tienen orden de atributos `content` antes de `name`, por lo que NO estaban ausentes.
+- Mejoradas únicamente las descripciones SEO excesivamente genéricas en Buy, Sell y Communities con información específica sobre áreas y servicios. Commits: Buy `8f828fd`, Sell `bcccb39`, Communities `e0fe17b`. No se alteró HTML visual, encabezados, fotos ni herramientas.
+- Site Map contiene un enlace `href="#"` correspondiente a Back to Top; no se considera automáticamente roto. Faltan revisión integral de destinos y prueba funcional en navegador, accesibilidad de teclado/idiomas, validación SEO publicada e indexación real de Google.
