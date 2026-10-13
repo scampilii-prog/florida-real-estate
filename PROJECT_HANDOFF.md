@@ -590,3 +590,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - La página `request-appointment.html` contiene el script y configuración de widget SimplyBook y un enlace alternativo para abrir su calendario. No se ha comprobado que el widget cargue públicamente o admita reservas reales.
 - `assets/language-dropdown.js` contiene lógica de menú móvil y controles de traducción y navegación; su tamaño y múltiples overrides requieren prueba en navegador antes de tocar código aprobado. No se aplicaron cambios de apariencia sin una regresión demostrada.
 - Reintento de abrir `https://floridacostiera.com/contact.html` y `/communities.html` mediante herramienta web: inaccesibles a esta herramienta, no prueba de falla para visitantes. Mantener Etapa 2 **abierta** para pruebas de acciones reales y recepción de formularios, enlazadas a Etapa 3 para navegador, Cloudflare y móvil.
+
+
+## 13 Oct 2026 — Etapa 2: contacto y acceso público
+- Retomada la Etapa 2 desde el último commit. Inspeccionados los tres formularios de `contact.html` y el de `index.html`: ya incluyen avisos explícitos de que abren la aplicación de correo y no envían automáticamente. NO duplicar esos avisos ni anunciar envío automático. La evaluación de una integración de recepción directa queda pendiente de proveedor probado.
+- Detectado un enlace directo de contacto en `contact.html` que seguía dirigiendo a la dirección particular `scampilii@gmail.com`. Cambiado exclusivamente ese enlace visible **Email Sabatino** a `mailto:sabatino@floridacostiera.com`, conservando formularios, aspecto y demás contenido. Commit `a5871a9`. Relectura de GitHub confirma el nuevo destino: SÍ.
+- Reintento con consulta web a dominio principal, Contact y dominio de Cloudflare Pages: la herramienta devolvió DisabledError o fallo de accesibilidad. No equivale a sitio caído. Las pruebas de clics reales continúan pendientes para la Etapa 3.
+- SEO/objetivo de marketing: priorizar marca Florida Costiera, navegación útil, información original de comunidades y posicionamiento orgánico legítimo en Etapa 4; **no se puede garantizar la primera página de Google**.
