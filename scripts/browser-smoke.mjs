@@ -34,6 +34,8 @@ try {
     const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth,radius:getComputedStyle(x).borderTopLeftRadius}));
     assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card has white background');
     assert.notEqual(card.border,'0px','Inquiry card has fine border');
+    await page.locator('.oc-shell .oc-menu [data-oc-close]').click();
+    assert.equal(await page.locator('.oc-shell .oc-menu').first().isVisible(),false,'Questions compact menu closes');
     console.log(cfg.name+' Questions compact menu and white inquiry card OK');
     await page.locator('#qaCategories .qa-filter').first().hover();
     const hoverColors=await page.locator('#qaCategories .qa-filter').first().evaluate(x=>({
