@@ -868,3 +868,8 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - En Home se agregó cierre del menú lateral con tecla Escape, con retorno de foco al botón de menú y actualización de su estado accesible ya existente. Commit `30b1b07`. No se alteró el diseño ni las funciones existentes del botón.
 - GitHub workflow de comprobación estructural continúa sin resultado verificable por el conector disponible, que solo devuelve ejecuciones de pull request para búsquedas por commit; el repositorio se actualiza por push. No afirmar pruebas pasadas.
 - Pendiente prueba real de navegador/Cloudflare en escritorio y móvil, idiomas, Ask Tino y correo, además de ejecutar la comprobación integral.
+
+
+## Website 14 — GitHub Actions ahora confirmado (13 Oct 2026)
+- Se consultó el endpoint público autorizado `/actions/runs?per_page=5` y se confirmó ejecución `38451113344`, workflow `Florida Costiera structural QA`, rama `main`, commit `30b1b0751542a1bcaa7afd8602d63c051763d217`, evento `push`, `status=completed`, `conclusion=success`, terminado 2026-10-13 18:58:48 UTC. URL: https://github.com/scampilii-prog/florida-real-estate/actions/runs/38451113344.
+- Por tanto **sí existe una ejecución completa aprobada** del script estructural; las notas anteriores de estado no verificable quedan superadas por esta consulta. La ejecución no confirma despliegue Cloudflare ni pruebas visuales, móviles, entrega real de email o disponibilidad del Worker de Ask Tino.
