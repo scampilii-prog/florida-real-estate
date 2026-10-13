@@ -823,3 +823,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Revisión cruzada `seller-closing-costs.html` vs. `calculators.html` detectó inconsistencia: la página exclusiva del vendedor usaba `price*.007` para deed documentary stamp tax, mientras Calculators ya redondeaba a unidades completas de $100 mediante `Math.ceil(price/100)*.70`.
 - Corregido `seller-closing-costs.html` a `Math.ceil(price/100)*.70` (commit `ffd16df`); cálculos coinciden en ambas páginas. Pruebas matemáticas: $400,000 → $2,800.00; $400,050 → $2,800.70 (antes $2,800.35); $152,500 → $1,067.50. No se modificaron diseño ni otros costos.
 - Próximo: revisar diferencias restantes entre calculadoras, requisitos de validación de formularios y confirmar las operaciones en navegador publicado. Esta es revisión del código y aritmética aislada, no una prueba de UI o de los importes finales de cierre.
+
+
+## Website 14 — comparación de validación del vendedor, 13 Oct 2026
+- Se compararon `seller-closing-costs.html` y `calculators.html`: ambos usan impuesto documental redondeado, precio/hipoteca y comisiones pactadas. La calculadora específica limitaba internamente comisiones a 100%; la general mostraba campo con `max=100` pero no aplicaba el límite al cálculo al introducir valores fuera de rango mediante el teclado o código. Se corrigió `comm=sp*Math.min(100,n('sc'))/100` en `calculators.html` (commit `6bf83f7`), sin cambios de interfaz.
+- Formulario de Contact tiene tres formularios de consultas y panel Ask Tino; el formulario general y otros formularios utilizan `reportValidity()` y enlaces `mailto:`. Los controles tipo email tienen tipo correcto y required donde procede; no es comprobación real de entrega de mensajes.
+- Mantener pendiente pruebas en navegador: valores numéricos, validaciones, programas de correo, integración Ask Tino y dispositivos móviles. No se tocaron los diseños aprobados.
