@@ -734,3 +734,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se verificó directamente en archivos del repositorio que las cabeceras actuales de Site Map y Closing Costs contienen HTML idéntico y sus recursos comunes. Home no fue alterado.
 - Se añadió `scripts/check-website14.mjs`, revisión estructural ejecutable con Node para prevenir regresiones de encabezados, contenido de Buy/Sell y recursos compartidos. Commit `a36cfdba`. Se comprobaron sus invariantes principales contra el contenido GitHub; **NO se ha ejecutado el archivo Node en un runner ni una prueba de navegador**.
 - Pendiente crítico: comprobación visual real de ancho Buy/Sell, espaciados, idioma, menús y dispositivos. Evitar nuevos cambios de layout sin evidencia, dado el historial de regresiones.
+
+
+## Website 14 — cinta de localidades en Communities (13 Oct 2026)
+- A petición del usuario se reutilizó exactamente el mismo marcado de la cinta automática de localidades aprobado en Home en `communities.html`, debajo del hero y antes de `fc-section-navigation`.
+- Color navy/dorado, secuencia de 9 localidades y desplazamiento lineal continuo de 60 s; se incluye respeto a `prefers-reduced-motion`. Estilos específicos `fc-communities-coast-ribbon`; no se modificó Home ni su cinta/carrusel.
+- Commit `cf7d229a`. Relectura posterior GitHub verificó una única cinta en cada página, HTML de cinta idéntico y posición en Communities. Pendiente verificar movimiento y responsive en navegador/Cloudflare (inspección de código no es QA visual).
+- Próximas tareas por orden: revisión de navegación/enlaces e idiomas; comprobación de formularios, calculadoras y Ask Tino; SEO/accesibilidad; validación visual móvil de páginas principales y comunidades.
