@@ -791,3 +791,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se creó `.github/workflows/florida-costiera-qa.yml` (commit `dd54070`) para ejecutar `node scripts/check-website14.mjs` automáticamente al modificar HTML, el script o el workflow en la rama main, y admitir `workflow_dispatch`.
 - Incluye verificación estática de estructura de cabeceras, anclas, rutas HTML relativas y wiring de Ask Tino; no prueba cálculo numérico, integraciones externas, diseño visual ni comportamiento móvil.
 - **Pendiente:** confirmar que GitHub Actions tenga permisos/habilitación y que el primer workflow pase. La consulta de ejecuciones no estuvo disponible mediante la conexión, por lo que no se afirma resultado positivo. Si falla, corregir el script o enlaces rotos reales sin alterar diseño aprobado.
+
+
+## Website 14 — QA reforzado (13 Oct 2026)
+- Se consultó la ejecución asociada al commit creador de GitHub Actions, pero el conector solo permite recuperar carreras de tipo pull request; devolvió cero registros y NO prueba que la ejecución `push` haya funcionado o fallado.
+- Se releyeron ocho páginas representativas (Home, Buy, Sell, Communities, Contact, Site Map, Closing Costs y Calculators): ningún enlace `target=_blank` sin atributo `rel` y ningún botón vacío sin nombre accesible aparente en esa muestra. Se verificaron condiciones estructurales de cabeceras y cuerpo previamente usadas por el script.
+- El archivo `scripts/check-website14.mjs` ahora revisa también que enlaces abiertos en nueva pestaña tengan atributo `rel` (commit final `e3e117d`). No sustituye la comprobación HTTP de URLs externas ni prueba visual/funcional. No se alteró el sitio visible.
+- Sigue pendiente verificar el estado real del workflow en GitHub Actions y ejecutar las pruebas de navegación, idiomas, calculadoras, formularios y Ask Tino en navegador.
