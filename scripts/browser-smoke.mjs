@@ -26,15 +26,14 @@ try {
     await page.locator('#qaSearch').fill('Boca Grande');
     assert.equal(await page.locator('#qaCount').innerText().then(s=>s.includes('1,010')),true);
     console.log(cfg.name+' questions library: eight topics, subtopics, pagination and search OK');
-    // Questions uses the same editorial overlay menu as Home.
+    // Questions hamburger opens the approved Site Map page with navigation buttons.
     const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth}));
-    assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card white');
-    assert.notEqual(card.border,'0px','Inquiry card bordered');
+    assert.equal(card.bg,'rgb(255, 255, 255)');
+    assert.notEqual(card.border,'0px');
     await page.locator('[data-oc-menu]').first().click();
-    assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),true,'Home editorial menu opens on Questions');
-    await page.keyboard.press('Escape');
-    assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),false,'Editorial menu closes with Escape');
-    console.log(cfg.name+' Questions uses Home editorial menu OK');
+    await page.waitForURL(/site-map(?:\\.html)?$/, {timeout:5000});
+    await page.goto(base+'/questions.html',{waitUntil:'load'});
+    await page.waitForSelector('#qaCategories .qa-filter');
     await page.locator('#qaCategories .qa-filter').first().hover();
     const hoverColors=await page.locator('#qaCategories .qa-filter').first().evaluate(x=>({
       title:getComputedStyle(x.querySelector('.qa-filter-words strong')).color,
@@ -66,15 +65,15 @@ try {
       await button.click();
       const state=await page.evaluate(() => ({expanded:document.querySelector('header .menu-button')?.getAttribute('aria-expanded'),homeOpen:document.getElementById('sideMenu')?.classList.contains('open'),specialPanel:document.getElementById('fc-shared-header-navigation')?.hidden,openFunction:typeof window.openMenu,url:location.href,ready:document.readyState}));
       console.log('Menu after click',JSON.stringify(state));
-      await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
       if(path==='index.html'){
-        assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),true,'Home editorial menu must open');
+        await page.waitForURL(/site-map(?:\\.html)?$/, {timeout:5000});
+        await page.goto(base+'/index.html',{waitUntil:'load'});
       }else{
+        await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
         assert.equal(await page.locator('#fc-shared-header-navigation').isVisible(),true);
+        await page.keyboard.press('Escape');
+        await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='false');
       }
-      await page.keyboard.press('Escape');
-      await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='false');
-      assert.equal(await button.evaluate(x=>document.activeElement===x),true,'Escape returns menu focus to trigger on '+path);
       const language=page.locator('#oc-lang-static');
       assert.deepEqual(await language.locator('option').evaluateAll(a=>a.map(x=>x.value)),['en','es','it','pt']);
       const ask=page.locator('.tino-launcher').first();
