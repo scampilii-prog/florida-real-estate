@@ -889,3 +889,33 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();
+
+
+/* Florida Costiera — discreet footer brand mark, 2026-10-13 */
+(function(){
+  function installFooterMark(){
+    var footer=document.querySelector('footer.sc-unified-footer');
+    if(!footer || footer.querySelector('.fc-footer-coastal-mark'))return;
+    var legal=footer.querySelector('.sc-uf-legal');
+    if(!legal)return;
+    var link=document.createElement('a');
+    link.className='fc-footer-coastal-mark';
+    link.href='index.html';
+    link.setAttribute('aria-label','Florida Costiera — Back to Home');
+    link.title='Florida Costiera · Home';
+    var mark=document.createElement('img');
+    mark.src='/assets/florida-costiera-coastal-mark.svg';
+    mark.alt='Florida Costiera coastal emblem';
+    mark.width=44;mark.height=44;
+    mark.loading='lazy';
+    link.appendChild(mark);
+    legal.insertBefore(link,legal.firstChild);
+    if(!document.getElementById('fc-footer-mark-style')){
+      var style=document.createElement('style');
+      style.id='fc-footer-mark-style';
+      style.textContent='footer.sc-unified-footer .sc-uf-legal>.fc-footer-coastal-mark{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 18px;border-radius:15px;text-decoration:none;transition:transform .18s ease,filter .18s ease}footer.sc-unified-footer .sc-uf-legal>.fc-footer-coastal-mark img{display:block;width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 3px 8px rgba(0,0,0,.16))}footer.sc-unified-footer .sc-uf-legal>.fc-footer-coastal-mark:hover{transform:translateY(-2px);filter:brightness(1.1)}footer.sc-unified-footer .sc-uf-legal>.fc-footer-coastal-mark:focus-visible{outline:2px solid #e7b75c;outline-offset:4px}@media(prefers-reduced-motion:reduce){footer.sc-unified-footer .sc-uf-legal>.fc-footer-coastal-mark{transition:none}}';
+      document.head.appendChild(style);
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installFooterMark,{once:true});else installFooterMark();
+})();
