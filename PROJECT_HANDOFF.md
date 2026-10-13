@@ -700,3 +700,12 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se verificaron los controles de menú de las páginas especiales Privacy, Terms, Request Appointment, Site Map y Closing Costs. En las primeras tres y Closing Costs, el menú enlaza al Site Map. En Site Map se verificó el destino `nav.primary` existente con diseño responsivo de 4, 3 y 2 columnas.
 - Mejora real: el botón de menú del Site Map ahora enfoca la navegación para teclado/lectores de pantalla y respeta `prefers-reduced-motion`. Commit `3151681`.
 - Pendiente: prueba visual/publicada en iPhone, iPad y Cloudflare; ningún test de código demuestra por sí solo funcionamiento visual.
+
+
+## 2026-10-13 — Sitewide canonical header consolidation
+
+- Canonical runtime header source: `assets/language-dropdown.js`, block `Florida Costiera canonical header` (`fc-one-header`). It replaces the rendered header on pages using `site-header`, `oc-top`, `sc-sitemap-header`, `sc-cc-header`, `sc-booking-header`, or `sc-legal-header`. This is one rendered component, one layout/typography/background/menu implementation and one clickable language/search/phone/menu rail.
+- All 48 HTML pages named in `sitemap.xml` were checked for the cache-busted `language-dropdown.js?v=20261013-single-header-final` reference and a recognized source header; all passed source checks. Source HTML still contains legacy header markup as a bootstrap/mount target; old structural markup is replaced at runtime. Do not add page-specific header overrides.
+- Desktop target 94 px high, mobile 82 px, sunset image, Home-style logo/font, white right controls. Menu panel has global links; search links to search-properties; phone tel:+19412704877; existing language widget is transplanted.
+- Live browser/Cloudflare visual and interaction verification remains NOT DONE, including tablet/mobile, language dropdown, search, menu and source page layout. Avoid describing as visually verified until confirmed. Check `buy.html` body/hero column width separately: screenshot previously showed only half-width content and grey blank area; it is not necessarily a header problem.
+- Previous layering of header CSS caused regressions. Consolidate/remove unused legacy markup and CSS in a separate tested phase rather than reintroducing global style overrides.
