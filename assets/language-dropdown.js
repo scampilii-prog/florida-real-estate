@@ -843,3 +843,12 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 /* Selected language label only — 20261013 */
 (function(){function run(){if(document.getElementById('fc-active-language-weight-20261013'))return;var st=document.createElement('style');st.id='fc-active-language-weight-20261013';st.textContent='html body header .sc-language-trigger .sc-language-label{font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;white-space:nowrap!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
+
+/* Readable dropdown and bold telephone 20261013 */
+(function(){function run(){if(document.getElementById('fc-dropdown-phone-readable'))return;var st=document.createElement('style');st.id='fc-dropdown-phone-readable';st.textContent=[
+'html body header .sc-language-options .sc-language-option{font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;line-height:1.4!important;font-weight:600!important;padding:12px 10px!important}',
+'html body header .sc-language-options{box-sizing:border-box!important;min-width:190px!important;width:190px!important;max-width:190px!important}',
+'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone),html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:transparent!important;border-color:transparent!important;box-shadow:none!important}',
+'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){width:auto!important;max-width:none!important;padding:0 4px!important;gap:7px!important}',
+'@media(max-width:750px){html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){min-width:35px!important;width:35px!important}html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
+].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
