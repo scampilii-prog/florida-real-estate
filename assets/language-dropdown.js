@@ -841,3 +841,5 @@ function apply(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+/* Selected language label only — 20261013 */
+(function(){function run(){if(document.getElementById('fc-active-language-weight-20261013'))return;var st=document.createElement('style');st.id='fc-active-language-weight-20261013';st.textContent='html body header .sc-language-trigger .sc-language-label{font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;white-space:nowrap!important}html body header .sc-language-trigger{width:132px!important;min-width:132px!important;max-width:132px!important;justify-content:space-between!important}html body header .sc-language-widget{width:132px!important;min-width:132px!important;max-width:132px!important}html body header .sc-language-options{width:132px!important;min-width:132px!important;max-width:132px!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
