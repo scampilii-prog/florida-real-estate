@@ -185,6 +185,18 @@
       }
     }
     if(!menu||menu.dataset.scFullMenu)return;
+    // Existing oc-shell headers already contain a hidden menu. Attach their toggle
+    // before decorating it; retired inline controls may no longer be present.
+    var existingToggle=document.querySelector('.oc-shell [data-oc-menu]');
+    if(existingToggle&&!existingToggle.dataset.fcFullMenuBound){
+      existingToggle.dataset.fcFullMenuBound='1';
+      existingToggle.addEventListener('click',function(e){
+        e.preventDefault();e.stopImmediatePropagation();
+        menu.hidden=!menu.hidden;
+        existingToggle.setAttribute('aria-expanded',String(!menu.hidden));
+        document.body.style.overflow=menu.hidden?'':'hidden';
+      },true);
+    }
     menu.dataset.scFullMenu='1';
     var groups=[
       {title:'Find Your Property',intro:'Explore homes along the coast',items:[['Search All Properties','search-properties.html'],['Homes for Sale','florida-gulf-coast-homes-for-sale.html'],['Condos for Sale','florida-gulf-coast-condos-for-sale.html'],['Waterfront Living','waterfront.html'],['New Construction','new-construction.html']]},
