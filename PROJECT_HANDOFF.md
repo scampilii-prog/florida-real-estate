@@ -873,3 +873,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 ## Website 14 — GitHub Actions ahora confirmado (13 Oct 2026)
 - Se consultó el endpoint público autorizado `/actions/runs?per_page=5` y se confirmó ejecución `38451113344`, workflow `Florida Costiera structural QA`, rama `main`, commit `30b1b0751542a1bcaa7afd8602d63c051763d217`, evento `push`, `status=completed`, `conclusion=success`, terminado 2026-10-13 18:58:48 UTC. URL: https://github.com/scampilii-prog/florida-real-estate/actions/runs/38451113344.
 - Por tanto **sí existe una ejecución completa aprobada** del script estructural; las notas anteriores de estado no verificable quedan superadas por esta consulta. La ejecución no confirma despliegue Cloudflare ni pruebas visuales, móviles, entrega real de email o disponibilidad del Worker de Ask Tino.
+
+
+## Website 14 — navegador automatizado (13 Oct 2026)
+- Se creó `scripts/browser-smoke.mjs` commit `06ca916` con pruebas Chromium sobre servidor HTTP local, en tamaño desktop (1366x768) y móvil (390x844), para Home, Site Map y Closing Costs: abrir/cerrar menú con Escape, retorno de foco, opciones EN/ES/IT/PT y apertura/cierre de Ask Tino.
+- Se creó workflow `.github/workflows/florida-costiera-browser-qa.yml` commit `ee7196c`, con Node 22, Playwright y Chromium en GitHub Actions. Ejecución inicial: https://github.com/scampilii-prog/florida-real-estate/actions/runs/38451778989; **in_progress al último chequeo, no afirmar éxito hasta comprobar conclusión**.
+- La prueba utiliza los archivos GitHub servidos localmente en el runner, no acredita que Cloudflare haya desplegado o que el Worker/Google Translate/servidor de correo respondan. En caso de fallo, leer jobs/logs antes de modificar código de producción.
