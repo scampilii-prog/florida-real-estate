@@ -40,7 +40,7 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
 // Every key page must retain four named languages and translation wiring.
 for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',contact],['Calculators',calculators],['Site Map',sitemap],['Closing Costs',closing]]){
  for(const [code,label] of [['en','English'],['es','Español'],['it','Italiano'],['pt','Português']]){
-  assert(new RegExp('<option\\\\b[^>]*value="'+code+'"[^>]*>'+label+'</option>').test(page),name+' missing language '+label);
+  assert(new RegExp('<option\\b[^>]*value="'+code+'"[^>]*>'+label+'</option>').test(page),name+' missing language '+label);
  }
  assert(page.includes('googleTranslateElementInit') && page.includes('translate.google.com/translate_a/element.js'),name+' missing translation wiring');
  assert(page.includes('name="viewport"'),name+' missing responsive viewport');
