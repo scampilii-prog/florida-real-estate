@@ -855,3 +855,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Intento de abrir sitio publicado desde herramienta web no accesible: no afirmar QA móvil/visual completada.
 - Auditoría de encabezados principales detectó que el botón hamburger en Home tenía `aria-label` pero no informaba `aria-expanded` ni su panel `aria-controls`; se agregaron estos atributos y actualización de `aria-expanded` en `openMenu()`/`closeMenu()`, sin alterar estilos o flujo. Commit `5e2b4ed`.
 - Siguen pendientes revisión visual y pruebas reales de navegación en iPhone/iPad/desktop, traducción, correos y Ask Tino. No interpretar pruebas de código como confirmación de despliegue Cloudflare.
+
+
+## Website 14 — navegación teclado en Site Map / Closing Costs (13 Oct 2026)
+- Revisado `assets/fc-canonical-header-menu.js`, el manejador compartido de menú para los dos encabezados especiales. Ya disponía de `aria-expanded`, `aria-controls`, cierre al hacer clic fuera y cierre con Escape.
+- Mejora de accesibilidad: al cerrar el menú con tecla Escape, devuelve foco al botón que lo abrió. Commit `fa93a05`; únicamente lógica JavaScript, sin cambios visuales a las páginas o header.
+- Prueba funcional en navegador, dispositivos móviles y verificación del despliegue Cloudflare siguen pendientes; revisión de fuente no equivale a prueba real.
