@@ -933,7 +933,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Site Map: align final DOM-generated header controls with Home (no fixed small pill). */
 (function(){function apply(){var id='fc-sitemap-home-parity-20261013';if(document.getElementById(id))return;var css=document.createElement('style');css.id=id;css.textContent=[
-'html body header.sc-sitemap-header{height:74px!important;min-height:74px!important;padding-left:clamp(16px,2vw,32px)!important;padding-right:clamp(16px,2vw,32px)!important}',
+'html body header.sc-sitemap-header{height:94px!important;min-height:94px!important;max-height:94px!important;padding-left:clamp(16px,2vw,32px)!important;padding-right:clamp(16px,2vw,32px)!important}',
 'html body header.sc-sitemap-header .sc-sitemap-tools{margin-left:auto!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-end!important;gap:17px!important;width:auto!important;min-width:0!important}',
 'html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-widget{width:auto!important;min-width:96px!important;max-width:none!important;flex:0 0 auto!important}',
 'html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-trigger{width:auto!important;min-width:96px!important;max-width:none!important;height:40px!important;padding:0 4px!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
