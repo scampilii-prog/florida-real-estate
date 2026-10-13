@@ -741,3 +741,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Color navy/dorado, secuencia de 9 localidades y desplazamiento lineal continuo de 60 s; se incluye respeto a `prefers-reduced-motion`. Estilos específicos `fc-communities-coast-ribbon`; no se modificó Home ni su cinta/carrusel.
 - Commit `cf7d229a`. Relectura posterior GitHub verificó una única cinta en cada página, HTML de cinta idéntico y posición en Communities. Pendiente verificar movimiento y responsive en navegador/Cloudflare (inspección de código no es QA visual).
 - Próximas tareas por orden: revisión de navegación/enlaces e idiomas; comprobación de formularios, calculadoras y Ask Tino; SEO/accesibilidad; validación visual móvil de páginas principales y comunidades.
+
+
+## Website 14 — revisión de idioma y navegación, 13 Oct 2026
+- Auditoría del código fuente de Home, Communities, Buy, Sell, Contact, Site Map y Closing Costs: las siete páginas ofrecen English, Español, Italiano y Português y cargan el script de identidad/selector compartido.
+- Error comprobado: Closing Costs mostraba selector EN/ES/IT/PT pero no incluía Google Translate ni controlador de cambio, a diferencia de Site Map. Se conectó el selector a Google Translate conservando preferencia local y cookie de idioma, sin cambiar encabezado ni calculadoras. Commit `0131d98`.
+- Verificación estática: Closing Costs conserva encabezado compartido, enlace a las dos calculadoras y nuevo inicializador de idioma. Traducción real y menús de todas las páginas requieren prueba en navegador (servicio externo y despliegue Cloudflare no verificados).
