@@ -1009,24 +1009,3 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Florida Costiera global header design contract — applies consistently to all page families.
-   Home defines the approved look; page-specific menus and search retain their native handlers. */
-(function(){
-function apply(){
- if(document.getElementById('fc-global-header-contract-20261013'))return;
- var style=document.createElement('style');style.id='fc-global-header-contract-20261013';
- style.textContent=[
- 'html body header:is(.site-header,.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header){box-sizing:border-box!important;height:94px!important;min-height:94px!important;max-height:94px!important;background-color:#102b43!important;background-image:linear-gradient(90deg,rgba(12,34,51,.99) 0%,rgba(12,34,51,.92) 32%,rgba(12,34,51,.56) 60%,rgba(12,34,51,.06) 100%),url("/assets/florida-costiera-header-sunset.webp")!important;background-position:center!important;background-size:100% 100%!important;background-repeat:no-repeat!important;border-bottom:1px solid rgba(255,255,255,.15)!important}',
- 'html body header:is(.site-header,.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header) :is(.header-inner,.fc-unified-inner){box-sizing:border-box!important;width:100%!important;max-width:1450px!important;margin:0 auto!important}',
- 'html body header:is(.oc-top,.sc-legal-header,.sc-booking-header){padding-left:max(10px,calc((100vw - 1450px)/2 + 10px))!important;padding-right:max(10px,calc((100vw - 1450px)/2 + 10px))!important;align-items:center!important}',
- 'html body header.fc-unified-home-header .fc-unified-inner{padding-left:10px!important;padding-right:10px!important}',
- 'html body header:is(.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header) :is(.oc-actions,.fc-unified-actions){align-items:center!important;gap:17px!important}',
- 'html body header:is(.site-header,.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header) :is(.sc-language-trigger,.sc-language-label,.fc-unified-phone,.fc-header-phone,.sc-cc-call){font-family:Manrope,Arial,sans-serif!important;font-weight:800!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
- 'html body header:is(.site-header,.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header) :is(.sc-language-trigger,.fc-unified-phone,.fc-header-phone,.sc-cc-call){background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}',
- 'html body header:is(.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header) :is(.oc-brand,.fc-unified-brand,.fc-special-wordmark) strong{font-family:Georgia,serif!important;font-weight:400!important}',
- '@media(max-width:800px){html body header:is(.site-header,.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header){height:82px!important;min-height:82px!important;max-height:82px!important}html body header:is(.oc-top,.fc-unified-home-header,.sc-legal-header,.sc-booking-header){padding-left:10px!important;padding-right:10px!important}}'
- ].join('');
- document.head.appendChild(style);
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
-})();
