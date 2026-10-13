@@ -852,3 +852,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){width:auto!important;max-width:none!important;padding:0 4px!important;gap:7px!important}',
 '@media(max-width:750px){html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){min-width:35px!important;width:35px!important}html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
 ].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
+
+/* Compact language option spacing 20261013 */
+(function(){function apply(){if(document.getElementById('fc-compact-language-options'))return;var el=document.createElement('style');el.id='fc-compact-language-options';el.textContent='html body .sc-language-options .sc-language-option{padding-top:7px!important;padding-bottom:7px!important;line-height:1.25!important;margin-top:0!important;margin-bottom:0!important}html body .sc-language-options{padding-top:4px!important;padding-bottom:4px!important;row-gap:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
