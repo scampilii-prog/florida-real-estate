@@ -916,3 +916,12 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Por screenshots del sitio publicado, se solicitó elevar elegantemente el hover, mantener textos totalmente legibles, quitar CTA amarillo redundante Ask Tino en la franja intermedia (ya hay botón flotante), y cautela con preguntas inciertas.
 - `questions.html` commit `8d6608b`: tarjetas de temas y preguntas con elevación de 3px, borde dorado y sombra suave; texto y colores de contraste protegidos, soporte `focus-visible` y `prefers-reduced-motion`. Eliminado enlace amarillo CTA que duplicaba Ask Tino; franja ahora solo título y guía para usar asistente flotante y contactar Sabatino si pregunta específica/incierta. No se modificó Worker backend ni se prometió cambio de modelo/guardrails.
 - Verificado GitHub Actions structural run `38457048745` success y browser QA run `38457048738` success. Continúa pendiente validación visual física y de servicios publicados.
+
+
+## Website 15 — 13 Oct 2026 — Questions Group 1 follow-up
+- New current-turn inspection of main found the 1,010 Q&A library with eight main areas and 19 subtopics already present. Prior commits 8d6608b and 45a285e had already completed the card hover contrast/elevation and removed the duplicate yellow Ask Tino CTA; do not reimplement those changes.
+- Commit 0a8a361 restored a centered white, gold-outline, rounded card around the existing #coast-inquiry form using scoped CSS in questions.html; fields, action and mailto unchanged.
+- Commit e1847fb adjusted assets/language-dropdown.js so installFullScreenMenu skips the Questions pathname, retaining that page's original compact slide-out navigation instead of the fullscreen "Discover your Florida" editorial menu. Other pages' editorial menus remain untouched.
+- Commit 6be0270 added browser-smoke assertions for Questions compact menu plus white inquiry container (desktop and 390px mobile). Check a *new* GitHub Actions run and its logs before declaring this new test passed. Earlier passing runs predate these edits.
+- Worker URL ask-tino-ai.scampilii.workers.dev remains external. No authenticated access to Cloudflare Worker source/configuration has been established through GitHub. Do not claim backend accuracy safeguards changed. Current explanatory Questions CTA advises escalation to Sabatino where details are uncertain; this front-end prose does not itself enforce reliable AI answers.
+- Continue verification of the new Actions run, public Cloudflare deploy and actual iPhone/Safari appearance. Do not edit OceanFL.
