@@ -26,6 +26,16 @@ try {
     await page.locator('#qaSearch').fill('Boca Grande');
     assert.equal(await page.locator('#qaCount').innerText().then(s=>s.includes('1,010')),true);
     console.log(cfg.name+' questions library: eight topics, subtopics, pagination and search OK');
+    // Questions-specific approved design: compact slide-out menu and framed inquiry card.
+    await page.locator('[data-oc-menu]').first().click();
+    assert.equal(await page.locator('.oc-shell .oc-menu').first().isVisible(),true,'Questions compact navigation opens');
+    assert.equal(await page.locator('.oc-shell .oc-menu[data-sc-full-menu="1"]').count(),0,'Questions must not use fullscreen editorial menu');
+    assert.equal(await page.locator('.oc-shell .oc-menu .oc-menu-head').count(),1,'Questions original compact menu retained');
+    const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth,radius:getComputedStyle(x).borderTopLeftRadius}));
+    assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card has white background');
+    assert.notEqual(card.border,'0px','Inquiry card has fine border');
+    console.log(cfg.name+' Questions compact menu and white inquiry card OK');
+
     for(const path of ['index.html','site-map.html','closing-costs.html']){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
       await page.locator('.menu-button').first().waitFor({state:'visible'});
