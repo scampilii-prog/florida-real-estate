@@ -16,8 +16,11 @@ try {
       await page.goto(base+'/'+path,{waitUntil:'domcontentloaded',timeout:30000});
       await page.locator('.menu-button').first().waitFor({state:'visible'});
       const button=page.locator('header .menu-button').first();
+      console.log('Testing '+cfg.name+' '+path+' menu');
       await button.click();
-      await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true');
+      const state=await page.evaluate(() => ({expanded:document.querySelector('header .menu-button')?.getAttribute('aria-expanded'),homeOpen:document.getElementById('sideMenu')?.classList.contains('open'),specialPanel:document.getElementById('fc-shared-header-navigation')?.hidden,openFunction:typeof window.openMenu}));
+      console.log('Menu after click',JSON.stringify(state));
+      await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
       if(path==='index.html'){
         assert.equal(await page.locator('#sideMenu').evaluate(x=>x.classList.contains('open')),true);
       }else{
