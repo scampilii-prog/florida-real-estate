@@ -798,3 +798,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se releyeron ocho páginas representativas (Home, Buy, Sell, Communities, Contact, Site Map, Closing Costs y Calculators): ningún enlace `target=_blank` sin atributo `rel` y ningún botón vacío sin nombre accesible aparente en esa muestra. Se verificaron condiciones estructurales de cabeceras y cuerpo previamente usadas por el script.
 - El archivo `scripts/check-website14.mjs` ahora revisa también que enlaces abiertos en nueva pestaña tengan atributo `rel` (commit final `e3e117d`). No sustituye la comprobación HTTP de URLs externas ni prueba visual/funcional. No se alteró el sitio visible.
 - Sigue pendiente verificar el estado real del workflow en GitHub Actions y ejecutar las pruebas de navegación, idiomas, calculadoras, formularios y Ask Tino en navegador.
+
+
+## Website 14 — revisión de formularios y calculadoras, 13 Oct 2026
+- Revisión de `calculators.html`, `seller-closing-costs.html`, `contact.html`: estructura de formularios, funciones JS de calculadora, envío de Ask Tino y destinos `mailto:`. Se comprobó que las herramientas del sitio están conectadas en el código, pero NO se realizaron pruebas con navegador de cálculo o entrega de mensajes.
+- Hallazgo concreto corregido: formulario general `coast-lead-form` de `calculators.html` apuntaba a `scampilii@gmail.com`, mientras que Contact utiliza el correo oficial `sabatino@floridacostiera.com`. Ahora Calculators usa el destino oficial. Commit `121aaeba`. No se alteraron fórmulas, campos ni diseño.
+- Ojo: los formularios `mailto:` ABREN la aplicación de correo del visitante; no entregan mensajes automáticamente. No prometer confirmación de envío desde la web sin servicio backend.
+- Confirmados en Calculators los seis anclajes de herramientas: mortgage, buyer-costs, seller-net, affordability, loans, dates. Pendiente ejecutar pruebas numéricas y de navegación con navegador real, y verificar respuesta de Ask Tino externamente.
