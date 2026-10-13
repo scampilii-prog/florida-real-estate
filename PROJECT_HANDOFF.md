@@ -779,3 +779,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Cargaron y mostraron contenido correspondiente: Visit Florida Boca Grande, The Island School, Wellen Park, Charlotte County y Sarasota County Schools. Census data mostró página que requiere JavaScript: dominio accesible pero contenido no comprobable en el navegador textual.
 - El acceso automatizado no pudo confirmar Gasparilla Island State Park, HCA Englewood Hospital y City of Punta Gorda (error de lectura), ni City of Venice (403 a la herramienta). Estos resultados **no prueban que los enlaces sean inválidos**, y no justifican sustituir URLs oficiales. Se mantienen los enlaces actuales.
 - No se modificó contenido o diseño; pendiente prueba en Chrome/Safari real de los destinos no comprobados y funcionamiento de menús, formularios, calculadoras, Ask Tino y navegación móvil. Esta etapa es una verificación parcial, no una auditoría completa de los 35 dominios.
+
+
+## Website 14 — enlaces oficiales, segundo intento de verificación (13 Oct 2026)
+- La búsqueda web localizó la ficha oficial publicada de Gasparilla Island State Park (`floridastateparks.org/parks-and-trails/gasparilla-island-state-park`), páginas oficiales de HCA Florida Englewood Hospital bajo `hcafloridahealthcare.com/locations/englewood-hospital/` y la sección oficial del gobierno de Punta Gorda `ci.punta-gorda.fl.us/government`. No se sustituyen los enlaces del sitio, porque la evidencia disponible no confirma que las direcciones originales sean incorrectas.
+- La apertura directa de algunas webs sigue devolviendo 403 al acceso automatizado, aunque motores de búsqueda muestran contenido indexado. Distinguir entre bloqueo de rastreo y enlace roto.
+- La revisión visual funcional de Cloudflare, móviles, formularios y calculadoras sigue pendiente y no puede darse por completada con esta comprobación de fuentes.
