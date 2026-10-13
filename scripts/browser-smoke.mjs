@@ -16,6 +16,7 @@ try {
     for(const path of ['index.html','site-map.html','closing-costs.html']){
       await page.goto(base+'/'+path,{waitUntil:'domcontentloaded',timeout:30000});
       await page.locator('.menu-button').first().waitFor({state:'visible'});
+      console.log('Page context',JSON.stringify(await page.evaluate(()=>({url:location.href,title:document.title,readyState:document.readyState,scriptTags:document.scripts.length,bodyLength:document.body.innerHTML.length,menuButtons:document.querySelectorAll('header .menu-button').length,openMenu:typeof window.openMenu,hasOriginalHandler:document.documentElement.outerHTML.includes('function openMenu()')}))));
       const button=page.locator('header .menu-button').first();
       console.log('Testing '+cfg.name+' '+path+' menu');
       await button.click();
