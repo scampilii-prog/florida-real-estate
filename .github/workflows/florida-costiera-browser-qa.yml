@@ -7,6 +7,7 @@ on:
       - 'site-map.html'
       - 'closing-costs.html'
       - 'assets/fc-canonical-header-menu.js'
+      - 'assets/language-dropdown.js'
       - 'scripts/browser-smoke.mjs'
       - '.github/workflows/florida-costiera-browser-qa.yml'
   workflow_dispatch:
