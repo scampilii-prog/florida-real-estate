@@ -837,3 +837,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Sin cambios visuales o de fórmulas en esta etapa. `mailto:` sigue dependiendo de un cliente de correo instalado; no equivale a envío backend. Pendientes: navegador real, Google Translate, Workers de Ask Tino y móviles.
 
 - Hallazgo tras ejecutar manualmente las nuevas condiciones contra los archivos: Seller Closing Costs todavía apuntaba a `scampilii@gmail.com`; se corrigió a `sabatino@floridacostiera.com` (commit `5ffc1ab`). Ahora los tres formularios generales cumplen la misma comprobación de destino. **No afirmar ejecución completa del workflow**.
+
+
+## Website 14 — Ask Tino en Closing Costs (13 Oct 2026)
+- Auditoría de siete páginas principales confirmó que Home, Buy, Sell, Contact, Calculators y Site Map tenían Ask Tino conectado al Worker `ask-tino-ai.scampilii.workers.dev`, pero `closing-costs.html` no incluía ni botón ni panel.
+- Se copió exactamente el bloque de estilos, botón, panel y manejadores JS de Ask Tino desde `site-map.html` a `closing-costs.html`; commit `302d5e2`. No se cambió la calculadora ni el encabezado aprobado.
+- Relectura GitHub: un panel `tinoPanel`, un botón `tino-launcher`, función `sendTino`, URL Worker, selector/función de idioma y cabecera compartida presentes. Respuesta del Worker, apertura y responsive requieren prueba real en navegador.
