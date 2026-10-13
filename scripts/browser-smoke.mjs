@@ -35,6 +35,16 @@ try {
     assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card has white background');
     assert.notEqual(card.border,'0px','Inquiry card has fine border');
     console.log(cfg.name+' Questions compact menu and white inquiry card OK');
+    await page.locator('#qaCategories .qa-filter').first().hover();
+    const hoverColors=await page.locator('#qaCategories .qa-filter').first().evaluate(x=>({
+      title:getComputedStyle(x.querySelector('.qa-filter-words strong')).color,
+      subtitle:getComputedStyle(x.querySelector('.qa-filter-words small')).color,
+      background:getComputedStyle(x).backgroundColor
+    }));
+    assert.equal(hoverColors.title,'rgb(18, 54, 78)','Hovered category title must stay dark');
+    assert.equal(hoverColors.subtitle,'rgb(82, 104, 117)','Hovered category subtitle must stay legible');
+    console.log(cfg.name+' Questions hover text contrast OK');
+
 
     for(const path of ['index.html','site-map.html','closing-costs.html']){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
