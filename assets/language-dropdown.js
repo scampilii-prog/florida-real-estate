@@ -176,17 +176,17 @@
   function installFullScreenMenu(){
     // Questions retains its approved compact slide-out menu; do not replace it with the site-wide editorial megamenu.
     if(['/questions','/questions.html','/questions/'].includes(location.pathname)){
-      var root=document.querySelector('.oc-shell');
-      var compact=root&&root.querySelector('.oc-menu');
-      var trigger=root&&root.querySelector('[data-oc-menu]');
-      var closer=compact&&compact.querySelector('[data-oc-close]');
-      if(compact&&trigger&&!trigger.dataset.fcCompactBound){
-        trigger.dataset.fcCompactBound='1';
-        function closeCompact(restoreFocus){compact.hidden=true;trigger.setAttribute('aria-expanded','false');document.body.style.overflow='';if(restoreFocus)trigger.focus();}
-        trigger.addEventListener('click',function(event){event.preventDefault();event.stopImmediatePropagation();var open=compact.hidden;compact.hidden=!open;trigger.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':'';},true);
-        if(closer)closer.addEventListener('click',function(event){event.preventDefault();closeCompact(true);});
-        document.addEventListener('keydown',function(event){if(event.key==='Escape'&&!compact.hidden)closeCompact(true);});
-        compact.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){closeCompact(false);});});
+      // The owner approved the actual Site Map page, not the retired "Explore" drawer.
+      var trigger=document.querySelector('.oc-shell [data-oc-menu]');
+      if(trigger&&!trigger.dataset.fcSiteMapBound){
+        trigger.dataset.fcSiteMapBound='1';
+        trigger.setAttribute('aria-label','Open Site Map');
+        trigger.setAttribute('title','Site Map');
+        trigger.addEventListener('click',function(event){
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          window.location.assign('site-map.html');
+        },true);
       }
       return;
     }
