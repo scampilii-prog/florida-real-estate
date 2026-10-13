@@ -744,3 +744,21 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+
+/* Florida Costiera header controls consistency — 2026-10-13 */
+(function(){
+ function apply(){
+  if(document.getElementById('fc-consistent-header-controls-20261013'))return;
+  var css=[
+   'html body header .oc-lang select#oc-lang-static,html body header.sc-cc-header .oc-lang select#oc-lang-static{box-sizing:border-box!important;width:105px!important;min-width:105px!important;max-width:105px!important;height:35px!important;min-height:35px!important;padding:0 22px 0 8px!important;font:700 12px/1.2 Manrope,Arial,sans-serif!important;border-radius:6px!important}',
+   'html body header .fc-unified-header-tools .sc-language-trigger{min-height:35px!important;height:35px!important;font-size:12px!important}',
+   'html body header .fc-unified-header-tools a.fc-header-phone{height:35px!important;min-height:35px!important;box-sizing:border-box!important;padding:5px 8px!important;border-radius:7px!important}',
+   'html body header.sc-cc-header .sc-cc-call{height:35px!important;min-height:35px!important;box-sizing:border-box!important;font-size:12px!important;padding:5px 10px!important;border-radius:7px!important}',
+   'html body header .oc-actions,html body header .header-tools{gap:clamp(8px,1.15vw,16px)!important}',
+   'html body header .fc-unified-header-tools{gap:clamp(8px,1.15vw,16px)!important}',
+   '@media(max-width:650px){html body header .oc-lang select#oc-lang-static{width:100px!important;min-width:100px!important;max-width:100px!important}html body header.sc-cc-header .sc-cc-call{padding:5px 8px!important}}'
+  ].join('');
+  var style=document.createElement('style');style.id='fc-consistent-header-controls-20261013';style.textContent=css;document.head.appendChild(style);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
