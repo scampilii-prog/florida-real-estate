@@ -952,3 +952,14 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 
+
+/* Home and Questions: the three-line navigation opens the approved Site Map page with buttons. */
+(function(){
+  if(!['/','/index.html','/questions','/questions.html','/questions/'].includes(location.pathname))return;
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('button.menu-button,button[data-oc-menu]');
+    if(!b)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    window.location.assign('/site-map.html');
+  },true);
+})();
