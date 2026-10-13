@@ -787,3 +787,21 @@ function init(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+/* Unified special-template header identity, 2026-10-13 */
+(function(){
+function apply(){
+ var special=document.querySelector('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header');
+ if(!special||special.dataset.fcUnifiedIdentity==='yes')return;
+ special.dataset.fcUnifiedIdentity='yes';
+ var brand=special.querySelector('.sc-cc-brand,.sc-sitemap-brand,.sc-booking-brand,.sc-legal-brand');
+ if(brand){
+  brand.classList.add('fc-special-brand');
+  brand.innerHTML='<img class="fc-special-mark" src="assets/florida-costiera-coastal-mark.svg" width="43" height="43" alt=""><span class="fc-special-wordmark"><strong><span>Florida</span><em>Costiera</em></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
+ }
+ if(document.getElementById('fc-special-identity-20261013'))return;
+ var css=document.createElement('style');css.id='fc-special-identity-20261013';
+ css.textContent='html body header .fc-special-brand{display:inline-flex!important;align-items:center!important;flex-direction:row!important;gap:10px!important;min-width:0!important;color:#fff!important;text-decoration:none!important;white-space:nowrap!important}html body header .fc-special-mark{display:block!important;width:43px!important;height:43px!important;flex:0 0 43px!important}html body header .fc-special-wordmark{display:flex!important;flex-direction:column!important;gap:3px!important}html body header .fc-special-wordmark strong{font:600 clamp(19px,1.75vw,25px)/1.05 Georgia,serif!important;letter-spacing:-.035em!important}html body header .fc-special-wordmark strong span{color:#fff9ef!important}html body header .fc-special-wordmark strong em{font-style:normal!important;color:#e9bf78!important}html body header .fc-special-wordmark small{display:block!important;font:600 clamp(7px,.65vw,9px)/1.2 Manrope,Arial,sans-serif!important;letter-spacing:.025em!important;color:#fff!important}@media(max-width:720px){html body header .fc-special-mark{width:35px!important;height:35px!important;flex-basis:35px!important}html body header .fc-special-wordmark strong{font-size:17px!important}html body header .fc-special-wordmark small{display:none!important}}';
+ document.head.appendChild(css);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
