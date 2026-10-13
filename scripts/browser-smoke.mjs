@@ -25,7 +25,7 @@ try {
       console.log('Menu after click',JSON.stringify(state));
       await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
       if(path==='index.html'){
-        assert.equal(await page.locator('#sideMenu').evaluate(x=>x.classList.contains('open')),true);
+        assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),true,'Home editorial menu must open');
       }else{
         assert.equal(await page.locator('#fc-shared-header-navigation').isVisible(),true);
       }
