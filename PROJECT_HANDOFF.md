@@ -805,3 +805,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Hallazgo concreto corregido: formulario general `coast-lead-form` de `calculators.html` apuntaba a `scampilii@gmail.com`, mientras que Contact utiliza el correo oficial `sabatino@floridacostiera.com`. Ahora Calculators usa el destino oficial. Commit `121aaeba`. No se alteraron fórmulas, campos ni diseño.
 - Ojo: los formularios `mailto:` ABREN la aplicación de correo del visitante; no entregan mensajes automáticamente. No prometer confirmación de envío desde la web sin servicio backend.
 - Confirmados en Calculators los seis anclajes de herramientas: mortgage, buyer-costs, seller-net, affordability, loans, dates. Pendiente ejecutar pruebas numéricas y de navegación con navegador real, y verificar respuesta de Ask Tino externamente.
+
+
+## Website 14 — comprobación numérica inicial de la hipoteca (13 Oct 2026)
+- Se revisó el algoritmo de mensualidad hipotecaria en `calculators.html`: el cálculo `p*m/(1-(1+m)^(-N))` podía producir `Infinity` si el plazo introducido era cero y la tasa mayor que cero (N=0). Se añadió protección para capital <=0 o plazo <=0, devolviendo cero en ese caso; se mantuvo fórmula normal y rama de tasa cero. Commit `8ca6546`.
+- Se verificó la aritmética de la nueva función con: capital 300000, APR 6.5 %, plazo 30 años = $1,896.20/mes; capital 120000, APR 0 %, plazo 30 años = $333.33/mes; plazo cero y principal cero = 0 (sin división por cero). Son pruebas matemáticas aisladas de la función, NO pruebas en navegador de todos los campos, impuestos o gastos de cierre.
+- **Pendiente:** impedir que un plazo inválido se interprete visualmente como una mensualidad normal, si el campo permite cero; comprobar cálculos de cierre, proraciones y validación real de formularios en navegador. Mantener estilo aprobado.
