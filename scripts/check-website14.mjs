@@ -99,7 +99,7 @@ assert(questions.includes('href="#coast-inquiry"')&&questions.includes('id="coas
 assert(questions.includes('id="fc-qa-hover-contrast-fix-20261013"'),'Questions hover contrast fix absent');
 assert(questions.includes('id="fc-questions-inquiry-card-20261013"'),'Questions white/gold inquiry card absent');
 assert(questions.includes('id="fc-inquiry-anchor-alignment-20261013"'),'Questions exact form anchor alignment absent');
-assert(sharedNav.includes("fcSiteMapBound")&&sharedNav.includes("window.location.assign('site-map.html')"),'Questions approved Site Map navigation missing');
+assert(sharedNav.includes('function installFullScreenMenu()') && sharedNav.includes('menu.dataset.scFullMenu'), 'Shared Home editorial menu missing');
 assert(questions.includes('Search all 1,010 questions'),'Questions collection headline absent');
 console.log('Website 15 Questions navigation and form safeguards present.');
 
