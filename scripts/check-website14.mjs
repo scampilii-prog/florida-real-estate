@@ -37,6 +37,16 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
  assert(page.includes('id="tinoPanel"'),name+' missing Ask Tino panel');
 }
 
+// Inquiry forms must be wired to a submit handler and use the official inbox.
+for(const [name,page] of [['Contact',contact],['Calculators',calculators],['Seller Closing Costs',read('seller-closing-costs.html')]]){
+ assert(page.includes('id="coast-lead-form"'),name+' missing coastal inquiry form');
+ assert(page.includes("getElementById('coast-lead-form')"),name+' missing coastal inquiry handler');
+ assert(page.includes('mailto:sabatino@floridacostiera.com?subject='),name+' must use official inquiry address');
+}
+for(const id of ['mortgage','buyer-costs','seller-net','affordability','loans','dates']){
+ assert(calculators.includes('id="'+id+'"'),'Missing calculator section '+id);
+}
+
 // Verify relative HTML destinations and same-document hash links without changing the site.
 // Run on all production pages, excluding the offline worksheet and historical demo.
 import {readdirSync} from 'node:fs';
