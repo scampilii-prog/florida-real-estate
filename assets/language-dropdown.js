@@ -771,7 +771,7 @@ function init(){
  if(!headers.length)return;
  var st=document.createElement('style');st.id='fc-special-header-alignment';
  st.textContent=[
- 'html body header.sc-cc-header,html body header.sc-sitemap-header,html body header.sc-booking-header,html body header.sc-legal-header{box-sizing:border-box!important;min-height:76px!important;height:76px!important;max-height:76px!important;padding:7px clamp(16px,3vw,44px)!important;align-items:center!important;gap:clamp(8px,1.4vw,20px)!important}',
+ 'html body header.sc-booking-header,html body header.sc-legal-header{box-sizing:border-box!important;min-height:76px!important;height:76px!important;max-height:76px!important;padding:7px clamp(16px,3vw,44px)!important;align-items:center!important;gap:clamp(8px,1.4vw,20px)!important}',
  'html body header.sc-cc-header .sc-cc-brand,html body header.sc-sitemap-header .sc-sitemap-brand{min-width:0!important;flex:0 1 auto!important}',
  'html body header.sc-cc-header .oc-lang,html body header.sc-sitemap-header .sc-language-widget,html body header.sc-booking-header .oc-lang,html body header.sc-legal-header .oc-lang{flex:0 0 auto!important}',
  'html body header.sc-cc-header .sc-cc-nav,html body header.sc-sitemap-header .sc-sitemap-tools{align-items:center!important;gap:clamp(8px,1vw,14px)!important}',
