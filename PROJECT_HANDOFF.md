@@ -527,3 +527,31 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - User requested immediate verification of remaining official external links in community Q&A. Re-fetched actual GitHub link inventories for 10 primary pages (Boca Grande, Cape Haze, Englewood, Rotonda West, Venice, Wellen Park, Nokomis/Casey Key, Punta Gorda Isles, Siesta/Longboat, Sarasota). Re-opened individual links with public web: confirmed The Island School, Rotonda Golf, Sarasota Memorial Venice, Wellen Park school, Venice High, Charlotte County Schools, HCA Englewood Hospital, FSW, SCF, Fishermen's Village, GIBA, Charlotte County Community Services, Senior Friendship Centers, Sarasota County Schools, Wellen Park, CoolToday Park, multiple Visit Florida destinations and Venice/Englewood Census QuickFacts pages. External rendering of some government/parks pages (venicegov.com, floridastateparks.org, ci.punta-gorda.fl.us, sarasotacountyparks.com, ringling.org) returned internal errors; this is INCONCLUSIVE, not proof of broken links.
 - Fixed specific cross-site reference destinations: Punta Gorda Isles and its `-florida-real-estate` alternate now use direct official FloridaHealthFinder facility search `https://quality.healthfinder.fl.gov/Facility-Search/FacilityLocateSearch?handler=AdvancedSearch` instead of generic root; Cape Haze and its alternate replace generic Visit Florida home page with relevant verified Englewood destination page. Four successful GitHub updates.
 - Did not simulate every click in a live browser, and Cloudflare render remains unverified in this tool environment. Other links to source homepages are legitimate but may be improved with deeper destination research. Avoid saying 100% of external links verified when source site blocks the retrieval environment.
+
+
+## PRÓXIMOS OBJETIVOS Y ETAPAS PENDIENTES — FLORIDA COSTIERA (actualizado 12 oct 2026)
+
+**Regla de cierre:** no marcar una etapa como terminada por el solo hecho de haber hecho un commit. Separar siempre (a) comprobación de código en GitHub, (b) respuesta del enlace oficial de destino, (c) publicación en Cloudflare y (d) prueba visual/funcional del sitio publicado. Conservar las decisiones aprobadas, enlaces OneHome, Q&A, fotos, cuatro idiomas y elementos existentes. No modificar OceanFL.
+
+### Etapa 1 — Verificación exhaustiva de enlaces oficiales de comunidades [EN PROCESO]
+- Abrir y comprobar **uno por uno** los enlaces de escuelas, distritos educativos, universidades, hospitales, centros médicos, campos de golf, playas, parques, centros comerciales, actividades para adultos mayores, turismo, censos y gobierno contenidos en las 10 páginas principales (incluida Sarasota y Siesta/Longboat) y sus rutas alternativas (16 archivos de comunidades en total).
+- Para cada enlace registrar: archivo, pregunta donde aparece, URL actual, destino esperado, resultado verificable, fecha, fuente oficial y acción realizada. Confirmar que el enlace llega a la institución o información concreta mencionada; evitar portales genéricos cuando exista una página oficial adecuada.
+- Arreglar redirecciones antiguas, errores reales, nombres, direcciones y fuentes incongruentes. Verificar año y límites de cualquier cifra de población; no confundir ciudad, condado, CDP y urbanización. Escuela asignada, matrícula, red hospitalaria, horarios, membresías y precios siempre sujetos a dirección y confirmación vigente.
+- Algunos dominios oficiales bloquean la herramienta o no muestran su página: registrar **NO VERIFICABLE DESDE ESTA HERRAMIENTA**; nunca etiquetar “roto” sin evidencia. Probar con navegador compatible cuando sea posible. Ya corregidos: The Island School, Rotonda Golf, referencia FloridaHealthFinder en Punta Gorda Isles y referencias Visit Florida en Cape Haze. Continuar con los demás.
+
+### Etapa 2 — Rutas y funcionamiento internos [PENDIENTE DE PRUEBA EN VIVO]
+- Revisar Communities → comunidad correcta → Q&A y directorio local → guías → contacto, incluyendo cada alias .html y anchors #fc-community-qa, #fc-local-names, #fc-community-lifestyle. Probar enlaces a OneHome, Search Properties, Ask Tino, Contact Sabatino, reserva SimplyBook, formularios, back-to-top y sitemap.
+- Detectar y resolver destinos inconsistentes, 404, anclas tapadas por encabezados y navegación que abandone innecesariamente el sitio.
+
+### Etapa 3 — Cloudflare y dispositivos [PENDIENTE]
+- Confirmar que el último commit esté desplegado en Cloudflare y sea visible en floridacostiera.com, no solo en GitHub; revisar dominio, redirects, HTTPS, cache y versión publicada. Si una herramienta web no puede abrir el sitio, usar verificación desde navegador/Work o capturas del usuario y registrar la limitación con precisión.
+- Verificar visual y funcionalmente en escritorio, iPad y móvil: encabezado, fotos, distribución, tipografía, Q&A desplegables (+/−), teléfono, selector de cuatro idiomas, menú móvil, footer y mapa del sitio. Corregir regresiones sin modificar elementos ya aprobados.
+
+### Etapa 4 — Calidad editorial y SEO [PENDIENTE]
+- Revisar todas las comunidades sin duplicar preguntas: textos persuasivos pero concisos, nombres reales cuando estén validados, información útil para compradores, enlaces a fuentes fiables y avisos de verificación solo donde correspondan.
+- Confirmar títulos H1/H2, metadescripciones, canonicals, sitemap.xml, vínculos internos y páginas indexables. Evitar copiar literalmente OceanFL; contenido original basado en temas públicos y fuentes oficiales.
+- Revisar traducciones visibles y experiencias en EN/ES/IT/PT, y accesibilidad de formularios y acordiones desde teclado y móvil.
+
+### Etapa 5 — Auditoría final y entrega [PENDIENTE]
+- Revisar página por página, documentar qué se comprobó realmente y guardar pendientes no verificables en PROJECT_HANDOFF.md. Solo entonces informar que la fase está cerrada. No pedir al dueño instalar HTML ni cambiar archivos manualmente: aplicar correcciones directamente mediante GitHub cuando estén soportadas.
+- Lista de aceptación mínima: enlaces oficiales comprobados o claramente marcados como no verificables; rutas principales funcionales; despliegue confirmado; Q&A y estilos visualmente revisados; contenido y metadatos coherentes; sin regresiones en OneHome, Ask Tino, SimplyBook, footer o idiomas.
