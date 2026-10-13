@@ -817,3 +817,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se corrigió el cálculo de prorrata estimada de impuestos del vendedor en `calculators.html`, que antes restaba fechas locales y podía contar un día menos cuando intervenía un cambio de horario de verano. Ahora cuenta días calendario con `Date.UTC` y determina correctamente 365/366 días, con verificación de fechas. Commit `0336f78`.
 - Pruebas aritméticas aisladas con impuesto anual $4,500: 2026-01-01 = 1/365 ($12.33); 2026-10-13 = 286/365 ($3,526.03); 2026-12-31 = 365/365 ($4,500); 2024-02-29 = 60/366 ($737.70). Fecha inválida no causa NaN en prorrata.
 - No se cambiaron estética, campos, otras fórmulas ni política de ajuste fiscal; las prorratas reales dependen de contrato, impuestos efectivamente pagados y cierre. Todavía hacen falta pruebas de navegador y revisión de los demás cálculos de cierre.
+
+
+## Website 14 — corrección impuesto documental vendedor (13 Oct 2026)
+- Revisión cruzada `seller-closing-costs.html` vs. `calculators.html` detectó inconsistencia: la página exclusiva del vendedor usaba `price*.007` para deed documentary stamp tax, mientras Calculators ya redondeaba a unidades completas de $100 mediante `Math.ceil(price/100)*.70`.
+- Corregido `seller-closing-costs.html` a `Math.ceil(price/100)*.70` (commit `ffd16df`); cálculos coinciden en ambas páginas. Pruebas matemáticas: $400,000 → $2,800.00; $400,050 → $2,800.70 (antes $2,800.35); $152,500 → $1,067.50. No se modificaron diseño ni otros costos.
+- Próximo: revisar diferencias restantes entre calculadoras, requisitos de validación de formularios y confirmar las operaciones en navegador publicado. Esta es revisión del código y aritmética aislada, no una prueba de UI o de los importes finales de cierre.
