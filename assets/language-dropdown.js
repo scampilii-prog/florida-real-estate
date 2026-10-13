@@ -919,3 +919,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',installFooterMark,{once:true});else installFooterMark();
 })();
+
+/* 2026-10-13: Final override for dynamically generated special-page header controls. */
+(function(){function apply(){if(document.getElementById('fc-special-transparent-dynamic-final'))return;var el=document.createElement('style');el.id='fc-special-transparent-dynamic-final';el.textContent=[
+'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-widget,html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger,html body header.sc-sitemap-header .fc-sitemap-phone,html body header.sc-cc-header .sc-cc-call{background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}',
+'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger,html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-label,html body header.sc-sitemap-header .fc-sitemap-phone,html body header.sc-sitemap-header .fc-sitemap-phone b,html body header.sc-cc-header .sc-cc-call,html body header.sc-cc-header .sc-cc-call span{color:#fff!important;-webkit-text-fill-color:#fff!important;font-weight:800!important;text-shadow:0 1px 3px #0008}',
+'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger{padding:0 4px!important;outline-offset:3px!important}',
+'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger:focus-visible{outline:2px solid #eac58b!important}'
+].join('');document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
