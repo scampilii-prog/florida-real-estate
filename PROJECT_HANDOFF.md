@@ -951,3 +951,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se verificaron runs estructurales completados/success 38459830227 (2b099792), 38459462239 y 38459268344. El browser smoke sigue manual; la última ejecución anterior (38458286250) falló antes de corregir el menú y no se debe interpretar como estado de producción actual.
 - Se corrigió en commit 390cbf9 el versionado de carga de assets/language-dropdown.js en questions.html, pasando a ?v=20261013-questions-compact-menu, para evitar reutilizar un JS cacheado anterior a la reparación de menú.
 - Sin navegador externo disponible para ejecutar Chromium ni acción autorizada para disparar workflow_dispatch desde esta conexión. Continuar verificando producción y Worker por medios compatibles; no certificar sin evidencia.
+
+
+## Nuevo Website 15 — Preparación para Google (13 Oct 2026)
+- Se leyó el árbol actual: robots.txt permite rastreo y anuncia el sitemap en dominio oficial; sitemap.xml existe y contiene enlaces https://floridacostiera.com/ con 49 registros URL aproximadamente. No se alteró el sitemap sin motivo.
+- Verificados directamente en GitHub Home, Questions, Buy, Sell, Communities, Site Map, Boca Grande (dos rutas) y Venice (dos rutas): tienen title, meta description y canonical en dominio oficial; en esa muestra no hay noindex. Las rutas duplicadas de comunidades son páginas con títulos distintos, revisar contenido antes de indicar canonicalización/redirects.
+- Intentos de abrir /robots.txt y /sitemap.xml publicados mediante web fueron inaccesibles en esta herramienta; no significa sitio caído ni garantiza que Google pueda acceder.
+- Commit 5a480723 creó GOOGLE_LAUNCH_CHECKLIST.md, con orden de Search Console, verificación real de despliegue, dominios/redirects, sitemap, Analytics y Business Profile. No se accedió a cuenta Google ni se envió sitemap.
+- El próximo paso de Google requiere verificación de Search Console y propiedad del dominio, una vez haya acceso permitido a esa cuenta; hasta entonces hacer los cambios técnicos verificables de GitHub sin prometer indexación.
