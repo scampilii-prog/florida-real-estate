@@ -4,6 +4,10 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'buy.html'
+      - 'sell.html'
+      - 'contact.html'
+      - 'calculators.html'
       - 'site-map.html'
       - 'closing-costs.html'
       - 'assets/fc-canonical-header-menu.js'
