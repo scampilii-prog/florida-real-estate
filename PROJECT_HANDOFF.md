@@ -683,3 +683,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 ## 13 Oct 2026 — Etapa 3: auditoría de formularios
 - Inspeccionados Home, Contact, Buy y Sell. Los formularios `lead-form`, `private-list-form` y `coast-lead-form` tienen manejadores `submit` que elaboran un enlace `mailto:`; no transmiten datos a un servidor ni garantizan envío automático. Se agrega aviso junto a cada formulario pertinente para que el visitante sepa que debe completar el envío desde su aplicación de correo. Commits: Contact `8d58255`, Home `e27d1ce`, Buy `0833da5`, Sell `8b55036`.
 - Los anclajes `#tell-us-your-plans` y `#property-preferences` sí existen en Contact. No se ha verificado el funcionamiento del correo externo ni la apariencia en Cloudflare; quedan pendientes pruebas en navegador y auditoría integral de enlaces.
+
+
+## 13 Oct 2026 — Etapa 3: revisión adicional de navegación
+- Auditados `href` internos de Home, Contact, Buy, Sell, Site Map, Closing Costs y Search Properties. Se verificó en GitHub que los destinos HTML de las rutas antiguas y principales inspeccionadas existen: Boca Grande, Cape Haze, Englewood, Venice, Nokomis, Punta Gorda Isles, Buyer Closing Costs, Buyer Property Search, Siesta Key/Longboat Key y Gulf Coast Homes for Sale.
+- Confirmados los ID de los destinos con `#` de los enlaces relevantes de Sell, Buy, Sellers Guide, Home Valuation, Seller Closing Costs, Calculators e Investment Center. En Site Map `href="#"` de Back to Top es navegación deliberada, no ruta rota.
+- Esta auditoría solo comprueba fuente y rutas seleccionadas, NO implica comprobación exhaustiva de todos los enlaces ni funcionamiento en vivo Cloudflare. Etapa 3 todavía abierta para navegación efectiva y formularios en navegador.
