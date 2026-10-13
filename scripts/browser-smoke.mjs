@@ -26,17 +26,15 @@ try {
     await page.locator('#qaSearch').fill('Boca Grande');
     assert.equal(await page.locator('#qaCount').innerText().then(s=>s.includes('1,010')),true);
     console.log(cfg.name+' questions library: eight topics, subtopics, pagination and search OK');
-    // Questions-specific approved design: compact slide-out menu and framed inquiry card.
+    // Questions hamburger must open the approved full Site Map page, not the retired Explore drawer.
+    const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth}));
+    assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card white');
+    assert.notEqual(card.border,'0px','Inquiry card bordered');
     await page.locator('[data-oc-menu]').first().click();
-    assert.equal(await page.locator('.oc-shell .oc-menu').first().isVisible(),true,'Questions compact navigation opens');
-    assert.equal(await page.locator('.oc-shell .oc-menu[data-sc-full-menu="1"]').count(),0,'Questions must not use fullscreen editorial menu');
-    assert.equal(await page.locator('.oc-shell .oc-menu .oc-menu-head').count(),1,'Questions original compact menu retained');
-    const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth,radius:getComputedStyle(x).borderTopLeftRadius}));
-    assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card has white background');
-    assert.notEqual(card.border,'0px','Inquiry card has fine border');
-    await page.locator('.oc-shell .oc-menu [data-oc-close]').click();
-    assert.equal(await page.locator('.oc-shell .oc-menu').first().isVisible(),false,'Questions compact menu closes');
-    console.log(cfg.name+' Questions compact menu and white inquiry card OK');
+    await page.waitForURL(/site-map(?:\.html)?(?:#.*)?$/, {timeout:5000});
+    console.log(cfg.name+' Questions hamburger navigates to approved Site Map OK');
+    await page.goto(base+'/questions.html',{waitUntil:'load'});
+    await page.waitForSelector('#qaCategories .qa-filter');
     await page.locator('#qaCategories .qa-filter').first().hover();
     const hoverColors=await page.locator('#qaCategories .qa-filter').first().evaluate(x=>({
       title:getComputedStyle(x.querySelector('.qa-filter-words strong')).color,
