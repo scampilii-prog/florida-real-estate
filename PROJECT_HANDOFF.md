@@ -694,3 +694,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 ## 13 Oct 2026 — Etapa 3: botón de menú Site Map
 - Detectado error concreto en `site-map.html`: el botón de tres rayas tenía `onclick` para volver al elemento `#top` (encabezado de contenido), en vez de mostrar navegación; desde arriba no hacía nada útil. Ahora al pulsarlo se desplaza suavemente a `nav.primary`, donde se encuentran los enlaces de navegación del mapa del sitio. Commit `5dcebdc`.
 - Revisadas estructuras de encabezado de Home, Site Map y Closing Costs; Closing Costs enlaza su menú a `site-map.html`. La comprobación de interacción real en Cloudflare y móviles continúa pendiente.
+
+
+## 13 Oct 2026 — Etapa 3: navegación móvil y accesibilidad
+- Se verificaron los controles de menú de las páginas especiales Privacy, Terms, Request Appointment, Site Map y Closing Costs. En las primeras tres y Closing Costs, el menú enlaza al Site Map. En Site Map se verificó el destino `nav.primary` existente con diseño responsivo de 4, 3 y 2 columnas.
+- Mejora real: el botón de menú del Site Map ahora enfoca la navegación para teclado/lectores de pantalla y respeta `prefers-reduced-motion`. Commit `3151681`.
+- Pendiente: prueba visual/publicada en iPhone, iPad y Cloudflare; ningún test de código demuestra por sí solo funcionamiento visual.
