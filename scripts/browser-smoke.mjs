@@ -41,6 +41,24 @@ try {
       assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),false);
       console.log(cfg.name+' '+path+' menu, four languages and Ask Tino panel OK');
     }
+    for(const path of ['buy.html','sell.html','contact.html','calculators.html']){
+      await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
+      const trigger=page.locator('header [data-oc-menu]').first();
+      await trigger.waitFor({state:'visible'});
+      const options=await page.locator('select#lang,select#oc-lang-static').first().locator('option').evaluateAll(a=>a.map(x=>x.value));
+      assert.deepEqual(options,['en','es','it','pt'],'Languages on '+path);
+      await trigger.click();
+      const menu=page.locator('.oc-menu[data-sc-full-menu="1"]');
+      assert.equal(await menu.isVisible(),true,'Full-screen menu should open on '+path);
+      await page.keyboard.press('Escape');
+      assert.equal(await menu.isVisible(),false,'Escape should close menu on '+path);
+      const ask=page.locator('.tino-launcher').first();
+      await ask.click();
+      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),true);
+      await ask.click();
+      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),false);
+      console.log(cfg.name+' '+path+' menu, languages and Ask Tino OK');
+    }
     await page.close();
   }
 }finally{
