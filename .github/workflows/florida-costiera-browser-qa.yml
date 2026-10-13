@@ -1,20 +1,6 @@
 name: Florida Costiera browser QA
+# Browser QA is launched manually after a cohesive batch, avoiding notification floods on each commit.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'index.html'
-      - 'questions.html'
-      - 'buy.html'
-      - 'sell.html'
-      - 'contact.html'
-      - 'calculators.html'
-      - 'site-map.html'
-      - 'closing-costs.html'
-      - 'assets/fc-canonical-header-menu.js'
-      - 'assets/language-dropdown.js'
-      - 'scripts/browser-smoke.mjs'
-      - '.github/workflows/florida-costiera-browser-qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
