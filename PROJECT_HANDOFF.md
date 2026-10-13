@@ -959,3 +959,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Intentos de abrir /robots.txt y /sitemap.xml publicados mediante web fueron inaccesibles en esta herramienta; no significa sitio caído ni garantiza que Google pueda acceder.
 - Commit 5a480723 creó GOOGLE_LAUNCH_CHECKLIST.md, con orden de Search Console, verificación real de despliegue, dominios/redirects, sitemap, Analytics y Business Profile. No se accedió a cuenta Google ni se envió sitemap.
 - El próximo paso de Google requiere verificación de Search Console y propiedad del dominio, una vez haya acceso permitido a esa cuenta; hasta entonces hacer los cambios técnicos verificables de GitHub sin prometer indexación.
+
+
+## Website 15 — 13 Oct 2026: navegación Home vs Questions
+- El usuario mostró capturas reales de Home: menú editorial de pantalla completa «Discover your Florida», con banner fotográfico y enlaces en seis secciones, mientras Questions venía usando menú lateral antiguo «Explore» y después una redirección a site-map.html. Son tres comportamientos distintos. Se adopta el menú editorial de Home en Questions, conservando site-map.html como página independiente con botones.
+- Commit a118d04 elimina la excepción de Questions en installFullScreenMenu() de assets/language-dropdown.js, de modo que reutiliza el mismo componente editorial que Home. Commit bf97570 actualiza versión del script en Questions para evitar caché anterior.
+- Commits d02e378 y 1d25c55 actualizan las pruebas estructurales y del navegador a la navegación editorial común; browser QA es manual y debe ejecutarse antes de certificar el resultado visual. No se modificó el diseño de Site Map ni Home.
