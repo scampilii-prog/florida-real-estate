@@ -762,3 +762,28 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+
+/* Florida Costiera special-page header alignment — 2026-10-13 */
+(function(){
+function init(){
+ if(document.getElementById('fc-special-header-alignment'))return;
+ var headers=document.querySelectorAll('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header');
+ if(!headers.length)return;
+ var st=document.createElement('style');st.id='fc-special-header-alignment';
+ st.textContent=[
+ 'html body header.sc-cc-header,html body header.sc-sitemap-header,html body header.sc-booking-header,html body header.sc-legal-header{box-sizing:border-box!important;min-height:76px!important;height:76px!important;max-height:76px!important;padding:7px clamp(16px,3vw,44px)!important;align-items:center!important;gap:clamp(8px,1.4vw,20px)!important}',
+ 'html body header.sc-cc-header .sc-cc-brand,html body header.sc-sitemap-header .sc-sitemap-brand{min-width:0!important;flex:0 1 auto!important}',
+ 'html body header.sc-cc-header .oc-lang,html body header.sc-sitemap-header .sc-language-widget,html body header.sc-booking-header .oc-lang,html body header.sc-legal-header .oc-lang{flex:0 0 auto!important}',
+ 'html body header.sc-cc-header .sc-cc-nav,html body header.sc-sitemap-header .sc-sitemap-tools{align-items:center!important;gap:clamp(8px,1vw,14px)!important}',
+ 'html body header.sc-cc-header .sc-language-widget,html body header.sc-sitemap-header .sc-language-widget{width:105px!important;min-width:105px!important;max-width:105px!important}',
+ 'html body header.sc-cc-header .sc-language-trigger,html body header.sc-sitemap-header .sc-language-trigger{box-sizing:border-box!important;width:105px!important;min-width:105px!important;max-width:105px!important;height:35px!important;min-height:35px!important;font:700 12px/1.3 Manrope,Arial,sans-serif!important;padding:0 10px!important;border-radius:6px!important}',
+ 'html body header.sc-cc-header .sc-language-options,html body header.sc-sitemap-header .sc-language-options{width:105px!important;min-width:105px!important;max-width:105px!important}',
+ 'html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header .fc-sitemap-phone{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;height:35px!important;min-height:35px!important;padding:5px 10px!important;border-radius:7px!important;font:700 12px Manrope,Arial,sans-serif!important;background:#21445f!important;border:1px solid #91a7b8!important;color:#fff!important;white-space:nowrap!important;text-decoration:none!important}',
+ 'html body header.sc-cc-header .sc-cc-menu,html body header.sc-sitemap-header .sc-sitemap-menu-button{display:inline-flex!important;justify-content:center!important;align-items:center!important;width:35px!important;height:35px!important;padding:4px!important;flex:0 0 35px!important;background:transparent!important;color:#fff!important;border:0!important;border-radius:6px!important;font-size:22px!important;text-decoration:none!important}',
+ 'html body header.sc-sitemap-header .sc-sitemap-search-btn{height:35px!important;width:35px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}',
+ '@media(max-width:740px){html body header.sc-cc-header,html body header.sc-sitemap-header{padding:7px 12px!important;gap:5px!important}html body header.sc-cc-header .sc-cc-brand-text small{display:none!important}html body header.sc-cc-header .sc-cc-call span,html body header.sc-sitemap-header .fc-sitemap-phone b{display:none!important}html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header .fc-sitemap-phone{width:35px!important;min-width:35px!important;padding:5px!important}html body header.sc-cc-header .sc-language-widget,html body header.sc-sitemap-header .sc-language-widget,html body header.sc-cc-header .sc-language-trigger,html body header.sc-sitemap-header .sc-language-trigger{width:99px!important;min-width:99px!important;max-width:99px!important}html body header.sc-cc-header .sc-language-options,html body header.sc-sitemap-header .sc-language-options{width:99px!important;min-width:99px!important;max-width:99px!important}}'
+ ].join('');
+ document.head.appendChild(st);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
