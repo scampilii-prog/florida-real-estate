@@ -13,7 +13,7 @@ try {
   for(const cfg of configurations){
     const page = await browser.newPage({viewport:{width:cfg.width,height:cfg.height}});
     await page.route('**/*',route=>{const url=new URL(route.request().url());return ['127.0.0.1','localhost'].includes(url.hostname)?route.continue():route.abort()});
-    page.on('pageerror', error => console.log('JS ERROR '+cfg.name+': '+error.message));
+    page.on('pageerror', error => console.log('JS ERROR '+cfg.name+': '+error.stack));
     await page.goto(base+'/questions.html',{waitUntil:'load',timeout:30000});
     await page.waitForSelector('#qaCategories .qa-filter');
     assert.equal(await page.locator('#qaCategories .qa-filter').count(),8);
