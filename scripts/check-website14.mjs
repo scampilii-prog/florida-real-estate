@@ -103,4 +103,17 @@ assert(sharedNav.includes('function installFullScreenMenu()') && sharedNav.inclu
 assert(questions.includes('Search all 1,010 questions'),'Questions collection headline absent');
 console.log('Website 15 Questions navigation and form safeguards present.');
 
+
+// Google launch guard: sitemap lists every public page once, excludes offline/demo pages.
+const sitemapXml=read('sitemap.xml');
+const listed=[...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
+const expectedPublic=productionPages.filter(n=>n!=='index.html').map(n=>'https://floridacostiera.com/'+n);
+expectedPublic.push('https://floridacostiera.com/');
+assert.equal(new Set(listed).size,listed.length,'Duplicate sitemap locations');
+for(const u of expectedPublic)assert(listed.includes(u),'Missing sitemap URL: '+u);
+assert.equal(listed.length,expectedPublic.length,'Unexpected sitemap entries');
+const robotsTxt=read('robots.txt');
+assert(robotsTxt.includes('Sitemap: https://floridacostiera.com/sitemap.xml'),'robots.txt missing official sitemap');
+console.log('Google launch sitemap: '+listed.length+' valid public URLs represented.');
+
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
