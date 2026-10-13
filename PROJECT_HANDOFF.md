@@ -811,3 +811,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se revisó el algoritmo de mensualidad hipotecaria en `calculators.html`: el cálculo `p*m/(1-(1+m)^(-N))` podía producir `Infinity` si el plazo introducido era cero y la tasa mayor que cero (N=0). Se añadió protección para capital <=0 o plazo <=0, devolviendo cero en ese caso; se mantuvo fórmula normal y rama de tasa cero. Commit `8ca6546`.
 - Se verificó la aritmética de la nueva función con: capital 300000, APR 6.5 %, plazo 30 años = $1,896.20/mes; capital 120000, APR 0 %, plazo 30 años = $333.33/mes; plazo cero y principal cero = 0 (sin división por cero). Son pruebas matemáticas aisladas de la función, NO pruebas en navegador de todos los campos, impuestos o gastos de cierre.
 - **Pendiente:** impedir que un plazo inválido se interprete visualmente como una mensualidad normal, si el campo permite cero; comprobar cálculos de cierre, proraciones y validación real de formularios en navegador. Mantener estilo aprobado.
+
+
+## Website 14 — prorrata fiscal resistente a cambio horario (13 Oct 2026)
+- Se corrigió el cálculo de prorrata estimada de impuestos del vendedor en `calculators.html`, que antes restaba fechas locales y podía contar un día menos cuando intervenía un cambio de horario de verano. Ahora cuenta días calendario con `Date.UTC` y determina correctamente 365/366 días, con verificación de fechas. Commit `0336f78`.
+- Pruebas aritméticas aisladas con impuesto anual $4,500: 2026-01-01 = 1/365 ($12.33); 2026-10-13 = 286/365 ($3,526.03); 2026-12-31 = 365/365 ($4,500); 2024-02-29 = 60/366 ($737.70). Fecha inválida no causa NaN en prorrata.
+- No se cambiaron estética, campos, otras fórmulas ni política de ajuste fiscal; las prorratas reales dependen de contrato, impuestos efectivamente pagados y cierre. Todavía hacen falta pruebas de navegador y revisión de los demás cálculos de cierre.
