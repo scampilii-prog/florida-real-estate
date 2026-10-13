@@ -947,65 +947,47 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 ].join('');document.head.appendChild(css)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
 
 
-/* Single source of truth: approved Home-style header for Site Map and Closing Costs. */
+
+/* Florida Costiera canonical header — one component across all HTML pages.
+   Replaces old header elements rather than layering another style on them. */
 (function(){
-function install(){
- var current=document.querySelector('header.sc-sitemap-header,header.sc-cc-header');
- if(!current||current.dataset.fcUnifiedHeader==='yes')return;
- var sitemap=current.classList.contains('sc-sitemap-header');
- var existingSelect=current.querySelector('#oc-lang-static,.sc-language-widget');
- var existingSearch=current.querySelector('#sc-sitemap-search');
- var existingMenu=current.querySelector('#fc-sitemap-nav-popover');
- var next=document.createElement('header');
- next.className='fc-unified-home-header';
- next.dataset.fcUnifiedHeader='yes';
- next.innerHTML='<div class="fc-unified-inner"><a class="fc-unified-brand" href="index.html" aria-label="Florida Costiera home"><img src="/assets/florida-costiera-coastal-mark.svg" alt="" width="48" height="48"><span><strong>Florida<em>Costiera</em></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span></a><div class="fc-unified-actions"><div class="fc-unified-language"></div><a href="search-properties.html" class="fc-unified-search" aria-label="Search Properties"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></a><a href="tel:+19412704877" class="fc-unified-phone" aria-label="Call (941) 270-4877"><svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.6a2 2 0 0 1 1.8 2.1Z"/></svg><span>(941) 270-4877</span></a><a href="site-map.html" class="fc-unified-menu" aria-label="Open site navigation"><svg aria-hidden="true" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></a></div></div>';
- if(existingSelect)next.querySelector('.fc-unified-language').appendChild(existingSelect);
- if(existingSearch)next.appendChild(existingSearch);
- if(existingMenu)next.appendChild(existingMenu);
- if(sitemap){
-  var button=next.querySelector('.fc-unified-menu');
-  button.outerHTML='<button type="button" class="fc-unified-menu" aria-expanded="false" aria-controls="fc-sitemap-nav-popover" aria-label="Open site navigation"><svg aria-hidden="true" viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>';
+function render(){
+ var old=document.querySelector('header.site-header,header.oc-top,header.sc-sitemap-header,header.sc-cc-header,header.sc-booking-header,header.sc-legal-header');
+ if(!old||old.classList.contains('fc-one-header'))return;
+ var lang=old.querySelector('.sc-language-widget, .oc-lang, #oc-lang-static, #lang');
+ var h=document.createElement('header');h.className='fc-one-header';
+ h.innerHTML='<div class="fc-one-inner"><a class="fc-one-brand" href="/"><img src="/assets/florida-costiera-coastal-mark.svg" width="43" height="43" alt=""><span class="fc-one-word"><strong>Florida<em>Costiera</em></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span></a><div class="fc-one-tools"><div class="fc-one-lang"></div><a class="fc-one-search" href="/search-properties.html" aria-label="Search properties"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></a><a class="fc-one-phone" href="tel:+19412704877" aria-label="Call Florida Costiera"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.6a2 2 0 0 1 1.8 2.1Z"/></svg><span>(941) 270-4877</span></a><button type="button" class="fc-one-menu" aria-label="Open navigation" aria-expanded="false"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div><nav class="fc-one-panel" aria-label="Site navigation" hidden><a href="/">Home</a><a href="/search-properties.html">Search Properties</a><a href="/buy.html">Buy</a><a href="/sell.html">Sell</a><a href="/communities.html">Communities</a><a href="/new-construction.html">New Construction</a><a href="/calculators.html">Calculators</a><a href="/closing-costs.html">Closing Costs</a><a href="/questions.html">1,000 Questions &amp; Answers</a><a href="/guides.html">Guides</a><a href="/about.html">About</a><a href="/contact.html#tell-us-your-plans">Contact</a></nav>';
+ if(lang)h.querySelector('.fc-one-lang').appendChild(lang);
+ old.replaceWith(h);
+ var btn=h.querySelector('.fc-one-menu'),nav=h.querySelector('.fc-one-panel');
+ btn.addEventListener('click',function(){nav.hidden=!nav.hidden;btn.setAttribute('aria-expanded',String(!nav.hidden))});
+ document.addEventListener('click',function(e){if(!h.contains(e.target)){nav.hidden=true;btn.setAttribute('aria-expanded','false')}});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'){nav.hidden=true;btn.setAttribute('aria-expanded','false')}});
+ if(!document.getElementById('fc-one-header-style')){
+ var st=document.createElement('style');st.id='fc-one-header-style';st.textContent=[
+ 'html body header.fc-one-header{position:relative!important;inset:auto!important;z-index:9999!important;box-sizing:border-box!important;display:block!important;width:100%!important;min-width:0!important;height:94px!important;min-height:94px!important;max-height:94px!important;margin:0!important;padding:0!important;background-color:#102b43!important;background-image:linear-gradient(90deg,rgba(12,34,51,.99) 0%,rgba(12,34,51,.92) 32%,rgba(12,34,51,.56) 60%,rgba(12,34,51,.06) 100%),url("/assets/florida-costiera-header-sunset.webp")!important;background-size:100% 100%!important;background-repeat:no-repeat!important;background-position:center!important;border-bottom:1px solid rgba(255,255,255,.2)!important;transform:none!important}',
+ 'html body header.fc-one-header .fc-one-inner{box-sizing:border-box!important;width:100%!important;max-width:1450px!important;height:100%!important;padding:0 30px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important}',
+ 'html body header.fc-one-header .fc-one-brand{display:flex!important;align-items:center!important;gap:10px!important;flex:1 1 auto!important;min-width:0!important;text-decoration:none!important;color:#fff!important;background:none!important}',
+ 'html body header.fc-one-header .fc-one-brand img{box-sizing:content-box!important;width:40px!important;height:40px!important;flex:0 0 40px!important;max-width:40px!important;padding:0 9px 0 0!important;border-right:1px solid rgba(255,255,255,.35)!important}',
+ 'html body header.fc-one-header .fc-one-word{display:block!important;min-width:0!important}',
+ 'html body header.fc-one-header .fc-one-word strong{display:block!important;font:400 23px/1.15 Georgia,serif!important;letter-spacing:-.025em!important;white-space:nowrap!important;color:#fff!important}',
+ 'html body header.fc-one-header .fc-one-word em{font-style:normal!important;color:#e5c895!important;font-weight:700!important}',
+ 'html body header.fc-one-header .fc-one-word small{display:block!important;font:600 9px/1.35 Manrope,Arial,sans-serif!important;letter-spacing:.01em!important;color:#fff!important;white-space:nowrap!important}',
+ 'html body header.fc-one-header .fc-one-tools{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:16px!important;flex:0 0 auto!important;width:auto!important;margin:0!important;padding:0!important;transform:none!important}',
+ 'html body header.fc-one-header .fc-one-lang{display:flex!important;align-items:center!important;flex:0 0 auto!important}',
+ 'html body header.fc-one-header .fc-one-lang :is(.sc-language-trigger,.sc-language-label,select){color:white!important;-webkit-text-fill-color:white!important;font:800 14px Manrope,Arial,sans-serif!important;border:0!important;background:transparent!important;box-shadow:none!important}',
+ 'html body header.fc-one-header .fc-one-tools :is(.fc-one-search,.fc-one-phone,.fc-one-menu){display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;gap:5px!important;height:36px!important;min-height:36px!important;width:auto!important;min-width:0!important;padding:0!important;margin:0!important;color:white!important;-webkit-text-fill-color:white!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;text-decoration:none!important}',
+ 'html body header.fc-one-header .fc-one-phone span{color:#fff!important;font:800 14px Manrope,Arial,sans-serif!important;white-space:nowrap!important}',
+ 'html body header.fc-one-header .fc-one-menu{cursor:pointer!important}',
+ 'html body header.fc-one-header .fc-one-panel[hidden]{display:none!important}',
+ 'html body header.fc-one-header .fc-one-panel{position:absolute!important;top:100%!important;right:24px!important;left:auto!important;z-index:10000!important;display:grid!important;grid-template-columns:repeat(2,minmax(130px,1fr))!important;gap:3px!important;box-sizing:border-box!important;width:min(420px,calc(100vw - 30px))!important;max-height:75vh!important;overflow:auto!important;padding:14px!important;background:#102b43!important;border:1px solid #d1b477!important;border-radius:0 0 12px 12px!important;box-shadow:0 12px 25px #0004!important}',
+ 'html body header.fc-one-header .fc-one-panel a{padding:11px 9px!important;color:white!important;font:600 13px Manrope,Arial,sans-serif!important;text-decoration:none!important;border-radius:5px!important}',
+ 'html body header.fc-one-header .fc-one-panel a:hover{background:#284a63!important}',
+ '@media(max-width:760px){html body header.fc-one-header{height:82px!important;min-height:82px!important;max-height:82px!important}html body header.fc-one-header .fc-one-inner{padding:0 10px!important;gap:4px!important}html body header.fc-one-header .fc-one-tools{gap:7px!important}html body header.fc-one-header .fc-one-brand img{width:32px!important;height:32px!important;flex-basis:32px!important}html body header.fc-one-header .fc-one-word strong{font-size:16px!important}html body header.fc-one-header .fc-one-word small{font-size:7px!important}html body header.fc-one-header .fc-one-phone span{display:none!important}html body header.fc-one-header .fc-one-panel{right:10px!important}}'
+ ].join('');document.head.appendChild(st);
  }
- current.replaceWith(next);
- var styleId='fc-unified-home-header-css';
- if(!document.getElementById(styleId)){
-  var style=document.createElement('style');style.id=styleId;
-  style.textContent=[
-  'html body header.fc-unified-home-header{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9999!important;width:100%!important;height:94px!important;min-height:94px!important;max-height:94px!important;box-sizing:border-box!important;margin:0!important;padding:0!important;display:flex!important;align-items:center!important;background:linear-gradient(90deg,rgba(12,34,51,.99),rgba(12,34,51,.90) 32%,rgba(12,34,51,.55) 60%,rgba(12,34,51,.06)),url("/assets/florida-costiera-header-sunset.webp") center/100% 100% no-repeat!important;border-bottom:1px solid #ffffff26!important}',
-  'html body header.fc-unified-home-header .fc-unified-inner{width:100%!important;max-width:1450px!important;margin:0 auto!important;box-sizing:border-box!important;padding:0 30px!important 0 30px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand{display:flex!important;align-items:center!important;gap:9px!important;min-width:0!important;text-decoration:none!important;color:#fff!important;flex:1 1 auto!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand img{width:40px!important;height:40px!important;flex:0 0 40px!important;padding-right:9px!important;border-right:1px solid rgba(255,255,255,.28)!important;box-sizing:content-box!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand strong{display:block!important;font:400 23px/1.15 Georgia,serif!important;color:#fff!important;white-space:nowrap!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand em{font-style:normal!important;font-weight:700!important;color:#e5c895!important}',
-  'html body header.fc-unified-home-header .fc-unified-brand small{display:block!important;font:600 9px/1.4 Manrope,Arial,sans-serif!important;letter-spacing:.04em!important;color:#fff!important;white-space:nowrap!important}',
-  'html body header.fc-unified-home-header .fc-unified-actions{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:17px!important;flex:0 0 auto!important;margin:0!important;transform:none!important}',
-  'html body header.fc-unified-home-header .fc-unified-language,html body header.fc-unified-home-header .sc-language-widget{display:flex!important;align-items:center!important;min-width:88px!important;flex:0 0 auto!important}',
-  'html body header.fc-unified-home-header .sc-language-trigger,html body header.fc-unified-home-header .sc-language-label{font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:white!important;background:transparent!important;border:0!important;box-shadow:none!important}',
-  'html body header.fc-unified-home-header .fc-unified-search,html body header.fc-unified-home-header .fc-unified-phone,html body header.fc-unified-home-header .fc-unified-menu{box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;height:40px!important;min-height:40px!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#fff!important;text-decoration:none!important;white-space:nowrap!important}',
-  'html body header.fc-unified-home-header .fc-unified-phone{gap:5px!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
-  'html body header.fc-unified-home-header .fc-unified-phone span{display:inline!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important}',
-  'html body header.fc-unified-home-header .fc-unified-search svg{width:24px!important;height:24px!important}',
-  'html body header.fc-unified-home-header .fc-unified-menu svg{width:27px!important;height:27px!important}',
-  'html body header.fc-unified-home-header .fc-unified-menu{width:35px!important;min-width:35px!important;cursor:pointer!important}',
-  'html body header.fc-unified-home-header #fc-sitemap-nav-popover[hidden]{display:none!important}',
-  'html body header.fc-unified-home-header #fc-sitemap-nav-popover{position:absolute!important;top:100%!important;right:10px!important;left:auto!important;max-height:calc(100vh - 95px)!important;overflow:auto!important;z-index:10001!important}',
-  'html body header.fc-unified-home-header .sc-sitemap-search{position:absolute!important;top:100%!important;right:10px!important}',
-  '@media(max-width:760px){html body header.fc-unified-home-header{height:82px!important;min-height:82px!important;max-height:82px!important}html body header.fc-unified-home-header .fc-unified-inner{gap:5px!important}html body header.fc-unified-home-header .fc-unified-actions{gap:7px!important}html body header.fc-unified-home-header .fc-unified-phone span{display:none!important}html body header.fc-unified-home-header .fc-unified-brand strong{font-size:16px!important}html body header.fc-unified-home-header .fc-unified-brand small{font-size:7px!important}html body header.fc-unified-home-header .fc-unified-brand img{width:33px!important;height:33px!important;flex-basis:33px!important}html body header.fc-unified-home-header .fc-unified-language,html body header.fc-unified-home-header .sc-language-widget{min-width:75px!important}}'
-  ].join('');document.head.appendChild(style);
- }
- // The Site Map previously had a sticky header and 94px body offset; keep its content offset only.
- document.body.style.paddingTop='94px';
- if(sitemap){
-  var b=next.querySelector('.fc-unified-menu'),panel=next.querySelector('#fc-sitemap-nav-popover');
-  if(b&&panel){
-   b.addEventListener('click',function(){panel.hidden=!panel.hidden;b.setAttribute('aria-expanded',String(!panel.hidden))});
-   document.addEventListener('click',function(e){if(!panel.hidden&&!next.querySelector('.fc-unified-menu').contains(e.target)&&!panel.contains(e.target)){panel.hidden=true;b.setAttribute('aria-expanded','false')}});
-   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){panel.hidden=true;b.setAttribute('aria-expanded','false');b.focus()}});
-  }
- }
+ // Old Site Map used a 94px offset for its former fixed header; prevent a blank strip.
+ if(document.querySelector('main#top')&&document.body.style.paddingTop!=='0px'){document.body.style.paddingTop='0px';}
 }
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render);else render();
 })();
-
-
