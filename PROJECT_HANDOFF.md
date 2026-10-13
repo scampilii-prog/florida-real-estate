@@ -843,3 +843,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Auditoría de siete páginas principales confirmó que Home, Buy, Sell, Contact, Calculators y Site Map tenían Ask Tino conectado al Worker `ask-tino-ai.scampilii.workers.dev`, pero `closing-costs.html` no incluía ni botón ni panel.
 - Se copió exactamente el bloque de estilos, botón, panel y manejadores JS de Ask Tino desde `site-map.html` a `closing-costs.html`; commit `302d5e2`. No se cambió la calculadora ni el encabezado aprobado.
 - Relectura GitHub: un panel `tinoPanel`, un botón `tino-launcher`, función `sendTino`, URL Worker, selector/función de idioma y cabecera compartida presentes. Respuesta del Worker, apertura y responsive requieren prueba real en navegador.
+
+
+## Website 14 — cobertura de idiomas y controles móviles (13 Oct 2026)
+- Inspección estática en nueve páginas (Home, Buy, Sell, Communities, Contact, Site Map, Closing Costs, Calculators, Investment Center): selectores con las cuatro opciones English/Español/Italiano/Português, función `googleTranslateElementInit`, y enlace de carga de Google Translate presentes. Home/Buy/Sell/Site Map/Closing Costs contienen botón de menú y meta viewport responsive.
+- Añadidas pruebas de regresión en `scripts/check-website14.mjs` para cuatro idiomas, inicializador/cargador, meta viewport de siete páginas y panel de Ask Tino en Closing Costs. Commits `f975bac` y ajuste de expresión regular `96e4f64`.
+- Sin modificación de diseño visual. Prueba aún pendiente en navegador real: traducción visible de contenido, persistencia al navegar, navegación de tres rayas en móvil y diseño responsivo en iPhone/iPad. La presencia de código no confirma funcionamiento dinámico; ejecución GitHub Actions sigue sin verificarse.
