@@ -953,13 +953,15 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 
-/* Home and Questions: the three-line navigation opens the approved Site Map page with buttons. */
+/* One navigation action: hamburgers open the approved button-based Site Map, not the retired editorial overlay. */
 (function(){
-  if(!['/','/index.html','/questions','/questions.html','/questions/'].includes(location.pathname))return;
-  document.addEventListener('click',function(e){
-    var b=e.target.closest('button.menu-button,button[data-oc-menu]');
-    if(!b)return;
-    e.preventDefault();e.stopImmediatePropagation();
+  if(/(?:^|\/)site-map(?:\.html)?\/?$/.test(location.pathname))return;
+  window.addEventListener('click',function(event){
+    var target=event.target;
+    var button=target&&target.closest&&target.closest('button[data-oc-menu],button.menu-button,button[onclick*="openMenu"]');
+    if(!button)return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
     window.location.assign('/site-map.html');
   },true);
 })();
