@@ -1007,3 +1007,17 @@ function install(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
+
+/* Pixel-alignment with approved Home header: use Home's brand separator and its full-width tool rail. */
+(function(){function apply(){var header=document.querySelector('header.fc-unified-home-header');if(!header)return;var id='fc-unified-match-actual-home-20261013';if(document.getElementById(id))return;var st=document.createElement('style');st.id=id;st.textContent=[
+'html body header.fc-unified-home-header .fc-unified-inner{padding:0 20px 0 10px!important;max-width:none!important;gap:8px!important}',
+'html body header.fc-unified-home-header .fc-unified-brand{gap:9px!important;overflow:hidden!important}',
+'html body header.fc-unified-home-header .fc-unified-brand img{box-sizing:content-box!important;width:39px!important;height:39px!important;flex:0 0 39px!important;object-fit:contain!important;padding-right:9px!important;border-right:1px solid rgba(255,255,255,.28)!important}',
+'html body header.fc-unified-home-header .fc-unified-brand strong{font:400 23px/1.18 Georgia,serif!important;letter-spacing:-.025em!important}',
+'html body header.fc-unified-home-header .fc-unified-brand small{font:600 9px/1.45 Manrope,Arial,sans-serif!important;letter-spacing:.025em!important}',
+'html body header.fc-unified-home-header .fc-unified-actions{width:332px!important;min-width:332px!important;flex:0 0 332px!important;justify-content:space-between!important;gap:0!important}',
+'html body header.fc-unified-home-header .fc-unified-language{min-width:105px!important;max-width:105px!important;flex:0 0 105px!important}',
+'html body header.fc-unified-home-header .fc-unified-actions .sc-language-widget{min-width:105px!important;max-width:105px!important;flex:0 0 105px!important}',
+'html body header.fc-unified-home-header .fc-unified-phone{gap:6px!important}',
+'@media(max-width:760px){html body header.fc-unified-home-header .fc-unified-inner{padding-right:10px!important}html body header.fc-unified-home-header .fc-unified-actions{width:auto!important;min-width:0!important;flex:0 0 auto!important;gap:7px!important}html body header.fc-unified-home-header .fc-unified-language,html body header.fc-unified-home-header .fc-unified-actions .sc-language-widget{min-width:75px!important;max-width:90px!important;flex:0 0 auto!important}html body header.fc-unified-home-header .fc-unified-brand img{width:32px!important;height:32px!important;flex-basis:32px!important}}'
+].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
