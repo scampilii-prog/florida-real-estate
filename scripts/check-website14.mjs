@@ -91,4 +91,16 @@ for(const pageName of productionPages){
 }
 console.log('Verified relative HTML link targets across '+productionPages.length+' pages ('+linkCount+' links).');
 
+
+// Website 15: ensure approved Questions navigation, contrast, form destination and 1,010 records survive future revisions.
+const questions=read('questions.html'), sharedNav=read('assets/language-dropdown.js');
+assert(questions.includes('id="qaCategories"')&&questions.includes('id="qaSubtopics"'),'Questions topic navigation absent');
+assert(questions.includes('href="#coast-inquiry"')&&questions.includes('id="coast-inquiry"'),'Questions form same-page link or target missing');
+assert(questions.includes('id="fc-qa-hover-contrast-fix-20261013"'),'Questions hover contrast fix absent');
+assert(questions.includes('id="fc-questions-inquiry-card-20261013"'),'Questions white/gold inquiry card absent');
+assert(questions.includes('id="fc-inquiry-anchor-alignment-20261013"'),'Questions exact form anchor alignment absent');
+assert(sharedNav.includes("fcCompactBound")&&sharedNav.includes("closeCompact"),'Questions compact-menu controller absent');
+assert(questions.includes('Search all 1,010 questions'),'Questions collection headline absent');
+console.log('Website 15 Questions navigation and form safeguards present.');
+
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
