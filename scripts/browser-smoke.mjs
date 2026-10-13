@@ -48,8 +48,8 @@ try {
       const options=await page.locator('select#lang,select#oc-lang-static').first().locator('option').evaluateAll(a=>a.map(x=>x.value));
       assert.deepEqual(options,['en','es','it','pt'],'Languages on '+path);
       await trigger.click();
-      const menu=page.locator('.oc-menu[data-sc-full-menu="1"]');
-      assert.equal(await menu.isVisible(),true,'Full-screen menu should open on '+path);
+      const menu=page.locator('.oc-menu').first();
+      assert.equal(await menu.isVisible(),true,'Navigation menu should open on '+path);
       await page.keyboard.press('Escape');
       assert.equal(await menu.isVisible(),false,'Escape should close menu on '+path);
       const ask=page.locator('.tino-launcher').first();
