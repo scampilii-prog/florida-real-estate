@@ -965,3 +965,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - El usuario mostró capturas reales de Home: menú editorial de pantalla completa «Discover your Florida», con banner fotográfico y enlaces en seis secciones, mientras Questions venía usando menú lateral antiguo «Explore» y después una redirección a site-map.html. Son tres comportamientos distintos. Se adopta el menú editorial de Home en Questions, conservando site-map.html como página independiente con botones.
 - Commit a118d04 elimina la excepción de Questions en installFullScreenMenu() de assets/language-dropdown.js, de modo que reutiliza el mismo componente editorial que Home. Commit bf97570 actualiza versión del script en Questions para evitar caché anterior.
 - Commits d02e378 y 1d25c55 actualizan las pruebas estructurales y del navegador a la navegación editorial común; browser QA es manual y debe ejecutarse antes de certificar el resultado visual. No se modificó el diseño de Site Map ni Home.
+
+
+## Nuevo Website 15 — avance SEO y Google (13 Oct 2026)
+- Inspección directa del árbol GitHub: 50 archivos .html, de los que 48 son páginas públicas. sitemap.xml tiene exactamente 48 loc únicos, sin archivos inexistentes. Los dos excluidos son Florida-Closing-Timeline-OFFLINE.html y calculators_seis_funcionales_footer_aprobado.html.
+- robots.txt anuncia el sitemap oficial y permite rastreo.
+- Commit 18387893: añadido control permanente en scripts/check-website14.mjs para exigir correspondencia exacta entre las 48 páginas públicas y sitemap.xml, sin duplicados, y anuncio correcto en robots.txt. GitHub Actions structural QA run 38463504778 completed/success.
+- Las URL públicas de Cloudflare aún resultan inaccesibles a la herramienta web en esta sesión; no inferir caída ni declarar verificación Google. No se envió sitemap a Search Console. GSC Wizard fue ofrecido como posibilidad para conectar Search Console y GA4 cuando el propietario tenga acceso. Es opcional y aún no conectado.
