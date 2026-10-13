@@ -945,3 +945,13 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 'html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-search-btn svg,html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-menu-button svg{width:26px!important;height:26px!important}',
 '@media(max-width:860px){html body header.sc-sitemap-header .sc-sitemap-tools{gap:7px!important}html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone .fc-sitemap-phone-label{display:none!important}html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-widget{min-width:88px!important}}'
 ].join('');document.head.appendChild(css)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
+/* Final header positioning: anchor controls to right edge, no flex reflow when a menu opens. */
+(function(){function apply(){if(document.getElementById('fc-special-controls-fixed-position-20261013'))return;var st=document.createElement('style');st.id='fc-special-controls-fixed-position-20261013';st.textContent=[
+'html body header.sc-sitemap-header,html body header.sc-cc-header{position:relative!important;box-sizing:border-box!important;min-height:94px!important;height:94px!important;max-height:94px!important}',
+'html body header.sc-sitemap-header .sc-sitemap-tools{position:absolute!important;top:50%!important;right:clamp(16px,2vw,32px)!important;left:auto!important;transform:translateY(-50%)!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:14px!important;white-space:nowrap!important}',
+'html body header.sc-cc-header .sc-cc-nav{position:absolute!important;top:50%!important;right:clamp(16px,2vw,32px)!important;left:auto!important;transform:translateY(-50%)!important;margin:0!important;display:flex!important;align-items:center!important;gap:14px!important}',
+'html body header.sc-cc-header .oc-lang{position:absolute!important;top:50%!important;right:270px!important;left:auto!important;transform:translateY(-50%)!important;margin:0!important}',
+'@media(max-width:820px){html body header.sc-sitemap-header .sc-sitemap-tools{gap:7px!important;right:10px!important}html body header.sc-cc-header .sc-cc-nav{gap:7px!important;right:10px!important}html body header.sc-cc-header .oc-lang{right:128px!important}}',
+'@media(max-width:700px){html body header.sc-sitemap-header,html body header.sc-cc-header{height:82px!important;min-height:82px!important;max-height:82px!important}}'
+].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
