@@ -26,15 +26,15 @@ try {
     await page.locator('#qaSearch').fill('Boca Grande');
     assert.equal(await page.locator('#qaCount').innerText().then(s=>s.includes('1,010')),true);
     console.log(cfg.name+' questions library: eight topics, subtopics, pagination and search OK');
-    // Questions hamburger must open the approved full Site Map page, not the retired Explore drawer.
+    // Questions uses the same editorial overlay menu as Home.
     const card=await page.locator('#coast-inquiry .coast-wrap').evaluate(x=>({bg:getComputedStyle(x).backgroundColor,border:getComputedStyle(x).borderTopWidth}));
     assert.equal(card.bg,'rgb(255, 255, 255)','Inquiry card white');
     assert.notEqual(card.border,'0px','Inquiry card bordered');
     await page.locator('[data-oc-menu]').first().click();
-    await page.waitForURL(/site-map(?:\.html)?(?:#.*)?$/, {timeout:5000});
-    console.log(cfg.name+' Questions hamburger navigates to approved Site Map OK');
-    await page.goto(base+'/questions.html',{waitUntil:'load'});
-    await page.waitForSelector('#qaCategories .qa-filter');
+    assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),true,'Home editorial menu opens on Questions');
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('.oc-menu[data-sc-full-menu="1"]').isVisible(),false,'Editorial menu closes with Escape');
+    console.log(cfg.name+' Questions uses Home editorial menu OK');
     await page.locator('#qaCategories .qa-filter').first().hover();
     const hoverColors=await page.locator('#qaCategories .qa-filter').first().evaluate(x=>({
       title:getComputedStyle(x.querySelector('.qa-filter-words strong')).color,
