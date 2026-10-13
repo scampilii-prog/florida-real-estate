@@ -61,6 +61,15 @@ for(const pageName of productionPages){
   }
  }
 }
+// Check that external links opening a new tab declare an explicit rel attribute.
+for(const pageName of productionPages){
+ const page=read(pageName);
+ for(const match of page.matchAll(/<a\\b[^>]*>/gi)){
+  if(/\\btarget\\s*=\\s*["']_blank["']/i.test(match[0])){
+   assert(/\\brel\\s*=/.test(match[0]),pageName+' external new-tab link missing rel');
+  }
+ }
+}
 console.log('Verified relative HTML link targets across '+productionPages.length+' pages ('+linkCount+' links).');
 
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
