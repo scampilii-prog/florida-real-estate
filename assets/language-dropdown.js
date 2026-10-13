@@ -175,21 +175,6 @@
 
   function installFullScreenMenu(){
     // Questions retains its approved compact slide-out menu; do not replace it with the site-wide editorial megamenu.
-    if(['/questions','/questions.html','/questions/'].includes(location.pathname)){
-      // The owner approved the actual Site Map page, not the retired "Explore" drawer.
-      var trigger=document.querySelector('.oc-shell [data-oc-menu]');
-      if(trigger&&!trigger.dataset.fcSiteMapBound){
-        trigger.dataset.fcSiteMapBound='1';
-        trigger.setAttribute('aria-label','Open Site Map');
-        trigger.setAttribute('title','Site Map');
-        trigger.addEventListener('click',function(event){
-          event.preventDefault();
-          event.stopImmediatePropagation();
-          window.location.assign('site-map.html');
-        },true);
-      }
-      return;
-    }
     if(document.querySelector('header.site-header[data-fc-shared-special]'))return;
     var menu=document.querySelector('.oc-shell .oc-menu');
     if(!menu){
