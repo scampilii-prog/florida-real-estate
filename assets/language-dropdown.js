@@ -855,3 +855,15 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Compact language option spacing 20261013 */
 (function(){function apply(){if(document.getElementById('fc-compact-language-options'))return;var el=document.createElement('style');el.id='fc-compact-language-options';el.textContent='html body .sc-language-options .sc-language-option{padding-top:7px!important;padding-bottom:7px!important;line-height:1.25!important;margin-top:0!important;margin-bottom:0!important}html body .sc-language-options{padding-top:4px!important;padding-bottom:4px!important;row-gap:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
+/* FINAL uniform transparent header controls 20261013 */
+(function(){function apply(){if(document.getElementById('fc-transparent-controls-20261013'))return;var el=document.createElement('style');el.id='fc-transparent-controls-20261013';el.textContent=[
+'html body header :is(.sc-language-widget,.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important;outline-offset:3px!important;border-radius:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}',
+'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 2px 4px #0009!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
+'html body header .sc-language-trigger .sc-language-label{font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
+'html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
+'html body header .sc-language-options{background:#24445e!important;border:1px solid #9aabb7!important;border-radius:12px!important;box-shadow:0 12px 24px #0004!important}',
+'html body header .sc-language-options .sc-language-option{font-size:16px!important;line-height:1.25!important;padding:7px 10px!important}',
+'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone):hover,html body header .sc-language-trigger:hover{background:transparent!important;border:0!important;box-shadow:none!important}',
+'@media(max-width:720px){html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
+].join('');document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
