@@ -861,3 +861,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Revisado `assets/fc-canonical-header-menu.js`, el manejador compartido de menú para los dos encabezados especiales. Ya disponía de `aria-expanded`, `aria-controls`, cierre al hacer clic fuera y cierre con Escape.
 - Mejora de accesibilidad: al cerrar el menú con tecla Escape, devuelve foco al botón que lo abrió. Commit `fa93a05`; únicamente lógica JavaScript, sin cambios visuales a las páginas o header.
 - Prueba funcional en navegador, dispositivos móviles y verificación del despliegue Cloudflare siguen pendientes; revisión de fuente no equivale a prueba real.
+
+
+## Website 14 — navegación y QA final, 13 Oct 2026
+- Comprobado de nuevo que Site Map y Closing Costs tienen exactamente el mismo HTML de encabezado (1087 caracteres cada uno).
+- En Home se agregó cierre del menú lateral con tecla Escape, con retorno de foco al botón de menú y actualización de su estado accesible ya existente. Commit `30b1b07`. No se alteró el diseño ni las funciones existentes del botón.
+- GitHub workflow de comprobación estructural continúa sin resultado verificable por el conector disponible, que solo devuelve ejecuciones de pull request para búsquedas por commit; el repositorio se actualiza por push. No afirmar pruebas pasadas.
+- Pendiente prueba real de navegador/Cloudflare en escritorio y móvil, idiomas, Ask Tino y correo, además de ejecutar la comprobación integral.
