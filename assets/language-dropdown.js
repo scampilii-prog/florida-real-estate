@@ -174,6 +174,7 @@
   css += 'html body footer.footer .footer-inner a.sc-inquiry-footer-link{display:block!important;color:#e0be7b!important;font-weight:750!important;text-decoration:none!important;margin-top:9px!important}html body footer.footer .footer-inner a.sc-inquiry-footer-link:hover{text-decoration:underline!important;text-underline-offset:4px!important}';
 
   function installFullScreenMenu(){
+    if(document.querySelector('header.site-header[data-fc-shared-special]'))return;
     var menu=document.querySelector('.oc-shell .oc-menu');
     if(!menu){
       var toggle=document.querySelector('.menu-button,button[onclick*="openMenu"]');
