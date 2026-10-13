@@ -36,4 +36,31 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
  assert(page.includes('async function sendTino(event)'),name+' missing Ask Tino submission handler');
  assert(page.includes('id="tinoPanel"'),name+' missing Ask Tino panel');
 }
+
+// Verify relative HTML destinations and same-document hash links without changing the site.
+// Run on all production pages, excluding the offline worksheet and historical demo.
+import {readdirSync} from 'node:fs';
+const productionPages=readdirSync(new URL('../',import.meta.url))
+ .filter(n=>n.endsWith('.html')&&!['Florida-Closing-Timeline-OFFLINE.html','calculators_seis_funcionales_footer_aprobado.html'].includes(n));
+const validPages=new Set(productionPages);
+let linkCount=0;
+for(const pageName of productionPages){
+ const page=read(pageName);
+ const ids=new Set([...page.matchAll(/\bid\s*=\s*["']([^"']+)["']/gi)].map(m=>m[1]));
+ for(const match of page.matchAll(/\bhref\s*=\s*["']([^"']+)["']/gi)){
+  const value=match[1].replace(/&amp;/g,'&');
+  if(/^(https?:|mailto:|tel:|javascript:|data:|\/\/)/i.test(value))continue;
+  const [rawPath,fragment]=value.split('#');
+  const filePath=rawPath.split('?')[0];
+  if(filePath && !filePath.startsWith('/') && filePath.endsWith('.html')){
+   assert(validPages.has(filePath),pageName+' links to missing file '+filePath);
+   linkCount++;
+  }
+  if(fragment && (!filePath||filePath===pageName) && fragment!=='top'){
+   assert(ids.has(decodeURIComponent(fragment)),pageName+' links to missing section #'+fragment);
+  }
+ }
+}
+console.log('Verified relative HTML link targets across '+productionPages.length+' pages ('+linkCount+' links).');
+
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
