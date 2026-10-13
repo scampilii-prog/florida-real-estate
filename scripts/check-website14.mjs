@@ -37,6 +37,15 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
  assert(page.includes('id="tinoPanel"'),name+' missing Ask Tino panel');
 }
 
+// Every key page must retain four named languages and translation wiring.
+for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',contact],['Calculators',calculators],['Site Map',sitemap],['Closing Costs',closing]]){
+ for(const [code,label] of [['en','English'],['es','Español'],['it','Italiano'],['pt','Português']]){
+  assert(new RegExp('<option\\\\b[^>]*value="'+code+'"[^>]*>'+label+'</option>').test(page),name+' missing language '+label);
+ }
+ assert(page.includes('googleTranslateElementInit') && page.includes('translate.google.com/translate_a/element.js'),name+' missing translation wiring');
+ assert(page.includes('name="viewport"'),name+' missing responsive viewport');
+}
+assert(closing.includes('id="tinoPanel"')&&closing.includes('async function sendTino(event)'),'Closing Costs Ask Tino missing');
 // Inquiry forms must be wired to a submit handler and use the official inbox.
 for(const [name,page] of [['Contact',contact],['Calculators',calculators],['Seller Closing Costs',read('seller-closing-costs.html')]]){
  assert(page.includes('id="coast-lead-form"'),name+' missing coastal inquiry form');
