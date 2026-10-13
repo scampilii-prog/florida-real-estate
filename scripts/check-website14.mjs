@@ -26,4 +26,14 @@ for(const [name,page] of [['Buy',buy],['Sell',sell]]){
  assert.equal((page.match(/<footer\b/g)||[]).length,1,name+' footer count');
 }
 assert(buy.includes('id="fc-buy-viewport-repair-20261013"'),'Buy full-width repair missing');
+const calculators=read('calculators.html'), investment=read('investment-center.html');
+const contact=read('contact.html');
+for(const [name,page,anchor] of [['Buyer Closing Costs',calculators,'buyer-costs'],['Investment Calculator',investment,'investment-calculator']]){
+ assert(page.includes('id="'+anchor+'"'),name+' destination anchor missing');
+}
+for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',contact],['Calculators',calculators],['Investment Center',investment]]){
+ assert(page.includes('function toggleTino()'),name+' missing Ask Tino open handler');
+ assert(page.includes('async function sendTino(event)'),name+' missing Ask Tino submission handler');
+ assert(page.includes('id="tinoPanel"'),name+' missing Ask Tino panel');
+}
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
