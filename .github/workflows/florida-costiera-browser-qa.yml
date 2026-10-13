@@ -1,0 +1,31 @@
+name: Florida Costiera browser QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'site-map.html'
+      - 'closing-costs.html'
+      - 'assets/fc-canonical-header-menu.js'
+      - 'scripts/browser-smoke.mjs'
+      - '.github/workflows/florida-costiera-browser-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependency
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Launch local website
+        run: python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/florida-qa-http.log 2>&1 &
+      - name: Test desktop and mobile interactions
+        run: node scripts/browser-smoke.mjs
