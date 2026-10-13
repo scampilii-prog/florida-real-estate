@@ -849,3 +849,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Inspección estática en nueve páginas (Home, Buy, Sell, Communities, Contact, Site Map, Closing Costs, Calculators, Investment Center): selectores con las cuatro opciones English/Español/Italiano/Português, función `googleTranslateElementInit`, y enlace de carga de Google Translate presentes. Home/Buy/Sell/Site Map/Closing Costs contienen botón de menú y meta viewport responsive.
 - Añadidas pruebas de regresión en `scripts/check-website14.mjs` para cuatro idiomas, inicializador/cargador, meta viewport de siete páginas y panel de Ask Tino en Closing Costs. Commits `f975bac` y ajuste de expresión regular `96e4f64`.
 - Sin modificación de diseño visual. Prueba aún pendiente en navegador real: traducción visible de contenido, persistencia al navegar, navegación de tres rayas en móvil y diseño responsivo en iPhone/iPad. La presencia de código no confirma funcionamiento dinámico; ejecución GitHub Actions sigue sin verificarse.
+
+
+## Website 14 — cierre de accesibilidad del menú Home (13 Oct 2026)
+- Intento de abrir sitio publicado desde herramienta web no accesible: no afirmar QA móvil/visual completada.
+- Auditoría de encabezados principales detectó que el botón hamburger en Home tenía `aria-label` pero no informaba `aria-expanded` ni su panel `aria-controls`; se agregaron estos atributos y actualización de `aria-expanded` en `openMenu()`/`closeMenu()`, sin alterar estilos o flujo. Commit `5e2b4ed`.
+- Siguen pendientes revisión visual y pruebas reales de navegación en iPhone/iPad/desktop, traducción, correos y Ask Tino. No interpretar pruebas de código como confirmación de despliegue Cloudflare.
