@@ -747,3 +747,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Auditoría del código fuente de Home, Communities, Buy, Sell, Contact, Site Map y Closing Costs: las siete páginas ofrecen English, Español, Italiano y Português y cargan el script de identidad/selector compartido.
 - Error comprobado: Closing Costs mostraba selector EN/ES/IT/PT pero no incluía Google Translate ni controlador de cambio, a diferencia de Site Map. Se conectó el selector a Google Translate conservando preferencia local y cookie de idioma, sin cambiar encabezado ni calculadoras. Commit `0131d98`.
 - Verificación estática: Closing Costs conserva encabezado compartido, enlace a las dos calculadoras y nuevo inicializador de idioma. Traducción real y menús de todas las páginas requieren prueba en navegador (servicio externo y despliegue Cloudflare no verificados).
+
+
+## Website 14 — auditoría parcial de formularios, calculadoras y Ask Tino (13 Oct 2026)
+- Comprobados por lectura de código Home, Buy, Sell, Contact, Calculators, Seller Closing Costs, Investment Center y script global de idiomas. Los manejadores de Ask Tino (`toggleTino`, `sendTino`) y su panel existen en las seis páginas principales examinadas; esto no certifica respuesta del servicio externo.
+- Verificada existencia de los destinos `calculators.html#buyer-costs` e `investment-center.html#investment-calculator`. Los formularios de contacto previamente documentados utilizan `mailto:` y requieren una aplicación de correo; no se representan como envíos automáticos a un servidor.
+- Se amplió `scripts/check-website14.mjs` para vigilar ambos destinos de calculadoras y la estructura de Ask Tino en seis páginas. Commit `ab88c3d`. Validación estática de condiciones comprobada por relectura de archivos; la ejecución mediante Node y las pruebas funcionales reales aún están pendientes.
+- No se modificaron fórmulas, interfaces, fotografías ni formularios. Pendiente revisión de cálculos reales, correo, conectividad de Ask Tino y verificación en Cloudflare y móviles.
