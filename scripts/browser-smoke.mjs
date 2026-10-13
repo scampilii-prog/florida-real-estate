@@ -59,6 +59,18 @@ try {
       assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),false);
       console.log(cfg.name+' '+path+' menu, languages and Ask Tino OK');
     }
+    await page.goto(base+'/questions.html',{waitUntil:'load',timeout:30000});
+    await page.waitForSelector('#qaCategories .qa-filter');
+    assert.equal(await page.locator('#qaCategories .qa-filter').count(),8);
+    await page.locator('#qaCategories .qa-filter').first().click();
+    assert.equal(await page.locator('#qaSubtopics .qa-chip').count(),3);
+    assert.equal(await page.locator('#qaList details').count(),12);
+    await page.locator('#qaMore').click();
+    assert.equal(await page.locator('#qaList details').count(),24);
+    await page.locator('#qaReset').click();
+    await page.locator('#qaSearch').fill('Boca Grande');
+    assert.equal(await page.locator('#qaCount').innerText().then(s=>s.includes('1,010')),true);
+    console.log(cfg.name+' questions library: eight topics, subtopics, pagination and search OK');
     await page.close();
   }
 }finally{
