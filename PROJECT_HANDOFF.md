@@ -785,3 +785,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - La búsqueda web localizó la ficha oficial publicada de Gasparilla Island State Park (`floridastateparks.org/parks-and-trails/gasparilla-island-state-park`), páginas oficiales de HCA Florida Englewood Hospital bajo `hcafloridahealthcare.com/locations/englewood-hospital/` y la sección oficial del gobierno de Punta Gorda `ci.punta-gorda.fl.us/government`. No se sustituyen los enlaces del sitio, porque la evidencia disponible no confirma que las direcciones originales sean incorrectas.
 - La apertura directa de algunas webs sigue devolviendo 403 al acceso automatizado, aunque motores de búsqueda muestran contenido indexado. Distinguir entre bloqueo de rastreo y enlace roto.
 - La revisión visual funcional de Cloudflare, móviles, formularios y calculadoras sigue pendiente y no puede darse por completada con esta comprobación de fuentes.
+
+
+## Website 14 — GitHub Actions structural QA (13 Oct 2026)
+- Se creó `.github/workflows/florida-costiera-qa.yml` (commit `dd54070`) para ejecutar `node scripts/check-website14.mjs` automáticamente al modificar HTML, el script o el workflow en la rama main, y admitir `workflow_dispatch`.
+- Incluye verificación estática de estructura de cabeceras, anclas, rutas HTML relativas y wiring de Ask Tino; no prueba cálculo numérico, integraciones externas, diseño visual ni comportamiento móvil.
+- **Pendiente:** confirmar que GitHub Actions tenga permisos/habilitación y que el primer workflow pase. La consulta de ejecuciones no estuvo disponible mediante la conexión, por lo que no se afirma resultado positivo. Si falla, corregir el script o enlaces rotos reales sin alterar diseño aprobado.
