@@ -867,3 +867,25 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone):hover,html body header .sc-language-trigger:hover{background:transparent!important;border:0!important;box-shadow:none!important}',
 '@media(max-width:720px){html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
 ].join('');document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
+/* External website link advisory - Florida Costiera */
+(function(){
+ function install(){
+  if(document.getElementById('fc-external-link-advisory'))return;
+  var style=document.createElement('style');
+  style.id='fc-external-link-advisory';
+  style.textContent='.fc-external-link-tip{position:fixed;z-index:2147483600;max-width:min(290px,calc(100vw - 24px));padding:10px 14px;background:#102b43;color:#fff;border:1px solid #d5b47b;border-radius:8px;box-shadow:0 8px 25px #0004;font:700 12px/1.5 Manrope,Arial,sans-serif;pointer-events:none;visibility:hidden;opacity:0;transition:opacity .12s ease}.fc-external-link-tip[data-open="true"]{visibility:visible;opacity:1}@media(hover:none){.fc-external-link-tip{display:none}}';
+  document.head.appendChild(style);
+  var tip=document.createElement('div');tip.className='fc-external-link-tip';tip.id='fc-external-link-tip';tip.setAttribute('role','tooltip');tip.textContent='External website — opens in a new tab';document.body.appendChild(tip);
+  function qualifies(a){if(!a||a.hasAttribute('download'))return false;var u;try{u=new URL(a.href,location.href)}catch(e){return false}return /^https?:$/.test(u.protocol)&&u.hostname!==location.hostname&&!/^(www\.)?floridacostiera\.com$/i.test(u.hostname);}
+  document.querySelectorAll('a[href]').forEach(function(a){if(!qualifies(a))return;a.target='_blank';a.rel='noopener noreferrer';a.dataset.fcExternal='true';a.setAttribute('aria-description','External website; opens in a new tab');});
+  function position(a){var b=a.getBoundingClientRect(),width=tip.offsetWidth||275,left=Math.min(Math.max(12,b.left),innerWidth-width-12);tip.style.left=left+'px';var y=b.bottom+10;if(y+tip.offsetHeight>innerHeight-8)y=Math.max(8,b.top-tip.offsetHeight-10);tip.style.top=y+'px'}
+  var current=null;
+  document.addEventListener('pointerover',function(e){var a=e.target.closest&&e.target.closest('a[data-fc-external]');if(!a||e.pointerType==='touch')return;current=a;tip.dataset.open='true';position(a)});
+  document.addEventListener('pointerout',function(e){if(current&&(!e.relatedTarget||!current.contains(e.relatedTarget))){tip.dataset.open='false';current=null}});
+  document.addEventListener('focusin',function(e){var a=e.target.closest&&e.target.closest('a[data-fc-external]');if(!a)return;current=a;tip.dataset.open='true';position(a)});
+  document.addEventListener('focusout',function(){tip.dataset.open='false';current=null});
+  new MutationObserver(function(mutations){mutations.forEach(function(m){m.addedNodes.forEach(function(node){if(node.nodeType!==1)return;var links=node.matches&&node.matches('a[href]')?[node]:Array.from(node.querySelectorAll?node.querySelectorAll('a[href]'):[]);links.forEach(function(a){if(qualifies(a)){a.target='_blank';a.rel='noopener noreferrer';a.dataset.fcExternal='true';a.setAttribute('aria-description','External website; opens in a new tab')}})})})}).observe(document.body,{childList:true,subtree:true});
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
