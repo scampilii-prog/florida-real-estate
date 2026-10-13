@@ -805,3 +805,18 @@ function apply(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+
+/* Final special page controls polish 20261013 */
+(function(){function apply(){
+ if(document.getElementById('fc-special-controls-final'))return;
+ var style=document.createElement('style');style.id='fc-special-controls-final';
+ style.textContent=[
+ 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-widget{display:inline-flex!important;align-items:center!important;width:108px!important;min-width:108px!important;max-width:108px!important;flex:0 0 108px!important;position:relative!important}',
+ 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-trigger{width:108px!important;min-width:108px!important;max-width:108px!important;height:36px!important;min-height:36px!important;box-sizing:border-box!important;padding:0 10px!important;display:flex!important;justify-content:space-between!important;align-items:center!important;background:#21445f!important;border:1px solid #9db2c0!important;border-radius:7px!important;color:white!important;font:700 12px Manrope,Arial,sans-serif!important;white-space:nowrap!important}',
+ 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-options{box-sizing:border-box!important;width:108px!important;min-width:108px!important;max-width:108px!important;left:0!important;right:auto!important}',
+ 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-label{display:inline-block!important;white-space:nowrap!important;font-size:12px!important}',
+ 'html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header a.fc-sitemap-phone{height:36px!important;min-height:36px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;padding:5px 10px!important;border:1px solid #9db2c0!important;border-radius:7px!important;background:#21445f!important;color:#fff!important;font:700 12px Manrope,Arial,sans-serif!important;box-sizing:border-box!important;white-space:nowrap!important}',
+ 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) :is(.sc-cc-search,.sc-sitemap-search-btn,.sc-cc-menu,.sc-sitemap-menu-button){height:36px!important;min-height:36px!important;width:36px!important;min-width:36px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;color:white!important;box-sizing:border-box!important}',
+ '@media(max-width:720px){html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-widget,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-trigger,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-options{width:108px!important;min-width:108px!important;max-width:108px!important}html body header.sc-cc-header .sc-cc-call span,html body header.sc-sitemap-header .fc-sitemap-phone b{display:none!important}html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header a.fc-sitemap-phone{width:36px!important;min-width:36px!important;padding:5px!important}}'
+ ].join('');document.head.appendChild(style);
+}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
