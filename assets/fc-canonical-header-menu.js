@@ -16,7 +16,7 @@ function init(){
  function close(){panel.hidden=true;button.setAttribute('aria-expanded','false')}
  button.addEventListener('click',function(){var open=panel.hidden;panel.hidden=!open;button.setAttribute('aria-expanded',String(open))});
  document.addEventListener('click',function(e){if(!header.contains(e.target)&&!panel.contains(e.target))close()});
- document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden){close();button.focus()}});
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
