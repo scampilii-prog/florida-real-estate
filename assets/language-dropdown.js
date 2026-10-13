@@ -966,3 +966,23 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     window.location.assign('/site-map.html');
   },true);
 })();
+
+/* Florida Costiera: single accessible Back to Top control across public pages. */
+(function(){
+ function init(){
+  var candidates=[...document.querySelectorAll('#floatingLeftBackTop, .back-to-top, .back-to-top-button, [aria-label="Back to top"], a.top.notranslate')];
+  var existing=candidates.find(e=>e.offsetParent!==null)||candidates[0];
+  if(existing) {
+   existing.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,left:0,behavior:'smooth'});},true);
+   return;
+  }
+  var style=document.createElement('style');
+  style.id='fc-universal-backtop-style';
+  style.textContent='#fc-universal-backtop{position:fixed;z-index:2147483000;left:18px;bottom:20px;display:flex;align-items:center;gap:10px;background:#071b2b;color:#fff;border:2px solid #fff;border-radius:100px;padding:6px 17px 6px 6px;box-shadow:0 5px 18px #0004;font:700 12px/1.2 Manrope,Arial,sans-serif;cursor:pointer}#fc-universal-backtop .fc-arrow-disc{display:grid;place-items:center;background:#ecc478;color:#071b2b;border-radius:50%;width:34px;height:34px;font-size:21px;font-weight:900}#fc-universal-backtop:hover,#fc-universal-backtop:focus-visible{background:#153a52;outline-offset:3px}@media(max-width:600px){#fc-universal-backtop{left:10px;bottom:12px}}';
+  document.head.appendChild(style);
+  var btn=document.createElement('button');btn.type='button';btn.id='fc-universal-backtop';btn.setAttribute('aria-label','Back to top');btn.innerHTML='<span class="fc-arrow-disc" aria-hidden="true">↑</span><span>Back to Top</span>';
+  btn.addEventListener('click',function(){window.scrollTo({top:0,left:0,behavior:'smooth'});});
+  document.body.appendChild(btn);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
