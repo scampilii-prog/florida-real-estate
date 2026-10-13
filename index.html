@@ -800,7 +800,7 @@ body .coast-inquiry h2{font-size:clamp(30px,3.25vw,42px)!important;font-weight:6
 <input placeholder="Search properties, communities, Q&amp;A..." type="text"/>
 </div>
 <!-- We will replace this with the new business number -->
-<button aria-label="Open menu" class="menu-button" onclick="openMenu()">
+<button aria-label="Open menu" aria-controls="sideMenu" aria-expanded="false" class="menu-button" onclick="openMenu()">
           ☰
         </button>
 </div>
@@ -1030,12 +1030,14 @@ window.location.href='mailto:sabatino@floridacostiera.com?subject='+encodeURICom
       document
         .getElementById("sideMenu")
         .classList.add("open");
+      document.querySelector(".menu-button")?.setAttribute("aria-expanded","true");
     }
 
     function closeMenu() {
       document
         .getElementById("sideMenu")
         .classList.remove("open");
+      document.querySelector(".menu-button")?.setAttribute("aria-expanded","false");
     }
 function toggleSearch() {
   document
