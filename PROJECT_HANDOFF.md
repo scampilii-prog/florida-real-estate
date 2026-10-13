@@ -935,3 +935,13 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit 36d6ede agregó nuevos checks estructurales para el destino del formulario, estilos hover, contenedor blanco y controlador de menú. Última ejecución estructural asociada: 38459268344, estado queued al consultar; revisar conclusión.
 - Prueba pública mediante herramienta web no accesible; las capturas de usuario sí muestran despliegue de etapas previas, no certifican los últimos commits. Servicios externos pendientes: Worker Ask Tino y veracidad, Cloudflare deployment/redirect, entrega de correo, Google Translate real, navegador físico iPhone/iPad, propiedades OneHome, reserva SimplyBook.
 - Los controles del formulario Questions usan mailto; no afirmar envío automático ni recepción del correo. No modificar OceanFL.
+
+
+## Website 15 — auditoría de cierre, 13 Oct 2026
+- GitHub main verificado. Última QA estructural del commit 2b099792 terminó success. El controlador específico del menú Questions (5ccabd4), prueba estructural ampliada (36d6ede) y últimas correcciones de diseño están en el repositorio.
+- El usuario aprobó el marco dorado del formulario; luego solicitó evitar un segundo botón Ask Tino y la navegación forzada al refrescar. Commit 2b099792 conserva una sola CTA Explore your ideal coast y eliminó el desplazamiento automático JS durante load. Si #coast-inquiry permanece en URL, el navegador aún puede aplicar navegación nativa al hash.
+- Commit c5c3519: browser-smoke ampliado para probar botón único, destino de la tarjeta y alineación bajo el header en escritorio y móvil. Aún NO ejecutado: browser QA es workflow_dispatch manual, sin ejecución nueva desde el arreglo del menú.
+- Consultado árbol completo repo (98 elementos): no hay código ni configuración del Cloudflare Worker ask-tino-ai. La interfaz web apunta a ese servicio; no pueden auditarse prompts ni exactitud interna sin permiso al Worker.
+- Comprobación del dominio mediante herramienta web devolvió inaccesible a esa herramienta, no prueba de caída. Las capturas Chrome aportadas por el usuario prueban que versiones anteriores del sitio sí se cargaron, pero no paridad última con main.
+- Pendientes antes de certificación completa: nueva browser QA manual; paridad de publicación Cloudflare; traducción externa EN/ES/IT/PT; entrega de correo real; SimplyBook, OneHome y Worker; pruebas físicas Safari/iPad/iPhone. No presentar como 100% listo hasta verificar.
+- Mantener browser QA solo manual para evitar aluvión de emails; structural QA sigue automático.
