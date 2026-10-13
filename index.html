@@ -1039,6 +1039,13 @@ window.location.href='mailto:sabatino@floridacostiera.com?subject='+encodeURICom
         .classList.remove("open");
       document.querySelector(".menu-button")?.setAttribute("aria-expanded","false");
     }
+    document.addEventListener("keydown", function(event) {
+      const menu = document.getElementById("sideMenu");
+      if (event.key === "Escape" && menu?.classList.contains("open")) {
+        closeMenu();
+        document.querySelector(".menu-button")?.focus();
+      }
+    });
 function toggleSearch() {
   document
     .getElementById("searchBox")
