@@ -945,3 +945,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Comprobación del dominio mediante herramienta web devolvió inaccesible a esa herramienta, no prueba de caída. Las capturas Chrome aportadas por el usuario prueban que versiones anteriores del sitio sí se cargaron, pero no paridad última con main.
 - Pendientes antes de certificación completa: nueva browser QA manual; paridad de publicación Cloudflare; traducción externa EN/ES/IT/PT; entrega de correo real; SimplyBook, OneHome y Worker; pruebas físicas Safari/iPad/iPhone. No presentar como 100% listo hasta verificar.
 - Mantener browser QA solo manual para evitar aluvión de emails; structural QA sigue automático.
+
+
+## Website 15 — continuación final: caché Questions (13 octubre 2026)
+- Se verificaron runs estructurales completados/success 38459830227 (2b099792), 38459462239 y 38459268344. El browser smoke sigue manual; la última ejecución anterior (38458286250) falló antes de corregir el menú y no se debe interpretar como estado de producción actual.
+- Se corrigió en commit 390cbf9 el versionado de carga de assets/language-dropdown.js en questions.html, pasando a ?v=20261013-questions-compact-menu, para evitar reutilizar un JS cacheado anterior a la reparación de menú.
+- Sin navegador externo disponible para ejecutar Chromium ni acción autorizada para disparar workflow_dispatch desde esta conexión. Continuar verificando producción y Worker por medios compatibles; no certificar sin evidencia.
