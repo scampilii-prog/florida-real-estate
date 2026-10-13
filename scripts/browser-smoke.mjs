@@ -47,6 +47,17 @@ try {
     assert.equal(hoverColors.subtitle,'rgb(82, 104, 117)','Hovered category subtitle must stay legible');
     console.log(cfg.name+' Questions hover text contrast OK');
 
+    assert.equal(await page.locator('#ask-tino .qa-ask-link').count(),0,'Redundant Ask Tino CTA must not return');
+    assert.equal(await page.locator('#ask-tino .qa-coast-link').count(),1,'Single coast inquiry CTA');
+    const destination=page.locator('#coast-inquiry .coast-wrap');
+    await page.locator('#ask-tino .qa-coast-link').click();
+    await page.waitForFunction(()=>location.hash==='#coast-inquiry');
+    await page.waitForTimeout(900);
+    const position=await destination.evaluate(el=>({top:el.getBoundingClientRect().top,head:document.querySelector('header.fc-ready,header.site-header,.oc-top')?.getBoundingClientRect().height||76}));
+    assert(Math.abs(position.top-position.head-14)<25,'Coast form card should align under the fixed header: '+JSON.stringify(position));
+    console.log(cfg.name+' Questions coastal anchor and no duplicate Ask Tino OK');
+
+
 
     for(const path of ['index.html','site-map.html','closing-costs.html']){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
