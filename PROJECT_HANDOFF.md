@@ -972,3 +972,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - robots.txt anuncia el sitemap oficial y permite rastreo.
 - Commit 18387893: añadido control permanente en scripts/check-website14.mjs para exigir correspondencia exacta entre las 48 páginas públicas y sitemap.xml, sin duplicados, y anuncio correcto en robots.txt. GitHub Actions structural QA run 38463504778 completed/success.
 - Las URL públicas de Cloudflare aún resultan inaccesibles a la herramienta web en esta sesión; no inferir caída ni declarar verificación Google. No se envió sitemap a Search Console. GSC Wizard fue ofrecido como posibilidad para conectar Search Console y GA4 cuando el propietario tenga acceso. Es opcional y aún no conectado.
+
+
+## Website 15 — Back to Top global, 13 octubre 2026
+- El usuario reportó ausencia de «Back to Top» al final de /closing-costs. Commit d0b9b3a añade controlador común a assets/language-dropdown.js: reutiliza controles ya visibles, o crea botón flotante con círculo dorado y flecha negra, desplazamiento suave a top=0; evita duplicados.
+- Commit 02caf341 añade auditoría en scripts/check-website14.mjs de inclusión del archivo compartido para todas las 48 páginas públicas. Structural QA run 38481149985 completado con success.
+- Commit 13e40875 actualiza el identificador de caché del JS compartido específicamente en closing-costs.html, para que se descargue el cambio. Último run de ese commit aún estaba en progreso al revisarlo.
+- IMPORTANTE: la prueba estructural valida presencia del script, no visualización efectiva en cada navegador. Las páginas con referencias cacheadas antiguas podrían necesitar versionado actualizado. No declarar revisión visual completa de las 48 sin browser QA.
