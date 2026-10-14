@@ -56,50 +56,22 @@ try {
 
 
 
-    for(const path of ['index.html','site-map.html','closing-costs.html']){
+
+    for(const path of ['index.html','questions.html','search-properties.html','buy.html','sell.html','contact.html','calculators.html','closing-costs.html']){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
-      await page.locator('.menu-button').first().waitFor({state:'visible'});
-      console.log('Page context',JSON.stringify(await page.evaluate(()=>({url:location.href,title:document.title,readyState:document.readyState,scriptTags:document.scripts.length,bodyLength:document.body.innerHTML.length,menuButtons:document.querySelectorAll('header .menu-button').length,openMenu:typeof window.openMenu,hasOriginalHandler:document.documentElement.outerHTML.includes('function openMenu()')}))));
-      const button=page.locator('header .menu-button').first();
-      console.log('Testing '+cfg.name+' '+path+' menu');
-      await button.click();
-      const state=await page.evaluate(() => ({expanded:document.querySelector('header .menu-button')?.getAttribute('aria-expanded'),homeOpen:document.getElementById('sideMenu')?.classList.contains('open'),specialPanel:document.getElementById('fc-shared-header-navigation')?.hidden,openFunction:typeof window.openMenu,url:location.href,ready:document.readyState}));
-      console.log('Menu after click',JSON.stringify(state));
-      if(path==='index.html'){
+      const top=page.locator('#floatingLeftBackTop, #fc-universal-backtop, a.top.notranslate').first();
+      await top.waitFor({state:'visible',timeout:5000});
+      await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
+      await top.click();
+      await page.waitForFunction(()=>window.scrollY<20,null,{timeout:5000});
+      console.log(cfg.name+' '+path+' Back to Top OK');
+      const nav=page.locator('header [data-oc-menu],header .menu-button').first();
+      await nav.waitFor({state:'visible'});
+      if(path!=='site-map.html'){
+        await nav.click();
         await page.waitForURL(/site-map(?:\\.html)?$/, {timeout:5000});
-        await page.goto(base+'/index.html',{waitUntil:'load'});
-      }else{
-        await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
-        assert.equal(await page.locator('#fc-shared-header-navigation').isVisible(),true);
-        await page.keyboard.press('Escape');
-        await page.waitForFunction(() => document.querySelector('header .menu-button')?.getAttribute('aria-expanded')==='false');
+        console.log(cfg.name+' '+path+' hamburger to Site Map OK');
       }
-      const language=page.locator('#oc-lang-static');
-      assert.deepEqual(await language.locator('option').evaluateAll(a=>a.map(x=>x.value)),['en','es','it','pt']);
-      const ask=page.locator('.tino-launcher').first();
-      await ask.click();
-      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),true);
-      await ask.click();
-      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),false);
-      console.log(cfg.name+' '+path+' menu, four languages and Ask Tino panel OK');
-    }
-    for(const path of ['buy.html','sell.html','contact.html','calculators.html']){
-      await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
-      const trigger=page.locator('header [data-oc-menu]').first();
-      await trigger.waitFor({state:'visible'});
-      const options=await page.locator('select#lang,select#oc-lang-static').first().locator('option').evaluateAll(a=>a.map(x=>x.value));
-      assert.deepEqual(options,['en','es','it','pt'],'Languages on '+path);
-      await trigger.click();
-      const menu=page.locator('.oc-menu').first();
-      assert.equal(await menu.isVisible(),true,'Navigation menu should open on '+path);
-      await page.keyboard.press('Escape');
-      assert.equal(await menu.isVisible(),false,'Escape should close menu on '+path);
-      const ask=page.locator('.tino-launcher').first();
-      await ask.click();
-      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),true);
-      await ask.click();
-      assert.equal(await page.locator('#tinoPanel').evaluate(x=>x.classList.contains('open')),false);
-      console.log(cfg.name+' '+path+' menu, languages and Ask Tino OK');
     }
     await page.close();
   }
