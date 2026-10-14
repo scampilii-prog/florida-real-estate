@@ -993,3 +993,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit bdc79121 amplía scripts/browser-smoke.mjs para recorrer las 48 páginas HTML públicas en escritorio (1366×768) y móvil (390×844), verificando visibilidad y función Back to Top y navegación de hamburguesa a Site Map; Site Map conserva su menú propio.
 - Browser QA está diseñado con workflow_dispatch manual. Sin acción de dispatch disponible en esta conexión; la modificación del script en GitHub NO significa que haya corrido la prueba. No activar push automático, pues produjo inundación de avisos por correo anteriormente.
 - La QA estructural más reciente terminada fue success (60b545c3). Pendiente ejecutar browser QA manual y corregir resultados sin alterar diseño aprobado.
+
+
+## Website 16 — 13 Oct 2026 — reanudación y comprobaciones
+- Releído el handoff completo, GOOGLE_LAUNCH_CHECKLIST.md, el navegador smoke script y los últimos commits en main. El repositorio tiene permisos de escritura.
+- Commit 80d9824 actualiza GOOGLE_LAUNCH_CHECKLIST.md: propiedad de dominio GSC y envío del sitemap ya hechos el 13 Oct; el error posterior `Couldn't fetch / General HTTP error` sigue sin resolverse. No repetir verificación ni envío indiscriminado. Mantener Cloudflare TXT de verificación.
+- El smoke test local en scripts/browser-smoke.mjs recorre 48 páginas a dos anchos (desktop/mobile) para Back to Top y menú al Site Map, más Questions. **No se ha ejecutado mediante workflow_dispatch**; el conector de GitHub actual no expone disparo de workflow. No confundir código del test con resultado aprobado.
+- Consulta HTTP independiente de https://floridacostiera.com/, /robots.txt y /sitemap.xml: el lector web externo devolvió `not accessible via this tool` para las tres rutas. No demuestra caída, fallo HTTP de producción ni bloqueo real de Googlebot. No se modificó Cloudflare por falta de evidencia del bloqueo específico del sitemap.
+- Pendientes: ejecutar navegador QA manual desde acceso habilitado; revisar sus logs y corregir defectos concretos; comprobar publicación Cloudflare y servicios Worker, OneHome, SimplyBook, mailto y traducción; URL Inspection/GSC; revisar Google Business Profile y Analytics según permisos. No tocar OceanFL.
