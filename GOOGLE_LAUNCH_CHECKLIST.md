@@ -24,3 +24,11 @@
 5. Configure Analytics and Google Business Profile afterward, ensuring consistent owner/broker information and no unsupported claims.
 
 As of 13 October 2026, the user verified floridacostiera.com as a Domain property using Cloudflare DNS TXT and submitted its 48-URL sitemap in Google Search Console. The subsequent General HTTP error is unresolved, and successful Google fetch/indexing must not be claimed. GSC Wizard is connected in read-only mode but had not yet listed Florida Costiera immediately after property verification. Do not confuse repository source, structural QA, or submission with deployment and indexing.
+
+## HTTP troubleshooting sequence — Website 16
+- Check the **existing** Search Console sitemap entry first: status, last read, HTTP error details, discovered URL count. Do not remove/resubmit without new evidence.
+- Check Search Console URL Inspection live test for `https://floridacostiera.com/` and `https://floridacostiera.com/questions.html`; distinguish fetch/indexing and robots accessibility. A sitemap file's XML can be valid yet unreachable to the crawler.
+- In Cloudflare Security Events, filter the precise pathname `/sitemap.xml` and the matching Google-request time. Inspect action, source, rule ID, and verified bot status. A BOBA-199 blocked request to `/` does **not** prove `/sitemap.xml` was blocked.
+- Preserve AI Training Block and other security protections unless confirmed to affect verified Google Search crawling. Do not whitelist generic user-agent strings as proof of Googlebot.
+- Confirm Cloudflare-served HTTPS status code and response Content-Type for `/sitemap.xml`, `/robots.txt` and `/` using a real HTTP-capable client or platform logs. Web-reader failure in this environment is not an HTTP measurement.
+- Only after a confirmed cause: apply a focused change, record it in PROJECT_HANDOFF.md and re-check Search Console. There is no guaranteed indexing date.
