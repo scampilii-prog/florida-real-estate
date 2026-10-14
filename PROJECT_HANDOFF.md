@@ -979,3 +979,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit 02caf341 añade auditoría en scripts/check-website14.mjs de inclusión del archivo compartido para todas las 48 páginas públicas. Structural QA run 38481149985 completado con success.
 - Commit 13e40875 actualiza el identificador de caché del JS compartido específicamente en closing-costs.html, para que se descargue el cambio. Último run de ese commit aún estaba en progreso al revisarlo.
 - IMPORTANTE: la prueba estructural valida presencia del script, no visualización efectiva en cada navegador. Las páginas con referencias cacheadas antiguas podrían necesitar versionado actualizado. No declarar revisión visual completa de las 48 sin browser QA.
+
+
+## Website 15 — 13 Oct 2026: actualización global Back to Top y navegación
+- Se actualizaron las 48 páginas HTML públicas para cargar assets/language-dropdown.js?v=20261013-global-navigation-backtop. Se conservaron estructuras, fotografías, textos y botones existentes.
+- El archivo compartido contiene controlador de Back to Top: reutilizar uno existente o insertar botón flotante si no hay ninguno, con desplazamiento hacia top=0. El mismo archivo dirige los botones hamburguesa fuera de Site Map hacia /site-map.html y ha desactivado el overlay editorial antiguo. Site Map conserva su menú propio.
+- Commit 60b545c3 amplía scripts/check-website14.mjs para exigir en las 48 páginas la versión actual del archivo compartido. GitHub Actions run 38500478434 completed/success.
+- No se ha ejecutado la prueba visual de navegador desde estas últimas actualizaciones. Debe verificarse en Cloudflare Pages que se despliegan, así como Back to Top, anclas y menús en escritorio y móvil. Evitar anunciar 100% visualmente comprobado hasta evidencia.
+- Search Console confirmó verificación de dominio y aceptación inicial del sitemap el 13 oct; después Google reportó General HTTP error. Cloudflare Security Events mostró bloqueo de solicitud de un Googlebot a / por la regla BOBA-199; AI Crawl Control tenía Googlebot bloqueado, pero el toggle se muestra administrado por políticas generales. Ajustes vistos: Search Allow, Agent Allow, Training Block. No se modificaron reglas de seguridad por falta de confirmación precisa, y error de sitemap sigue pendiente.
