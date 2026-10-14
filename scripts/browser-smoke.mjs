@@ -31,7 +31,7 @@ try {
     assert.equal(card.bg,'rgb(255, 255, 255)');
     assert.notEqual(card.border,'0px');
     await page.locator('[data-oc-menu]').first().click();
-    await page.waitForURL(/site-map(?:\\.html)?$/, {timeout:5000});
+    await page.waitForURL(url=>url.pathname==='/site-map' || url.pathname==='/site-map.html', {timeout:5000});
     await page.goto(base+'/questions.html',{waitUntil:'load'});
     await page.waitForSelector('#qaCategories .qa-filter');
     await page.locator('#qaCategories .qa-filter').first().hover();
@@ -69,7 +69,7 @@ try {
       await nav.waitFor({state:'visible'});
       if(path!=='site-map.html'){
         await nav.click();
-        await page.waitForURL(/site-map(?:\\.html)?$/, {timeout:5000});
+        await page.waitForURL(url=>url.pathname==='/site-map' || url.pathname==='/site-map.html', {timeout:5000});
         console.log(cfg.name+' '+path+' hamburger to Site Map OK');
       }
     }
