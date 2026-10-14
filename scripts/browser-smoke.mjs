@@ -2,7 +2,9 @@
 // Runs against local repository HTML, not against Cloudflare production.
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
+import {readdirSync} from 'node:fs';
 
+const publicPages=readdirSync(new URL('../',import.meta.url)).filter(n=>n.endsWith('.html')&&!['Florida-Closing-Timeline-OFFLINE.html','calculators_seis_funcionales_footer_aprobado.html'].includes(n));
 const browser = await chromium.launch({headless:true});
 const base = 'http://127.0.0.1:8765';
 const configurations = [
@@ -57,21 +59,20 @@ try {
 
 
 
-    for(const path of ['index.html','questions.html','search-properties.html','buy.html','sell.html','contact.html','calculators.html','closing-costs.html']){
+    for(const path of publicPages){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
-      const top=page.locator('#floatingLeftBackTop, #fc-universal-backtop, a.top.notranslate').first();
+      const top=page.locator('#floatingLeftBackTop:visible, #fc-universal-backtop:visible, a.top.notranslate:visible, [aria-label="Back to top"]:visible').first();
       await top.waitFor({state:'visible',timeout:5000});
       await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
       await top.click();
       await page.waitForFunction(()=>window.scrollY<20,null,{timeout:5000});
       console.log(cfg.name+' '+path+' Back to Top OK');
+      if(path==='site-map.html')continue; // Site Map has its own approved navigation popover.
       const nav=page.locator('header [data-oc-menu],header .menu-button').first();
       await nav.waitFor({state:'visible'});
-      if(path!=='site-map.html'){
-        await nav.click();
-        await page.waitForURL(url=>url.pathname==='/site-map' || url.pathname==='/site-map.html', {timeout:5000});
-        console.log(cfg.name+' '+path+' hamburger to Site Map OK');
-      }
+      await nav.click();
+      await page.waitForURL(url=>url.pathname==='/site-map' || url.pathname==='/site-map.html', {timeout:5000});
+      console.log(cfg.name+' '+path+' hamburger to Site Map OK');
     }
     await page.close();
   }
