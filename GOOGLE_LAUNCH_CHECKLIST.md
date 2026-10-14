@@ -9,18 +9,18 @@
 
 ## Not yet verified — do not claim success
 1. Public HTTP 200/redirect responses, sitemap.xml fetch from Google's servers and robots.txt served by Cloudflare.
-2. Google Search Console property verification, sitemap submission, inspection of home/Questions/community pages, Coverage and indexing results.
+2. Domain property and sitemap submission are already complete (13 Oct 2026). Google subsequently reported "Couldn't fetch — Sitemap could not be read — General HTTP error"; investigate the actual HTTP response and Googlebot access. URL Inspection and indexing results remain unverified.
 3. Canonicals, description and H1 audits for **every** live page and redirect consistency between /questions and /questions.html; www to apex.
 4. Google Business Profile ownership, contact details, address visibility, brokerage disclosure, and referral to website.
 5. Real Google Analytics installation and consent/privacy alignment.
-6. Browser QA workflow must be launched manually after a batch; last post-fix run not verified.
+6. Browser QA workflow must be launched manually after a batch; latest browser run has not been confirmed. Structural checks passed separately, but cannot replace interactive QA.
 7. Ask Tino Worker behavior, actual email receipt, Google Translate, property search links, booking and physical mobile QA.
 
 ## Order
 1. Verify live robots/sitemap and redirect/canonical alignment; resolve only confirmed issues.
-2. Verify floridacostiera.com as a Google Search Console Domain property if user can access DNS, otherwise URL-prefix property using Google's offered method.
-3. Submit https://floridacostiera.com/sitemap.xml and inspect the home page, /questions, and three important community pages. Indexing is Google's decision and can take time.
+2. Preserve the existing Cloudflare TXT verification record for Google Search Console; do not repeat domain verification.
+3. Investigate Search Console's General HTTP error for the already-submitted https://floridacostiera.com/sitemap.xml. A blocked Googlebot request for '/' under Cloudflare rule BOBA-199 was observed, but does not prove the cause of the sitemap error. Do not disable broad security controls without specific evidence. Inspect Home, Questions, and three community pages when access is available. Indexing is Google's decision and can take time.
 4. Check Search Console reports over following days; fix substantive crawl and indexing issues based on real evidence.
 5. Configure Analytics and Google Business Profile afterward, ensuring consistent owner/broker information and no unsupported claims.
 
-No Google account configuration or Search Console submission has been performed as of this note. Do not confuse repository source with deployment and verified indexing.
+As of 13 October 2026, the user verified floridacostiera.com as a Domain property using Cloudflare DNS TXT and submitted its 48-URL sitemap in Google Search Console. The subsequent General HTTP error is unresolved, and successful Google fetch/indexing must not be claimed. GSC Wizard is connected in read-only mode but had not yet listed Florida Costiera immediately after property verification. Do not confuse repository source, structural QA, or submission with deployment and indexing.
