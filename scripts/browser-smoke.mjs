@@ -61,7 +61,7 @@ try {
 
     for(const path of publicPages){
       await page.goto(base+'/'+path,{waitUntil:'load',timeout:30000});
-      const top=page.locator('#floatingLeftBackTop:visible, #fc-universal-backtop:visible, a.top.notranslate:visible, [aria-label="Back to top"]:visible').first();
+      const top=page.locator('#floatingLeftBackTop:visible, #fc-universal-backtop:visible, .back-to-top:visible, .back-to-top-button:visible, a.top.notranslate:visible, [aria-label="Back to top"]:visible').first();
       await top.waitFor({state:'visible',timeout:5000});
       await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
       await top.click();
