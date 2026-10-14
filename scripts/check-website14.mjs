@@ -114,6 +114,16 @@ for(const u of expectedPublic)assert(listed.includes(u),'Missing sitemap URL: '+
 assert.equal(listed.length,expectedPublic.length,'Unexpected sitemap entries');
 const robotsTxt=read('robots.txt');
 assert(robotsTxt.includes('Sitemap: https://floridacostiera.com/sitemap.xml'),'robots.txt missing official sitemap');
+// Prevent accidental future blocking or malformed Google sitemap changes.
+assert(/^User-agent:\s*\*\s*$/m.test(robotsTxt),'robots.txt missing general crawler group');
+assert(/^Allow:\s*\/\s*$/m.test(robotsTxt),'robots.txt no longer permits general crawling');
+assert(!/^Disallow:\s*\/\s*$/m.test(robotsTxt),'robots.txt blocks the entire site');
+assert(sitemapXml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'),'Sitemap XML namespace missing');
+assert(sitemapXml.trimEnd().endsWith('</urlset>'),'Sitemap XML closing element missing');
+for(const url of listed){
+ assert(url==='https://floridacostiera.com/' || /^https:\/\/floridacostiera\.com\/[a-z0-9-]+\.html$/.test(url),'Noncanonical or malformed sitemap URL: '+url);
+}
+
 console.log('Google launch sitemap: '+listed.length+' valid public URLs represented.');
 
 
