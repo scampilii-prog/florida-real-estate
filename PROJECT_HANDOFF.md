@@ -1009,3 +1009,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Consultados de nuevo en herramienta web `/`, `/robots.txt` y `/sitemap.xml`: los tres siguen inaccesibles a esa herramienta; no inferir disponibilidad o fallo HTTP real de producción.
 - GSC Wizard `list_sites` sigue mostrando `https://oceanfl.com/`, `https://www.casasfl.com/` y `sc-domain:casasfl.com`; Florida Costiera todavía no aparece en GSC Wizard, aunque el usuario la verificó directamente en Google Search Console el 13 Oct. No alterar ni borrar esas propiedades sin instrucción específica.
 - Faltan la ejecución real de QA manual (dispatch no disponible por conector), evidencia de Cloudflare/Googlebot y los demás servicios externos. No declarar Grupo 1 ni Grupo 3 concluidos.
+
+
+## Website 16 — Google, 13 Oct 2026
+- Revisados directamente `sitemap.xml` (48 URLs oficiales) y `robots.txt` (`User-agent: *`, `Allow: /`, sitemap oficial). Ninguno de esos dos archivos fuente contiene prohibición general de rastreo.
+- Consultas públicas independientes a Home, `/sitemap.xml` y `/robots.txt` mediante la herramienta web devolvieron inaccesible; intento de `curl` del entorno devolvió `Could not resolve host` (limitación DNS de la herramienta). Esto NO confirma un fallo DNS del dominio público ni reproduce el error que Googlebot observó.
+- Commit `b2c38767` amplió `scripts/check-website14.mjs` con protecciones para formato básico XML del sitemap, host/HTTPS/caminos canónicos y ausencia de `Disallow: /` en robots.txt; es una salvaguarda de código, NO reparación probada del problema HTTP de Google Search Console.
+- Sigue pendiente evidencia del HTTP servido por Cloudflare a Google para `/sitemap.xml`, revisión del evento correspondiente en Cloudflare Security Events y nueva lectura/indexación en Search Console. No apagar reglas generales BOBA-199 sin identificar bloqueo del sitemap.
