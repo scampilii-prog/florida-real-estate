@@ -987,3 +987,9 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Commit 60b545c3 amplía scripts/check-website14.mjs para exigir en las 48 páginas la versión actual del archivo compartido. GitHub Actions run 38500478434 completed/success.
 - No se ha ejecutado la prueba visual de navegador desde estas últimas actualizaciones. Debe verificarse en Cloudflare Pages que se despliegan, así como Back to Top, anclas y menús en escritorio y móvil. Evitar anunciar 100% visualmente comprobado hasta evidencia.
 - Search Console confirmó verificación de dominio y aceptación inicial del sitemap el 13 oct; después Google reportó General HTTP error. Cloudflare Security Events mostró bloqueo de solicitud de un Googlebot a / por la regla BOBA-199; AI Crawl Control tenía Googlebot bloqueado, pero el toggle se muestra administrado por políticas generales. Ajustes vistos: Search Allow, Agent Allow, Training Block. No se modificaron reglas de seguridad por falta de confirmación precisa, y error de sitemap sigue pendiente.
+
+
+## Website 15 — Browser QA ampliado para todas las páginas (13 Oct 2026)
+- Commit bdc79121 amplía scripts/browser-smoke.mjs para recorrer las 48 páginas HTML públicas en escritorio (1366×768) y móvil (390×844), verificando visibilidad y función Back to Top y navegación de hamburguesa a Site Map; Site Map conserva su menú propio.
+- Browser QA está diseñado con workflow_dispatch manual. Sin acción de dispatch disponible en esta conexión; la modificación del script en GitHub NO significa que haya corrido la prueba. No activar push automático, pues produjo inundación de avisos por correo anteriormente.
+- La QA estructural más reciente terminada fue success (60b545c3). Pendiente ejecutar browser QA manual y corregir resultados sin alterar diseño aprobado.
