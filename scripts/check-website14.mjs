@@ -125,5 +125,10 @@ for(const page of productionPages){
  assert(source.includes('assets/language-dropdown.js'),page+' lacks shared navigation and Back to Top');
 }
 console.log('Global Back to Top is included by all '+productionPages.length+' public pages.');
+for(const page of productionPages){
+ const html=read(page);
+ assert(html.includes('assets/language-dropdown.js?v=20261013-global-navigation-backtop'),page+' uses stale shared JS cache key');
+}
+console.log('All public pages use the current unified navigation/back-to-top version.');
 
 console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
