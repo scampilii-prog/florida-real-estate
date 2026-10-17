@@ -990,35 +990,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Florida Costiera official identity — shared across every page using this asset.
-   Existing house mark and navigation remain unchanged. */
-(function(){
- function applyOfficialLogo(){
-  document.querySelectorAll('header.fc-ready .fc-name, header .fc-special-wordmark strong').forEach(function(el){
-   if(el.dataset.fcOfficialLogo==='20261017')return;
-   el.dataset.fcOfficialLogo='20261017';
-   el.innerHTML='<span class="fc-official-florida">Florida</span><span class="fc-official-costiera">Costiera</span><span class="fc-official-dotcom">.com</span>';
-  });
-  if(!document.getElementById('fc-official-logo-styles')){
-   var css=document.createElement('style');css.id='fc-official-logo-styles';
-   css.textContent=[
-    'header.fc-ready .fc-name.fc-wordmark-new,header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;white-space:nowrap!important;letter-spacing:-.045em!important;font-weight:500!important;text-transform:none!important}',
-    'header .fc-official-florida{color:#fff8e9!important;font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}',
-    'header .fc-official-costiera{font-family:"Alex Brush",cursive!important;color:#eac276!important;font-size:1.49em!important;font-weight:400!important;line-height:.75!important;letter-spacing:-.015em!important;margin-left:-.035em!important;vertical-align:-.035em!important;display:inline-block!important}',
-    'header .fc-official-dotcom{font-family:Manrope,Arial,sans-serif!important;color:#fff9f0!important;font-size:.51em!important;line-height:1!important;font-style:normal!important;font-weight:600!important;letter-spacing:-.04em!important;vertical-align:baseline!important;margin-left:-.03em!important}',
-    'header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(19px,2.05vw,29px)!important}',
-    'header .fc-special-wordmark strong{font-size:clamp(19px,1.75vw,25px)!important}',
-    '@media(max-width:860px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(13px,2.7vw,20px)!important}}',
-    '@media(max-width:620px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(11px,3.1vw,16px)!important}header .fc-special-wordmark strong{font-size:17px!important}}'
-   ].join('');
-   document.head.appendChild(css);
-  }
- }
- function start(){applyOfficialLogo();setTimeout(applyOfficialLogo,400);setTimeout(applyOfficialLogo,1400);}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
-})();
-
-
 /* Official artwork unchanged in identity; subtitle is independent, translatable HTML. */
 (function(){
  const image='/assets/florida-costiera-logo-official.svg?v=20261017-wordmark-clean3';
