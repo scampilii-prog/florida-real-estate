@@ -1077,8 +1077,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   st.textContent=[
    'html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow,html body #fc-universal-backtop .fc-arrow-disc{font-size:0!important;position:relative!important;overflow:visible!important}',
    'html body #floatingLeftBackTop .fc-top-arrow>* ,html body a.top .fc-top-arrow>* ,html body #fc-universal-backtop .fc-arrow-disc>*{display:none!important}',
-   'html body #floatingLeftBackTop .fc-top-arrow::before,html body a.top .fc-top-arrow::before,html body #fc-universal-backtop .fc-arrow-disc::before{content:""!important;position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;width:24px!important;height:29px!important;background:#071b2b!important;border-radius:2px!important;clip-path:polygon(50% 0,100% 28%,87% 42%,59% 26%,59% 100%,41% 100%,41% 26%,13% 42%,0 28%)!important}',
-   'html body #floatingLeftBackTop .fc-top-arrow::after,html body a.top .fc-top-arrow::after,html body #fc-universal-backtop .fc-arrow-disc::after{display:none!important;content:none!important}'
+   'html body #floatingLeftBackTop .fc-top-arrow::before,html body a.top .fc-top-arrow::before,html body #fc-universal-backtop .fc-arrow-disc::before{content:""!important;position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;width:3.5px!important;height:23px!important;background:#071b2b!important;border-radius:2px!important;clip-path:none!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow::after,html body a.top .fc-top-arrow::after,html body #fc-universal-backtop .fc-arrow-disc::after{content:""!important;position:absolute!important;left:50%!important;top:calc(50% - 11px)!important;width:12px!important;height:12px!important;border-top:3.5px solid #071b2b!important;border-left:3.5px solid #071b2b!important;transform:translateX(-50%) rotate(45deg)!important;border-radius:1px!important;display:block!important;background:transparent!important}'
   ].join('');
   document.head.appendChild(st);
  }
