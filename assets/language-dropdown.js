@@ -1065,7 +1065,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   document.querySelectorAll('#floatingLeftBackTop .fc-top-arrow,#fc-universal-backtop .fc-arrow-disc').forEach(function(el){
    if(el.dataset.fcCompactArrow==='1')return;
    el.dataset.fcCompactArrow='1';
-   el.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 18V7M6.5 12.5 12 7l5.5 5.5" fill="none" stroke="#071b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+   el.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21V3M5.5 9.5 12 3l6.5 6.5" fill="none" stroke="#071b2b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   });
   if(!document.getElementById('fc-historic-header-20261017')){
    var st=document.createElement('style');st.id='fc-historic-header-20261017';
