@@ -1048,3 +1048,12 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',finish,{once:true});else finish();
 })();
+
+/* Header final correction: remove white frame and keep tagline readable INSIDE header. */
+(function(){function fix(){if(document.getElementById('fc-header-no-frame-v8'))return;var t=document.createElement('style');t.id='fc-header-no-frame-v8';t.textContent=[
+'html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:300px!important;max-width:300px!important;flex:0 0 300px!important;gap:4px!important;max-height:none!important;border:0!important;outline:0!important;box-shadow:none!important;background:none!important;overflow:visible!important}',
+'html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:300px!important;max-width:100%!important;height:auto!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:0!important;object-fit:contain!important}',
+'html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{margin:0!important;padding:0!important;font:700 9px/1.35 Manrope,Arial,sans-serif!important;letter-spacing:.045em!important;white-space:normal!important;color:#f6e2b9!important;text-align:center!important}',
+'@media(max-width:850px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:220px!important;max-width:220px!important;flex-basis:220px!important}html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:220px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:7px!important}}',
+'@media(max-width:620px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:155px!important;max-width:155px!important;flex-basis:155px!important}html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:155px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:6.5px!important}}'
+].join('');document.head.appendChild(t)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix()})();
