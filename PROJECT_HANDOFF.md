@@ -1049,3 +1049,28 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 ### Iniciar NUEVO WEBSITE 17
 - El usuario dirá «CONTINUACIÓN DEFINITIVA — FLORIDA COSTIERA — NUEVO WEBSITE 17».
 - Leer completo PROJECT_HANDOFF.md y consultar estado real GitHub. Prioridad: verificar y finalizar logo maestro idéntico en todas las páginas, sin más generación de logos. Luego continuar cinco etapas de auditoría, pruebas y Search Console. Conservar OceanFL intacto.
+
+
+## CIERRE WEBSITE 16 — ESTADO A 17 OCT 2026 — PASO A WEBSITE 17
+
+### Regla de prioridad absoluta
+- **NUNCA modificar OceanFL.com** (sitio, repositorio, cuentas ni números). Sitio independiente. Se puede mostrar enlace OceanFL.com en firma personal sin alterarlo.
+- El usuario no quiere que se sigan generando nuevos diseños de logo ni explicaciones repetidas. Quiere terminar directamente en GitHub y confirmar visualmente.
+
+### Logotipo definitivamente APROBADO
+- EXACTA imagen gráfica aprobada por usuario: casa dorada en cuadro, Florida serif marfil, Costiera manuscrita dorada, `.com` blanco; fondo azul marino, subtítulo "SOUTHWEST FLORIDA GULF COAST REAL ESTATE" entre dos líneas doradas a izquierda y derecha. No rehacer con CSS tipográfico.
+- Se ha creado en GitHub **`assets/florida-costiera-logo-official.svg`** (commit `fe0d687c63e9a3b7261c35ec5906ae05c35c38de`). NOTA: SVG encapsula una imagen WebP optimizada vía data URI, ancho nominal 500 y alto 167; puede requerir inspección visual de fidelidad contra imagen original aprobada. No se ha verificado pantalla real tras despliegue.
+- Se ha editado `assets/language-dropdown.js` (commit `683fa84b91f4e11658a8557448260c0f9e8b7d1e`) agregando al final lógica para reemplazar el interior de `header a.fc-brand` y `header a.fc-special-brand` por una sola etiqueta `img.fc-approved-logo`, URL `/assets/florida-costiera-logo-official.svg?v=20261017-master1`; CSS de tamaño responsivo. Este script contiene AÚN otros bloques previos que reconstruyen logo en texto; la rutina final debe prevalecer, comprobar que no haya sobrescrituras tardías.
+- En las 47 páginas HTML del sitemap se inició actualización de `assets/language-dropdown.js?v=...` a versión `?v=20261017-approved-artwork1` para invalidar caché. Actualizadas Home, About, Contact, Site Map, Closing Costs, Buy, Sell, Questions y decenas de comunidades, guías y calculadoras.
+- La última tanda de actualización de `seller-closing-costs.html`, `sellers-guide.html`, `siesta-key-longboat-key-florida-real-estate.html`, `terms.html`, `venice-florida-real-estate.html`, `venice.html`, `waterfront.html`, `wellen-park-florida-real-estate.html` estaba en ejecución cuando el usuario solicitó handoff; **comprobar si se completó**. Además se observaron algunas rutas del sitemap no encontradas en GitHub durante fetch (`cape-haze-placida-florida-real-estate.html` y `privacy.html` de modo intermitente), revisarlas.
+- No borrar indiscriminadamente `/images`: hay fotos de propiedades y logo LoKation. Solo eliminar versiones antiguas del logo luego de confirmar no referenciadas. Mantener favicon icono casita de `assets/florida-costiera-coastal-mark.svg`.
+- PRIORIDAD WEBSITE17: inspeccionar `assets/florida-costiera-logo-official.svg` con un navegador y su representación dentro de header; corroborar que la imagen exacta se muestra en Home/About/Contact/special headers; tamaño adaptativo (la imagen contiene bastante espacio superior/inferior; revisar recorte con object-fit cover). Corregir con prueba real antes de decir terminado. Usuario aportará captura si hace falta.
+
+### Otras decisiones definitivas
+- Website Contact: formulario completo bajo "Which stretch of coast feels like home?", se elige primero Buying a home / Investing / Selling a property, con botón destacado en recuadro azul suave borde dorado, secciones 01/02/03 azul claro con línea dorada, datos esenciales visibles y otras preferencias colapsadas. Opciones comunidad/presupuesto/plazo/datos personales/día-hora/método/idioma. Inglés, español, italiano para respuestas por correo; portugués solo idioma del sitio. Componer correo en Apple Mail vía mailto, no envío automático: usuario debe oprimir Send. Faltan pruebas finales de los 9 casos.
+- About: conservar presentación de Sabatino e Italo y un acceso ligero a formulario de Contact (no duplicarlo).
+- Firma personal: ambos sitios como enlaces, botón "CONTACT ME" enlaza `https://floridacostiera.com/contact#tell-us-your-plans`, botones Google Review, 1,000 Q&A y Calculators. Confirmada funcional por usuario.
+- Etapas siguientes: 1) validación Contact/About emails y enlaces, 2) header/logo/footer/menú/Back to Top/fotos hero en todas las páginas, 3) comunidades Q&A/enlaces oficiales y 1,010 preguntas generales, 4) calculadoras/guías/fechas de cierre, 5) Google Search Console/GMB/Google Voice.
+- Google Search Console "URL available to Google" + "Request indexing" son exitosos para prueba e intento de indexación pero no equivalen a indexación confirmada. Antes hubo "Couldn't fetch" del sitemap y 403 Cloudflare; verificar status actual.
+- Google Voice `941-270-4877`: SMS bidireccional funciona; aún falta llamada entrante desde tercer teléfono independiente. No cambiar número de GBP hasta confirmar.
+- Repo `scampilii-prog/florida-real-estate`, web `https://floridacostiera.com`; Cloudflare Pages. No tocar OceanFL.
