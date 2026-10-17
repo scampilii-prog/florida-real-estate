@@ -1021,7 +1021,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Official artwork unchanged in identity; subtitle is independent, translatable HTML. */
 (function(){
- const image='/assets/florida-costiera-logo-official.svg?v=20261017-wordmark-only2';
+ const image='/assets/florida-costiera-logo-official.svg?v=20261017-wordmark-clean3';
  const subtitles={
   en:'SOUTHWEST FLORIDA GULF COAST REAL ESTATE',
   es:'BIENES RAÍCES EN LA COSTA DEL GOLFO DEL SUROESTE DE FLORIDA',
