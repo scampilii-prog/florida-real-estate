@@ -1074,3 +1074,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Google Search Console "URL available to Google" + "Request indexing" son exitosos para prueba e intento de indexación pero no equivalen a indexación confirmada. Antes hubo "Couldn't fetch" del sitemap y 403 Cloudflare; verificar status actual.
 - Google Voice `941-270-4877`: SMS bidireccional funciona; aún falta llamada entrante desde tercer teléfono independiente. No cambiar número de GBP hasta confirmar.
 - Repo `scampilii-prog/florida-real-estate`, web `https://floridacostiera.com`; Cloudflare Pages. No tocar OceanFL.
+
+
+## ÚLTIMA DECISIÓN WEBSITE 16 — 17 OCT 2026, 4:34 PM — LEER PRIMERO EN WEBSITE 17
+- El usuario exige **NO SEGUIR GENERANDO NUEVOS LOGOS**. La identidad aprobada es casita dorada + Florida marfil serif + Costiera dorado en cursiva corrida + .com blanco.
+- **Corrección final indispensable**: ELIMINAR DEL ARCHIVO DE IMAGEN MAESTRO el subtítulo «SOUTHWEST FLORIDA GULF COAST REAL ESTATE» y las dos rayas doradas del subtítulo. Mantener SOLO casita + FloridaCostiera.com dentro de la imagen. Colocar el subtítulo DEBAJO como texto HTML SEPARADO en el header (igual que antes, más grande y legible, traducible EN/ES/IT/PT). El usuario vio imagen demasiado pequeña con subtítulo ilegible; esta es la prioridad de la próxima sesión.
+- Imagen maestra actual en assets/florida-costiera-logo-official.svg aún INCLUYE subtítulo pequeño; no declarar corrección terminada. assets/language-dropdown.js tiene lógica que reemplaza todo el contenido del anchor del logo por <img>, eliminando el subtítulo HTML, lo cual debe repararse manteniendo el subtítulo como nodo hermano en columna. No borrar otras fotos o branding LoKation.
+- Revisar visualmente Home/About/Contact/Site Map y el resto de páginas en PC y móvil. Hacer commits reales y verificar, sin decir «listo» antes de terminar. No tocar OceanFL.com.
+- El usuario abrió siguiente chat con «CONTINUACIÓN DEFINITIVA — FLORIDA COSTIERA — NUEVO WEBSITE 17».
