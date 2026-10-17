@@ -1032,3 +1032,19 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  function init(){apply();setTimeout(apply,450);setTimeout(apply,1550);setTimeout(apply,2800);}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+
+/* Final understated header treatment: no framed logo card; subtitle outside artwork. */
+(function(){
+ function finish(){
+  var id='fc-clean-brand-finish';if(document.getElementById(id))return;
+  var st=document.createElement('style');st.id=id;
+  st.textContent=[
+   'html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;box-sizing:border-box!important;width:min(345px,31vw)!important;max-width:min(345px,31vw)!important;min-width:0!important;flex:0 1 345px!important;max-height:90px!important;overflow:visible!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;text-decoration:none!important}',
+   'html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:4/1!important;object-fit:contain!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}',
+   'html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{display:block!important;position:static!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:-7px 0 0!important;padding:0!important;border:0!important;background:none!important;color:#f6e2b9!important;-webkit-text-fill-color:#f6e2b9!important;font:700 9px/1.25 Manrope,Arial,sans-serif!important;letter-spacing:.04em!important;text-transform:uppercase!important;white-space:normal!important;text-align:center!important;text-shadow:0 1px 2px #071b2b99!important}',
+   '@media(max-width:980px){html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){width:255px!important;max-width:255px!important;flex-basis:255px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:7.5px!important;margin-top:-5px!important}}',
+   '@media(max-width:620px){html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){width:160px!important;max-width:160px!important;flex-basis:160px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:6.5px!important;letter-spacing:0!important;margin-top:-3px!important}}'
+  ].join('');document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',finish,{once:true});else finish();
+})();
