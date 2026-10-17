@@ -990,70 +990,30 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Official artwork unchanged in identity; subtitle is independent, translatable HTML. */
+/* Florida Costiera official identity — shared across every page using this asset.
+   Existing house mark and navigation remain unchanged. */
 (function(){
- const image='/assets/florida-costiera-logo-final.webp?v=20261017-approved-cursive6';
- const subtitles={
-  en:'SOUTHWEST FLORIDA GULF COAST REAL ESTATE',
-  es:'BIENES RAÍCES EN LA COSTA DEL GOLFO DEL SUROESTE DE FLORIDA',
-  it:'IMMOBILIARE SULLA COSTA DEL GOLFO DELLA FLORIDA SUD-OCCIDENTALE',
-  pt:'IMÓVEIS NA COSTA DO GOLFO DO SUDOESTE DA FLÓRIDA'
- };
- function apply(){
-  document.querySelectorAll('header a.fc-brand, header a.fc-special-brand').forEach(function(brand){
-   if(brand.querySelector('.fc-approved-logo') && brand.querySelector('.fc-logo-subtitle')){var existing=brand.querySelector('.fc-approved-logo');if(existing.getAttribute('src')!==image)existing.setAttribute('src',image);return;}
-   brand.replaceChildren();
-   var img=document.createElement('img');
-   img.className='fc-approved-logo';img.src=image;
-   img.alt='FloridaCostiera.com';img.width=550;img.height=138;
-   var subtitle=document.createElement('span');
-   subtitle.className='fc-logo-subtitle';
-   subtitle.setAttribute('data-fc-subtitle','');
-   subtitle.textContent=subtitles.en;
-   brand.append(img,subtitle);
-   brand.setAttribute('aria-label','FloridaCostiera.com — Home');
+ function applyOfficialLogo(){
+  document.querySelectorAll('header.fc-ready .fc-name, header .fc-special-wordmark strong').forEach(function(el){
+   if(el.dataset.fcOfficialLogo==='20261017')return;
+   el.dataset.fcOfficialLogo='20261017';
+   el.innerHTML='<span class="fc-official-florida">Florida</span><span class="fc-official-costiera">Costiera</span><span class="fc-official-dotcom">.com</span>';
   });
-  var lang=(document.documentElement.lang||'en').slice(0,2).toLowerCase();
-  document.querySelectorAll('header .fc-logo-subtitle').forEach(function(el){
-   if(!el.closest('.translated-ltr,.translated-rtl'))el.textContent=subtitles[lang]||subtitles.en;
-  });
-  if(!document.getElementById('fc-logo-image-subtitle-css')){
-   var css=document.createElement('style');css.id='fc-logo-image-subtitle-css';
+  if(!document.getElementById('fc-official-logo-styles')){
+   var css=document.createElement('style');css.id='fc-official-logo-styles';
    css.textContent=[
-    'html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:0!important;flex:0 1 360px!important;width:360px!important;max-width:360px!important;min-width:0!important;overflow:visible!important;white-space:normal!important;background:none!important;border:0!important;padding:0!important;text-decoration:none!important}',
-    'html body header .fc-approved-logo{display:block!important;flex:none!important;width:360px!important;max-width:100%!important;height:auto!important;aspect-ratio:275/69!important;object-fit:contain!important;border:0!important;box-shadow:none!important}',
-    'html body header .fc-logo-subtitle{display:block!important;width:100%!important;color:#f0d39b!important;-webkit-text-fill-color:#f0d39b!important;font:700 clamp(9px,.85vw,12px)/1.25 Manrope,Arial,sans-serif!important;letter-spacing:.065em!important;text-transform:uppercase!important;text-align:center!important;white-space:normal!important;margin-top:0!important}',
-    '@media(max-width:860px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){flex-basis:235px!important;width:235px!important;max-width:235px!important}html body header .fc-approved-logo{width:235px!important}html body header .fc-logo-subtitle{font-size:8px!important;letter-spacing:0!important}}',
-    '@media(max-width:620px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){flex-basis:155px!important;width:155px!important;max-width:155px!important}html body header .fc-approved-logo{width:155px!important}html body header .fc-logo-subtitle{font-size:7px!important;letter-spacing:0!important;line-height:1.13!important}}'
+    'header.fc-ready .fc-name.fc-wordmark-new,header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;white-space:nowrap!important;letter-spacing:-.045em!important;font-weight:500!important;text-transform:none!important}',
+    'header .fc-official-florida{color:#fff8e9!important;font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}',
+    'header .fc-official-costiera{font-family:"Alex Brush",cursive!important;color:#eac276!important;font-size:1.49em!important;font-weight:400!important;line-height:.75!important;letter-spacing:-.015em!important;margin-left:-.035em!important;vertical-align:-.035em!important;display:inline-block!important}',
+    'header .fc-official-dotcom{font-family:Manrope,Arial,sans-serif!important;color:#fff9f0!important;font-size:.51em!important;line-height:1!important;font-style:normal!important;font-weight:600!important;letter-spacing:-.04em!important;vertical-align:baseline!important;margin-left:-.03em!important}',
+    'header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(19px,2.05vw,29px)!important}',
+    'header .fc-special-wordmark strong{font-size:clamp(19px,1.75vw,25px)!important}',
+    '@media(max-width:860px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(13px,2.7vw,20px)!important}}',
+    '@media(max-width:620px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(11px,3.1vw,16px)!important}header .fc-special-wordmark strong{font-size:17px!important}}'
    ].join('');
    document.head.appendChild(css);
   }
  }
- function init(){apply();setTimeout(apply,450);setTimeout(apply,1550);setTimeout(apply,2800);}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+ function start(){applyOfficialLogo();setTimeout(applyOfficialLogo,400);setTimeout(applyOfficialLogo,1400);}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
-
-/* Final understated header treatment: no framed logo card; subtitle outside artwork. */
-(function(){
- function finish(){
-  var id='fc-clean-brand-finish';if(document.getElementById(id))return;
-  var st=document.createElement('style');st.id=id;
-  st.textContent=[
-   'html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:1px!important;box-sizing:border-box!important;width:min(345px,31vw)!important;max-width:min(345px,31vw)!important;min-width:0!important;flex:0 1 345px!important;max-height:90px!important;overflow:visible!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;text-decoration:none!important}',
-   'html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:4/1!important;object-fit:contain!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important}',
-   'html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{display:block!important;position:static!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:-7px 0 0!important;padding:0!important;border:0!important;background:none!important;color:#f6e2b9!important;-webkit-text-fill-color:#f6e2b9!important;font:700 9px/1.25 Manrope,Arial,sans-serif!important;letter-spacing:.04em!important;text-transform:uppercase!important;white-space:normal!important;text-align:center!important;text-shadow:0 1px 2px #071b2b99!important}',
-   '@media(max-width:980px){html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){width:255px!important;max-width:255px!important;flex-basis:255px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:7.5px!important;margin-top:-5px!important}}',
-   '@media(max-width:620px){html body header a.fc-brand:has(img.fc-approved-logo),html body header a.fc-special-brand:has(img.fc-approved-logo){width:160px!important;max-width:160px!important;flex-basis:160px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:6.5px!important;letter-spacing:0!important;margin-top:-3px!important}}'
-  ].join('');document.head.appendChild(st);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',finish,{once:true});else finish();
-})();
-
-/* Header final correction: remove white frame and keep tagline readable INSIDE header. */
-(function(){function fix(){if(document.getElementById('fc-header-no-frame-v8'))return;var t=document.createElement('style');t.id='fc-header-no-frame-v8';t.textContent=[
-'html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:300px!important;max-width:300px!important;flex:0 0 300px!important;gap:4px!important;max-height:none!important;border:0!important;outline:0!important;box-shadow:none!important;background:none!important;overflow:visible!important}',
-'html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:300px!important;max-width:100%!important;height:auto!important;border:0!important;outline:0!important;box-shadow:none!important;border-radius:0!important;object-fit:contain!important}',
-'html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{margin:0!important;padding:0!important;font:700 9px/1.35 Manrope,Arial,sans-serif!important;letter-spacing:.045em!important;white-space:normal!important;color:#f6e2b9!important;text-align:center!important}',
-'@media(max-width:850px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:220px!important;max-width:220px!important;flex-basis:220px!important}html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:220px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:7px!important}}',
-'@media(max-width:620px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){width:155px!important;max-width:155px!important;flex-basis:155px!important}html body header a.fc-brand .fc-approved-logo,html body header a.fc-special-brand .fc-approved-logo{width:155px!important}html body header a.fc-brand .fc-logo-subtitle,html body header a.fc-special-brand .fc-logo-subtitle{font-size:6.5px!important}}'
-].join('');document.head.appendChild(t)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix()})();
