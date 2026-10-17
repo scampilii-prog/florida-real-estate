@@ -803,7 +803,7 @@ function apply(){
  var brand=special.querySelector('.sc-cc-brand,.sc-sitemap-brand,.sc-booking-brand,.sc-legal-brand');
  if(brand){
   brand.classList.add('fc-special-brand');
-  brand.innerHTML='<img class="fc-special-mark" src="assets/florida-costiera-coastal-mark.svg?v=20261016-gold-navy" width="43" height="43" alt=""><span class="fc-special-wordmark"><strong><span>Florida</span><em>Costiera</em></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
+  brand.innerHTML='<img class="fc-special-mark" src="assets/florida-costiera-coastal-mark.svg?v=20261016-gold-navy" width="43" height="43" alt=""><span class="fc-special-wordmark"><strong><span>Florida</span><em>Costiera</em><b class="fc-domain">.com</b></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
  }
  if(document.getElementById('fc-special-identity-20261013'))return;
  var css=document.createElement('style');css.id='fc-special-identity-20261013';
@@ -1033,3 +1033,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',reconcile);else reconcile();
 })();
+
+/* Clear sans-serif wordmark, .com white, tagline remains separate text */
+(function(){function init(){var st=document.createElement('style');st.id='fc-brand-legibility-20261017';st.textContent='header .fc-special-wordmark strong{font-family:Manrope,Arial,sans-serif!important;font-weight:650!important;letter-spacing:-.035em!important}header .fc-special-wordmark strong em{font-family:Manrope,Arial,sans-serif!important;font-size:1em!important;line-height:1!important;vertical-align:baseline!important;font-weight:650!important;font-style:normal!important;letter-spacing:-.035em!important;color:#e9bf78!important}header .fc-special-wordmark strong .fc-domain{font-family:Manrope,Arial,sans-serif!important;font-size:.53em!important;font-weight:600!important;color:#fff!important;letter-spacing:-.02em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
