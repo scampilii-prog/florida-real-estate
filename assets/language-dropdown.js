@@ -992,7 +992,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Official artwork unchanged in identity; subtitle is independent, translatable HTML. */
 (function(){
- const image='/assets/florida-costiera-logo-official.svg?v=20261017-wordmark-clean3';
+ const image='/assets/florida-costiera-logo-official.svg?v=20261017-vector-final4';
  const subtitles={
   en:'SOUTHWEST FLORIDA GULF COAST REAL ESTATE',
   es:'BIENES RAÍCES EN LA COSTA DEL GOLFO DEL SUROESTE DE FLORIDA',
@@ -1005,7 +1005,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
    brand.replaceChildren();
    var img=document.createElement('img');
    img.className='fc-approved-logo';img.src=image;
-   img.alt='FloridaCostiera.com';img.width=500;img.height=120;
+   img.alt='FloridaCostiera.com';img.width=600;img.height=110;
    var subtitle=document.createElement('span');
    subtitle.className='fc-logo-subtitle';
    subtitle.setAttribute('data-fc-subtitle','');
@@ -1021,8 +1021,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
    var css=document.createElement('style');css.id='fc-logo-image-subtitle-css';
    css.textContent=[
     'html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:0!important;flex:0 1 310px!important;width:310px!important;max-width:310px!important;min-width:0!important;overflow:visible!important;white-space:normal!important;background:none!important;border:0!important;padding:0!important;text-decoration:none!important}',
-    'html body header .fc-approved-logo{display:block!important;flex:none!important;width:310px!important;max-width:100%!important;height:auto!important;aspect-ratio:25/6!important;object-fit:contain!important;border:0!important;box-shadow:none!important}',
-    'html body header .fc-logo-subtitle{display:block!important;width:100%!important;color:#f0d39b!important;-webkit-text-fill-color:#f0d39b!important;font:700 clamp(8px,.68vw,10px)/1.25 Manrope,Arial,sans-serif!important;letter-spacing:.065em!important;text-transform:uppercase!important;text-align:center!important;white-space:normal!important;margin-top:0!important}',
+    'html body header .fc-approved-logo{display:block!important;flex:none!important;width:310px!important;max-width:100%!important;height:auto!important;aspect-ratio:60/11!important;object-fit:contain!important;border:0!important;box-shadow:none!important}',
+    'html body header .fc-logo-subtitle{display:block!important;width:100%!important;color:#f0d39b!important;-webkit-text-fill-color:#f0d39b!important;font:700 clamp(9px,.85vw,12px)/1.25 Manrope,Arial,sans-serif!important;letter-spacing:.065em!important;text-transform:uppercase!important;text-align:center!important;white-space:normal!important;margin-top:0!important}',
     '@media(max-width:860px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){flex-basis:235px!important;width:235px!important;max-width:235px!important}html body header .fc-approved-logo{width:235px!important}html body header .fc-logo-subtitle{font-size:8px!important;letter-spacing:0!important}}',
     '@media(max-width:620px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){flex-basis:155px!important;width:155px!important;max-width:155px!important}html body header .fc-approved-logo{width:155px!important}html body header .fc-logo-subtitle{font-size:7px!important;letter-spacing:0!important;line-height:1.13!important}}'
    ].join('');
