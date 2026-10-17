@@ -1048,3 +1048,31 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Correct SVG used by the existing approved Back to Top pill. */
 (function(){function fix(){if(document.getElementById('fc-short-wide-existing-arrow'))return;var st=document.createElement('style');st.id='fc-short-wide-existing-arrow';st.textContent='html body #floatingLeftBackTop .fc-top-arrow svg,html body a.top .fc-top-arrow svg{width:19px!important;height:15px!important;stroke-width:3.4!important;stroke-linecap:round!important;stroke-linejoin:round!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix,{once:true});else fix()})();
+
+
+/* Website 18: original historic wordmark + independent subtitle; compact arrow. */
+(function(){
+ function apply(){
+  var url='assets/florida-costiera-original-restored.svg';
+  document.querySelectorAll('header.fc-ready .fc-name,header .fc-special-wordmark strong').forEach(function(el){
+   if(el.dataset.fcHistoricalImage==='1')return;
+   el.dataset.fcHistoricalImage='1';
+   el.textContent='';
+   var im=document.createElement('img');im.src=url;im.alt='FloridaCostiera.com';im.className='fc-historic-logo-image';
+   el.appendChild(im);
+  });
+  document.querySelectorAll('header.fc-ready .fc-mark,header .fc-special-mark').forEach(function(el){el.classList.add('fc-historic-hide-mark')});
+  document.querySelectorAll('#floatingLeftBackTop .fc-top-arrow,#fc-universal-backtop .fc-arrow-disc').forEach(function(el){
+   if(el.dataset.fcCompactArrow==='1')return;
+   el.dataset.fcCompactArrow='1';
+   el.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 18V7M6.5 12.5 12 7l5.5 5.5" fill="none" stroke="#071b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  });
+  if(!document.getElementById('fc-historic-header-20261017')){
+   var st=document.createElement('style');st.id='fc-historic-header-20261017';
+   st.textContent='header .fc-historic-logo-image{display:block!important;width:clamp(225px,25vw,390px)!important;height:auto!important;max-width:100%!important;object-fit:contain!important;object-position:left center!important;border:0!important;background:transparent!important}header .fc-historic-hide-mark{display:none!important}header.fc-ready .fc-name:has(.fc-historic-logo-image),header .fc-special-wordmark strong:has(.fc-historic-logo-image){display:block!important;font-size:0!important;line-height:0!important;letter-spacing:0!important}header.fc-ready .fc-identity,header .fc-special-wordmark{gap:2px!important}header.fc-ready .fc-area,header .fc-special-wordmark small{display:block!important;font:600 clamp(8px,.69vw,10px)/1.3 Manrope,Arial,sans-serif!important;letter-spacing:.06em!important;color:#fff5e4!important;white-space:normal!important}@media(max-width:860px){header .fc-historic-logo-image{width:clamp(145px,29vw,245px)!important}}@media(max-width:620px){header .fc-historic-logo-image{width:clamp(125px,37vw,190px)!important}header.fc-ready .fc-area,header .fc-special-wordmark small{font-size:7px!important;letter-spacing:0!important}}#floatingLeftBackTop .fc-top-arrow svg,#fc-universal-backtop .fc-arrow-disc svg{width:20px!important;height:20px!important;display:block!important;stroke:none!important;fill:none!important}';
+   document.head.appendChild(st);
+  }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+ window.addEventListener('load',apply,{once:true});
+})();
