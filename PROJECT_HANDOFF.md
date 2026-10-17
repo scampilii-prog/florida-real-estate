@@ -1097,3 +1097,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Actualizada versión de script a `20261017-clean-logo3` en 10 HTML: index, about, contact, site-map, closing-costs, buy, sell, questions, calculators, mortgage-calculator. Son cambios de caché; no rediseño. Deben revisarse las otras páginas en siguiente tanda.
 - Comprobado en GitHub que las 10 páginas citadas enlazaban al script compartido. AÚN NO HAY VERIFICACIÓN VISUAL del despliegue en navegador: herramienta pública no pudo acceder a floridacostiera.com; no afirmar funcionamiento final sin vista real y pruebas responsive.
 - Próximo objetivo: revisar referencias al script en todas las URLs del sitemap, validar header móvil y escritorio, formularios de Contact y resto de etapas. OceanFL.com intacto.
+
+
+## WEBSITE 17 — CORRECCIÓN REAL DE MARCA — 17 OCT 2026
+- Logo APROBADO: imagen manuscrita con casita dorada dentro de cuadro, Florida serif marfil, Costiera manuscrita dorada, .com pequeño blanco, fondo azul marino. Imagen instalada como `assets/florida-costiera-logo-final.webp` (commit `82c8abbab028e894de4e5bc2357862f1386065b6`), a 550×138 píxeles / ~4.6 KB, derivada del logo manuscrito aprobado.
+- Rutina final de `assets/language-dropdown.js` usa `/assets/florida-costiera-logo-final.webp?v=20261017-approved-cursive6` y subtítulo HTML independiente con EN/ES/IT/PT. Se corrigió discrepancia ancho 310/360 y recarga de imagen repetida (commit `75455ad7cda732cfdfb57e074988f492a266af3a`).
+- En `sitemap.xml` hay 48 páginas HTML. Se actualizaron y verificaron UNA POR UNA en el repositorio: las 48 referencian `assets/language-dropdown.js?v=20261017-approved-cursive6`.
+- Borrado del logo antiguo rechazado `assets/florida-costiera-logo-official.svg` (commit `1029492c0b058b22a04ce5eaef9ffd4549878554`). No se borraron favicon, fotos de propiedades, ni logo LoKation. `images` no contenía logos de Florida Costiera según listado.
+- ALERTA: verificación realizada sobre archivos GitHub, NO prueba visual del despliegue Cloudflare; confirmar resultados de escritorio/móvil antes de afirmar aspecto impecable. No tocar OceanFL.com. Cinco etapas completas todavía pendientes fuera de esta normalización del logo.
