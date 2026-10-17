@@ -1017,3 +1017,24 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  function start(){applyOfficialLogo();setTimeout(applyOfficialLogo,400);setTimeout(applyOfficialLogo,1400);}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
+
+
+/* Single approved image logo, 2026-10-17. Use the actual approved artwork, never text recreation. */
+(function(){
+ const image='/assets/florida-costiera-logo-official.svg?v=20261017-master1';
+ function applyLogo(){
+  document.querySelectorAll('header a.fc-brand,header a.fc-special-brand').forEach(function(brand){
+   var img=brand.querySelector('img.fc-approved-logo');
+   if(img)return;
+   brand.innerHTML='<img class="fc-approved-logo" src="'+image+'" alt="FloridaCostiera.com — Southwest Florida Gulf Coast Real Estate" width="500" height="167">';
+   brand.setAttribute('aria-label','FloridaCostiera.com — Home');
+  });
+  if(!document.getElementById('fc-approved-logo-css')){
+   var st=document.createElement('style');st.id='fc-approved-logo-css';
+   st.textContent='html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;flex-direction:row!important;gap:0!important;flex:0 1 auto!important;overflow:hidden!important;min-width:0!important;max-width:290px!important;width:290px!important;white-space:nowrap!important;background:none!important;border:0!important;padding:0!important;text-decoration:none!important}html body header .fc-approved-logo{display:block!important;flex:none!important;width:290px!important;height:76px!important;object-fit:cover!important;object-position:center center!important;max-width:100%!important;border:0!important;box-shadow:none!important}@media(max-width:860px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){max-width:220px!important;width:220px!important}html body header .fc-approved-logo{width:220px!important;height:60px!important}}@media(max-width:620px){html body header a.fc-brand:has(.fc-approved-logo),html body header a.fc-special-brand:has(.fc-approved-logo){max-width:172px!important;width:172px!important}html body header .fc-approved-logo{width:172px!important;height:53px!important}}';
+   document.head.appendChild(st);
+  }
+ }
+ function init(){applyLogo();setTimeout(applyLogo,300);setTimeout(applyLogo,1200);setTimeout(applyLogo,2600);}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
