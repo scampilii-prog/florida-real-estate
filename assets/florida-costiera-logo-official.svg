@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="110" viewBox="0 0 600 110" role="img" aria-label="FloridaCostiera.com">
-<rect width="600" height="110" fill="none"/>
-<g transform="translate(8 21)" fill="none" stroke="#e4bb70" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<rect width="66" height="66" x="0" y="0" rx="9"/><path d="M12 35 33 15 54 35 M18 32 V54 H48 V32 M28 54 V39 H38 V54 M40 40 h8 M44 37 v9"/>
-</g>
-<text x="88" y="77" font-family="Georgia, 'Times New Roman', serif" font-size="62" letter-spacing="-3" fill="#fff7ea">Florida</text>
-<text x="283" y="78" font-family="'Brush Script MT','Segoe Script','URW Chancery L',cursive" font-size="70" font-style="italic" letter-spacing="-3" fill="#e5bc74">Costiera</text>
-<text x="516" y="77" font-family="Arial,sans-serif" font-size="25" fill="#fff7ea">.com</text>
-</svg>
