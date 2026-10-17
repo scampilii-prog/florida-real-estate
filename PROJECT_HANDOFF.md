@@ -1082,3 +1082,10 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Imagen maestra actual en assets/florida-costiera-logo-official.svg aún INCLUYE subtítulo pequeño; no declarar corrección terminada. assets/language-dropdown.js tiene lógica que reemplaza todo el contenido del anchor del logo por <img>, eliminando el subtítulo HTML, lo cual debe repararse manteniendo el subtítulo como nodo hermano en columna. No borrar otras fotos o branding LoKation.
 - Revisar visualmente Home/About/Contact/Site Map y el resto de páginas en PC y móvil. Hacer commits reales y verificar, sin decir «listo» antes de terminar. No tocar OceanFL.com.
 - El usuario abrió siguiente chat con «CONTINUACIÓN DEFINITIVA — FLORIDA COSTIERA — NUEVO WEBSITE 17».
+
+
+## WEBSITE 17 — 17 OCT 2026 — primer avance verificado en GitHub
+- Se modificó `assets/florida-costiera-logo-official.svg` para mostrar SOLO el artwork aprobado mediante recorte SVG (casita y FloridaCostiera.com). No se rediseñaron letras ni casita. **Importante:** el recurso WebP original aún está encapsulado dentro del SVG, pero el subtítulo y líneas se ocultan mediante clipPath; si se requiere eliminación irreversible de esos píxeles, crear archivo raster limpio posteriormente tras inspección visual.
+- Se modificó `assets/language-dropdown.js`: la rutina final ahora presenta el logo como imagen y el subtítulo como un elemento HTML `<span class="fc-logo-subtitle">` independiente; texto preparado para EN/ES/IT/PT; se ajustan dimensiones según pantalla y nueva versión de caché de imagen.
+- Commits: logo `11f4000f1e583c37da4d4098c9b791212e705b13`; script `4c92d22a254d7e387eda266275b34386416765e2`.
+- Verificado mediante lectura posterior de los archivos del repositorio. **FALTA verificar visualmente el sitio desplegado en escritorio/móvil** y solucionar si los estilos antiguos interfieren; no declarar terminado sin ello. No se modificó OceanFL.com. Mantener demás cinco etapas pendientes.
