@@ -1021,7 +1021,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 /* Unified Back to Top: remove legacy duplicates including non-button variants */
 (function(){
  function reconcile(){
-  var candidates=Array.from(document.querySelectorAll('#floatingLeftBackTop,[id*="backTop"],[id*="BackTop"],[class*="back-to-top"],[class*="backTop"],[class*="back-top"],[aria-label*="Back to top"],[title*="Back to top"]')).filter(function(e){return /^(BUTTON|A)$/.test(e.tagName)});
+  var candidates=Array.from(document.querySelectorAll('#floatingLeftBackTop,[id*="backTop"],[id*="BackTop"],[class*="back-to-top"],[class*="backTop"],[class*="back-top"],[aria-label*="Back to top"],[title*="Back to top"],a.top')).filter(function(e){return /^(BUTTON|A)$/.test(e.tagName)});
   var main=document.getElementById('floatingLeftBackTop');
   if(!main){main=document.createElement('button');main.id='floatingLeftBackTop';main.type='button';main.innerHTML='<span class="fc-top-arrow">↑</span><span class="fc-top-label">Back to Top</span>';main.setAttribute('aria-label','Back to top');document.body.appendChild(main);main.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
   candidates.forEach(function(e){if(e!==main)e.remove()});
@@ -1036,3 +1036,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* Clear sans-serif wordmark, .com white, tagline remains separate text */
 (function(){function init(){var st=document.createElement('style');st.id='fc-brand-legibility-20261017';st.textContent='header .fc-special-wordmark strong{font-family:Manrope,Arial,sans-serif!important;font-weight:650!important;letter-spacing:-.035em!important}header .fc-special-wordmark strong em{font-family:Manrope,Arial,sans-serif!important;font-size:1em!important;line-height:1!important;vertical-align:baseline!important;font-weight:650!important;font-style:normal!important;letter-spacing:-.035em!important;color:#e9bf78!important}header .fc-special-wordmark strong .fc-domain{font-family:Manrope,Arial,sans-serif!important;font-size:.53em!important;font-weight:600!important;color:#fff!important;letter-spacing:-.02em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
+
+/* Final single-control safeguard: legacy a.top removed after all scripts initialize */
+(function(){function fix(){var main=document.getElementById('floatingLeftBackTop');document.querySelectorAll('a.top').forEach(function(el){if(el!==main&&(/back to top/i.test(el.textContent||'')||/back to top/i.test(el.getAttribute('aria-label')||'')))el.remove()});if(main){main.style.setProperty('bottom','24px','important');main.style.setProperty('left','18px','important')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();window.addEventListener('load',fix)})();
