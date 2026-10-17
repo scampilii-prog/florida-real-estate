@@ -1069,18 +1069,34 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  window.addEventListener('load',apply,{once:true});
 })();
 
-/* Back to Top unified arrow: CSS rendering independent of legacy SVG/arrow scripts. */
+/* Single refined SVG arrow; supersedes old glyph and pseudo-element variants. */
 (function(){
- function setArrow(){
-  if(document.getElementById('fc-single-arrow-render-20261017'))return;
-  var st=document.createElement('style');st.id='fc-single-arrow-render-20261017';
+ function render(){
+  var selector='#floatingLeftBackTop .fc-top-arrow, a.top .fc-top-arrow, #fc-universal-backtop .fc-arrow-disc';
+  document.querySelectorAll(selector).forEach(function(el){
+   el.replaceChildren();
+   var svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+   svg.setAttribute('viewBox','0 0 24 30');
+   svg.setAttribute('width','22');
+   svg.setAttribute('height','27');
+   svg.setAttribute('aria-hidden','true');
+   var path=document.createElementNS('http://www.w3.org/2000/svg','path');
+   path.setAttribute('d','M12 26V4M5.5 10.5 12 4l6.5 6.5');
+   path.setAttribute('stroke','#101923');
+   path.setAttribute('stroke-width','3.2');
+   path.setAttribute('stroke-linecap','round');
+   path.setAttribute('stroke-linejoin','round');
+   path.setAttribute('fill','none');
+   svg.appendChild(path);el.appendChild(svg);
+  });
+  var st=document.getElementById('fc-refined-backtop-svg');
+  if(!st){st=document.createElement('style');st.id='fc-refined-backtop-svg';document.head.appendChild(st)}
   st.textContent=[
-   'html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow,html body #fc-universal-backtop .fc-arrow-disc{font-size:0!important;position:relative!important;overflow:visible!important}',
-   'html body #floatingLeftBackTop .fc-top-arrow>* ,html body a.top .fc-top-arrow>* ,html body #fc-universal-backtop .fc-arrow-disc>*{display:none!important}',
-   'html body #floatingLeftBackTop .fc-top-arrow::before,html body a.top .fc-top-arrow::before,html body #fc-universal-backtop .fc-arrow-disc::before{content:""!important;position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;width:3.5px!important;height:23px!important;background:#071b2b!important;border-radius:2px!important;clip-path:none!important}',
-   'html body #floatingLeftBackTop .fc-top-arrow::after,html body a.top .fc-top-arrow::after,html body #fc-universal-backtop .fc-arrow-disc::after{content:""!important;position:absolute!important;left:50%!important;top:calc(50% - 11px)!important;width:12px!important;height:12px!important;border-top:3.5px solid #071b2b!important;border-left:3.5px solid #071b2b!important;transform:translateX(-50%) rotate(45deg)!important;border-radius:1px!important;display:block!important;background:transparent!important}'
+   'html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow,html body #fc-universal-backtop .fc-arrow-disc{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:0!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow::before,html body #floatingLeftBackTop .fc-top-arrow::after,html body a.top .fc-top-arrow::before,html body a.top .fc-top-arrow::after,html body #fc-universal-backtop .fc-arrow-disc::before,html body #fc-universal-backtop .fc-arrow-disc::after{content:none!important;display:none!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow svg,html body a.top .fc-top-arrow svg,html body #fc-universal-backtop .fc-arrow-disc svg{display:block!important;width:22px!important;height:27px!important;min-height:27px!important;fill:none!important;stroke:none!important;overflow:visible!important}'
   ].join('');
-  document.head.appendChild(st);
  }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setArrow,{once:true});else setArrow();
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render,{once:true});else render();
+ window.addEventListener('load',render,{once:true});
 })();
