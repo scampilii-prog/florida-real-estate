@@ -1057,11 +1057,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   document.querySelectorAll('#floatingLeftBackTop .fc-top-arrow,#fc-universal-backtop .fc-arrow-disc').forEach(function(el){
    if(el.dataset.fcLongArrow==='1')return;
    el.dataset.fcLongArrow='1';
-   el.innerHTML='<svg width="21" height="29" viewBox="0 0 24 30" aria-hidden="true" focusable="false"><path d="M12 27V3M5.5 9.5 12 3l6.5 6.5" fill="none" stroke="#071b2b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+   el.innerHTML='<svg width="21" height="29" viewBox="0 0 24 32" aria-hidden="true" focusable="false"><path d="M12 29V2M5.5 8.5 12 2l6.5 6.5" fill="none" stroke="#071b2b" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   });
   if(!document.getElementById('fc-long-arrow-20261017')){
    var css=document.createElement('style');css.id='fc-long-arrow-20261017';
-   css.textContent='#floatingLeftBackTop .fc-top-arrow svg,#fc-universal-backtop .fc-arrow-disc svg{width:21px!important;height:29px!important;display:block!important;fill:none!important;stroke:none!important}';
+   css.textContent='#floatingLeftBackTop .fc-top-arrow svg,#fc-universal-backtop .fc-arrow-disc svg{width:21px!important;height:30px!important;display:block!important;fill:none!important;stroke:none!important}';
    document.head.appendChild(css);
   }
  }
