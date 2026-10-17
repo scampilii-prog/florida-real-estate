@@ -1068,3 +1068,19 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
  window.addEventListener('load',apply,{once:true});
 })();
+
+/* Back to Top unified arrow: CSS rendering independent of legacy SVG/arrow scripts. */
+(function(){
+ function setArrow(){
+  if(document.getElementById('fc-single-arrow-render-20261017'))return;
+  var st=document.createElement('style');st.id='fc-single-arrow-render-20261017';
+  st.textContent=[
+   'html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow,html body #fc-universal-backtop .fc-arrow-disc{font-size:0!important;position:relative!important;overflow:visible!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow>* ,html body a.top .fc-top-arrow>* ,html body #fc-universal-backtop .fc-arrow-disc>*{display:none!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow::before,html body a.top .fc-top-arrow::before,html body #fc-universal-backtop .fc-arrow-disc::before{content:""!important;position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:block!important;width:24px!important;height:29px!important;background:#071b2b!important;border-radius:2px!important;clip-path:polygon(50% 0,100% 28%,87% 42%,59% 26%,59% 100%,41% 100%,41% 26%,13% 42%,0 28%)!important}',
+   'html body #floatingLeftBackTop .fc-top-arrow::after,html body a.top .fc-top-arrow::after,html body #fc-universal-backtop .fc-arrow-disc::after{display:none!important;content:none!important}'
+  ].join('');
+  document.head.appendChild(st);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setArrow,{once:true});else setArrow();
+})();
