@@ -1024,3 +1024,28 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Google Search Console: Cloudflare Security Events showed Googlebot GET /sitemap.xml blocked with HTTP 403 under BOBA-199 on Oct 13. Owner changed general AI bot policies Training Block to Disallow while Search and Agent Allow; LIVE Google URL tests for Home on Oct 13 and Questions on Oct 14 reported URL available to Google; user clicked Request Indexing for both and received confirmation. Still NOT evidence of indexed search results. Sitemap report as of Oct 14 ~5 PM still displayed last read Oct 13 / Couldn't fetch / 0 discovered; await re-read before claiming success.
 - Google Business Profile screenshots: verified profiles OceanFL and Sabatino Campilii, with 4 reviews on personal profile. Personal profile name Sabatino Campilii, real estate agent primary category, phone 954-778-0263, site oceanfl.com, OceanFL social links and description. Owner wants OceanFL independently preserved and personal profile to primarily direct to Florida Costiera after appropriate review of Google practitioner/duplicate guidelines. GBP listing updates cannot be executed via available current tools; use user-approved UI actions and do not claim a change until confirmed. Do not invent third GBP or alter OceanFL.
 - Public web retrieval shows OceanFL content and 844-623-2630 disclosed, Pearl automated concierge interface exists; that does NOT prove live telephone AI forwarding or successful reception. Avoid promising either service works until tested.
+
+
+## CONTINUACIÓN DEFINITIVA — FLORIDA COSTIERA — NUEVO WEBSITE 17 (handoff, Oct 17 2026)
+
+### Reglas invariables
+- **NUNCA modificar OceanFL.com**, su código/repositorio, número telefónico, GBP, etc. Proyecto separado. Únicamente editar FloridaCostiera.com en scampilii-prog/florida-real-estate.
+- El usuario aprobó definitivamente el logotipo gráfico: fondo azul marino, casita dorada, Florida marfil clásica, Costiera manuscrita dorada, ".com" **BLANCO** y subtítulo "SOUTHWEST FLORIDA GULF COAST REAL ESTATE" entre dos líneas horizontales doradas. **No crear más logotipos ni cambiar diseño.**
+- La imagen original aprobada fue mostrada en chat. Su ruta temporal fue /mnt/data/luxury_florida_coastal_real_estate_logo.png; puede faltar en un chat nuevo. Usar el archivo exacto aprobado, no redibujarlo con tipografías.
+
+### Estado técnico real del logo / Website 16
+- GitHub: recurso compartido assets/florida-costiera-logo-official.svg creado (commit fe0d687c63e9a3b7261c35ec5906ae05c35c38de), contiene imagen WebP incrustada en SVG. assets/language-dropdown.js actualizado (commit 683fa84b91f4e11658a8557448260c0f9e8b7d1e) para reemplazar elementos de texto del logo por una imagen compartida en .fc-brand y .fc-special-brand.
+- HTML principales y numerosas páginas del sitemap cambiaron su versión del script compartido a assets/language-dropdown.js?v=20261017-approved-artwork1 para evitar caché anterior. sitemap.xml incluye 47 páginas HTML.
+- **NO declarar terminada la publicación visual:** GitHub aceptó el archivo pero NO hay verificación visual en Cloudflare ni garantía comprobada de coincidencia exacta del SVG WebP incrustado con la imagen aprobada. Header usa CSS object-fit:cover y tamaños 290x76, 220x60, 172x53; riesgo de recorte. Es prioridad verificación y corrección.
+- Algunas páginas del sitemap devolvieron 404 en búsquedas GitHub: cape-haze-placida-florida-real-estate.html y privacy.html en una pasada; volver a verificar. No eliminar imágenes antiguas sin comprobar referencias; preservar fotos y LoKation.
+- **Las pruebas visuales de las 48 páginas y móvil siguen pendientes.** No afirmar que todos los headers funcionan hasta verificarlos.
+
+### Diseños terminados y otras tareas
+- Contact: formulario unificado aprobado con tres opciones Buying, Investing, Selling. Botones destacados dentro de recuadro azul suave con borde dorado; selección previa obligatoria; secciones 01/02/03 y datos opcionales plegables. Campos de comunidad, presupuesto, plazo, tipo, habitaciones, waterfront, contacto, día/hora, preferencia de idioma (inglés/español/italiano únicamente en conversación; portugués solo lectura del sitio). Email mailto en idioma escogido: usuario abre Apple Mail y envía manualmente. Falta prueba exhaustiva real de 3 casos × 3 idiomas.
+- About no duplicar formulario entero: tres vías de consulta que conducen a Contact; conservar secciones Sabatino e Italo. Email signature fue aprobada por usuario: FloridaCostiera.com y OceanFL.com como enlaces y botones Review, 1,000 Q&A, Calculators, CONTACT ME; no tocar OceanFL.
+- Próximas etapas: auditar header/logo exacto, footer, site-map y menú en todas las páginas, Back to Top, encabezados hero, calculadoras, Q&A (1,010), comunidades/enlaces oficiales, navegaciones y tests. Google Search Console: URL available to Google e indexing requested no confirman indexación; sitemap tenía Couldn't fetch y bloqueo anterior Cloudflare 403 BOBA-199: verificar nuevamente. Google Voice 941-270-4877 SMS confirmado; prueba telefónica entrante desde número independiente pendiente. No cambiar teléfono en GBP sin verificar.
+- No hacer tareas fragmentadas ni pedir repetidamente «sigue»; cerrar grupos completos y reportar resultados realmente comprobados.
+
+### Iniciar NUEVO WEBSITE 17
+- El usuario dirá «CONTINUACIÓN DEFINITIVA — FLORIDA COSTIERA — NUEVO WEBSITE 17».
+- Leer completo PROJECT_HANDOFF.md y consultar estado real GitHub. Prioridad: verificar y finalizar logo maestro idéntico en todas las páginas, sin más generación de logos. Luego continuar cinco etapas de auditoría, pruebas y Search Console. Conservar OceanFL intacto.
