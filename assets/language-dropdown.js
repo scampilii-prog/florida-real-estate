@@ -317,6 +317,7 @@
     if(!hero)hero=document.querySelector('main + section[class*="hero"]');
     if(!hero)return;
     var path=location.pathname.split('/').pop()||'index.html';
+    if(path==='about.html'||path==='about')return;
     var names={'index.html':'Home','about.html':'About','contact.html':'Contact','buy.html':'Buy','sell.html':'Sell','search-properties.html':'Search Properties','communities.html':'Communities','questions.html':'1,000 Q&A','calculators.html':'Calculators','buyers-guide.html':'Buyers Guide','sellers-guide.html':'Sellers Guide','new-construction.html':'New Construction','waterfront.html':'Waterfront Homes'};
     var title=names[path]||document.title.split(/[|–—]/)[0].trim().replace(/\\s*[-]\\s*Florida.*/i,'');
     var bar=document.createElement('nav');bar.className='sc-context-nav';bar.setAttribute('aria-label','Page navigation');
