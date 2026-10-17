@@ -1018,23 +1018,18 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
 
-/* Floating control deduplication and alignment */
+/* Unified Back to Top: remove legacy duplicates including non-button variants */
 (function(){
- function clean(){
-  var buttons=Array.from(document.querySelectorAll('#floatingLeftBackTop,button[aria-label="Back to top"],a[aria-label="Back to top"]'));
-  var primary=buttons.find(function(el){return el.id==='floatingLeftBackTop'})||buttons[0];
-  buttons.forEach(function(el){if(el!==primary)el.remove()});
-  if(!primary){
-   primary=document.createElement('button');primary.type='button';primary.id='floatingLeftBackTop';
-   primary.setAttribute('aria-label','Back to top');primary.innerHTML='<span class="fc-top-arrow" aria-hidden="true">↑</span><span class="fc-top-label">Back to Top</span>';
-   document.body.appendChild(primary);
-   primary.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
-  }
-  var style=document.getElementById('fc-floating-controls-alignment');
-  if(!style){style=document.createElement('style');style.id='fc-floating-controls-alignment';document.head.appendChild(style)}
-  style.textContent='.tino-launcher{bottom:24px!important;right:18px!important}#floatingLeftBackTop{position:fixed!important;left:18px!important;right:auto!important;top:auto!important;bottom:24px!important;z-index:9997!important;display:flex!important;align-items:center!important;gap:9px!important;min-height:48px!important;padding:5px 15px 5px 6px!important;border-radius:999px!important;background:#071b2d!important;color:#fff!important;border:2px solid #fff!important;box-shadow:0 6px 22px #0003!important;font:700 11px Manrope,Arial,sans-serif!important;cursor:pointer!important}#floatingLeftBackTop .fc-top-arrow{display:flex!important;align-items:center!important;justify-content:center!important;width:36px!important;height:36px!important;border-radius:50%!important;background:#e8c77f!important;color:#071b2d!important;font-size:24px!important}#floatingLeftBackTop .fc-top-label{display:inline!important}@media(max-width:600px){.tino-launcher{bottom:12px!important;right:12px!important}#floatingLeftBackTop{bottom:12px!important;left:12px!important}}';
-  function visibility(){primary.classList.toggle('is-visible',window.scrollY>240);primary.style.visibility=window.scrollY>240?'visible':'hidden';primary.style.opacity=window.scrollY>240?'1':'0'}
-  window.addEventListener('scroll',visibility,{passive:true});visibility();
+ function reconcile(){
+  var candidates=Array.from(document.querySelectorAll('#floatingLeftBackTop,[id*="backTop"],[id*="BackTop"],[class*="back-to-top"],[class*="backTop"],[class*="back-top"],[aria-label*="Back to top"],[title*="Back to top"]')).filter(function(e){return /^(BUTTON|A)$/.test(e.tagName)});
+  var main=document.getElementById('floatingLeftBackTop');
+  if(!main){main=document.createElement('button');main.id='floatingLeftBackTop';main.type='button';main.innerHTML='<span class="fc-top-arrow">↑</span><span class="fc-top-label">Back to Top</span>';main.setAttribute('aria-label','Back to top');document.body.appendChild(main);main.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
+  candidates.forEach(function(e){if(e!==main)e.remove()});
+  var style=document.getElementById('fc-floating-controls-alignment')||document.createElement('style');style.id='fc-floating-controls-alignment';
+  style.textContent='.tino-launcher{right:18px!important;bottom:24px!important}#floatingLeftBackTop{position:fixed!important;left:18px!important;right:auto!important;top:auto!important;bottom:24px!important;z-index:9997!important;display:inline-flex!important;align-items:center!important;gap:9px!important;min-height:48px!important;padding:5px 15px 5px 6px!important;border:2px solid #fff!important;border-radius:999px!important;background:#071b2d!important;color:white!important;box-shadow:0 6px 22px #0003!important;font:700 11px Manrope,Arial,sans-serif!important;cursor:pointer!important}#floatingLeftBackTop .fc-top-arrow{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:36px!important;height:36px!important;border-radius:50%!important;background:#e8c77f!important;color:#071b2d!important;font-size:24px!important}#floatingLeftBackTop .fc-top-label{display:inline!important}@media(max-width:600px){.tino-launcher{bottom:12px!important;right:12px!important}#floatingLeftBackTop{bottom:12px!important;left:12px!important}}';
+  document.head.appendChild(style);
+  function show(){main.classList.toggle('is-visible',window.scrollY>240);main.style.opacity=window.scrollY>240?'1':'0';main.style.visibility=window.scrollY>240?'visible':'hidden'}
+  window.addEventListener('scroll',show,{passive:true});show();
  }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',clean);else clean();
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',reconcile);else reconcile();
 })();
