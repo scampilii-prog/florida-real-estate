@@ -1017,3 +1017,30 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  function start(){applyOfficialLogo();setTimeout(applyOfficialLogo,400);setTimeout(applyOfficialLogo,1400);}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 })();
+
+/* Florida Costiera — shared floating controls alignment, 2026-10-17 */
+(function(){
+ function init(){
+  if(document.getElementById('fc-floating-controls-alignment'))return;
+  var style=document.createElement('style');
+  style.id='fc-floating-controls-alignment';
+  style.textContent=[
+   '.tino-launcher{bottom:24px!important;right:18px!important}',
+   '#floatingLeftBackTop{position:fixed!important;left:18px!important;right:auto!important;top:auto!important;bottom:24px!important;height:64px!important;min-height:64px!important;border-radius:999px!important;z-index:9997!important}',
+   '#floatingLeftBackTop .fc-top-arrow{width:42px!important;height:42px!important;font-size:25px!important}',
+   '@media(max-width:600px){.tino-launcher{bottom:12px!important;right:12px!important}#floatingLeftBackTop{bottom:12px!important;left:12px!important;height:54px!important;min-height:54px!important;padding-right:10px!important;font-size:10px!important}#floatingLeftBackTop .fc-top-arrow{width:36px!important;height:36px!important}}'
+  ].join('');
+  document.head.appendChild(style);
+  var b=document.getElementById('floatingLeftBackTop');
+  if(!b){
+   b=document.createElement('button');b.type='button';b.id='floatingLeftBackTop';
+   b.setAttribute('aria-label','Back to top');b.title='Back to top';
+   b.innerHTML='<span class="fc-top-arrow" aria-hidden="true">↑</span><span class="fc-top-label">Back to Top</span>';
+   document.body.appendChild(b);
+   b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+   function visibility(){b.style.opacity=window.scrollY>240?'1':'0';b.style.visibility=window.scrollY>240?'visible':'hidden'}
+   window.addEventListener('scroll',visibility,{passive:true});visibility();
+  }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
