@@ -990,32 +990,25 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Florida Costiera official identity — shared across every page using this asset.
-   Existing house mark and navigation remain unchanged. */
+/* Approved original coastal wordmark: preserve classic Florida and script Costiera. */
 (function(){
- function applyOfficialLogo(){
-  document.querySelectorAll('header.fc-ready .fc-name, header .fc-special-wordmark strong').forEach(function(el){
-   if(el.dataset.fcOfficialLogo==='20261017')return;
-   el.dataset.fcOfficialLogo='20261017';
-   el.innerHTML='<span class="fc-official-florida">Florida</span><span class="fc-official-costiera">Costiera</span><span class="fc-official-dotcom">.com</span>';
+ function restore(){
+  document.querySelectorAll('header.fc-ready .fc-name.fc-wordmark-new').forEach(function(el){
+   if(el.dataset.fcApprovedWordmark==='1')return;
+   el.dataset.fcApprovedWordmark='1';
+   el.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong><span class="fc-approved-dotcom">.com</span>';
   });
-  if(!document.getElementById('fc-official-logo-styles')){
-   var css=document.createElement('style');css.id='fc-official-logo-styles';
-   css.textContent=[
-    'header.fc-ready .fc-name.fc-wordmark-new,header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;white-space:nowrap!important;letter-spacing:-.045em!important;font-weight:500!important;text-transform:none!important}',
-    'header .fc-official-florida{color:#fff8e9!important;font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}',
-    'header .fc-official-costiera{font-family:"Alex Brush",cursive!important;color:#eac276!important;font-size:1.49em!important;font-weight:400!important;line-height:.75!important;letter-spacing:-.015em!important;margin-left:-.035em!important;vertical-align:-.035em!important;display:inline-block!important}',
-    'header .fc-official-dotcom{font-family:Manrope,Arial,sans-serif!important;color:#fff9f0!important;font-size:.51em!important;line-height:1!important;font-style:normal!important;font-weight:600!important;letter-spacing:-.04em!important;vertical-align:baseline!important;margin-left:-.03em!important}',
-    'header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(19px,2.05vw,29px)!important}',
-    'header .fc-special-wordmark strong{font-size:clamp(19px,1.75vw,25px)!important}',
-    '@media(max-width:860px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(13px,2.7vw,20px)!important}}',
-    '@media(max-width:620px){header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(11px,3.1vw,16px)!important}header .fc-special-wordmark strong{font-size:17px!important}}'
-   ].join('');
-   document.head.appendChild(css);
-  }
+  document.querySelectorAll('header .fc-special-wordmark strong').forEach(function(el){
+   if(el.dataset.fcApprovedWordmark==='1')return;
+   el.dataset.fcApprovedWordmark='1';
+   el.innerHTML='<span>Florida</span><em>Costiera</em><b class="fc-domain">.com</b>';
+  });
+  var st=document.getElementById('fc-original-brand-restore');
+  if(!st){st=document.createElement('style');st.id='fc-original-brand-restore';document.head.appendChild(st)}
+  st.textContent='header.fc-ready .fc-name.fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.045em!important}header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}header.fc-ready .fc-wordmark-new .fc-costiera{font-family:"Alex Brush",cursive!important;color:#e9bf78!important;font-size:1.53em!important;font-weight:400!important}header.fc-ready .fc-approved-dotcom,header .fc-special-wordmark .fc-domain{display:inline!important;color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}header .fc-special-wordmark strong em{font-family:"Alex Brush",cursive!important;font-weight:400!important;color:#e9bf78!important;font-size:1.55em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';
  }
- function start(){applyOfficialLogo();setTimeout(applyOfficialLogo,400);setTimeout(applyOfficialLogo,1400);}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restore,{once:true});else restore();
+ window.addEventListener('load',restore,{once:true});
 })();
 
 /* Unified Back to Top: remove legacy duplicates including non-button variants */
@@ -1033,9 +1026,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',reconcile);else reconcile();
 })();
-
-/* Clear sans-serif wordmark, .com white, tagline remains separate text */
-(function(){function init(){var st=document.createElement('style');st.id='fc-brand-legibility-20261017';st.textContent='header .fc-special-wordmark strong{font-family:Manrope,Arial,sans-serif!important;font-weight:650!important;letter-spacing:-.035em!important}header .fc-special-wordmark strong em{font-family:Manrope,Arial,sans-serif!important;font-size:1em!important;line-height:1!important;vertical-align:baseline!important;font-weight:650!important;font-style:normal!important;letter-spacing:-.035em!important;color:#e9bf78!important}header .fc-special-wordmark strong .fc-domain{font-family:Manrope,Arial,sans-serif!important;font-size:.53em!important;font-weight:600!important;color:#fff!important;letter-spacing:-.02em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
 
 /* Final single-control safeguard: legacy a.top removed after all scripts initialize */
 (function(){function fix(){var main=document.getElementById('floatingLeftBackTop');document.querySelectorAll('a.top').forEach(function(el){if(el!==main&&(/back to top/i.test(el.textContent||'')||/back to top/i.test(el.getAttribute('aria-label')||'')))el.remove()});if(main){main.style.setProperty('bottom','24px','important');main.style.setProperty('left','18px','important')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();window.addEventListener('load',fix)})();
