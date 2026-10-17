@@ -1089,3 +1089,11 @@ El usuario no quiere código, ZIP, instrucciones técnicas ni commits explicados
 - Se modificó `assets/language-dropdown.js`: la rutina final ahora presenta el logo como imagen y el subtítulo como un elemento HTML `<span class="fc-logo-subtitle">` independiente; texto preparado para EN/ES/IT/PT; se ajustan dimensiones según pantalla y nueva versión de caché de imagen.
 - Commits: logo `11f4000f1e583c37da4d4098c9b791212e705b13`; script `4c92d22a254d7e387eda266275b34386416765e2`.
 - Verificado mediante lectura posterior de los archivos del repositorio. **FALTA verificar visualmente el sitio desplegado en escritorio/móvil** y solucionar si los estilos antiguos interfieren; no declarar terminado sin ello. No se modificó OceanFL.com. Mantener demás cinco etapas pendientes.
+
+
+## WEBSITE 17 — 17 OCT 2026 — TANDA ADICIONAL
+- Corregido clipPath en `assets/florida-costiera-logo-official.svg` para ocultar el subtítulo en miniatura del gráfico mostrado, manteniendo imagen subyacente aprobada (no elimina sus píxeles físicos dentro del WebP). Commit `a528be6ba61fdc1359a85b936973d8266de266a8`.
+- Actualizada URL interna del logo en `assets/language-dropdown.js` para evitar caché vieja: commit `1d6fe3dcb66ed48c1d482264ab3753a64879cb7e`.
+- Actualizada versión de script a `20261017-clean-logo3` en 10 HTML: index, about, contact, site-map, closing-costs, buy, sell, questions, calculators, mortgage-calculator. Son cambios de caché; no rediseño. Deben revisarse las otras páginas en siguiente tanda.
+- Comprobado en GitHub que las 10 páginas citadas enlazaban al script compartido. AÚN NO HAY VERIFICACIÓN VISUAL del despliegue en navegador: herramienta pública no pudo acceder a floridacostiera.com; no afirmar funcionamiento final sin vista real y pruebas responsive.
+- Próximo objetivo: revisar referencias al script en todas las URLs del sitemap, validar header móvil y escritorio, formularios de Contact y resto de etapas. OceanFL.com intacto.
