@@ -452,6 +452,11 @@ html body .about-main>.about-hero>.site-refined-cta{display:none!important}
 <label>Your name <input autocomplete="name" name="name" placeholder="Full name" required=""/></label>
 <label>Your email <input autocomplete="email" name="email" placeholder="you@example.com" required="" type="email"/></label>
 <label>Phone (optional) <input autocomplete="tel" name="phone" placeholder="Best number to reach you" type="tel"/></label>
+<label>Approximate budget or asking price <select name="budget"><option value="">Not sure yet</option><option>Under $200,000</option><option>$200,000–$350,000</option><option>$350,000–$500,000</option><option>$500,000–$750,000</option><option>$750,000–$1 million</option><option>Over $1 million</option></select></label>
+<label>Timeframe <select name="timeline"><option value="">Just exploring</option><option>As soon as possible</option><option>Within 3 months</option><option>3–6 months</option><option>6–12 months</option></select></label>
+<label>Preferred contact day <select name="contactDay"><option value="">No preference</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+<label>Best time to contact you <select name="contactTime"><option value="">Any time</option><option>Morning (9 AM–12 PM)</option><option>Afternoon (12 PM–5 PM)</option><option>Evening (5 PM–8 PM)</option></select></label>
+<label>Preferred language <select name="contactLanguage"><option>English</option><option>Español</option><option>Italiano</option></select></label>
 <label class="coast-full">What are you looking for? <textarea name="message" placeholder="Budget, bedrooms, timeline, waterfront preferences, or any questions..." rows="3"></textarea></label>
 </div>
 <div class="coast-actions"><button type="submit">Contact Sabatino <span aria-hidden="true">→</span></button><p>Opens your email app with your selections ready to send. No message is sent until you confirm it.</p></div>
@@ -615,11 +620,29 @@ if(launcher)launcher.click();
 (function(){
 var form=document.getElementById('coast-lead-form');if(!form)return;
 form.addEventListener('submit',function(e){
-e.preventDefault();
-if(!form.reportValidity())return;
-var d=new FormData(form), area=d.get('coastArea')||'Not specified';
-var body=['Area: '+area,'Interest: '+d.get('intent'),'Name: '+d.get('name'),'Email: '+d.get('email'),'Phone: '+(d.get('phone')||'Not provided'),'','What I am looking for:',''+(d.get('message')||'Please contact me to discuss my options.')].join('\n');
-window.location.href='mailto:sabatino@floridacostiera.com?subject='+encodeURIComponent('Gulf Coast real estate inquiry — '+area)+'&body='+encodeURIComponent(body);
+ e.preventDefault();if(!form.reportValidity())return;
+ var d=new FormData(form),lang=d.get('contactLanguage')||'English',es=lang==='Español',it=lang==='Italiano';
+ var t=function(en,sp,ital){return es?sp:it?ital:en;};
+ var intent=d.get('intent')||'Buying a home',area=d.get('coastArea')||'';
+ var choice=intent==='Buying a home'?0:intent==='Selling a property'?1:intent==='Exploring communities'?2:3;
+ var intents=[['Buying a home','Comprar una vivienda','Acquistare una casa'],['Selling a property','Vender una propiedad','Vendere un immobile'],['Exploring communities','Explorar comunidades','Esplorare le comunità'],['New construction','Nueva construcción','Nuove costruzioni']];
+ var selected=intents[choice][es?1:it?2:0];
+ var days={Monday:['Lunes','Lunedì'],Tuesday:['Martes','Martedì'],Wednesday:['Miércoles','Mercoledì'],Thursday:['Jueves','Giovedì'],Friday:['Viernes','Venerdì'],Saturday:['Sábado','Sabato'],Sunday:['Domingo','Domenica']};
+ var times={'Morning (9 AM–12 PM)':['Mañana (9 a. m.–12 p. m.)','Mattina (9:00–12:00)'],'Afternoon (12 PM–5 PM)':['Tarde (12 p. m.–5 p. m.)','Pomeriggio (12:00–17:00)'],'Evening (5 PM–8 PM)':['Tarde-noche (5 p. m.–8 p. m.)','Sera (17:00–20:00)']};
+ var loc=function(v,dict,otherwise){return v?(dict[v]?(es?dict[v][0]:it?dict[v][1]:v):v):otherwise;};
+ var bullet=function(rows){return rows.map(function(x){return '\u00a0\u00a0\u00a0•  '+x[0]+': '+x[1];}).join('\n');};
+ var bold=function(v){return v.replace(/[A-Z]/g,function(c){return String.fromCodePoint(0x1D5D4+c.charCodeAt(0)-65);});};
+ var unknown=t('Not specified','No especificado','Non specificato');
+ var info=[[t('Property interest','Interés inmobiliario','Interesse immobiliare'),selected],[t('Preferred area','Zona de interés','Zona di interesse'),area],[t('Budget / asking price','Presupuesto / precio de venta','Budget / prezzo richiesto'),d.get('budget')||unknown],[t('Timeframe','Plazo previsto','Tempistiche'),d.get('timeline')||unknown]];
+ var contact=[[t('Name','Nombre','Nome'),d.get('name')||''],['Email',d.get('email')||''],[t('Phone','Teléfono','Telefono'),d.get('phone')||unknown],[t('Preferred contact day','Día preferido','Giorno preferito'),loc(d.get('contactDay'),days,t('No preference','Sin preferencia','Nessuna preferenza'))],[t('Best time to contact','Mejor horario','Orario preferito'),loc(d.get('contactTime'),times,t('Any time','Cualquier horario','Qualsiasi orario'))],[t('Preferred language','Idioma preferido','Lingua preferita'),lang]];
+ var heading=t('MY REAL ESTATE PLANS','MIS PLANES INMOBILIARIOS','I MIEI PROGETTI IMMOBILIARI');
+ var intro=t('I would appreciate your guidance regarding my real estate plans along Florida’s Gulf Coast.','Me gustaría recibir su orientación sobre mis planes inmobiliarios en la costa del golfo de Florida.','Gradirei la sua consulenza per i miei progetti immobiliari sulla costa del Golfo della Florida.');
+ var note=(d.get('message')||'').trim();
+ var lines=[t('Hello Sabatino,','Hola, Sabatino:','Buongiorno Sabatino,'),'',intro,'',t('Here are a few details about what I have in mind:','Estos son algunos detalles de lo que estoy buscando:','Ecco alcuni dettagli su ciò che ho in mente:'),'',bold(heading),bullet(info),'',bold(t('MY CONTACT DETAILS','MIS DATOS DE CONTACTO','I MIEI DATI DI CONTATTO')),bullet(contact)];
+ if(note)lines.push('',bold(t('A LITTLE MORE ABOUT MY PLANS','OTROS DETALLES SOBRE MIS PLANES','ALTRI DETTAGLI SUI MIEI PROGETTI')),note);
+ lines.push('',t('Please let me know a convenient time to discuss the possibilities.','Le agradecería que me indicara cuándo podemos conversar sobre las opciones disponibles.','La prego di indicarmi quando potremmo parlare delle possibilità disponibili.'),t('Thank you for your time and assistance.','Muchas gracias por su tiempo y su ayuda.','La ringrazio per il tempo e la disponibilità.'),'',t('Kind regards,','Atentamente,','Cordiali saluti,'),d.get('name')||'','',t('Inquiry submitted through FloridaCostiera.com','Consulta enviada desde FloridaCostiera.com','Richiesta inviata tramite FloridaCostiera.com'));
+ var subject='Florida Costiera | '+selected;
+ window.location.href='mailto:sabatino@floridacostiera.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lines.join('\n'));
 });
 })();
 </script>
