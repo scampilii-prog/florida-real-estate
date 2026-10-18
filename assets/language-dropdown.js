@@ -1095,3 +1095,14 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  window.addEventListener('load',render,{once:true});
 })();
 
+
+/* Mobile identity: give the approved logo its own readable row. */
+(function(){
+ function apply(){
+  if(document.getElementById('fc-mobile-brand-readable'))return;
+  var s=document.createElement('style');s.id='fc-mobile-brand-readable';
+  s.textContent='@media(max-width:620px){html body header.fc-ready{height:126px!important;max-height:126px!important;min-height:126px!important;box-sizing:border-box!important}html body header.fc-ready .header-inner,html body header.fc-ready:is(.oc-top,.sc-sitemap-header,.sc-cc-header,.sc-booking-header,.sc-legal-header){display:flex!important;flex-wrap:wrap!important;align-content:center!important;align-items:center!important;row-gap:10px!important;column-gap:0!important;padding:10px 14px!important}html body header.fc-ready .fc-brand,html body header.fc-ready .fc-special-brand{flex:0 0 100%!important;width:100%!important;max-width:100%!important;min-width:0!important;justify-content:flex-start!important;gap:9px!important}html body header.fc-ready .fc-mark,html body header.fc-ready .fc-special-mark{display:block!important;flex:0 0 36px!important;width:36px!important;height:40px!important;background-size:34px 34px!important;padding-right:0!important;border:0!important}html body header.fc-ready .fc-name.fc-wordmark-new,html body header.fc-ready .fc-special-wordmark strong{font-size:clamp(26px,7vw,34px)!important;line-height:1.08!important;letter-spacing:-.04em!important}html body header.fc-ready .fc-area,html body header.fc-ready .fc-special-wordmark small{display:block!important;font-size:clamp(7px,1.9vw,9px)!important;line-height:1.35!important;letter-spacing:0!important;white-space:nowrap!important}html body header.fc-ready :is(.header-tools,.oc-actions,.sc-sitemap-tools,.sc-cc-tools,.sc-booking-tools,.sc-legal-tools,.fc-unified-header-tools){flex:0 0 auto!important;margin-left:auto!important;max-width:100%!important}html body header.fc-ready .header-inner{height:100%!important;box-sizing:border-box!important}}';
+  document.head.appendChild(s);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
+})();
