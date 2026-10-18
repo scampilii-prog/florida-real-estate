@@ -1,0 +1,117 @@
+{
+  "source": "https://www.showingnew.com/sabatinocampilii3",
+  "checked": "2026-10-18",
+  "cities": [
+    {
+      "name": "Babcock Ranch",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/city-babcock-ranch",
+      "zips": "33982"
+    },
+    {
+      "name": "Punta Gorda",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/city-punta-gorda",
+      "zips": "33950 \u00b7 33955"
+    },
+    {
+      "name": "Port Charlotte",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/city-port-charlotte",
+      "zips": "33954 \u00b7 33980"
+    },
+    {
+      "name": "North Fort Myers",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-north-fort-myers",
+      "zips": "33903 \u00b7 33917"
+    },
+    {
+      "name": "Fort Myers",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-fort-myers",
+      "zips": "33905 \u00b7 33913 \u00b7 33966"
+    },
+    {
+      "name": "Cape Coral",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-cape-coral",
+      "zips": "33909 \u00b7 33993"
+    },
+    {
+      "name": "Lehigh Acres",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-lehigh-acres",
+      "zips": "33936 \u00b7 33971"
+    },
+    {
+      "name": "Alva",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-alva",
+      "zips": "33920"
+    },
+    {
+      "name": "LaBelle",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/city-labelle",
+      "zips": "33935"
+    }
+  ],
+  "zipCodes": [
+    {
+      "zip": "33903",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33903"
+    },
+    {
+      "zip": "33905",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33905"
+    },
+    {
+      "zip": "33909",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33909"
+    },
+    {
+      "zip": "33913",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33913"
+    },
+    {
+      "zip": "33917",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33917"
+    },
+    {
+      "zip": "33920",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33920"
+    },
+    {
+      "zip": "33935",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33935"
+    },
+    {
+      "zip": "33936",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33936"
+    },
+    {
+      "zip": "33950",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/postalcode-33950"
+    },
+    {
+      "zip": "33954",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/postalcode-33954"
+    },
+    {
+      "zip": "33955",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/postalcode-33955"
+    },
+    {
+      "zip": "33966",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33966"
+    },
+    {
+      "zip": "33971",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33971"
+    },
+    {
+      "zip": "33980",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/postalcode-33980"
+    },
+    {
+      "zip": "33982",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/punta-gorda/postalcode-33982"
+    },
+    {
+      "zip": "33993",
+      "url": "https://www.showingnew.com/sabatinocampilii3/communities/florida/fort-myers/postalcode-33993"
+    }
+  ]
+}

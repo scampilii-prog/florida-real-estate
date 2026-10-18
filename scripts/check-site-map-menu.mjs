@@ -18,7 +18,7 @@ for(const page of pages){
  assert(header,page+' missing header');
  const controls=[...header.matchAll(/<(?:a|button)\b[^>]*>/g)].map(m=>m[0]).filter(t=>/data-oc-menu|menu-button|sc-(?:sitemap-menu-button|cc-menu|legal-menu|booking-menu)|onclick="openMenu/.test(t));
  assert(controls.length,page+' has no Site Map control');
- assert(html.includes('language-dropdown.js?v=20261018-sitemap-menu'),page+' stale script');
+ assert(/language-dropdown\.js\?v=20261018-(?:sitemap-menu|showingnew)/.test(html),page+' stale script');
  for(const tag of controls){
   assigned=undefined;let prevented=false,stopped=false;
   // Nested SVG/path targets delegate through closest to their owning control.
