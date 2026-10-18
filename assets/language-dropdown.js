@@ -958,10 +958,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* One navigation action: hamburgers open the approved button-based Site Map, not the retired editorial overlay. */
 (function(){
-  if(/(?:^|\/)site-map(?:\.html)?\/?$/.test(location.pathname))return;
   window.addEventListener('click',function(event){
     var target=event.target;
-    var button=target&&target.closest&&target.closest('button[data-oc-menu],button.menu-button,button[onclick*="openMenu"]');
+    var button=target&&target.closest&&target.closest('[data-oc-menu],.menu-button,button[onclick*="openMenu"],.sc-sitemap-menu-button,.sc-cc-menu,.sc-legal-menu,.sc-booking-menu');
     if(!button)return;
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -1095,3 +1094,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',render,{once:true});else render();
  window.addEventListener('load',render,{once:true});
 })();
+

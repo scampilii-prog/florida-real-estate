@@ -144,4 +144,6 @@ console.log('All public pages include versioned shared navigation assets.');
 import {execFileSync} from 'node:child_process';
 execFileSync(process.execPath,[new URL('./sync-inquiry.mjs',import.meta.url).pathname,'--check'],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-inquiry.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-site-map-menu.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
+
