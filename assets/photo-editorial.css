@@ -1,0 +1,18 @@
+/* Supplemental imagery and restrained separators; scoped away from navigation and forms. */
+.fc-page-photo-refresh .fc-local-scene{position:relative;display:block;width:100%;max-width:1120px;margin:30px auto;border:1px solid #d3bd97;border-radius:13px;overflow:hidden;background:#f5f1e9}
+.fc-page-photo-refresh .fc-local-scene img{display:block;width:100%;height:clamp(210px,27vw,330px);object-fit:cover}
+.fc-page-photo-refresh .fc-local-scene figcaption{padding:10px 16px;color:#526c7d;font:500 11px/1.7 Manrope,Arial,sans-serif;background:#fbf9f4}
+.fc-page-photo-refresh .fc-new-visual-break{display:flex;align-items:center;gap:18px;margin:34px auto;max-width:1120px}
+.fc-page-photo-refresh .fc-new-visual-break:before,.fc-page-photo-refresh .fc-new-visual-break:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,#bc9559)}
+.fc-page-photo-refresh .fc-new-visual-break:after{transform:scaleX(-1)}
+.fc-page-photo-refresh .fc-new-visual-break span{color:#99713a;font:800 10px/1.7 Manrope,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center}
+.fc-page-photo-refresh .fc-photo-attribution{max-width:1120px;margin:30px auto 10px;border-top:1px solid #ddd8ce;padding:14px 0;color:#607581;font:400 11px/1.8 Manrope,Arial,sans-serif;text-align:left}
+.fc-page-photo-refresh .fc-photo-attribution summary{cursor:pointer;font-weight:650;color:#657987}
+.fc-page-photo-refresh .fc-photo-attribution ul{padding-left:19px;columns:2;column-gap:28px}
+.fc-page-photo-refresh .fc-photo-attribution li{break-inside:avoid;margin-bottom:10px}
+.fc-page-photo-refresh .fc-photo-attribution a{color:#7e6137;text-underline-offset:3px}
+.fc-page-photo-refresh .oc-real-card:has(>.fc-community-card-photo){overflow:hidden}
+.fc-page-photo-refresh .oc-real-card>.fc-community-card-photo{display:block;width:calc(100% + 50px);max-width:none;height:180px;margin:-25px -25px 21px;object-fit:cover;border-radius:0}
+@media(max-width:700px){.fc-page-photo-refresh .fc-photo-attribution ul{columns:1}.fc-page-photo-refresh .fc-new-visual-break{gap:11px}.fc-page-photo-refresh .fc-new-visual-break span{max-width:190px;font-size:9px}.fc-page-photo-refresh .fc-local-scene img{height:230px}}
+
+.fc-page-photo-refresh .fc-guide-image-caption{display:block;font:500 10px/1.6 Manrope,Arial,sans-serif;color:#70828c;margin:-10px 0 16px;padding-bottom:10px;border-bottom:1px solid #ece6dc}

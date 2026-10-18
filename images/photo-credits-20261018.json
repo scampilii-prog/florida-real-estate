@@ -1,0 +1,176 @@
+{
+  "updated": "2026-10-18",
+  "notes": "Free-use photography. Images resized, converted to WebP and responsively cropped. Creative Commons adaptations are provided under the same stated license. Architectural illustration is labelled as illustrative, not an identified listing.",
+  "photos": [
+    {
+      "local": "images/boca-grande-lighthouse-dunes.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Lighthouse.jpg",
+      "author": "Juju Gurgel",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "adaptation_license": "CC BY-SA 4.0",
+      "description": "Gasparilla Island lighthouse above coastal dunes",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/boca-grande-historic-lighthouse.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Lighthouse_From_Beach_1.jpg",
+      "author": "JMOOLY1978",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "adaptation_license": "CC BY-SA 4.0",
+      "description": "Historic Port Boca Grande lighthouse from the beach",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/nokomis-beach-sunset-birds.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Nokomis.jpg",
+      "author": "Dripen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "adaptation_license": "CC BY-SA 4.0",
+      "description": "Sunset and shorebirds on Nokomis Beach",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/nokomis-beach-pavilion.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Nokomis_Beach_Pavilion.jpg",
+      "author": "National Park Service",
+      "license": "Public domain",
+      "license_url": "",
+      "adaptation_license": "Public domain",
+      "description": "Nokomis Beach Pavilion and fountain",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/venice-avenue-tree-lined.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:VeniceAve.jpg",
+      "author": "Dayna Barnes",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "adaptation_license": "CC BY-SA 3.0",
+      "description": "Tree-lined Venice Avenue in Venice, Florida",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/venice-downtown-street.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_FL_street01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "adaptation_license": "CC BY-SA 3.0",
+      "description": "Street scene in downtown Venice, Florida",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/siesta-key-beach-pavilion.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Siesta_Key_Beach_Pavilion_01_FRD_9703.jpg",
+      "author": "Fred Hsu on en.wikipedia",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "adaptation_license": "CC BY-SA 3.0",
+      "description": "Siesta Key Beach Pavilion at sunset",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/siesta-key-lifeguard-beach.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(3).jpg",
+      "author": "4net",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "adaptation_license": "CC BY 3.0",
+      "description": "Siesta Key beach and red lifeguard tower",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/longboat-key-millar-bay.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Florida_Millar_Bay_from_Longboat_Key.jpg",
+      "author": "Wolfgang Moroder",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "adaptation_license": "CC BY-SA 3.0",
+      "description": "Millar Bay viewed from Longboat Key",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/punta-gorda-town-square.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:PGTOWNSQUARE.JPG",
+      "author": "Pgbk87",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "adaptation_license": "CC BY-SA 3.0",
+      "description": "Punta Gorda town square",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/sarasota-marina.webp",
+      "source": "https://unsplash.com/photos/w7isRdGnpZQ",
+      "author": "Jeffrey Eisen",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "Marina in Sarasota, Florida",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/florida-golf-green.webp",
+      "source": "https://unsplash.com/photos/0KmACspzIFc",
+      "author": "Brandon Williams",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "Illustrative golf course in Florida",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/home-budget-planning.webp",
+      "source": "https://unsplash.com/photos/jkO_wMw4168",
+      "author": "Sasun Bughdaryan",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "Model house, calculator and notebook for home budgeting",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/mortgage-keys-calculator.webp",
+      "source": "https://unsplash.com/photos/RVk8EwpRwNs",
+      "author": "Jakub Żerdzicki",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "House keys and a calculator for property financing",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/modern-home-garden.webp",
+      "source": "https://unsplash.com/photos/eWOgoFHlE8g",
+      "author": "Aalo Lens",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "Architectural illustration of a contemporary home and garden",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/sarasota-birds-sunset.webp",
+      "source": "https://unsplash.com/photos/nR6etbSBqAE",
+      "author": "moerwijk",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "Shorebirds at sunset on a Sarasota beach",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/sarasota-sand-shore.webp",
+      "source": "https://unsplash.com/photos/bgONjl6y3bI",
+      "author": "Ayla Meinberg",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "adaptation_license": "Unsplash License",
+      "description": "White sand and Gulf waters in Sarasota",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    }
+  ]
+}
