@@ -9,7 +9,7 @@ function timelineStatus(r){return r.status==='done'?'Completed':r.status==='na'?
 function show(){const data=collect();$('timeline-live-list').innerHTML=data.map((r,i)=>'<li class="'+(r.date?'is-dated':'is-undated')+'"><span class="fc-simple-dot" aria-hidden="true"></span><span class="fc-simple-event">'+esc(r.name)+(r.status==='done'?'<small>Completed</small>':'')+'</span><strong>'+esc(r.date?timelineShortDate(r.date):'Add date')+'</strong></li>').join('');$('deadline-summary').textContent=data.filter(x=>x.date&&x.status!=='na').length+' of '+data.length+' dates entered'}
 function validateDeadlineReport(){return true}
 function timelineDraftLabel(){return (!$('deadline-effective').value||!$('deadline-closing').value||rows.some(r=>r.status!=='na'&&r.status!=='done'&&!r.override&&r.days===''))?'Some dates to be confirmed':'Dates entered from contract'}
-function generalNotes(){return $('deadline-general-notes').value.trim()}function email(){exportFormattedEmail()}
+function generalNotes(){return $('deadline-general-notes').value.trim()}function email(){viewEmailPreview()}
 function timelinePicture(){
  const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');canvas.width=1264;
  function wrap(text,width,font){ctx.font=font;const lines=[];let line='';for(const word of String(text||'').split(/\s+/)){if(ctx.measureText(line+(line?' ':'')+word).width>width&&line){lines.push(line);line=word}else line+=(line?' ':'')+word}if(line)lines.push(line);return lines.length?lines:['']}
@@ -30,25 +30,35 @@ function timelinePicture(){
  return canvas;
 }
 function downloadPicture(){const a=document.createElement('a');a.href=timelinePicture().toDataURL('image/png');a.download='Buyer-Closing-Timeline.png';document.body.appendChild(a);a.click();a.remove()}
+function timelineFeedback(text){$('closing-email-feedback').textContent=text;const preview=$('timeline-email-feedback');if(preview)preview.textContent=text}
 function copyPicture(){
- if(!navigator.clipboard||!window.ClipboardItem){$('closing-email-feedback').textContent='Download the PNG and drag it into your email message.';return}
+ if(!navigator.clipboard||!window.ClipboardItem){timelineFeedback('Download the PNG and drag it into your email message.');return}
  const promise=new Promise((resolve,reject)=>timelinePicture().toBlob(b=>b?resolve(b):reject(Error('Image unavailable')),'image/png'));
  navigator.clipboard.write([new ClipboardItem({'image/png':promise})]).then(()=>{$('closing-email-feedback').textContent='Image copied. Click inside your email message and paste with ⌘V (Mac) or Ctrl+V.'}).catch(()=>{$('closing-email-feedback').textContent='Download the PNG and drag it into your email message.'});
 }
+let timelineModal=null;
+function closeTimelineModal(){if(window.history.state&&window.history.state.fcTimelineModal){window.history.back()}else if(timelineModal&&timelineModal.open){timelineModal.close();timelineModal=null}}
+function openTimelineModal(dialog){timelineModal=dialog;if(!dialog.open)dialog.showModal();window.history.pushState(Object.assign({},window.history.state||{},{fcTimelineModal:dialog.id}),'',window.location.href)}
+window.addEventListener('popstate',function(){if(timelineModal&&timelineModal.open){timelineModal.close();timelineModal=null}});
+function wireTimelineModal(dialog){dialog.querySelector('button').addEventListener('click',closeTimelineModal);dialog.addEventListener('cancel',function(e){e.preventDefault();closeTimelineModal()})}
 function viewPicture(){
- let dialog=$('timeline-picture-dialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='timeline-picture-dialog';dialog.setAttribute('aria-label','Buyer Closing Timeline image');dialog.innerHTML='<button type="button" class="fc-picture-close" aria-label="Close timeline image">×</button><img alt="Buyer Closing Timeline with task periods and due dates"><p>Download or copy the image from Save &amp; share.</p>';document.body.appendChild(dialog);dialog.querySelector('button').addEventListener('click',()=>dialog.close())}
- dialog.querySelector('img').src=timelinePicture().toDataURL('image/png');dialog.showModal();
+ let dialog=$('timeline-picture-dialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='timeline-picture-dialog';dialog.setAttribute('aria-label','Buyer Closing Timeline image');dialog.innerHTML='<button type="button" class="fc-picture-close" aria-label="Return to timeline">×</button><img alt="Buyer Closing Timeline with task periods and due dates"><p>Close this view to return to your timeline.</p>';document.body.appendChild(dialog);wireTimelineModal(dialog)}
+ dialog.querySelector('img').src=timelinePicture().toDataURL('image/png');openTimelineModal(dialog);
+}
+function viewEmailPreview(){
+ let dialog=$('timeline-email-dialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='timeline-email-dialog';dialog.setAttribute('aria-labelledby','timeline-email-title');dialog.innerHTML='<button type="button" class="fc-picture-close" aria-label="Return to timeline">×</button><h3 id="timeline-email-title">Your email</h3><div class="fc-email-preview-body"></div><p id="timeline-email-feedback" role="status" style="font:500 11px/1.7 Arial;color:#527184"></p><div class="fc-email-preview-actions"><button type="button" data-download-email>Download complete email</button><button type="button" data-copy-email-image>Copy image for Mail</button></div>';document.body.appendChild(dialog);wireTimelineModal(dialog);dialog.querySelector('[data-download-email]').addEventListener('click',exportFormattedEmail);dialog.querySelector('[data-copy-email-image]').addEventListener('click',copyPicture)}
+ dialog.querySelector('.fc-email-preview-body').innerHTML=buyerAgentNotice()+'<img class="fc-email-inline-picture" src="'+timelinePicture().toDataURL('image/png')+'" width="440" alt="Your complete closing timeline">'+buyerAgentClosing();openTimelineModal(dialog);
 }
 function exportFormattedEmail(){
  const recipient=$('deadline-email').value.trim();
  if(recipient&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)){alert('Enter a valid email address or leave it blank.');return}
  const png=timelinePicture().toDataURL('image/png').split(',')[1];
  const id=Date.now().toString(16),related='fc-related-'+id,alt='fc-alternative-'+id,cid='buyer-timeline-'+id+'@floridacostiera.com';
- const html='<!doctype html><html><head><meta charset="utf-8"></head><body style="font-family:Helvetica,Arial,sans-serif;font-size:16px;color:#18374b">'+buyerAgentNotice()+'<p><img src="cid:'+cid+'" width="560" style="display:block;width:560px;max-width:100%;height:auto" alt="Buyer Closing Timeline"></p>'+buyerAgentClosing()+'</body></html>';
+ const html='<!doctype html><html><head><meta charset="utf-8"></head><body style="font-family:Helvetica,Arial,sans-serif;font-size:16px;color:#18374b">'+buyerAgentNotice()+'<p><img src="cid:'+cid+'" width="440" style="display:block;width:440px;max-width:100%;height:auto" alt="Buyer Closing Timeline"></p>'+buyerAgentClosing()+'</body></html>';
  function b64(value){const bytes=new TextEncoder().encode(value);let text='';for(let i=0;i<bytes.length;i+=8192)text+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(text).replace(/.{1,76}/g,'$&\r\n').trim()}
  const mime=['From: "Sabatino Campilii" <sabatino@floridacostiera.com>','To: '+recipient,'Subject: Buyer Closing Timeline and Contract Deadlines','X-Unsent: 1','MIME-Version: 1.0','Content-Type: multipart/related; boundary="'+related+'"','','--'+related,'Content-Type: multipart/alternative; boundary="'+alt+'"','','--'+alt,'Content-Type: text/plain; charset="UTF-8"','Content-Transfer-Encoding: base64','',b64(plainTimeline()+'\n\n'+collect().map(x=>x.name+' — '+(x.date?timelineShortDate(x.date):'To be confirmed')).join('\n')),'--'+alt,'Content-Type: text/html; charset="UTF-8"','Content-Transfer-Encoding: base64','',b64(html),'--'+alt+'--','--'+related,'Content-Type: image/png; name="Buyer-Closing-Timeline.png"','Content-Transfer-Encoding: base64','Content-ID: <'+cid+'>','Content-Disposition: inline; filename="Buyer-Closing-Timeline.png"','',png.replace(/.{1,76}/g,'$&\r\n').trim(),'--'+related+'--',''].join('\r\n');
  const blob=new Blob([mime],{type:'message/rfc822'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Buyer-Email-with-Inline-Timeline.eml';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),12000);
- $('closing-email-feedback').textContent='Email downloaded with the framed timeline inside the message. Open the .eml in Mail to review; use Message → Send Again if it opens as a received message.';
+ timelineFeedback('Email downloaded with the framed timeline inside the message. Open the .eml in Mail to review; use Message → Send Again if it opens as a received message.');
 }
 
 ['deadline-effective','deadline-closing'].forEach(id=>{ $(id).addEventListener('input',show);$(id).addEventListener('change',show)});$('deadline-template').addEventListener('change',reset);$('deadline-add').addEventListener('click',()=>{rows.push(baseRow(names.length-1));render()});$('deadline-reset').addEventListener('click',reset);function buyerAgentNotice(){return '<div style="font-family:Helvetica,Arial,sans-serif;width:auto;max-width:none;color:#18374b;font-size:16px;line-height:1.5;margin:0 0 14px"><p style="margin:0 0 14px">Dear Buyer’s Agent,</p><p style="margin:0 0 14px">Thank you for your cooperation on this transaction. I appreciate working with you and look forward to a successful closing.</p><p style="margin:0 0 14px">Below is our <strong>Buyer Closing Timeline</strong> for your reference. It includes the obligations currently listed in our tracking worksheet, their allowed periods and due dates where established.</p><p style="margin:0 0 14px">Please review the schedule with your client and let me know promptly if you anticipate any issue meeting a contractual deadline.</p></div>'}
