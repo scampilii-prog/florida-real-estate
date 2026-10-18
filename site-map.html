@@ -281,7 +281,7 @@ async function sendTino(event) {
 
   try {
     const response = await fetch(
-      "https://ask-tino-ai.scampilii.workers.dev/",
+      "/api/ask-tino",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -45,6 +45,11 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
  assert(page.includes('googleTranslateElementInit') && page.includes('translate.google.com/translate_a/element.js'),name+' missing translation wiring');
  assert(page.includes('name="viewport"'),name+' missing responsive viewport');
 }
+for(const name of ['index.html','buy.html','sell.html','contact.html','calculators.html','investment-center.html']){
+ const html=read(name);
+ assert(html.includes('"/api/ask-tino"'),name+' must use the same-origin assistant endpoint');
+ assert(!html.includes('https://ask-tino-ai.scampilii.workers.dev/'),name+' still calls the incompatible cross-origin endpoint');
+}
 assert(closing.includes('id="tinoPanel"')&&closing.includes('async function sendTino(event)'),'Closing Costs Ask Tino missing');
 // Inquiry forms must be wired to a submit handler and use the official inbox.
 for(const [name,page] of [['Contact',contact],['Calculators',calculators],['Seller Closing Costs',read('seller-closing-costs.html')]]){
@@ -153,5 +158,6 @@ import {execFileSync} from 'node:child_process';
 execFileSync(process.execPath,[new URL('./sync-inquiry.mjs',import.meta.url).pathname,'--check'],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-inquiry.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-site-map-menu.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-ask-tino.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
 
