@@ -139,6 +139,7 @@ const shared=read('assets/language-dropdown.js');
 assert(shared.includes('fc-universal-backtop') && shared.includes('scrollTo({top:0,left:0,behavior:'),'Shared Back to Top installer missing');
 for(const page of productionPages){
  const source=read(page);
+ assert(!/<aside\b[^>]*id="sideMenu"/.test(source),page+' retains the retired duplicate side menu');
  assert(source.includes('assets/language-dropdown.js'),page+' lacks shared navigation and Back to Top');
 }
 console.log('Global Back to Top is included by all '+productionPages.length+' public pages.');
