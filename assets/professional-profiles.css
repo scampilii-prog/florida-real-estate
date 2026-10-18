@@ -1,0 +1,28 @@
+/* Profiles: real estate representation and creative property marketing. */
+html body :is(.fc-contact-team,#italo){scroll-margin-top:112px}
+html body .fc-contact-team{max-width:1180px;margin:35px auto 48px;padding:0;font-family:Manrope,Arial,sans-serif;color:#17364b}
+html body .fc-contact-team > h2{font:750 clamp(29px,3.2vw,42px)/1.2 Manrope,Arial,sans-serif;margin:10px 0 18px;letter-spacing:-.025em}
+html body .fc-team-eyebrow{color:#99743d;font:800 10px/1.6 Manrope,Arial,sans-serif;letter-spacing:.15em;margin:0 0 12px}
+html body .fc-team-intro{font-size:15px;line-height:1.8;color:#526b7a;max-width:810px;margin-bottom:26px}
+html body .fc-contact-person{display:grid;grid-template-columns:230px minmax(0,1fr);gap:32px;padding:30px;margin:20px 0;background:white;border:1px solid #d9e2e7;border-radius:15px;box-shadow:0 9px 28px #15364b08;align-items:start}
+html body .fc-contact-person-creative{background:#fdfaf5;border-color:#d2bd96}
+html body .fc-contact-person > img{display:block;width:100%;height:270px;object-fit:cover;object-position:center 24%;border-radius:10px;border:1px solid #e2ddd2}
+html body .fc-contact-person h3{font:750 clamp(26px,2.7vw,34px)/1.2 Manrope,Arial,sans-serif;margin:5px 0 10px;color:#15364b}
+html body .fc-contact-person p:not(.fc-team-eyebrow){font-size:14px;line-height:1.85;color:#506979}
+html body .fc-contact-person .fc-person-role{color:#94703c!important;font-weight:750}
+html body :is(.fc-contact-team,#italo) .fc-role-disclosure{display:block;color:#17364b!important;background:#f2ede3;border-left:3px solid #b68c4d;padding:10px 13px;font:700 12px/1.65 Manrope,Arial,sans-serif}
+html body :is(.fc-contact-team,#italo) .fc-creative-services{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:20px 0}
+html body :is(.fc-contact-team,#italo) .fc-creative-services li{font:650 11px/1.6 Manrope,Arial,sans-serif;color:#23475d;background:#fff;border:1px solid #d9d1c1;border-radius:6px;padding:7px 10px}
+html body :is(.fc-contact-team,#italo) .fc-profile-actions{display:flex;align-items:center;flex-wrap:wrap;gap:11px;margin:22px 0 14px}
+html body :is(.fc-contact-team,#italo) :is(.fc-profile-primary,.fc-profile-secondary){display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:12px 17px;font:750 12px/1.5 Manrope,Arial,sans-serif;border:1px solid #b79359;border-radius:7px;text-decoration:none;text-align:center}
+html body :is(.fc-contact-team,#italo) .fc-profile-primary{background:#17364b;color:#fff}
+html body :is(.fc-contact-team,#italo) .fc-profile-secondary{background:#fff;color:#17364b}
+html body :is(.fc-contact-team,#italo) .fc-profile-primary:hover{background:#2c5269}
+html body :is(.fc-contact-team,#italo) .fc-profile-secondary:hover{background:#f5ead7}
+html body :is(.fc-contact-team,#italo) :is(.fc-profile-text,.fc-person-email){color:#8e672f;font:700 12px/1.8 Manrope,Arial,sans-serif;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+html body :is(.fc-contact-team,#italo) a:focus-visible{outline:3px solid #b79258;outline-offset:4px}
+html body #italo .fc-ecolosophy-reference{font-size:13px;line-height:1.85;padding-top:16px;border-top:1px solid #e4dfd4}
+html body #italo .fc-ecolosophy-reference a{color:#8d672e;text-underline-offset:4px}
+html body .fc-contact-person .fc-person-boundary{font-size:12px!important;line-height:1.8}
+@media(max-width:720px){html body .fc-contact-person{grid-template-columns:1fr;gap:22px;padding:24px}html body .fc-contact-person>img{max-width:260px;height:270px}html body .fc-contact-team{margin-top:30px}}
+@media(max-width:480px){html body :is(.fc-contact-team,#italo) .fc-profile-actions{align-items:stretch;flex-direction:column}html body :is(.fc-contact-team,#italo) .fc-profile-text{text-align:center}}
