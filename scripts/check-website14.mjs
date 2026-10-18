@@ -163,5 +163,6 @@ execFileSync(process.execPath,[new URL('./check-inquiry.mjs',import.meta.url).pa
 execFileSync(process.execPath,[new URL('./check-site-map-menu.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-ask-tino.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-new-construction.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-site-search.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
 

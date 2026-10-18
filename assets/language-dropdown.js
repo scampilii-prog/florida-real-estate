@@ -1106,3 +1106,6 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
 })();
+
+/* One shared search controller for every header variant. */
+(function(){if(document.getElementById('fc-shared-search-script'))return;var s=document.createElement('script');s.id='fc-shared-search-script';s.src='/assets/site-search.js?v=20261018-1';document.head.appendChild(s)})();

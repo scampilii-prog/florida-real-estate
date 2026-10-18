@@ -1,0 +1,25 @@
+import {readFileSync} from 'node:fs';
+import {strict as assert} from 'node:assert';
+import vm from 'node:vm';
+const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
+const pages=JSON.parse(read('assets/site-search-index.json'));
+const handlers={},nodes={};
+function node(){return {open:false,value:'',textContent:'',children:[],attrs:{},style:{},setAttribute(k,v){this.attrs[k]=v},append(...c){this.children.push(...c)},appendChild(c){this.children.push(c)},replaceChildren(){this.children=[]},addEventListener(k,v){this[k]=v},focus(){this.focused=true},showModal(){this.open=true},close(){this.open=false},querySelector(q){return nodes[q]||(nodes[q]=node())}}}
+const document={readyState:'loading',addEventListener(){},head:node(),body:node(),createElement(tag){const n=node();if(tag==='dialog')nodes.dialog=n;return n}};
+const window={addEventListener(name,fn,capture){handlers[name]=fn;assert(capture)}};
+vm.runInNewContext(read('assets/site-search.js'),{window,document,fetch:async()=>({ok:true,json:async()=>pages})});
+const rank=window.FCWebsiteSearch.rank;
+assert.equal(pages.length,48);
+assert.equal(new Set(pages.map(p=>p.url)).size,48);
+assert(pages.every(p=>p.url.startsWith('/')&&!p.url.startsWith('//')));
+for(const [query,url] of [['new construction','/new-construction'],['closing costs','/closing-costs'],['Venice','/venice'],['contacto','/contact'],['hipoteca','/mortgage-calculator']])assert(rank(pages,query).some(p=>p.url===url),query);
+assert.equal(rank(pages,'zzzzzzzz').length,0);assert.equal(rank(pages,'').length,0);
+const button=node();button.closest=()=>({});
+let prevented=false,stopped=false;
+handlers.click({target:{closest:()=>button},preventDefault(){prevented=true},stopImmediatePropagation(){stopped=true}});
+assert(prevented&&stopped);assert(nodes.dialog.open);assert(nodes.input.focused);
+nodes.input.value='new construction';nodes.input.input();await new Promise(r=>setTimeout(r,0));
+assert(nodes['#fc-site-search-results'].children.some(a=>a.href==='/new-construction'));
+let cancelled=false;nodes.dialog.cancel({preventDefault(){cancelled=true}});assert(cancelled);assert.equal(nodes.dialog.open,false);assert(button.focused);assert.equal(button.attrs['aria-expanded'],'false');
+handlers.click({target:{closest:()=>null},preventDefault(){assert.fail('Unrelated click intercepted')},stopImmediatePropagation(){}});
+console.log('PASS: 48 local search destinations, topic and Spanish queries, no-result handling, modal opening, nested-icon click capture, Escape closing and focus return.');
