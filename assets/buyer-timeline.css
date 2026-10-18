@@ -23,3 +23,10 @@ html body .fc-timeline>.deadline-alert{margin:0;padding:18px 30px;background:#fa
 html body .fc-timeline #closing-email-preview{border:0!important;border-top:1px solid #d9dfe3!important;border-radius:0!important;margin:22px 0 0!important;padding:22px 0 0!important;box-shadow:none!important}
 .fc-timeline summary:focus-visible,.fc-timeline button:focus-visible{outline:3px solid #ad854c;outline-offset:-3px}
 @media(max-width:600px){.fc-timeline-heading{padding:24px 19px}.fc-timeline-step>summary{padding:19px;gap:12px;font-size:15px}.fc-timeline-step-body{padding:20px 17px 25px}html body .fc-timeline>.deadline-alert{padding:17px 19px}.fc-timeline-step>summary small{font-size:11px}.fc-timeline-number{width:32px;height:32px;flex-basis:32px}.fc-timeline .deadline-actions{flex-wrap:wrap}.fc-timeline .deadline-actions button{width:100%}}
+
+#timeline-picture-dialog{box-sizing:border-box;width:min(930px,calc(100vw - 24px));max-height:90dvh;padding:42px 20px 20px;margin:auto;border:1px solid #c3a26d;border-radius:12px;background:#f5f0e7;box-shadow:0 24px 90px #071b2b66;overflow:auto}
+#timeline-picture-dialog::backdrop{background:#071b2bbd}
+#timeline-picture-dialog>img{display:block;width:100%;height:auto;box-shadow:0 7px 25px #17364c20}
+#timeline-picture-dialog>p{font:500 12px/1.7 Manrope,Arial,sans-serif;color:#536c7c;margin:15px 0 0;text-align:center}
+#timeline-picture-dialog .fc-picture-close{position:absolute;right:11px;top:7px;width:30px;height:30px;border:0;background:transparent;color:#14384e;font-size:27px;cursor:pointer}
+#timeline-step-share .deadline-actions{display:flex;flex-wrap:wrap;gap:10px}
