@@ -22,7 +22,9 @@ for(const [file,data] of Object.entries(config)){
  next=next.replace(/<link\b[^>]*href="assets\/(?:inquiry-form|inquiry-layout)\.css[^"]*"[^>]*>/g,'');
  next=next.replace(/<script\b[^>]*src="assets\/inquiry-form\.js[^"]*"[^>]*>[\s\S]*?<\/script>/g,'');
  next=next.replace('</head>','<link rel="stylesheet" href="assets/inquiry-form.css?v=20261018-unified2"><link rel="stylesheet" href="assets/inquiry-layout.css?v=20261018-unified2"></head>');
- next=next.replace('</body>','<script src="assets/inquiry-form.js?v=20261018-unified2" defer></script></body>');
+ const bodyEnd=next.lastIndexOf('</body>');
+ if(bodyEnd<0)throw Error('Missing closing body: '+file);
+ next=next.slice(0,bodyEnd)+'<script src="assets/inquiry-form.js?v=20261018-unified2" defer></script>'+next.slice(bodyEnd);
  if(next!==original){changes++;if(!process.argv.includes('--check'))writeFileSync(path.join(root,file),next);}
 }
 if(process.argv.includes('--check')&&changes)throw Error(changes+' inquiry pages differ from the common template. Run node scripts/sync-inquiry.mjs.');
@@ -32,3 +34,4 @@ for(const file of readdirSync(root).filter(p=>p.endsWith('.html'))){
  if((html.match(/<form\b[^>]*id=["']lead-form["']/g)||[]).length>1)throw Error('Duplicate inquiry: '+file);
 }
 console.log(Object.keys(config).length+' pages use the approved common inquiry; zero legacy inquiry forms remain.');
+
