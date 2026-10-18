@@ -990,25 +990,30 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Approved original coastal wordmark: preserve reference serif lettering and single house icon. */
+/* Single shared Florida Costiera identity for every header template. */
 (function(){
- function restore(){
-  document.querySelectorAll('header.fc-ready .fc-name.fc-wordmark-new').forEach(function(el){
-   if(el.dataset.fcApprovedWordmark==='1')return;
-   el.dataset.fcApprovedWordmark='1';
-   el.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong><span class="fc-approved-dotcom">.com</span>';
+ function setIdentity(){
+  var mark='/assets/florida-costiera-coastal-mark.svg';
+  document.querySelectorAll('header.fc-ready').forEach(function(h){
+   var brand=h.querySelector('.fc-brand'),name=h.querySelector('.fc-name'),icon=h.querySelector('.fc-mark'),tag=h.querySelector('.fc-area');
+   if(!brand||!name)return;
+   name.classList.add('fc-wordmark-new');
+   name.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong><span class="fc-approved-dotcom">.com</span>';
+   if(icon){icon.style.setProperty('background-image','url("'+mark+'")','important');icon.style.setProperty('background-repeat','no-repeat','important');icon.style.setProperty('background-position','center','important');}
+   if(tag)tag.textContent='SOUTHWEST FLORIDA GULF COAST REAL ESTATE';
   });
-  document.querySelectorAll('header .fc-special-wordmark strong').forEach(function(el){
-   if(el.dataset.fcApprovedWordmark==='1')return;
-   el.dataset.fcApprovedWordmark='1';
-   el.innerHTML='<span>Florida</span><em>Costiera</em><b class="fc-domain">.com</b>';
+  document.querySelectorAll('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header').forEach(function(h){
+   if(h.classList.contains('fc-ready'))return;
+   var b=h.querySelector('.sc-cc-brand,.sc-sitemap-brand,.sc-booking-brand,.sc-legal-brand');if(!b)return;
+   b.classList.add('fc-special-brand');
+   b.innerHTML='<img class="fc-special-mark" src="'+mark+'" alt=""><span class="fc-special-wordmark"><strong><span class="fc-florida">Florida</span><em class="fc-costiera">Costiera</em><b class="fc-domain">.com</b></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
   });
-  var st=document.getElementById('fc-original-brand-restore');
-  if(!st){st=document.createElement('style');st.id='fc-original-brand-restore';document.head.appendChild(st)}
-  st.textContent='header.fc-ready .fc-name.fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.045em!important}header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}header.fc-ready .fc-wordmark-new .fc-costiera{font-family:"Bodoni Moda",Georgia,serif!important;color:#e9bf78!important;font-size:1em!important;font-weight:400!important}header.fc-ready .fc-approved-dotcom,header .fc-special-wordmark .fc-domain{display:inline!important;color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}header .fc-special-wordmark strong em{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;color:#e9bf78!important;font-size:1em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';
+  var style=document.getElementById('fc-single-brand-css');
+  if(!style){style=document.createElement('style');style.id='fc-single-brand-css';document.head.appendChild(style)}
+  style.textContent='header .fc-name.fc-wordmark-new,header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.035em!important;white-space:nowrap!important}header .fc-florida{color:#fff9ef!important;font-family:"Bodoni Moda",Georgia,serif!important}header .fc-costiera,header .fc-special-wordmark strong em.fc-costiera{font-family:"Bodoni Moda",Georgia,serif!important;color:#e9bf78!important;font-size:1em!important;font-weight:500!important;font-style:normal!important;letter-spacing:-.035em!important;vertical-align:baseline!important}header .fc-approved-dotcom,header .fc-special-wordmark .fc-domain{color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}header .fc-area,header .fc-special-wordmark small{color:#fff5e4!important;font-family:Manrope,Arial,sans-serif!important}header .fc-special-mark{object-fit:contain!important;border:0!important;background:transparent!important}';
  }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restore,{once:true});else restore();
- window.addEventListener('load',restore,{once:true});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setIdentity,{once:true});else setIdentity();
+ window.addEventListener('load',setIdentity,{once:true});
 })();
 
 /* Unified Back to Top: remove legacy duplicates including non-button variants */
