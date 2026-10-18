@@ -990,7 +990,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 
-/* Approved original coastal wordmark: preserve classic Florida and script Costiera. */
+/* Approved original coastal wordmark: preserve reference serif lettering and single house icon. */
 (function(){
  function restore(){
   document.querySelectorAll('header.fc-ready .fc-name.fc-wordmark-new').forEach(function(el){
@@ -1005,7 +1005,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   });
   var st=document.getElementById('fc-original-brand-restore');
   if(!st){st=document.createElement('style');st.id='fc-original-brand-restore';document.head.appendChild(st)}
-  st.textContent='header.fc-ready .fc-name.fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.045em!important}header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}header.fc-ready .fc-wordmark-new .fc-costiera{font-family:"Alex Brush",cursive!important;color:#e9bf78!important;font-size:1.53em!important;font-weight:400!important}header.fc-ready .fc-approved-dotcom,header .fc-special-wordmark .fc-domain{display:inline!important;color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}header .fc-special-wordmark strong em{font-family:"Alex Brush",cursive!important;font-weight:400!important;color:#e9bf78!important;font-size:1.55em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';
+  st.textContent='header.fc-ready .fc-name.fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.045em!important}header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}header.fc-ready .fc-wordmark-new .fc-costiera{font-family:"Bodoni Moda",Georgia,serif!important;color:#e9bf78!important;font-size:1em!important;font-weight:400!important}header.fc-ready .fc-approved-dotcom,header .fc-special-wordmark .fc-domain{display:inline!important;color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important}header .fc-special-wordmark strong em{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;color:#e9bf78!important;font-size:1em!important}header .fc-special-wordmark small{font-family:Manrope,Arial,sans-serif!important}';
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restore,{once:true});else restore();
  window.addEventListener('load',restore,{once:true});
