@@ -1,0 +1,25 @@
+/* One frame, one editable timeline, progressively opened steps. */
+html body #contract-deadline-planner.fc-timeline{padding:0;border:1px solid #cdb68f;border-top:4px solid #b58a4d;border-radius:16px;background:#fff;box-shadow:0 14px 42px #15364a0d;overflow:hidden;scroll-margin-top:145px}
+.fc-timeline-heading{padding:32px 30px 27px;background:linear-gradient(120deg,#faf6ed,#fff)}
+html body .fc-timeline-heading h3#deadline-planner-title{font:800 clamp(27px,3vw,36px)/1.2 Manrope,Arial,sans-serif;color:#12364c;letter-spacing:-.035em;margin:9px 0 13px}
+.fc-timeline-heading>p:last-child{font-size:14px;line-height:1.8;margin:0;color:#526b7b}
+.fc-timeline-step{border:0;border-top:1px solid #e3ddd2;margin:0;border-radius:0;background:#fff;scroll-margin-top:145px}
+.fc-timeline-step>summary{list-style:none;display:flex;align-items:center;gap:17px;padding:23px 30px;cursor:pointer;color:#14394e;font:800 17px/1.5 Manrope,Arial,sans-serif}
+.fc-timeline-step>summary::-webkit-details-marker{display:none}
+.fc-timeline-step>summary:after{content:'+';font:400 25px/1 Manrope,Arial,sans-serif;margin-left:auto;color:#8d692f}
+.fc-timeline-step[open]>summary:after{content:'−'}
+.fc-timeline-step[open]>summary{background:#fbf9f4}
+.fc-timeline-number{display:grid;place-items:center;width:37px;height:37px;flex:0 0 37px;border:1px solid #d2b787;border-radius:50%;color:#8c642c;font-size:11px;letter-spacing:.06em}
+.fc-timeline-step>summary small{display:block;font:500 12px/1.6 Manrope,Arial,sans-serif;color:#637987;margin-top:2px}
+.fc-timeline-step-body{padding:23px 30px 30px}
+html body .fc-timeline-step .deadline-top{margin:0 0 22px}
+html body .fc-timeline .deadline-summary{padding:12px 15px;background:#f4f7f9;border:0;border-left:3px solid #b58a4d;margin:0 0 17px;color:#3e5c70;font-size:12px;line-height:1.7}
+.fc-timeline-help{font:500 12px/1.8 Manrope,Arial,sans-serif;color:#607888;margin:0 0 19px}
+html body .fc-timeline-next{display:inline-flex;align-items:center;justify-content:center;background:#12364c;color:#fff;border:1px solid #12364c;border-radius:7px;padding:13px 19px;min-height:45px;font:800 12px/1.5 Manrope,Arial,sans-serif;cursor:pointer;margin-top:10px}
+html body .fc-timeline-next:hover{background:#28556d}
+#contract-deadline-planner .fc-timeline-due{display:block;font:600 11px/1.5 Manrope,Arial,sans-serif;color:#886d47;margin:8px 0 3px}
+#contract-deadline-planner .fc-timeline-due.is-dated{color:#236345;font-weight:800}
+html body .fc-timeline>.deadline-alert{margin:0;padding:18px 30px;background:#faf6ed;border:0;border-top:1px solid #e3d7c3;border-radius:0;font-size:11px;line-height:1.8;color:#526575}
+html body .fc-timeline #closing-email-preview{border:0!important;border-top:1px solid #d9dfe3!important;border-radius:0!important;margin:22px 0 0!important;padding:22px 0 0!important;box-shadow:none!important}
+.fc-timeline summary:focus-visible,.fc-timeline button:focus-visible{outline:3px solid #ad854c;outline-offset:-3px}
+@media(max-width:600px){.fc-timeline-heading{padding:24px 19px}.fc-timeline-step>summary{padding:19px;gap:12px;font-size:15px}.fc-timeline-step-body{padding:20px 17px 25px}html body .fc-timeline>.deadline-alert{padding:17px 19px}.fc-timeline-step>summary small{font-size:11px}.fc-timeline-number{width:32px;height:32px;flex-basis:32px}.fc-timeline .deadline-actions{flex-wrap:wrap}.fc-timeline .deadline-actions button{width:100%}}
