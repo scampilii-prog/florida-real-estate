@@ -75,19 +75,17 @@ html body section.hero.fc-nc-search-hero .fc-nc-search-box :is(h2,p){text-shadow
 html body section.hero.fc-nc-search-hero .fc-nc-search-box p.fc-nc-form-eyebrow{color:#946e36!important;font:800 10px/1.6 Manrope,Arial,sans-serif!important;letter-spacing:.13em!important;margin:0 0 9px!important}
 html body section.hero.fc-nc-search-hero .fc-nc-search-box p.fc-nc-search-error{color:#9b2833!important;font:700 12px/1.6 Manrope,Arial,sans-serif!important;margin:12px 0 0!important}
 
-/* A dedicated Florida Costiera portrait header; the shared external portal is unchanged. */
-html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(105deg,rgba(8,29,46,.97),rgba(15,45,63,.91) 58%,rgba(15,45,63,.82)),url("../images/modern-home-garden.webp")!important;background-size:cover!important;background-position:center!important;border-bottom:3px solid #c49a5b;padding:65px 30px!important}
+/* Open seaside composition with a close portrait, without a frame. */
+html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(8,35,48,.08),rgba(7,32,48,.64) 42%,rgba(10,36,52,.36)),url("../images/sarasota-sand-shore.webp")!important;background-size:cover!important;background-position:center 65%!important;border-bottom:2px solid #c49a5b;padding:55px 30px!important}
 html body.fc-page-photo-refresh section.hero.fc-nc-search-hero:before{display:none!important}
-.fc-nc-hero-inner{max-width:1440px;grid-template-columns:minmax(180px,.65fr) minmax(260px,.95fr) minmax(450px,1.5fr);gap:30px}
-.fc-nc-portrait{position:relative;align-self:end;margin:0;min-width:0;border-bottom:1px solid #c49a5b;background:radial-gradient(ellipse at 50% 45%,#e2c99525,transparent 70%)}
-.fc-nc-portrait img{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 8px 22px #0003)}
-.fc-nc-portrait figcaption{position:relative;padding:17px 6px 18px;color:#f0d3a3;font:800 12px/1.7 Manrope,Arial,sans-serif;letter-spacing:.12em;text-align:center}
-.fc-nc-portrait figcaption span{display:block;color:#e3eaf0;font-size:9px;letter-spacing:.05em;font-weight:500;margin-top:4px}
+.fc-nc-hero-inner{max-width:1440px;grid-template-columns:minmax(250px,.9fr) minmax(250px,.85fr) minmax(430px,1.4fr);gap:26px}
+.fc-nc-portrait{position:relative;align-self:end;margin:0;min-width:0;height:510px;border:0;border-radius:0;background:none;box-shadow:none;overflow:hidden;mask-image:linear-gradient(#000 82%,transparent 100%)}
+.fc-nc-portrait img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 12%;transform:scale(1.24);transform-origin:50% 20%;filter:drop-shadow(0 8px 22px #0002);border:0;border-radius:0;background:none}
 html body .fc-nc-hero-copy h1{font-size:clamp(32px,3.2vw,48px)!important}
 html body .fc-nc-hero-copy #subtitle{font-size:14px!important;line-height:1.85!important}
 .fc-nc-hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
 .fc-nc-hero-contact{color:#f0d3a3;font:700 12px/1.7 Manrope,Arial,sans-serif;text-decoration:none;border-bottom:1px solid #c49a5b80;padding-bottom:4px}
 .fc-nc-hero-contact:hover{color:#fff;border-color:#fff}
-html body section.hero.fc-nc-search-hero .fc-nc-hero-copy .fc-nc-hero-signature{display:none}
-@media(max-width:1100px){.fc-nc-hero-inner{max-width:780px;grid-template-columns:minmax(170px,.65fr) minmax(0,1.35fr);gap:30px}.fc-nc-search-box{grid-column:1/-1}.fc-nc-portrait img{max-height:330px}.fc-nc-hero-copy{max-width:100%}.fc-nc-filters{grid-template-columns:repeat(5,minmax(0,1fr))}}
-@media(max-width:600px){html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{padding:34px 18px!important}.fc-nc-hero-inner{grid-template-columns:1fr;gap:26px}.fc-nc-portrait{width:190px;justify-self:center}.fc-nc-portrait img{max-height:245px}.fc-nc-portrait figcaption{padding:10px 0}.fc-nc-hero-copy{text-align:center;max-width:430px;justify-self:center}.fc-nc-hero-actions{align-items:center}.fc-nc-search-box{grid-column:auto}html body .fc-nc-hero-copy h1{font-size:36px!important}.fc-nc-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+html body section.hero.fc-nc-search-hero .fc-nc-hero-copy .fc-nc-hero-signature{display:block;border-top:1px solid #e5c89570;padding-top:18px}
+@media(max-width:1100px){.fc-nc-hero-inner{max-width:780px;grid-template-columns:minmax(220px,.85fr) minmax(0,1.15fr);gap:26px}.fc-nc-search-box{grid-column:1/-1}.fc-nc-portrait{height:390px}.fc-nc-hero-copy{max-width:100%}.fc-nc-filters{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:600px){html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{padding:30px 18px!important;background-position:45% center!important}.fc-nc-hero-inner{grid-template-columns:1fr;gap:22px}.fc-nc-portrait{width:280px;height:310px;justify-self:center}.fc-nc-hero-copy{text-align:center;max-width:430px;justify-self:center}.fc-nc-hero-actions{align-items:center}.fc-nc-search-box{grid-column:auto}html body .fc-nc-hero-copy h1{font-size:36px!important}.fc-nc-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
