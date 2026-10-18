@@ -102,3 +102,10 @@ html body section.hero.fc-nc-search-hero .fc-nc-outline:hover{background:#fff}
 @media(min-width:1101px){.fc-nc-portrait{left:calc(-1 * max(30px, (100vw - 1440px) / 2));width:calc(100% + max(30px, (100vw - 1440px) / 2))}.fc-nc-portrait img{object-position:left bottom}}
 @media(min-width:601px) and (max-width:1100px){.fc-nc-portrait{left:calc(-1 * max(30px, (100vw - 780px) / 2));width:calc(100% + max(30px, (100vw - 780px) / 2))}.fc-nc-portrait img{object-position:left bottom}}
 @media(max-width:600px){.fc-nc-portrait{justify-self:start;margin-left:-18px}.fc-nc-portrait img{object-position:left bottom}}
+
+/* Editorial title with a quiet gold rule and contrasting coastal typography. */
+html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title{font-size:clamp(34px,3.3vw,50px)!important;font-weight:600!important;line-height:1.08!important;letter-spacing:-.045em!important;margin:20px 0 24px!important;padding-top:23px;position:relative}
+html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title:before{content:"";position:absolute;top:0;left:0;width:56px;height:2px;background:#9d773f}
+.fc-nc-title-main{display:block;font:700 15px/1.6 Manrope,Arial,sans-serif;letter-spacing:.01em;margin-bottom:15px;color:#28546a}
+.fc-nc-title-accent{display:block;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.045em;line-height:1.08}
+@media(max-width:600px){html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title{font-size:45px!important}html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title:before{left:calc(50% - 28px)}}
