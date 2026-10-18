@@ -107,7 +107,7 @@ console.log('Website 15 Questions navigation and form safeguards present.');
 // Google launch guard: sitemap lists every public page once, excludes offline/demo pages.
 const sitemapXml=read('sitemap.xml');
 const listed=[...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
-const expectedPublic=productionPages.filter(n=>n!=='index.html').map(n=>'https://floridacostiera.com/'+n);
+const expectedPublic=productionPages.filter(n=>n!=='index.html').map(n=>'https://floridacostiera.com/'+n.replace(/\.html$/,''));
 expectedPublic.push('https://floridacostiera.com/');
 assert.equal(new Set(listed).size,listed.length,'Duplicate sitemap locations');
 for(const u of expectedPublic)assert(listed.includes(u),'Missing sitemap URL: '+u);
@@ -121,9 +121,16 @@ assert(!/^Disallow:\s*\/\s*$/m.test(robotsTxt),'robots.txt blocks the entire sit
 assert(sitemapXml.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'),'Sitemap XML namespace missing');
 assert(sitemapXml.trimEnd().endsWith('</urlset>'),'Sitemap XML closing element missing');
 for(const url of listed){
- assert(url==='https://floridacostiera.com/' || /^https:\/\/floridacostiera\.com\/[a-z0-9-]+\.html$/.test(url),'Noncanonical or malformed sitemap URL: '+url);
+ assert(url==='https://floridacostiera.com/' || /^https:\/\/floridacostiera\.com\/[a-z0-9-]+$/.test(url),'Noncanonical or malformed sitemap URL: '+url);
 }
 
+for(const page of productionPages){
+ const html=read(page), expected='https://floridacostiera.com/'+(page==='index.html'?'':page.replace(/\.html$/,''));
+ const canonicals=[...html.matchAll(/<link\b[^>]*\brel="canonical"[^>]*>/g)];
+ assert.equal(canonicals.length,1,page+' must have one canonical');
+ assert(canonicals[0][0].includes('href="'+expected+'"'),page+' canonical must match its final Cloudflare URL');
+ assert(listed.includes(expected),page+' canonical missing from sitemap');
+}
 console.log('Google launch sitemap: '+listed.length+' valid public URLs represented.');
 
 
