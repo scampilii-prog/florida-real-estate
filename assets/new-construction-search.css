@@ -97,3 +97,8 @@ html body section.hero.fc-nc-search-hero .fc-nc-hero-copy .fc-nc-kicker{color:#7
 html body section.hero.fc-nc-search-hero .fc-nc-outline{color:#12394f;background:#fff9;border-color:#9d773f}
 html body section.hero.fc-nc-search-hero .fc-nc-outline:hover{background:#fff}
 @media(max-width:600px){html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{background-image:linear-gradient(#ffffff28,#ffffffc9 42%,#ffffff75),url("../images/florida-costiera-sunny-gulf.webp")!important}.fc-nc-portrait{width:300px;height:400px;max-width:100%}}
+
+/* Anchor the portrait's cut edge to the banner edge instead of leaving it floating. */
+@media(min-width:1101px){.fc-nc-portrait{left:calc(-1 * max(30px, (100vw - 1440px) / 2));width:calc(100% + max(30px, (100vw - 1440px) / 2))}.fc-nc-portrait img{object-position:left bottom}}
+@media(min-width:601px) and (max-width:1100px){.fc-nc-portrait{left:calc(-1 * max(30px, (100vw - 780px) / 2));width:calc(100% + max(30px, (100vw - 780px) / 2))}.fc-nc-portrait img{object-position:left bottom}}
+@media(max-width:600px){.fc-nc-portrait{justify-self:start;margin-left:-18px}.fc-nc-portrait img{object-position:left bottom}}
