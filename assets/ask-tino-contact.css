@@ -1,0 +1,6 @@
+/* Personal help remains available while the assistant is responding. */
+#tinoPanel .tino-direct-contact{display:flex;flex-wrap:wrap;gap:8px;padding:10px 14px;background:#f6f3ec;border-top:1px solid #ded5c5;flex-shrink:0}
+#tinoPanel .tino-direct-contact a{display:flex;align-items:center;justify-content:center;flex:1 1 130px;min-height:36px;padding:8px 12px;border:1px solid #b99458;border-radius:6px;color:#102b43;background:#fff;text-decoration:none;font:800 12px/1.4 Manrope,Arial,sans-serif;text-align:center}
+#tinoPanel .tino-direct-contact a:first-child{background:#102b43;border-color:#102b43;color:#fff}
+#tinoPanel .tino-direct-contact a:hover{background:#ead8b7;color:#102b43}
+#tinoPanel .tino-direct-contact a:focus-visible{outline:3px solid #b58a49;outline-offset:2px}
