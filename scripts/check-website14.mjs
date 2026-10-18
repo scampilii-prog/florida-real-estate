@@ -144,6 +144,9 @@ const shared=read('assets/language-dropdown.js');
 assert(shared.includes('fc-universal-backtop') && shared.includes('scrollTo({top:0,left:0,behavior:'),'Shared Back to Top installer missing');
 for(const page of productionPages){
  const source=read(page);
+ assert.equal((source.match(/id="tinoPanel"/g)||[]).length,1,page+' must include one Ask Tino panel');
+ assert.equal((source.match(/class="tino-launcher"/g)||[]).length,1,page+' must include one Ask Tino launcher');
+ assert(source.includes('class="tino-direct-contact"'),page+' must retain direct personal contact in Ask Tino');
  assert(!/<aside\b[^>]*id="sideMenu"/.test(source),page+' retains the retired duplicate side menu');
  assert(source.includes('assets/language-dropdown.js'),page+' lacks shared navigation and Back to Top');
 }
