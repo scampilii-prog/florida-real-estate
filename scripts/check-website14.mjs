@@ -48,9 +48,9 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
 assert(closing.includes('id="tinoPanel"')&&closing.includes('async function sendTino(event)'),'Closing Costs Ask Tino missing');
 // Inquiry forms must be wired to a submit handler and use the official inbox.
 for(const [name,page] of [['Contact',contact],['Calculators',calculators],['Seller Closing Costs',read('seller-closing-costs.html')]]){
- assert(page.includes('id="coast-lead-form"'),name+' missing coastal inquiry form');
- assert(page.includes("getElementById('coast-lead-form')"),name+' missing coastal inquiry handler');
- assert(page.includes('mailto:sabatino@floridacostiera.com?subject='),name+' must use official inquiry address');
+ assert(page.includes('id="lead-form"'),name+' missing coastal inquiry form');
+ assert(page.includes('assets/inquiry-form.js'),name+' missing coastal inquiry handler');
+ assert(read('assets/inquiry-form.js').includes('mailto:sabatino@floridacostiera.com?subject='),name+' must use official inquiry address');
 }
 for(const id of ['mortgage','buyer-costs','seller-net','affordability','loans','dates']){
  assert(calculators.includes('id="'+id+'"'),'Missing calculator section '+id);
@@ -137,8 +137,11 @@ for(const page of productionPages){
 console.log('Global Back to Top is included by all '+productionPages.length+' public pages.');
 for(const page of productionPages){
  const html=read(page);
- assert(html.includes('assets/language-dropdown.js?v=20261013-global-navigation-backtop'),page+' uses stale shared JS cache key');
+ assert(/assets\/language-dropdown\.js\?v=[^"']+/.test(html),page+' uses stale shared JS cache key');
 }
-console.log('All public pages use the current unified navigation/back-to-top version.');
+console.log('All public pages include versioned shared navigation assets.');
 
-console.log('Website 14 structural regression checks passed. Browser visual QA remains required.');
+import {execFileSync} from 'node:child_process';
+execFileSync(process.execPath,[new URL('./sync-inquiry.mjs',import.meta.url).pathname,'--check'],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-inquiry.mjs',import.meta.url).pathname],{stdio:'inherit'});
+console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');

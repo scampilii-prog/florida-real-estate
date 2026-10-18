@@ -1,0 +1,44 @@
+<section class="lead-intake fc-inquiry-split" id="{{anchor}}" aria-labelledby="lead-heading">
+ <aside class="fc-inquiry-story" aria-labelledby="fc-inquiry-story-title">
+ <img src="{{image}}" alt="{{alt}}" width="1600" height="1067" loading="lazy" decoding="async"><p class="fc-inquiry-photo-credit">{{credit}}</p>
+ <div class="fc-inquiry-story-copy"><p class="fc-inquiry-story-eyebrow">{{eyebrow}}</p><h3 id="fc-inquiry-story-title">{{title}}</h3><p class="fc-inquiry-story-text">{{description}}</p><p class="fc-inquiry-story-prompt">{{prompt}}</p></div>
+ </aside>
+
+ <div class="lead-intake-inner">
+ <p class="lead-eyebrow">LET'S BEGIN</p><h2 class="fc-secondary-page-heading" id="lead-heading">Which stretch of coast<br><em>feels like home?</em></h2>
+ <p class="lead-intro">Tell us a little about your plans so Sabatino can better understand how to help.</p><p class="fc-contact-direct-line"><span>Prefer to call?</span> <a href="tel:+19412704877" aria-label="Call Sabatino at 941 270 4877">(941) 270-4877</a></p><p class="contact-path-link">Choose an option below, then share your preferred community, property plans and how you would like Sabatino to contact you.</p>
+ <div class="fc-choose-stage"><p class="fc-choose-stage-title">STEP 1 · CHOOSE HOW WE CAN HELP</p><p class="fc-choose-stage-hint">Select one option to begin your inquiry.</p><div class="lead-choices" id="lead-choices">
+ <button type="button" data-lead-type="Buying a home">Buying a home <span>↗</span></button>
+ <button type="button" data-lead-type="Investing">Investing <span>↗</span></button>
+ <button type="button" data-lead-type="Selling a property">Selling a property <span>↗</span></button>
+ </div></div>
+ <form id="lead-form" class="lead-form" hidden>
+ <button class="lead-back" type="button" id="lead-back" hidden>← Change my selection</button>
+ <p class="lead-selected" id="lead-selected">Buying a home</p>
+ <div class="fc-contact-group"><h3>01 · Your real estate plans</h3><div class="lead-fields">
+ <label>Preferred community<select name="area" required><option value="">Choose a community</option><option>Boca Grande</option><option>Gasparilla Island</option><option>Cape Haze</option><option>Placida</option><option>Englewood</option><option>Manasota Key</option><option>Rotonda West</option><option>Venice</option><option>Wellen Park</option><option>Nokomis &amp; Casey Key</option><option>Punta Gorda Isles</option><option>Sarasota</option><option>Siesta Key</option><option>Longboat Key</option><option>Help me decide</option><option value="Other">Other area</option></select></label>
+ 
+ <label id="fc-other-area" hidden>Other community<input name="otherArea" maxlength="140" placeholder="Specify another area"></label>
+ <label id="lead-budget-label">What is your approximate budget or price range?<select name="budget" required><option value="">Select a range</option><option>Under $200,000</option><option>$200,000–$350,000</option><option>$350,000–$500,000</option><option>$500,000–$750,000</option><option>$750,000–$1 million</option><option>Over $1 million</option><option>Not sure yet</option></select></label>
+ <label>What is your timeframe?<select name="timeline" required><option value="">Select a timeframe</option><option>As soon as possible</option><option>Within 3 months</option><option>3–6 months</option><option>6–12 months</option><option>Just exploring</option></select></label>
+<details class="fc-extra-details"><summary><span>Additional property preferences</span><small>Optional · property type, bedrooms, waterfront</small></summary><div class="fc-extra-fields"><label>Property type (optional)<select name="propertyType"><option value="">No preference</option><option>Single-family home</option><option>Condominium</option><option>Townhouse / Villa</option><option>Waterfront property</option><option>Land / Lot</option><option>New construction</option><option>Investment property</option><option>Other</option></select></label>
+<label>Bedrooms (optional)<select name="bedrooms"><option value="">Not specified</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option></select></label>
+<label>Waterfront preference (optional)<select name="waterfront"><option value="">No preference</option><option>Waterfront required</option><option>Waterfront preferred</option><option>No waterfront needed</option></select></label>
+</div></details>
+ </div></div><div class="fc-contact-group"><h3>02 · Your contact details</h3><div class="lead-fields">
+ <label>Your name<input name="name" autocomplete="name" maxlength="120" required></label>
+ <label>Email address<input name="email" type="email" autocomplete="email" maxlength="160" required></label>
+ <label>Phone number (optional)<input name="phone" type="tel" autocomplete="tel" maxlength="35"></label>
+ <label>Preferred contact method<select name="reach"><option>Email</option><option>Phone call</option><option>Text message</option></select></label>
+ </div></div><div class="fc-contact-group"><h3>03 · When should we contact you?</h3><div class="lead-fields">
+ <label>Preferred contact day (optional)<select name="contactDay"><option value="">No preference</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+ <label>Best time to contact you (optional)<select name="contactTime"><option value="">Any time</option><option>Morning (9 AM–12 PM)</option><option>Afternoon (12 PM–5 PM)</option><option>Evening (5 PM–8 PM)</option></select></label>
+ <label>Preferred language (optional)<select name="contactLanguage"><option value="">No preference</option><option>English</option><option>Español</option><option>Italiano</option></select></label>
+ <label class="lead-full">Anything else you'd like us to know? (optional)<textarea name="notes" maxlength="1200" rows="3" placeholder="Property type, bedrooms, priorities, questions…"></textarea></label>
+ </div></div>
+ <p class="lead-privacy">Initial inquiry only—not a mortgage pre-approval or lending decision. Please do not include account numbers or sensitive financial documents. Your email application will open so you can review and send your inquiry.</p>
+ <button type="submit" class="lead-submit">Review and email my inquiry ↗</button>
+ </form>
+ <p class="lead-direct">Prefer to write directly? <a href="mailto:sabatino@floridacostiera.com">Email Sabatino</a></p>
+ </div>
+ </section>

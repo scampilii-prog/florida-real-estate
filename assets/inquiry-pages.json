@@ -1,0 +1,362 @@
+{
+  "boca-grande-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/boca-grande-lighthouse-dunes.webp",
+    "alt": "Gasparilla Island lighthouse above coastal dunes",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "boca-grande.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/boca-grande-lighthouse-dunes.webp",
+    "alt": "Gasparilla Island lighthouse above coastal dunes",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buy.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "FIND YOUR PLACE",
+    "title": "Picture your next home on the Gulf Coast.",
+    "description": "A waterfront retreat, a golf community or a home close to the beach? Share what matters to you so Sabatino can help you explore the possibilities.",
+    "prompt": "Select Buying a home and tell us your priorities."
+  },
+  "buyer-closing-costs.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-financing-preapproval.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-inspections-appraisals.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/modern-home-garden.webp",
+    "alt": "Architectural illustration of a contemporary home and garden",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-offers-contracts.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-preparation.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-property-search.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyer-title-financing.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "buyers-guide.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "calculators.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "cape-haze-placida-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-marina.webp",
+    "alt": "Marina in Sarasota, Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "cape-haze.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-marina.webp",
+    "alt": "Marina in Sarasota, Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "contact.html": {
+    "anchor": "tell-us-your-plans",
+    "image": "images/nokomis-beach-sunset-birds.webp",
+    "alt": "Sunset and shorebirds on Nokomis Beach",
+    "eyebrow": "YOUR NEXT CHAPTER",
+    "title": "A coastal lifestyle starts with a conversation.",
+    "description": "Tell Sabatino what you have in mind. Your preferred area, timeframe and plans help make the conversation more useful.",
+    "prompt": "Choose an option to get started."
+  },
+  "englewood-manasota-key-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-birds-sunset.webp",
+    "alt": "Shorebirds at sunset on a Sarasota beach",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "englewood.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-birds-sunset.webp",
+    "alt": "Shorebirds at sunset on a Sarasota beach",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "florida-gulf-coast-condos-for-sale.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "florida-gulf-coast-homes-for-sale.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "home-valuation.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/modern-home-garden.webp",
+    "alt": "Architectural illustration of a contemporary home and garden",
+    "eyebrow": "YOUR PROPERTY · YOUR NEXT CHAPTER",
+    "title": "A thoughtful plan for your property.",
+    "description": "Tell Sabatino what you own and when you hope to move. Start a conversation about preparation, presentation and your next steps.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "index.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "mortgage-calculator.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "nokomis-casey-key-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/nokomis-beach-sunset-birds.webp",
+    "alt": "Sunset and shorebirds on Nokomis Beach",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "nokomis-casey-key.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/nokomis-beach-sunset-birds.webp",
+    "alt": "Sunset and shorebirds on Nokomis Beach",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "privacy.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "punta-gorda-isles-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/punta-gorda-town-square.webp",
+    "alt": "Punta Gorda town square",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "punta-gorda-isles.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/punta-gorda-town-square.webp",
+    "alt": "Punta Gorda town square",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "questions.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-marina.webp",
+    "alt": "Marina in Sarasota, Florida",
+    "eyebrow": "FROM QUESTIONS TO POSSIBILITIES",
+    "title": "Make the next step clearer.",
+    "description": "Every real estate decision is personal. Share your goals and the questions that matter most so Sabatino can help you move forward.",
+    "prompt": "Choose an option and add your questions to your inquiry."
+  },
+  "rotonda-west.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/florida-golf-green.webp",
+    "alt": "Illustrative golf course in Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "sarasota.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/sarasota-marina.webp",
+    "alt": "Marina in Sarasota, Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "search-properties.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/punta-gorda-town-square.webp",
+    "alt": "Punta Gorda town square",
+    "eyebrow": "A MORE PERSONAL SEARCH",
+    "title": "Find a setting that feels like you.",
+    "description": "Go beyond the listings. Share your preferred community, price range and property features so Sabatino can better understand your search.",
+    "prompt": "Select Buying a home to describe your ideal property."
+  },
+  "sell.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/modern-home-garden.webp",
+    "alt": "Architectural illustration of a contemporary home and garden",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Your home deserves a thoughtful selling plan.",
+    "description": "Tell Sabatino about your property and when you hope to move. Start a conversation about pricing, presentation and the next steps.",
+    "prompt": "Select Selling a property to share your plans."
+  },
+  "seller-closing-costs.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/home-budget-planning.webp",
+    "alt": "Model house, calculator and notebook for home budgeting",
+    "eyebrow": "PLAN YOUR NEXT MOVE",
+    "title": "Turn your research into a practical plan.",
+    "description": "Share your goals, preferred community and timing. Sabatino can help you connect the numbers with the property decisions ahead.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "sellers-guide.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/modern-home-garden.webp",
+    "alt": "Architectural illustration of a contemporary home and garden",
+    "eyebrow": "YOUR PROPERTY · YOUR NEXT CHAPTER",
+    "title": "A thoughtful plan for your property.",
+    "description": "Tell Sabatino what you own and when you hope to move. Start a conversation about preparation, presentation and your next steps.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "siesta-key-longboat-key-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/longboat-key-millar-bay.webp",
+    "alt": "Millar Bay viewed from Longboat Key",
+    "eyebrow": "SIESTA KEY & LONGBOAT KEY",
+    "title": "Your island chapter starts here.",
+    "description": "A beach-centered retreat or a quieter waterfront setting? Share your preferred island, property type and timeframe so Sabatino can help you explore your next move.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "terms.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "venice-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "venice.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "waterfront.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/venice-avenue-tree-lined.webp",
+    "alt": "Tree-lined Venice Avenue in Venice, Florida",
+    "eyebrow": "YOUR FLORIDA GULF COAST",
+    "title": "Your next chapter starts with a conversation.",
+    "description": "Share your preferred location, property plans and timeframe so Sabatino can help you explore the possibilities.",
+    "prompt": "Choose buying, investing or selling to begin."
+  },
+  "wellen-park-florida-real-estate.html": {
+    "anchor": "coast-inquiry",
+    "image": "images/modern-home-garden.webp",
+    "alt": "Architectural illustration of a contemporary home and garden",
+    "eyebrow": "EXPLORE YOUR COASTAL LIFESTYLE",
+    "title": "Find the setting that feels like you.",
+    "description": "From beach access to neighborhood character, the right home starts with your priorities. Tell Sabatino which area interests you and what matters most.",
+    "prompt": "Choose buying, investing or selling to begin."
+  }
+}

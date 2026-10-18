@@ -48,3 +48,9 @@ section.lead-intake #lead-form[hidden]{display:none!important}
 section.lead-intake .fc-choose-stage #lead-choices button{background:#fff!important}
 section.lead-intake .fc-choose-stage #lead-choices button:hover,section.lead-intake .fc-choose-stage #lead-choices button:focus-visible,section.lead-intake .fc-choose-stage #lead-choices button.fc-choice-active{background:#102d43!important;color:white!important}
 @media(max-width:600px){section.lead-intake .fc-choose-stage{padding:16px}}
+
+/* Shared photo credit and progressive form layout. */
+html body section.lead-intake .fc-inquiry-photo-credit{padding:8px 18px;margin:0;background:#112f43;color:#d7e2e8;font:500 10px/1.6 Manrope,Arial,sans-serif}
+html body section.lead-intake .fc-inquiry-photo-credit a{color:#e6c790;text-underline-offset:3px}
+html body section.lead-intake .fc-extra-details{grid-column:1/-1}
+html body section.lead-intake .fc-choose-stage{border-radius:10px}
