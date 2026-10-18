@@ -1,0 +1,43 @@
+/* Shared inquiry presentation; form controls, IDs and submission stay intact. */
+html body section.lead-intake.fc-inquiry-split,
+html body #tell-us-your-plans.lead-intake.fc-inquiry-split {
+ box-sizing:border-box!important;display:grid!important;grid-template-columns:minmax(0,.8fr) minmax(0,1.35fr)!important;
+ width:calc(100% - 48px)!important;max-width:1180px!important;min-height:0!important;
+ margin:48px auto 60px!important;padding:0!important;gap:0!important;align-items:stretch!important;
+ overflow:hidden!important;border:1px solid #dce4e9!important;border-radius:18px!important;
+ background:#fff!important;background-image:none!important;color:#15344e!important;
+ box-shadow:0 14px 44px rgba(16,43,67,.08)!important;scroll-margin-top:112px!important;
+}
+html body main.wrap:has(> .fc-inquiry-split){max-width:1228px!important;width:100%!important;padding:0 24px 60px!important}
+html body main.wrap > section.lead-intake.fc-inquiry-split{width:100%!important}
+html body section.fc-inquiry-split > .fc-inquiry-story{min-width:0;display:flex;flex-direction:column;background:#112f43;color:#fff}
+html body section.fc-inquiry-split .fc-inquiry-story img{display:block;width:100%;height:300px;object-fit:cover;object-position:center;border:0;border-radius:0;margin:0}
+html body section.fc-inquiry-split .fc-inquiry-story-copy{padding:32px clamp(24px,3vw,38px);text-align:left}
+html body section.fc-inquiry-split .fc-inquiry-story-eyebrow{font:800 10px/1.5 Manrope,Arial,sans-serif;letter-spacing:.16em;color:#e7c482;margin:0 0 15px}
+html body section.fc-inquiry-split .fc-inquiry-story h3{font:700 clamp(25px,2.4vw,33px)/1.25 Manrope,Arial,sans-serif;letter-spacing:-.025em;color:#fff;margin:0 0 18px}
+html body section.fc-inquiry-split .fc-inquiry-story-text{font:400 14px/1.85 Manrope,Arial,sans-serif;color:#e1e9ee;margin:0 0 22px}
+html body section.fc-inquiry-split .fc-inquiry-story-prompt{font:700 13px/1.75 Manrope,Arial,sans-serif;color:#f0d6a6;border-top:1px solid #ffffff30;padding-top:18px;margin:0}
+html body section.lead-intake.fc-inquiry-split > .lead-intake-inner,
+html body #tell-us-your-plans.fc-inquiry-split > .lead-intake-inner{
+ box-sizing:border-box!important;width:100%!important;max-width:none!important;min-width:0!important;
+ margin:0!important;padding:clamp(26px,3vw,42px)!important;background:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+}
+html body section.fc-inquiry-split .fc-secondary-page-heading{font:700 clamp(27px,2.7vw,38px)/1.2 Manrope,Arial,sans-serif!important;color:#15344e!important;margin:0 0 18px!important;letter-spacing:-.025em!important;text-shadow:none!important}
+html body section.fc-inquiry-split .lead-eyebrow{color:#a57838!important;font:800 10px/1.5 Manrope,Arial,sans-serif!important;margin:0 0 15px!important}
+html body section.fc-inquiry-split .lead-intro,html body section.fc-inquiry-split .contact-path-link{max-width:none!important;color:#536b7c!important;font:400 14px/1.8 Manrope,Arial,sans-serif!important}
+html body section.fc-inquiry-split .lead-choices,html body #tell-us-your-plans.fc-inquiry-split #lead-choices{max-width:none!important;grid-template-columns:1fr!important;gap:9px!important}
+html body section.fc-inquiry-split .lead-choices button,html body #tell-us-your-plans.fc-inquiry-split #lead-choices button{width:100%!important;min-height:48px!important;font:700 14px/1.5 Manrope,Arial,sans-serif!important;padding:12px 15px!important}
+html body section.fc-inquiry-split .lead-form{max-width:none!important;width:100%!important;min-width:0!important}
+html body section.fc-inquiry-split #lead-form[hidden]{display:none!important}
+html body section.fc-inquiry-split .lead-fields{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html body section.fc-inquiry-split .lead-fields label{min-width:0!important}
+html body section.fc-inquiry-split .lead-fields :is(input,select,textarea){max-width:100%!important;min-width:0!important}
+@media(max-width:800px){
+ html body section.lead-intake.fc-inquiry-split,html body #tell-us-your-plans.lead-intake.fc-inquiry-split{grid-template-columns:1fr!important;width:calc(100% - 32px)!important;margin:30px auto 40px!important;border-radius:14px!important;scroll-margin-top:98px!important}
+ html body main.wrap:has(> .fc-inquiry-split){padding:0 16px 40px!important}
+ html body section.fc-inquiry-split .fc-inquiry-story img{height:240px}
+ html body section.fc-inquiry-split .fc-inquiry-story-copy{padding:25px}
+ html body section.fc-inquiry-split .fc-inquiry-story h3{font-size:27px}
+ html body section.lead-intake.fc-inquiry-split > .lead-intake-inner,html body #tell-us-your-plans.fc-inquiry-split > .lead-intake-inner{padding:26px 22px!important}
+}
+@media(max-width:500px){html body section.fc-inquiry-split .lead-fields{grid-template-columns:1fr!important}html body section.fc-inquiry-split .fc-inquiry-story img{height:210px}}
