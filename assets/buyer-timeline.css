@@ -103,3 +103,9 @@ html body #contract-deadline-planner #timeline-live-list strong{min-width:0;over
 .fc-simple-days{text-align:center;color:#345569}
 html body #contract-deadline-planner #timeline-live-list>.fc-timeline-columns{font-size:10px;color:#92713f;font-weight:800;padding:8px 0}
 @media(max-width:420px){html body #contract-deadline-planner #timeline-live-list>li{grid-template-columns:18px minmax(0,1fr) 27px 82px;gap:5px}}
+
+html body #contract-deadline-planner .fc-simple-task{padding:14px;margin:12px 0;border:1px solid #dde5e9;border-left:3px solid #b9985c;border-radius:8px;background:#f3f6f8}
+html body #contract-deadline-planner .fc-task-label{color:#153c53;font-size:12px;font-weight:800;letter-spacing:.03em}
+html body #contract-deadline-planner .fc-simple-options label{color:#92703b}
+html body #contract-deadline-planner #timeline-live-list>.fc-key-date{background:#edf2f5;border-top:1px solid #cfdae1;border-bottom:1px solid #cfdae1;border-left:3px solid #b9985c;padding:12px 8px;margin:5px 0;border-radius:5px;font-weight:800}
+html body #contract-deadline-planner #timeline-live-list>.fc-key-date strong{font-weight:800;color:#153c53}
