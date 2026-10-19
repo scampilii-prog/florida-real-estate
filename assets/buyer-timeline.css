@@ -134,3 +134,11 @@ html body #contract-deadline-planner .fc-simple-task>details[open]>summary::afte
 html body #contract-deadline-planner .fc-simple-task>details>summary:hover{background:#dce7ee;border-color:#9fb5c4}
 html body #contract-deadline-planner .fc-simple-task>details>summary:focus-visible{outline:2px solid #a88043;outline-offset:3px}
 html body #contract-deadline-planner .fc-simple-task>details>summary::-webkit-details-marker{display:none}
+
+html body #closing-timeline-intro{grid-template-columns:1fr}
+.fc-heading-line{display:grid;grid-template-columns:minmax(230px,.85fr) minmax(0,1.6fr);gap:28px;align-items:center;margin-bottom:12px}
+html body #buyer-contract-timeline.fc-heading-message{padding:0;margin:0;border:0;text-align:left;max-width:none}
+html body .fc-heading-message #gce-timeline-heading{font-size:clamp(20px,2vw,27px);margin:5px 0 9px;line-height:1.25}
+html body .fc-heading-message p{font-size:12px;line-height:1.7;margin:0;color:#607888}
+html body .fc-heading-message .gce-timeline-kicker{font-size:9px;color:#95713e}
+@media(max-width:760px){.fc-heading-line{grid-template-columns:1fr;gap:12px}}
