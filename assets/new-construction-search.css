@@ -109,3 +109,6 @@ html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title:before{conten
 .fc-nc-title-main{display:block;font:700 15px/1.6 Manrope,Arial,sans-serif;letter-spacing:.01em;margin-bottom:15px;color:#28546a}
 .fc-nc-title-accent{display:block;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;letter-spacing:-.045em;line-height:1.08}
 @media(max-width:600px){html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title{font-size:45px!important}html body section.hero.fc-nc-search-hero .fc-nc-hero-copy h1#title:before{left:calc(50% - 28px)}}
+
+/* Crop the narrow sky strip out of the wide seaside banner. */
+@media(min-width:1101px){html body.fc-page-photo-refresh section.hero.fc-nc-search-hero{background-position:center bottom!important}}
