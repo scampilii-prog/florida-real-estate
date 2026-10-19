@@ -229,3 +229,12 @@ html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-discl
 #contract-deadline-planner .fc-reminder-scroll td.fc-reminder-date{background:var(--date-shade);border-left:1px solid var(--group-line);border-right:1px solid var(--group-line)}
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-days input{background:var(--period-shade);border-color:var(--group-line)}
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-date strong{background:#ffffffa6;box-shadow:0 2px 5px #17394e08}
+
+/* Matching date tiles identify reminders due together, across all groups. */
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-date strong.fc-shared-date{background:var(--shared-bg);border:2px solid var(--shared-border);border-left-width:4px;color:var(--shared-text);box-shadow:0 2px 6px #17394e12}
+#contract-deadline-planner .fc-shared-date-0{--shared-bg:#dcebf8;--shared-border:#7099bd;--shared-text:#244e73}
+#contract-deadline-planner .fc-shared-date-1{--shared-bg:#fff0c1;--shared-border:#bd963d;--shared-text:#725514}
+#contract-deadline-planner .fc-shared-date-2{--shared-bg:#d8eee7;--shared-border:#6a9f8d;--shared-text:#285f4f}
+#contract-deadline-planner .fc-shared-date-3{--shared-bg:#e9def4;--shared-border:#a183ba;--shared-text:#654580}
+#contract-deadline-planner .fc-shared-date-4{--shared-bg:#f7dfe5;--shared-border:#bc8494;--shared-text:#813e55}
+#contract-deadline-planner .fc-shared-date-5{--shared-bg:#e3e8ec;--shared-border:#8a9aa8;--shared-text:#405769}
