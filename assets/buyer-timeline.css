@@ -126,3 +126,11 @@ html body #contract-deadline-planner .fc-task-note{margin-top:10px}
 html body #contract-deadline-planner #deadline-sort{padding:5px 9px;border:1px solid #b9cbd7;border-radius:5px;background:#edf3f6;color:#153c53;font:700 10px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
 html body #contract-deadline-planner .fc-task-note-preview{font-size:11px;color:#607888;font-weight:500}
 @media(max-width:999px){html body #closing-timeline-intro{width:100%;margin-left:0;margin-right:0}}
+
+html body #contract-deadline-planner .fc-simple-task>details>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;padding:9px 12px;margin-top:12px;border:1px solid #c9d6df;border-radius:6px;background:#e7eef3;color:#183d54;font:700 11px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
+html body #contract-deadline-planner .fc-simple-task>details>summary::before{content:none}
+html body #contract-deadline-planner .fc-simple-task>details>summary::after{content:"▼";font-size:16px;font-weight:900;color:#8a642e}
+html body #contract-deadline-planner .fc-simple-task>details[open]>summary::after{content:"▲"}
+html body #contract-deadline-planner .fc-simple-task>details>summary:hover{background:#dce7ee;border-color:#9fb5c4}
+html body #contract-deadline-planner .fc-simple-task>details>summary:focus-visible{outline:2px solid #a88043;outline-offset:3px}
+html body #contract-deadline-planner .fc-simple-task>details>summary::-webkit-details-marker{display:none}
