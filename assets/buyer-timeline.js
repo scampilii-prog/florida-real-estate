@@ -16,22 +16,23 @@ function validateDeadlineReport(){return true}
 function timelineDraftLabel(){return (!$('deadline-effective').value||!$('deadline-closing').value||rows.some(r=>r.status!=='na'&&r.status!=='done'&&!r.override&&r.days===''))?'Some dates to be confirmed':'Dates entered from contract'}
 function generalNotes(){return $('deadline-general-notes').value.trim()}function email(){viewEmailPreview()}
 function timelinePicture(){
- const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');canvas.width=1264;
- function wrap(text,width,font){ctx.font=font;const lines=[];let line='';for(const word of String(text||'').split(/\s+/)){if(ctx.measureText(line+(line?' ':'')+word).width>width&&line){lines.push(line);line=word}else line+=(line?' ':'')+word}if(line)lines.push(line);return lines.length?lines:['']}
- const data=collect(),font='24px Arial',bold='600 24px Arial';
- const items=data.map(x=>{const task=wrap(x.name,470,font),note=x.note?wrap(x.note,470,'20px Arial'):[],detail=wrap(x.detail,280,'22px Arial'),due=wrap(x.date?timelineShortDate(x.date):'To be confirmed',166,bold),progress=wrap(x.status==='done'?'Completed':x.status==='na'?'Not applicable':'Pending',150,'22px Arial');return {x,task,note,detail,due,progress,height:Math.max(task.length*32+note.length*28,detail.length*30,due.length*32,progress.length*30,32)+30}});
- const notes=wrap('General notes: '+(generalNotes()||'None'),1136,'22px Arial');
- canvas.height=408+items.reduce((n,r)=>n+r.height,0)+notes.length*31+154;
- ctx.fillStyle='#f6f1e8';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#fff';ctx.fillRect(16,16,1232,canvas.height-32);ctx.strokeStyle='#b48b4e';ctx.lineWidth=3;ctx.strokeRect(16,16,1232,canvas.height-32);
- ctx.fillStyle='#123148';ctx.fillRect(32,32,1200,142);ctx.fillStyle='#e5c895';ctx.font='600 20px Arial';ctx.fillText('FLORIDA COSTIERA · CONTRACT TO CLOSING',56,76);ctx.fillStyle='#fff';ctx.font='600 38px Arial';ctx.fillText('Buyer Closing Timeline',56,125);ctx.font='21px Arial';ctx.fillText('Complete Timeline Report',56,155);
- function lines(a,x,top,font,color,spacing){ctx.font=font;ctx.fillStyle=color;a.forEach((t,i)=>ctx.fillText(t,x,top+i*spacing))}
- const cards=[['CONTRACT EFFECTIVE DATE',fmt($('deadline-effective').value)],['SCHEDULED CLOSING',fmt($('deadline-closing').value)],['MILESTONES',data.length+' total · '+data.filter(x=>x.status==='done').length+' completed']];
- cards.forEach((c,i)=>{const x=48+i*398;ctx.fillStyle='#edf3f6';ctx.fillRect(x,195,380,130);lines([c[0]],x+16,228,'18px Arial','#617b8b',26);lines(wrap(c[1],346,'600 23px Arial'),x+16,267,'600 23px Arial','#173e53',29)});
- ctx.fillStyle='#123148';ctx.fillRect(32,344,1200,54);ctx.fillStyle='#fff';ctx.font='600 21px Arial';[['Task / milestone',56],['Due date',550],['How date was entered',740],['Progress',1060]].forEach(p=>ctx.fillText(p[0],p[1],378));
- let y=398;
- items.forEach((r,i)=>{ctx.fillStyle=i%2?'#f1f5f7':'#fff';ctx.fillRect(32,y,1200,r.height);lines(r.task,56,y+35,font,'#193c51',32);lines(r.note,56,y+35+r.task.length*32,'20px Arial','#637c89',28);lines(r.due,550,y+35,bold,r.x.date?'#236345':'#916431',32);lines(r.detail,740,y+35,'22px Arial','#3c5969',30);lines(r.progress,1060,y+35,'22px Arial',r.x.status==='done'?'#236345':'#88663b',30);ctx.strokeStyle='#dce5ea';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(32,y+r.height);ctx.lineTo(1232,y+r.height);ctx.stroke();y+=r.height});
- ctx.strokeStyle='#b48b4e';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(48,y+24);ctx.lineTo(1216,y+24);ctx.stroke();lines(notes,56,y+60,'22px Arial','#3c5969',31);y+=notes.length*31+65;
- lines(['Sabatino Campilii · Realtor® · LoKation® Real Estate','Planning aid only. Verify dates against the signed contract and amendments.'],56,y+32,'20px Arial','#637886',29);
+ const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d'),data=collect();canvas.width=1264;
+ function wrap(text,width,font){ctx.font=font;let line='';const lines=[];for(const word of String(text||'').split(/\s+/)){if(ctx.measureText(line+(line?' ':'')+word).width>width&&line){lines.push(line);line=word}else line+=(line?' ':'')+word}if(line)lines.push(line);return lines.length?lines:['']}
+ const items=data.map(r=>{const lines=wrap(r.name,660,'600 30px Arial'),notes=r.note?wrap(r.note,660,'24px Arial'):[];return {r,lines,notes,height:Math.max(100,lines.length*40+notes.length*32+40)}});
+ const notes=generalNotes()?wrap('Notes: '+generalNotes(),1144,'24px Arial'):[];
+ canvas.height=352+items.reduce((sum,x)=>sum+x.height+10,0)+notes.length*33+(notes.length?48:0)+28;
+ ctx.fillStyle='#fcfaf6';ctx.fillRect(0,0,1264,canvas.height);ctx.strokeStyle='#c6a76e';ctx.lineWidth=2;ctx.strokeRect(2,2,1260,canvas.height-4);
+ ctx.fillStyle='#153c50';ctx.fillRect(3,3,1258,202);ctx.fillStyle='#e5c895';ctx.font='700 23px Arial';ctx.fillText('LIVE PREVIEW',45,79);ctx.fillStyle='#fff';ctx.font='700 52px Arial';ctx.fillText('Your timeline',45,151);
+ ctx.fillStyle='#607b8c';ctx.font='28px Arial';ctx.fillText(data.filter(x=>x.date&&x.status!=='na').length+' of '+data.length+' dates entered',44,270);
+ ctx.fillStyle='#97733d';ctx.font='700 25px Arial';ctx.fillText('#',44,326);ctx.fillText('Task / milestone',110,326);ctx.fillText('Days',836,326);ctx.fillText('Due date',962,326);
+ let y=352;
+ for(const item of items){const {r,lines,notes,height}=item,key=r.kind!=='task';if(key){ctx.fillStyle='#eaf1f5';ctx.fillRect(42,y,1180,height);ctx.fillStyle='#b9985c';ctx.fillRect(42,y,6,height)}
+ ctx.fillStyle='#97733d';ctx.font='700 29px Arial';ctx.fillText(String(r.taskNumber||'—'),60,y+55);
+ ctx.fillStyle='#34566a';ctx.font=(key?'700':'600')+' 30px Arial';lines.forEach((t,i)=>ctx.fillText(t,110,y+55+i*40));ctx.font='24px Arial';ctx.fillStyle='#607b8c';notes.forEach((t,i)=>ctx.fillText(t,110,y+55+lines.length*40+i*32));
+ ctx.fillStyle='#34566a';ctx.font='700 30px Arial';ctx.textAlign='center';ctx.fillText(String(r.days!==''&&r.days!==undefined?r.days:'—'),870,y+55);ctx.textAlign='right';ctx.fillStyle=key?'#153c50':r.date?'#286044':'#97733d';ctx.font='700 29px Arial';ctx.fillText(r.date?timelineShortDate(r.date):'Not entered',1203,y+55);ctx.textAlign='left';
+ ctx.strokeStyle='#d8e1e6';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(42,y+height);ctx.lineTo(1222,y+height);ctx.stroke();y+=height+10;
+ }
+ if(notes.length){y+=25;ctx.fillStyle='#607b8c';ctx.font='24px Arial';notes.forEach((t,i)=>ctx.fillText(t,44,y+i*33))}
  return canvas;
 }
 function emailPicture(){const source=timelinePicture(),small=document.createElement('canvas');small.width=660;small.height=Math.round(source.height*660/source.width);small.getContext('2d').drawImage(source,0,0,small.width,small.height);return small}
