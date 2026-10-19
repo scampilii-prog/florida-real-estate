@@ -62,13 +62,15 @@ html body #contract-deadline-planner .fc-simple-footnote{margin:0;padding:12px 2
 .fc-timeline-intro{max-width:920px;box-sizing:border-box;margin-left:auto;margin-right:auto}
 @media(max-width:700px){.fc-simple-layout{grid-template-columns:1fr;gap:20px;padding:18px}.fc-simple-heading{padding:20px}.fc-simple-result{position:static}.fc-simple-dates input{font-size:16px!important}.fc-simple-task-main{grid-template-columns:minmax(0,1fr) 77px 22px}html body #contract-deadline-planner .fc-simple-heading h3{font-size:24px}}
 @media(prefers-reduced-motion:reduce){.fc-simple-timeline{scroll-behavior:auto}}
-#timeline-email-dialog{box-sizing:border-box;width:min(650px,calc(100vw - 24px));max-height:88dvh;padding:27px;margin:auto;border:1px solid #c3a26d;border-top:4px solid #b48b4e;border-radius:12px;background:#fffdf9;color:#18374b;box-shadow:0 24px 90px #071b2b66;overflow:auto}
+#timeline-email-dialog{box-sizing:border-box;width:min(740px,calc(100vw - 24px));max-height:88dvh;padding:27px;margin:auto;border:1px solid #c3a26d;border-top:4px solid #b48b4e;border-radius:12px;background:#fffdf9;color:#18374b;box-shadow:0 24px 90px #071b2b66;overflow:auto}
 #timeline-email-dialog::backdrop{background:#071b2bbd}
 #timeline-email-dialog>.fc-picture-close{position:absolute;top:9px;right:12px;border:0;background:transparent;color:#153b52;font-size:27px;cursor:pointer}
 #timeline-email-dialog h3{font:800 20px/1.4 Manrope,Arial,sans-serif;margin:0 35px 22px 0;color:#153b52}
 #timeline-email-dialog .fc-email-preview-body>div{font-size:13px!important;line-height:1.65!important}
-#timeline-email-dialog .fc-email-inline-picture{display:block;width:440px;max-width:100%;height:auto;margin:17px 0;border:0}
+#timeline-email-dialog .fc-email-inline-picture{display:block;width:660px;max-width:100%;height:auto;margin:17px 0;border:0}
 .fc-email-preview-actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:18px;margin-top:20px;border-top:1px solid #ded5c6}
 .fc-email-preview-actions button{padding:11px 15px;border:1px solid #153b52;border-radius:6px;background:#153b52;color:#fff;font:700 11px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
 .fc-email-preview-actions button+button{background:#fff;color:#153b52}
 @media(max-width:600px){#timeline-email-dialog{padding:23px 18px}}
+
+.fc-simple-task>details>summary{font-size:11px;padding:3px 0}
