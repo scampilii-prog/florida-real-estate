@@ -24,7 +24,7 @@ function timelinePicture(){
  ctx.fillStyle='#fcfaf6';ctx.fillRect(0,0,1264,canvas.height);ctx.strokeStyle='#c6a76e';ctx.lineWidth=2;ctx.strokeRect(2,2,1260,canvas.height-4);
  ctx.fillStyle='#153c50';ctx.fillRect(3,3,1258,202);ctx.fillStyle='#e5c895';ctx.font='700 23px Arial';ctx.fillText('LIVE PREVIEW',45,79);ctx.fillStyle='#fff';ctx.font='700 52px Arial';ctx.fillText('Your timeline',45,151);
  ctx.fillStyle='#607b8c';ctx.font='28px Arial';ctx.fillText(data.filter(x=>x.date&&x.status!=='na').length+' of '+data.length+' dates entered',44,270);
- ctx.fillStyle='#97733d';ctx.font='700 25px Arial';ctx.fillText('#',44,326);ctx.fillText('Task / milestone',110,326);ctx.fillText('Days',836,326);ctx.fillText('Due date',962,326);
+ ctx.fillStyle='#97733d';ctx.font='700 25px Arial';ctx.fillText('#',44,326);ctx.fillText('Task / milestone',110,326);ctx.textAlign='center';ctx.fillText('Days',870,326);ctx.textAlign='right';ctx.fillText('Due date',1203,326);ctx.textAlign='left';
  let y=352;
  for(const item of items){const {r,lines,notes,height}=item,key=r.kind!=='task';if(key){ctx.fillStyle='#eaf1f5';ctx.fillRect(42,y,1180,height);ctx.fillStyle='#b9985c';ctx.fillRect(42,y,6,height)}
  ctx.fillStyle='#97733d';ctx.font='700 29px Arial';ctx.fillText(String(r.taskNumber||'—'),60,y+55);

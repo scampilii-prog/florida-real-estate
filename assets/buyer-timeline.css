@@ -145,3 +145,7 @@ html body .fc-heading-message .gce-timeline-kicker{font-size:9px;color:#95713e}
 
 html body #contract-deadline-planner #timeline-live-list>li>span:nth-child(3){text-align:center}
 html body #contract-deadline-planner #timeline-live-list>li>span:nth-child(4){text-align:right}
+
+html body #contract-deadline-planner #timeline-live-list>li{box-sizing:border-box;padding:12px 8px;border-left:3px solid transparent}
+html body #contract-deadline-planner #timeline-live-list>li.fc-key-date{border-left-color:#b9985c}
+html body #contract-deadline-planner #timeline-live-list>.fc-timeline-columns{padding:8px}
