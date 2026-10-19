@@ -151,3 +151,7 @@ html body #contract-deadline-planner #timeline-live-list>li.fc-key-date{border-l
 html body #contract-deadline-planner #timeline-live-list>.fc-timeline-columns{padding:8px}
 
 html body #contract-deadline-planner #timeline-live-list>li.fc-closing-date{background:#f8e9ed;border-left-color:#bc7b8c;border-top-color:#e5c6cf;border-bottom-color:#e5c6cf}
+
+html body #contract-deadline-planner #timeline-live-list>li.fc-extension-funds{background:#fff2da;border-left-color:#c28a32}
+html body #contract-deadline-planner #timeline-live-list>li.fc-extension-force{background:#eee8f6;border-left-color:#8a69aa}
+.fc-extension-help{font:500 11px/1.7 Arial;color:#536c7f;margin:10px 0}
