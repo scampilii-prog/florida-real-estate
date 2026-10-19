@@ -109,3 +109,20 @@ html body #contract-deadline-planner .fc-task-label{color:#153c53;font-size:12px
 html body #contract-deadline-planner .fc-simple-options label{color:#92703b}
 html body #contract-deadline-planner #timeline-live-list>.fc-key-date{background:#edf2f5;border-top:1px solid #cfdae1;border-bottom:1px solid #cfdae1;border-left:3px solid #b9985c;padding:12px 8px;margin:5px 0;border-radius:5px;font-weight:800}
 html body #contract-deadline-planner #timeline-live-list>.fc-key-date strong{font-weight:800;color:#153c53}
+
+html body #buyer-contract-timeline{padding-top:32px;margin-bottom:20px}
+html body #gce-timeline-heading{font-size:clamp(24px,2.4vw,34px);line-height:1.25}
+html body #closing-timeline-intro{box-sizing:border-box;width:min(92vw,1180px);max-width:none;margin-left:calc(50% - min(46vw,590px));margin-right:0;margin-bottom:0;padding:18px 26px;gap:22px;border-radius:12px 12px 0 0}
+html body #closing-timeline-intro p:not(.fc-timeline-intro-kicker){margin-bottom:6px}
+html body #closing-timeline-intro .fc-timeline-intro-kicker{margin-bottom:5px}
+html body #closing-timeline-intro h2#fc-timeline-intro-title{font-size:25px;margin-bottom:7px}
+html body #contract-deadline-planner.fc-simple-timeline{margin-top:0;border-radius:0 0 12px 12px;scroll-margin-top:110px}
+html body #contract-deadline-planner #timeline-live-list>li{font-size:13px;line-height:1.6}
+html body #contract-deadline-planner #timeline-live-list strong{font-size:12px}
+html body #contract-deadline-planner #deadline-summary{font-size:12px}
+html body #contract-deadline-planner .fc-task-note{margin-top:10px}
+.fc-task-label[draggable]{cursor:grab;user-select:none}
+.fc-task-label[draggable]:active{cursor:grabbing}
+html body #contract-deadline-planner #deadline-sort{padding:5px 9px;border:1px solid #b9cbd7;border-radius:5px;background:#edf3f6;color:#153c53;font:700 10px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
+html body #contract-deadline-planner .fc-task-note-preview{font-size:11px;color:#607888;font-weight:500}
+@media(max-width:999px){html body #closing-timeline-intro{width:100%;margin-left:0;margin-right:0}}
