@@ -2,6 +2,7 @@ import {readFileSync,readdirSync} from 'node:fs';
 import {strict as assert} from 'node:assert';
 import vm from 'node:vm';
 const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
+const timelineCss=read('assets/buyer-timeline.css');assert(!timelineCss.includes('(function(){'), 'Timeline stylesheet must not contain the JavaScript bundle');for(const selector of ['.fc-simple-layout','.fc-simple-task','.fc-editor-toolbar','.fc-reminder-date'])assert(timelineCss.includes(selector), 'Missing timeline CSS: '+selector);
 let count=0;
 for(const name of readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(n))){for(const m of read(name).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)){if(/src=|application\/ld\+json|type="module"/.test(m[1]))continue;new vm.Script(m[2],{filename:name+' inline script'});count++}}
 const source=read('assets/buyer-timeline.js');assert(source.includes('fc-task-due'));assert(source.includes('>Due date<input'));assert(source.includes("row[el.dataset.field]=el.value"));assert(!source.includes("rows[i][el.dataset.field]"));assert(!source.includes("el.addEventListener('change',sortRows)"));new vm.Script(source);
