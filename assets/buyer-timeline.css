@@ -161,3 +161,7 @@ html body #contract-deadline-planner #timeline-live-list>li.fc-extension-force{b
 html body #contract-deadline-planner .fc-simple-task>details.fc-task-guidance-disclosure>summary{display:inline-flex;justify-content:flex-start;padding:3px 0;margin-top:7px;border:0;border-radius:0;background:transparent;color:#82632f;font-size:10px;text-decoration:underline;text-underline-offset:3px}
 html body #contract-deadline-planner .fc-simple-task>details.fc-task-guidance-disclosure>summary::after{content:"▾";font-size:12px}
 html body #contract-deadline-planner .fc-simple-task>details.fc-task-guidance-disclosure[open]>summary::after{content:"▴"}
+
+html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-disclosure>summary{display:inline-flex;justify-content:flex-start;padding:3px 0;margin-top:7px;border:0;border-radius:0;background:transparent;color:#82632f;font-size:10px;text-decoration:underline;text-underline-offset:3px}
+html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-disclosure>summary::after{content:"▾";font-size:12px}
+html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-disclosure[open]>summary::after{content:"▴"}
