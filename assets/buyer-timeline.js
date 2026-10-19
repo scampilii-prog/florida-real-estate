@@ -41,6 +41,20 @@ function copyPicture(){
  const promise=new Promise((resolve,reject)=>emailPicture().toBlob(b=>b?resolve(b):reject(Error('Image unavailable')),'image/png'));
  navigator.clipboard.write([new ClipboardItem({'image/png':promise})]).then(()=>{$('closing-email-feedback').textContent='Image copied. Click inside your email message and paste with ⌘V (Mac) or Ctrl+V.'}).catch(()=>{$('closing-email-feedback').textContent='Download the PNG and drag it into your email message.'});
 }
+async function openInMail(){
+ const recipient=$('deadline-email').value.trim();
+ if(recipient&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)){alert('Enter a valid email address or leave it blank.');return}
+ let copied=false;
+ try{
+  if(navigator.clipboard&&window.ClipboardItem){
+   const png=new Promise((resolve,reject)=>emailPicture().toBlob(b=>b?resolve(b):reject(Error('Image unavailable')),'image/png'));
+   await navigator.clipboard.write([new ClipboardItem({'image/png':png})]);copied=true;
+  }
+ }catch(error){}
+ if(!copied)downloadPicture();
+ timelineFeedback(copied?'Mail is opening with your message. Click before your signature and paste (⌘V on Mac, Ctrl+V on Windows) to insert the timeline.':'Mail is opening with your message. Drag the downloaded Buyer-Closing-Timeline.png into the message before your signature.');
+ window.location.href='mailto:'+encodeURIComponent(recipient)+'?subject='+encodeURIComponent('Buyer Closing Timeline and Contract Deadlines')+'&body='+encodeURIComponent(plainTimeline()+'\n\n');
+}
 let timelineModal=null;
 function closeTimelineModal(){if(window.history.state&&window.history.state.fcTimelineModal){window.history.back()}else if(timelineModal&&timelineModal.open){timelineModal.close();timelineModal=null}}
 function openTimelineModal(dialog){timelineModal=dialog;if(!dialog.open)dialog.showModal();window.history.pushState(Object.assign({},window.history.state||{},{fcTimelineModal:dialog.id}),'',window.location.href)}
@@ -51,7 +65,7 @@ function viewPicture(){
  dialog.querySelector('img').src=timelinePicture().toDataURL('image/png');openTimelineModal(dialog);
 }
 function viewEmailPreview(){
- let dialog=$('timeline-email-dialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='timeline-email-dialog';dialog.setAttribute('aria-labelledby','timeline-email-title');dialog.innerHTML='<button type="button" class="fc-picture-close" aria-label="Return to timeline">×</button><h3 id="timeline-email-title">Your email</h3><div class="fc-email-preview-body"></div><p id="timeline-email-feedback" role="status" style="font:500 11px/1.7 Arial;color:#527184"></p><div class="fc-email-preview-actions"><button type="button" data-download-email>Download complete email</button><button type="button" data-copy-email-image>Copy image for Mail</button></div>';document.body.appendChild(dialog);wireTimelineModal(dialog);dialog.querySelector('[data-download-email]').addEventListener('click',exportFormattedEmail);dialog.querySelector('[data-copy-email-image]').addEventListener('click',copyPicture)}
+ let dialog=$('timeline-email-dialog');if(!dialog){dialog=document.createElement('dialog');dialog.id='timeline-email-dialog';dialog.setAttribute('aria-labelledby','timeline-email-title');dialog.innerHTML='<button type="button" class="fc-picture-close" aria-label="Return to timeline">×</button><h3 id="timeline-email-title">Your email</h3><div class="fc-email-preview-body"></div><p id="timeline-email-feedback" role="status" style="font:500 12px/1.7 Arial;color:#527184">Open in Mail, then paste the timeline before your signature. Your signature follows your Mail settings.</p><div class="fc-email-preview-actions"><button type="button" data-open-mail>Open in Mail</button><button type="button" data-download-email>Download complete email</button><button type="button" data-copy-email-image>Copy image for Mail</button></div>';document.body.appendChild(dialog);wireTimelineModal(dialog);dialog.querySelector('[data-open-mail]').addEventListener('click',openInMail);dialog.querySelector('[data-download-email]').addEventListener('click',exportFormattedEmail);dialog.querySelector('[data-copy-email-image]').addEventListener('click',copyPicture)}
  dialog.querySelector('.fc-email-preview-body').innerHTML=buyerAgentNotice()+'<img class="fc-email-inline-picture" src="'+timelinePicture().toDataURL('image/png')+'" width="660" alt="Your complete closing timeline">'+buyerAgentClosing();openTimelineModal(dialog);
 }
 function exportFormattedEmail(){
