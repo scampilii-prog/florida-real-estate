@@ -219,3 +219,13 @@ html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-discl
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-on .fc-reminder-date strong{border-color:#a7bdcd;border-left-color:#6b91ad;color:#244e68}
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-after .fc-reminder-date strong{border-color:#d3bd85;border-left-color:#b18b36;color:#70561e}
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-before .fc-reminder-date strong{border-color:#bfadcf;border-left-color:#9676ad;color:#65477f}
+
+/* Two coordinated shades distinguish editable periods from calculated dates. */
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-on{--period-shade:#e2edf5;--date-shade:#d5e5f0;--group-line:#a3bed1}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-after{--period-shade:#fff0c9;--date-shade:#f7e7b8;--group-line:#cfb56e}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-before{--period-shade:#eae0f2;--date-shade:#e0d2eb;--group-line:#b49ac7}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-after-close{--period-shade:#dceee3;--date-shade:#cfe5d9;--group-line:#92b7a2}
+#contract-deadline-planner .fc-reminder-scroll td.fc-reminder-days{background:var(--period-shade);border-left:1px solid var(--group-line)}
+#contract-deadline-planner .fc-reminder-scroll td.fc-reminder-date{background:var(--date-shade);border-left:1px solid var(--group-line);border-right:1px solid var(--group-line)}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-days input{background:var(--period-shade);border-color:var(--group-line)}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-date strong{background:#ffffffa6;box-shadow:0 2px 5px #17394e08}
