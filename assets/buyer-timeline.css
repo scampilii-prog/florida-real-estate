@@ -213,3 +213,9 @@ html body #contract-deadline-planner .fc-simple-task>details.fc-task-notes-discl
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-date strong{background:transparent;border:0;box-shadow:none;border-radius:0;padding:5px 0;color:#245b48;font-size:16px;font-weight:750;font-variant-numeric:tabular-nums}
 #contract-deadline-planner .fc-reminder-scroll .fc-reminder-on+.fc-reminder-after td,#contract-deadline-planner .fc-reminder-scroll .fc-reminder-after+.fc-reminder-before td,#contract-deadline-planner .fc-reminder-scroll .fc-reminder-before+.fc-reminder-after-close td{border-top:2px solid #17394e35}
 @media(max-width:700px){#contract-deadline-planner .fc-reminder-scroll td{padding:11px 12px}#contract-deadline-planner .fc-complementary-tasks h4{font-size:21px}}
+
+/* Distinct date tiles, coordinated with the worksheet's pastel groups. */
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-date strong{display:inline-block;min-width:108px;padding:10px 12px;border:1px solid #9ab8aa;border-left:3px solid #608d78;border-radius:9px;background:linear-gradient(135deg,#ffffffc9,#ffffff60);box-shadow:0 2px 7px #17394e09;color:#205440;font-size:17px;font-weight:750;line-height:1.35;font-variant-numeric:tabular-nums;white-space:normal}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-on .fc-reminder-date strong{border-color:#a7bdcd;border-left-color:#6b91ad;color:#244e68}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-after .fc-reminder-date strong{border-color:#d3bd85;border-left-color:#b18b36;color:#70561e}
+#contract-deadline-planner .fc-reminder-scroll .fc-reminder-before .fc-reminder-date strong{border-color:#bfadcf;border-left-color:#9676ad;color:#65477f}
