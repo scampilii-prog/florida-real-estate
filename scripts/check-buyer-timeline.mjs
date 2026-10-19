@@ -6,6 +6,7 @@ let count=0;
 for(const name of readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(n))){for(const m of read(name).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)){if(/src=|application\/ld\+json|type="module"/.test(m[1]))continue;new vm.Script(m[2],{filename:name+' inline script'});count++}}
 const source=read('assets/buyer-timeline.js');new vm.Script(source);
 const html=read('buy.html');assert(html.includes('class="deadline-planner fc-timeline fc-simple-timeline"'));assert(html.includes('id="timeline-live-list"'));assert(!html.includes('class="deadline-results"'));assert(!html.includes('id="timeline-step-dates"'));assert(!html.includes('id="closing-email-preview"'));assert.equal((html.match(/src="assets\/inquiry-form\.js/g)||[]).length,1);
+assert.equal((html.match(/id="deadline-reset"/g)||[]).length,1);assert(html.indexOf('id="deadline-reset"')<html.indexOf('<details class="fc-simple-options">'));assert(html.includes('>Reset Last</button>'));
 const nodes={},drawn=[];let downloaded,blob;
 const imageData='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jB1kAAAAASUVORK5CYII=';
 const ctx={measureText(t){return {width:String(t).length*13}},fillRect(){},strokeRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},drawImage(){},fillText(t){drawn.push(t)}};

@@ -78,3 +78,7 @@ html body #contract-deadline-planner .fc-simple-footnote{margin:0;padding:12px 2
 html body #contract-deadline-planner #deadline-reset{justify-self:start;width:auto;min-height:30px;padding:5px 10px;border:1px solid #df9b9b;border-radius:5px;background:#fff2f2;color:#a52d32;font:700 10px/1.5 Manrope,Arial,sans-serif;cursor:pointer}
 html body #contract-deadline-planner #deadline-reset:hover:not(:disabled){background:#fbe2e2;border-color:#b95055}
 html body #contract-deadline-planner #deadline-reset:disabled{opacity:.45;cursor:default}
+
+.fc-simple-task-controls{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+html body #contract-deadline-planner #deadline-reset{background:#b33e45;color:#fff;border-color:#b33e45}
+html body #contract-deadline-planner #deadline-reset:hover:not(:disabled){background:#912c33;border-color:#912c33}
