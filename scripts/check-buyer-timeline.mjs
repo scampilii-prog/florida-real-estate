@@ -7,6 +7,7 @@ for(const name of readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|cal
 const source=read('assets/buyer-timeline.js');new vm.Script(source);
 const html=read('buy.html');assert(html.includes('class="deadline-planner fc-timeline fc-simple-timeline"'));assert(html.includes('id="timeline-live-list"'));assert(!html.includes('class="deadline-results"'));assert(!html.includes('id="timeline-step-dates"'));assert(!html.includes('id="closing-email-preview"'));assert.equal((html.match(/src="assets\/inquiry-form\.js/g)||[]).length,1);
 assert.equal((html.match(/id="deadline-reset"/g)||[]).length,1);assert(html.indexOf('id="deadline-reset"')<html.indexOf('<details class="fc-simple-options">'));assert(html.includes('>Reset Last</button>'));
+assert(html.includes('href="#closing-timeline-intro"'));assert(html.includes('</aside><section id="contract-deadline-planner"'));assert.equal((html.match(/id="closing-timeline-intro"/g)||[]).length,1);
 const nodes={},drawn=[];let downloaded,blob;
 const imageData='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jB1kAAAAASUVORK5CYII=';
 const ctx={measureText(t){return {width:String(t).length*13}},fillRect(){},strokeRect(){},beginPath(){},moveTo(){},lineTo(){},stroke(){},drawImage(){},fillText(t){drawn.push(t)}};
