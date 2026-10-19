@@ -20,10 +20,19 @@ assert(html.includes('language-dropdown.js?v=20261018-showingnew'));
 const shared=read('assets/language-dropdown.js');
 const fn=shared.match(/function qualifies\(a\)\{[\s\S]*?return \/\^https\?:\$\/[\s\S]*?;\}/)?.[0];assert(fn);
 const qualifies=vm.runInNewContext('('+fn+')',{location:{href:'https://floridacostiera.com/new-construction',hostname:'floridacostiera.com'},URL});
-const anchor=(href,attributes={})=>({href,hasAttribute:k=>k in attributes,getAttribute:k=>attributes[k]??null});
+const anchor=(href,attributes={})=>({href,get target(){return attributes.target??''},set target(value){attributes.target=value},hasAttribute:k=>k in attributes,getAttribute:k=>attributes[k]??null,setAttribute:(k,v)=>{attributes[k]=v},removeAttribute:k=>{delete attributes[k]}});
 assert.equal(qualifies(anchor(base,{target:'_self'})),false);
 assert.equal(qualifies(anchor(base,{'data-fc-same-tab':''})),false);
 assert.equal(qualifies(anchor('https://example.com/')),true);
+for(const href of [base,'https://portal.onehome.com/en-US/share/3145775w80451']){
+ const link=anchor(href,{target:'_blank','data-fc-external':'','aria-description':'External website'});
+ assert.equal(qualifies(link),false);
+ assert.equal(link.target,'_self');
+ assert(link.hasAttribute('data-fc-same-tab'));
+ assert(!link.hasAttribute('data-fc-external'));
+ assert(!link.hasAttribute('aria-description'));
+}
+assert.equal(qualifies(anchor('https://onehome.com.example.com/')),true);
 // Valid searches retain the native submission and therefore native Back navigation.
 const elements={};for(const id of ['nc-quick-form','nc-min-price','nc-max-price','nc-search-error'])elements[id]={value:'',hidden:true,listeners:{},addEventListener(name,fn){this.listeners[name]=fn},setCustomValidity(text){this.validationMessage=text},reportValidity(){this.reported=true}};
 vm.runInNewContext(read('assets/new-construction-search.js'),{document:{getElementById:id=>elements[id]}});
