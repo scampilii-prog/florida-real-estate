@@ -4,7 +4,7 @@ import vm from 'node:vm';
 const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
 let count=0;
 for(const name of readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(n))){for(const m of read(name).matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)){if(/src=|application\/ld\+json|type="module"/.test(m[1]))continue;new vm.Script(m[2],{filename:name+' inline script'});count++}}
-const source=read('assets/buyer-timeline.js');new vm.Script(source);
+const source=read('assets/buyer-timeline.js');assert(source.includes('Due date · automatic or enter directly'));assert(source.includes("el.addEventListener('change',sortRows)"));new vm.Script(source);
 const html=read('buy.html');assert(html.includes('class="deadline-planner fc-timeline fc-simple-timeline"'));assert(html.includes('id="timeline-live-list"'));assert(!html.includes('class="deadline-results"'));assert(!html.includes('id="timeline-step-dates"'));assert(!html.includes('id="closing-email-preview"'));assert.equal((html.match(/src="assets\/inquiry-form\.js/g)||[]).length,1);
 assert.equal((html.match(/id="deadline-reset"/g)||[]).length,1);assert(html.indexOf('id="deadline-reset"')<html.indexOf('<details class="fc-simple-options">'));assert(html.includes('>Reset Last</button>'));
 assert(html.includes('href="#closing-timeline-intro"'));assert(html.includes('</aside><section id="contract-deadline-planner"'));assert.equal((html.match(/id="closing-timeline-intro"/g)||[]).length,1);
