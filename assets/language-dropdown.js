@@ -1109,3 +1109,27 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 /* One shared search controller for every header variant. */
 (function(){if(document.getElementById('fc-shared-search-script'))return;var s=document.createElement('script');s.id='fc-shared-search-script';s.src='/assets/site-search.js?v=20261018-1';document.head.appendChild(s)})();
+
+/* First-visit privacy information. Dismissal acknowledges the notice, not tracking consent. */
+(function(){
+ var key='fc_privacy_notice_20261020';
+ function init(){
+  if(document.getElementById('fc-privacy-notice'))return;
+  var style=document.createElement('style');
+  style.textContent='#fc-privacy-notice{position:fixed;inset:auto 18px 100px;z-index:2147483001;max-width:1080px;margin:auto;box-sizing:border-box;padding:20px 24px;background:#fffdf9;color:#17374d;border:1px solid #d8bf91;border-top:3px solid #c6a16b;border-radius:12px;box-shadow:0 10px 35px #102b4330;font:400 13px/1.6 Manrope,Arial,sans-serif;display:flex;gap:22px;align-items:center}#fc-privacy-notice[hidden]{display:none}#fc-privacy-notice p{margin:4px 0}#fc-privacy-notice strong{font-size:15px}#fc-privacy-notice a{color:#17374d;text-decoration:underline;text-underline-offset:3px}#fc-privacy-notice button{background:#17374d;color:white;border:1px solid #17374d;border-radius:6px;padding:12px 22px;min-height:44px;font:700 13px Manrope,Arial,sans-serif;cursor:pointer;white-space:nowrap}#fc-privacy-notice :focus-visible{outline:3px solid #b48031;outline-offset:4px}.fc-privacy-reopen{font:inherit!important;color:#e6c58c!important;background:transparent!important;border:0!important;padding:0!important;text-decoration:underline;cursor:pointer}@media(max-width:600px){#fc-privacy-notice{inset:auto 12px 100px;padding:16px;display:block;max-height:55vh;overflow:auto}#fc-privacy-notice button{margin-top:12px;width:100%}}';
+  document.head.appendChild(style);
+  var box=document.createElement('aside');box.id='fc-privacy-notice';box.setAttribute('aria-label','Privacy and cookies');box.setAttribute('role','region');
+  var copy=document.createElement('div'),title=document.createElement('strong'),p=document.createElement('p'),link=document.createElement('a'),dismiss=document.createElement('button');
+  title.textContent='Your privacy matters';
+  p.textContent='This website uses browser storage for language preferences and timeline tools. External services, including translation and appointment scheduling, may process technical information under their own privacy policies.';
+  link.href='privacy.html';link.textContent='Privacy Policy & your choices';
+  dismiss.type='button';dismiss.textContent='Got it';
+  copy.append(title,p,link);box.append(copy,dismiss);document.body.appendChild(box);
+  function close(){box.hidden=true;try{localStorage.setItem(key,'acknowledged')}catch(e){}}
+  dismiss.addEventListener('click',close);
+  try{box.hidden=localStorage.getItem(key)==='acknowledged'}catch(e){}
+  var footer=document.querySelector('footer .sc-uf-policies,footer .sc-cc-legal,footer');
+  if(footer){var reopen=document.createElement('button');reopen.type='button';reopen.className='fc-privacy-reopen';reopen.textContent='Privacy notice';reopen.addEventListener('click',function(){box.hidden=false;dismiss.focus()});footer.appendChild(reopen);}
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
