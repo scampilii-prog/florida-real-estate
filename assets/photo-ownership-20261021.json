@@ -1,0 +1,2811 @@
+[
+  {
+    "page": "rotonda-west.html",
+    "slot": "hero",
+    "file": "images/florida-golf-green.webp",
+    "retained": true
+  },
+  {
+    "page": "boca-grande-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/boca-grande-lighthouse-dunes.webp",
+    "retained": true
+  },
+  {
+    "page": "venice-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/venice-downtown-street.webp",
+    "retained": true
+  },
+  {
+    "category": "casey",
+    "title": "File:Starr-031108-0248-Vitex trifolia-fruit-S Casey Key-Florida (24307005729).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Starr-031108-0248-Vitex_trifolia-fruit-S_Casey_Key-Florida_%2824307005729%29.jpg/1280px-Starr-031108-0248-Vitex_trifolia-fruit-S_Casey_Key-Florida_%2824307005729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Starr-031108-0248-Vitex_trifolia-fruit-S_Casey_Key-Florida_(24307005729).jpg",
+    "author": "Forest and Kim Starr",
+    "license": "CC BY 3.0 us",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "width": 1632,
+    "height": 1224,
+    "file": "images/fc-local-098.webp",
+    "sha256": "66f046611060e820c1596bd31a54818f638575c397e9790faf16e56835d242c2",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "nokomis-casey-key-florida-real-estate.html",
+    "slot": "hero"
+  },
+  {
+    "page": "punta-gorda-isles-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/punta-gorda-town-square.webp",
+    "retained": true
+  },
+  {
+    "page": "siesta-key-longboat-key-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/siesta-key-lifeguard-beach.webp",
+    "retained": true
+  },
+  {
+    "page": "englewood-manasota-key-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/sarasota-birds-sunset.webp",
+    "retained": true
+  },
+  {
+    "page": "sarasota.html",
+    "slot": "hero",
+    "file": "images/sarasota-marina.webp",
+    "retained": true
+  },
+  {
+    "page": "wellen-park-florida-real-estate.html",
+    "slot": "hero",
+    "file": "images/modern-home-garden.webp",
+    "retained": true
+  },
+  {
+    "category": "homes",
+    "title": "File:Pensacola Florida Residential Architecture August 2021 - 03.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Pensacola_Florida_Residential_Architecture_August_2021_-_03.jpg/1280px-Pensacola_Florida_Residential_Architecture_August_2021_-_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_03.jpg",
+    "author": "Infrogmation",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5184,
+    "height": 3888,
+    "file": "images/fc-editorial-108.webp",
+    "sha256": "6a240648343d436c70db0e70e4dfdb2fabf7631d8f84d0357d595f92f1936ae5",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-inspections-appraisals.html",
+    "slot": "hero"
+  },
+  {
+    "category": "englewood",
+    "title": "File:Pelican-landing.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Pelican-landing.jpg/1280px-Pelican-landing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pelican-landing.jpg",
+    "author": "Sabine Rodens, own work",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "width": 2816,
+    "height": 2120,
+    "file": "images/fc-local-043.webp",
+    "sha256": "715124d20b1052173668a14d17c7b6db04c52e7c896d2db5984fb2ef666ec17b",
+    "pixels": [
+      1100,
+      828
+    ],
+    "page": "englewood.html",
+    "slot": "hero"
+  },
+  {
+    "page": "buyer-offers-contracts.html",
+    "slot": "hero",
+    "file": "images/mortgage-keys-calculator.webp",
+    "retained": true
+  },
+  {
+    "page": "buyer-title-financing.html",
+    "slot": "hero",
+    "file": "images/home-budget-planning.webp",
+    "retained": true
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande Fishing Pier.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Boca_Grande_Fishing_Pier.jpg/1280px-Boca_Grande_Fishing_Pier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Fishing_Pier.jpg",
+    "author": "Sanibel sun",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-004.webp",
+    "sha256": "83986a14dbbe65d54a5a3127a67b0285ee827620356709cde8ce5addc16ce62b",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "boca-grande.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Pensacola Florida Residential Architecture August 2021 - 01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Pensacola_Florida_Residential_Architecture_August_2021_-_01.jpg/1280px-Pensacola_Florida_Residential_Architecture_August_2021_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_01.jpg",
+    "author": "Infrogmation",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5184,
+    "height": 3888,
+    "file": "images/fc-editorial-109.webp",
+    "sha256": "c11daccc25dea456f21d53065b07ff4325e5707f9c506f54cff929262e6b0abe",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-closing-costs.html",
+    "slot": "hero"
+  },
+  {
+    "category": "casey",
+    "title": "File:Starr-031108-0247-Vitex trifolia-habit-S Casey Key-Florida (24556908342).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Starr-031108-0247-Vitex_trifolia-habit-S_Casey_Key-Florida_%2824556908342%29.jpg/1280px-Starr-031108-0247-Vitex_trifolia-habit-S_Casey_Key-Florida_%2824556908342%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Starr-031108-0247-Vitex_trifolia-habit-S_Casey_Key-Florida_(24556908342).jpg",
+    "author": "Forest and Kim Starr",
+    "license": "CC BY 3.0 us",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+    "width": 1632,
+    "height": 1224,
+    "file": "images/fc-local-099.webp",
+    "sha256": "df4ba4e6fa339459b26b222eda2cbb0c151c4cfe2da562932073fe5820f63262",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "nokomis-casey-key.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Pensacola Florida Residential Architecture August 2021 - 04.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Pensacola_Florida_Residential_Architecture_August_2021_-_04.jpg/1280px-Pensacola_Florida_Residential_Architecture_August_2021_-_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_04.jpg",
+    "author": "Infrogmation",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5184,
+    "height": 3888,
+    "file": "images/fc-editorial-110.webp",
+    "sha256": "3454c0ca02f3de410d9f607b516e12f79581681e40a9451397802fb62d940ee8",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-financing-preapproval.html",
+    "slot": "hero"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota Skyline.jpeg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Sarasota_Skyline.jpeg/1280px-Sarasota_Skyline.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Skyline.jpeg",
+    "author": "Cullen Morgan",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-region-001.webp",
+    "sha256": "d09b5c8944c54e59440b1f62a9633e254537771ca8549b360ac733e68515c1a7",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "cape-haze.html",
+    "slot": "hero"
+  },
+  {
+    "page": "buyers-guide.html",
+    "slot": "hero",
+    "file": "images/venice-avenue-tree-lined.webp",
+    "retained": true
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Guptill House in Sarasota Florida.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Guptill_House_in_Sarasota_Florida.jpg/1280px-Guptill_House_in_Sarasota_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Guptill_House_in_Sarasota_Florida.jpg",
+    "author": "Trish Hartmann",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 3872,
+    "height": 2592,
+    "file": "images/fc-region-002.webp",
+    "sha256": "e7797655abb6b6acf98f51436859a64f9edd3ca1edec3d70fa7d43be29d3303d",
+    "pixels": [
+      1100,
+      736
+    ],
+    "page": "cape-haze-placida-florida-real-estate.html",
+    "slot": "hero"
+  },
+  {
+    "category": "venice",
+    "title": "File:Caspersen Beach Park.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Caspersen_Beach_Park.jpg/1280px-Caspersen_Beach_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspersen_Beach_Park.jpg",
+    "author": "Karl Thomas Moore",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 7363,
+    "height": 4915,
+    "file": "images/fc-local-002.webp",
+    "sha256": "661fc17683bc5cf3cc8b6c400b6b98ab82606e9e8582bdb11dd720c5ff9cbd58",
+    "pixels": [
+      1100,
+      734
+    ],
+    "page": "venice.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Pensacola Florida Residential Architecture August 2021 - 02.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Pensacola_Florida_Residential_Architecture_August_2021_-_02.jpg/1280px-Pensacola_Florida_Residential_Architecture_August_2021_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_02.jpg",
+    "author": "Infrogmation",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5184,
+    "height": 3888,
+    "file": "images/fc-editorial-111.webp",
+    "sha256": "6eb12b47fe5d577812307411de5aefaa63805cf4b3b3a081ca95ec4a31921eb7",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-preparation.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Residential Street in Key West, Florida.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Residential_Street_in_Key_West%2C_Florida.jpg/1280px-Residential_Street_in_Key_West%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Residential_Street_in_Key_West,_Florida.jpg",
+    "author": "Julian Lupyan",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 6926,
+    "height": 4191,
+    "file": "images/fc-editorial-115.webp",
+    "sha256": "8361a0bc3ce461da568ae12f1f9f0bcd70d4ab2b1d8c83d87bd6d483a6358737",
+    "pixels": [
+      1100,
+      666
+    ],
+    "page": "sellers-guide.html",
+    "slot": "hero"
+  },
+  {
+    "category": "marina",
+    "title": "File:Key West Bight Marina, Key West, Florida - Boat with boat.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Key_West_Bight_Marina%2C_Key_West%2C_Florida_-_Boat_with_boat.jpg/1280px-Key_West_Bight_Marina%2C_Key_West%2C_Florida_-_Boat_with_boat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Key_West_Bight_Marina,_Key_West,_Florida_-_Boat_with_boat.jpg",
+    "author": "Sharon Hahn Darlin",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-072.webp",
+    "sha256": "a33afd2d829986fa6cef85ece2bf362f2ec99396862f16029cb048aaa64be4ba",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "punta-gorda-isles.html",
+    "slot": "hero"
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice High School (Florida) 1.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Venice_High_School_%28Florida%29_1.jpg/1280px-Venice_High_School_%28Florida%29_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice_High_School_(Florida)_1.jpg",
+    "author": "PCHS-NJROTC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 2592,
+    "height": 1456,
+    "file": "images/fc-region-015.webp",
+    "sha256": "8574b29246788de0c128a6d5a656d0fc2cf49525b504f34a73e68f08d0f86f1a",
+    "pixels": [
+      1100,
+      618
+    ],
+    "page": "buyer-property-search.html",
+    "slot": "hero"
+  },
+  {
+    "category": "beach",
+    "title": "File:Ocean waves drone view of Palm Coast beach.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Ocean_waves_drone_view_of_Palm_Coast_beach.jpg/1280px-Ocean_waves_drone_view_of_Palm_Coast_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Ocean_waves_drone_view_of_Palm_Coast_beach.jpg",
+    "author": "Lance Asper lance_asper",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 3992,
+    "height": 2242,
+    "file": "images/fc-editorial-001.webp",
+    "sha256": "f8443a992c8326515e6fc2d46481c4cdc52a05fcfa21f115991624b8b0c8840e",
+    "pixels": [
+      1100,
+      618
+    ],
+    "page": "florida-gulf-coast-homes-for-sale.html",
+    "slot": "hero"
+  },
+  {
+    "category": "beach",
+    "title": "File:Central Beach Fort Lauderdale Beach Florida Atlantic Coast.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Central_Beach_Fort_Lauderdale_Beach_Florida_Atlantic_Coast.jpg/1280px-Central_Beach_Fort_Lauderdale_Beach_Florida_Atlantic_Coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Central_Beach_Fort_Lauderdale_Beach_Florida_Atlantic_Coast.jpg",
+    "author": "EgorovaSvetlana",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4315,
+    "height": 2759,
+    "file": "images/fc-editorial-003.webp",
+    "sha256": "946772605258e2a7e34115aa4cd0052d1d079172a739bc413b7cddca5d7194b1",
+    "pixels": [
+      1100,
+      703
+    ],
+    "page": "florida-gulf-coast-condos-for-sale.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 9.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Punta_Gorda_Residential_District_house_9.jpg/1280px-Punta_Gorda_Residential_District_house_9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_9.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-116.webp",
+    "sha256": "65125b7ac8980d0115eae5145bda17e249792bf9cf72891ed3592007b13ab8f5",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "mortgage-calculator.html",
+    "slot": "hero"
+  },
+  {
+    "category": "town",
+    "title": "File:Clematis Street Downtown West Palm Beach 2013.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Clematis_Street_Downtown_West_Palm_Beach_2013.jpg/1280px-Clematis_Street_Downtown_West_Palm_Beach_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clematis_Street_Downtown_West_Palm_Beach_2013.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 1455,
+    "height": 965,
+    "file": "images/fc-editorial-127.webp",
+    "sha256": "c567804096786a54c7cab47f1e2401a2d3b5963498146526bfb432f6857db6e7",
+    "pixels": [
+      1100,
+      730
+    ],
+    "page": "calculators.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Historic Old Northeast St. Pete - Residential architecture.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Historic_Old_Northeast_St._Pete_-_Residential_architecture.jpg/1280px-Historic_Old_Northeast_St._Pete_-_Residential_architecture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Historic_Old_Northeast_St._Pete_-_Residential_architecture.jpg",
+    "author": "pasa47",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4833,
+    "height": 3222,
+    "file": "images/fc-editorial-118.webp",
+    "sha256": "2cfd12278106330642ba1f7623932e8457b1a740a5561fc0775911b60504d93c",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "home-valuation.html",
+    "slot": "hero"
+  },
+  {
+    "category": "homes",
+    "title": "File:Philemon N. Bryan House (Fort Lauderdale, Florida).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Philemon_N._Bryan_House_%28Fort_Lauderdale%2C_Florida%29.jpg/1280px-Philemon_N._Bryan_House_%28Fort_Lauderdale%2C_Florida%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Philemon_N._Bryan_House_(Fort_Lauderdale,_Florida).jpg",
+    "author": "Tamanoeconomico",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 6000,
+    "height": 4000,
+    "file": "images/fc-editorial-119.webp",
+    "sha256": "e4dd33a7fe31c05ef639ae440ffd84fdedc918ee54e6a5a8e4e3911be6dd99c4",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "seller-closing-costs.html",
+    "slot": "hero"
+  },
+  {
+    "category": "town",
+    "title": "File:Former Walgreens Downtown West Palm Beach - Now Duff's.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Former_Walgreens_Downtown_West_Palm_Beach_-_Now_Duff%27s.jpg/1280px-Former_Walgreens_Downtown_West_Palm_Beach_-_Now_Duff%27s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Former_Walgreens_Downtown_West_Palm_Beach_-_Now_Duff%27s.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-130.webp",
+    "sha256": "5862e491ee1ee8187cc8b984c58bc1bb247c8db6636d66ab97409e54b9334b75",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "investment-center.html",
+    "slot": "hero"
+  },
+  {
+    "category": "golf",
+    "title": "File:Falcons Fire Golf Course in Orlando.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Falcons_Fire_Golf_Course_in_Orlando.jpg/1280px-Falcons_Fire_Golf_Course_in_Orlando.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Falcons_Fire_Golf_Course_in_Orlando.jpg",
+    "author": "ReunionVacationHomes.com",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5369,
+    "height": 3577,
+    "file": "images/fc-editorial-047.webp",
+    "sha256": "4ee275f8eb3ea9ffd0d8da82817648284411c657e4ad92c6a504084271652410",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "rotonda-west.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "golf",
+    "title": "File:Inverness Golf & Country Club, Florida.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Inverness_Golf_%26_Country_Club%2C_Florida.jpg/1280px-Inverness_Golf_%26_Country_Club%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Inverness_Golf_%26_Country_Club,_Florida.jpg",
+    "author": "The Eloquent Peasant",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 2016,
+    "height": 1512,
+    "file": "images/fc-editorial-049.webp",
+    "sha256": "1cdf92a1e908599683c6112c803a1de581ec1e14edacb1e4c15a866876882049",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "rotonda-west.html",
+    "slot": "content-2"
+  },
+  {
+    "page": "rotonda-west.html",
+    "slot": "content-3",
+    "file": "images/florida-waterfront-homes.webp",
+    "retained": true
+  },
+  {
+    "category": "englewood",
+    "title": "File:Englewood Florida Banner.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Englewood_Florida_Banner.jpg/1280px-Englewood_Florida_Banner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Englewood_Florida_Banner.jpg",
+    "author": "Troy Jacobson",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 2488,
+    "height": 355,
+    "file": "images/fc-local-038.webp",
+    "sha256": "636217d8ee46b0f4927bdb8a735f56f26ea6263dfae5d44023b86d41f47ad5c3",
+    "pixels": [
+      1100,
+      157
+    ],
+    "page": "rotonda-west.html",
+    "slot": "content-4"
+  },
+  {
+    "category": "golf",
+    "title": "File:Jake Gaither Golf Course start hole 1.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Jake_Gaither_Golf_Course_start_hole_1.jpg/1280px-Jake_Gaither_Golf_Course_start_hole_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Jake_Gaither_Golf_Course_start_hole_1.jpg",
+    "author": "Michael Rivera",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5184,
+    "height": 3456,
+    "file": "images/fc-editorial-051.webp",
+    "sha256": "393e3e1ac04a56caa8dce1f4d551e3820229326104a31146f77c04c3c33605db",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "rotonda-west.html",
+    "slot": "content-5"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota Bay and waterfront, Sarasota, Florida (2003).jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Sarasota_Bay_and_waterfront%2C_Sarasota%2C_Florida_%282003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_and_waterfront,_Sarasota,_Florida_(2003).jpg",
+    "author": "Roger from Sarasota, Florida, U.S.A.",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "width": 1022,
+    "height": 648,
+    "file": "images/fc-region-003.webp",
+    "sha256": "23bf070dfbbe9a78e7e6959141d864088f7222c46d992010bdd27027ead70b14",
+    "pixels": [
+      1022,
+      648
+    ],
+    "page": "waterfront.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice Florida Banner.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Venice_Florida_Banner.jpg/1280px-Venice_Florida_Banner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice_Florida_Banner.jpg",
+    "author": "Grendelkhan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4000,
+    "height": 571,
+    "file": "images/fc-region-016.webp",
+    "sha256": "229e9b86a38a3b2b1dccb6e39fa56694f97551a87c9c7be19cf5ad10682d7de6",
+    "pixels": [
+      1100,
+      157
+    ],
+    "page": "waterfront.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota (Florida) banner.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Sarasota_%28Florida%29_banner.jpg/1280px-Sarasota_%28Florida%29_banner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_(Florida)_banner.jpg",
+    "author": "Skyline_of_Sarasota,_Florida.jpg: Patrick Braga\nderivative work: Jjtkk",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 2100,
+    "height": 300,
+    "file": "images/fc-region-004.webp",
+    "sha256": "c3dcb2ced6774f8c57b0ce088028ba0762dddda22b346f279428ac4c9a3e796f",
+    "pixels": [
+      1100,
+      157
+    ],
+    "page": "sarasota.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota Bay - Sarasota, Florida 2023-01-23 (02).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2802%29.jpg/1280px-Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(02).jpg",
+    "author": "Ryan Hodnett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5409,
+    "height": 3042,
+    "file": "images/fc-region-006.webp",
+    "sha256": "c09d2b41a9969e9b6b92fe64007d2a1f71bee501074de92f379c32aa1c7f0e3e",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "questions.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice, Florida - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Venice%2C_Florida_-_panoramio.jpg/1280px-Venice%2C_Florida_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice,_Florida_-_panoramio.jpg",
+    "author": "davidpinter",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4542,
+    "height": 3008,
+    "file": "images/fc-region-017.webp",
+    "sha256": "a64056ce524924a5b8f1842f1658ad6ec338c7d63002df69db233cf00b8f9451",
+    "pixels": [
+      1100,
+      729
+    ],
+    "page": "privacy.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 2.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Punta_Gorda_Residential_District_house_2.jpg/1280px-Punta_Gorda_Residential_District_house_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_2.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-120.webp",
+    "sha256": "c7619ccb5eb58b5072185c275ba831e6c7c8ce9e8788cb198121a3b379688769",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-inspections-appraisals.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 4.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Punta_Gorda_Residential_District_house_4.jpg/1280px-Punta_Gorda_Residential_District_house_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_4.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-121.webp",
+    "sha256": "50b52100dc2e91356113483c493c34b3de4295bb93de4a73ea637d57ec7a81fa",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-inspections-appraisals.html",
+    "slot": "content-2"
+  },
+  {
+    "page": "englewood.html",
+    "slot": "content-1",
+    "file": "images/sarasota-sand-shore.webp",
+    "retained": true
+  },
+  {
+    "category": "beach",
+    "title": "File:Miami Beach - Florida's Gold Coast from the Air.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Miami_Beach_-_Florida%27s_Gold_Coast_from_the_Air.jpg/1280px-Miami_Beach_-_Florida%27s_Gold_Coast_from_the_Air.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Florida%27s_Gold_Coast_from_the_Air.jpg",
+    "author": "Colourpicture Publishers, Inc.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "width": 1600,
+    "height": 992,
+    "file": "images/fc-editorial-004.webp",
+    "sha256": "3ce1238be61676a80673d0c56d59d034e3b6f972f881783f4a96ef44c4f9ac62",
+    "pixels": [
+      1100,
+      682
+    ],
+    "page": "englewood.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 5.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Punta_Gorda_Residential_District_house_5.jpg/1280px-Punta_Gorda_Residential_District_house_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_5.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-122.webp",
+    "sha256": "5eace08d7c082c64f76a4e563717a9c07d7c56199f6a3d29d9cddca7c98bc0ec",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "wellen-park-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 7.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Punta_Gorda_Residential_District_house_7.jpg/1280px-Punta_Gorda_Residential_District_house_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_7.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-123.webp",
+    "sha256": "53c8160ba2bdee809a8e2e2a762c63840ef73b9ffa0ef54ca77eeb823274bcb1",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "wellen-park-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 6.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Punta_Gorda_Residential_District_house_6.jpg/1280px-Punta_Gorda_Residential_District_house_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_6.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-124.webp",
+    "sha256": "89f7686213e0f0bd2b2acb7a3440c0e784bb8986aceb0a3888c73d2a722923b5",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "wellen-park-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "homes",
+    "title": "File:Punta Gorda Residential District house 3.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Punta_Gorda_Residential_District_house_3.jpg/1280px-Punta_Gorda_Residential_District_house_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_3.jpg",
+    "author": "Wknight94",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-125.webp",
+    "sha256": "d48401edf2e6b2ea3c1604e69997646201547130ef2d10b4a8652e87a09555db",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-offers-contracts.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "homes",
+    "title": "File:Colorful house in the Osceola Park Historic Residential District in Vero Beach, Florida.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Colorful_house_in_the_Osceola_Park_Historic_Residential_District_in_Vero_Beach%2C_Florida.JPG/1280px-Colorful_house_in_the_Osceola_Park_Historic_Residential_District_in_Vero_Beach%2C_Florida.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Colorful_house_in_the_Osceola_Park_Historic_Residential_District_in_Vero_Beach,_Florida.JPG",
+    "author": "Dminvero",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3008,
+    "height": 2000,
+    "file": "images/fc-editorial-126.webp",
+    "sha256": "d46b67d30ed48bb77c1a1dca18ebb03586eaff15fa5ec9b190eebbbc22759376",
+    "pixels": [
+      1100,
+      731
+    ],
+    "page": "buyer-offers-contracts.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "houses",
+    "title": "File:GVP-Pearson-Model-Exterior-Dusk.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/GVP-Pearson-Model-Exterior-Dusk.jpg/1280px-GVP-Pearson-Model-Exterior-Dusk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:GVP-Pearson-Model-Exterior-Dusk.jpg",
+    "author": "Vomcphoto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3000,
+    "height": 2000,
+    "file": "images/fc-editorial-196.webp",
+    "sha256": "d7b5df06bab5ee0fe6918bfc6e4ea1dbeb95700f4f80a99732137f83e1b0b670",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "new-construction.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande South Bridge.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Boca_Grande_South_Bridge.jpg/1280px-Boca_Grande_South_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_South_Bridge.jpg",
+    "author": "Sanibel sun",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-005.webp",
+    "sha256": "61430b942ddebd437ba793b96c183e31c695bfc68d7a4359da0e495b8791d613",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "closing-costs.html",
+    "slot": "content-1"
+  },
+  {
+    "page": "guides.html",
+    "slot": "content-1",
+    "file": "images/longboat-key-millar-bay.webp",
+    "retained": true
+  },
+  {
+    "category": "boca",
+    "title": "File:House in Boca Grande, Florida.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/House_in_Boca_Grande%2C_Florida.JPG/1280px-House_in_Boca_Grande%2C_Florida.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:House_in_Boca_Grande,_Florida.JPG",
+    "author": "Fredlyfish4",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-006.webp",
+    "sha256": "3fa86856b39ce6cadad92acc900878f6e9a96900793134dde1474aaa787d814b",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota Bay - Sarasota, Florida 2023-01-23 (01).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2801%29.jpg/1280px-Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(01).jpg",
+    "author": "Ryan Hodnett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5576,
+    "height": 3136,
+    "file": "images/fc-region-007.webp",
+    "sha256": "3df4f20722863ecf967851c87948676ad051ce03d08b5f58ec291d2076a60571",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "guides.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota, Florida 2023-01-23 (04).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Sarasota%2C_Florida_2023-01-23_%2804%29.jpg/1280px-Sarasota%2C_Florida_2023-01-23_%2804%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota,_Florida_2023-01-23_(04).jpg",
+    "author": "Ryan Hodnett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5338,
+    "height": 3002,
+    "file": "images/fc-region-008.webp",
+    "sha256": "f7551ed85b9af71efac3753974f9c05380cbe6a2159b229224aa30e84a749df7",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "guides.html",
+    "slot": "content-4"
+  },
+  {
+    "category": "golf",
+    "title": "File:Plantation Preserve Golf Course & Club in July 2024.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Plantation_Preserve_Golf_Course_%26_Club_in_July_2024.jpg/1280px-Plantation_Preserve_Golf_Course_%26_Club_in_July_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Plantation_Preserve_Golf_Course_%26_Club_in_July_2024.jpg",
+    "author": "Gatorfan252525",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-052.webp",
+    "sha256": "9ca62d7adddff7b08fdbad97bec5f61edacb54e070e5d200d74d87c67e2774a9",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-5"
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice Jetty.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Venice_Jetty.jpg/1280px-Venice_Jetty.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice_Jetty.jpg",
+    "author": "JJBers",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1420,
+    "height": 1235,
+    "file": "images/fc-region-020.webp",
+    "sha256": "dc7546827e2c9b5a4227a65c91726fe2f8bd10ea4a6775873d408e791a0b5070",
+    "pixels": [
+      978,
+      850
+    ],
+    "page": "guides.html",
+    "slot": "content-6"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande Banner.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Boca_Grande_Banner.jpg/1280px-Boca_Grande_Banner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Banner.jpg",
+    "author": "Fredlyfish4",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 466,
+    "file": "images/fc-local-008.webp",
+    "sha256": "ef34503310c060cd5d0cd9a6b166cc461163e5529a49f223e04c007c4dc1872e",
+    "pixels": [
+      1100,
+      157
+    ],
+    "page": "guides.html",
+    "slot": "content-7"
+  },
+  {
+    "category": "beach",
+    "title": "File:Beach Fort Lauderdale Lago Mar Beach Florida Atlantic Coast.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Beach_Fort_Lauderdale_Lago_Mar_Beach_Florida_Atlantic_Coast.jpg/1280px-Beach_Fort_Lauderdale_Lago_Mar_Beach_Florida_Atlantic_Coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Beach_Fort_Lauderdale_Lago_Mar_Beach_Florida_Atlantic_Coast.jpg",
+    "author": "EgorovaSvetlana",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4320,
+    "height": 2751,
+    "file": "images/fc-editorial-005.webp",
+    "sha256": "2ce3b19832a4bcde0f871fb873cbec4bc00d15726b0704a49584940b109d886a",
+    "pixels": [
+      1100,
+      700
+    ],
+    "page": "guides.html",
+    "slot": "content-8"
+  },
+  {
+    "category": "marina",
+    "title": "File:A stack of boats at the Key Largo Harbor Marina.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/A_stack_of_boats_at_the_Key_Largo_Harbor_Marina.jpg/1280px-A_stack_of_boats_at_the_Key_Largo_Harbor_Marina.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:A_stack_of_boats_at_the_Key_Largo_Harbor_Marina.jpg",
+    "author": "Baron Maddock",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 4608,
+    "height": 3456,
+    "file": "images/fc-editorial-073.webp",
+    "sha256": "39c13ccae3d9ca436bb9fdac8234e0cc91d070163f75e558a956068c4e13dbbf",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-9"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach Pavilion .jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Siesta_Key_Beach_Pavilion_.jpg/1280px-Siesta_Key_Beach_Pavilion_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach_Pavilion_.jpg",
+    "author": "Ryan Gamma",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1800,
+    "height": 1200,
+    "file": "images/fc-local-064.webp",
+    "sha256": "5facd3b96da55134ab03ac8c136a4187b56e70d41a6ac16c8952b45e5c0840e9",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "guides.html",
+    "slot": "content-10"
+  },
+  {
+    "page": "guides.html",
+    "slot": "content-11",
+    "file": "images/boca-grande-historic-lighthouse.webp",
+    "retained": true
+  },
+  {
+    "category": "marina",
+    "title": "File:Sea Isle Marina Miami Florida left 20100213.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Sea_Isle_Marina_Miami_Florida_left_20100213.jpg/1280px-Sea_Isle_Marina_Miami_Florida_left_20100213.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sea_Isle_Marina_Miami_Florida_left_20100213.jpg",
+    "author": "Averette",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-074.webp",
+    "sha256": "2cd033394843ea2a0ea127f81e14114fc6303523cdeaf16932b8eb1e23c7456f",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-12"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota Bay - Sarasota, Florida 2023-01-23 (03).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2803%29.jpg/1280px-Sarasota_Bay_-_Sarasota%2C_Florida_2023-01-23_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(03).jpg",
+    "author": "Ryan Hodnett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5937,
+    "height": 3339,
+    "file": "images/fc-region-009.webp",
+    "sha256": "4fd9d8059c1fd3497cc7a0abd86979af75fda721af29ac376ea9f52afc28217a",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "guides.html",
+    "slot": "content-13"
+  },
+  {
+    "category": "golf",
+    "title": "File:Osprey Point Golf Course in west Boca Raton, FL.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Osprey_Point_Golf_Course_in_west_Boca_Raton%2C_FL.jpg/1280px-Osprey_Point_Golf_Course_in_west_Boca_Raton%2C_FL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Osprey_Point_Golf_Course_in_west_Boca_Raton,_FL.jpg",
+    "author": "Gatorfan252525",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-053.webp",
+    "sha256": "4992fefeb4f9d1aca81f0b6304dfd851130bfef093e5d5bf4d05a560b3513bad",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-14"
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice FL Hotel01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Venice_FL_Hotel01.jpg/1280px-Venice_FL_Hotel01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice_FL_Hotel01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-region-022.webp",
+    "sha256": "bc1ad4c78288fcb5144c444c04a729f17cb15c4a1b81133a1dcd08b01928e532",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "guides.html",
+    "slot": "content-15"
+  },
+  {
+    "category": "boca",
+    "title": "File:Gasparillla Inn at Boca Grande Florida (11370743003).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Gasparillla_Inn_at_Boca_Grande_Florida_%2811370743003%29.jpg/1280px-Gasparillla_Inn_at_Boca_Grande_Florida_%2811370743003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Gasparillla_Inn_at_Boca_Grande_Florida_(11370743003).jpg",
+    "author": "Trish Hartmann from Tampa, Florida, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 3764,
+    "height": 2463,
+    "file": "images/fc-local-009.webp",
+    "sha256": "7c7925cae6c8e80f5895580b3821b0c56a63bcdb6df3cadbec1275c724a1e08f",
+    "pixels": [
+      1100,
+      720
+    ],
+    "page": "guides.html",
+    "slot": "content-16"
+  },
+  {
+    "page": "guides.html",
+    "slot": "content-17",
+    "file": "images/nokomis-beach-pavilion.webp",
+    "retained": true
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Pond - Sarasota Jungle Gardens - Sarasota, Florida - DSC02006.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Pond_-_Sarasota_Jungle_Gardens_-_Sarasota%2C_Florida_-_DSC02006.jpg/1280px-Pond_-_Sarasota_Jungle_Gardens_-_Sarasota%2C_Florida_-_DSC02006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pond_-_Sarasota_Jungle_Gardens_-_Sarasota,_Florida_-_DSC02006.jpg",
+    "author": "Daderot",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 5472,
+    "height": 3648,
+    "file": "images/fc-region-010.webp",
+    "sha256": "095955973bd0178e001e6e7c151f40fec36205a1f7cc8a16294e879e0f2972d6",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "guides.html",
+    "slot": "content-18"
+  },
+  {
+    "page": "guides.html",
+    "slot": "content-19",
+    "file": "images/siesta-key-beach-pavilion.webp",
+    "retained": true
+  },
+  {
+    "category": "venice",
+    "title": "File:Venice FL Blalock House02.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Venice_FL_Blalock_House02.jpg/1280px-Venice_FL_Blalock_House02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Venice_FL_Blalock_House02.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-region-023.webp",
+    "sha256": "d3c0b6514bab00d0320b512249bf362261816e639f7f8972c8b73eb762247ca2",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "terms.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Port Boca Grande Lighthouse (16960574465).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Port_Boca_Grande_Lighthouse_%2816960574465%29.jpg/1280px-Port_Boca_Grande_Lighthouse_%2816960574465%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_Boca_Grande_Lighthouse_(16960574465).jpg",
+    "author": "Pete Markham from Loretto, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "width": 4928,
+    "height": 3264,
+    "file": "images/fc-local-010.webp",
+    "sha256": "d6b5a89eb612ce58d6005778c707a713dee6eefa4c183ceba8056baf18641182",
+    "pixels": [
+      1100,
+      729
+    ],
+    "page": "seller-closing-costs.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Port Boca Grande Lighthouse (16774372219).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Port_Boca_Grande_Lighthouse_%2816774372219%29.jpg/1280px-Port_Boca_Grande_Lighthouse_%2816774372219%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_Boca_Grande_Lighthouse_(16774372219).jpg",
+    "author": "Pete Markham from Loretto, USA",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "width": 4107,
+    "height": 2738,
+    "file": "images/fc-local-013.webp",
+    "sha256": "7b2c15f3b73e6559a3cb7864c28ac5e03f722263024e6e1d53bc76d84af35593",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "seller-closing-costs.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "boca",
+    "title": "File:Gilchrist Avenue in Boca Grande.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Gilchrist_Avenue_in_Boca_Grande.JPG/1280px-Gilchrist_Avenue_in_Boca_Grande.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Avenue_in_Boca_Grande.JPG",
+    "author": "Fredlyfish4",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 9603,
+    "height": 1960,
+    "file": "images/fc-local-016.webp",
+    "sha256": "e5ead57e0d5561610514e3fb8e751a40487a31c65ed8f1ab7c203a0eb0d41c71",
+    "pixels": [
+      1100,
+      224
+    ],
+    "page": "buyer-title-financing.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande FL comm center01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Boca_Grande_FL_comm_center01.jpg/1280px-Boca_Grande_FL_comm_center01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_comm_center01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-017.webp",
+    "sha256": "2f1193b35dd55d35481f98d253fd0cc9a33e7e8af51c00422dd166c38b6df939",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-title-financing.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande FL CH and NR depot01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Boca_Grande_FL_CH_and_NR_depot01.jpg/1280px-Boca_Grande_FL_CH_and_NR_depot01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_CH_and_NR_depot01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-018.webp",
+    "sha256": "da75b871f740764b6cd3cf7beea485ee8c045adf2b98df6e76043582ec46a94f",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "boca-grande.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande FL Quarantine Station01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Boca_Grande_FL_Quarantine_Station01.jpg/1280px-Boca_Grande_FL_Quarantine_Station01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_Quarantine_Station01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-019.webp",
+    "sha256": "12c5546dcb41fb0f25461c07ea161812e1578f5d7933e69fef6c2c086c90fb20",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "boca-grande.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Causeway South Bridge.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Boca_Causeway_South_Bridge.jpg/1280px-Boca_Causeway_South_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Causeway_South_Bridge.jpg",
+    "author": "Sanibel sun",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-020.webp",
+    "sha256": "48a75f5c223a3363fbeb06e56f07deae970113467891bfee4a020e7a45e6cacf",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-closing-costs.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande Bike Trail 1.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Boca_Grande_Bike_Trail_1.jpg/1280px-Boca_Grande_Bike_Trail_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Bike_Trail_1.jpg",
+    "author": "Sanibel sun",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-022.webp",
+    "sha256": "cd59c5c6af046fecacc4590e40d8ed3f3c6767dad601bb3178ffa2bbf52dce57",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-closing-costs.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "beach",
+    "title": "File:Delray Beach, Florida aerial view.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Delray_Beach%2C_Florida_aerial_view.jpg/1280px-Delray_Beach%2C_Florida_aerial_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Delray_Beach,_Florida_aerial_view.jpg",
+    "author": "Quintin Soloviev",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 5076,
+    "height": 3387,
+    "file": "images/fc-editorial-008.webp",
+    "sha256": "846ee7ac5feec5e24a96a85c939977e0ea91b84cdf5643eff95b54bb9fcaa418",
+    "pixels": [
+      1100,
+      734
+    ],
+    "page": "nokomis-casey-key-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "beach",
+    "title": "File:Palm Coast FL Banner.jpeg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Palm_Coast_FL_Banner.jpeg/1280px-Palm_Coast_FL_Banner.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Palm_Coast_FL_Banner.jpeg",
+    "author": "Andyrkellergmail",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 2000,
+    "height": 286,
+    "file": "images/fc-editorial-009.webp",
+    "sha256": "93cb3e10be639b8b53afbb1cc51def488616658b01ce4d1d26798d98ac15ce3f",
+    "pixels": [
+      1100,
+      157
+    ],
+    "page": "nokomis-casey-key-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "beach",
+    "title": "File:Pensacola Beach - White Sands, Florida Coast (27268946483).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Pensacola_Beach_-_White_Sands%2C_Florida_Coast_%2827268946483%29.jpg/1280px-Pensacola_Beach_-_White_Sands%2C_Florida_Coast_%2827268946483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Beach_-_White_Sands,_Florida_Coast_(27268946483).jpg",
+    "author": "Tony Webster from Minneapolis, Minnesota, United States",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "width": 5760,
+    "height": 3840,
+    "file": "images/fc-editorial-010.webp",
+    "sha256": "93432f1fdbc3457c009f4be5f5cc993b0cddf2e0d60682706169ca8c014f28ff",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "nokomis-casey-key-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "boca",
+    "title": "File:Beach in Boca Grande.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Beach_in_Boca_Grande.JPG/1280px-Beach_in_Boca_Grande.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Beach_in_Boca_Grande.JPG",
+    "author": "Fredlyfish4",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-local-023.webp",
+    "sha256": "c22be5fa3cf8004fa7995fdb60eb7518b6f8d8a0ac9e8931d60ea0567b986297",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "communities.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Skyline of Sarasota, Florida.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Skyline_of_Sarasota%2C_Florida.jpg/1280px-Skyline_of_Sarasota%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Sarasota,_Florida.jpg",
+    "author": "Patrick Braga",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 4561,
+    "height": 1002,
+    "file": "images/fc-region-011.webp",
+    "sha256": "5ac4821d95e4d83269304b688e56a6417cea35aab8bf905148f6f5903c9588cb",
+    "pixels": [
+      1100,
+      241
+    ],
+    "page": "communities.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Sarasota, Florida 2023-01-23 (03).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Sarasota%2C_Florida_2023-01-23_%2803%29.jpg/1280px-Sarasota%2C_Florida_2023-01-23_%2803%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarasota,_Florida_2023-01-23_(03).jpg",
+    "author": "Ryan Hodnett",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5422,
+    "height": 2711,
+    "file": "images/fc-region-012.webp",
+    "sha256": "7397542cf7b4ad39101be520f29c1b1fea4175ba171ab7737106fd4613afd621",
+    "pixels": [
+      1100,
+      550
+    ],
+    "page": "communities.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "golf",
+    "title": "File:Celebration Golf Courses.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Celebration_Golf_Courses.jpg/1280px-Celebration_Golf_Courses.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Celebration_Golf_Courses.jpg",
+    "author": "ReunionVacationHomes.com",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5464,
+    "height": 3640,
+    "file": "images/fc-editorial-054.webp",
+    "sha256": "9fd33d14939f2b66e83c50fe910e4a00d6b97cb5ea0a57a7f686caab55b7a42e",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "communities.html",
+    "slot": "content-4"
+  },
+  {
+    "category": "town",
+    "title": "File:Downtown West Palm Beach (43887329040).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Downtown_West_Palm_Beach_%2843887329040%29.jpg/1280px-Downtown_West_Palm_Beach_%2843887329040%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Downtown_West_Palm_Beach_(43887329040).jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 1622,
+    "height": 1027,
+    "file": "images/fc-editorial-133.webp",
+    "sha256": "e6634b936f3980fb52719b6b2b76b12e8186a03d81105443a51a0dc9ac83e984",
+    "pixels": [
+      1100,
+      696
+    ],
+    "page": "communities.html",
+    "slot": "content-5"
+  },
+  {
+    "category": "boca",
+    "title": "File:FL Boca Grande HD Anchor Inn01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/FL_Boca_Grande_HD_Anchor_Inn01.jpg/1280px-FL_Boca_Grande_HD_Anchor_Inn01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:FL_Boca_Grande_HD_Anchor_Inn01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4288,
+    "height": 3216,
+    "file": "images/fc-local-026.webp",
+    "sha256": "11b0b9e506f97db95247bb48fe917723bb6240feb90b454f54994149abc4bd07",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "communities.html",
+    "slot": "content-6"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35188097760).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Clearwater_Beach%2C_Florida_%2835188097760%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835188097760%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35188097760).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5616,
+    "height": 3744,
+    "file": "images/fc-editorial-011.webp",
+    "sha256": "76e0842161bb9c40df0f1e11d3e345ab8757a80fe21a057cf34ed4ffc75c86cd",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "communities.html",
+    "slot": "content-7"
+  },
+  {
+    "category": "marina",
+    "title": "File:Sea Isle Marina Miami Florida right 20100213.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Sea_Isle_Marina_Miami_Florida_right_20100213.jpg/1280px-Sea_Isle_Marina_Miami_Florida_right_20100213.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Sea_Isle_Marina_Miami_Florida_right_20100213.jpg",
+    "author": "Averette",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 3072,
+    "height": 2304,
+    "file": "images/fc-editorial-075.webp",
+    "sha256": "03675079a747f72618009b8ee1c9fd0ad149a4829ff54f0e0b88d6b06bab5b27",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "communities.html",
+    "slot": "content-8"
+  },
+  {
+    "category": "sarasota",
+    "title": "File:Patio - Sarasota Jungle Gardens - Sarasota, Florida - DSC02024.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Patio_-_Sarasota_Jungle_Gardens_-_Sarasota%2C_Florida_-_DSC02024.jpg/1280px-Patio_-_Sarasota_Jungle_Gardens_-_Sarasota%2C_Florida_-_DSC02024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Patio_-_Sarasota_Jungle_Gardens_-_Sarasota,_Florida_-_DSC02024.jpg",
+    "author": "Daderot",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 5472,
+    "height": 3648,
+    "file": "images/fc-region-013.webp",
+    "sha256": "1068a103fb63dab07e986ef5c8411712f1ab27d7c5293d4c116c3cc9fa23539b",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "communities.html",
+    "slot": "content-9"
+  },
+  {
+    "category": "town",
+    "title": "File:West Palm Beach - Waterfront - Intracoastal Waterway & Downtown Skyline - Panorama (15300572403).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/West_Palm_Beach_-_Waterfront_-_Intracoastal_Waterway_%26_Downtown_Skyline_-_Panorama_%2815300572403%29.jpg/1280px-West_Palm_Beach_-_Waterfront_-_Intracoastal_Waterway_%26_Downtown_Skyline_-_Panorama_%2815300572403%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:West_Palm_Beach_-_Waterfront_-_Intracoastal_Waterway_%26_Downtown_Skyline_-_Panorama_(15300572403).jpg",
+    "author": "Jared",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5025,
+    "height": 1867,
+    "file": "images/fc-editorial-134.webp",
+    "sha256": "fc7f8a36358d2ef11bb63808978cae3a3a779ad7f49599984c20fcba4ae35745",
+    "pixels": [
+      1100,
+      409
+    ],
+    "page": "communities.html",
+    "slot": "content-10"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35407253602).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Clearwater_Beach%2C_Florida_%2835407253602%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835407253602%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35407253602).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-012.webp",
+    "sha256": "a46b1cbffeefdff7874dce25d2d5d48b257fc1dfe292095328fa73362cd95654",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "englewood-manasota-key-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "beach",
+    "title": "File:Keaton Beach coast.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Keaton_Beach_coast.jpg/1280px-Keaton_Beach_coast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Keaton_Beach_coast.jpg",
+    "author": "DiscoverTaylor",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 5312,
+    "height": 2988,
+    "file": "images/fc-editorial-013.webp",
+    "sha256": "c316f7576ab2e408b58482c7c642f68b3c0897695b509cded0e42e1d8feaacfb",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "englewood-manasota-key-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35536448306).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Clearwater_Beach%2C_Florida_%2835536448306%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835536448306%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536448306).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-015.webp",
+    "sha256": "3544570621f86a742f30703b8fd14d365474c63739e62aca64ab0c8eb00742a9",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "englewood-manasota-key-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-1",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Rotonda.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-2",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Boca%20Grande%20Lighthouse.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-3",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Charlotte%20Harbor%20Pres%20SP01.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-4",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspersen%20Beach%2C%20Manasota%20Key%2C%20Florida.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-5",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Venice%20Florida%20Banner.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-6",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Nokomis%20Beach.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-7",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Gilchrist%20Park%20Punta%20Gorda%20FL%2001.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-8",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Siesta%20Beach%20looking%20north.jpg?width=900",
+    "retained": true
+  },
+  {
+    "page": "search-properties.html",
+    "slot": "content-9",
+    "file": "https://commons.wikimedia.org/wiki/Special:FilePath/Venetian%20Waterway%20Park.JPG?width=900",
+    "retained": true
+  },
+  {
+    "category": "marina",
+    "title": "File:Harbor Vista Marina (Sarasota, Florida).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Harbor_Vista_Marina_%28Sarasota%2C_Florida%29.jpg/1280px-Harbor_Vista_Marina_%28Sarasota%2C_Florida%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Harbor_Vista_Marina_(Sarasota,_Florida).jpg",
+    "author": "Visitor7",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 5104,
+    "height": 3403,
+    "file": "images/fc-editorial-076.webp",
+    "sha256": "fc58c5b27aa73c5eaae29daef2c8e77c24b64746616225644588c3d4d41fc24b",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "search-properties.html",
+    "slot": "content-10"
+  },
+  {
+    "category": "boca",
+    "title": "File:FL Boca Grande HD Anchor Inn03.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/FL_Boca_Grande_HD_Anchor_Inn03.jpg/1280px-FL_Boca_Grande_HD_Anchor_Inn03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:FL_Boca_Grande_HD_Anchor_Inn03.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4288,
+    "height": 3216,
+    "file": "images/fc-local-027.webp",
+    "sha256": "1862f3adc1a071fa4fe4d88005b9ed7a3125e4ba9b2609a673520581bdfadfd6",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "index.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "marina",
+    "title": "File:Marina aerial southbasin.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Marina_aerial_southbasin.jpg/1280px-Marina_aerial_southbasin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Marina_aerial_southbasin.jpg",
+    "author": "GPlantam",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3613,
+    "height": 2400,
+    "file": "images/fc-editorial-082.webp",
+    "sha256": "f2ae2ac3b3b830e7497014968caa9ce22b7e66075373192ea9c7b93b44b4b672",
+    "pixels": [
+      1100,
+      730
+    ],
+    "page": "index.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35444812211).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Clearwater_Beach%2C_Florida_%2835444812211%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835444812211%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444812211).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-017.webp",
+    "sha256": "3db662d5780c48902186f6310f74bdb40c0bcfdb9c57a8e2fb8b2b8c5d3273e6",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "index.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "golf",
+    "title": "File:Coral Gables - Miami Biltmore Hotel and Golf Course.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Coral_Gables_-_Miami_Biltmore_Hotel_and_Golf_Course.jpg/1280px-Coral_Gables_-_Miami_Biltmore_Hotel_and_Golf_Course.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Coral_Gables_-_Miami_Biltmore_Hotel_and_Golf_Course.jpg",
+    "author": "Curt Teich &amp; Co.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "width": 1511,
+    "height": 966,
+    "file": "images/fc-editorial-055.webp",
+    "sha256": "c640f1353002846ae56de530a9c765331dc4ec2162d4f3e3c2abaa7b4e04878a",
+    "pixels": [
+      1100,
+      703
+    ],
+    "page": "index.html",
+    "slot": "content-4"
+  },
+  {
+    "category": "town",
+    "title": "File:Comeau Building Clematis Street Downtown West Palm Beach (30925925981).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Comeau_Building_Clematis_Street_Downtown_West_Palm_Beach_%2830925925981%29.jpg/1280px-Comeau_Building_Clematis_Street_Downtown_West_Palm_Beach_%2830925925981%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Comeau_Building_Clematis_Street_Downtown_West_Palm_Beach_(30925925981).jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-135.webp",
+    "sha256": "1f7b4cf4539542eb732052c07fcf0dc68801e5e45694f6e4c6fb2dc3d9a7784f",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "index.html",
+    "slot": "content-5"
+  },
+  {
+    "category": "boca",
+    "title": "File:Boca Grande FL comm center pano01.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Boca_Grande_FL_comm_center_pano01.jpg/1280px-Boca_Grande_FL_comm_center_pano01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_comm_center_pano01.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3597,
+    "height": 1857,
+    "file": "images/fc-local-036.webp",
+    "sha256": "c72077cbefbd733e3e0943cb645b0c11a17bae4a601821cecd2ee607fc3ff989",
+    "pixels": [
+      1100,
+      568
+    ],
+    "page": "index.html",
+    "slot": "content-6"
+  },
+  {
+    "category": "beach",
+    "title": "File:Miramar Beach, Florida.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Miramar_Beach%2C_Florida.JPG/1280px-Miramar_Beach%2C_Florida.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Miramar_Beach,_Florida.JPG",
+    "author": "Skye Marthaler",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3216,
+    "height": 1744,
+    "file": "images/fc-editorial-018.webp",
+    "sha256": "c841f07487e85718a7262429bf55e75f6cf870b33bf7fa1c6e4b3caca4e418bc",
+    "pixels": [
+      1100,
+      596
+    ],
+    "page": "index.html",
+    "slot": "content-7"
+  },
+  {
+    "category": "marina",
+    "title": "File:Point South Marina basin, Port St. Joe.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Point_South_Marina_basin%2C_Port_St._Joe.jpg/1280px-Point_South_Marina_basin%2C_Port_St._Joe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Point_South_Marina_basin,_Port_St._Joe.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-104.webp",
+    "sha256": "1da70ec52ff5017c19d1063a6f385bb9dc837c0e7f64c5a2bf4c1a4aefbe98a3",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "index.html",
+    "slot": "content-8"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach. Sarasota - panoramio - 4net (6).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%286%29.jpg/1280px-Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%286%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(6).jpg",
+    "author": "4net",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 2896,
+    "height": 1944,
+    "file": "images/fc-local-066.webp",
+    "sha256": "745618a25a303ea9b534e3b0443125746fbfc4d81963b7a91b6399976e396471",
+    "pixels": [
+      1100,
+      738
+    ],
+    "page": "index.html",
+    "slot": "content-9"
+  },
+  {
+    "category": "town",
+    "title": "File:Downtown St. Petersburg, Florida 2019.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Downtown_St._Petersburg%2C_Florida_2019.jpg/1280px-Downtown_St._Petersburg%2C_Florida_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Downtown_St._Petersburg,_Florida_2019.jpg",
+    "author": "pasa47",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4896,
+    "height": 3264,
+    "file": "images/fc-editorial-139.webp",
+    "sha256": "1072b4a0650182213d725a83115d5af91e6e8a5bb696b606da1675ed7ca9db07",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "index.html",
+    "slot": "content-10"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach TV-001-0002.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Siesta_Key_Beach_TV-001-0002.jpg/1280px-Siesta_Key_Beach_TV-001-0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach_TV-001-0002.jpg",
+    "author": "AndreCarrotflower",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1600,
+    "height": 1072,
+    "file": "images/fc-local-069.webp",
+    "sha256": "da9505ea42d1b4de33ca6e3a673f55d0d0a7c210ab59447ff43ef001f8d5353e",
+    "pixels": [
+      1100,
+      737
+    ],
+    "page": "siesta-key-longboat-key-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach. Sarasota - panoramio - 4net.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Siesta_Key_Beach._Sarasota_-_panoramio_-_4net.jpg/1280px-Siesta_Key_Beach._Sarasota_-_panoramio_-_4net.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net.jpg",
+    "author": "4net",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 2896,
+    "height": 1944,
+    "file": "images/fc-local-071.webp",
+    "sha256": "95aca6f5a7ed6ed87b275d702f747e58f8083ac8deadbd9851a2e1c21ef7b1e1",
+    "pixels": [
+      1100,
+      738
+    ],
+    "page": "siesta-key-longboat-key-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach. Sarasota - panoramio - 4net (10).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%2810%29.jpg/1280px-Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(10).jpg",
+    "author": "4net",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 2896,
+    "height": 1944,
+    "file": "images/fc-local-072.webp",
+    "sha256": "d3e2c3ff914a138da57c71b2ec1b315e76d9af20e95637dc883be6305d194c3e",
+    "pixels": [
+      1100,
+      738
+    ],
+    "page": "siesta-key-longboat-key-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "town",
+    "title": "File:Former A&P Historic Clematis Street Business District West Palm Beach.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Former_A%26P_Historic_Clematis_Street_Business_District_West_Palm_Beach.jpg/1280px-Former_A%26P_Historic_Clematis_Street_Business_District_West_Palm_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Former_A%26P_Historic_Clematis_Street_Business_District_West_Palm_Beach.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4394,
+    "height": 2929,
+    "file": "images/fc-editorial-140.webp",
+    "sha256": "d08a03dcd8c8112241b27a7340ed2fc1fb6b954380a42414e419cf7a6ad361ba",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "venice-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "town",
+    "title": "File:Former McCrory Store Downtown West Palm Beach.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Former_McCrory_Store_Downtown_West_Palm_Beach.jpg/1280px-Former_McCrory_Store_Downtown_West_Palm_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Former_McCrory_Store_Downtown_West_Palm_Beach.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 3105,
+    "height": 2325,
+    "file": "images/fc-editorial-141.webp",
+    "sha256": "13ff4410a35583aa53705c73f14a2fec5a23d6818b6526c5f78ba90984a39951",
+    "pixels": [
+      1100,
+      823
+    ],
+    "page": "venice-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "town",
+    "title": "File:Downtown Miami Florida 2025-11-14.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Downtown_Miami_Florida_2025-11-14.jpg/1280px-Downtown_Miami_Florida_2025-11-14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Downtown_Miami_Florida_2025-11-14.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 3900,
+    "height": 2925,
+    "file": "images/fc-editorial-142.webp",
+    "sha256": "a1c8ba335324d3cc3542416859638eedce6b5bcbb6128d679290a611369cf607",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "venice-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35444853421).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Clearwater_Beach%2C_Florida_%2835444853421%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835444853421%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444853421).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5616,
+    "height": 3744,
+    "file": "images/fc-editorial-020.webp",
+    "sha256": "21c140c585d572ebafa99a13b6413411d6c318654b5ffc1f8463eed680533acc",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "nokomis-casey-key.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "beach",
+    "title": "File:Clearwater Beach, Florida (35444792521).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Clearwater_Beach%2C_Florida_%2835444792521%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835444792521%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444792521).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-021.webp",
+    "sha256": "0f349616e3d982aa18fe85c1d7246ea52888d0e4336e2c6b09b3396021eb9786",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "nokomis-casey-key.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Naples (Florida) - Fishing Pier @ Florida's Gulf Coast (15965670176).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Naples_%28Florida%29_-_Fishing_Pier_%40_Florida%27s_Gulf_Coast_%2815965670176%29.jpg/1280px-Naples_%28Florida%29_-_Fishing_Pier_%40_Florida%27s_Gulf_Coast_%2815965670176%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Naples_(Florida)_-_Fishing_Pier_@_Florida%27s_Gulf_Coast_(15965670176).jpg",
+    "author": "Reinhard Link from Germany",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "width": 2048,
+    "height": 1152,
+    "file": "images/fc-editorial-026.webp",
+    "sha256": "e0c4090216dd2291848030a15c9584416e5e8fa620d5e8c5d0e050a7f51e662a",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "mortgage-calculator.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Marine shoreline of Cayo Costa Island (Gulf of Mexico coast of Florida, USA) (23771084953).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Marine_shoreline_of_Cayo_Costa_Island_%28Gulf_of_Mexico_coast_of_Florida%2C_USA%29_%2823771084953%29.jpg/1280px-Marine_shoreline_of_Cayo_Costa_Island_%28Gulf_of_Mexico_coast_of_Florida%2C_USA%29_%2823771084953%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Marine_shoreline_of_Cayo_Costa_Island_(Gulf_of_Mexico_coast_of_Florida,_USA)_(23771084953).jpg",
+    "author": "James St. John",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 3939,
+    "height": 2891,
+    "file": "images/fc-editorial-027.webp",
+    "sha256": "a3768a51d84a90b93b1a66ea3a69b34162d6603862f3e3706d7469a88650fe23",
+    "pixels": [
+      1100,
+      807
+    ],
+    "page": "mortgage-calculator.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Clearwater Beach, Florida (34733816504).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Clearwater_Beach%2C_Florida_%2834733816504%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2834733816504%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(34733816504).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-031.webp",
+    "sha256": "d4ee27a296555c9920d8112891710806a8c4e3150b605594a1cd425867bd8e33",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "buyer-financing-preapproval.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Clearwater Beach, Florida (35536696216).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Clearwater_Beach%2C_Florida_%2835536696216%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835536696216%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536696216).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5616,
+    "height": 3744,
+    "file": "images/fc-editorial-034.webp",
+    "sha256": "fec2d51ab491895ef8786619552b7f9c3d5a08be7e5969cdccd9ea5861664998",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "buyer-financing-preapproval.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "marina",
+    "title": "File:Delray Beach FL Marina Historic District 11.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Delray_Beach_FL_Marina_Historic_District_11.JPG/1280px-Delray_Beach_FL_Marina_Historic_District_11.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Delray_Beach_FL_Marina_Historic_District_11.JPG",
+    "author": "Pietro",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 4000,
+    "height": 3000,
+    "file": "images/fc-editorial-105.webp",
+    "sha256": "6842feec9aec7bae22be6bf80df75ffaa0ff56cbe4741dc99ef953b85b6c76bc",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "cape-haze.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "charlotte",
+    "title": "File:Port Charlotte Beach.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Port_Charlotte_Beach.jpg/1280px-Port_Charlotte_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_Charlotte_Beach.jpg",
+    "author": "PCHS-NJROTC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-local-047.webp",
+    "sha256": "bf22557b6c4572ad4909fc1108ae52913d6de07414b96b678aa22e1141089a67",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "cape-haze.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Clearwater Beach, Florida (35536639186).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Clearwater_Beach%2C_Florida_%2835536639186%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835536639186%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536639186).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5616,
+    "height": 3744,
+    "file": "images/fc-editorial-036.webp",
+    "sha256": "879af2f84e0ead85e6c306a5b4286a93a940385715ca5ca850d9f2fcdbbc2802",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "buyers-guide.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "gulf",
+    "title": "File:Clearwater Beach, Florida (35407255932).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Clearwater_Beach%2C_Florida_%2835407255932%29.jpg/1280px-Clearwater_Beach%2C_Florida_%2835407255932%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35407255932).jpg",
+    "author": "Michel Rathwell from Cornwall, Canada",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5700,
+    "height": 3900,
+    "file": "images/fc-editorial-043.webp",
+    "sha256": "a432a4871e600875739b7e7aaf5ad44794e654540af5a0f8b09f7f8452792d9e",
+    "pixels": [
+      1100,
+      753
+    ],
+    "page": "buyers-guide.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "charlotte",
+    "title": "File:Charlotte Harbor Regatta 2014 (12506682805).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Charlotte_Harbor_Regatta_2014_%2812506682805%29.jpg/1280px-Charlotte_Harbor_Regatta_2014_%2812506682805%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Charlotte_Harbor_Regatta_2014_(12506682805).jpg",
+    "author": "Isles Yacht Club",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 5184,
+    "height": 3456,
+    "file": "images/fc-local-049.webp",
+    "sha256": "9e8abd179f98a919e6f6f645b84bd90ecbf191cf871b64b567c20734b08bcdbd",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "cape-haze-placida-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "charlotte",
+    "title": "File:Gilchrist Park Punta Gorda FL 06.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Gilchrist_Park_Punta_Gorda_FL_06.jpg/1280px-Gilchrist_Park_Punta_Gorda_FL_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Park_Punta_Gorda_FL_06.jpg",
+    "author": "PCHS-NJROTC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-local-056.webp",
+    "sha256": "83395666a996e1b000da4427f08bc2bf24a42e166d9800d76a07d6e9c024ffd1",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "cape-haze-placida-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "charlotte",
+    "title": "File:Gilchrist Park Punta Gorda FL 03.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Gilchrist_Park_Punta_Gorda_FL_03.jpg/1280px-Gilchrist_Park_Punta_Gorda_FL_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Park_Punta_Gorda_FL_03.jpg",
+    "author": "PCHS-NJROTC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-local-057.webp",
+    "sha256": "fa02187da160e0c0a926e449c01f0f494a62f8bd23a2b9fd8b8b2f36796a8117",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "cape-haze-placida-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "golf",
+    "title": "File:Golf course at sun 'n lake.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Golf_course_at_sun_%27n_lake.jpg/1280px-Golf_course_at_sun_%27n_lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Golf_course_at_sun_%27n_lake.jpg",
+    "author": "MzMissey",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 4032,
+    "height": 2268,
+    "file": "images/fc-editorial-056.webp",
+    "sha256": "ee44dbaf22b9634516d869c5ecc06fedaad19502f4ecde05db8b7ff468ed4624",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "home-valuation.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "golf",
+    "title": "File:Eastwood Golf Course - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Eastwood_Golf_Course_-_panoramio.jpg/1280px-Eastwood_Golf_Course_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Eastwood_Golf_Course_-_panoramio.jpg",
+    "author": "David Balmer",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4224,
+    "height": 2376,
+    "file": "images/fc-editorial-059.webp",
+    "sha256": "7d4ccf063e5e91e4973e8255539302bbd3ab4acdc8e8df2ab2b1dbeda2795fce",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "home-valuation.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "town",
+    "title": "File:Biscayne Wall Downtown Miami Florida - 1 May 2023.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Biscayne_Wall_Downtown_Miami_Florida_-_1_May_2023.jpg/1280px-Biscayne_Wall_Downtown_Miami_Florida_-_1_May_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Biscayne_Wall_Downtown_Miami_Florida_-_1_May_2023.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-145.webp",
+    "sha256": "d365d013c1a104f45dd1b0a4c1c9906a79ebae12982c4d3b5942955f53c6bbcd",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "venice.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "town",
+    "title": "File:Miami River Downtown Miami Florida 1 May 2023.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Miami_River_Downtown_Miami_Florida_1_May_2023.jpg/1280px-Miami_River_Downtown_Miami_Florida_1_May_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Miami_River_Downtown_Miami_Florida_1_May_2023.jpg",
+    "author": "Phillip Pessar",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 4032,
+    "height": 3024,
+    "file": "images/fc-editorial-146.webp",
+    "sha256": "df2a7e79b4764ece16f6b35c02ee409dc067d27e05daceee4aed94c42585cc5a",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "venice.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "golf",
+    "title": "File:Hilaman Golf Course clubhouse.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Hilaman_Golf_Course_clubhouse.jpg/1280px-Hilaman_Golf_Course_clubhouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Hilaman_Golf_Course_clubhouse.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-061.webp",
+    "sha256": "58c83d3b27afde988b60aba1bcebe9cd311335e89ef8ceba14708282052cd242",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "investment-center.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "golf",
+    "title": "File:Eastwood Golf Course - panoramio (1).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Eastwood_Golf_Course_-_panoramio_%281%29.jpg/1280px-Eastwood_Golf_Course_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Eastwood_Golf_Course_-_panoramio_(1).jpg",
+    "author": "David Balmer",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4224,
+    "height": 2376,
+    "file": "images/fc-editorial-062.webp",
+    "sha256": "e0ed9c78eecdd1235b04f6253f7ebc0dcb9dc0a86d116d8475c69400338931de",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "buyer-preparation.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "golf",
+    "title": "File:Hole 10 Eastwood Golf Course - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Hole_10_Eastwood_Golf_Course_-_panoramio.jpg/1280px-Hole_10_Eastwood_Golf_Course_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Hole_10_Eastwood_Golf_Course_-_panoramio.jpg",
+    "author": "David Balmer",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4224,
+    "height": 2376,
+    "file": "images/fc-editorial-064.webp",
+    "sha256": "c615d0fda08987aedfe06f0372088e7facb8137ceea34a86eaaf76b06aefb263",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "buyer-preparation.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "golf",
+    "title": "File:Shell Point Golf Course - panoramio (2).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Shell_Point_Golf_Course_-_panoramio_%282%29.jpg/1280px-Shell_Point_Golf_Course_-_panoramio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Shell_Point_Golf_Course_-_panoramio_(2).jpg",
+    "author": "David Balmer",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4224,
+    "height": 2376,
+    "file": "images/fc-editorial-065.webp",
+    "sha256": "36065606d79e299995d9f112b39de8628775899274d856ed776d45fe83ddc4bd",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "sellers-guide.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "golf",
+    "title": "File:Belle Glade Municipal Golf Club.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Belle_Glade_Municipal_Golf_Club.jpg/1280px-Belle_Glade_Municipal_Golf_Club.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Belle_Glade_Municipal_Golf_Club.jpg",
+    "author": "Blueeagle55",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 2592,
+    "height": 1728,
+    "file": "images/fc-editorial-066.webp",
+    "sha256": "9b7fb1fcb0179775332dc3f45c25387aff475391e2a52993fb091c18906b4561",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "sellers-guide.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Red Lifeguard Stand at Siesta Key Beach.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Red_Lifeguard_Stand_at_Siesta_Key_Beach.jpg/1280px-Red_Lifeguard_Stand_at_Siesta_Key_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Red_Lifeguard_Stand_at_Siesta_Key_Beach.jpg",
+    "author": "Mickey Luigi Logitmark",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 6000,
+    "height": 3376,
+    "file": "images/fc-local-074.webp",
+    "sha256": "c5d27a5fa6447c193aa5e89a5b05bafd9bcdc663ec4f6ef0db53bed0a395ada4",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "boca-grande-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "siesta",
+    "title": "File:Siesta Key Beach. Sarasota - panoramio - 4net (1).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%281%29.jpg/1280px-Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(1).jpg",
+    "author": "4net",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 2896,
+    "height": 1944,
+    "file": "images/fc-local-082.webp",
+    "sha256": "5fcd49f04da8fd519cb8001fd7c7d00cb6b6f3799ff95c564d6dbf460bf4d66f",
+    "pixels": [
+      1100,
+      738
+    ],
+    "page": "boca-grande-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "siesta",
+    "title": "File:2017 Sarasota Turtle Beach at Siesta Key 1 FRD 9601.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/2017_Sarasota_Turtle_Beach_at_Siesta_Key_1_FRD_9601.jpg/1280px-2017_Sarasota_Turtle_Beach_at_Siesta_Key_1_FRD_9601.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Turtle_Beach_at_Siesta_Key_1_FRD_9601.jpg",
+    "author": "Fred Hsu on en.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3902,
+    "height": 2926,
+    "file": "images/fc-local-094.webp",
+    "sha256": "93e69843b1bb1c4b83a44bf70084186a4e5d5d1a4070a21350607dc3f979754e",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "boca-grande-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "page": "calculators.html",
+    "slot": "content-1",
+    "file": "calculators_person_using_calculator.jpg",
+    "retained": true
+  },
+  {
+    "category": "golf",
+    "title": "File:The Majors Golf Club Clubhouse, Palm Bay, Florida.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/The_Majors_Golf_Club_Clubhouse%2C_Palm_Bay%2C_Florida.jpg/1280px-The_Majors_Golf_Club_Clubhouse%2C_Palm_Bay%2C_Florida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Majors_Golf_Club_Clubhouse,_Palm_Bay,_Florida.jpg",
+    "author": "Pokemonprime",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "width": 4080,
+    "height": 3072,
+    "file": "images/fc-editorial-067.webp",
+    "sha256": "924d6ae61d175ee55fdb982510546bc420c02647ba9237e538073d2d0f195661",
+    "pixels": [
+      1100,
+      828
+    ],
+    "page": "calculators.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "golf",
+    "title": "File:Shell Point Golf Course - panoramio (1).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Shell_Point_Golf_Course_-_panoramio_%281%29.jpg/1280px-Shell_Point_Golf_Course_-_panoramio_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Shell_Point_Golf_Course_-_panoramio_(1).jpg",
+    "author": "David Balmer",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 4224,
+    "height": 2376,
+    "file": "images/fc-editorial-068.webp",
+    "sha256": "bf1301c1480dd9f284d8b74a9500f9cd4c36190e4c0c3bd87f5602ca3865b86a",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "calculators.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "golf",
+    "title": "File:Lake Nona Golf Course.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Lake_Nona_Golf_Course.jpg/1280px-Lake_Nona_Golf_Course.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Nona_Golf_Course.jpg",
+    "author": "Angiesbc",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 2400,
+    "height": 1599,
+    "file": "images/fc-editorial-069.webp",
+    "sha256": "1f9cb6c3bf688503a6f7fd1a2f7c0ac410bde385eaeb5989cb865115d9530662",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "sell.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Florida Lake Griffin State Park02.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Florida_Lake_Griffin_State_Park02.jpg/1280px-Florida_Lake_Griffin_State_Park02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park02.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-160.webp",
+    "sha256": "c53c830330ef00429a64e8ca906e71bfb272d2cd77b197e3f12c1034ef13dfa3",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "punta-gorda-isles.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Florida Lake Griffin State Park05.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Florida_Lake_Griffin_State_Park05.jpg/1280px-Florida_Lake_Griffin_State_Park05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park05.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-161.webp",
+    "sha256": "69ce55bf491bb522abd9d3758ffd37df482a505cc6419a3af2e7649754a077b6",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "punta-gorda-isles.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "siesta",
+    "title": "File:SUNSET, SIESTA BEACH, SARASOTA - panoramio.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/SUNSET%2C_SIESTA_BEACH%2C_SARASOTA_-_panoramio.jpg/1280px-SUNSET%2C_SIESTA_BEACH%2C_SARASOTA_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:SUNSET,_SIESTA_BEACH,_SARASOTA_-_panoramio.jpg",
+    "author": "JOHN SIMPSON",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "width": 2983,
+    "height": 2200,
+    "file": "images/fc-local-095.webp",
+    "sha256": "ecb190e4242b55fd582fefd198f764f1222fcaed0376cdc4e58747d0410a7396",
+    "pixels": [
+      1100,
+      811
+    ],
+    "page": "contact.html",
+    "slot": "content-1"
+  },
+  {
+    "page": "contact.html",
+    "slot": "content-2",
+    "file": "images/personal-real-estate-guidance.webp",
+    "retained": true
+  },
+  {
+    "category": "nature",
+    "title": "File:Florida Lake Griffin State Park04.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Florida_Lake_Griffin_State_Park04.jpg/1280px-Florida_Lake_Griffin_State_Park04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park04.jpg",
+    "author": "Ebyabe",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-162.webp",
+    "sha256": "fc934c6a9fd2a9f34420d5092fbbcd3b846af2ba8e2927f9927743173f2449ea",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "punta-gorda-isles-florida-real-estate.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Gfp-florida-everglades-national-park-lake-in-the-everglades.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Gfp-florida-everglades-national-park-lake-in-the-everglades.jpg/1280px-Gfp-florida-everglades-national-park-lake-in-the-everglades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Gfp-florida-everglades-national-park-lake-in-the-everglades.jpg",
+    "author": "Yinan Chen",
+    "license": "Public Domain",
+    "licenseUrl": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+    "width": 2500,
+    "height": 1667,
+    "file": "images/fc-editorial-164.webp",
+    "sha256": "b4ccb96ddaa69ff5aed44a093d5e65ddbbcaf01559b4fab9b7b98cd2cd88720b",
+    "pixels": [
+      1100,
+      734
+    ],
+    "page": "punta-gorda-isles-florida-real-estate.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "nature",
+    "title": "File:Palatka-Lake Butler State Trail; Florahome Picnic Shelter.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Palatka-Lake_Butler_State_Trail%3B_Florahome_Picnic_Shelter.jpg/1280px-Palatka-Lake_Butler_State_Trail%3B_Florahome_Picnic_Shelter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Palatka-Lake_Butler_State_Trail;_Florahome_Picnic_Shelter.jpg",
+    "author": "DanTD",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3648,
+    "height": 2736,
+    "file": "images/fc-editorial-168.webp",
+    "sha256": "dd142b8dc966902da83b423ec5a75002f4df27f096725cb7bd96b3330ddd7b11",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "punta-gorda-isles-florida-real-estate.html",
+    "slot": "content-3"
+  },
+  {
+    "category": "nature",
+    "title": "File:Trail to Lake Munson Dam.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Trail_to_Lake_Munson_Dam.jpg/1280px-Trail_to_Lake_Munson_Dam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Trail_to_Lake_Munson_Dam.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-169.webp",
+    "sha256": "9e36c646065d7adb138c53e87a76406bab754e7ed5690ea767cf900f97eab2bc",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "florida-gulf-coast-condos-for-sale.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "siesta",
+    "title": "File:2017 Sarasota Turtle Beach at Siesta Key 2 FRD 9605.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2017_Sarasota_Turtle_Beach_at_Siesta_Key_2_FRD_9605.jpg/1280px-2017_Sarasota_Turtle_Beach_at_Siesta_Key_2_FRD_9605.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Turtle_Beach_at_Siesta_Key_2_FRD_9605.jpg",
+    "author": "Fred Hsu on en.wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 3811,
+    "height": 2384,
+    "file": "images/fc-local-096.webp",
+    "sha256": "674c34114ce0c59ccdebf16f0fc64164d38f5fc1983f565014657e3af05a58f8",
+    "pixels": [
+      1100,
+      688
+    ],
+    "page": "florida-gulf-coast-condos-for-sale.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "nature",
+    "title": "File:Lake Henrietta walking trail.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Lake_Henrietta_walking_trail.jpg/1280px-Lake_Henrietta_walking_trail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Henrietta_walking_trail.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-177.webp",
+    "sha256": "985a1179dc8e43c353728aa17d6f84521feb4789b2bfc7ae31375d851cc6ed22",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "about.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Chain of Lakes Trail; South of Avenue F-WH Bus Terminal Xing.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Chain_of_Lakes_Trail%3B_South_of_Avenue_F-WH_Bus_Terminal_Xing.jpg/1280px-Chain_of_Lakes_Trail%3B_South_of_Avenue_F-WH_Bus_Terminal_Xing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Chain_of_Lakes_Trail;_South_of_Avenue_F-WH_Bus_Terminal_Xing.jpg",
+    "author": "DanTD",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3648,
+    "height": 2736,
+    "file": "images/fc-editorial-178.webp",
+    "sha256": "7431700fcb05fa119b939ae036c88f12603936c533df40bf55e5275b7aa15f17",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-property-search.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Lafayette Heritage Trail Park flooded fish finger 2.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Lafayette_Heritage_Trail_Park_flooded_fish_finger_2.jpg/1280px-Lafayette_Heritage_Trail_Park_flooded_fish_finger_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Lafayette_Heritage_Trail_Park_flooded_fish_finger_2.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-179.webp",
+    "sha256": "78788539ac11a266ef45e5ff6bb5f3f1ba875d6998c5cb95bf3d6f221ff9e236",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "buyer-property-search.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "nature",
+    "title": "File:Lake Jackson Bridge.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Lake_Jackson_Bridge.jpg/1280px-Lake_Jackson_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Jackson_Bridge.jpg",
+    "author": "Operator 16",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 5712,
+    "height": 3213,
+    "file": "images/fc-editorial-184.webp",
+    "sha256": "f2ca3993b91ca000cc73a3310212a633550fdf194e8d83bfaeae7113474733ac",
+    "pixels": [
+      1100,
+      619
+    ],
+    "page": "florida-gulf-coast-homes-for-sale.html",
+    "slot": "content-1"
+  },
+  {
+    "category": "nature",
+    "title": "File:Fallen tree on trail at Lost Lake.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Fallen_tree_on_trail_at_Lost_Lake.jpg/1280px-Fallen_tree_on_trail_at_Lost_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Fallen_tree_on_trail_at_Lost_Lake.jpg",
+    "author": "The Bushranger",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 3264,
+    "height": 2448,
+    "file": "images/fc-editorial-187.webp",
+    "sha256": "895d80d15716a2306c3832df4255a489b6584b5fa4e181ba18b67765341d22db",
+    "pixels": [
+      1100,
+      825
+    ],
+    "page": "florida-gulf-coast-homes-for-sale.html",
+    "slot": "content-2"
+  },
+  {
+    "category": "nature",
+    "title": "File:West lake boardwalk, NPSphoto (9255411617).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/West_lake_boardwalk%2C_NPSphoto_%289255411617%29.jpg/1280px-West_lake_boardwalk%2C_NPSphoto_%289255411617%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:West_lake_boardwalk,_NPSphoto_(9255411617).jpg",
+    "author": "Everglades NPS from Homestead, Florida, United States",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "width": 3600,
+    "height": 2400,
+    "file": "images/fc-editorial-188.webp",
+    "sha256": "19d5232e41cc08f4e22e5dc5f554686b70c71d8fdf6290ca8a5fb8a59d3d2e79",
+    "pixels": [
+      1100,
+      733
+    ],
+    "page": "buy.html",
+    "slot": "content-1"
+  }
+]

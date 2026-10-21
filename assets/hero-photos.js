@@ -31,7 +31,7 @@
   var photo=photos.find(function(row){return path.indexOf(row[0])!==-1;});
   var id=photo?photo[1]:'photo-1512917774080-9991f1c4c750';
   if(hero.classList.contains('about-hero')||hero.querySelector('img,video,picture')||hero.classList.contains('sc-photo-added'))return;
-  var image=path==='communities.html'?'images/florida-gulf-coast-beach.webp':'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w=1600&q=78';
+  var image=document.body.getAttribute('data-fc-hero-photo') || (path==='communities.html'?'images/florida-gulf-coast-beach.webp':'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w=1600&q=78');
   if(hero.classList.contains('lead-intake')){
    hero.classList.add('sc-photo-added','sc-contact-photo');
    hero.style.setProperty('--sc-hero-photo','url("'+image+'")');

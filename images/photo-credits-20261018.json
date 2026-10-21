@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-21",
   "notes": "Free-use photography. Images resized, converted to WebP and responsively cropped. Creative Commons adaptations are provided under the same stated license. Architectural illustration is labelled as illustrative, not an identified listing.",
   "photos": [
     {
@@ -171,6 +171,1118 @@
       "adaptation_license": "Unsplash License",
       "description": "White sand and Gulf waters in Sarasota",
       "modifications": "Resized and converted to WebP; displayed with responsive cropping."
+    },
+    {
+      "local": "images/fc-local-098.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Starr-031108-0248-Vitex_trifolia-fruit-S_Casey_Key-Florida_(24307005729).jpg",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-108.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_03.jpg",
+      "author": "Infrogmation",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-043.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pelican-landing.jpg",
+      "author": "Sabine Rodens, own work",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-004.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Fishing_Pier.jpg",
+      "author": "Sanibel sun",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-109.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_01.jpg",
+      "author": "Infrogmation",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-099.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Starr-031108-0247-Vitex_trifolia-habit-S_Casey_Key-Florida_(24556908342).jpg",
+      "author": "Forest and Kim Starr",
+      "license": "CC BY 3.0 us",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-110.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_04.jpg",
+      "author": "Infrogmation",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-001.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Skyline.jpeg",
+      "author": "Cullen Morgan",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-002.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Guptill_House_in_Sarasota_Florida.jpg",
+      "author": "Trish Hartmann",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-002.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Caspersen_Beach_Park.jpg",
+      "author": "Karl Thomas Moore",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-111.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Florida_Residential_Architecture_August_2021_-_02.jpg",
+      "author": "Infrogmation",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-115.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Residential_Street_in_Key_West,_Florida.jpg",
+      "author": "Julian Lupyan",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-072.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Key_West_Bight_Marina,_Key_West,_Florida_-_Boat_with_boat.jpg",
+      "author": "Sharon Hahn Darlin",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-015.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_High_School_(Florida)_1.jpg",
+      "author": "PCHS-NJROTC",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-001.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ocean_waves_drone_view_of_Palm_Coast_beach.jpg",
+      "author": "Lance Asper lance_asper",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-003.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Central_Beach_Fort_Lauderdale_Beach_Florida_Atlantic_Coast.jpg",
+      "author": "EgorovaSvetlana",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-116.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_9.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-127.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clematis_Street_Downtown_West_Palm_Beach_2013.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-118.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Historic_Old_Northeast_St._Pete_-_Residential_architecture.jpg",
+      "author": "pasa47",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-119.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Philemon_N._Bryan_House_(Fort_Lauderdale,_Florida).jpg",
+      "author": "Tamanoeconomico",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-130.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Former_Walgreens_Downtown_West_Palm_Beach_-_Now_Duff%27s.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-047.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Falcons_Fire_Golf_Course_in_Orlando.jpg",
+      "author": "ReunionVacationHomes.com",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-049.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Inverness_Golf_%26_Country_Club,_Florida.jpg",
+      "author": "The Eloquent Peasant",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-038.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Englewood_Florida_Banner.jpg",
+      "author": "Troy Jacobson",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-051.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Jake_Gaither_Golf_Course_start_hole_1.jpg",
+      "author": "Michael Rivera",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-003.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_and_waterfront,_Sarasota,_Florida_(2003).jpg",
+      "author": "Roger from Sarasota, Florida, U.S.A.",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-016.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_Florida_Banner.jpg",
+      "author": "Grendelkhan",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-004.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_(Florida)_banner.jpg",
+      "author": "Skyline_of_Sarasota,_Florida.jpg: Patrick Braga\nderivative work: Jjtkk",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-006.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(02).jpg",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-017.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice,_Florida_-_panoramio.jpg",
+      "author": "davidpinter",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-120.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_2.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-121.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_4.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-004.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Miami_Beach_-_Florida%27s_Gold_Coast_from_the_Air.jpg",
+      "author": "Colourpicture Publishers, Inc.",
+      "license": "Public domain",
+      "license_url": "",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-122.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_5.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-123.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_7.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-124.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_6.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-125.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Punta_Gorda_Residential_District_house_3.jpg",
+      "author": "Wknight94",
+      "license": "CC BY-SA 3.0",
+      "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-126.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Colorful_house_in_the_Osceola_Park_Historic_Residential_District_in_Vero_Beach,_Florida.JPG",
+      "author": "Dminvero",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-196.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:GVP-Pearson-Model-Exterior-Dusk.jpg",
+      "author": "Vomcphoto",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-005.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_South_Bridge.jpg",
+      "author": "Sanibel sun",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-006.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:House_in_Boca_Grande,_Florida.JPG",
+      "author": "Fredlyfish4",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-007.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(01).jpg",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-008.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota,_Florida_2023-01-23_(04).jpg",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-052.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Plantation_Preserve_Golf_Course_%26_Club_in_July_2024.jpg",
+      "author": "Gatorfan252525",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-020.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_Jetty.jpg",
+      "author": "JJBers",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-008.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Banner.jpg",
+      "author": "Fredlyfish4",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-005.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Beach_Fort_Lauderdale_Lago_Mar_Beach_Florida_Atlantic_Coast.jpg",
+      "author": "EgorovaSvetlana",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-073.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:A_stack_of_boats_at_the_Key_Largo_Harbor_Marina.jpg",
+      "author": "Baron Maddock",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-064.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach_Pavilion_.jpg",
+      "author": "Ryan Gamma",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-074.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sea_Isle_Marina_Miami_Florida_left_20100213.jpg",
+      "author": "Averette",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-009.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota_Bay_-_Sarasota,_Florida_2023-01-23_(03).jpg",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-053.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Osprey_Point_Golf_Course_in_west_Boca_Raton,_FL.jpg",
+      "author": "Gatorfan252525",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-022.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_FL_Hotel01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-009.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gasparillla_Inn_at_Boca_Grande_Florida_(11370743003).jpg",
+      "author": "Trish Hartmann from Tampa, Florida, USA",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-010.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pond_-_Sarasota_Jungle_Gardens_-_Sarasota,_Florida_-_DSC02006.jpg",
+      "author": "Daderot",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-023.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Venice_FL_Blalock_House02.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-010.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Port_Boca_Grande_Lighthouse_(16960574465).jpg",
+      "author": "Pete Markham from Loretto, USA",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-013.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Port_Boca_Grande_Lighthouse_(16774372219).jpg",
+      "author": "Pete Markham from Loretto, USA",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-016.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Avenue_in_Boca_Grande.JPG",
+      "author": "Fredlyfish4",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-017.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_comm_center01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-018.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_CH_and_NR_depot01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-019.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_Quarantine_Station01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-020.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Causeway_South_Bridge.jpg",
+      "author": "Sanibel sun",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-022.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_Bike_Trail_1.jpg",
+      "author": "Sanibel sun",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-008.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Delray_Beach,_Florida_aerial_view.jpg",
+      "author": "Quintin Soloviev",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-009.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Palm_Coast_FL_Banner.jpeg",
+      "author": "Andyrkellergmail",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-010.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Pensacola_Beach_-_White_Sands,_Florida_Coast_(27268946483).jpg",
+      "author": "Tony Webster from Minneapolis, Minnesota, United States",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-023.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Beach_in_Boca_Grande.JPG",
+      "author": "Fredlyfish4",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-011.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Sarasota,_Florida.jpg",
+      "author": "Patrick Braga",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-012.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarasota,_Florida_2023-01-23_(03).jpg",
+      "author": "Ryan Hodnett",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-054.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Celebration_Golf_Courses.jpg",
+      "author": "ReunionVacationHomes.com",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-133.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_West_Palm_Beach_(43887329040).jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-026.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:FL_Boca_Grande_HD_Anchor_Inn01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-011.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35188097760).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-075.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Sea_Isle_Marina_Miami_Florida_right_20100213.jpg",
+      "author": "Averette",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-region-013.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Patio_-_Sarasota_Jungle_Gardens_-_Sarasota,_Florida_-_DSC02024.jpg",
+      "author": "Daderot",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-134.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:West_Palm_Beach_-_Waterfront_-_Intracoastal_Waterway_%26_Downtown_Skyline_-_Panorama_(15300572403).jpg",
+      "author": "Jared",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-012.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35407253602).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-013.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Keaton_Beach_coast.jpg",
+      "author": "DiscoverTaylor",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-015.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536448306).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-076.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Harbor_Vista_Marina_(Sarasota,_Florida).jpg",
+      "author": "Visitor7",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-027.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:FL_Boca_Grande_HD_Anchor_Inn03.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-082.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Marina_aerial_southbasin.jpg",
+      "author": "GPlantam",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-017.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444812211).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-055.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Coral_Gables_-_Miami_Biltmore_Hotel_and_Golf_Course.jpg",
+      "author": "Curt Teich &amp; Co.",
+      "license": "Public domain",
+      "license_url": "",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-135.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Comeau_Building_Clematis_Street_Downtown_West_Palm_Beach_(30925925981).jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-036.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Boca_Grande_FL_comm_center_pano01.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-018.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Miramar_Beach,_Florida.JPG",
+      "author": "Skye Marthaler",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-104.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Point_South_Marina_basin,_Port_St._Joe.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-066.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(6).jpg",
+      "author": "4net",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-139.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_St._Petersburg,_Florida_2019.jpg",
+      "author": "pasa47",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-069.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach_TV-001-0002.jpg",
+      "author": "AndreCarrotflower",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-071.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net.jpg",
+      "author": "4net",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-072.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(10).jpg",
+      "author": "4net",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-140.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Former_A%26P_Historic_Clematis_Street_Business_District_West_Palm_Beach.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-141.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Former_McCrory_Store_Downtown_West_Palm_Beach.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-142.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Miami_Florida_2025-11-14.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-020.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444853421).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-021.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35444792521).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-026.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Naples_(Florida)_-_Fishing_Pier_@_Florida%27s_Gulf_Coast_(15965670176).jpg",
+      "author": "Reinhard Link from Germany",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-027.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Marine_shoreline_of_Cayo_Costa_Island_(Gulf_of_Mexico_coast_of_Florida,_USA)_(23771084953).jpg",
+      "author": "James St. John",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-031.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(34733816504).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-034.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536696216).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-105.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Delray_Beach_FL_Marina_Historic_District_11.JPG",
+      "author": "Pietro",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-047.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Port_Charlotte_Beach.jpg",
+      "author": "PCHS-NJROTC",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-036.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35536639186).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-043.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Clearwater_Beach,_Florida_(35407255932).jpg",
+      "author": "Michel Rathwell from Cornwall, Canada",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-049.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Charlotte_Harbor_Regatta_2014_(12506682805).jpg",
+      "author": "Isles Yacht Club",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-056.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Park_Punta_Gorda_FL_06.jpg",
+      "author": "PCHS-NJROTC",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-057.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gilchrist_Park_Punta_Gorda_FL_03.jpg",
+      "author": "PCHS-NJROTC",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-056.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Golf_course_at_sun_%27n_lake.jpg",
+      "author": "MzMissey",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-059.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eastwood_Golf_Course_-_panoramio.jpg",
+      "author": "David Balmer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-145.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Biscayne_Wall_Downtown_Miami_Florida_-_1_May_2023.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-146.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Miami_River_Downtown_Miami_Florida_1_May_2023.jpg",
+      "author": "Phillip Pessar",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-061.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hilaman_Golf_Course_clubhouse.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-062.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Eastwood_Golf_Course_-_panoramio_(1).jpg",
+      "author": "David Balmer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-064.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hole_10_Eastwood_Golf_Course_-_panoramio.jpg",
+      "author": "David Balmer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-065.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Shell_Point_Golf_Course_-_panoramio_(2).jpg",
+      "author": "David Balmer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-066.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Belle_Glade_Municipal_Golf_Club.jpg",
+      "author": "Blueeagle55",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-074.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Red_Lifeguard_Stand_at_Siesta_Key_Beach.jpg",
+      "author": "Mickey Luigi Logitmark",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-082.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Siesta_Key_Beach._Sarasota_-_panoramio_-_4net_(1).jpg",
+      "author": "4net",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-094.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Turtle_Beach_at_Siesta_Key_1_FRD_9601.jpg",
+      "author": "Fred Hsu on en.wikipedia",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-067.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Majors_Golf_Club_Clubhouse,_Palm_Bay,_Florida.jpg",
+      "author": "Pokemonprime",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-068.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Shell_Point_Golf_Course_-_panoramio_(1).jpg",
+      "author": "David Balmer",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-069.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Nona_Golf_Course.jpg",
+      "author": "Angiesbc",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-160.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park02.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-161.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park05.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-095.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:SUNSET,_SIESTA_BEACH,_SARASOTA_-_panoramio.jpg",
+      "author": "JOHN SIMPSON",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-162.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Florida_Lake_Griffin_State_Park04.jpg",
+      "author": "Ebyabe",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-164.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Gfp-florida-everglades-national-park-lake-in-the-everglades.jpg",
+      "author": "Yinan Chen",
+      "license": "Public Domain",
+      "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-168.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Palatka-Lake_Butler_State_Trail;_Florahome_Picnic_Shelter.jpg",
+      "author": "DanTD",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-169.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Trail_to_Lake_Munson_Dam.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-local-096.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:2017_Sarasota_Turtle_Beach_at_Siesta_Key_2_FRD_9605.jpg",
+      "author": "Fred Hsu on en.wikipedia",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-177.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Henrietta_walking_trail.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-178.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Chain_of_Lakes_Trail;_South_of_Avenue_F-WH_Bus_Terminal_Xing.jpg",
+      "author": "DanTD",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-179.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lafayette_Heritage_Trail_Park_flooded_fish_finger_2.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-184.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Lake_Jackson_Bridge.jpg",
+      "author": "Operator 16",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-187.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Fallen_tree_on_trail_at_Lost_Lake.jpg",
+      "author": "The Bushranger",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
+    },
+    {
+      "local": "images/fc-editorial-188.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:West_lake_boardwalk,_NPSphoto_(9255411617).jpg",
+      "author": "Everglades NPS from Homestead, Florida, United States",
+      "license": "Public domain",
+      "license_url": "",
+      "modifications": "Resized and converted to WebP; displayed with responsive cropping. Creative Commons adaptations remain under the stated license."
     }
   ]
 }

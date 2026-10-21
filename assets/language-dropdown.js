@@ -157,6 +157,7 @@
   else if(/venice|englewood|siesta|nokomis|wellen|communities/.test(page))image='images/florida-gulf-coast-beach.webp';
   else if(/calculat|mortgage|closing-cost|financing|offers|title|inspections|preparation|questions/.test(page))image='questions_real_estate_consultation.jpg';
   else image='about-gulf-coast-hero.jpg';
+  if(document.body.getAttribute('data-fc-hero-photo'))image=document.body.getAttribute('data-fc-hero-photo');
   if(page!=='index.html' && page!=='about.html' && page!=='privacy.html' && page!=='terms.html'){
     css += 'html body section.hero:not(.contact-feature-hero){background:linear-gradient(90deg,rgba(248,251,253,.97),rgba(248,251,253,.84) 51%,rgba(248,251,253,.17)),url("'+image+'") center/cover no-repeat!important;color:#102b43!important;min-height:300px!important;padding-top:65px!important;padding-bottom:65px!important}'+
     'html body section.hero:not(.contact-feature-hero) h1,html body section.hero:not(.contact-feature-hero) h1 *{color:#102b43!important;text-shadow:none!important}'+
@@ -279,7 +280,7 @@
   '.oc-shell .oc-menu .sc-editorial-head h2{font:700 clamp(30px,4vw,52px)/1.2 Manrope,Arial,sans-serif!important;color:#102b43!important;letter-spacing:-.035em!important;margin:9px 0 6px!important}'+
   '.oc-shell .oc-menu .sc-editorial-head p,.oc-shell .oc-menu .sc-editorial-quick>p{font:400 14px/1.6 Manrope,Arial,sans-serif!important;color:#617587!important;margin:0!important}'+
   '.oc-shell .oc-menu .sc-editorial-head button{position:static!important;flex:0 0 46px!important;width:46px!important;height:46px!important;border:0!important;border-radius:50%!important;background:#eae5db!important;color:#102b43!important;font-size:30px!important;cursor:pointer!important}'+
-  '.oc-shell .oc-menu .sc-editorial-feature{display:flex!important;flex-direction:column!important;justify-content:end!important;min-height:155px!important;padding:24px 32px!important;border-radius:13px!important;background:linear-gradient(90deg,rgba(16,43,67,.79),rgba(16,43,67,.04)),url("images/florida-gulf-coast-beach.webp") center 52%/cover no-repeat!important;margin-bottom:38px!important}'+
+  '.oc-shell .oc-menu .sc-editorial-feature{display:flex!important;flex-direction:column!important;justify-content:end!important;min-height:155px!important;padding:24px 32px!important;border-radius:13px!important;background:linear-gradient(110deg,#102b43,#315971)!important;margin-bottom:38px!important}'+
   '.oc-shell .oc-menu .sc-editorial-feature span{color:#f1d49e!important;font-size:10px!important;letter-spacing:.18em!important;font-weight:700!important}'+
   '.oc-shell .oc-menu .sc-editorial-feature strong{color:#fff!important;font-size:clamp(19px,2.6vw,33px)!important;line-height:1.3!important;margin-top:9px!important}'+
   '.oc-shell .oc-menu .sc-editorial-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:36px 52px!important}'+
@@ -1133,3 +1134,4 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
