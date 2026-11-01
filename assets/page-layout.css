@@ -1,0 +1,11 @@
+/* Shared page geometry. Keep widths here, and presentation in component styles. */
+:root{--fc-page-max:1220px;--fc-page-gutter:24px}
+@media(max-width:720px){:root{--fc-page-gutter:16px}}
+@media(max-width:620px){:root{--fc-page-gutter:14px}}
+:is(.fc-page-container,.fc-header-inner,.sc-uf-grid,.sc-cc-footer-grid,.fc-email-directory,.fc-sitemap-prominent,.fc-inquiry-split){box-sizing:border-box;width:min(var(--fc-page-max),calc(100% - 2 * var(--fc-page-gutter)));max-width:none;margin-inline:auto}
+:is(.fc-page-container,.fc-header-inner,.sc-uf-grid,.sc-cc-footer-grid,.fc-email-directory,.fc-sitemap-prominent){padding-inline:0}
+.fc-page-flow,.fc-page-band{box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:0}
+.fc-page-fill,.fc-page-container .fc-inquiry-split{box-sizing:border-box;width:100%;max-width:none;margin-inline:0}
+:is(.oc-real-content,.qa-layout).fc-page-fill{padding-inline:0}
+.fc-page-hero{box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:max(var(--fc-page-gutter),calc((100% - var(--fc-page-max)) / 2))}
+:is(.sc-unified-footer,.sc-cc-footer){padding-inline:0}

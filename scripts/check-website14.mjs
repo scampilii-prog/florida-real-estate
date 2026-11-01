@@ -20,7 +20,7 @@ for(const [name,page] of [['Site Map',sitemap],['Closing Costs',closing]]){
 assert.equal(header(sitemap),header(closing),'Site Map and Closing Costs header markup diverged');
 for(const [name,page] of [['Buy',buy],['Sell',sell]]){
  assert(page.includes('class="fc-header-spacer"'),name+' initial header clearance missing');
- assert(page.includes('fc-canonical-header.css?v=20261101-stable1'),name+' stable header stylesheet missing');
+ assert(page.includes('fc-canonical-header.css?v=20261101-width1'),name+' stable header stylesheet missing');
  assert.equal((page.match(/<main\b/g)||[]).length,1,name+' main count');
  assert.equal((page.match(/<footer\b/g)||[]).length,1,name+' footer count');
 }
@@ -166,6 +166,7 @@ execFileSync(process.execPath,[new URL('./check-site-search.mjs',import.meta.url
 execFileSync(process.execPath,[new URL('./check-buyer-timeline.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-photo-ownership.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-header-stable.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-page-layout.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
 
 

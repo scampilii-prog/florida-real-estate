@@ -21,7 +21,7 @@ for(const [file,data] of Object.entries(config)){
  let next=original.replace(section,rendered).replace(scripts,'');
  next=next.replace(/<link\b[^>]*href="assets\/(?:inquiry-form|inquiry-layout)\.css[^"]*"[^>]*>/g,'');
  next=next.replace(/<script\b[^>]*src="assets\/inquiry-form\.js[^"]*"[^>]*>[\s\S]*?<\/script>/g,'');
- next=next.replace('</head>','<link rel="stylesheet" href="assets/inquiry-form.css?v=20261018-unified2"><link rel="stylesheet" href="assets/inquiry-layout.css?v=20261018-unified2"></head>');
+ next=next.replace('</head>','<link rel="stylesheet" href="assets/inquiry-form.css?v=20261101-width1"><link rel="stylesheet" href="assets/inquiry-layout.css?v=20261101-width1"></head>');
  const bodyEnd=next.lastIndexOf('</body>');
  if(bodyEnd<0)throw Error('Missing closing body: '+file);
  next=next.slice(0,bodyEnd)+'<script src="assets/inquiry-form.js?v=20261018-unified2" defer></script>'+next.slice(bodyEnd);
@@ -34,4 +34,5 @@ for(const file of readdirSync(root).filter(p=>p.endsWith('.html'))){
  if((html.match(/<form\b[^>]*id=["']lead-form["']/g)||[]).length>1)throw Error('Duplicate inquiry: '+file);
 }
 console.log(Object.keys(config).length+' pages use the approved common inquiry; zero legacy inquiry forms remain.');
+
 
