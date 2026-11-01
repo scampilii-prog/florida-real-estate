@@ -1,73 +1,16 @@
 /* Compact accessible language dropdown; keep original select as translation source. */
 (function(){
-  function init(){
-    var select=document.querySelector('#oc-lang-static, #lang');
-    if(!select || document.querySelector('.sc-language-widget'))return;
-    var options=Array.from(select.options).filter(function(o){return o.value;});
-    if(options.length<2)return;
-    var widget=document.createElement('span');widget.className='sc-language-widget';
-    var trigger=document.createElement('button');trigger.type='button';trigger.className='sc-language-trigger';
-    trigger.setAttribute('aria-label','Choose language');trigger.setAttribute('aria-haspopup','listbox');
-    trigger.setAttribute('aria-expanded','false');
-    var label=document.createElement('span');label.className='sc-language-label';
-    var arrow=document.createElement('span');arrow.className='sc-language-arrow';arrow.setAttribute('aria-hidden','true');
-    trigger.append(label,arrow);
-    var menu=document.createElement('div');menu.className='sc-language-options';menu.setAttribute('role','listbox');
-    menu.setAttribute('aria-label','Choose language');menu.hidden=true;
-    function refresh(){
-      var found=options.find(function(o){return o.value===select.value;})||options[0];
-      label.textContent=found.textContent.trim().replace(/^(EN|ES|IT|PT)\s*[—–-]\s*/i,'');
-      Array.from(menu.children).forEach(function(el){el.setAttribute('aria-selected',String(el.dataset.lang===select.value));});
-    }
-    function close(){menu.hidden=true;trigger.setAttribute('aria-expanded','false');}
-    function open(){menu.hidden=false;trigger.setAttribute('aria-expanded','true');}
-    options.forEach(function(option){
-      var item=document.createElement('button');item.type='button';item.className='sc-language-option';
-      item.setAttribute('role','option');item.dataset.lang=option.value;
-      item.textContent=option.textContent.trim().replace(/^(EN|ES|IT|PT)\s*[—–-]\s*/i,'');
-      item.addEventListener('click',function(){
-        select.value=option.value;
-        select.dispatchEvent(new Event('change',{bubbles:true}));
-        refresh();close();trigger.focus();
-      });
-      menu.appendChild(item);
-    });
-    trigger.addEventListener('click',function(){menu.hidden?open():close();});
-    trigger.addEventListener('keydown',function(e){
-      if(e.key==='Escape'){close();return;}
-      if(e.key==='ArrowDown'||e.key==='ArrowUp'){
-        e.preventDefault();open();
-        var items=Array.from(menu.children),idx=items.findIndex(function(el){return el.dataset.lang===select.value;});
-        var next=items[(idx+(e.key==='ArrowDown'?1:items.length-1))%items.length];
-        if(next)next.focus();
-      }
-    });
-    menu.addEventListener('keydown',function(e){
-      if(e.key==='Escape'){e.preventDefault();close();trigger.focus();}
-      if(e.key==='ArrowDown'||e.key==='ArrowUp'){
-        e.preventDefault();var items=Array.from(menu.children),i=items.indexOf(document.activeElement);
-        items[(i+(e.key==='ArrowDown'?1:items.length-1))%items.length].focus();
-      }
-    });
-    document.addEventListener('click',function(e){if(!widget.contains(e.target))close();});
-    select.parentNode.insertBefore(widget,select);
-    widget.appendChild(select);widget.append(trigger,menu);
-    select.style.setProperty('display','none','important');
-    select.addEventListener('change',refresh);
-
-    /* Footer is authored directly in HTML. Do not duplicate it. */
-    refresh();
-  }
-  var css='.sc-language-widget{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;z-index:1002;font-family:Manrope,Arial,sans-serif!important}'+
-  '.sc-language-trigger{box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:space-between!important;gap:7px!important;width:119px!important;min-width:119px!important;max-width:119px!important;height:42px!important;padding:0 9px!important;border:1px solid #8298ab!important;border-radius:8px!important;background:#102b43!important;color:#fff!important;font:500 12px Manrope,Arial,sans-serif!important;white-space:nowrap!important;cursor:pointer!important;line-height:1!important}'+
-  '.sc-language-label{overflow:hidden;text-overflow:clip;white-space:nowrap!important}.sc-language-arrow{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);flex:0 0 8px}'+
-  '.sc-language-options{position:absolute!important;top:calc(100% + 5px)!important;right:0!important;width:119px!important;min-width:119px!important;max-width:119px!important;box-sizing:border-box!important;background:#102b43!important;border:1px solid #8298ab!important;border-radius:9px!important;padding:4px!important;box-shadow:0 8px 20px #0004!important;z-index:99999!important}'+
-  '.sc-language-options[hidden]{display:none!important}.sc-language-option{display:block!important;width:100%!important;text-align:left!important;background:transparent!important;border:0!important;color:#fff!important;padding:9px 6px!important;border-radius:5px!important;font:500 12px Manrope,Arial,sans-serif!important;cursor:pointer!important;white-space:nowrap!important}'+
-  '.sc-language-option:hover,.sc-language-option:focus-visible,.sc-language-option[aria-selected=true]{background:#24455f!important;outline:none!important}'+
-  '.sc-language-trigger:focus-visible{outline:2px solid #d8b66b!important;outline-offset:2px!important}'+
-  '.sc-language-widget select{display:none!important}'+
-  '.sc-language-widget::after,.oc-lang:has(.sc-language-widget)::after,.header-tools .language:has(.sc-language-widget)::after{display:none!important;content:none!important}'+
-  '@media(max-width:390px){.sc-language-trigger{width:105px!important;min-width:105px!important;max-width:105px!important;padding:0 7px!important;gap:4px!important;font-size:11px!important}.sc-language-options{width:112px!important;min-width:112px!important;max-width:112px!important}.sc-language-option{font-size:11px!important;padding:9px 4px!important}}';
+  
+  var css=""+
+  ""+
+  ""+
+  ""+
+  ""+
+  ""+
+  ""+
+  ""+
+  ""+
+  "@media(max-width:390px){}";
   css += '.sc-footer-language{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;padding:24px 16px 30px;border-top:1px solid rgba(255,255,255,.18);background:#102b43;color:#fff;font-family:Manrope,Arial,sans-serif!important}'+
   '.sc-footer-language-caption{font-size:11px;font-weight:650;letter-spacing:.11em;color:#dfc48c}'+
   '.sc-footer-language-select{appearance:auto!important;min-width:160px!important;max-width:230px!important;background:#102b43!important;color:#fff!important;border:1px solid #b99b63!important;border-radius:7px!important;padding:10px 13px!important;font:600 13px Manrope,Arial,sans-serif!important;cursor:pointer!important}'+
@@ -353,7 +296,7 @@
   'html body .oc-menu[data-sc-full-menu="1"] .sc-editorial-head h2{display:block!important;visibility:visible!important;opacity:1!important;color:#102b43!important;-webkit-text-fill-color:#102b43!important}';
   css += '.sc-legal-bottom a.sc-acromatico,.sc-legal-bottom a.sc-acromatico:visited{color:#c6a46d!important;-webkit-text-fill-color:#c6a46d!important}.sc-legal-bottom a.sc-acromatico:hover,.sc-legal-bottom a.sc-acromatico:focus-visible{color:#e6c98c!important;-webkit-text-fill-color:#e6c98c!important}.sc-legal-bottom a.sc-acromatico span{-webkit-text-fill-color:#e8826b!important;color:#e8826b!important}';
   var style=document.createElement('style');style.id='sc-custom-language-css';style.textContent=css;document.head.appendChild(style);
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+  
 })();
 
 /* Shared Gulf Coast inquiry: language parity and relevant area preselection. */
@@ -423,15 +366,15 @@
 
 
 /* 2026-10: compact header language selector on all viewport sizes, retaining Português and mobile icons. */
-(function(){function apply(){if(document.getElementById('sc-compact-header-language'))return;var el=document.createElement('style');el.id='sc-compact-header-language';el.textContent='html body .sc-language-widget{width:auto!important;min-width:0!important;max-width:none!important}html body .sc-language-widget .sc-language-trigger{box-sizing:border-box!important;width:100px!important;min-width:100px!important;max-width:100px!important;padding:0 7px!important;gap:3px!important;font-size:11px!important}html body .sc-language-widget .sc-language-options{box-sizing:border-box!important;left:0!important;right:auto!important;width:100px!important;min-width:100px!important;max-width:100px!important;padding:3px!important}html body .sc-language-widget .sc-language-option{box-sizing:border-box!important;width:100%!important;padding:8px 4px!important;font-size:11px!important}html body .sc-language-widget .sc-language-label{white-space:nowrap!important;overflow:visible!important}html body .oc-actions,html body .header-tools{min-width:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
+
 
 /* Legacy global menu-to-sitemap redirect removed: menu buttons retain their local navigation behavior. */
 
 /* Florida Costiera premium shared brand, 2026-10-11. Preserves all current controls. */
-(function(){function init(){var h=document.querySelector('header.oc-top,header.site-header,header.sc-sitemap-header,header.sc-cc-header,header.sc-booking-header,header.sc-legal-header');if(!h||h.classList.contains('fc-ready'))return;var a=h.querySelector('a.oc-brand,a.brand,a.sc-sitemap-brand,a.sc-cc-brand,a.sc-booking-brand,a.sc-legal-brand');if(!a)return;h.classList.add('fc-ready');a.classList.add('fc-brand');a.setAttribute('aria-label','Florida Costiera, Sabatino Campilii REALTOR, LoKation Real Estate');a.innerHTML='<span class="fc-mark" aria-hidden="true"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M49 10C35 3 19 11 15 25c-5 16 5 30 18 33" fill="none" stroke="#ddba7b" stroke-width="1.6"/><path d="M20 46V18h21M20 31h16" fill="none" stroke="#f5f1e9" stroke-width="2.3"/><path d="M51 22c-15-12-27 2-27 13 0 15 15 19 27 10" fill="none" stroke="#ddba7b" stroke-width="2.5"/><path d="M9 51c11-6 21-5 29 0 7 3 15 2 19-2" fill="none" stroke="#ddba7b" stroke-width="1.5"/></svg></span><span class="fc-identity"><span class="fc-name">FLORIDA <strong>COSTIERA</strong></span><span class="fc-area">SOUTHWEST FLORIDA GULF COAST REAL ESTATE</span></span>';var s=document.createElement('style');s.id='fc-shared-header';s.textContent="\nhtml body header.fc-ready{height:94.3px!important;max-height:94.3px!important;background-color:#102b43!important;background-image:linear-gradient(90deg,rgba(12,34,51,.96) 0%,rgba(12,34,51,.87) 28%,rgba(12,34,51,.35) 52%,rgba(12,34,51,.08) 72%,rgba(12,34,51,0) 100%),url('assets/florida-costiera-header-sunset.webp')!important;background-size:100% 100%!important;background-position:center center!important;background-repeat:no-repeat!important;border-bottom:1px solid #d3ac7650!important;box-shadow:0 2px 9px #0002!important;backdrop-filter:none!important}\nhtml body header.fc-ready .header-inner{max-width:none!important;width:100%!important;padding:0 clamp(10px,2.5vw,38px)!important;gap:10px!important}\nhtml body header.fc-ready.oc-top,html body header.fc-ready.sc-sitemap-header,html body header.fc-ready.sc-cc-header,html body header.fc-ready.sc-booking-header,html body header.fc-ready.sc-legal-header{padding:0 clamp(10px,2.5vw,38px)!important;gap:10px!important}\nhtml body header.fc-ready .fc-brand{display:flex!important;flex-direction:row!important;align-items:center!important;flex:0 1 auto!important;min-width:0!important;max-width:min(55vw,580px)!important;text-decoration:none!important;color:#fff!important;gap:9px!important;padding:0!important;white-space:normal!important}\nhtml body header.fc-ready .fc-mark{display:flex!important;align-items:center!important;justify-content:center!important;flex:0 0 52px!important;width:52px!important;height:56px!important;border-right:1px solid #c9a56c80!important;padding-right:8px!important}\nhtml body header.fc-ready .fc-mark svg{width:43px!important;height:50px!important;display:block!important}\nhtml body header.fc-ready .fc-identity{display:flex!important;min-width:0!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:4px!important}\nhtml body header.fc-ready .fc-name{display:block!important;white-space:nowrap!important;color:white!important;letter-spacing:.055em!important;font:400 clamp(15px,1.65vw,23px)/1.14 Georgia,serif!important}\nhtml body header.fc-ready .fc-name strong{font-size:inherit!important;font-family:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;font-weight:600!important;color:#e5c895!important}\nhtml body header.fc-ready .fc-area{display:block!important;font:500 clamp(7px,.67vw,9px)/1.4 Manrope,Arial,sans-serif!important;letter-spacing:.075em!important;color:#e9dfca!important;white-space:nowrap!important}\nhtml body header.fc-ready .fc-broker{display:block!important;font:500 clamp(7px,.77vw,10px)/1.4 Manrope,Arial,sans-serif!important;white-space:nowrap!important;color:#fff!important}\nhtml body header.fc-ready .fc-broker b{font-weight:700!important;color:#e5c895!important}\nhtml body header.fc-ready .fc-sep{color:#baa681!important;margin:0 3px!important}\nhtml body header.fc-ready .header-tools,html body header.fc-ready .oc-actions,html body header.fc-ready .sc-sitemap-tools{flex:0 0 auto!important;margin-left:auto!important;gap:clamp(6px,1.2vw,18px)!important}\n@media(max-width:860px){html body header.fc-ready{height:82.8px!important;max-height:82.8px!important}html body header.fc-ready .fc-brand{max-width:calc(100% - 168px)!important;gap:5px!important}html body header.fc-ready .fc-mark{flex-basis:36px!important;width:36px!important;padding-right:4px!important}html body header.fc-ready .fc-name{font-size:clamp(11px,2.2vw,19px)!important;letter-spacing:.015em!important}html body header.fc-ready .fc-area{font-size:7px!important;letter-spacing:.015em!important}html body header.fc-ready .fc-broker{font-size:7px!important}}\n@media(max-width:620px){html body header.fc-ready .fc-mark{display:none!important}html body header.fc-ready .fc-brand{max-width:calc(100% - 151px)!important}html body header.fc-ready .fc-name{font-size:clamp(11px,3.1vw,16px)!important}html body header.fc-ready .fc-area{font-size:clamp(5.5px,1.45vw,7px)!important;letter-spacing:0!important;white-space:normal!important}html body header.fc-ready .fc-broker{font-size:clamp(6px,1.45vw,7px)!important;white-space:normal!important}html body header.fc-ready .header-tools,html body header.fc-ready .oc-actions,html body header.fc-ready .sc-sitemap-tools{gap:4px!important}}\n";document.head.appendChild(s)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
+
 
 /* Approved slightly lighter slate-navy for language control, 2026-10-11. */
-(function(){function apply(){if(document.getElementById('fc-slate-navy-language'))return;var st=document.createElement('style');st.id='fc-slate-navy-language';st.textContent='html body .sc-language-widget .sc-language-trigger,html body .sc-language-widget .sc-language-options{background:#24445e!important;border-color:#90a4b4!important}html body .sc-language-widget .sc-language-option:hover,html body .sc-language-widget .sc-language-option:focus-visible,html body .sc-language-widget .sc-language-option[aria-selected=true]{background:#365973!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply()})();
+
 
 
 /* Florida Costiera — stable translated header and multilingual Back to Top, 2026-10-12. */
@@ -440,7 +383,7 @@
     if(document.getElementById('fc-translate-layout-fix'))return;
     var style=document.createElement('style');
     style.id='fc-translate-layout-fix';
-    style.textContent='html body{top:0!important}html.translated-ltr body,html.translated-rtl body{top:0!important}html body .goog-te-banner-frame,html body iframe.goog-te-banner-frame,html body iframe.skiptranslate[src*="translate.google"]{display:none!important}html body header.fc-ready,html body .sc-sitemap-header{top:0!important}html body #floatingLeftBackTop .fc-top-label{white-space:nowrap!important}';
+    style.textContent="html body{top:0!important}html.translated-ltr body,html.translated-rtl body{top:0!important}html body .goog-te-banner-frame,html body iframe.goog-te-banner-frame,html body iframe.skiptranslate[src*=\"translate.google\"]{display:none!important}html body #floatingLeftBackTop .fc-top-label{white-space:nowrap!important}";
     document.head.appendChild(style);
     var dict={en:'Back to Top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
     var labels={en:'Back to top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
@@ -488,7 +431,7 @@
     if(!/^\/site-map(?:\.html)?\/?$/.test(location.pathname))return;
     if(!document.getElementById('fc-google-banner-layout')){
       var st=document.createElement('style');st.id='fc-google-banner-layout';
-      st.textContent='html,html body{top:0!important;margin-top:0!important}body.translated-ltr,body.translated-rtl{top:0!important}iframe.goog-te-banner-frame,iframe.goog-te-banner-frame.skiptranslate,.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,body>iframe.skiptranslate,body>.skiptranslate.goog-te-banner-frame{display:none!important;height:0!important;visibility:hidden!important}html body header.fc-ready,html body .sc-sitemap-header{top:0!important}';
+      st.textContent="html,html body{top:0!important;margin-top:0!important}body.translated-ltr,body.translated-rtl{top:0!important}iframe.goog-te-banner-frame,iframe.goog-te-banner-frame.skiptranslate,.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,body>iframe.skiptranslate,body>.skiptranslate.goog-te-banner-frame{display:none!important;height:0!important;visibility:hidden!important}";
       document.head.appendChild(st);
     }
     if(document.body&&document.body.style.top&&document.body.style.top!=='0px')document.body.style.setProperty('top','0px','important');
@@ -592,136 +535,27 @@
 
 /* Telephone beside header search; compact touch-to-call icon on phones.
    No change to Site Map's independently approved header. */
-(function(){
- function install(){
-  var header=document.querySelector('header.site-header,header.oc-top');
-  if(!header||header.querySelector('.fc-header-phone'))return;
-  var actions=header.querySelector('.header-tools,.oc-actions');
-  if(!actions)return;
-  var search=actions.querySelector('.search-icon,.oc-icon[data-oc-search],button[aria-label*="Search"],button[aria-label*="search"]');
-  if(!search)return;
-  var style=document.createElement('style');style.id='fc-header-phone-css';
-  style.textContent='html body header .fc-header-phone{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;flex:0 0 auto!important;min-height:34px!important;padding:5px 8px!important;background:#24445e!important;color:#fff!important;border:1px solid #90a4b4!important;border-radius:20px!important;text-decoration:none!important;font:900 14px/1.2 Manrope,Arial,sans-serif!important;letter-spacing:.05px!important;text-shadow:0 2px 4px rgba(0,0,0,.85)!important;white-space:nowrap!important}html body header .fc-header-phone svg{display:block;width:20px;height:20px;flex:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.55))}html body header .fc-header-phone:hover{background:#365973!important;color:#fff!important}@media(max-width:1050px){html body header .fc-header-phone{padding:5px!important;min-width:30px!important;width:30px!important;height:34px!important}html body header .fc-header-phone-label{display:none!important}}@media(max-width:620px){html body header .fc-header-phone{border:1px solid #90a4b4!important;border-radius:7px!important;width:30px!important;min-width:30px!important;height:34px!important;min-height:34px!important;padding:4px!important}html body header .fc-header-phone svg{width:21px;height:21px}html body header .header-tools,html body header .oc-actions{gap:3px!important}}';
-  document.head.appendChild(style);
-  var a=document.createElement('a');a.className='fc-header-phone notranslate';a.href='tel:+19412704877';
-  a.title='Call Florida Costiera: (941) 270-4877';a.setAttribute('aria-label','Call Florida Costiera at 941 270 4877');a.setAttribute('translate','no');
-  a.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 5.18 2 2 0 0 1 5.09 3h3a2 2 0 0 1 2 1.72c.12.96.34 1.91.66 2.82a2 2 0 0 1-.45 2.11L9.03 10.9a16 16 0 0 0 4.07 4.07l1.25-1.27a2 2 0 0 1 2.11-.45c.91.32 1.86.54 2.82.66A2 2 0 0 1 22 16.92Z"/></svg><span class="fc-header-phone-label">(941) 270-4877</span>';
-  search.insertAdjacentElement('afterend',a);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
-})();
+
 
 /* One refined slate-navy frame for language, search, phone and menu.
    Keep existing controls independent and fully usable on narrow screens. */
-(function(){
- function install(){
-  if(document.getElementById('fc-unified-header-tools-style'))return;
-  var header=document.querySelector('header.site-header,header.oc-top');
-  if(!header)return;
-  var group=header.querySelector('.header-tools,.oc-actions');
-  if(!group)return;
-  group.classList.add('fc-unified-header-tools');
-  var style=document.createElement('style');style.id='fc-unified-header-tools-style';
-  style.textContent=[
-   'html body header .fc-unified-header-tools{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;gap:5px!important;min-width:0!important;padding:3px 7px!important;border:0!important;border-radius:11px!important;background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;text-shadow:0 2px 4px rgba(0,0,0,.76),0 0 9px rgba(0,0,0,.38)!important}',
-   'html body header .fc-unified-header-tools .sc-language-trigger,html body header .fc-unified-header-tools .fc-header-phone{background:transparent!important;color:white!important;border:0!important;box-shadow:none!important}',
-   'html body header .fc-unified-header-tools .fc-header-phone{border-radius:6px!important;padding:5px 7px!important}',
-   'html body header .fc-unified-header-tools .sc-language-trigger:hover,html body header .fc-unified-header-tools .fc-header-phone:hover{background:rgba(14,37,58,.24)!important}',
-   'html body header .fc-unified-header-tools .sc-language-trigger{min-height:36px!important;height:36px!important}',
-   'html body header .fc-unified-header-tools .search-icon,html body header .fc-unified-header-tools .menu-button,html body header .fc-unified-header-tools .oc-icon{color:white!important}',
-   'html body header .fc-unified-header-tools .search-icon:hover,html body header .fc-unified-header-tools .menu-button:hover,html body header .fc-unified-header-tools .oc-icon:hover{color:#efd49b!important}',
-   '@media(max-width:620px){html body header .fc-unified-header-tools{gap:2px!important;padding:2px 4px!important;border-radius:9px!important}html body header .fc-unified-header-tools .fc-header-phone{width:27px!important;min-width:27px!important;height:34px!important}html body header .fc-unified-header-tools .sc-language-trigger{height:34px!important;min-height:34px!important}}',
-   '@media(max-width:390px){html body header .fc-unified-header-tools{gap:1px!important;padding:2px 3px!important}}'
-  ].join('');
-  document.head.appendChild(style);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
-})();
+
 
 /* Clean phone control and fast accessible desktop hint. */
-(function(){
- function ready(){
-  var a=document.querySelector('header .fc-header-phone');
-  if(!a||document.getElementById('fc-phone-hover-polish'))return;
-  a.setAttribute('data-fc-phone-tip','Speak directly with Sabatino · (941) 270-4877');
-  var st=document.createElement('style');st.id='fc-phone-hover-polish';
-  st.textContent='html body header .fc-unified-header-tools a.fc-header-phone{background:transparent!important;border:0!important;box-shadow:none!important;color:#fff!important;position:relative!important;outline-offset:2px!important}html body header .fc-unified-header-tools a.fc-header-phone:hover,html body header .fc-unified-header-tools a.fc-header-phone:focus-visible{background:rgba(14,37,58,.28)!important}html body header .fc-unified-header-tools a.fc-header-phone::after{content:attr(data-fc-phone-tip);position:absolute;z-index:9999;top:calc(100% + 14px);right:0;padding:11px 15px;border:1px solid rgba(225,196,143,.7);border-radius:8px;background:#152e42;color:white;font:650 12px/1.4 Manrope,Arial,sans-serif;white-space:nowrap;box-shadow:0 8px 20px #0004;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .12s ease,visibility .12s ease}html body header .fc-unified-header-tools a.fc-header-phone:hover::after,html body header .fc-unified-header-tools a.fc-header-phone:focus-visible::after{opacity:1;visibility:visible}@media(hover:none),(max-width:620px){html body header .fc-unified-header-tools a.fc-header-phone::after{display:none!important}}';
-  document.head.appendChild(st);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
-})();
+
 
 /* Larger readable language names without expanding the 100px selector. */
-(function(){
- function add(){
-  if(document.getElementById('fc-language-readable-compact'))return;
-  var st=document.createElement('style');st.id='fc-language-readable-compact';
-  st.textContent='html body header .sc-language-widget .sc-language-trigger{width:100px!important;min-width:100px!important;max-width:100px!important;padding:0 3px!important;gap:2px!important;font-size:14px!important;font-weight:800!important;letter-spacing:-.55px!important}html body header .sc-language-widget .sc-language-label{min-width:0!important;overflow:visible!important;font-weight:800!important;letter-spacing:-.35px!important}html body header .sc-language-widget .sc-language-arrow{width:7px!important;height:7px!important;flex:0 0 7px!important;border-width:2px!important}html body header .sc-language-widget .sc-language-options{width:100px!important;min-width:100px!important;max-width:100px!important}html body header .sc-language-widget .sc-language-option{font-size:14.5px!important;font-weight:400!important;letter-spacing:-.45px!important;padding:8px 2px!important}@media(max-width:390px){html body header .sc-language-widget .sc-language-trigger{font-size:13.5px!important}html body header .sc-language-widget .sc-language-option{font-size:14px!important}}';
-  document.head.appendChild(st);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add,{once:true});else add();
-})();
+
 
 /* Approved FloridaCostiera brand refresh, Oct 12: icon to the left, no ornaments. */
-(function(){
- function apply(){
-  var h=document.querySelector('header.fc-ready');
-  if(!h || h.querySelector('.fc-name.fc-wordmark-new'))return;
-  var label=h.querySelector('.fc-name');
-  if(label){label.classList.add('fc-wordmark-new');label.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong>';}
-  var iconLink=document.querySelector('link[rel="icon"]');
-  if(!iconLink){iconLink=document.createElement('link');iconLink.rel='icon';document.head.appendChild(iconLink);}
-  iconLink.type='image/svg+xml';iconLink.href='/assets/florida-costiera-coastal-mark.svg?v=20261016-gold-navy';
-  var st=document.createElement('style');st.id='fc-new-coastal-brand';
-  st.textContent='html body header.fc-ready .fc-mark{border-right:1px solid #d4ab6c70!important;flex-basis:62px!important;width:62px!important;height:57px!important;padding-right:10px!important;background:url("/assets/florida-costiera-coastal-mark.svg?v=20261016-gold-navy") center left / 51px 51px no-repeat!important}html body header.fc-ready .fc-mark svg{display:none!important}html body header.fc-ready .fc-wordmark-new{font-family:"Bodoni Moda",Georgia,serif!important;font-size:clamp(19px,2.05vw,29px)!important;font-weight:500!important;letter-spacing:-.045em!important;line-height:1.12!important;text-transform:none!important}html body header.fc-ready .fc-wordmark-new .fc-florida{color:#fff9ef!important}html body header.fc-ready .fc-wordmark-new .fc-costiera{color:#e9bf78!important;font-family:"Alex Brush",cursive!important;font-size:1.53em!important;font-weight:400!important;line-height:.8!important;letter-spacing:0!important;display:inline-block!important;margin-left:.05em!important;vertical-align:-.05em!important}@media(max-width:860px){html body header.fc-ready .fc-mark{flex-basis:41px!important;width:41px!important;background-size:33px 33px!important;padding-right:4px!important}html body header.fc-ready .fc-wordmark-new{font-size:clamp(13px,2.7vw,20px)!important}}@media(max-width:620px){html body header.fc-ready .fc-mark{display:none!important}html body header.fc-ready .fc-wordmark-new{font-size:clamp(11px,3.1vw,16px)!important;letter-spacing:-.06em!important}}';
-  document.head.appendChild(st);
- }
- if(!document.getElementById('fc-alexbrush-font')){var sf=document.createElement('link');sf.id='fc-alexbrush-font';sf.rel='stylesheet';sf.href='https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap';document.head.appendChild(sf);}
- if(!document.getElementById('fc-bodoni-font')){var l=document.createElement('link');l.id='fc-bodoni-font';l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap';document.head.appendChild(l);}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 
 /* Site Map only — retain the approved custom header and its Google Translate guard.
    Restore a reliable call control beside search after the shared brand is mounted. */
-(function(){
- function restoreSiteMapPhone(){
-  var header=document.querySelector('header.sc-sitemap-header');
-  if(!header)return;
-  var tools=header.querySelector('.sc-sitemap-tools');
-  var search=tools&&tools.querySelector('.sc-sitemap-search-btn');
-  if(!tools||!search)return;
-  var phone=tools.querySelector('.fc-sitemap-phone');
-  if(!phone){
-   phone=document.createElement('a');
-   phone.className='fc-sitemap-phone notranslate';
-   search.insertAdjacentElement('afterend',phone);
-  }
-  phone.href='tel:+19412704877';
-  phone.title='Call Florida Costiera: (941) 270-4877';
-  phone.setAttribute('aria-label','Call Florida Costiera at 941 270 4877');
-  phone.setAttribute('translate','no');
-  phone.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L9 10.9a16 16 0 0 0 4.1 4.1l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.6a2 2 0 0 1 1.8 2.1Z"/></svg><span class="fc-sitemap-phone-label">(941) 270-4877</span>';
-  if(phone.previousElementSibling!==search)search.insertAdjacentElement('afterend',phone);
-  if(!document.getElementById('fc-sitemap-phone-restored-css')){
-   var css=document.createElement('style');
-   css.id='fc-sitemap-phone-restored-css';
-   css.textContent='html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone{display:inline-flex!important;align-items:center!important;gap:7px!important;width:auto!important;min-width:0!important;max-width:none!important;padding:0 2px!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:#fff!important;white-space:nowrap!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}html body header.sc-sitemap-header a.fc-sitemap-phone svg{display:block!important;width:21px!important;height:21px!important;flex:0 0 21px!important}html body header.sc-sitemap-header a.fc-sitemap-phone .fc-sitemap-phone-label{display:inline!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}';
-   document.head.appendChild(css);
-  }
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',restoreSiteMapPhone,{once:true});else restoreSiteMapPhone();
-})();
+
 
 /* FloridaCostiera: slightly larger subtitle, restrained across breakpoints. */
-(function(){
- function apply(){
-  if(document.getElementById('fc-brand-subtitle-readable'))return;
-  var s=document.createElement('style');s.id='fc-brand-subtitle-readable';
-  s.textContent='html body header.fc-ready .fc-area{font-size:clamp(10px,.9vw,12px)!important;font-weight:600!important;letter-spacing:.055em!important;line-height:1.35!important}@media(max-width:860px){html body header.fc-ready .fc-area{font-size:clamp(8px,1.12vw,10px)!important;letter-spacing:.025em!important}}@media(max-width:620px){html body header.fc-ready .fc-area{font-size:clamp(7px,1.8vw,8px)!important;letter-spacing:0!important;line-height:1.25!important}}';
-  document.head.appendChild(s);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 
 /* Shared approved Back to Top style, October 2026 */
 (function(){function run(){if(!document.getElementById('fc-approved-backtop-v10')){var st=document.createElement('style');st.id='fc-approved-backtop-v10';st.textContent="html body #floatingLeftBackTop,html body a.top{box-sizing:border-box!important;background:#0b1119!important;border:3px solid #fff!important;border-radius:999px!important;color:#fff!important;box-shadow:0 9px 26px rgba(0,0,0,.22)!important;font-family:Manrope,Arial,sans-serif!important;font-weight:750!important;letter-spacing:0!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:13px!important;min-height:52px!important;height:auto!important;padding:6px 19px 6px 8px!important;text-decoration:none!important;line-height:1.2!important;white-space:nowrap!important}html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow{box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:43px!important;height:43px!important;min-width:43px!important;flex:0 0 43px!important;background:#eccb83!important;border-radius:50%!important;color:#101010!important;font-size:0!important}html body #floatingLeftBackTop .fc-top-arrow svg,html body a.top .fc-top-arrow svg{display:block!important;width:21px!important;height:21px!important;fill:none!important;stroke:#101010!important}html body #floatingLeftBackTop:hover,html body a.top:hover{background:#162637!important}@media(max-width:600px){html body #floatingLeftBackTop,html body a.top{padding:5px 14px 5px 6px!important;gap:9px!important;min-height:45px!important}html body #floatingLeftBackTop .fc-top-arrow,html body a.top .fc-top-arrow{width:36px!important;height:36px!important;min-width:36px!important;flex-basis:36px!important}}";document.head.appendChild(st)}document.querySelectorAll('#floatingLeftBackTop,a.top').forEach(function(b){var a=b.querySelector('.fc-top-arrow');if(!a){a=document.createElement('span');a.className='fc-top-arrow';b.prepend(a)}a.innerHTML="<svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 20V4M5 11l7-7 7 7\" stroke=\"#101010\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>";a.setAttribute('aria-hidden','true');if(b.id==='floatingLeftBackTop'){var label=b.querySelector('.fc-top-label');if(label)label.textContent='Back to Top';b.setAttribute('aria-label','Back to top');b.title='Back to top'}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
@@ -754,127 +588,29 @@
 })();
 
 /* Florida Costiera header controls consistency — 2026-10-13 */
-(function(){
- function apply(){
-  if(document.getElementById('fc-consistent-header-controls-20261013'))return;
-  var css=[
-   'html body header .oc-lang select#oc-lang-static,html body header.sc-cc-header .oc-lang select#oc-lang-static{box-sizing:border-box!important;width:105px!important;min-width:105px!important;max-width:105px!important;height:35px!important;min-height:35px!important;padding:0 22px 0 8px!important;font:700 12px/1.2 Manrope,Arial,sans-serif!important;border-radius:6px!important}',
-   'html body header .fc-unified-header-tools .sc-language-trigger{min-height:35px!important;height:35px!important;font-size:12px!important}',
-   'html body header .fc-unified-header-tools a.fc-header-phone{height:35px!important;min-height:35px!important;box-sizing:border-box!important;padding:5px 8px!important;border-radius:7px!important}',
-   'html body header.sc-cc-header .sc-cc-call{height:35px!important;min-height:35px!important;box-sizing:border-box!important;font-size:12px!important;padding:5px 10px!important;border-radius:7px!important}',
-   'html body header .oc-actions,html body header .header-tools{gap:clamp(8px,1.15vw,16px)!important}',
-   'html body header .fc-unified-header-tools{gap:clamp(8px,1.15vw,16px)!important}',
-   '@media(max-width:650px){html body header .oc-lang select#oc-lang-static{width:100px!important;min-width:100px!important;max-width:100px!important}html body header.sc-cc-header .sc-cc-call{padding:5px 8px!important}}'
-  ].join('');
-  var style=document.createElement('style');style.id='fc-consistent-header-controls-20261013';style.textContent=css;document.head.appendChild(style);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 
 /* Florida Costiera special-page header alignment — 2026-10-13 */
-(function(){
-function init(){
- if(document.getElementById('fc-special-header-alignment'))return;
- var headers=document.querySelectorAll('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header');
- if(!headers.length)return;
- var st=document.createElement('style');st.id='fc-special-header-alignment';
- st.textContent=[
- 'html body header.sc-booking-header,html body header.sc-legal-header{box-sizing:border-box!important;min-height:76px!important;height:76px!important;max-height:76px!important;padding:7px clamp(16px,3vw,44px)!important;align-items:center!important;gap:clamp(8px,1.4vw,20px)!important}',
- 'html body header.sc-cc-header .sc-cc-brand,html body header.sc-sitemap-header .sc-sitemap-brand{min-width:0!important;flex:0 1 auto!important}',
- 'html body header.sc-cc-header .oc-lang,html body header.sc-sitemap-header .sc-language-widget,html body header.sc-booking-header .oc-lang,html body header.sc-legal-header .oc-lang{flex:0 0 auto!important}',
- 'html body header.sc-cc-header .sc-cc-nav,html body header.sc-sitemap-header .sc-sitemap-tools{align-items:center!important;gap:clamp(8px,1vw,14px)!important}',
- 'html body header.sc-cc-header .sc-language-widget,html body header.sc-sitemap-header .sc-language-widget{width:105px!important;min-width:105px!important;max-width:105px!important}',
- 'html body header.sc-cc-header .sc-language-trigger,html body header.sc-sitemap-header .sc-language-trigger{box-sizing:border-box!important;width:105px!important;min-width:105px!important;max-width:105px!important;height:35px!important;min-height:35px!important;font:700 12px/1.3 Manrope,Arial,sans-serif!important;padding:0 10px!important;border-radius:6px!important}',
- 'html body header.sc-cc-header .sc-language-options,html body header.sc-sitemap-header .sc-language-options{width:105px!important;min-width:105px!important;max-width:105px!important}',
- 'html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header .fc-sitemap-phone{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;height:35px!important;min-height:35px!important;padding:5px 10px!important;border-radius:7px!important;font:700 12px Manrope,Arial,sans-serif!important;background:#21445f!important;border:1px solid #91a7b8!important;color:#fff!important;white-space:nowrap!important;text-decoration:none!important}',
- 'html body header.sc-cc-header .sc-cc-menu,html body header.sc-sitemap-header .sc-sitemap-menu-button{display:inline-flex!important;justify-content:center!important;align-items:center!important;width:35px!important;height:35px!important;padding:4px!important;flex:0 0 35px!important;background:transparent!important;color:#fff!important;border:0!important;border-radius:6px!important;font-size:22px!important;text-decoration:none!important}',
- 'html body header.sc-sitemap-header .sc-sitemap-search-btn{height:35px!important;width:35px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}',
- '@media(max-width:740px){html body header.sc-cc-header,html body header.sc-sitemap-header{padding:7px 12px!important;gap:5px!important}html body header.sc-cc-header .sc-cc-brand-text small{display:none!important}html body header.sc-cc-header .sc-cc-call span,html body header.sc-sitemap-header .fc-sitemap-phone b{display:none!important}html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header .fc-sitemap-phone{width:35px!important;min-width:35px!important;padding:5px!important}html body header.sc-cc-header .sc-language-widget,html body header.sc-sitemap-header .sc-language-widget,html body header.sc-cc-header .sc-language-trigger,html body header.sc-sitemap-header .sc-language-trigger{width:99px!important;min-width:99px!important;max-width:99px!important}html body header.sc-cc-header .sc-language-options,html body header.sc-sitemap-header .sc-language-options{width:99px!important;min-width:99px!important;max-width:99px!important}}'
- ].join('');
- document.head.appendChild(st);
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
-})();
+
 /* Unified special-template header identity, 2026-10-13 */
-(function(){
-function apply(){
- var special=document.querySelector('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header');
- if(!special||special.classList.contains('fc-ready')||special.dataset.fcUnifiedIdentity==='yes')return;
- special.dataset.fcUnifiedIdentity='yes';
- var brand=special.querySelector('.sc-cc-brand,.sc-sitemap-brand,.sc-booking-brand,.sc-legal-brand');
- if(brand){
-  brand.classList.add('fc-special-brand');
-  brand.innerHTML='<img class="fc-special-mark" src="assets/florida-costiera-coastal-mark.svg?v=20261016-gold-navy" width="43" height="43" alt=""><span class="fc-special-wordmark"><strong><span>Florida</span><em>Costiera</em><b class="fc-domain">.com</b></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
- }
- if(document.getElementById('fc-special-identity-20261013'))return;
- var css=document.createElement('style');css.id='fc-special-identity-20261013';
- css.textContent='html body header .fc-special-brand{display:inline-flex!important;align-items:center!important;flex-direction:row!important;gap:10px!important;min-width:0!important;color:#fff!important;text-decoration:none!important;white-space:nowrap!important}html body header .fc-special-mark{display:block!important;width:43px!important;height:43px!important;flex:0 0 43px!important}html body header .fc-special-wordmark{display:flex!important;flex-direction:column!important;gap:3px!important}html body header .fc-special-wordmark strong{font:600 clamp(19px,1.75vw,25px)/1.05 Georgia,serif!important;letter-spacing:-.035em!important}html body header .fc-special-wordmark strong span{color:#fff9ef!important}html body header .fc-special-wordmark strong em{font-family:"Alex Brush",cursive!important;font-style:normal!important;font-weight:400!important;font-size:1.6em!important;letter-spacing:0!important;line-height:.7!important;vertical-align:-.06em!important;color:#e9bf78!important}html body header .fc-special-wordmark small{display:block!important;font:600 clamp(7px,.65vw,9px)/1.2 Manrope,Arial,sans-serif!important;letter-spacing:.025em!important;color:#fff!important}@media(max-width:720px){html body header .fc-special-mark{width:35px!important;height:35px!important;flex-basis:35px!important}html body header .fc-special-wordmark strong{font-size:17px!important}html body header .fc-special-wordmark small{display:none!important}}';
- document.head.appendChild(css);
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 
 /* Final special page controls polish 20261013 */
-(function(){function apply(){
- if(document.getElementById('fc-special-controls-final'))return;
- var style=document.createElement('style');style.id='fc-special-controls-final';
- style.textContent=[
- 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-widget{display:inline-flex!important;align-items:center!important;width:108px!important;min-width:108px!important;max-width:108px!important;flex:0 0 108px!important;position:relative!important}',
- 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-trigger{width:108px!important;min-width:108px!important;max-width:108px!important;height:36px!important;min-height:36px!important;box-sizing:border-box!important;padding:0 10px!important;display:flex!important;justify-content:space-between!important;align-items:center!important;background:#21445f!important;border:1px solid #9db2c0!important;border-radius:7px!important;color:white!important;font:700 12px Manrope,Arial,sans-serif!important;white-space:nowrap!important}',
- 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-options{box-sizing:border-box!important;width:108px!important;min-width:108px!important;max-width:108px!important;left:0!important;right:auto!important}',
- 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-label{display:inline-block!important;white-space:nowrap!important;font-size:12px!important}',
- 'html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header a.fc-sitemap-phone{height:36px!important;min-height:36px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;padding:5px 10px!important;border:1px solid #9db2c0!important;border-radius:7px!important;background:#21445f!important;color:#fff!important;font:700 12px Manrope,Arial,sans-serif!important;box-sizing:border-box!important;white-space:nowrap!important}',
- 'html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) :is(.sc-cc-search,.sc-sitemap-search-btn,.sc-cc-menu,.sc-sitemap-menu-button){height:36px!important;min-height:36px!important;width:36px!important;min-width:36px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;color:white!important;box-sizing:border-box!important}',
- '@media(max-width:720px){html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-widget,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-trigger,html body header:is(.sc-cc-header,.sc-sitemap-header,.sc-legal-header,.sc-booking-header) .sc-language-options{width:108px!important;min-width:108px!important;max-width:108px!important}html body header.sc-cc-header .sc-cc-call span,html body header.sc-sitemap-header .fc-sitemap-phone b{display:none!important}html body header.sc-cc-header .sc-cc-call,html body header.sc-sitemap-header a.fc-sitemap-phone{width:36px!important;min-width:36px!important;padding:5px!important}}'
- ].join('');document.head.appendChild(style);
-}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
 
 /* Restore approved unboxed Home header controls, Oct 13 2026 */
-(function(){
-function apply(){
- if(document.getElementById('fc-home-control-reference-final'))return;
- var css=document.createElement('style');css.id='fc-home-control-reference-final';
- css.textContent=[
- 'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){background:transparent!important;background-color:transparent!important;border:0!important;border-color:transparent!important;box-shadow:none!important;border-radius:0!important;outline-offset:3px!important;color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.65)!important;font-family:Manrope,Arial,sans-serif!important;font-weight:800!important}',
- 'html body header .sc-language-widget{background:transparent!important;border:0!important;box-shadow:none!important}',
- 'html body header .sc-language-trigger{display:inline-flex!important;justify-content:space-between!important;align-items:center!important;height:35px!important;min-height:35px!important;padding:0 3px!important;font-size:12px!important}',
- 'html body header .sc-language-label{font-weight:800!important;font-size:12px!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
- 'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){display:inline-flex!important;align-items:center!important;gap:6px!important;justify-content:center!important;font-size:12px!important;font-weight:800!important;height:35px!important;min-height:35px!important;padding:0 3px!important}',
- 'html body header .fc-header-phone-label,html body header .sc-cc-call span,html body header .fc-sitemap-phone b{font-weight:800!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
- 'html body header .sc-language-options{border:1px solid #c4a06b!important;border-radius:7px!important;background:#19384f!important}',
- 'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone):hover{background:rgba(10,30,46,.17)!important}',
- '@media(max-width:720px){html body header .sc-cc-call span,html body header .fc-sitemap-phone b{display:none!important}}'
- ].join('');
- document.head.appendChild(css);
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 /* Selected language label only — 20261013 */
-(function(){function run(){if(document.getElementById('fc-active-language-weight-20261013'))return;var st=document.createElement('style');st.id='fc-active-language-weight-20261013';st.textContent='html body header .sc-language-trigger .sc-language-label{font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;white-space:nowrap!important}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
+
 
 /* Readable dropdown and bold telephone 20261013 */
-(function(){function run(){if(document.getElementById('fc-dropdown-phone-readable'))return;var st=document.createElement('style');st.id='fc-dropdown-phone-readable';st.textContent=[
-'html body header .sc-language-options .sc-language-option{font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;line-height:1.4!important;font-weight:600!important;padding:12px 10px!important}',
-'html body header .sc-language-options{box-sizing:border-box!important;min-width:190px!important;width:190px!important;max-width:190px!important}',
-'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone),html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){font-family:Manrope,Arial,sans-serif!important;font-size:16px!important;font-weight:800!important;line-height:1.2!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:transparent!important;border-color:transparent!important;box-shadow:none!important}',
-'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){width:auto!important;max-width:none!important;padding:0 4px!important;gap:7px!important}',
-'@media(max-width:750px){html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){min-width:35px!important;width:35px!important}html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
-].join('');document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run()})();
+
 
 /* Compact language option spacing 20261013 */
-(function(){function apply(){if(document.getElementById('fc-compact-language-options'))return;var el=document.createElement('style');el.id='fc-compact-language-options';el.textContent='html body .sc-language-options .sc-language-option{padding-top:7px!important;padding-bottom:7px!important;line-height:1.25!important;margin-top:0!important;margin-bottom:0!important}html body .sc-language-options{padding-top:4px!important;padding-bottom:4px!important;row-gap:0!important}';document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
 
 /* FINAL uniform transparent header controls 20261013 */
-(function(){function apply(){if(document.getElementById('fc-transparent-controls-20261013'))return;var el=document.createElement('style');el.id='fc-transparent-controls-20261013';el.textContent=[
-'html body header :is(.sc-language-widget,.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;box-shadow:none!important;outline-offset:3px!important;border-radius:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}',
-'html body header :is(.sc-language-trigger,.fc-header-phone,.sc-cc-call,.fc-sitemap-phone){color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:0 2px 4px #0009!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
-'html body header .sc-language-trigger .sc-language-label{font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
-'html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;-webkit-text-fill-color:#fff!important}',
-'html body header .sc-language-options{background:#24445e!important;border:1px solid #9aabb7!important;border-radius:12px!important;box-shadow:0 12px 24px #0004!important}',
-'html body header .sc-language-options .sc-language-option{font-size:16px!important;line-height:1.25!important;padding:7px 10px!important}',
-'html body header :is(.fc-header-phone,.sc-cc-call,.fc-sitemap-phone):hover,html body header .sc-language-trigger:hover{background:transparent!important;border:0!important;box-shadow:none!important}',
-'@media(max-width:720px){html body header :is(.fc-header-phone-label,.sc-cc-call span,.fc-sitemap-phone b){display:none!important}}'
-].join('');document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
 
 /* External website link advisory - Florida Costiera */
 (function(){
@@ -929,45 +665,19 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 
 /* 2026-10-13: Final override for dynamically generated special-page header controls. */
-(function(){function apply(){if(document.getElementById('fc-special-transparent-dynamic-final'))return;var el=document.createElement('style');el.id='fc-special-transparent-dynamic-final';el.textContent=[
-'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-widget,html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger,html body header.sc-sitemap-header .fc-sitemap-phone,html body header.sc-cc-header .sc-cc-call{background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}',
-'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger,html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-label,html body header.sc-sitemap-header .fc-sitemap-phone,html body header.sc-sitemap-header .fc-sitemap-phone b,html body header.sc-cc-header .sc-cc-call,html body header.sc-cc-header .sc-cc-call span{color:#fff!important;-webkit-text-fill-color:#fff!important;font-weight:800!important;text-shadow:0 1px 3px #0008}',
-'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger{padding:0 4px!important;outline-offset:3px!important}',
-'html body header:is(.sc-sitemap-header,.sc-cc-header) .sc-language-trigger:focus-visible{outline:2px solid #eac58b!important}'
-].join('');document.head.appendChild(el)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
 
 /* Site Map phone: final style for the SVG and span inserted by shared JavaScript. */
-(function(){function fix(){if(document.getElementById('fc-sitemap-actual-phone-final'))return;var st=document.createElement('style');st.id='fc-sitemap-actual-phone-final';st.textContent='html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;width:auto!important;max-width:none!important;height:36px!important;min-height:0!important;gap:6px!important;margin:0!important;padding:0 2px!important;background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;white-space:nowrap!important;color:#fff!important;font:800 14px/1.2 Manrope,Arial,sans-serif!important}html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone svg{display:block!important;flex:0 0 16px!important;width:16px!important;height:16px!important;stroke:#fff!important}html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone .fc-sitemap-phone-label{display:inline!important;font:800 14px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;white-space:nowrap!important;-webkit-text-fill-color:#fff!important}@media(max-width:720px){html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone .fc-sitemap-phone-label{display:none!important}}';document.head.appendChild(st)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix()})();
+
 
 /* Site Map: align final DOM-generated header controls with Home (no fixed small pill). */
-(function(){function apply(){var id='fc-sitemap-home-parity-20261013';if(document.getElementById(id))return;var css=document.createElement('style');css.id=id;css.textContent=[
-'html body header.sc-sitemap-header{height:94px!important;min-height:94px!important;max-height:94px!important;padding-left:clamp(16px,2vw,32px)!important;padding-right:clamp(16px,2vw,32px)!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools{margin-left:auto!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-end!important;gap:17px!important;width:auto!important;min-width:0!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-widget{width:auto!important;min-width:96px!important;max-width:none!important;flex:0 0 auto!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-trigger{width:auto!important;min-width:96px!important;max-width:none!important;height:40px!important;padding:0 4px!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-trigger .sc-language-label{font:800 16px/1.2 Manrope,Arial,sans-serif!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone{height:40px!important;min-height:40px!important;width:auto!important;min-width:0!important;max-width:none!important;padding:0 2px!important;gap:7px!important;display:inline-flex!important;flex:0 0 auto!important;align-items:center!important;justify-content:center!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone .fc-sitemap-phone-label{display:inline-block!important;font:800 16px/1.2 Manrope,Arial,sans-serif!important;color:#fff!important;white-space:nowrap!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone svg{width:21px!important;height:21px!important;flex:0 0 21px!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-search-btn,html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-menu-button{width:40px!important;min-width:40px!important;height:40px!important;min-height:40px!important;padding:6px!important}',
-'html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-search-btn svg,html body header.sc-sitemap-header .sc-sitemap-tools .sc-sitemap-menu-button svg{width:26px!important;height:26px!important}',
-'@media(max-width:860px){html body header.sc-sitemap-header .sc-sitemap-tools{gap:7px!important}html body header.sc-sitemap-header .sc-sitemap-tools a.fc-sitemap-phone .fc-sitemap-phone-label{display:none!important}html body header.sc-sitemap-header .sc-sitemap-tools .sc-language-widget{min-width:88px!important}}'
-].join('');document.head.appendChild(css)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply()})();
+
 
 
 
 
 /* One navigation action: hamburgers open the approved button-based Site Map, not the retired editorial overlay. */
-(function(){
-  window.addEventListener('click',function(event){
-    var target=event.target;
-    var button=target&&target.closest&&target.closest('[data-oc-menu],.menu-button,button[onclick*="openMenu"],.sc-sitemap-menu-button,.sc-cc-menu,.sc-legal-menu,.sc-booking-menu');
-    if(!button)return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    window.location.assign('/site-map.html');
-  },true);
-})();
+
 
 /* Florida Costiera: single accessible Back to Top control across public pages. */
 (function(){
@@ -991,30 +701,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 /* Single shared Florida Costiera identity for every header template. */
-(function(){
- function setIdentity(){
-  var mark='/assets/florida-costiera-coastal-mark.svg';
-  document.querySelectorAll('header.fc-ready').forEach(function(h){
-   var brand=h.querySelector('.fc-brand'),name=h.querySelector('.fc-name'),icon=h.querySelector('.fc-mark'),tag=h.querySelector('.fc-area');
-   if(!brand||!name)return;
-   name.classList.add('fc-wordmark-new');
-   name.innerHTML='<span class="fc-florida">Florida</span><strong class="fc-costiera">Costiera</strong><span class="fc-approved-dotcom">.com</span>';
-   if(icon){icon.style.setProperty('background-image','url("'+mark+'")','important');icon.style.setProperty('background-repeat','no-repeat','important');icon.style.setProperty('background-position','center','important');}
-   if(tag)tag.textContent='SOUTHWEST FLORIDA GULF COAST REAL ESTATE';
-  });
-  document.querySelectorAll('header.sc-cc-header,header.sc-sitemap-header,header.sc-booking-header,header.sc-legal-header').forEach(function(h){
-   if(h.classList.contains('fc-ready'))return;
-   var b=h.querySelector('.sc-cc-brand,.sc-sitemap-brand,.sc-booking-brand,.sc-legal-brand');if(!b)return;
-   b.classList.add('fc-special-brand');
-   b.innerHTML='<img class="fc-special-mark" src="'+mark+'" alt=""><span class="fc-special-wordmark"><strong><span class="fc-florida">Florida</span><em class="fc-costiera">Costiera</em><b class="fc-domain">.com</b></strong><small>SOUTHWEST FLORIDA GULF COAST REAL ESTATE</small></span>';
-  });
-  var style=document.getElementById('fc-single-brand-css');
-  if(!style){style=document.createElement('style');style.id='fc-single-brand-css';document.head.appendChild(style)}
-  style.textContent='html body header.fc-ready .fc-name.fc-wordmark-new,header .fc-special-wordmark strong{font-family:"Bodoni Moda",Georgia,serif!important;font-weight:500!important;letter-spacing:-.035em!important;white-space:nowrap!important}header .fc-florida{color:#fff9ef!important;font-family:"Bodoni Moda",Georgia,serif!important}html body header.fc-ready .fc-name .fc-costiera,html body header .fc-special-wordmark strong em.fc-costiera{font-family:"Bodoni Moda",Georgia,serif!important;color:#e9bf78!important;font-size:1em!important;font-weight:500!important;font-style:normal!important;letter-spacing:-.035em!important;vertical-align:baseline!important}html body header.fc-ready .fc-approved-dotcom,html body header .fc-special-wordmark .fc-domain{color:#fff!important;font:600 .48em Manrope,Arial,sans-serif!important;letter-spacing:0!important;vertical-align:baseline!important;margin-left:2px!important}html body header.fc-ready .fc-area,html body header .fc-special-wordmark small{color:#fff5e4!important;font-family:Manrope,Arial,sans-serif!important}html body header .fc-special-mark{object-fit:contain!important;border:0!important;background:transparent!important}html body header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(23px,2.35vw,35px)!important;line-height:1.03!important;letter-spacing:-.04em!important}html body header.fc-ready .fc-name.fc-wordmark-new .fc-costiera{font-size:1em!important;font-family:"Bodoni Moda",Georgia,serif!important;font-style:normal!important;vertical-align:baseline!important;line-height:inherit!important}html body header .fc-special-wordmark strong em.fc-costiera{font-size:1em!important;font-style:normal!important;vertical-align:baseline!important}html body header.fc-ready .fc-area{font-size:clamp(8px,.72vw,10px)!important;line-height:1.3!important}@media(max-width:860px){html body header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(14px,2.6vw,23px)!important}}@media(max-width:620px){html body header.fc-ready .fc-name.fc-wordmark-new{font-size:clamp(12px,3.1vw,17px)!important}}';
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setIdentity,{once:true});else setIdentity();
- window.addEventListener('load',setIdentity,{once:true});
-})();
+
 
 /* Unified Back to Top: remove legacy duplicates including non-button variants */
 (function(){
@@ -1098,15 +785,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 /* Mobile identity: give the approved logo its own readable row. */
-(function(){
- function apply(){
-  if(document.getElementById('fc-mobile-brand-readable'))return;
-  var s=document.createElement('style');s.id='fc-mobile-brand-readable';
-  s.textContent='@media(max-width:620px){html body header.fc-ready{height:126px!important;max-height:126px!important;min-height:126px!important;box-sizing:border-box!important}html body header.fc-ready .header-inner,html body header.fc-ready:is(.oc-top,.sc-sitemap-header,.sc-cc-header,.sc-booking-header,.sc-legal-header){display:flex!important;flex-wrap:wrap!important;align-content:center!important;align-items:center!important;row-gap:10px!important;column-gap:0!important;padding:10px 14px!important}html body header.fc-ready .fc-brand,html body header.fc-ready .fc-special-brand{flex:0 0 100%!important;width:100%!important;max-width:100%!important;min-width:0!important;justify-content:flex-start!important;gap:9px!important}html body header.fc-ready .fc-mark,html body header.fc-ready .fc-special-mark{display:block!important;flex:0 0 36px!important;width:36px!important;height:40px!important;background-size:34px 34px!important;padding-right:0!important;border:0!important}html body header.fc-ready .fc-name.fc-wordmark-new,html body header.fc-ready .fc-special-wordmark strong{font-size:clamp(26px,7vw,34px)!important;line-height:1.08!important;letter-spacing:-.04em!important}html body header.fc-ready .fc-area,html body header.fc-ready .fc-special-wordmark small{display:block!important;font-size:clamp(7px,1.9vw,9px)!important;line-height:1.35!important;letter-spacing:0!important;white-space:nowrap!important}html body header.fc-ready :is(.header-tools,.oc-actions,.sc-sitemap-tools,.sc-cc-tools,.sc-booking-tools,.sc-legal-tools,.fc-unified-header-tools){flex:0 0 auto!important;margin-left:auto!important;max-width:100%!important}html body header.fc-ready .header-inner{height:100%!important;box-sizing:border-box!important}}';
-  document.head.appendChild(s);
- }
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply,{once:true});else apply();
-})();
+
 
 /* One shared search controller for every header variant. */
 (function(){if(document.getElementById('fc-shared-search-script'))return;var s=document.createElement('script');s.id='fc-shared-search-script';s.src='/assets/site-search.js?v=20261018-1';document.head.appendChild(s)})();
@@ -1134,4 +813,5 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+
 

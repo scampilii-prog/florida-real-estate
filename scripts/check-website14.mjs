@@ -9,8 +9,8 @@ const header=(s)=>s.match(/<header\b[\s\S]*?<\/header>/i)?.[0];
 assert(header(home),'Home header must exist');
 for(const [name,page] of [['Site Map',sitemap],['Closing Costs',closing]]){
  const h=header(page);
- assert(h?.includes('class="site-header"'),name+' must use Home header skeleton');
- assert(h.includes('class="header-inner"') && h.includes('class="header-tools"'),name+' missing shared layout');
+ assert(h?.includes('class="fc-site-header notranslate"'),name+' must use Home header skeleton');
+ assert(h.includes('class="fc-header-inner"') && h.includes('class="fc-header-actions"'),name+' missing shared layout');
  assert(h.includes('id="oc-lang-static"'),name+' missing language selector');
  assert(page.includes('assets/fc-canonical-header.css'),name+' missing canonical stylesheet');
  assert(page.includes('assets/fc-canonical-header-menu.js'),name+' missing menu behavior');
@@ -19,9 +19,8 @@ for(const [name,page] of [['Site Map',sitemap],['Closing Costs',closing]]){
 }
 assert.equal(header(sitemap),header(closing),'Site Map and Closing Costs header markup diverged');
 for(const [name,page] of [['Buy',buy],['Sell',sell]]){
- assert(page.includes('id="fc-oc-header-position-repair"'),name+' fixed header positioning missing');
- assert(page.includes('padding-top:94px!important'),name+' desktop header clearance missing');
- assert(page.includes('padding-top:82px!important'),name+' mobile header clearance missing');
+ assert(page.includes('class="fc-header-spacer"'),name+' initial header clearance missing');
+ assert(page.includes('fc-canonical-header.css?v=20261101-stable1'),name+' stable header stylesheet missing');
  assert.equal((page.match(/<main\b/g)||[]).length,1,name+' main count');
  assert.equal((page.match(/<footer\b/g)||[]).length,1,name+' footer count');
 }
@@ -166,6 +165,8 @@ execFileSync(process.execPath,[new URL('./check-new-construction.mjs',import.met
 execFileSync(process.execPath,[new URL('./check-site-search.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-buyer-timeline.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-photo-ownership.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-header-stable.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
+
 
 

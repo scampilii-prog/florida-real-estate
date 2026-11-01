@@ -1,15 +1,33 @@
-/* Florida Costiera: same Home header skeleton for the two former special templates. */
-html body header.site-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;height:94px!important;min-height:94px!important;max-height:94px!important;display:flex!important;align-items:center!important;z-index:99990!important;margin:0!important;padding:0!important;box-sizing:border-box!important;background-color:#102b43!important;background-image:linear-gradient(90deg,rgba(12,34,51,.96),rgba(12,34,51,.65) 49%,rgba(12,34,51,.08)),url('/assets/florida-costiera-header-sunset.webp')!important;background-size:100% 100%!important;background-position:center!important;border-bottom:1px solid #d3ac7650!important}
-html body header.site-header .header-inner{box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;width:100%!important;max-width:none!important;padding:0 calc(clamp(12px,2.5vw,38px) + 20px) 0 clamp(12px,2.5vw,38px)!important;margin:0!important}
-html body header.site-header .brand{display:flex;align-items:center;min-width:0;text-decoration:none;color:#fff}
-html body header.site-header .header-tools{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex:0 0 auto!important;gap:clamp(5px,1.2vw,18px)!important;margin-left:auto!important}
-html body header.site-header .header-tools .search-icon,html body header.site-header .header-tools .menu-button{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:35px!important;height:40px!important;min-width:35px!important;padding:4px!important;margin:0!important;background:transparent!important;border:0!important;color:#fff!important;text-decoration:none!important;font:800 25px/1 Manrope,Arial,sans-serif!important;cursor:pointer!important}
-html body header.site-header .header-tools svg{display:block}html body header.site-header .header-tools .menu-button{font-size:29px!important;line-height:1!important}
-html body header.site-header .oc-lang{display:flex;align-items:center}
-html body header.site-header .search-icon:hover,html body header.site-header .menu-button:hover{color:#e5c895!important}
-html body .fc-header-menu-panel{position:fixed;z-index:99995;top:94px;right:clamp(12px,2.5vw,38px);width:min(340px,calc(100vw - 24px));max-height:calc(100dvh - 104px);overflow:auto;background:#102b43;color:#fff;padding:14px 22px;border:1px solid #b99a6c;border-radius:0 0 12px 12px;box-shadow:0 15px 35px #0005}
-html body .fc-header-menu-panel[hidden]{display:none!important}
-html body .fc-header-menu-panel a{display:block;color:white;padding:10px 3px;text-decoration:none;font:650 13px/1.4 Manrope,Arial,sans-serif;border-bottom:1px solid #ffffff25}
-html body .fc-header-menu-panel a:hover{color:#e5c895}
-@media(max-width:860px){html body header.site-header{height:82px!important;min-height:82px!important;max-height:82px!important}html body .fc-header-menu-panel{top:82px;max-height:calc(100dvh - 90px)}}
-@media(max-width:620px){html body header.site-header .header-inner{padding:0 10px!important;gap:4px!important}html body header.site-header .header-tools{gap:2px!important}html body header.site-header .header-tools .search-icon,html body header.site-header .header-tools .menu-button{width:29px!important;min-width:29px!important}}
+/* Florida Costiera: the only owner of header geometry and appearance. */
+html{scrollbar-gutter:stable;--fc-header-height:94px;scroll-padding-top:calc(var(--fc-header-height) + 16px)}
+.fc-header-host{display:contents}
+.fc-header-spacer{display:block;height:var(--fc-header-height);flex:none}
+.fc-site-header,.fc-site-header *{box-sizing:border-box}
+.fc-site-header{position:fixed;inset:0 0 auto;z-index:99990;height:var(--fc-header-height);margin:0;padding:0;border:0;border-bottom:1px solid #d3ac7650;background:#102b43 url('/assets/florida-costiera-header-sunset.webp') center/100% 100% no-repeat;box-shadow:0 2px 9px #0002;color:#fff}
+.fc-site-header::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,34,51,.96) 0%,rgba(12,34,51,.87) 28%,rgba(12,34,51,.35) 52%,rgba(12,34,51,.08) 72%,transparent 100%);pointer-events:none}
+.fc-header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;inline-size:min(1120px,calc(100% - 48px));height:100%;margin-inline:auto}
+.fc-header-brand{display:block;flex:none;width:350px;height:64px;margin:0;padding:0;text-decoration:none}
+.fc-header-brand>svg{display:block;width:350px;height:64px;max-width:100%;overflow:visible}
+.fc-header-actions{display:flex;align-items:center;justify-content:flex-end;flex:none;gap:17px;height:44px;margin:0;padding:0}
+.fc-site-header :is(button,a,summary){-webkit-tap-highlight-color:transparent}
+.fc-site-header :is(.fc-header-language summary,.fc-header-language button,.fc-header-call,.fc-header-search,.fc-header-menu){font-family:Arial,Helvetica,sans-serif!important;font-size:16px;font-weight:700;line-height:1.2;letter-spacing:0;text-transform:none}
+.fc-site-header :is(.fc-header-call,.fc-header-search,.fc-header-menu){display:inline-flex;align-items:center;justify-content:center;flex:none;height:44px;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#fff;text-decoration:none;box-shadow:none;cursor:pointer}
+.fc-header-call{gap:7px;width:168px;white-space:nowrap;text-shadow:0 2px 4px #0009}
+.fc-header-call svg{width:21px;height:21px;flex:none}
+.fc-site-header :is(.fc-header-search,.fc-header-menu){width:36px;min-width:36px}
+.fc-site-header :is(.fc-header-search,.fc-header-menu)>svg{display:block;width:25px;height:25px;flex:none}
+.fc-header-language{position:relative;flex:none;width:112px;height:44px;margin:0}
+.fc-header-language>summary{display:flex;align-items:center;justify-content:space-between;gap:7px;width:112px;height:44px;margin:0;padding:0 3px;list-style:none;cursor:pointer;color:#fff;text-shadow:0 2px 4px #0009;white-space:nowrap}
+.fc-header-language>summary::-webkit-details-marker{display:none}
+.fc-header-language>summary::after{content:"";display:block;width:8px;height:8px;margin-right:3px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.fc-header-language-menu{position:absolute;inset:calc(100% + 8px) 0 auto auto;width:132px;margin:0;padding:5px;border:1px solid #9aabb7;border-radius:10px;background:#24445e;box-shadow:0 12px 24px #0004}
+.fc-site-header .fc-header-language-menu>button{display:block;width:100%;min-height:35px;margin:0;padding:8px;text-align:left;border:0;border-radius:5px;background:transparent;color:#fff;font-size:14px;font-weight:400;cursor:pointer;white-space:nowrap}
+.fc-header-language:not([open])>.fc-header-language-menu{display:none}
+.fc-header-language-menu>button[aria-pressed=true]{background:#365973;font-weight:700}
+.fc-site-header :is(a,button,summary):focus-visible{outline:2px solid #e9bf78;outline-offset:4px}
+.fc-site-header :is(a,summary):hover{color:#e9bf78}
+.fc-site-header .fc-header-language-menu>button:hover{background:#365973;color:#fff}
+.fc-header-translation-source{display:none!important}
+@media(max-width:960px){.fc-header-call{width:30px}.fc-header-call>span{display:none}.fc-header-actions{gap:12px}}
+@media(max-width:720px){.fc-header-inner{inline-size:calc(100% - 32px);gap:12px}.fc-header-brand,.fc-header-brand>svg{width:300px;height:55px}.fc-header-actions{gap:7px}.fc-header-language,.fc-header-language>summary{width:106px}}
+@media(max-width:620px){html{--fc-header-height:126px}.fc-site-header::before{background:linear-gradient(90deg,rgba(12,34,51,.94),rgba(12,34,51,.72) 60%,rgba(12,34,51,.42))}.fc-header-inner{display:grid;grid-template-columns:1fr;align-content:center;justify-items:start;row-gap:5px;inline-size:calc(100% - 28px)}.fc-header-brand{width:min(350px,100%);height:64px}.fc-header-brand>svg{width:350px;height:64px}.fc-header-actions{justify-self:end;height:40px;gap:12px}.fc-site-header :is(.fc-header-call,.fc-header-search,.fc-header-menu),.fc-header-language,.fc-header-language>summary{height:40px}.fc-header-language-menu{top:calc(100% + 3px)}}
