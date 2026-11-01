@@ -1,0 +1,11 @@
+import {readFileSync,readdirSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
+for(const p of readdirSync(root).filter(p=>p.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(p))){const html=read(p);assert.equal((html.match(/src="assets\/fc-translation-layout\.js\?v=20261101-translate1"/g)||[]).length,1,p+' translation offset controller');assert(!/fc-sitemap-translate-position-guard|fc-sitemap-translate-banner-fix/.test(html),p+' contains retired page-specific positioning');assert(!/body>\.skiptranslate\{display:none/.test(html),p+' hides the toolbar instead of reserving its space');}
+const source=read('assets/fc-translation-layout.js');let frames=[],queued=[],value=null,observer;
+const context={document:{readyState:'complete',documentElement:{clientWidth:1200,style:{setProperty(k,v){assert.equal(k,'--fc-translate-offset');value=v}}},querySelectorAll(){return frames}},window:{addEventListener(){}},WeakSet,ResizeObserver:class{constructor(fn){observer=fn}observe(){}},MutationObserver:class{observe(){}},requestAnimationFrame(fn){queued.push(fn)},getComputedStyle(f){return f.style}};
+vm.runInNewContext(source,context);const flush=()=>{while(queued.length)queued.shift()()};flush();assert.equal(value,'0px');
+const bar={parentElement:{},addEventListener(){},style:{display:'block',visibility:'visible'},getBoundingClientRect(){return {top:0,bottom:this.height,height:this.height,width:1200}},height:39};frames=[bar];observer();flush();assert.equal(value,'39px');bar.height=56;observer();flush();assert.equal(value,'56px');bar.style.display='none';observer();flush();assert.equal(value,'0px');bar.style.display='block';bar.height=0;observer();flush();assert.equal(value,'0px');bar.height=39;bar.getBoundingClientRect=()=>({top:0,bottom:39,height:39,width:150});observer();flush();assert.equal(value,'0px','A language menu must not move the page');
+const css=read('assets/fc-canonical-header.css');assert(css.includes('inset:var(--fc-translate-offset) 0 auto'));assert(css.includes('height:calc(var(--fc-header-height) + var(--fc-translate-offset))'));
+console.log('Translation layout: 48 controllers; visible, resized and closed toolbar offsets; small menus ignored.');

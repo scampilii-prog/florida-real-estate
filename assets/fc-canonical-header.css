@@ -1,9 +1,9 @@
 /* Florida Costiera: the only owner of header geometry and appearance. */
-html{scrollbar-gutter:stable;--fc-header-height:94px;scroll-padding-top:calc(var(--fc-header-height) + 16px)}
+html{scrollbar-gutter:stable;--fc-header-height:94px;--fc-translate-offset:0px;scroll-padding-top:calc(var(--fc-header-height) + var(--fc-translate-offset) + 16px)}
 .fc-header-host{display:contents}
-.fc-header-spacer{display:block;height:var(--fc-header-height);flex:none}
+.fc-header-spacer{display:block;height:calc(var(--fc-header-height) + var(--fc-translate-offset));flex:none}
 .fc-site-header,.fc-site-header *{box-sizing:border-box}
-.fc-site-header{position:fixed;inset:0 0 auto;z-index:99990;height:var(--fc-header-height);margin:0;padding:0;border:0;border-bottom:1px solid #d3ac7650;background:#102b43 url('/assets/florida-costiera-header-sunset.webp') center/100% 100% no-repeat;box-shadow:0 2px 9px #0002;color:#fff}
+.fc-site-header{position:fixed;inset:var(--fc-translate-offset) 0 auto;z-index:99990;height:var(--fc-header-height);margin:0;padding:0;border:0;border-bottom:1px solid #d3ac7650;background:#102b43 url('/assets/florida-costiera-header-sunset.webp') center/100% 100% no-repeat;box-shadow:0 2px 9px #0002;color:#fff}
 .fc-site-header::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,34,51,.96) 0%,rgba(12,34,51,.87) 28%,rgba(12,34,51,.35) 52%,rgba(12,34,51,.08) 72%,transparent 100%);pointer-events:none}
 .fc-header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;height:100%}
 .fc-header-brand{display:block;flex:none;width:350px;height:64px;margin:0;padding:0;text-decoration:none}
@@ -33,3 +33,6 @@ html{scrollbar-gutter:stable;--fc-header-height:94px;scroll-padding-top:calc(var
 @media(max-width:620px){html{--fc-header-height:126px}.fc-site-header::before{background:linear-gradient(90deg,rgba(12,34,51,.94),rgba(12,34,51,.72) 60%,rgba(12,34,51,.42))}.fc-header-inner{display:grid;grid-template-columns:1fr;align-content:center;justify-items:start;row-gap:5px;}.fc-header-brand{width:min(350px,100%);height:64px}.fc-header-brand>svg{width:350px;height:64px}.fc-header-actions{justify-self:end;height:40px;gap:12px}.fc-site-header :is(.fc-header-call,.fc-header-search,.fc-header-menu),.fc-header-language,.fc-header-language>summary{height:40px}.fc-header-language-menu{top:calc(100% + 3px)}}
 
 .fc-site-header .fc-header-menu{justify-content:flex-end}
+
+/* The shared spacer owns the translation offset; Google must not shift body too. */
+html body{top:0!important}

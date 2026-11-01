@@ -383,7 +383,7 @@
     if(document.getElementById('fc-translate-layout-fix'))return;
     var style=document.createElement('style');
     style.id='fc-translate-layout-fix';
-    style.textContent="html body{top:0!important}html.translated-ltr body,html.translated-rtl body{top:0!important}html body .goog-te-banner-frame,html body iframe.goog-te-banner-frame,html body iframe.skiptranslate[src*=\"translate.google\"]{display:none!important}html body #floatingLeftBackTop .fc-top-label{white-space:nowrap!important}";
+    style.textContent='html body #floatingLeftBackTop .fc-top-label{white-space:nowrap!important}';
     document.head.appendChild(style);
     var dict={en:'Back to Top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
     var labels={en:'Back to top',es:'Volver arriba',it:'Torna su',pt:'Voltar ao topo'};
@@ -421,25 +421,6 @@
   document.head.appendChild(st);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',apply);else apply();
-})();
-
-
-/* Hide Google's intrusive translation toolbar without moving site content.
-   Google may inject both a top-positioned iframe and a body top offset. */
-(function(){
-  function fix(){
-    if(!/^\/site-map(?:\.html)?\/?$/.test(location.pathname))return;
-    if(!document.getElementById('fc-google-banner-layout')){
-      var st=document.createElement('style');st.id='fc-google-banner-layout';
-      st.textContent="html,html body{top:0!important;margin-top:0!important}body.translated-ltr,body.translated-rtl{top:0!important}iframe.goog-te-banner-frame,iframe.goog-te-banner-frame.skiptranslate,.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate,body>iframe.skiptranslate,body>.skiptranslate.goog-te-banner-frame{display:none!important;height:0!important;visibility:hidden!important}";
-      document.head.appendChild(st);
-    }
-    if(document.body&&document.body.style.top&&document.body.style.top!=='0px')document.body.style.setProperty('top','0px','important');
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fix);else fix();
-  window.addEventListener('load',fix);
-  window.addEventListener('pageshow',fix);
-  document.addEventListener('change',function(e){if(e.target.matches('#oc-lang-static,#lang')){fix();setTimeout(fix,250);setTimeout(fix,1200)}},true);
 })();
 
 
