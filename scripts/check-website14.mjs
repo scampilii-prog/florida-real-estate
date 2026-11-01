@@ -167,6 +167,7 @@ execFileSync(process.execPath,[new URL('./check-buyer-timeline.mjs',import.meta.
 execFileSync(process.execPath,[new URL('./check-photo-ownership.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-header-stable.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-page-layout.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-source-integrity.mjs',import.meta.url).pathname],{stdio:'inherit'});
 console.log('Structural regression and common inquiry checks passed. Browser visual QA remains required.');
 
 

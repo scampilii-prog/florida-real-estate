@@ -7,5 +7,12 @@
 .fc-page-flow,.fc-page-band{box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:0}
 .fc-page-fill,.fc-page-container .fc-inquiry-split{box-sizing:border-box;width:100%;max-width:none;margin-inline:0}
 :is(.oc-real-content,.qa-layout).fc-page-fill{padding-inline:0}
-.fc-page-hero{box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:max(var(--fc-page-gutter),calc((100% - var(--fc-page-max)) / 2))}
+.fc-page-hero{align-items:flex-start;text-align:left;box-sizing:border-box;width:100%;max-width:none;margin-inline:0;padding-inline:max(var(--fc-page-gutter),calc((100% - var(--fc-page-max)) / 2))}
 :is(.sc-unified-footer,.sc-cc-footer){padding-inline:0}
+
+/* Hero copy shares the content edge, including the split calculator photograph. */
+.fc-page-hero>:is(h1,p,small,.eyebrow){margin-inline:0;text-align:left}
+.fc-calculator-band{display:grid;grid-template-columns:max(var(--fc-page-gutter),calc((100% - var(--fc-page-max))/2)) minmax(0,1fr) 50%;align-items:stretch}
+.fc-calculator-band>.calculator-hero-copy{grid-column:2;min-width:0;padding-inline:0 35px}
+.fc-calculator-band>.calculator-hero-photo{grid-column:3}
+@media(max-width:820px){.fc-calculator-band{grid-template-columns:var(--fc-page-gutter) minmax(0,1fr) var(--fc-page-gutter)}.fc-calculator-band>.calculator-hero-copy{grid-column:2;grid-row:1;padding-inline:0}.fc-calculator-band>.calculator-hero-photo{grid-column:1/-1;grid-row:2}}
