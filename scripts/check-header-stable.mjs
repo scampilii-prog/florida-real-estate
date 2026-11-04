@@ -7,7 +7,7 @@ let count=0;
 for(const file of readdirSync(root).filter(f=>f.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(f))){
  const html=read(file),header=html.match(/<header\b[\s\S]*?<\/header><div class="fc-header-spacer"[^>]*><\/div>/)?.[0];
  assert.equal(header,template,file+' does not use the single initial header');
- assert.equal((html.match(/fc-canonical-header\.css\?v=20261104-contact1/g)||[]).length,1,file+' header stylesheet count');
+ assert.equal((html.match(/fc-canonical-header\.css\?v=20261104-controls2/g)||[]).length,1,file+' header stylesheet count');
  assert(html.indexOf('fc-canonical-header.css')<html.indexOf('</head>'),file+' header CSS loads too late');
  assert(!/<link[^>]*fc-canonical-header\.css[^>]*\b(?:defer|media="print")/.test(html),file+' header CSS must block first paint');
  for(const style of html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g))assert(!/header\.fc-ready/.test(style[1]),file+' contains retired header CSS');

@@ -20,7 +20,7 @@ for(const [name,page] of [['Site Map',sitemap],['Closing Costs',closing]]){
 assert.equal(header(sitemap),header(closing),'Site Map and Closing Costs header markup diverged');
 for(const [name,page] of [['Buy',buy],['Sell',sell]]){
  assert(page.includes('class="fc-header-spacer"'),name+' initial header clearance missing');
- assert(page.includes('fc-canonical-header.css?v=20261104-contact1'),name+' stable header stylesheet missing');
+ assert(page.includes('fc-canonical-header.css?v=20261104-controls2'),name+' stable header stylesheet missing');
  assert.equal((page.match(/<main\b/g)||[]).length,1,name+' main count');
  assert.equal((page.match(/<footer\b/g)||[]).length,1,name+' footer count');
 }
