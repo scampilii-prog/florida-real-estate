@@ -4,3 +4,10 @@
 #tinoPanel .tino-direct-contact a:first-child{background:#102b43;border-color:#102b43;color:#fff}
 #tinoPanel .tino-direct-contact a:hover{background:#ead8b7;color:#102b43}
 #tinoPanel .tino-direct-contact a:focus-visible{outline:3px solid #b58a49;outline-offset:2px}
+
+/* Reception choices remain available even if the AI service is unavailable. */
+#tinoPanel .tino-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;flex-shrink:0}
+#tinoPanel .tino-options a{display:flex;align-items:center;justify-content:center;min-height:40px;padding:9px 10px;border:1px solid #c7ae80;border-radius:10px;background:#fff;color:#102b43;text-decoration:none;text-align:center;font:700 13px/1.35 Manrope,Arial,sans-serif}
+#tinoPanel .tino-options a:last-child{background:#ead8b7;border-color:#b99458}
+#tinoPanel .tino-options a:hover{background:#f6eddc}
+#tinoPanel .tino-options a:focus-visible{outline:3px solid #b58a49;outline-offset:2px}
