@@ -1138,7 +1138,7 @@ async function sendTino(event) {
   messages.appendChild(reply);
   reply.scrollIntoView({ behavior: "smooth", block: "end" });
   const requestController = new AbortController();
-  const requestTimeout = setTimeout(() => requestController.abort(), 20000);
+  const requestTimeout = setTimeout(() => requestController.abort(), 30000);
 
   try {
     const response = await fetch(
