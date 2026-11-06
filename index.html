@@ -1177,8 +1177,9 @@ async function sendTino(event) {
     reply.style.whiteSpace = "pre-wrap";
     reply.textContent = answer.trim().replace(/\\n/g, "\n").replace(/\*\*/g, "");
   } catch (error) {
-    reply.textContent =
-      "The assistant could not respond. Contact Sabatino below for personal help.";
+    reply.textContent = error.message && /^Ask Tino:/.test(error.message)
+      ? error.message
+      : "Ask Tino could not respond. Please try again.";
   } finally {
     clearTimeout(requestTimeout);
   }
