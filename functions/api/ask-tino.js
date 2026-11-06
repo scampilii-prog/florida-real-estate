@@ -18,6 +18,15 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Introduce Florida Costiera as a platform, not just a contact referral.
+ if (/florida\\s+costiera/i.test(message) && /qu[eé]\\s+es|qu[eé]\\s+servicios|servicios\\s+ofrece|what\\s+is|what\\s+services|cos['’]?\\s*[eè]|servizi|ofrece|offers/i.test(message)) {
+  const reply = /what\\s+is|what\\s+services|offers/i.test(message)
+   ? 'Florida Costiera is a real estate information and services website focused on Southwest Florida’s Gulf Coast, led by Sabatino Campilii, Realtor® with LoKation® Real Estate. It helps buyers and sellers explore homes, waterfront properties, new construction, local communities, buying and selling guides, real estate questions and calculators. It covers areas such as Boca Grande, Englewood, Rotonda West, Venice, Punta Gorda and Sarasota. Website: https://floridacostiera.com/.'
+   : /servizi|cos['’]?\\s*[eè]/i.test(message)
+   ? 'Florida Costiera è un sito di informazioni e servizi immobiliari dedicato alla costa sud-occidentale del Golfo della Florida, guidato da Sabatino Campilii, Realtor® con LoKation® Real Estate. Offre risorse per acquistare e vendere casa, esplorare proprietà sull’acqua, nuove costruzioni, comunità locali, guide, domande frequenti e calcolatori immobiliari. Sito: https://floridacostiera.com/.'
+   : 'Florida Costiera es una plataforma de información y servicios inmobiliarios dedicada a la costa suroeste del Golfo de Florida, dirigida por Sabatino Campilii, Realtor® de LoKation® Real Estate. Ayuda a compradores y vendedores a explorar viviendas, propiedades frente al agua, nuevas construcciones y comunidades locales. También ofrece guías de compra y venta, preguntas frecuentes y calculadoras inmobiliarias. Cubre zonas como Boca Grande, Englewood, Rotonda West, Venice, Punta Gorda y Sarasota. Sitio web: https://floridacostiera.com/.';
+  return json({ reply });
+ }
  // Give a grounded short professional biography instead of a generic sales pitch.
  if (/\b(sabatino|tino)\s+campilii\b/i.test(message) && /qui[eé]n|who|chi\\s+[eè]|experiencia|experience|esperienza|trayectoria|background/i.test(message)) {
   const reply = /who|experience|background/i.test(message)
