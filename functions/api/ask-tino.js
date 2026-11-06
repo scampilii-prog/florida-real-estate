@@ -18,11 +18,20 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Give a grounded short professional biography instead of a generic sales pitch.
+ if (/\\b(sabatino|tino)\\s+campilii\\b/i.test(message) && /qui[eé]n|who|chi\\s+[eè]|experiencia|experience|esperienza|trayectoria|background/i.test(message)) {
+  const reply = /who|experience|background/i.test(message)
+   ? 'Sabatino Campilii is a Florida Realtor® with LoKation® Real Estate (Florida license SL3363040). He has more than 25 years of experience in construction and real estate, with an engineering and development background. He focuses on communities along Southwest Florida’s Gulf Coast, including Boca Grande, Englewood, Rotonda West, Venice and Punta Gorda.'
+   : /chi\\s+[eè]|esperienza/i.test(message)
+   ? 'Sabatino Campilii è un Realtor® in Florida con LoKation® Real Estate (licenza SL3363040). Ha oltre 25 anni di esperienza nell’edilizia e nel settore immobiliare, con un passato nell’ingegneria e nello sviluppo immobiliare. Opera soprattutto nella costa sud-occidentale del Golfo della Florida.'
+   : 'Sabatino Campilii es Realtor® en Florida con LoKation® Real Estate (licencia SL3363040). Cuenta con más de 25 años de experiencia en construcción y bienes raíces, y trayectoria en ingeniería y desarrollo inmobiliario. Se especializa en comunidades de la costa suroeste del Golfo de Florida, como Boca Grande, Englewood, Rotonda West, Venice y Punta Gorda.';
+  return json({ reply });
+ }
  // Avoid inventing biographies or turning unknown-person questions into advertisements.
- if (/marietta\\s+campilii/i.test(message)) {
+ if (/marietta\s+campilii/i.test(message)) {
   const reply = /who|english/i.test(message)
    ? 'I do not have verified information about Marietta Campilii. Could you share a detail to help identify her?'
-   : /chi\\s+[eè]|italian/i.test(message)
+   : /chi\s+[eè]|italian/i.test(message)
    ? 'Non dispongo di informazioni verificate su Marietta Campilii. Puoi darmi qualche dettaglio per identificarla?'
    : 'No dispongo de información verificada sobre Marietta Campilii. ¿Podrías darme algún detalle para identificarla?';
   return json({ reply });
@@ -80,7 +89,7 @@ export async function onRequest({ request }) {
    } else break;
   }
   if (typeof reply !== 'string' || !reply.trim()) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
-  return json({ reply: reply.trim() });
+  return json({ reply: reply.trim().replace(/\\\\n/g, '\\n').replace(/\\*\\*/g, '') });
  } catch {
   return json({ error: 'The assistant is temporarily unavailable. Contact Sabatino for personal help.' }, controller.signal.aborted ? 504 : 502);
  } finally { clearTimeout(timer); }
