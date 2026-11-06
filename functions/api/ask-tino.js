@@ -38,8 +38,19 @@ export async function onRequest({ request }) {
    body: JSON.stringify({ message: reference + message }), signal: controller.signal
   });
   const data = await upstream.json();
-  if (!upstream.ok || typeof data?.reply !== 'string' || !data.reply.trim()) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
-  return json({ reply: data.reply });
+  if (!upstream.ok) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
+  // Normalize the upstream payload at the bridge, not just in the browser.
+  let reply = data?.reply ?? data;
+  for (let depth = 0; depth < 4; depth++) {
+   if (typeof reply === 'string' && reply.trim().startsWith('{')) {
+    try { reply = JSON.parse(reply); } catch { break; }
+   }
+   if (reply && typeof reply === 'object') {
+    reply = reply.reply ?? reply.choices?.[0]?.message?.content ?? '';
+   } else break;
+  }
+  if (typeof reply !== 'string' || !reply.trim()) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
+  return json({ reply: reply.trim() });
  } catch {
   return json({ error: 'The assistant is temporarily unavailable. Contact Sabatino for personal help.' }, controller.signal.aborted ? 504 : 502);
  } finally { clearTimeout(timer); }

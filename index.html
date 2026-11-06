@@ -1152,7 +1152,23 @@ async function sendTino(event) {
       throw new Error(data.error || "Request failed");
     }
 
-    reply.textContent = data.reply || "Please try again.";
+    // The API can return a JSON-encoded reply (sometimes twice).
+    // Unwrap only known reply shapes; never expose raw API metadata.
+    let answer = data.reply ?? data;
+    for (let depth = 0; depth < 3; depth++) {
+      if (typeof answer === "string") {
+        const trimmed = answer.trim();
+        if (!trimmed.startsWith("{")) break;
+        try { answer = JSON.parse(trimmed); } catch (_) { break; }
+      }
+      if (answer && typeof answer === "object") {
+        answer = answer.reply ?? answer.choices?.[0]?.message?.content ?? "";
+      } else break;
+    }
+    if (typeof answer !== "string" || !answer.trim()) {
+      throw new Error("Empty assistant response");
+    }
+    reply.textContent = answer.trim();
   } catch (error) {
     reply.textContent =
       "The assistant could not respond. Contact Sabatino below for personal help.";
