@@ -19,10 +19,10 @@ export async function onRequest({ request }) {
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
  // Give a grounded short professional biography instead of a generic sales pitch.
- if (/\\b(sabatino|tino)\\s+campilii\\b/i.test(message) && /qui[eé]n|who|chi\\s+[eè]|experiencia|experience|esperienza|trayectoria|background/i.test(message)) {
+ if (/\b(sabatino|tino)\s+campilii\b/i.test(message) && /qui[eé]n|who|chi\\s+[eè]|experiencia|experience|esperienza|trayectoria|background/i.test(message)) {
   const reply = /who|experience|background/i.test(message)
    ? 'Sabatino Campilii is a Florida Realtor® with LoKation® Real Estate (Florida license SL3363040). He has more than 25 years of experience in construction and real estate, with an engineering and development background. He focuses on communities along Southwest Florida’s Gulf Coast, including Boca Grande, Englewood, Rotonda West, Venice and Punta Gorda.'
-   : /chi\\s+[eè]|esperienza/i.test(message)
+   : /chi\s+[eè]|esperienza/i.test(message)
    ? 'Sabatino Campilii è un Realtor® in Florida con LoKation® Real Estate (licenza SL3363040). Ha oltre 25 anni di esperienza nell’edilizia e nel settore immobiliare, con un passato nell’ingegneria e nello sviluppo immobiliare. Opera soprattutto nella costa sud-occidentale del Golfo della Florida.'
    : 'Sabatino Campilii es Realtor® en Florida con LoKation® Real Estate (licencia SL3363040). Cuenta con más de 25 años de experiencia en construcción y bienes raíces, y trayectoria en ingeniería y desarrollo inmobiliario. Se especializa en comunidades de la costa suroeste del Golfo de Florida, como Boca Grande, Englewood, Rotonda West, Venice y Punta Gorda.';
   return json({ reply });
