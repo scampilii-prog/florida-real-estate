@@ -1064,7 +1064,7 @@ function closeSearch() {
     }
   }
 </style>
-<button aria-label="Open Florida Costiera virtual assistant" class="tino-launcher" onclick="toggleTino()">
+<button aria-label="Open Florida Costiera virtual assistant" class="tino-launcher" onclick="toggleTino()" type="button">
 <img alt="Sabatino Campilii" src="sabatino-campilii-i.jpg"/>
 <span>Let’s Talk</span>
 <span class="tino-dot"></span>
@@ -1101,7 +1101,12 @@ function closeSearch() {
 <script>
   function toggleTino() {
     const panel = document.getElementById("tinoPanel");
-    panel.classList.toggle("open");
+    const isOpen = panel.classList.toggle("open");
+    panel.style.setProperty("display", isOpen ? "flex" : "none", "important");
+    panel.style.setProperty("visibility", isOpen ? "visible" : "hidden", "important");
+    panel.style.setProperty("opacity", isOpen ? "1" : "0", "important");
+    panel.style.setProperty("pointer-events", isOpen ? "auto" : "none", "important");
+    panel.setAttribute("aria-hidden", String(!isOpen));
   }
 
   function tinoSelect(message) {
