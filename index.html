@@ -1151,6 +1151,10 @@ async function sendTino(event) {
       }
     );
 
+    const contentType = response.headers.get("content-type") || "";
+    if (!contentType.toLowerCase().includes("application/json")) {
+      throw new Error("Server returned HTML/non-JSON (HTTP " + response.status + "). Please check /api/ask-tino routing.");
+    }
     const data = await response.json();
 
     if (!response.ok) {
