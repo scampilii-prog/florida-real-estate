@@ -18,6 +18,15 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Verified creative partner: answer directly, without a generic real-estate referral.
+ if (/acr[oó]matico/i.test(message)) {
+  const reply = /chi|cos.?[eè]|italian/i.test(message)
+   ? 'Acromatico è il marchio creativo legato a Italo Campilii, che si occupa di design, pubblicità e comunicazione visiva. È accreditato sul sito Florida Costiera. Italo non è un agente immobiliare. Sito: https://acromatico.com/.'
+   : /who|what|english/i.test(message)
+   ? 'Acromatico is the creative brand associated with Italo Campilii, working in design, advertising and visual communications. It is credited on the Florida Costiera website. Italo is not a licensed real estate agent. Website: https://acromatico.com/.'
+   : 'Acromatico es la marca creativa vinculada a Italo Campilii, dedicada al diseño, la publicidad y la comunicación visual. Aparece acreditada en el sitio de Florida Costiera. Italo no es agente inmobiliario. Sitio web: https://acromatico.com/.';
+  return json({ reply });
+ }
  // Answer common closing-cost questions with useful general guidance first.
  // No property-specific estimate without a purchase price, financing and location.
  if (/gastos? de cierre|costos? de cierre|closing costs?|spese di chiusura|costi di chiusura/i.test(message)) {
@@ -41,7 +50,7 @@ export async function onRequest({ request }) {
    : 'Contact Sabatino Campilii, Realtor® with LoKation® Real Estate. Phone: (941) 270-4877. Email: sabatino@floridacostiera.com. Contact form: https://floridacostiera.com/contact#tell-us-your-plans. Use the buttons below to send an inquiry or call him.';
   return json({ reply: details });
  }
- const reference = 'Verified Florida Costiera website information: Sabatino Campilii is a Realtor with LoKation Real Estate serving Southwest Florida Gulf Coast communities. His only website contact phone is (941) 270-4877. His email is sabatino@floridacostiera.com. Website: https://floridacostiera.com/. Contact form: https://floridacostiera.com/contact#tell-us-your-plans. Italo handles advertising and photography and is not a licensed real estate agent. You are a virtual assistant, not Sabatino. Do not invent contact details, listings, prices, availability, addresses, or live market statistics. If information is unavailable, refer the visitor to Sabatino. Reply in the visitor\'s language.\n\nVisitor message: ';
+ const reference = 'Verified Florida Costiera website information: Sabatino Campilii is a Realtor with LoKation Real Estate serving Southwest Florida Gulf Coast communities. His only website contact phone is (941) 270-4877. His email is sabatino@floridacostiera.com. Website: https://floridacostiera.com/. Contact form: https://floridacostiera.com/contact#tell-us-your-plans. Acromatico (https://acromatico.com/) is the creative brand associated with Italo Campilii, handling design, advertising and visual communications; it is credited in the Florida Costiera website footer. Italo is not a licensed real estate agent. You are a virtual assistant, not Sabatino. Do not invent contact details, listings, prices, availability, addresses, or live market statistics. If information is unavailable, refer the visitor to Sabatino. Reply in the visitor\'s language.\n\nVisitor message: ';
  const controller = new AbortController();
  const timer = setTimeout(() => controller.abort(), 15000);
  try {
