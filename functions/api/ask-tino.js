@@ -18,6 +18,18 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Answer common closing-cost questions with useful general guidance first.
+ // No property-specific estimate without a purchase price, financing and location.
+ if (/gastos? de cierre|costos? de cierre|closing costs?|spese di chiusura|costi di chiusura/i.test(message)) {
+  const isSpanish = /gastos?|costos?|cierre/i.test(message);
+  const isItalian = /spese|costi|chiusura/i.test(message);
+  const answer = isSpanish
+   ? 'Al comprar una casa en Florida, los gastos de cierre pueden incluir:\\n\\n1. **Préstamo hipotecario:** tasación, cargos del prestamista y otros costos de financiación, si corresponde.\\n2. **Título y cierre:** búsqueda de título, seguro de título, servicios de cierre y registro de documentos. Quién paga cada concepto depende del contrato y las prácticas locales.\\n3. **Impuestos y ajustes:** posibles impuestos documentarios, gastos prepagados de seguro e impuestos sobre la propiedad, y depósitos iniciales de escrow.\\n\\nEl monto exacto depende del precio, el financiamiento, el condado y el contrato. Pide al prestamista un Loan Estimate y, antes del cierre, revisa el Closing Disclosure. Para una estimación de una propiedad concreta, puedes contactar a Sabatino Campilii al (941) 270-4877.'
+   : isItalian
+   ? 'In Florida, i costi di chiusura per chi acquista possono comprendere:\\n\\n1. **Mutuo:** perizia e commissioni del finanziatore, se applicabili.\\n2. **Titolo e chiusura:** ricerca del titolo, assicurazione del titolo, registrazione degli atti e servizi di chiusura. La ripartizione dipende dal contratto.\\n3. **Imposte e anticipi:** eventuali imposte documentarie, assicurazione e imposte immobiliari anticipate e deposito escrow.\\n\\nL’importo dipende dall’immobile, dal finanziamento e dal contratto. Per una stima specifica, contatta Sabatino Campilii al (941) 270-4877.'
+   : 'When buying a home in Florida, closing costs may include:\\n\\n1. **Mortgage costs:** appraisal and lender fees, if financed.\\n2. **Title and closing:** title search, title insurance, recording and settlement services. Who pays varies by contract and local practice.\\n3. **Taxes and prepaid items:** applicable documentary taxes, prepaid property insurance and taxes, and initial escrow deposits.\\n\\nExact costs depend on price, financing, county and contract terms. Review your Loan Estimate and Closing Disclosure. For a property-specific estimate, contact Sabatino Campilii at (941) 270-4877.';
+  return json({ reply: answer.replace(/\\\\n/g, '\\n') });
+ }
  // Contact details come from verified site data, never from model recall.
  if (/contact|contatt|phone|tel[eé]fono|telefone|telephone|e[ -]?mail|correo|call\b|chiam|ligar|reach\b|contacter|contato|llamar/i.test(message)) {
   const details = /[¿¡]|c[oó]mo|correo|teléfono|llamar/i.test(message)
