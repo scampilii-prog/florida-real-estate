@@ -1175,7 +1175,7 @@ async function sendTino(event) {
     }
     // Keep the chat operational; show line breaks without interpreting HTML.
     reply.style.whiteSpace = "pre-wrap";
-    reply.textContent = answer.trim().replace(/\\n/g, "\\n");
+    reply.textContent = answer.trim().replace(/\\n/g, "\n").replace(/\*\*/g, "");
   } catch (error) {
     reply.textContent =
       "The assistant could not respond. Contact Sabatino below for personal help.";
