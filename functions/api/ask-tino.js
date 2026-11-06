@@ -18,6 +18,15 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Avoid inventing biographies or turning unknown-person questions into advertisements.
+ if (/marietta\\s+campilii/i.test(message)) {
+  const reply = /who|english/i.test(message)
+   ? 'I do not have verified information about Marietta Campilii. Could you share a detail to help identify her?'
+   : /chi\\s+[eè]|italian/i.test(message)
+   ? 'Non dispongo di informazioni verificate su Marietta Campilii. Puoi darmi qualche dettaglio per identificarla?'
+   : 'No dispongo de información verificada sobre Marietta Campilii. ¿Podrías darme algún detalle para identificarla?';
+  return json({ reply });
+ }
  // Verified creative partner: answer directly, without a generic real-estate referral.
  if (/acr[oó]matico/i.test(message)) {
   const reply = /chi|cos.?[eè]|italian/i.test(message)
