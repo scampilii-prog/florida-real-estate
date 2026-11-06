@@ -1177,9 +1177,7 @@ async function sendTino(event) {
     reply.style.whiteSpace = "pre-wrap";
     reply.textContent = answer.trim().replace(/\\n/g, "\n").replace(/\*\*/g, "");
   } catch (error) {
-    reply.textContent = error.message && /^Ask Tino:/.test(error.message)
-      ? error.message
-      : "Ask Tino could not respond. Please try again.";
+    reply.textContent = "Ask Tino: " + (error?.name === "AbortError" ? "Request timed out after 30 seconds." : (error?.message || "Unknown request error."));
   } finally {
     clearTimeout(requestTimeout);
   }
