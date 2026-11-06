@@ -1168,29 +1168,9 @@ async function sendTino(event) {
     if (typeof answer !== "string" || !answer.trim()) {
       throw new Error("Empty assistant response");
     }
-    // Render simple Markdown as readable paragraphs without inserting untrusted HTML.
-    const clean = answer.trim().replace(/\\r\\n/g, "\n").replace(/\\n/g, "\n");
-    reply.replaceChildren();
+    // Keep the chat operational; show line breaks without interpreting HTML.
     reply.style.whiteSpace = "pre-wrap";
-    const pattern = /\\[([^\\]]+)\\]\\((https?:\\/\\/[^\\s)]+|mailto:[^\\s)]+)\\)|\\*\\*([^*]+)\\*\\*|(https?:\\/\\/[^\\s]+)/g;
-    let cursor = 0, match;
-    while ((match = pattern.exec(clean))) {
-      if (match.index > cursor) reply.append(document.createTextNode(clean.slice(cursor, match.index)));
-      if (match[3]) {
-        const strong = document.createElement("strong");
-        strong.textContent = match[3];
-        reply.append(strong);
-      } else {
-        const a = document.createElement("a");
-        a.href = match[2] || match[4];
-        a.textContent = match[1] || match[4];
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        reply.append(a);
-      }
-      cursor = pattern.lastIndex;
-    }
-    if (cursor < clean.length) reply.append(document.createTextNode(clean.slice(cursor)));
+    reply.textContent = answer.trim().replace(/\\n/g, "\\n");
   } catch (error) {
     reply.textContent =
       "The assistant could not respond. Contact Sabatino below for personal help.";
