@@ -90,8 +90,10 @@ export async function onRequest({ request }) {
    method: 'POST', headers: { 'Content-Type': 'application/json' },
    body: JSON.stringify({ message: reference + message }), signal: controller.signal
   });
-  const data = await upstream.json();
-  if (!upstream.ok) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
+  if (!upstream.ok) return json({ error: 'Ask Tino: AI service returned HTTP ' + upstream.status + '.', code: 'UPSTREAM_HTTP_' + upstream.status }, 502);
+  let data;
+  try { data = await upstream.json(); }
+  catch { return json({ error: 'Ask Tino: AI service returned an invalid response.', code: 'UPSTREAM_INVALID_JSON' }, 502); }
   // Normalize the upstream payload at the bridge, not just in the browser.
   let reply = data?.reply ?? data;
   for (let depth = 0; depth < 4; depth++) {
@@ -102,9 +104,9 @@ export async function onRequest({ request }) {
     reply = reply.reply ?? reply.choices?.[0]?.message?.content ?? '';
    } else break;
   }
-  if (typeof reply !== 'string' || !reply.trim()) return json({ error: 'The assistant could not respond. Contact Sabatino for personal help.' }, 502);
+  if (typeof reply !== 'string' || !reply.trim()) return json({ error: 'Ask Tino: AI service returned an empty response.', code: 'UPSTREAM_EMPTY' }, 502);
   return json({ reply: reply.trim().replace(/\\\\n/g, '\\n').replace(/\\*\\*/g, '') });
  } catch {
-  return json({ error: 'The assistant is temporarily unavailable. Contact Sabatino for personal help.' }, controller.signal.aborted ? 504 : 502);
+  return json({ error: controller.signal.aborted ? 'Ask Tino: AI service timed out.' : 'Ask Tino: could not connect to AI service.', code: controller.signal.aborted ? 'UPSTREAM_TIMEOUT' : 'UPSTREAM_CONNECTION' }, controller.signal.aborted ? 504 : 502);
  } finally { clearTimeout(timer); }
 }
