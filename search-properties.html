@@ -608,7 +608,7 @@ confirmed directly in OneHome.</p>
 <a href="/contact.html?interest=Investing#tell-us-your-plans">Invest</a>
 <a href="/contact.html?request=callback#tell-us-your-plans">Request a callback</a>
 </div>
-<form class="tino-input" onsubmit="sendTino(event)">
+<form class="tino-input">
 <input aria-label="Your message" data-i18n-placeholder="tinoPlaceholder" id="tinoText" placeholder="Ask Tino anything..." type="text"/>
 <button aria-label="Send message" type="submit">→</button>
 </form><nav class="tino-direct-contact" aria-label="Contact Tino"><a href="/contact.html#tell-us-your-plans">Tell Tino your plans</a></nav>
@@ -627,61 +627,6 @@ confirmed directly in OneHome.</p>
      document.getElementById("tinoText").focus();
    }
 
-
-async function sendTino(event) {
-  event.preventDefault();
-
-   const input = document.getElementById("tinoText");
-   const message = input.value.trim();
-
-    if (!message) return;
-
-    const messages = document.getElementById("tinoMessages");
-
-    const bubble = document.createElement("div");
-    bubble.className = "tino-bubble";
-    bubble.textContent = message;
-    bubble.style.background = "#e8f3f0";
-    messages.appendChild(bubble);
-
-    input.value = "";
-
-    const reply = document.createElement("div");
-    reply.className = "tino-bubble";
-    reply.textContent = siteText("tinoThinking");
-    messages.appendChild(reply);
-    reply.scrollIntoView({ behavior: "smooth", block: "end" });
-  const requestController = new AbortController();
-  const requestTimeout = setTimeout(() => requestController.abort(), 20000);
-
-    try {
-      const response = await fetch(
-         "/api/ask-tino",
-         {
-           method: "POST",
-           headers: { "Content-Type": "application/json" },
-        signal: requestController.signal,
-           body: JSON.stringify({ message })
-         }
-      );
-
-       const data = await response.json();
-
-       if (!response.ok) {
-         throw new Error(data.error || "Request failed");
-       }
-
-      reply.textContent = data.reply || "Please try again.";
-    } catch (error) {
-      reply.textContent =
-        siteText("tinoUnavailable");
-    } finally {
-    clearTimeout(requestTimeout);
-  }
-
-
-    reply.scrollIntoView({ behavior: "smooth", block: "end" });
-}
 
 </script><script src="assets/site.js?v=20261008b"></script><script>(function(){
 const hints={en:'Discover the community',es:'Descubre la comunidad',it:'Scopri la comunità',pt:'Conheça a comunidade'};
@@ -732,7 +677,7 @@ html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 2
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
+</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1&ask=20261107-clean1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
 
 <script src="assets/inquiry-form.js?v=20261104-controls2" defer></script></body>
 </html>

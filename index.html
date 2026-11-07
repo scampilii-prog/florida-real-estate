@@ -1089,7 +1089,7 @@ function closeSearch() {
 <a href="/investment-center.html">Invest</a>
 <a href="/contact.html?request=callback#tell-us-your-plans">Request a callback</a>
 </div>
-<form class="tino-input" onsubmit="sendTino(event)">
+<form class="tino-input">
 <input aria-label="Your message" id="tinoText" placeholder="Ask Tino anything..." type="text"/>
 <button aria-label="Send message" type="submit">→</button>
 </form><nav class="tino-direct-contact" aria-label="Contact Tino"><a href="/contact.html#tell-us-your-plans">Tell Tino your plans</a></nav>
@@ -1115,81 +1115,6 @@ function closeSearch() {
   }
 
  
-async function sendTino(event) {
-  event.preventDefault();
-
-  const input = document.getElementById("tinoText");
-  const message = input.value.trim();
-  if (!message) return;
-
-  const messages = document.getElementById("tinoMessages");
-
-  const bubble = document.createElement("div");
-  bubble.className = "tino-bubble";
-  bubble.textContent = message;
-  bubble.style.background = "#e8f3f0";
-  messages.appendChild(bubble);
-
-  input.value = "";
-
-  const reply = document.createElement("div");
-  reply.className = "tino-bubble";
-  reply.textContent = "Tino is thinking...";
-  messages.appendChild(reply);
-  reply.scrollIntoView({ behavior: "smooth", block: "end" });
-  const requestController = new AbortController();
-  const requestTimeout = setTimeout(() => requestController.abort(), 30000);
-
-  try {
-    const response = await fetch(
-      "/api/ask-tino",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        signal: requestController.signal,
-        body: JSON.stringify({ message })
-      }
-    );
-
-    const contentType = response.headers.get("content-type") || "";
-    if (!contentType.toLowerCase().includes("application/json")) {
-      throw new Error("Server returned HTML/non-JSON (HTTP " + response.status + "). Please check /api/ask-tino routing.");
-    }
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error || "Request failed");
-    }
-
-    // The API can return a JSON-encoded reply (sometimes twice).
-    // Unwrap only known reply shapes; never expose raw API metadata.
-    let answer = data.reply ?? data;
-    for (let depth = 0; depth < 3; depth++) {
-      if (typeof answer === "string") {
-        const trimmed = answer.trim();
-        if (!trimmed.startsWith("{")) break;
-        try { answer = JSON.parse(trimmed); } catch (_) { break; }
-      }
-      if (answer && typeof answer === "object") {
-        answer = answer.reply ?? answer.choices?.[0]?.message?.content ?? "";
-      } else break;
-    }
-    if (typeof answer !== "string" || !answer.trim()) {
-      throw new Error("Empty assistant response");
-    }
-    // Keep the chat operational; show line breaks without interpreting HTML.
-    reply.style.whiteSpace = "pre-wrap";
-    reply.textContent = answer.trim().replace(/\\n/g, "\n").replace(/\*\*/g, "");
-  } catch (error) {
-    reply.textContent = "Ask Tino: " + (error?.name === "AbortError" ? "Request timed out after 30 seconds." : (error?.message || "Unknown request error."));
-  } finally {
-    clearTimeout(requestTimeout);
-  }
-
-
-  reply.scrollIntoView({ behavior: "smooth", block: "end" });
-}
-
 </script>
 <!-- END ASK TINO -->
 <script id="site-footer-translation">
@@ -1253,7 +1178,7 @@ if(launcher)launcher.click();
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script><style id="home-community-force-one-row-20261009">
+</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1&ask=20261107-clean1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script><style id="home-community-force-one-row-20261009">
 /* Strong scoped override, also for site typography styles loaded after earlier rules. */
 html body main .home-section .home-container nav.home-community-links{display:flex!important;flex-flow:row nowrap!important;flex-wrap:nowrap!important;justify-content:flex-start!important;align-items:stretch!important;gap:7px!important;overflow-x:auto!important;overflow-y:hidden!important;max-width:100%!important;white-space:nowrap!important}
 html body main .home-section .home-container nav.home-community-links>a{display:inline-flex!important;flex:0 0 auto!important;width:auto!important;max-width:none!important;white-space:nowrap!important;padding:11px 12px!important;font-size:clamp(10px,.75vw,12px)!important}

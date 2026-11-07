@@ -502,7 +502,7 @@ html body #coast-inquiry.fc-about-contact-choices{scroll-margin-top:112px}
 <a href="/contact.html?interest=Investing#tell-us-your-plans">Invest</a>
 <a href="/contact.html?request=callback#tell-us-your-plans">Request a callback</a>
 </div>
-<form class="tino-input" onsubmit="sendTino(event)">
+<form class="tino-input">
 <input aria-label="Your message" id="tinoText" placeholder="Ask Tino anything..." type="text"/>
 <button aria-label="Send message" type="submit">→</button>
 </form><nav class="tino-direct-contact" aria-label="Contact Tino"><a href="/contact.html#tell-us-your-plans">Tell Tino your plans</a></nav>
@@ -522,60 +522,6 @@ html body #coast-inquiry.fc-about-contact-choices{scroll-margin-top:112px}
   }
 
  
-async function sendTino(event) {
-  event.preventDefault();
-
-  const input = document.getElementById("tinoText");
-  const message = input.value.trim();
-  if (!message) return;
-
-  const messages = document.getElementById("tinoMessages");
-
-  const bubble = document.createElement("div");
-  bubble.className = "tino-bubble";
-  bubble.textContent = message;
-  bubble.style.background = "#e8f3f0";
-  messages.appendChild(bubble);
-
-  input.value = "";
-
-  const reply = document.createElement("div");
-  reply.className = "tino-bubble";
-  reply.textContent = "Tino is thinking...";
-  messages.appendChild(reply);
-  reply.scrollIntoView({ behavior: "smooth", block: "end" });
-  const requestController = new AbortController();
-  const requestTimeout = setTimeout(() => requestController.abort(), 20000);
-
-  try {
-    const response = await fetch(
-      "/api/ask-tino",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        signal: requestController.signal,
-        body: JSON.stringify({ message })
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error || "Request failed");
-    }
-
-    reply.textContent = data.reply || "Please try again.";
-  } catch (error) {
-    reply.textContent =
-      "The assistant could not respond. Contact Sabatino below for personal help.";
-  } finally {
-    clearTimeout(requestTimeout);
-  }
-
-
-  reply.scrollIntoView({ behavior: "smooth", block: "end" });
-}
-
 </script><script id="site-footer-translation">
 (function(){
 const tr={"en": {"Explore": "Explore", "Resources": "Resources", "Connect": "Connect", "Search Properties": "Search Properties", "Homes for Sale": "Homes for Sale", "Condos for Sale": "Condos for Sale", "Communities": "Communities", "Buy": "Buy", "Buyers Guide": "Buyers Guide", "Sell": "Sell", "Sellers Guide": "Sellers Guide", "Calculators": "Calculators", "1,000 Q&A": "1,000 Q&A", "About": "About", "Contact": "Contact", "tag": "Your guide to real estate on Florida’s Gulf Coast."}, "es": {"Explore": "Explorar", "Resources": "Recursos", "Connect": "Contacto", "Search Properties": "Buscar propiedades", "Homes for Sale": "Casas en venta", "Condos for Sale": "Condominios en venta", "Communities": "Comunidades", "Buy": "Comprar", "Buyers Guide": "Guía del comprador", "Sell": "Vender", "Sellers Guide": "Guía del vendedor", "Calculators": "Calculadoras", "1,000 Q&A": "1.000 preguntas y respuestas", "About": "Sobre mí", "Contact": "Contáctame", "tag": "Tu guía inmobiliaria en la costa del Golfo de Florida."}, "it": {"Explore": "Esplora", "Resources": "Risorse", "Connect": "Contatti", "Search Properties": "Cerca immobili", "Homes for Sale": "Case in vendita", "Condos for Sale": "Condomini in vendita", "Communities": "Comunità", "Buy": "Acquistare", "Buyers Guide": "Guida per acquirenti", "Sell": "Vendere", "Sellers Guide": "Guida per venditori", "Calculators": "Calcolatori", "1,000 Q&A": "1.000 domande e risposte", "About": "Chi sono", "Contact": "Contatti", "tag": "La tua guida immobiliare sulla costa del Golfo della Florida."}, "pt": {"Explore": "Explorar", "Resources": "Recursos", "Connect": "Contato", "Search Properties": "Buscar imóveis", "Homes for Sale": "Casas à venda", "Condos for Sale": "Condomínios à venda", "Communities": "Comunidades", "Buy": "Comprar", "Buyers Guide": "Guia do comprador", "Sell": "Vender", "Sellers Guide": "Guia do vendedor", "Calculators": "Calculadoras", "1,000 Q&A": "1.000 perguntas e respostas", "About": "Sobre mim", "Contact": "Contato", "tag": "Seu guia imobiliário na costa do Golfo da Flórida."}};
@@ -637,7 +583,7 @@ if(launcher)launcher.click();
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
+</script><script src="assets/language-dropdown.js?v=20261018-sitemap-menu&amp;photos=20261021&amp;header=20261101-stable1&amp;layout=20261101-translate1&amp;controls=20261104-compact1&ask=20261107-clean1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
 </body></html>
 
 
