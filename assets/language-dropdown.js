@@ -780,3 +780,62 @@
 })();
 
 
+
+/* Ask Tino: safe, clickable contact details in assistant replies. */
+(function () {
+  function initContactLinks() {
+    var messages = document.getElementById('tinoMessages');
+    if (!messages) return;
+    var rendered = new WeakMap();
+    function enhance(bubble) {
+      if (bubble.style.background || bubble.querySelector('a')) return;
+      var value = bubble.textContent;
+      if (rendered.get(bubble) === value) return;
+      var pattern = /https?:\/\/[^\s<>]+|sabatino@floridacostiera\.com|\(941\)\s*270[-– ]4877/g;
+      var matches = Array.from(value.matchAll(pattern));
+      if (!matches.length) { rendered.set(bubble, value); return; }
+      var fragment = document.createDocumentFragment(), offset = 0;
+      matches.forEach(function (match) {
+        var label = match[0].replace(/[.,;!?)]+$/, '');
+        if (match[0].charAt(0) === '(') label = match[0];
+        fragment.appendChild(document.createTextNode(value.slice(offset, match.index)));
+        var anchor = document.createElement('a');
+        anchor.textContent = label;
+        anchor.href = label.indexOf('http') === 0 ? label :
+          label.indexOf('@') !== -1 ? 'mailto:' + label : 'tel:+19412704877';
+        anchor.style.cssText = 'color:#153e59;text-decoration:underline;overflow-wrap:anywhere';
+        fragment.appendChild(anchor);
+        fragment.appendChild(document.createTextNode(match[0].slice(label.length)));
+        offset = match.index + match[0].length;
+      });
+      fragment.appendChild(document.createTextNode(value.slice(offset)));
+      bubble.textContent = '';
+      bubble.appendChild(fragment);
+      if (/sabatino@floridacostiera\.com/.test(value)) {
+        var spanish = /contacta|correo|formulario/i.test(value);
+        var italian = /contatta|modulo/i.test(value);
+        var portuguese = /contate|formulário/i.test(value);
+        var labels = spanish ? ['Llamar', 'Enviar correo', 'Abrir formulario'] :
+          italian ? ['Chiama', 'Invia email', 'Apri modulo'] :
+          portuguese ? ['Ligar', 'Enviar email', 'Abrir formulário'] :
+          ['Call', 'Send email', 'Open contact form'];
+        var actions = document.createElement('div');
+        actions.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;margin-top:12px';
+        ['tel:+19412704877','mailto:sabatino@floridacostiera.com','/contact#tell-us-your-plans'].forEach(function (href, index) {
+          var link = document.createElement('a');
+          link.href = href;
+          link.textContent = labels[index];
+          link.style.cssText = 'display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;box-sizing:border-box;border:1px solid #c6a164;border-radius:10px;color:#102f43;background:#fff;text-decoration:none;font-weight:700;font-size:14px';
+          actions.appendChild(link);
+        });
+        bubble.appendChild(actions);
+      }
+      rendered.set(bubble, bubble.textContent);
+    }
+    function refresh() { messages.querySelectorAll('.tino-bubble').forEach(enhance); }
+    new MutationObserver(refresh).observe(messages, {childList:true,subtree:true,characterData:true});
+    refresh();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initContactLinks);
+  else initContactLinks();
+})();
