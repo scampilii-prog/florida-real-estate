@@ -205,3 +205,10 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Consulta DNS actual: MX route1/route2/route3.mx.cloudflare.net; SPF include:_spf.mx.cloudflare.net. Esto acredita infraestructura de Cloudflare Email Routing, no regla individual ni entrega.
 - Gmail requiere reautenticación: no fue posible leer comprobaciones de recepción. No se envió correo de prueba.
 - Solo se encontraron los repositorios florida-real-estate y my-closing-timeline en la búsqueda del propietario; el código del Worker sigue fuera del repositorio accesible. No se cambiaron instrucciones internas ni configuración del proveedor sin acceso.
+
+### Evidencia de bloqueo preventivo
+
+- Implementación: 03b52e7b1a551eee4c991c1123ecee7367050a36.
+- Comprobación real en navegador sobre /contact#tell-us-your-plans: versión privacy4; mensaje sintético con etiqueta Password produjo advertencia en español, permaneció en el campo y no apareció como mensaje enviado en el historial.
+- Las pruebas del cliente simulado comprobaron cero llamadas fetch para patrones sensibles; las pruebas de API comprobaron bloqueo antes del servicio externo.
+- Check estructural, suite de reglas y despliegue Cloudflare Pages del commit finalizados correctamente.
