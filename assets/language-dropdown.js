@@ -804,6 +804,20 @@
         anchor.href = label.indexOf('http') === 0 ? label :
           /^(?:www\.)?floridacostiera\.com(?:\/|$)/i.test(label) ? 'https://' + label :
           label.indexOf('@') !== -1 ? 'mailto:' + label : 'tel:+19412704877';
+        if (/^(?:https?:\/\/)?(?:www\.)?floridacostiera\.com(?:\/|$)/i.test(label)) {
+          var destination = new URL(anchor.href);
+          destination.pathname = destination.pathname.replace(/\.html$/, '');
+          anchor.href = destination.href;
+          var isItalian = /\b(cerchi|casa|potresti|contattare|attraverso|visita|proprietà|modulo)\b/i.test(value) && !/\b(comprar|correo|formulario)\b/i.test(value);
+          var isSpanish = /\b(contacta|correo|formulario|comprar|vivienda|puedes)\b/i.test(value);
+          var isPortuguese = /\b(contato|comprar|imóveis|formulário|você)\b/i.test(value);
+          var names = isItalian ? {buy:'Esplora le opzioni di acquisto',contact:'Contatta Sabatino',sell:'Informazioni per vendere',home:'Visita Florida Costiera'} :
+            isSpanish ? {buy:'Ver opciones de compra',contact:'Contactar a Sabatino',sell:'Información para vender',home:'Visitar Florida Costiera'} :
+            isPortuguese ? {buy:'Ver opções de compra',contact:'Contatar Sabatino',sell:'Informações para vender',home:'Visitar Florida Costiera'} :
+            {buy:'Explore buying options',contact:'Contact Sabatino',sell:'Selling information',home:'Visit Florida Costiera'};
+          var page = destination.pathname.replace(/^\//, '').replace(/\/$/, '');
+          if (page === 'buy' || page === 'contact' || page === 'sell' || page === '') anchor.textContent = names[page || 'home'];
+        }
         anchor.style.cssText = 'color:#153e59;text-decoration:underline;overflow-wrap:anywhere';
         fragment.appendChild(anchor);
         fragment.appendChild(document.createTextNode(match[0].slice(label.length)));
