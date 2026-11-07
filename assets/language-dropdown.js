@@ -791,7 +791,7 @@
       if (bubble.style.background || bubble.querySelector('a')) return;
       var value = bubble.textContent;
       if (rendered.get(bubble) === value) return;
-      var pattern = /https?:\/\/[^\s<>]+|sabatino@floridacostiera\.com|\(941\)\s*270[-– ]4877/g;
+      var pattern = /https?:\/\/[^\s<>]+|\b(?:www\.)?floridacostiera\.com(?:\/[^\s<>]*)?|sabatino@floridacostiera\.com|\(941\)\s*270[-– ]4877/g;
       var matches = Array.from(value.matchAll(pattern));
       if (!matches.length) { rendered.set(bubble, value); return; }
       var fragment = document.createDocumentFragment(), offset = 0;
@@ -802,6 +802,7 @@
         var anchor = document.createElement('a');
         anchor.textContent = label;
         anchor.href = label.indexOf('http') === 0 ? label :
+          /^(?:www\.)?floridacostiera\.com(?:\/|$)/i.test(label) ? 'https://' + label :
           label.indexOf('@') !== -1 ? 'mailto:' + label : 'tel:+19412704877';
         anchor.style.cssText = 'color:#153e59;text-decoration:underline;overflow-wrap:anywhere';
         fragment.appendChild(anchor);
