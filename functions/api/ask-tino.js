@@ -70,7 +70,7 @@ export async function onRequest({ request }) {
   return json({ reply });
  }
  // Seller net proceeds: distinguish sale from purchase.
- if (/vender|vendo|venta|sell|seller|vendere|vendita/i.test(message) && /hipoteca|mortgage|mutuo|cierre|closing|neto|net proceeds/i.test(message)) {
+ if (/\b(vender|vendo|venta|selling|sell|seller|vendere|vendita)\b/i.test(message) && /hipoteca|mortgage|mutuo|cierre|closing|neto|net proceeds/i.test(message) && !/\b(i'm buying|i am buying|buying|comprar|compro|acquistando|acquistare)\b/i.test(message)) {
   const numbers = [...message.matchAll(/\$\s*([\d,]+(?:\.\d{1,2})?)/g)].map(m => Number(m[1].replace(/,/g, '')));
   const price = numbers[0], debt = numbers[1];
   const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
@@ -84,7 +84,7 @@ export async function onRequest({ request }) {
  }
  // Answer common closing-cost questions with useful general guidance first.
  // No property-specific estimate without a purchase price, financing and location.
- if (/gastos? de cierre|costos? de cierre|closing costs?|spese di chiusura|costi di chiusura/i.test(message)) {
+ if (/gastos? de cierre|costos? de cierre|closing costs?|spese di chiusura|costi di chiusura/i.test(message) && !/\b(i'm buying|i am buying|buying|comprar|compro|acquistando|acquistare)\b/i.test(message)) {
   const isSpanish = /gastos?|costos?|cierre/i.test(message);
   const isItalian = /spese|costi|chiusura/i.test(message);
   const answer = isSpanish
@@ -106,7 +106,7 @@ export async function onRequest({ request }) {
   return json({ reply: details });
  }
  // Keep upstream payload short: the AI Worker rejects oversized messages with HTTP 400.
- const reference = 'You are Ask Tino, Florida Costiera assistant. Reply only in the question language; no mixed-language greetings. Never invent MLS listings, prices or addresses. For property searches restate criteria, explain that live listings require verification, and direct visitors to floridacostiera.com/buy.html and floridacostiera.com/contact.html for showings. Realtor Sabatino Campilii: (941) 270-4877. Question: ';
+ const reference = 'You are Ask Tino, Florida Costiera assistant. Reply only in the question language; no mixed-language greetings. Never invent MLS listings, prices or addresses. For property searches restate criteria, explain that live listings require verification, and direct visitors to floridacostiera.com/buy.html and floridacostiera.com/contact.html for showings. For financed purchases, calculate down payment and loan separately; distinguish buyer and seller expenses and explain taxes may reset after sale. Realtor Sabatino Campilii: (941) 270-4877. Question: ';
  const upstreamMessage = reference + message;
  const controller = new AbortController();
  const timer = setTimeout(() => controller.abort(), 25000);
