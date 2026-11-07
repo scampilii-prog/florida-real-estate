@@ -67,6 +67,8 @@ export async function researchReply(message,lang,index,fetcher=fetch){
  }[lang]||texts.en.jur;
  const sources=selectSources(message);
  if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)).join('\n\n')+'\n\n'+t.legal;}
+ // Capability explanations use the same scope as successful official retrieval.
+ if(/investiga|research|browse|cerca sul web|buscar en internet|search the web|busqueda web|búsqueda web/i.test(message))return t.scope;
  if(!/sitio|site|sito|website|gu[ií]a|guide|calculator|calculadora|calcol|question|pregunta|domand|comunidade|community|communities|comunidad|promocion|publicit/i.test(message))return null;
  const terms=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').match(/[a-z]{3,}/g)||[];
  const synonyms={calculadora:'calculator',calculadoras:'calculator',calcolatrice:'calculator',guia:'guide',guias:'guide',preguntas:'questions',domande:'questions',venta:'sell',vender:'sell',comprar:'buy',compra:'buy',hipoteca:'mortgage',mutuo:'mortgage',inversion:'investment',investimento:'investment',comunidades:'communities',contacto:'contact'};
@@ -74,3 +76,4 @@ export async function researchReply(message,lang,index,fetcher=fetch){
  const hits=index.map(p=>({p,n:tokens.reduce((n,w)=>n+(p.search.includes(w)?1:0),0)})).filter(x=>x.n).sort((a,b)=>b.n-a.n).slice(0,3);
  return t.internal+'\n\n'+(hits.length?hits.map(({p})=>p.title+'\n'+p.description+'\nhttps://floridacostiera.com/'+p.path).join('\n\n'):t.none+'\nhttps://floridacostiera.com/site-map')+'\n\n'+t.contact;
 }
+

@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {upstreamPrompt} from '../functions/api/ask-tino-instructions.js';
+import {policyReply} from '../functions/api/ask-tino-policy.js';
 import * as core from '../assets/ask-tino-core.js';
 import {onRequest} from '../functions/api/ask-tino.js';
 let checks=0;function check(fn){fn();checks++;}
@@ -23,11 +25,11 @@ check(()=>assert.match(core.knownReply('Vendo por $150,000 y debo $180,000 de hi
 check(()=>assert(!core.knownReply('Quiero vender con hipoteca',{},'es').includes('%')));
 check(()=>assert.match(core.knownReply('¿Puedes garantizar vender en 30 días?',{},'es'),/No puedo garantizar/));
 check(()=>assert.match(core.knownReply('Puoi prenotare una visita virtuale domani?',{},'it'),/Non posso prenotare/));
-check(()=>assert.match(core.knownReply('Investiga la ley FIRPTA vigente',{},'es'),/No puedo buscar/));
-check(()=>assert.match(core.knownReply('Investiga la ley FIRPTA vigente',{},'es'),/irs.gov/));
-check(()=>assert(!core.knownReply('Cerco casa a Venice con piscina, budget $600.000.',criteria,'it').includes('mutuo')));
+check(()=>assert.equal(core.knownReply('Investiga la ley FIRPTA vigente',{},'es'),null));
+check(()=>assert.equal(core.knownReply('Investiga en internet',{},'es'),null));
+check(()=>assert(!policyReply('Cerco casa a Venice con piscina, budget $600.000.',criteria,'it').includes('mutuo')));
 check(()=>assert.match(core.knownReply('¿Cómo contacto a Sabatino?',{},'es'),/sabatino@floridacostiera.com/));
-check(()=>assert.equal(core.upstreamPrompt('x'.repeat(2000),{},'es'),null));
+check(()=>assert.equal(upstreamPrompt('x'.repeat(2000),{},'es'),null));
 let calls=0,payload='';const realFetch=globalThis.fetch;
 globalThis.fetch=async(url,opts)=>{calls++;payload=JSON.parse(opts.body).message;return new Response(JSON.stringify({reply:'General answer'}));};
 async function ask(message,criteria={},extras={}){const r=await onRequest({request:new Request('https://floridacostiera.com/api/ask-tino',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,criteria,...extras})})});return{status:r.status,data:await r.json()};}
@@ -51,3 +53,4 @@ check(()=>assert(core.knownReply('Calcula el anticipo del 20% para $600,000',{},
 check(()=>assert(core.knownReply('Calcula la cuota mensual de un préstamo de $300,000 al 6% a 30 años',{},'es').includes('$1,798.65')));
 check(()=>assert(core.knownReply('Calcula la cuota mensual de mi préstamo',{},'es').includes('Indica')));
 console.log('PASS:',checks,'checks: criteria, language, calculations, limits, errors, API validation and browser sender.');
+

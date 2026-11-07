@@ -1,0 +1,24 @@
+name: Ask Tino rules
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/ask-tino-*.js'
+      - 'functions/api/ask-tino*.js'
+      - 'scripts/check-ask-tino*.mjs'
+      - '.github/workflows/ask-tino-rules.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-ask-tino-clean.mjs
+      - run: node scripts/check-ask-tino-policy.mjs
+      - run: node scripts/check-ask-tino-research.mjs
+      - run: node scripts/check-ask-tino-consolidated.mjs

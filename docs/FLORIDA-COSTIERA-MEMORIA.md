@@ -154,3 +154,13 @@ Actualizar este documento al terminar cada cambio importante:
 No registrar contraseñas, tokens, documentos de identidad ni datos privados de visitantes.
 No marcar una tarea como completada por una afirmación de un chat anterior: adjuntar evidencia técnica o funcional.
 Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo primero docs/FLORIDA-COSTIERA-MEMORIA.md en scampilii-prog/florida-real-estate y comprueba el estado actual antes de cambiarlo”.
+
+## 10. Reforma ejecutada — 2026-11-07
+
+- Se retiraron del core las reglas duplicadas de búsqueda, características protegidas y consulta web. Política de búsqueda/steering en functions/api/ask-tino-policy.js; alcance de fuentes en ask-tino-research.js.
+- Nuevo functions/api/ask-tino-instructions.js: único constructor de instrucciones para llamadas genéricas al modelo, separado del navegador; datos del visitante en JSON, historial del asistente excluido.
+- Se sustituyó la negación absoluta de consulta web por una explicación coherente del directorio oficial limitado.
+- Respuesta de privacidad EN/ES/IT/PT con enlace a Privacy y Contact, sin prometer confidencialidad o conservación no verificadas.
+- Documentación técnica reescrita como conjunto vigente, corrigiendo la ubicación de ask-tino-policy.js: está en functions/api/, no en assets/.
+- Pruebas locales: 44 comprobaciones clean, 16 policy, suite research y nueva suite consolidated aprobadas. Flujo GitHub Actions específico añadido.
+- Pendiente: instrucciones y registros del Worker externo, revisión completa de Privacy/formulario y recepción del correo. No afirmar limpieza del Worker sin acceso a su configuración.

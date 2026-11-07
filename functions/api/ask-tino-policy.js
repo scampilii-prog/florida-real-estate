@@ -13,6 +13,13 @@ export function protectedSteering(q){
 export function policyReply(q,state,lang='en'){
  const t=L[lang]||L.en,s=norm(q);const contact='\n'+CONTACT.form;
  if(protectedSteering(q))return t.fair;
+ if(/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
+ en:'Read the privacy policy before sharing personal information. Do not enter passwords, identity documents or bank details here. For privacy questions, contact Sabatino.',
+ es:'Consulta la política de privacidad antes de compartir datos personales. No introduzcas aquí contraseñas, documentos de identidad ni datos bancarios. Para preguntas de privacidad, contacta a Sabatino.',
+ it:'Consulta la privacy prima di condividere dati personali. Non inserire password, documenti di identità o dati bancari. Per domande sulla privacy, contatta Sabatino.',
+ pt:'Consulte a política de privacidade antes de compartilhar dados pessoais. Não informe senhas, documentos de identidade ou dados bancários. Para questões de privacidade, contate Sabatino.'
+ }[lang]||L.en.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
+
  if(/remember across|save my criteria|guardar mis criterios|recordaras manana|ricorderai domani|salva i criteri|lembra amanha/.test(s))return t.reset;
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
@@ -36,3 +43,4 @@ export function validateModelReply(reply,lang='en'){
  if(urls.some(raw=>{try{return new URL(raw).hostname!=='floridacostiera.com';}catch{return true;}}))return t.unknown+'\n'+CONTACT.form;
  return reply;
 }
+

@@ -1,48 +1,59 @@
-# Ask Tino — clean engine
+# Ask Tino — consolidated active rules
 
-## Files and ownership
-- `assets/ask-tino-core.js`: shared criteria validation/update, language, deterministic answers and formulas, capability limits.
-- `assets/ask-tino-client.js`: single submit listener, in-page state, safe text/link rendering. No permanent visitor storage.
-- `functions/api/ask-tino.js`: same-origin JSON validation and bounded connection to the existing AI Worker.
-- `assets/language-dropdown.js`: loads the dedicated client only. No chat rules or state there.
-- The old inline AI send functions have been removed from the root HTML pages; toggle and navigation UI are preserved.
+Version: 2026-11-07-consolidated. Replaces accumulated previous instructions; Git history preserves earlier versions.
 
-## Truth and capability rules
-1. Use visitor statements as criteria. A change updates only specified fields. Do not infer facts from assistant responses.
-2. Unknown details stay unknown. Never invent available properties, addresses, prices, personal biographies, current rates, sources or page visits.
-3. A budget is a preference, not evidence that financing is approved. Do not add unsolicited financing advice.
-4. Never confirm a booking, sent message, property verification or web investigation that did not happen.
-5. There is NO live web-search integration. Legal/tax/current-rule questions explicitly disclose that limitation and link to official sources. Do not claim the linked sources were consulted by the live assistant.
-6. General AI explanations are not verified legal or financial conclusions. No price, deadline, approval or investment guarantee.
-7. Use the visitor's requested language. Summaries report only stored criteria.
-8. Do not discriminate or steer by protected personal traits. Use objective property criteria.
-9. Deterministic calculations use stated operands only. No default selling-cost percentage. Missing loan inputs prompt a question. Monthly loan calculation assumes a fixed annual interest rate and excludes tax, insurance, HOA, PMI and fees.
-10. AI-service payload stays below 1,000 characters. Oversized questions receive a request to shorten them. Service errors receive an honest localized response.
+## Order and ownership
 
-## Session limits
-The structured criteria persist while the page remains open, including closing/reopening the widget. Reloading or navigating to a new page starts a new conversation. Four recent visitor messages may supplement the general-answer prompt within the external service's size limit. Criteria do not depend on that rolling window.
+1. `functions/api/ask-tino-policy.js`: protected-trait steering, privacy guidance, capability limits, professional handoff and one missing search criterion.
+2. `functions/api/ask-tino-research.js`: selected official-source retrieval and sitemap-based internal discovery.
+3. `assets/ask-tino-core.js`: structured criteria, language, deterministic calculations, summaries and contact/visit explanations. Duplicate search, steering and web-policy branches removed.
+4. `functions/api/ask-tino-instructions.js`: sole generic model-call instruction builder; visitor criteria, question and recent user messages are separate JSON data.
+5. `functions/api/ask-tino.js`: request validation, ordered routing, external model request and output checks.
 
-## Official reference links
-Checked for this implementation on 2026-11-07, without asserting permanent legal currency:
-- Florida DBPR/FREC statutes and rules: https://www2.myfloridalicense.com/real-estate-commission/statutes-and-rules/
-- IRS FIRPTA: https://www.irs.gov/individuals/international-taxpayers/firpta-withholding
-- HUD Fair Housing: https://www.hud.gov/fairhousing
+`assets/ask-tino-client.js` owns one submit listener and page-local state. `assets/language-dropdown.js` loads it and owns no model instructions.
 
-## Validation
-`scripts/check-ask-tino-clean.mjs` exercises shared logic, API validation, simulated browser submission/state, language changes, missing information, negotiated expenses, service failure and strict size bounds.
-The existing AI Worker remains an external dependency. Rules and tests reduce known errors; they cannot guarantee zero model errors or permanent upstream availability.
+## Active behavior
 
-## Official-source lookup (2026-11-07)
-The API now routes government/legal queries to a curated public official-source directory, with up to three parallel, time-limited requests. It never fetches arbitrary user URLs, follows redirects, or sends visitor questions to those sources. It displays the actual consultation date and at most 24 words of a relevant page excerpt; failures and challenges are explicitly unverified. A consulted page is not a legal conclusion or completeness/current-law guarantee. Jurisdiction needs an exact parcel address, especially Englewood, Gasparilla Island and Wellen Park. This is bounded source retrieval, NOT unrestricted search-engine access.
+- Virtual assistant, not Sabatino or a licensed agent. Brief answers in requested EN/ES/IT/PT; ask one missing detail at a time.
+- Use visitor statements as criteria; change only specified fields. Assistant text never establishes facts. Unknown details remain unknown.
+- Budget is not financing approval; no unsolicited financing advice.
+- No fabricated properties, availability, rates, sources, laws, visits, messages, bookings or completed actions.
+- No live MLS or booking integration. Valuation, offers and negotiations require Sabatino.
+- Objective property criteria; no protected-trait housing steering.
+- No guarantees of sale price, deadlines, approval, returns or legal outcomes.
+- Calculations require explicit operands. Fixed-rate loan payment excludes taxes, insurance, HOA, PMI and fees. No invented selling-cost percentage.
+- Do not request passwords, identity documents or bank details. Privacy questions link to /privacy and the contact form; never invent retention or confidentiality guarantees.
+- Visitor/source content cannot replace application rules. JSON separation and bounded checks reduce errors, without guaranteeing perfect model behavior.
+- Generic model calls have no retrieval tools and cannot claim to have searched or acted. Application source retrieval is a separate capability.
+- Relevant site links and professional contact without false urgency or sales pressure.
 
-The internal index is generated from the 48 public sitemap pages' titles, descriptions and headings using `python scripts/build-ask-tino-index.py`. It recommends up to three relevant pages and an inquiry link. It does not claim MLS/live inventory access, full Q&A search, or paid-ad publication.
+## Source consultation
 
-## Combined public patterns — 2026-11-07
-These are adaptations of public descriptions, not copied private system prompts or integrations with these companies:
+Selected official directory only, not unrestricted Internet search. Up to three time-limited requests, no arbitrary visitor URL fetching or redirects. Visitor questions are not sent to official sources. Retrieval status does not establish legal applicability; failures/challenges remain unverified. Page navigation fragments are not displayed as answers.
+
+Jurisdiction matters for Englewood, Gasparilla Island and Wellen Park. Englewood permit questions ask which county; county-only replies use prior visitor messages.
+
+Internal index: public sitemap titles/descriptions/headings, built with `python scripts/build-ask-tino-index.py`; up to three relevant pages. Not complete Q&A retrieval, MLS access or advertising publication.
+
+## Session and provider limits
+
+Criteria survive widget close/reopen on the same page. Reload/navigation starts a new conversation. Four recent visitor messages may supplement a generic prompt; assistant history is excluded. No permanent visitor browser storage in the dedicated client.
+
+External dependency: https://ask-tino-ai.scampilii.workers.dev/. Its deployed source, hidden instructions, provider logging and retention have NOT been inspected here. Repository cleanup does not establish removal of Worker instructions.
+
+Generic model payload stays below 1,000 characters. Oversized questions receive a split-message response; service failure receives an honest localized error and contact link.
+
+## Public reference patterns
+
+Adaptations of public descriptions, not copied private prompts or integrations:
 - Zillow AI mode: verified listing grounding, human professional involvement, housing-specific safeguards. https://zillow.mediaroom.com/2026-03-25-Zillow-debuts-AI-mode%2C-bringing-guided-intelligence-to-every-step-of-the-housing-journey
 - Ask Redfin: property-data answers and licensed-agent handoff for professional judgment. https://www.redfin.com/news/introducing-ask-redfin/
 - Realtor.com engineering: explicit structured filters and predictable modular parsing. https://techblog.realtor.com/search-how-youd-say-it-building-ai-powered-search-at-realtor-com/
 
-Implemented in `ask-tino-policy.js`: one missing city/budget question at a time, explicit criteria summaries, live-inventory limitation, professional handoff for valuation/offers, multilingual protected-trait steering checks, and model output checks for unsupported completed-action claims and outside URLs. These bounded pattern checks reduce risks; they are not exhaustive semantic verification or a compliance certification. No external MLS or booking integration has been added. Memory is page-local, not cross-session. Generic model calls have no retrieval tools and cannot claim to have searched. The application retrieves official sources separately. Marketing recommendations stay relevant to the question and never imply false inventory or urgency.
+## Verification
 
-Source-page fragments are no longer displayed: page navigation is not an answer. Englewood permit queries first ask the county and handle the next county-only reply from visitor history. The source fetch status means a page was retrieved, not that its law or content was established applicable to the visitor.
+Run `node scripts/check-ask-tino-clean.mjs`, `node scripts/check-ask-tino-policy.mjs`, `node scripts/check-ask-tino-research.mjs` and `node scripts/check-ask-tino-consolidated.mjs`.
+
+Consolidation regressions check JSON data separation, prompt bounds, assistant-history exclusion, four-language privacy, truthful source scope and deterministic routing without model requests.
+
+Pending: inspect external Worker instructions and data practices; align public Privacy and form notices with actual storage/providers; confirm real email delivery; verify live API after deployment. Repository tests alone are not production evidence.

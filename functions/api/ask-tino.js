@@ -1,7 +1,8 @@
 import {policyReply,validateModelReply} from './ask-tino-policy.js';
 import {researchReply} from './ask-tino-research.js';
+import {upstreamPrompt} from './ask-tino-instructions.js';
 import siteIndex from './ask-tino-index.js';
-import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply,upstreamPrompt} from '../../assets/ask-tino-core.js';
+import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply} from '../../assets/ask-tino-core.js';
 const UPSTREAM='https://ask-tino-ai.scampilii.workers.dev/';
 function json(body,status=200,extra={}){return new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...extra}});}
 export async function onRequest({request}){
@@ -13,7 +14,7 @@ export async function onRequest({request}){
  if(!message||message.length>2000)return json({error:'Enter 1–2,000 characters.'},400);
  const lang=language(message,body.language);
  let previous={};
- // Accept old clients during deployment, but only visitor messages are facts.
+ // Visitor history supplies criteria only; assistant text is never a fact.
  if(Array.isArray(body.history))for(const item of body.history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
  const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
  const respond=reply=>json({reply,criteria,language:lang});
@@ -36,3 +37,4 @@ export async function onRequest({request}){
  }catch{return respond(copy(lang).error+CONTACT.form);}
  finally{clearTimeout(timer);}
 }
+
