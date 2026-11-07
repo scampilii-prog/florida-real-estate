@@ -303,3 +303,42 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Commit 0c3b379807057ba5ce6b466e4c3d04725ed03081 publicado. Cloudflare Pages/rules/structural-audit success. Diez preguntas públicas exactas: 10/10 más lectura completa. Navegador 1–4: Rotonda West, vender, inquilino, ocho meses, entrega ocupada sin promesa de vacía.
 - Cuatro rondas previas, 60 turnos generales, privacidad y estructura aprobados. Cache compartida round5.
 - Informe docs/ask-tino-owner-round5-2026-11-07.md y JSON antes/después asociado. No equivale a aprobar todas las variantes ni un contrato o cálculo fiscal particular. No tocar OceanFL ni My Closing Timeline.
+
+
+## 20. Continuidad Website 20 — registro confirmado el 7 de noviembre de 2026
+
+Solicitud de Tino: conservar en este documento lo tratado en Website 20 y también las respuestas a las últimas preguntas.
+
+### Respuestas completas ya conservadas
+
+Las cinco rondas documentadas tienen informes y archivos JSON con preguntas, respuestas completas antes/después y criterios. Consultar las respuestas posteriores a la corrección en `after.results`, no confundirlas con `before`.
+
+- [Primera ronda: informe](ask-tino-owner-10-2026-11-07.md) y [respuestas completas](ask-tino-owner-10-2026-11-07-results.json).
+- [Segunda ronda: informe](ask-tino-owner-round2-2026-11-07.md) y [respuestas completas](ask-tino-owner-round2-2026-11-07-results.json).
+- [Tercera ronda: informe](ask-tino-owner-round3-2026-11-07.md) y [respuestas completas](ask-tino-owner-round3-2026-11-07-results.json).
+- [Cuarta ronda: informe](ask-tino-owner-round4-2026-11-07.md) y [respuestas completas](ask-tino-owner-round4-2026-11-07-results.json).
+- [Quinta ronda: informe](ask-tino-owner-round5-2026-11-07.md) y [respuestas completas](ask-tino-owner-round5-2026-11-07-results.json).
+
+La quinta incluye las diez preguntas sobre venta con inquilino, ocho meses restantes, entrega ocupada, privacidad del inquilino, comparación de ofertas, depósito y cancelación, tasación baja, comprar antes de vender, FIRPTA y permanecer quince días después del cierre. El JSON contiene las respuestas reales registradas tras los cambios. La respuesta de ocupación posterior coincide con el tema que Tino copió en Website 20.
+
+### Última tanda nueva: sexta ronda
+
+Se encontró `scripts/check-ask-tino-owner-round6.mjs` en main. Contiene diez preguntas y verificaciones previstas:
+1. Condominio en Punta Gorda hasta $350,000, ascensor y perro grande.
+2. Ascensor indispensable incluso en planta baja.
+3. Subir a $375,000 solamente con dos estacionamientos asignados.
+4. Resumen y condiciones pendientes de verificar con la asociación.
+5. Requisitos de ocupación por edad.
+6. Comprobantes de cuota extraordinaria pagada.
+7. Litigio del condominio y efectos en gastos, seguro y financiación.
+8. Titularidad mediante LLC.
+9. Venta estando casado con escritura a un solo nombre.
+10. Oferta sin prueba de fondos todavía.
+
+**Estado observado en esta revisión:** existe el script de la sexta ronda, pero el inventario del repositorio no incluye informe ni JSON de resultados de esa ronda. Sus afirmaciones programadas no equivalen a respuestas reales ni a una ejecución aprobada. Falta registrar respuestas completas, resultado local/público y evidencia de publicación antes de declararla terminada.
+
+### Correo y límites de la continuidad
+
+El chat anterior informó recepción en Gmail mediante Cloudflare Email Routing y apertura de Apple Mail con sabatino@floridacostiera.com. Es evidencia recuperada del chat, no una nueva comprobación de recepción. Mantener separados ese antecedente y los intentos posteriores bloqueados por reautenticación. El formulario prepara el mensaje y el visitante pulsa Enviar.
+
+Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni My Closing Timeline. Para continuar, leer esta memoria y los informes enlazados; no pedir a Tino que vuelva a copiar las preguntas ya guardadas.
