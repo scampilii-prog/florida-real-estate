@@ -2,7 +2,7 @@ import {policyReply,validateModelReply} from './ask-tino-policy.js';
 import {researchReply} from './ask-tino-research.js';
 import {upstreamPrompt} from './ask-tino-instructions.js';
 import siteIndex from './ask-tino-index.js';
-import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply} from '../../assets/ask-tino-core.js';
+import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply,sensitiveInput,sensitiveReply} from '../../assets/ask-tino-core.js';
 const UPSTREAM='https://ask-tino-ai.scampilii.workers.dev/';
 function json(body,status=200,extra={}){return new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...extra}});}
 export async function onRequest({request}){
@@ -13,16 +13,18 @@ export async function onRequest({request}){
  const message=typeof body?.message==='string'?body.message.trim():'';
  if(!message||message.length>2000)return json({error:'Enter 1–2,000 characters.'},400);
  const lang=language(message,body.language);
+ const history=Array.isArray(body.history)?body.history:[];
+ if(sensitiveInput(message)||history.some(item=>item?.role==='user'&&sensitiveInput(item.content)))return json({reply:sensitiveReply(lang),criteria:{},language:lang});
  let previous={};
  // Visitor history supplies criteria only; assistant text is never a fact.
- if(Array.isArray(body.history))for(const item of body.history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
+ for(const item of history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
  const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
  const respond=reply=>json({reply,criteria,language:lang});
  const policy=policyReply(message,criteria,lang);if(policy)return respond(policy);
- const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && body.history?.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
+ const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && history.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
  const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
- const prompt=upstreamPrompt(message,criteria,lang,Array.isArray(body.history)?body.history:[]);if(!prompt)return respond(copy(lang).long);
+ const prompt=upstreamPrompt(message,criteria,lang,history);if(!prompt)return respond(copy(lang).long);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),24000);
  try{
   const response=await fetch(UPSTREAM,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:prompt}),signal:controller.signal});

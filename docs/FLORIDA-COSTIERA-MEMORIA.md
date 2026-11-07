@@ -195,3 +195,13 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Check estructural completo y Cloudflare Pages del último commit: success. Suite de reglas/privacidad del commit de sincronización: success.
 - Verificación real en navegador: /privacy#ask-tino-privacy muestra el texto nuevo; el chat abre y responde «¿Qué pasa con mis datos personales?» en español con enlaces Privacy/Contact; aviso del chat cambia a español; /contact#tell-us-your-plans muestra enlace Privacy y explicación de correo preparado.
 - No se envió correo real ni se acreditó recepción. Conservación, proveedor final e instrucciones internas del Worker siguen pendientes de acceso/verificación.
+
+## 12. Minimización de datos y comprobación de correo — 2026-11-07
+
+- Añadida detección limitada de SSN con formato, secretos etiquetados y números de tarjeta con patrón/Luhn válido. El navegador advierte antes de fetch, conserva el texto en el campo para corregirlo y no lo añade al historial. La API vuelve a comprobar antes de reenviar al servicio AI. No es detección exhaustiva de datos personales.
+- Corregida excepción de API con history no array. Pruebas unitarias, cliente simulado, API y auditoría estructural completa pasan localmente.
+- Claves privacy4 coherentes en cliente, core, cargadores y referencias de 49 páginas para evitar caché de cuatro horas.
+- Historial PROJECT_HANDOFF.md del 12 de octubre: info@floridacostiera.com y sabatino@floridacostiera.com se configuraron para reenviar a scampilii@gmail.com; no es un buzón independiente ni acredita envío como dominio.
+- Consulta DNS actual: MX route1/route2/route3.mx.cloudflare.net; SPF include:_spf.mx.cloudflare.net. Esto acredita infraestructura de Cloudflare Email Routing, no regla individual ni entrega.
+- Gmail requiere reautenticación: no fue posible leer comprobaciones de recepción. No se envió correo de prueba.
+- Solo se encontraron los repositorios florida-real-estate y my-closing-timeline en la búsqueda del propietario; el código del Worker sigue fuera del repositorio accesible. No se cambiaron instrucciones internas ni configuración del proveedor sin acceso.

@@ -57,3 +57,9 @@ Run `node scripts/check-ask-tino-clean.mjs`, `node scripts/check-ask-tino-policy
 Consolidation regressions check JSON data separation, prompt bounds, assistant-history exclusion, four-language privacy, truthful source scope and deterministic routing without model requests.
 
 Pending: inspect external Worker instructions and data practices; align public Privacy and form notices with actual storage/providers; confirm real email delivery; verify live API after deployment. Repository tests alone are not production evidence.
+
+## Sensitive-input checks — 2026-11-07
+
+The shared core detects some formatted SSNs, explicitly labeled secrets/account identifiers and Luhn-valid card-like numbers. The browser shows a localized warning before fetch and does not append the sensitive message to the transcript or history; it leaves the input for editing. The endpoint independently blocks detected current/prior visitor messages before the external model call and does not echo them in its response. These are bounded pattern checks, not comprehensive personal-data detection. A request that bypasses the browser still reaches Cloudflare before endpoint filtering; do not claim it was never transmitted to the website.
+
+Malformed non-array history is ignored rather than causing an API exception. Both client loaders and the core import use privacy4 cache versions.

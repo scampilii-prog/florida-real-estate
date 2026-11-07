@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import {onRequest} from '../functions/api/ask-tino.js';
 import * as core from '../assets/ask-tino-core.js';
 class Element{
  constructor(){this.children=[];this.style={};this.value='';const classes=new Set();this.classList={toggle(c){if(classes.has(c)){classes.delete(c);return false;}classes.add(c);return true;}};}
@@ -34,3 +35,22 @@ const compatibility=fs.readFileSync(new URL('../assets/ask-tino-widget.js',impor
 const moduleURL=sharedLoader.match(/\/assets\/ask-tino-client\.js\?v=[^'"\s]+/)[0];
 assert(compatibility.includes(moduleURL),'Both loaders must resolve to the identical module URL');
 console.log('PASS: visible chat notice before first send, four languages, no duplicate notices, privacy anchor and accurate provider limits.');
+
+// Obvious synthetic sensitive values stay in the input, never in chat history or fetch.
+for(const value of ['SSN: 123-45-6789','Password: synthetic-secret','4111 1111 1111 1111']){
+ assert(core.sensitiveInput(value));const before=calls;input.value=value;
+ await window.fcAskTino.submit({preventDefault(){}});assert.equal(calls,before);assert.equal(input.value,value);
+ assert(!JSON.stringify(messages.children).includes(value));
+}
+for(const value of ['Budget $550,000','Call (941) 270-4877','What is a Social Security number?'])assert(!core.sensitiveInput(value));
+const originalFetch=globalThis.fetch;let upstreamCalls=0;
+try{
+ globalThis.fetch=async()=>{upstreamCalls++;throw Error('Unexpected upstream');};
+ const request=body=>new Request('https://floridacostiera.com/api/ask-tino',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+ for(const body of [{message:'SSN: 123-45-6789'},{message:'Summarize',history:[{role:'user',content:'Password: synthetic-secret'}]}]){
+  const r=await onRequest({request:request(body)});assert.equal(r.status,200);const data=await r.json();assert.deepEqual(data.criteria,{});assert(!data.reply.includes('synthetic-secret'));assert(!data.reply.includes('123-45-6789'));
+ }
+ const response=await onRequest({request:request({message:'Charlotte',history:{unexpected:true}})});assert.equal(response.status,200);
+ assert.equal(upstreamCalls,1); // The malformed history is ignored; ordinary message reaches the model.
+}finally{globalThis.fetch=originalFetch;}
+console.log('PASS: sensitive-input browser/API checks and malformed-history recovery.');

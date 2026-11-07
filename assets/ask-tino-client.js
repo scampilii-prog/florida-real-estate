@@ -1,4 +1,4 @@
-import {CONTACT,cleanCriteria,updateCriteria,language,copy} from './ask-tino-core.js?v=20261107-clean1';
+import {CONTACT,cleanCriteria,updateCriteria,language,copy,sensitiveInput,sensitiveReply} from './ask-tino-core.js?v=20261107-privacy4';
 
 // Exactly one sender; page-local structured state, not a shrinking list of facts.
 const state={criteria:{},history:[],lang:'en',busy:false};
@@ -51,6 +51,10 @@ async function submit(event){
  const input=document.getElementById('tinoText'),messages=document.getElementById('tinoMessages');
  if(!input||!messages||state.busy)return;
  const message=input.value.trim();if(!message)return;
+ if(sensitiveInput(message)){
+  state.lang=language(message,state.lang);privacyNotice(state.lang);
+  const warning=document.createElement('div');warning.className='tino-bubble';warning.textContent=sensitiveReply(state.lang);messages.append(warning);warning.scrollIntoView({behavior:'smooth',block:'end'});return;
+ }
  state.busy=true;state.lang=language(message,state.lang);privacyNotice(state.lang);state.criteria=updateCriteria(state.criteria,message);
  const history=state.history.slice(-4);state.history.push({role:'user',content:message.slice(0,600)});state.history=state.history.slice(-4);
  const user=document.createElement('div');user.className='tino-bubble';user.textContent=message;user.style.background='#e8f3f0';messages.append(user);input.value='';

@@ -1,5 +1,20 @@
 // One source of truth for visitor criteria and supported deterministic replies.
 export const CONTACT = Object.freeze({phone:'(941) 270-4877',tel:'tel:+19412704877',email:'sabatino@floridacostiera.com',buy:'https://floridacostiera.com/buy',form:'https://floridacostiera.com/contact#tell-us-your-plans'});
+// Bounded detection of obvious secrets, not a complete personal-data classifier.
+export function sensitiveInput(text){
+ if(typeof text!=='string')return false;
+ if(/\b\d{3}[- ]\d{2}[- ]\d{4}\b/.test(text))return true;
+ if(/\b(?:password|contrase[nñ]a|senha|ssn|social security(?: number)?|numero (?:de )?cuenta|account number|routing number|iban)\s*(?::|=|is\b|es\b|e\b|è\b|é\b)\s*\S+/i.test(text))return true;
+ for(const match of text.matchAll(/\b(?:\d[ -]?){12,18}\d\b/g)){
+  const digits=match[0].replace(/\D/g,'');if(digits.length<13||digits.length>19||/^(\d)\1+$/.test(digits))continue;
+  let sum=0;for(let i=digits.length-1;i>=0;i--){let n=Number(digits[i]);if((digits.length-1-i)%2){n*=2;if(n>9)n-=9;}sum+=n;}
+  if(sum%10===0)return true;
+ }
+ return false;
+}
+export function sensitiveReply(lang='en'){
+ return ({en:'Please remove identity, account or password details before sending. Ask Tino does not need them for an initial property question.',es:'Quita los datos de identidad, cuentas o contraseñas antes de enviar. Ask Tino no los necesita para una consulta inmobiliaria inicial.',it:'Rimuovi dati di identità, conti o password prima di inviare. Ask Tino non ne ha bisogno per una prima domanda immobiliare.',pt:'Remova dados de identidade, contas ou senhas antes de enviar. Ask Tino não precisa deles para uma consulta imobiliária inicial.'})[lang]||sensitiveReply('en');
+}
 const CITIES = /Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/gi;
 const POOL_NO = /senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina/i;
 const POOL_YES = /con (?:una )?piscina|with (?:a )?pool|com piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i;
