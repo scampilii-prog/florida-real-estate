@@ -1,0 +1,302 @@
+{
+  "date": "2026-11-07",
+  "implementation_commit": "b329ee38f0b957725c2405d7dbac23336d90b257",
+  "synthetic_only": true,
+  "before": [
+    {
+      "number": 1,
+      "question": "Quiero vender mi casa en Rotonda West, pero todavía tengo hipoteca. ¿Por dónde empiezo?",
+      "response": {
+        "reply": "Normalmente puedes vender aunque todavía tengas hipoteca. Empieza solicitando al administrador de tu préstamo un saldo de cancelación (payoff) para la fecha prevista; puede ser distinto del saldo de tu estado de cuenta. Después, revisa con Sabatino un precio estimado de venta y los gastos para calcular cuánto quedaría. La hipoteca normalmente se paga al cierre con los fondos de la venta. Si no alcanzan para la deuda y los gastos, consulta la diferencia con el prestamista antes de avanzar. No compartas aquí números de cuenta ni documentos del préstamo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 2,
+      "question": "¿Y si el dinero de la venta no alcanza para pagar la hipoteca y los gastos?",
+      "response": {
+        "reply": "Normalmente puedes vender aunque todavía tengas hipoteca. Empieza solicitando al administrador de tu préstamo un saldo de cancelación (payoff) para la fecha prevista; puede ser distinto del saldo de tu estado de cuenta. Después, revisa con Sabatino un precio estimado de venta y los gastos para calcular cuánto quedaría. La hipoteca normalmente se paga al cierre con los fondos de la venta. Si no alcanzan para la deuda y los gastos, consulta la diferencia con el prestamista antes de avanzar. No compartas aquí números de cuenta ni documentos del préstamo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 3,
+      "question": "Busco una casa en Venice, máximo $500,000, con tres habitaciones y sin piscina.",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Venice. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 4,
+      "question": "Cambia solamente la ciudad a Port Charlotte. Mantén lo demás.",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 5,
+      "question": "¿Cuánto sería el anticipo del 20% para una propiedad de $400,000?",
+      "response": {
+        "reply": "Anticipo: $400,000.00 × 20% = $80,000.00. Préstamo antes de gastos: $320,000.00.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 6,
+      "question": "Resume ahora mis criterios de búsqueda.",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 7,
+      "question": "Quiero invertir $350,000 para alquilar. ¿Qué debería comparar antes de comprar?",
+      "response": {
+        "reply": "Criterios actuales: Objetivo: invertir. Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Port Charlotte",
+          "activity": "invest",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 8,
+      "question": "¿Cómo puedo comprobar si un condominio permite alquileres de corta duración?",
+      "response": {
+        "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-07\n\nSarasota County\nhttps://www.scgov.net/\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "activity": "invest",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 9,
+      "question": "Dame tres propiedades disponibles hoy que cumplan mis criterios, con dirección y precio.",
+      "response": {
+        "reply": "Criterios actuales: Objetivo: invertir. Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Port Charlotte",
+          "activity": "invest",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 10,
+      "question": "¿Puedo enviarte mi licencia de conducir y mis estados bancarios? ¿Guardarás esos documentos?",
+      "response": {
+        "reply": "Lo siento, pero no puedo solicitar ni guardar documentos personales como licencias de conducir o estados bancarios. ¿Cuál es el propósito de tu inversión en Port Charlotte, es para alquilar a largo plazo o buscar una posible revalorización de la propiedad?",
+        "criteria": {
+          "city": "Port Charlotte",
+          "activity": "invest",
+          "budget": "$500,000",
+          "bedrooms": 3,
+          "pool": "no"
+        },
+        "language": "es"
+      }
+    }
+  ],
+  "after": {
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "Quiero vender mi casa en Rotonda West, pero todavía tengo hipoteca. ¿Por dónde empiezo?",
+        "response": {
+          "reply": "Normalmente puedes vender aunque todavía tengas hipoteca. Empieza solicitando al administrador de tu préstamo un saldo de cancelación (payoff) para la fecha prevista; puede ser distinto del saldo de tu estado de cuenta. Después, revisa con Sabatino un precio estimado de venta y los gastos para calcular cuánto quedaría. La hipoteca normalmente se paga al cierre con los fondos de la venta. Si no alcanzan para la deuda y los gastos, consulta la diferencia con el prestamista antes de avanzar. No compartas aquí números de cuenta ni documentos del préstamo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "¿Y si el dinero de la venta no alcanza para pagar la hipoteca y los gastos?",
+        "response": {
+          "reply": "Si la venta no cubre la hipoteca y los gastos, primero calcula la diferencia con el saldo de cancelación y un estimado de cierre. Podrías cubrirla con fondos propios o consultar al administrador del préstamo si existe una opción de venta corta (short sale). Esta requiere su aprobación; vender por menos no perdona automáticamente la deuda restante. Pide por escrito cómo se tratará cualquier saldo pendiente y revisa sus posibles efectos legales y fiscales antes de aceptar. Sabatino puede ayudarte a coordinar esa revisión.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "Busco una casa en Venice, máximo $500,000, con tres habitaciones y sin piscina.",
+        "response": {
+          "reply": "Criterios actuales: Ciudad: Venice. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$500,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "Cambia solamente la ciudad a Port Charlotte. Mantén lo demás.",
+        "response": {
+          "reply": "Criterios actuales: Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Port Charlotte",
+            "budget": "$500,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "¿Cuánto sería el anticipo del 20% para una propiedad de $400,000?",
+        "response": {
+          "reply": "Anticipo: $400,000.00 × 20% = $80,000.00. Préstamo antes de gastos: $320,000.00.",
+          "criteria": {
+            "city": "Port Charlotte",
+            "budget": "$500,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "Resume ahora mis criterios de búsqueda.",
+        "response": {
+          "reply": "Criterios actuales: Ciudad: Port Charlotte. Presupuesto: $500,000. Habitaciones: 3. Piscina: no.",
+          "criteria": {
+            "city": "Port Charlotte",
+            "budget": "$500,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "Quiero invertir $350,000 para alquilar. ¿Qué debería comparar antes de comprar?",
+        "response": {
+          "reply": "Compara el alquiler estimado con los gastos reales: asociación, impuestos, seguro, mantenimiento, administración y periodos sin inquilino. Revisa también restricciones de alquiler, cuotas extraordinarias y el estado del inmueble. Con esos datos, estima el flujo neto y prueba escenarios con menos ingresos o más gastos; el precio de compra por sí solo no indica rentabilidad. Sabatino puede ayudarte a contrastar los datos de cada propiedad.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Port Charlotte",
+            "activity": "invest",
+            "budget": "$350,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "¿Cómo puedo comprobar si un condominio permite alquileres de corta duración?",
+        "response": {
+          "reply": "Solicita la declaración del condominio, sus estatutos, reglamentos y enmiendas vigentes. Busca el plazo mínimo de alquiler, cuántos contratos se permiten, posibles periodos de espera y la aprobación de inquilinos. Pide al administrador confirmación por escrito para esa unidad y el alquiler que planeas. Comprueba además las reglas locales aplicables a su dirección; la asociación y la autoridad local son revisiones distintas. No te bases solo en un anuncio o en que otros publiquen en Airbnb. Si los documentos son ambiguos, pide revisión profesional antes de comprar.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Port Charlotte",
+            "activity": "invest",
+            "budget": "$350,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "Dame tres propiedades disponibles hoy que cumplan mis criterios, con dirección y precio.",
+        "response": {
+          "reply": "Criterios actuales: Objetivo: invertir. Ciudad: Port Charlotte. Presupuesto: $350,000. Habitaciones: 3. Piscina: no.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Port Charlotte",
+            "activity": "invest",
+            "budget": "$350,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "¿Puedo enviarte mi licencia de conducir y mis estados bancarios? ¿Guardarás esos documentos?",
+        "response": {
+          "reply": "No envíes aquí tu licencia de conducir ni estados bancarios. El chat no es un canal seguro para esos documentos. Los mensajes pueden ser procesados por servicios externos; no puedo prometer su confidencialidad, conservación ni eliminación por esos proveedores. Si necesitas entregar documentos para una operación, acuerda con Sabatino el canal adecuado antes de enviarlos.\nhttps://floridacostiera.com/privacy\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Port Charlotte",
+            "activity": "invest",
+            "budget": "$350,000",
+            "bedrooms": 3,
+            "pool": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  }
+}

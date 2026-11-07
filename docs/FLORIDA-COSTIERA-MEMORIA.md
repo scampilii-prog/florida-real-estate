@@ -242,3 +242,10 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Corregidos esos casos con contenido útil antes de contacto, preservando la diferencia entre capacidades reales y respuestas genéricas. Inversión actualiza $350,000; condo revisa documentos/enmiendas/confirmación escrita/reglas locales; documentos sensibles se derivan a canal adecuado sin prometer eliminación.
 - Nuevo script scripts/check-ask-tino-owner-questions.mjs: exactamente las 10 en la misma conversación; pruebas locales sin llamadas externas. Más 60 turnos generales y auditoría estructural local aprobados.
 - La comprobación pública posterior al despliegue se registra al terminar; no equiparar las pruebas locales con producción.
+
+### Resultado público de las diez preguntas
+
+- Commit b329ee38f0b957725c2405d7dbac23336d90b257: Cloudflare Pages, structural-audit y rules finalizados con éxito.
+- Repetición de las 10 exactas en una misma conversación pública: 10/10 comprobaciones; revisión de las diez respuestas completas. No se pidió a Tino que las repitiera.
+- 2: explica faltante, aprobación y deuda restante. 7: presupuesto $350,000 y gastos/vacancia/flujo. 8: documentos/enmiendas/confirmación escrita/reglas locales. 9: presupuesto $350,000 sin inventario inventado. 10: rechaza envío de documentos y expresa límites reales del proveedor.
+- Informe: docs/ask-tino-owner-10-2026-11-07.md; JSON antes/después asociado. No interpretar el resultado como garantía de toda respuesta posible.
