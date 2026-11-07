@@ -782,5 +782,5 @@
 
 
 /* Ask Tino uses one dedicated module; no conversation rules live here. */
-(function(){if(document.getElementById('fc-ask-tino-clean'))return;var script=document.createElement('script');script.id='fc-ask-tino-clean';script.type='module';script.src='/assets/ask-tino-client.js?v=20261107-round4';document.head.appendChild(script);})();
+(function(){if(document.getElementById('fc-ask-tino-clean'))return;var script=document.createElement('script');script.id='fc-ask-tino-clean';script.type='module';script.src='/assets/ask-tino-client.js?v=20261107-round5';document.head.appendChild(script);})();
 

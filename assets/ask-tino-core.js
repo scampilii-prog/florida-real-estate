@@ -43,7 +43,10 @@ export function cleanCriteria(value={}) {
  if(['yes','no','any'].includes(value.hoa))c.hoa=value.hoa;
  if(value.use==='mixed')c.use='mixed';
  if(Number.isInteger(value.personalUseMonths)&&value.personalUseMonths>0&&value.personalUseMonths<=12)c.personalUseMonths=value.personalUseMonths;
- if(['sell','invest'].includes(value.activity))c.activity=value.activity;
+ if(['sell','invest','buy-sell'].includes(value.activity))c.activity=value.activity;
+ if(['tenant','vacant'].includes(value.occupancy))c.occupancy=value.occupancy;
+ if(['tenant','vacant'].includes(value.salePossession))c.salePossession=value.salePossession;
+ if(Number.isInteger(value.leaseRemainingMonths)&&value.leaseRemainingMonths>0&&value.leaseRemainingMonths<=120)c.leaseRemainingMonths=value.leaseRemainingMonths;
  if(value.budgetAny===true)c.budgetAny=true;
  if (!c.budgetAny && typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
  if (Number.isInteger(Number(value.bedrooms)) && Number(value.bedrooms)>0 && Number(value.bedrooms)<=30) c.bedrooms=Number(value.bedrooms);
@@ -71,6 +74,13 @@ export function updateCriteria(previous, text) {
   if(chosen.length>1)c.cities=chosen;else if(chosen.length===1)c.city=chosen[0];
  }
  const normalized=text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ if(/inquilino|tenant|conduttore|inquilino/.test(normalized)&&/vive|living|occupied|ocupad|dentro|in place|occupat/.test(normalized)&&!/sin inquilino|no tenant|senza inquilino|sem inquilino/.test(normalized))c.occupancy='tenant';
+ if(/(?:vender|sell|vendere).{0,25}(?:con el inquilino|with (?:the )?tenant|con l.inquilino|com o inquilino)/.test(normalized))c.salePossession='tenant';
+ if(/alquiler|lease|affitto|locacao/.test(normalized)&&/termina|ends?|scade|acaba/.test(normalized)){
+  const term=normalized.match(/\b(\d{1,3}|ocho|eight|otto|oito|seis|six|sei|doce|twelve|dodici)\s*(?:meses|months|mesi)\b/);
+  if(term)c.leaseRemainingMonths=({ocho:8,eight:8,otto:8,oito:8,seis:6,six:6,sei:6,doce:12,twelve:12,dodici:12})[term[1]]||Number(term[1]);
+ }
+ if(/ya no hay inquilino|ahora esta vacia|now vacant|no tenant remains|ora e vuota|agora esta vazio/.test(normalized)){c.occupancy='vacant';delete c.leaseRemainingMonths;}
  const garage=normalized.match(/(?:garaje|garage|garagem).{0,12}\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:carros?|coches?|autos?|cars?)/);
  if(garage)c.garageSpaces=NUMBERS[garage[1]]||Number(garage[1]);
  if(/sin (?:asociacion|hoa)|no hoa|senza (?:associazione|hoa)|sem (?:associacao|hoa)/.test(normalized))c.hoa='no';
@@ -80,7 +90,8 @@ export function updateCriteria(previous, text) {
  }
  const calculation=/calcul|cuota mensual|monthly payment|rata mensile|pagamento mensal|down payment|anticipo|net proceeds/.test(normalized);
  if(!calculation){
-  if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
+  if(/(?:quiero comprar|want to buy|voglio comprare|quero comprar).{0,90}(?:antes de vender|before selling|prima di vendere|antes de vender)/.test(normalized))c.activity='buy-sell';
+  else if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
   else if(/invertir|investir|investire|\binvest\b/.test(normalized))c.activity='invest';
   else if(/comprar|acquistare|\bbuy\b|cerco|busco|looking for|procuro/.test(normalized))delete c.activity;
   const budgetContext=/budget|presupuesto|orcamento|price range|limite|limit|subir hasta|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
@@ -128,7 +139,12 @@ export function criteriaText(state,lang='en',only) {
  if(!only&&c.use==='mixed')parts.push(({en:'Use: rental and personal',es:'Uso: alquiler y personal',it:'Uso: affitto e personale',pt:'Uso: aluguel e pessoal'}[lang]||'Use: rental and personal')+(c.personalUseMonths?' ('+c.personalUseMonths+' '+({en:'personal-use months per year',es:'meses de uso personal al año',it:'mesi personali all’anno',pt:'meses pessoais por ano'}[lang]||'months')+')':''));
  if(!only&&c.propertyType)parts.push(({en:{condo:'Property: condominium',house:'Property: house',townhouse:'Property: townhouse',land:'Property: land'},es:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: townhouse',land:'Tipo: terreno'},it:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: villetta a schiera',land:'Tipo: terreno'},pt:{condo:'Tipo: condomínio',house:'Tipo: casa',townhouse:'Tipo: sobrado',land:'Tipo: terreno'}}[lang]||{})[c.propertyType]);
  if(!only&&c.pets)parts.push(({en:'Pets',es:'Mascotas',it:'Animali domestici',pt:'Animais de estimação'}[lang]||'Pets')+': '+t[c.pets]);
- if(c.activity)parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
+ if(c.activity&&c.activity!=='buy-sell')parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
+ if(!only&&c.activity==='buy-sell')parts.push(({es:'Objetivo: comprar antes de vender',en:'Goal: buy before selling',it:'Obiettivo: comprare prima di vendere',pt:'Objetivo: comprar antes de vender'}[lang]));
+ if(!only&&c.occupancy==='tenant')parts.push(({es:'Ocupación actual: con inquilino',en:'Current occupancy: tenant',it:'Occupazione attuale: inquilino',pt:'Ocupação atual: inquilino'}[lang]));
+ if(!only&&c.occupancy==='vacant')parts.push(({es:'Ocupación actual indicada: vacía',en:'Stated current occupancy: vacant',it:'Occupazione attuale indicata: vuota',pt:'Ocupação atual informada: vazio'}[lang]));
+ if(!only&&c.leaseRemainingMonths)parts.push(({es:'Plazo restante de alquiler indicado',en:'Stated remaining lease months',it:'Mesi residui di affitto indicati',pt:'Meses restantes de locação informados'}[lang])+': '+c.leaseRemainingMonths+({es:' meses',en:'',it:'',pt:''}[lang]));
+ if(!only&&c.salePossession==='tenant')parts.push(({es:'Entrega prevista: con inquilino; no se ha acordado entrega vacía',en:'Intended possession: tenant in place; vacant delivery not agreed',it:'Consegna prevista: con inquilino; consegna libera non concordata',pt:'Entrega prevista: com inquilino; entrega desocupada não acordada'}[lang]));
  if(c.budgetAny)parts.push(({en:'No maximum budget specified',es:'Sin presupuesto máximo indicado',it:'Nessun budget massimo indicato',pt:'Sem orçamento máximo informado'})[lang]||'No maximum budget specified');
  if(c.accessibility)parts.push(({en:'Accessibility: wheelchair access',es:'Accesibilidad: silla de ruedas',it:'Accessibilità: sedia a rotelle',pt:'Acessibilidade: cadeira de rodas'})[lang]||'Accessibility: wheelchair access');
  for(const key of ['city','budget','bedrooms','pool']) if((!only||key===only)&&c[key]!==undefined) parts.push(t[key]+': '+(key==='pool'?t[c[key]]:c[key]));

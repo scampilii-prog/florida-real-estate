@@ -1,3 +1,4 @@
+import {sellerGuidance} from './ask-tino-seller-guidance.js';
 // Application rules enforce the public design patterns; no proprietary prompts or listing access.
 import {CONTACT,criteriaText} from '../../assets/ask-tino-core.js';
 const L={
@@ -19,6 +20,7 @@ export function policyReply(q,state,lang='en'){
  it:'Non inviare qui documenti di identità o estratti conto. La chat non è un canale sicuro per documenti. Servizi esterni possono elaborare i messaggi; non posso promettere riservatezza, conservazione o cancellazione da parte loro. Concorda prima con Sabatino un canale adeguato per i documenti della transazione.',
  pt:'Não envie documentos de identidade nem extratos bancários aqui. O chat não é um canal seguro para documentos. Serviços externos podem processar mensagens; não posso prometer confidencialidade, retenção ou exclusão por esses provedores. Combine antes com Sabatino um canal adequado para os documentos.'
  }[lang]||t.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
+ const seller=sellerGuidance(q,state,lang);if(seller)return seller;
  const propertyPrivacy=/privacy|privacidad|riservatezza|privacidade/.test(s)&&/home|house|casa|vivienda|immobile|imovel/.test(s)&&!/data|datos|dati|dados|chat|conversa|policy|politica|mensaje|message/.test(s);
  if(!propertyPrivacy&&/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
  en:'Read the privacy policy before sharing personal information. Do not enter passwords, identity documents or bank details here. For privacy questions, contact Sabatino.',
