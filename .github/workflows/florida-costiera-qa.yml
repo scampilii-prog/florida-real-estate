@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - '*.html'
-      - 'scripts/check-website14.mjs'
+      - 'scripts/**'
       - '.github/workflows/florida-costiera-qa.yml'
   workflow_dispatch:
 permissions:

@@ -15,7 +15,7 @@ for(const place of [...locations.cities,...locations.zipCodes]){
 const form=html.match(/<form\b[^>]*id="nc-quick-form"[^>]*>/)?.[0];
 assert(form?.includes('action="'+base+'/home/redirecttoresultspage"'));assert(form.includes('method="post"'));assert(form.includes('target="_self"'));
 for(const name of ['SearchText','QuickMoveIn','PriceLow','PriceHigh','BedRooms','Bathrooms','SqFtLow'])assert(html.includes('name="'+name+'"'),'Missing provider field '+name);
-assert(html.includes('language-dropdown.js?v=20261018-showingnew'));
+assert(/src="assets\/language-dropdown\.js\?v=[^"\s]+"/.test(html),'Shared navigation must have a versioned script URL');
 // The advisory must respect an explicit same-tab target, including dynamically added links.
 const shared=read('assets/language-dropdown.js');
 const fn=shared.match(/function qualifies\(a\)\{[\s\S]*?return \/\^https\?:\$\/[\s\S]*?;\}/)?.[0];assert(fn);
