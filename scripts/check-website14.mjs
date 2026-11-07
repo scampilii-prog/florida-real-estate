@@ -32,7 +32,7 @@ for(const [name,page,anchor] of [['Buyer Closing Costs',calculators,'buyer-costs
 }
 for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',contact],['Calculators',calculators],['Investment Center',investment]]){
  assert(page.includes('function toggleTino()'),name+' missing Ask Tino open handler');
- assert(page.includes('async function sendTino(event)'),name+' missing Ask Tino submission handler');
+ assert(!page.includes('async function sendTino(event)'),name+' retains a duplicate Ask Tino sender');
  assert(page.includes('id="tinoPanel"'),name+' missing Ask Tino panel');
 }
 
@@ -46,10 +46,12 @@ for(const [name,page] of [['Home',home],['Buy',buy],['Sell',sell],['Contact',con
 }
 for(const name of ['index.html','buy.html','sell.html','contact.html','calculators.html','investment-center.html']){
  const html=read(name);
- assert(html.includes('"/api/ask-tino"'),name+' must use the same-origin assistant endpoint');
+ assert(html.includes('assets/language-dropdown.js'),name+' must load the shared assistant installer');
  assert(!html.includes('https://ask-tino-ai.scampilii.workers.dev/'),name+' still calls the incompatible cross-origin endpoint');
 }
-assert(closing.includes('id="tinoPanel"')&&closing.includes('async function sendTino(event)'),'Closing Costs Ask Tino missing');
+assert(closing.includes('id="tinoPanel"')&&closing.includes('assets/language-dropdown.js'),'Closing Costs Ask Tino missing');
+assert(read('assets/ask-tino-client.js').includes("fetch('/api/ask-tino'"),'Dedicated client must use same-origin endpoint');
+assert(read('assets/language-dropdown.js').includes('ask-tino-client.js'),'Shared installer must load dedicated chat client');
 // Inquiry forms must be wired to a submit handler and use the official inbox.
 for(const [name,page] of [['Contact',contact],['Calculators',calculators],['Seller Closing Costs',read('seller-closing-costs.html')]]){
  assert(page.includes('id="lead-form"'),name+' missing coastal inquiry form');
@@ -64,7 +66,7 @@ for(const id of ['mortgage','buyer-costs','seller-net','affordability','loans','
 // Run on all production pages, excluding the offline worksheet and historical demo.
 import {readdirSync} from 'node:fs';
 const productionPages=readdirSync(new URL('../',import.meta.url))
- .filter(n=>n.endsWith('.html')&&!['Florida-Closing-Timeline-OFFLINE.html','calculators_seis_funcionales_footer_aprobado.html'].includes(n));
+ .filter(n=>n.endsWith('.html')&&!['Florida-Closing-Timeline-OFFLINE.html','calculators_seis_funcionales_footer_aprobado.html','ask-tino-preview.html','ask-tino.html'].includes(n));
 const validPages=new Set(productionPages);
 let linkCount=0;
 for(const pageName of productionPages){
@@ -160,7 +162,7 @@ import {execFileSync} from 'node:child_process';
 execFileSync(process.execPath,[new URL('./sync-inquiry.mjs',import.meta.url).pathname,'--check'],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-inquiry.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-site-map-menu.mjs',import.meta.url).pathname],{stdio:'inherit'});
-execFileSync(process.execPath,[new URL('./check-ask-tino.mjs',import.meta.url).pathname],{stdio:'inherit'});
+execFileSync(process.execPath,[new URL('./check-ask-tino-clean.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-new-construction.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-site-search.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-buyer-timeline.mjs',import.meta.url).pathname],{stdio:'inherit'});

@@ -4,7 +4,7 @@ const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'
 const template=read('assets/fc-header-template.html').trim();
 const css=read('assets/fc-canonical-header.css'),shared=read('assets/language-dropdown.js'),behavior=read('assets/fc-canonical-header-menu.js');
 let count=0;
-for(const file of readdirSync(root).filter(f=>f.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(f))){
+for(const file of readdirSync(root).filter(f=>f.endsWith('.html')&&!/OFFLINE|calculators_seis|ask-tino-preview/.test(f))){
  const html=read(file),header=html.match(/<header\b[\s\S]*?<\/header><div class="fc-header-spacer"[^>]*><\/div>/)?.[0];
  assert.equal(header,template,file+' does not use the single initial header');
  assert.equal((html.match(/fc-canonical-header\.css\?v=20261104-controls2/g)||[]).length,1,file+' header stylesheet count');

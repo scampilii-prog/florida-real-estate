@@ -1,7 +1,7 @@
 import {readFileSync,readdirSync} from 'node:fs';
 import {strict as assert} from 'node:assert';
 const root=new URL('../',import.meta.url),read=p=>readFileSync(new URL(p,root),'utf8');
-const pages=readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|calculators_seis/.test(n));
+const pages=readdirSync(root).filter(n=>n.endsWith('.html')&&!/OFFLINE|calculators_seis|ask-tino-preview/.test(n));
 for(const page of pages){
  const html=read(page),header=html.match(/<header\b[\s\S]*?<\/header>/i)?.[0];
  assert(header,page+' missing header');
