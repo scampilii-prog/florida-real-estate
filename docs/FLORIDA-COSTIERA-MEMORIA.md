@@ -212,3 +212,17 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Comprobación real en navegador sobre /contact#tell-us-your-plans: versión privacy4; mensaje sintético con etiqueta Password produjo advertencia en español, permaneció en el campo y no apareció como mensaje enviado en el historial.
 - Las pruebas del cliente simulado comprobaron cero llamadas fetch para patrones sensibles; las pruebas de API comprobaron bloqueo antes del servicio externo.
 - Check estructural, suite de reglas y despliegue Cloudflare Pages del commit finalizados correctamente.
+
+## 13. Auditoría directa de Ask Tino — 2026-11-07
+
+Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y solucionarlos sin que Tino pierda tiempo.
+
+- Primera ronda pública: 35 turnos sintéticos; se detectaron presupuestos sobrescritos por cálculos, cambios de ciudad ignorados, venta confundida con compra, límites no retirados, cantidades en palabras no guardadas, privacidad física confundida con datos y promesas de no conservación no verificadas.
+- Corregidos parser y rutas; ampliadas localidades, objetivos de venta/inversión y accesibilidad; respuestas cortas deterministas; historial no recupera criterios borrados; cálculos no cambian preferencias.
+- Nuevas comprobaciones de color de vivienda, prioridad de portugués y cálculos italianos.
+- Script scripts/check-ask-tino-conversations.mjs: 50/50 turnos locales y **50/50 contra el servicio público**, después del despliegue.
+- En navegador: búsqueda Venice $500,000, tres habitaciones, sin piscina → Port Charlotte → cálculo 20% de $400,000 → resumen conserva Port Charlotte, $500,000, tres habitaciones y sin piscina.
+- Commit: b8a035bb5c2800784b6d84636b977439572ddb4f. Cloudflare Pages, rules y structural-audit: success.
+- Referencia detallada: docs/ask-tino-audit-2026-11-07.md y resultados JSON sintéticos asociados.
+- Suite local incluida en GitHub Actions para futuros cambios. Pruebas reales se ejecutan con --live; no afirmar que cada cambio llama al proveedor externo automáticamente.
+- No es cobertura exhaustiva de toda pregunta posible. Pendientes de Gmail y configuración interna del Worker se mantienen; no se enviaron correos ni reservaron visitas.
