@@ -283,3 +283,13 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Navegador, 1–4: Englewood / Port Charlotte, $450,000, garaje 2, sin asociación, piscina opcional; pregunta habitaciones sin inventarlas ni elegir ciudad.
 - 6 distingue créditos de cash to close; 7 detalla reservas/cuota; 8 uso mixto; 9 verificación independiente de transferencia; 10 borrador no enviado.
 - Informe docs/ask-tino-owner-round3-2026-11-07.md y JSON asociado con antes/después. Cobertura finita, sin afirmar perfección del chat o verificación de una propiedad/cuenta concreta.
+
+## 18. Cuarta ronda — criterios y diligencia de compra
+
+- Autorización: realizar las diez nuevas preguntas y mejorar Ask Tino sin hacer que el usuario las copie.
+- Fallos comprobados antes: Venice no se eliminaba; baños/oficina no se guardaban; el resumen contradecía baños indispensables; preguntas de terreno/inspección arrastraban temas anteriores.
+- Campos bathrooms/bathroomsRequired/office; exclusión explícita de ciudades; oficina adicional no cambia habitaciones; terreno tiene prioridad sobre casa en intención de construir. Versión compartida round4 en cliente/core/cargadores/HTML/generador.
+- Guías ES/EN/IT/PT sobre permisos cerrados, techo/seguro, paneles solares, terreno, renuncia a inspección y antigua propiedad alquilada ahora vacía. No afirmar verificación, aprobación ni derechos/plazos universales.
+- Commit cac2d31b46da876273453c06c8a5be3b23e42e0e publicado; Cloudflare Pages, rules y structural-audit success. Diez consultas públicas exactas: 10/10 y lectura completa. Navegador 1–4: Nokomis, $600,000, 3 habitaciones, 2 baños indispensables, distribución oficina flexible; pide aclaración sin inventar cuarta habitación.
+- Pasaron las tres rondas anteriores, 60 turnos generales, privacidad y auditoría estructural. No equivale a aprobar todo el chat ni propiedades concretas.
+- Informe docs/ask-tino-owner-round4-2026-11-07.md; respuestas antes/después en JSON asociado. No tocar OceanFL ni My Closing Timeline.

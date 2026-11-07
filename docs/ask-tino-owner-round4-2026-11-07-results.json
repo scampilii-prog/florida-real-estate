@@ -1,0 +1,378 @@
+{
+  "date": "2026-11-07",
+  "implementationCommit": "cac2d31b46da876273453c06c8a5be3b23e42e0e",
+  "syntheticDataOnly": true,
+  "before": [
+    {
+      "number": 1,
+      "question": "Busco una casa en Venice o Nokomis por hasta $600,000, con tres habitaciones, dos baños y espacio para una oficina.",
+      "response": {
+        "reply": "Criterios actuales: Ciudades a considerar: Venice / Nokomis. Tipo: casa. Presupuesto: $600,000. Habitaciones: 3.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 2,
+      "question": "Descarta Venice y deja solamente Nokomis. El presupuesto sigue igual.",
+      "response": {
+        "reply": "Criterios actuales: Ciudades a considerar: Venice / Nokomis. Tipo: casa. Presupuesto: $600,000. Habitaciones: 3.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 3,
+      "question": "Los dos baños son indispensables, pero la oficina puede ser una habitación adicional.",
+      "response": {
+        "reply": "Criterios actuales: Ciudades a considerar: Venice / Nokomis. Tipo: casa. Presupuesto: $600,000. Habitaciones: 3.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 4,
+      "question": "Dime qué requisitos son indispensables, cuáles son flexibles y qué información todavía falta.",
+      "response": {
+        "reply": "Para buscar una casa en Nokomis con un presupuesto de $600,000, los requisitos indispensables parecen ser: 3 habitaciones (incluyendo una posible oficina adicional) y un presupuesto máximo de $600,000. Los requisitos flexibles podrían ser otros detalles como el número de baños (se mencionan 2 baños como indispensables, pero no está claro si este es un requisito fijo), el tamaño del terreno, la ubicación exacta dentro de Nokomis, entre otros.\n\n¿Cuál es el número mínimo de baños que consideras absolutamente necesario para esta casa?",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 5,
+      "question": "Encontré una casa remodelada. ¿Cómo compruebo que las obras tienen los permisos necesarios y que están cerrados?",
+      "response": {
+        "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-07\n\nSarasota County\nhttps://www.scgov.net/\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 6,
+      "question": "El techo tiene 18 años, pero el vendedor dice que el seguro no será un problema. ¿Qué debería verificar antes de comprar?",
+      "response": {
+        "reply": "Para comprar una casa con un techo de 18 años, sería recomendable verificar varios aspectos antes de tomar una decisión. Es importante investigar sobre el seguro y cómo el techo podría afectar las primas o la cobertura. También sería útil revisar los registros de mantenimiento y reparaciones del techo, así como considerar la posibilidad de realizar una inspección del techo por un profesional.\n\nAdemás, dado que mencionas que el vendedor dice que el seguro no será un problema, podría ser beneficioso obtener una cotización de seguro directamente de una compañía de seguros para entender mejor los costos y cualquier posible restricción.\n\n¿Cuál es el estado actual del techo según el vendedor o según alguna inspección previa?",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 7,
+      "question": "La casa tiene paneles solares. ¿Cómo averiguo si son propios, financiados o alquilados y qué obligaciones asumiría?",
+      "response": {
+        "reply": "Para determinar si los paneles solares son propios, financiados o alquilados, es importante revisar los documentos del vendedor y el contrato de compraventa. ¿Tiene acceso a los documentos del vendedor o contrato de compraventa que mencionen los paneles solares? Recomiendo contactar a Sabatino para obtener asesoramiento específico sobre la propiedad.",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 8,
+      "question": "Quiero comprar un terreno para construir. ¿Qué debería revisar antes de dar por hecho que puedo edificar la casa que quiero?",
+      "response": {
+        "reply": "Para comprar un terreno y construir una casa, es importante revisar varios factores antes de tomar una decisión. Deberías verificar las regulaciones y restricciones de zonificación en el área, los requisitos de construcción y permisos necesarios, así como la disponibilidad de servicios como electricidad, agua y alcantarillado. También es crucial investigar sobre cualquier posible restricción ambiental o de conservación en el terreno.\n\nEn cuanto a tu pregunta previa sobre los paneles solares, para determinar si son propios, financiados o alquilados, y qué obligaciones conllevan, sería recomendable revisar los documentos de propiedad y contrato de compraventa del terreno o casa, o consultar directamente con el vendedor o un profesional inmobiliario como Sabatino.\n\n¿Cuál es el tamaño aproximado del terreno que estás considerando comprar?",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 9,
+      "question": "El vendedor me ofrece un descuento si renuncio a la inspección. ¿Qué riesgos debería considerar?",
+      "response": {
+        "reply": "Considerar renunciar a la inspección puede ser riesgoso, ya que podrías enfrentarte a problemas ocultos en la propiedad que podrían resultar costosos de reparar. Algunos de los riesgos que debes considerar incluyen daños estructurales, problemas con la plomería o la electricidad, y la presencia de plagas o daños por agua.\n\n¿Cuál es el tipo de terreno que estabas considerando comprar previamente, y cómo crees que esto podría afectar tu decisión actual sobre la inspección de la casa?",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 10,
+      "question": "Una propiedad estuvo alquilada y ahora está vacía. ¿Qué documentos y condiciones debería comprobar antes del cierre?",
+      "response": {
+        "reply": "Para una propiedad que estuvo alquilada y ahora está vacía, es importante verificar documentos como el contrato de alquiler anterior, cualquier notificación de finalización del alquiler, y comprobar el estado actual de la propiedad. También deberías considerar condiciones como el estado de mantenimiento, posibles daños o reparaciones necesarias, y cualquier problema con plagas o daños por agua.\n\n¿Cuál es el tipo de propiedad (edad, tamaño, ubicación específica) que estás considerando en Venice o Nokomis?",
+        "criteria": {
+          "cities": [
+            "Venice",
+            "Nokomis"
+          ],
+          "budget": "$600,000",
+          "bedrooms": 3,
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    }
+  ],
+  "after": {
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "Busco una casa en Venice o Nokomis por hasta $600,000, con tres habitaciones, dos baños y espacio para una oficina.",
+        "response": {
+          "reply": "Criterios actuales: Ciudades a considerar: Venice / Nokomis. Tipo: casa. Presupuesto: $600,000. Habitaciones: 3. Baños: 2. Oficina: espacio deseado.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Venice",
+              "Nokomis"
+            ],
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "space",
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "Descarta Venice y deja solamente Nokomis. El presupuesto sigue igual.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Ciudad: Nokomis. Presupuesto: $600,000. Habitaciones: 3. Baños: 2. Oficina: espacio deseado.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "space",
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "Los dos baños son indispensables, pero la oficina puede ser una habitación adicional.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Ciudad: Nokomis. Presupuesto: $600,000. Habitaciones: 3. Baños: 2 (indispensables). Oficina: puede ser una habitación adicional.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "Dime qué requisitos son indispensables, cuáles son flexibles y qué información todavía falta.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Ciudad: Nokomis. Presupuesto: $600,000. Habitaciones: 3. Baños: 2 (indispensables). Oficina: puede ser una habitación adicional.\n\nIndispensable confirmado: 2 baños. Flexibilidad confirmada: la oficina puede resolverse con una habitación adicional; no has dicho que sea opcional. Los demás criterios indicados no se han marcado como negociables. Falta aclarar: ¿la oficina debe ser adicional a las habitaciones indicadas o puede ocupar una de ellas?",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "Encontré una casa remodelada. ¿Cómo compruebo que las obras tienen los permisos necesarios y que están cerrados?",
+        "response": {
+          "reply": "Confirma la jurisdicción de la parcela y consulta su historial en el portal oficial de permisos. Compara las obras realizadas con el alcance de cada permiso; pide al vendedor números de permiso, planos y registros del contratista. Comprueba inspecciones finales, estado cerrado y cualquier observación pendiente: un permiso emitido no prueba que la obra esté aprobada y cerrada. Si faltan registros o hay diferencias, acláralas con el departamento de construcción antes de comprometerte. Una inspección privada no sustituye esa comprobación oficial.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "El techo tiene 18 años, pero el vendedor dice que el seguro no será un problema. ¿Qué debería verificar antes de comprar?",
+        "response": {
+          "reply": "La afirmación del vendedor no confirma que obtendrás seguro. Pide la fecha, material y permisos del techo, historial de reparaciones y una inspección independiente de su estado y vida útil estimada. Consulta directamente con un profesional de seguros y solicita cotización y condiciones de suscripción por escrito, incluidos deducibles, exclusiones y posibles reparaciones o reemplazo. Confirma si requieren inspección de cuatro puntos o informe de mitigación de viento. Revisa estas condiciones antes de vencer tus plazos contractuales; la edad por sí sola no permite asegurar aprobación ni rechazo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "La casa tiene paneles solares. ¿Cómo averiguo si son propios, financiados o alquilados y qué obligaciones asumiría?",
+        "response": {
+          "reply": "Pide los contratos originales y comprobantes que indiquen si los paneles son propios y pagados, financiados, alquilados o sujetos a un acuerdo de compra de energía (PPA). Si hay deuda o contrato vigente, solicita saldo de cancelación, cuotas, aumentos, plazo restante y condiciones de transferencia o consentimiento del proveedor. La compañía de título debe revisar posibles gravámenes y cómo se cancelarán o tratarán al cierre. Comprueba además permisos, garantías, mantenimiento y obligaciones sobre el techo. No asumas que la deuda desaparece ni que debes asumirla automáticamente; deja por escrito el acuerdo antes de comprar. No pegues aquí documentos financieros.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Quiero comprar un terreno para construir. ¿Qué debería revisar antes de dar por hecho que puedo edificar la casa que quiero?",
+        "response": {
+          "reply": "Identifica la parcela exacta y confirma con la autoridad competente zonificación, uso permitido, retiros, altura y superficie edificable para tu proyecto. Revisa acceso legal, servidumbres, levantamiento topográfico y restricciones de escritura o asociación. Verifica disponibilidad y costo de agua, alcantarillado o viabilidad de séptico, electricidad y acceso vial. Investiga inundación, humedales, suelos, drenaje y posibles limitaciones ambientales con los profesionales adecuados. Estima preparación del terreno, permisos y tasas. Que se anuncie como terreno residencial no garantiza que puedas construir esa casa: confirma la viabilidad antes de comprometerte.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "land"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "El vendedor me ofrece un descuento si renuncio a la inspección. ¿Qué riesgos debería considerar?",
+        "response": {
+          "reply": "El descuento puede ser menor que el costo de defectos ocultos en estructura, techo, electricidad, plomería, humedad o plagas. Pide una inspección independiente y presupuestos antes de valorar ese intercambio. Renunciar a la inspección puede limitar tus opciones contractuales de cancelar o negociar; los derechos y plazos dependen del contrato y deben revisarse antes de firmar o renunciar. La tasación y las inspecciones del prestamista o asegurador no sustituyen tu inspección. Revisa con Sabatino y, para efectos jurídicos, un abogado cómo conservar la protección que necesitas.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "land"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "Una propiedad estuvo alquilada y ahora está vacía. ¿Qué documentos y condiciones debería comprobar antes del cierre?",
+        "response": {
+          "reply": "Que esté vacía no demuestra por sí solo que terminó el alquiler ni que puedes recibir posesión sin reclamaciones. Solicita el contrato y sus modificaciones, documentos de terminación o entrega de posesión y confirmación de que no quedan derechos de ocupación pendientes. Revisa con la compañía de cierre el tratamiento de depósitos, rentas anticipadas, saldos y ajustes aplicables; no presupongas que todos corresponden al comprador. Confirma la entrega desocupada pactada, estado y reparaciones mediante recorrido final, además de llaves, códigos y servicios. Si hay dudas sobre derechos del antiguo inquilino, pide revisión jurídica antes del cierre. No envíes aquí sus datos personales.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Nokomis",
+            "budget": "$600,000",
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "office": "extra-room",
+            "bathroomsRequired": true,
+            "propertyType": "land"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  },
+  "browser": {
+    "url": "https://floridacostiera.com/contact",
+    "questions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "observed": "Nokomis only, $600,000, three bedrooms, two required bathrooms, office extra-room flexibility, one clarification, no invented fourth bedroom"
+  },
+  "checks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}

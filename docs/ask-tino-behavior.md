@@ -107,3 +107,11 @@ Guidance adds stale-listing uncertainty, seller credits versus cash needed, rese
 Sources checked: CFPB https://www.consumerfinance.gov/owning-a-home/loan-estimate/ ; https://www.consumerfinance.gov/owning-a-home/closing-disclosure/ ; https://files.consumerfinance.gov/f/documents/cfpb_mortgages-scams_one-pager.pdf ; IRS https://www.irs.gov/publications/p527 . General guidance only, not verification of a particular contract, account or tax status.
 
 New exact sequential suite: node scripts/check-ask-tino-owner-round3.mjs; --live tests production. Local calls cannot use the network. New client/core cache version round3 preserves new fields between page submissions.
+
+## Fourth owner-question round — 2026-11-07
+
+Explicit city exclusions remove the city; a sole remaining alternative becomes city rather than cities. bathrooms, bathroomsRequired and office fields survive both client and API validation. Extra-room office flexibility does not reduce bedrooms or infer an extra bedroom. Requirements classification preserves the explicit bathroom priority and asks whether the office is additional to or within the stated bedrooms. Buying land to build a house sets land, not house.
+
+New general due-diligence guidance in four languages covers permit scope/final closure, roof condition and written insurance terms, solar ownership/loan/lease/PPA, land feasibility, inspection waiver risk and formerly rented vacant possession. Topic replies do not drag previous topics into the current answer and do not claim property-specific verification. Sources and before/after evidence are in docs/ask-tino-owner-round4-2026-11-07.md and its JSON.
+
+Run node scripts/check-ask-tino-owner-round4.mjs; --live repeats the sequential public API conversation. Browser continuity 1–4 also passed after production deployment cac2d31b46da876273453c06c8a5be3b23e42e0e. Cache key round4 is shared by all loaders, generated inquiry markup and core import. Finite regression coverage, not universal chatbot certification.
