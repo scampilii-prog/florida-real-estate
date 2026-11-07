@@ -67,4 +67,11 @@ async function submit(event){
 document.addEventListener('submit',event=>{if(event.target.matches('form.tino-input')){event.stopImmediatePropagation();submit(event);}},true);
 window.sendTino=submit;
 window.fcAskTino={submit};
+// Existing page buttons share this controller, including pages without inline UI code.
+window.toggleTino=function(){
+ const panel=document.getElementById('tinoPanel');if(!panel)return;
+ const open=panel.classList.toggle('open'),launcher=document.querySelector('.tino-launcher');
+ launcher?.setAttribute('aria-expanded',String(open));
+ if(open)document.getElementById('tinoText')?.focus();else launcher?.focus();
+};
 
