@@ -226,3 +226,11 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Referencia detallada: docs/ask-tino-audit-2026-11-07.md y resultados JSON sintéticos asociados.
 - Suite local incluida en GitHub Actions para futuros cambios. Pruebas reales se ejecutan con --live; no afirmar que cada cambio llama al proveedor externo automáticamente.
 - No es cobertura exhaustiva de toda pregunta posible. Pendientes de Gmail y configuración interna del Worker se mantienen; no se enviaron correos ni reservaron visitas.
+
+## 14. Corrección tras prueba de Tino: vendedor con hipoteca
+
+- Pregunta del propietario: “Quiero vender mi casa en Rotonda West, pero todavía tengo hipoteca. ¿Por dónde empiezo?”. Contestaba solo con criterios y contacto.
+- Reconocido límite de la auditoría: 50/50 indicaba condiciones programadas aprobadas, no calidad completa. El test de venta aceptaba derivación sin exigir pasos útiles; ese caso compuesto no estaba incluido.
+- El enrutamiento de venta ya no sustituye preguntas sustantivas por una derivación genérica. Explicación de hipoteca: solicitar payoff, estimar precio/gastos/neto, deuda al cierre y resolver diferencias; contacto después de la respuesta.
+- Añadidas cuatro versiones del caso y seguimiento sin repetir “vender”: 55 turnos locales pasan. Revisión estructural y privacidad pasan.
+- No repetir “todo califica” como valoración global. Ampliar pruebas por intención y utilidad, no solo palabras clave o integridad del estado.

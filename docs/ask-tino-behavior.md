@@ -71,3 +71,9 @@ The first public API audit exercised 35 synthetic turns and exposed state/routin
 A supplied clean criteria object is authoritative; old history is used to reconstruct criteria only for clients without a criteria object. This prevents removed fields from being resurrected by history. The shared client and API use the same core version.
 
 `node scripts/check-ask-tino-conversations.mjs`: 50 synthetic turns across EN/ES/IT/PT, deterministic local regression. `--live --report=/tmp/report.json` sends the same cases to the deployed public endpoint (three concurrent scenarios, sequential turns within each conversation). Local generic-model responses are mocked; live responses are evaluated separately. These samples are not exhaustive language or legal validation.
+
+## Seller question correction from owner test — 2026-11-07
+
+The owner’s exact mortgage/starting-steps question exposed a gap in the 50-turn suite: the seller-intent assertion accepted a generic contact handoff and did not verify substantive usefulness. A pass count is not a conversation-quality score. The seller policy now yields substantive questions to known answers/model routing; mortgage-selling guidance gives payoff and net-proceeds steps before contact. Four-language exact-question and seller-follow-up regressions increase the local suite to 55 turns.
+
+Editorial sources checked on 2026-11-07: CFPB payoff amount https://www.consumerfinance.gov/ask-cfpb/what-is-a-payoff-amount-and-is-it-the-same-as-my-current-balance-en-205/ and home-selling proceeds https://www.consumerfinance.gov/housing/housing-insecurity/help-for-homeowners/avoid-foreclosure/. General explanation, not a case-specific payoff, valuation or legal conclusion.

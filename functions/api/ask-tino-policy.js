@@ -25,6 +25,8 @@ export function policyReply(q,state,lang='en'){
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
  if(!/no busco|not looking|non cerco|nao procuro/.test(s)&&/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;
+ // A seller's substantive question must reach an answer, not the intent-only handoff.
+ if(state.activity==='sell'&&/[?¿]|hipoteca|mortgage|mutuo|financiamento|por donde|how to|where.*start|da dove|document|pasos|steps/.test(s))return null;
  const search=/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|house|condo|apartment|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);
  const update=/\b(cambia|cambio|change|aggiorna|actualiza|atualiza|mude|togli|quita|remove|mantieni|keep|quiero|voglio|quero|want)\b/.test(s)&&/city|citta|ciudad|cidade|comunidad|community|budget|presupuesto|orcamento|piscina|pool|bedroom|habitacion|camere|quartos/.test(s)&&Object.keys(state).length>0;
  const shortCriterion=(state.city&&s===norm(state.city))||(!/[?¿]/.test(q)&&q.length<90&&/budget|presupuesto|orcamento/.test(s))||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(q);
