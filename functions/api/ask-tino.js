@@ -105,18 +105,15 @@ export async function onRequest({ request }) {
    : 'Contact Sabatino Campilii, Realtor® with LoKation® Real Estate. Phone: (941) 270-4877. Email: sabatino@floridacostiera.com. Contact form: https://floridacostiera.com/contact#tell-us-your-plans. Use the buttons below to send an inquiry or call him.';
   return json({ reply: details });
  }
- const reference = [
- 'You are Ask Tino, Florida Costiera virtual real estate assistant. Respond in the visitor language, directly and concisely, without promotional introductions. Answer first; mention Sabatino only if needed. Never invent facts or guarantee outcomes.',
- 'Florida foreign buyers: many can buy, but some purchases are restricted by Florida Chapter 692 Part III and applicable federal laws. Do not claim unrestricted eligibility. A US bank account or ITIN is not universally mandatory for purchasing. Advise consulting a Florida real estate attorney about country-specific restrictions. Distinguish general guidance from legal or tax advice.',
- 'Sabatino Campilii: Florida Realtor, LoKation Real Estate, license SL3363040; 25+ years in construction and real estate, engineering and development background. Phone (941) 270-4877. Website https://floridacostiera.com/. Acromatico is the creative brand associated with Italo Campilii, not a Realtor.',
- 'Visitor message:'
-].join(' ') + ' ';
+ // Keep upstream payload short: the AI Worker rejects oversized messages with HTTP 400.
+ const reference = 'You are Ask Tino, Florida Costiera real estate assistant. Reply in the visitor language; answer all parts accurately and briefly. Do not invent facts. Florida Realtor Sabatino Campilii, LoKation, (941) 270-4877. Question: ';
+ const upstreamMessage = reference + message;
  const controller = new AbortController();
  const timer = setTimeout(() => controller.abort(), 25000);
  try {
   const upstream = await fetch(UPSTREAM, {
    method: 'POST', headers: { 'Content-Type': 'application/json' },
-   body: JSON.stringify({ message: reference + message }), signal: controller.signal
+   body: JSON.stringify({ message: upstreamMessage }), signal: controller.signal
   });
   if (!upstream.ok) return json({ error: 'Ask Tino: AI service returned HTTP ' + upstream.status + '.', code: 'UPSTREAM_HTTP_' + upstream.status }, 502);
   let data;
