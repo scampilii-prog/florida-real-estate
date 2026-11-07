@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {writeFileSync} from 'node:fs';
+import {guidanceReply} from '../functions/api/ask-tino-guidance.js';
 import {onRequest} from '../functions/api/ask-tino.js';
 const live=process.argv.includes('--live');
 const questions=[
@@ -37,6 +38,9 @@ for(const [index,message]of questions.entries()){
  history.push({role:'user',content:message});results.push(row);
 }
 globalThis.fetch=savedFetch;
+assert(!guidanceReply('Un condominio tiene $1,200 mensuales. ¿Qué otros gastos reviso?','es').includes('$900'));
+assert(!guidanceReply('Compro a distancia desde Canada. ¿Qué pasos organizo?','es').includes('desde Italia'));
+assert(!guidanceReply('¿Confirmas que ya enviaste mis preferencias ayer?','es').includes('mañana'));
 const report=process.argv.find(a=>a.startsWith('--report='));if(report)writeFileSync(report.slice(9),JSON.stringify({live,results},null,2));
 for(const row of results.filter(r=>!r.pass))console.error(JSON.stringify(row));
 console.log(`${live?'LIVE':'LOCAL'}: ${results.filter(r=>r.pass).length}/10 second-round owner questions passed.`);
