@@ -866,7 +866,15 @@
   busy = true;
   var messages = document.getElementById('tinoMessages');
   var visitorMessages = Array.from(messages.querySelectorAll('.tino-bubble')).filter(function(item){return item.style.background;}).map(function(item){return {role:'user',content:(item.dataset.tinoOriginal || item.textContent).slice(0,600)};});
-  var factual = visitorMessages.map(function(item,index){return /\$\s*\d|\b(?:budget|presupuesto|orçamento)\s*[:=]?\s*\d|(?:con|sin|senza|with|without|com|sem)\s+(?:una?\s+)?(?:piscina|pool)/i.test(item.content) ? index : -1;}).filter(function(index){return index >= 0;}).slice(-3);
+  var factPatterns = [
+   /\$\s*\d|\b(?:budget|presupuesto|orçamento)\s*[:=]?\s*\d/i,
+   /Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/i,
+   /(?:con|sin|senza|with|without|com|sem)\s+(?:una?\s+)?(?:piscina|pool)|mantieni.{0,50}piscina/i
+  ];
+  var factual = factPatterns.map(function(pattern){
+   for (var i=visitorMessages.length-1;i>=0;i--) if(pattern.test(visitorMessages[i].content)) return i;
+   return -1;
+  }).filter(function(index){return index>=0;});
   var recent = visitorMessages.map(function(item,index){return index;}).slice(-5);
   history = Array.from(new Set(factual.concat(recent))).sort(function(a,b){return a-b;}).map(function(index){return visitorMessages[index];});
   var bubble = document.createElement('div');
