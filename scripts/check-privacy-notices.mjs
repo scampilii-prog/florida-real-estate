@@ -29,4 +29,8 @@ const page=fs.readFileSync(new URL('../privacy.html',import.meta.url),'utf8');
 assert(page.includes('id="ask-tino-privacy"'));
 assert(page.includes('Provider retention periods and model-training settings have not been verified'));
 assert(page.includes('does not automatically email Sabatino'));
+const sharedLoader=fs.readFileSync(new URL('../assets/language-dropdown.js',import.meta.url),'utf8');
+const compatibility=fs.readFileSync(new URL('../assets/ask-tino-widget.js',import.meta.url),'utf8');
+const moduleURL=sharedLoader.match(/\/assets\/ask-tino-client\.js\?v=[^'"\s]+/)[0];
+assert(compatibility.includes(moduleURL),'Both loaders must resolve to the identical module URL');
 console.log('PASS: visible chat notice before first send, four languages, no duplicate notices, privacy anchor and accurate provider limits.');
