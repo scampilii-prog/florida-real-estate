@@ -175,3 +175,4 @@ console.log('Structural regression and common inquiry checks passed. Browser vis
 
 
 
+execFileSync(process.execPath,[new URL('./check-ask-tino-research.mjs',import.meta.url).pathname],{stdio:'inherit'});

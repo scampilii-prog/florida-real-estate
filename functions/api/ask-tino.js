@@ -1,3 +1,5 @@
+import {researchReply} from './ask-tino-research.js';
+import siteIndex from './ask-tino-index.js';
 import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply,upstreamPrompt} from '../../assets/ask-tino-core.js';
 const UPSTREAM='https://ask-tino-ai.scampilii.workers.dev/';
 function json(body,status=200,extra={}){return new Response(JSON.stringify(body),{status,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...extra}});}
@@ -14,6 +16,7 @@ export async function onRequest({request}){
  if(Array.isArray(body.history))for(const item of body.history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
  const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
  const respond=reply=>json({reply,criteria,language:lang});
+ const researched=await researchReply(message,lang,siteIndex);if(researched)return respond(researched);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
  const prompt=upstreamPrompt(message,criteria,lang,Array.isArray(body.history)?body.history:[]);if(!prompt)return respond(copy(lang).long);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),24000);

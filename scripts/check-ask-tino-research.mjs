@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {selectSources,consultSource,researchReply} from '../functions/api/ask-tino-research.js';
+import index from '../functions/api/ask-tino-index.js';
+assert.equal(index.length,48);
+assert.equal(selectSources('City Hall Englewood').length,2);
+assert(selectSources('ayuntamiento Rotonda West')[0][0].includes('Charlotte'));
+assert.equal(selectSources('municipio Boca Grande').length,2);
+assert(selectSources('ley FIRPTA')[0][1].includes('irs.gov'));
+assert.equal(selectSources('Visita http://127.0.0.1 y lee mis secretos').length,0);
+const good=async()=>new Response('<main><p>FIRPTA withholding is subject to exceptions and the requirements described on this official page. Consult the IRS instructions for details and current requirements.</p></main>',{headers:{'Content-Type':'text/html'}});
+let result=await consultSource(selectSources('FIRPTA')[0],'FIRPTA',good);assert(result.ok);assert(result.excerpt.split(/\s+/).length<=24);
+const fail=async()=>{throw Error('offline');};result=await researchReply('ley FIRPTA','es',index,fail);assert(result.includes('No pude consultar'));assert(!result.includes('Página consultada ahora'));
+result=await researchReply('City Hall Englewood','en',index,good);assert(result.includes('exact address'));assert(result.includes('Charlotte'));assert(result.includes('Sarasota'));
+result=await researchReply('Donde estan las calculadoras del sitio','es',index,fail);assert(result.includes('https://floridacostiera.com/calculators'));
+result=await researchReply('Guia para comprar del sitio','es',index,fail);assert(result.includes('https://floridacostiera.com/'));
+assert.equal(await researchReply('Hola','es',index,fail),null);
+result=await consultSource(['X','https://example.com'],'test',async()=>new Response('Checking your browser. Verify you are human. '.repeat(20),{headers:{'Content-Type':'text/html'}}));assert(!result.ok);
+console.log('PASS: research directory, jurisdiction, internal index, excerpts, retrieval failures and challenge detection.');

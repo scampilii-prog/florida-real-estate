@@ -31,3 +31,8 @@ Checked for this implementation on 2026-11-07, without asserting permanent legal
 ## Validation
 `scripts/check-ask-tino-clean.mjs` exercises shared logic, API validation, simulated browser submission/state, language changes, missing information, negotiated expenses, service failure and strict size bounds.
 The existing AI Worker remains an external dependency. Rules and tests reduce known errors; they cannot guarantee zero model errors or permanent upstream availability.
+
+## Official-source lookup (2026-11-07)
+The API now routes government/legal queries to a curated public official-source directory, with up to three parallel, time-limited requests. It never fetches arbitrary user URLs, follows redirects, or sends visitor questions to those sources. It displays the actual consultation date and at most 24 words of a relevant page excerpt; failures and challenges are explicitly unverified. A consulted page is not a legal conclusion or completeness/current-law guarantee. Jurisdiction needs an exact parcel address, especially Englewood, Gasparilla Island and Wellen Park. This is bounded source retrieval, NOT unrestricted search-engine access.
+
+The internal index is generated from the 48 public sitemap pages' titles, descriptions and headings using `python scripts/build-ask-tino-index.py`. It recommends up to three relevant pages and an inquiry link. It does not claim MLS/live inventory access, full Q&A search, or paid-ad publication.
