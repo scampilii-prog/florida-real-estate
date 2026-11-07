@@ -1,0 +1,156 @@
+# Florida Costiera — Memoria y continuidad del sitio
+
+Última actualización: 2026-11-07 (America/New_York).
+Documento de continuidad entre conversaciones. Registrar decisiones y evidencia; no confundir código, pruebas y publicación.
+Solicitud del propietario: conservar aquí toda la información importante del sitio y actualizarla al completar cambios.
+
+## 1. Proyecto y alcance
+
+- Propietario: Sabatino Campilii (Tino), Realtor® de LoKation® Real Estate.
+- Sitio: https://floridacostiera.com/
+- Repositorio: https://github.com/scampilii-prog/florida-real-estate
+- Rama observada: main. Hosting acordado: Cloudflare Pages.
+- Este proyecto es Florida Costiera. No mezclarlo con My Closing Timeline.
+- OceanFL.com se consulta como referencia; no modificarlo en este trabajo.
+- Comunicación: español breve, claro y elegante. Mostrar enlaces públicos al informar resultados; no pegar HTML/CSS al usuario.
+- Continuar ajustes rutinarios ya autorizados sin pedir confirmación repetida.
+
+## 2. Decisión principal: reforma de Ask Tino
+
+**El usuario pidió reformar Ask Tino con nuevas órdenes y eliminar las anteriores que se sustituyan. No acumular nuevas instrucciones encima de reglas antiguas contradictorias.** Reafirmado expresamente por Tino el 7 de noviembre de 2026.
+
+Objetivo: un conjunto coherente y mantenible de reglas, con responsabilidades claras. Revisar navegador, API y Worker externo; quitar rutas antiguas, listeners duplicados, prompts obsoletos y respuestas que contradigan la nueva política. La retirada completa de reglas en el Worker externo NO está verificada en esta sesión.
+
+Referentes confirmados en docs/ask-tino-behavior.md:
+- Zillow AI mode: información sustentada en datos reales, participación profesional y controles de vivienda.
+- Ask Redfin: respuestas sobre propiedades y derivación a un agente licenciado.
+- Realtor.com engineering: criterios estructurados y procesamiento modular predecible.
+
+Son adaptaciones de comportamientos descritos públicamente; no son sus órdenes internas privadas ni integraciones con esos servicios. Las URL de referencia se conservan en el documento técnico.
+
+### Comportamiento aprobado
+
+- Un solo asistente flotante; evitar duplicarlo.
+- Usar criterios expresados por el visitante y actualizar solamente los campos que cambie.
+- Preguntar un dato faltante por vez; resumir únicamente datos realmente recogidos.
+- Responder en el idioma solicitado. Idiomas del sitio acordados: EN/ES/IT/PT.
+- No inventar propiedades disponibles, precios, direcciones, tasas vigentes, fuentes consultadas o datos biográficos.
+- No afirmar que se envió un mensaje, se reservó una visita o se verificó una propiedad cuando no ocurrió.
+- No hay integración MLS ni reservas: derivar a Sabatino.
+- Presupuesto no equivale a financiación aprobada. No añadir consejos financieros no solicitados.
+- Evitar discriminación o recomendaciones basadas en características protegidas; usar criterios objetivos de la propiedad.
+- No garantizar precios, plazos, aprobaciones, rentabilidad ni protección legal absoluta.
+- Diferenciar explicaciones generales, páginas oficiales recuperadas y conclusiones profesionales.
+- Las recomendaciones comerciales deben ser pertinentes, sin inventar disponibilidad ni urgencia.
+
+### Consulta de fuentes: distinción indispensable
+
+El modelo genérico no tiene herramientas propias de búsqueda. La aplicación tiene recuperación acotada de un directorio oficial y un índice interno del sitio; esto NO equivale a buscar todo Internet.
+Según documentación del repositorio:
+- Hasta tres solicitudes oficiales con tiempo limitado; sin URL arbitrarias del usuario ni seguimiento de redirecciones.
+- No enviar las preguntas del visitante a esas fuentes oficiales.
+- Mostrar estado real de consulta; obtener una página no demuestra que su normativa aplique al caso.
+- Pedir jurisdicción concreta cuando sea necesaria, especialmente Englewood, Gasparilla Island y Wellen Park.
+- Los fragmentos de navegación de páginas dejaron de mostrarse como si fueran una respuesta.
+- El índice interno recomienda hasta tres páginas y contacto; no afirmar búsqueda completa de las 1.010 Q&A ni inventario MLS.
+- Memoria del chat limitada a la página abierta: recargar o navegar reinicia la conversación; cerrar/reabrir el widget en la misma página conserva criterios.
+
+## 3. Mapa técnico de Ask Tino
+
+Fuente leída en GitHub el 2026-11-07: [ask-tino-behavior.md](ask-tino-behavior.md).
+
+| Archivo | Responsabilidad documentada |
+| --- | --- |
+| assets/ask-tino-core.js | Criterios, idioma, cálculos y límites de capacidad |
+| assets/ask-tino-policy.js | Preguntas, derivación profesional y controles de respuestas |
+| assets/ask-tino-client.js | Un listener de envío, estado en página y representación segura |
+| functions/api/ask-tino.js | Validación JSON y conexión acotada con Worker externo |
+| assets/language-dropdown.js | Carga del cliente; no debe contener reglas o estado del chat |
+| scripts/check-ask-tino-clean.mjs | Pruebas de lógica, API, envío, idiomas, límites y fallos |
+| scripts/build-ask-tino-index.py | Generación del índice desde sitemap |
+
+Worker mencionado en continuidad anterior: https://ask-tino-ai.scampilii.workers.dev/ (dependencia externa; configuración actual pendiente de inspección).
+
+La documentación afirma que se retiraron funciones antiguas de envío AI embebidas en HTML. Confirmar que no quedan otras reglas antiguas activas, especialmente fuera del repositorio.
+El documento técnico contiene una regla inicial sobre ausencia de búsqueda y una sección posterior de consulta oficial acotada: leer ambas juntas y consolidarlas cuando se actualice la política, para evitar interpretaciones contradictorias.
+
+### Evidencia observada en GitHub
+
+- c593c2cec6f128c83996369f347c257393d081bd — criterios estructurados, capacidades verificadas, derivación profesional y controles de respuestas.
+- 0206f51c665fe1f54b4b914f09691cad3172f5c1 — jurisdicción de permisos de Englewood y retirada de fragmentos ruidosos.
+- 5153ff14644d3fe529eb6e24b544415fadaceb0d — consulta oficial acotada e índice interno.
+- 5839541d62a273b43eebc101a344712b398c4a89 — reconstrucción del motor y un solo envío.
+
+Estos commits se observaron en GitHub; no prueban por sí solos despliegue o funcionamiento público.
+El chat anterior informó 16 pruebas nuevas aprobadas y publicación en curso. No se volvieron a ejecutar ni se comprobó publicación en esta sesión.
+
+## 4. Contacto y formulario
+
+- Sabatino Campilii, Realtor® — LoKation® Real Estate.
+- Contacto acordado para Ask Tino: 941-270-4877.
+- Correo: sabatino@floridacostiera.com.
+- Formulario principal: https://floridacostiera.com/contact#tell-us-your-plans
+- Ask Tino debe ofrecer una derivación clara a ese contacto.
+
+Último estado recuperado del chat anterior: el formulario preparaba un mensaje en la aplicación de correo; no enviaba automáticamente. Se informó que contact.html tenía el ancla correcta y el correo configurado. No se verificaron aquí esos archivos ni la recepción real.
+
+Pendiente: identificar alojamiento/configuración del buzón, comprobar envío y recepción, y hacer que el texto del botón describa la acción real. Abrir Mail no equivale a enviar ni recibir.
+
+## 5. Privacidad: prioridad pendiente
+
+Página: https://floridacostiera.com/privacy
+
+Tino pidió explicar y atender la privacidad de las personas que conversen con Ask Tino o completen el formulario. La política y los avisos deben corresponder al comportamiento comprobado del sistema.
+
+- Inventariar los datos que realmente se recogen y transmiten.
+- Identificar destinatarios y proveedores, incluido Worker/servicio AI, correo y cualquier analítica activa.
+- Documentar finalidad, conservación, acceso y vía para solicitar eliminación según lo realmente implementado.
+- Incluir avisos claros en el chat y donde se introducen datos personales, enlazados a Privacy.
+- Comprobar cookies y servicios externos antes de describirlos.
+- Verificar en código el almacenamiento y los datos del payload; la memoria local de página no demuestra ausencia de registros del servidor.
+- No presentar una política escrita como garantía de exención de responsabilidad.
+
+Estado: solicitado; revisión e implementación completa NO acreditadas en esta sesión.
+
+## 6. Diseño y navegación que conservar
+
+- Manrope; azul marino y dorado; subtítulos azul grisáceo; fotos luminosas.
+- Logo: Florida regular + Costiera en negrita dorada, idéntico entre páginas.
+- Header, ancho y altura coherentes; logo a la izquierda, menú a la derecha.
+- Evitar parpadeos, CSS contradictorio, fotos innecesarias/repetidas y duplicados de Back to Top.
+- Revisar H1 visible, contraste, fotos de cabecera y adaptación móvil.
+- OneHome abre en la misma pestaña.
+- New Construction usa ShowingNew, usuario sabatinocampilii3; sustituye la referencia anterior a Realtor.com.
+- Italo en Contact no debe presentarse como Realtor; conservar su vínculo profesional correspondiente.
+
+Contenido histórico mencionado: Home, Buy, Sell, Contact, About, Questions (1.010 Q&A), Calculators, Closing Costs, Investment Center, Site Map, Guides (12), New Construction y Timeline. Los recuentos históricos de páginas no deben tratarse como inventario actual sin leer sitemap.
+
+## 7. Otros pendientes heredados
+
+- Verificar visualmente navegación, logo uniforme, cabeceras y Back to Top en publicación.
+- Firma: conservar la original; FloridaCostiera.com y OceanFL.com separados; CONTACT ME al formulario; cuatro botones de altura coherente. Revisar estado antes de editar.
+- Google Business: continuidad anterior informó publicación “Discover Florida Costiera” con Learn more al formulario; sustitución de imagen seguía pendiente de confirmación.
+- Datos históricos de indexación y tráfico son instantáneas, no cifras vigentes: consultar fuentes actuales antes de informar.
+
+## 8. Orden de continuación
+
+1. Leer este documento y docs/ask-tino-behavior.md; revisar cambios más recientes.
+2. Inventariar las órdenes efectivas de Ask Tino en cliente, API y Worker.
+3. Consolidar las nuevas reglas y eliminar las anteriores sustituidas; comprobar ausencia de rutas duplicadas.
+4. Probar conversaciones EN/ES/IT/PT, cambios de criterios, preguntas faltantes, fuentes oficiales, errores, límites y derivación a contacto.
+5. Revisar datos personales y completar Privacy y avisos según la implementación real.
+6. Verificar formulario/buzón y distinguir preparación de correo de envío real.
+7. Comprobar despliegue público y registrar evidencia.
+
+## 9. Cómo mantener esta memoria
+
+Actualizar este documento al terminar cada cambio importante:
+- Fecha y decisión del usuario.
+- Archivos y commit.
+- Pruebas realizadas y resultado.
+- Estado del despliegue y URL comprobada.
+- Pendientes concretos y siguiente paso.
+
+No registrar contraseñas, tokens, documentos de identidad ni datos privados de visitantes.
+No marcar una tarea como completada por una afirmación de un chat anterior: adjuntar evidencia técnica o funcional.
+Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo primero docs/FLORIDA-COSTIERA-MEMORIA.md en scampilii-prog/florida-real-estate y comprueba el estado actual antes de cambiarlo”.
