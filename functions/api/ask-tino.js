@@ -19,13 +19,14 @@ export async function onRequest({ request }) {
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
  // Recall must quote visitor-provided context, never fabricate remembered criteria.
- if (/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(message)) {
+ const budgetRecall = /qual[^?\n]{0,35}(?:mio|tuo)[^?\n]{0,15}budget|what[^?\n]{0,25}my budget|cu[aá]l[^?\n]{0,25}mi presupuesto|qual[^?\n]{0,25}meu or[cç]amento/i.test(message);
+ if (budgetRecall || /\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(message)) {
   const prior = Array.isArray(body.history) ? body.history.slice(-8)
    .filter(item => item && item.role === 'user' && typeof item.content === 'string')
    .map(item => item.content.trim().slice(0,600))
    .filter(Boolean) : [];
-  const italian = /\b(ricordi|ricorda)\b/i.test(message);
-  const spanish = /\b(recuerdas|recuerda)\b/i.test(message);
+  const italian = /\b(ricordi|ricorda|mio|tuo)\b/i.test(message);
+  const spanish = /\b(recuerdas|recuerda|presupuesto)\b/i.test(message);
   const portuguese = /\b(lembra)\b/i.test(message);
   const supplied = [...prior, message];
   let city = '', budget = '', pool = '';
@@ -37,6 +38,7 @@ export async function onRequest({ request }) {
    if (/senza piscina|sin piscina|without (?:a )?pool|sem piscina/i.test(text)) pool = 'no';
    else if (/con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina/i.test(text)) pool = 'yes';
   }
+  if (budgetRecall && budget) return json({reply: italian ? 'Il tuo budget attuale è di ' + budget + '.' : spanish ? 'Tu presupuesto actual es de ' + budget + '.' : portuguese ? 'Seu orçamento atual é de ' + budget + '.' : 'Your current budget is ' + budget + '.'});
   if (city || budget || pool) {
    const fields = [];
    if (city) fields.push((italian ? 'Città: ' : spanish ? 'Ciudad: ' : portuguese ? 'Cidade: ' : 'City: ') + city);
