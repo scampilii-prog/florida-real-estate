@@ -1,3 +1,4 @@
+import {policyReply,validateModelReply} from './ask-tino-policy.js';
 import {researchReply} from './ask-tino-research.js';
 import siteIndex from './ask-tino-index.js';
 import {CONTACT,language,updateCriteria,cleanCriteria,copy,knownReply,upstreamPrompt} from '../../assets/ask-tino-core.js';
@@ -16,6 +17,7 @@ export async function onRequest({request}){
  if(Array.isArray(body.history))for(const item of body.history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
  const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
  const respond=reply=>json({reply,criteria,language:lang});
+ const policy=policyReply(message,criteria,lang);if(policy)return respond(policy);
  const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && body.history?.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
  const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
@@ -30,7 +32,7 @@ export async function onRequest({request}){
    if(reply&&typeof reply==='object')reply=reply.reply??reply.choices?.[0]?.message?.content??'';else break;
   }
   if(typeof reply!=='string'||!reply.trim())throw Error('Empty reply');
-  return respond(reply.trim().replace(/\\n/g,'\n').replace(/\*\*/g,''));
+  return respond(validateModelReply(reply.trim().replace(/\\n/g,'\n').replace(/\*\*/g,''),lang));
  }catch{return respond(copy(lang).error+CONTACT.form);}
  finally{clearTimeout(timer);}
 }
