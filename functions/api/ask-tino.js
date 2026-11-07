@@ -61,74 +61,18 @@ export async function onRequest({ request }) {
    : 'Foreign buyers can often purchase property in Florida without US residency, subject to applicable state and federal restrictions, including Florida Chapter 692 Part III. A Florida real estate attorney should verify eligibility. Common documents include a passport and proof of funds; lenders require additional records for financed purchases. A US bank account or ITIN is not universally required. For a $400,000 Venice home, closing expenses vary with financing, title charges, insurance, taxes and contract terms. Sabatino can help find homes, coordinate remote showings and obtain a detailed closing estimate: (941) 270-4877.';
   return json({ reply: reply.replace(/\\\\n/g, '\\n') });
  }
- // Seller net-proceeds questions must not trigger buyer closing-cost guidance.
- if (/vend(er|o|iendo|ida)|vender|venta|sell(ing)?|seller|vendere|vendita/i.test(message) && /hipoteca|mortgage|mutuo|gastos? de cierre|costos? de cierre|closing costs?|neto|net proceeds|recibir[ií]a/i.test(message)) {
-  const priceMatch = message.match(/(?:\\$|USD\\s*)([\\d,.]+)/i);
-  const debtMatch = message.match(/(?:hipoteca|mortgage|mutuo)[^\\d$]{0,35}(?:\\$|USD\\s*)?([\\d,.]+)/i);
-  const amount = value => Number(value.replace(/,/g, ''));
-  const price = priceMatch ? amount(priceMatch[1]) : null;
-  const debt = debtMatch ? amount(debtMatch[1]) : null;
-  const fmt = n => '
- // No property-specific estimate without a purchase price, financing and location.
- if (/gastos? de cierre|costos? de cierre|closing costs?|spese di chiusura|costi di chiusura/i.test(message)) {
-  const isSpanish = /gastos?|costos?|cierre/i.test(message);
-  const isItalian = /spese|costi|chiusura/i.test(message);
-  const answer = isSpanish
-   ? 'Al comprar una casa en Florida, los gastos de cierre pueden incluir:\\n\\n1. **Préstamo hipotecario:** tasación, cargos del prestamista y otros costos de financiación, si corresponde.\\n2. **Título y cierre:** búsqueda de título, seguro de título, servicios de cierre y registro de documentos. Quién paga cada concepto depende del contrato y las prácticas locales.\\n3. **Impuestos y ajustes:** posibles impuestos documentarios, gastos prepagados de seguro e impuestos sobre la propiedad, y depósitos iniciales de escrow.\\n\\nEl monto exacto depende del precio, el financiamiento, el condado y el contrato. Pide al prestamista un Loan Estimate y, antes del cierre, revisa el Closing Disclosure. Para una estimación de una propiedad concreta, puedes contactar a Sabatino Campilii al (941) 270-4877.'
-   : isItalian
-   ? 'In Florida, i costi di chiusura per chi acquista possono comprendere:\\n\\n1. **Mutuo:** perizia e commissioni del finanziatore, se applicabili.\\n2. **Titolo e chiusura:** ricerca del titolo, assicurazione del titolo, registrazione degli atti e servizi di chiusura. La ripartizione dipende dal contratto.\\n3. **Imposte e anticipi:** eventuali imposte documentarie, assicurazione e imposte immobiliari anticipate e deposito escrow.\\n\\nL’importo dipende dall’immobile, dal finanziamento e dal contratto. Per una stima specifica, contatta Sabatino Campilii al (941) 270-4877.'
-   : 'When buying a home in Florida, closing costs may include:\\n\\n1. **Mortgage costs:** appraisal and lender fees, if financed.\\n2. **Title and closing:** title search, title insurance, recording and settlement services. Who pays varies by contract and local practice.\\n3. **Taxes and prepaid items:** applicable documentary taxes, prepaid property insurance and taxes, and initial escrow deposits.\\n\\nExact costs depend on price, financing, county and contract terms. Review your Loan Estimate and Closing Disclosure. For a property-specific estimate, contact Sabatino Campilii at (941) 270-4877.';
-  return json({ reply: answer.replace(/\\\\n/g, '\\n') });
- }
- // Contact details come from verified site data, never from model recall.
- if (/contact|contatt|phone|tel[eé]fono|telefone|telephone|e[ -]?mail|correo|call\b|chiam|ligar|reach\b|contacter|contato|llamar/i.test(message)) {
-  const details = /[¿¡]|c[oó]mo|correo|teléfono|llamar/i.test(message)
-   ? 'Contacta a Sabatino Campilii, Realtor® de LoKation® Real Estate. Teléfono: (941) 270-4877. Correo: sabatino@floridacostiera.com. Formulario: https://floridacostiera.com/contact#tell-us-your-plans. Usa los botones de abajo para escribirle o llamarlo.'
-   : /contatt|chiam|telefono/i.test(message)
-   ? 'Contatta Sabatino Campilii, Realtor® di LoKation® Real Estate. Telefono: (941) 270-4877. Email: sabatino@floridacostiera.com. Modulo: https://floridacostiera.com/contact#tell-us-your-plans. Usa i pulsanti qui sotto per scrivergli o chiamarlo.'
-   : /telefone|ligar|contato/i.test(message)
-   ? 'Entre em contato com Sabatino Campilii, Realtor® da LoKation® Real Estate. Telefone: (941) 270-4877. E-mail: sabatino@floridacostiera.com. Formulário: https://floridacostiera.com/contact#tell-us-your-plans. Use os botões abaixo para escrever ou ligar.'
-   : 'Contact Sabatino Campilii, Realtor® with LoKation® Real Estate. Phone: (941) 270-4877. Email: sabatino@floridacostiera.com. Contact form: https://floridacostiera.com/contact#tell-us-your-plans. Use the buttons below to send an inquiry or call him.';
-  return json({ reply: details });
- }
- const reference = [
- 'You are Ask Tino, Florida Costiera virtual real estate assistant. Respond in the visitor language, directly and concisely, without promotional introductions. Answer first; mention Sabatino only if needed. Never invent facts or guarantee outcomes.',
- 'Florida foreign buyers: many can buy, but some purchases are restricted by Florida Chapter 692 Part III and applicable federal laws. Do not claim unrestricted eligibility. A US bank account or ITIN is not universally mandatory for purchasing. Advise consulting a Florida real estate attorney about country-specific restrictions. Distinguish general guidance from legal or tax advice.',
- 'Sabatino Campilii: Florida Realtor, LoKation Real Estate, license SL3363040; 25+ years in construction and real estate, engineering and development background. Phone (941) 270-4877. Website https://floridacostiera.com/. Acromatico is the creative brand associated with Italo Campilii, not a Realtor.',
- 'Visitor message:'
-].join(' ') + ' ';
- const controller = new AbortController();
- const timer = setTimeout(() => controller.abort(), 25000);
- try {
-  const upstream = await fetch(UPSTREAM, {
-   method: 'POST', headers: { 'Content-Type': 'application/json' },
-   body: JSON.stringify({ message: reference + message }), signal: controller.signal
-  });
-  if (!upstream.ok) return json({ error: 'Ask Tino: AI service returned HTTP ' + upstream.status + '.', code: 'UPSTREAM_HTTP_' + upstream.status }, 502);
-  let data;
-  try { data = await upstream.json(); }
-  catch { return json({ error: 'Ask Tino: AI service returned an invalid response.', code: 'UPSTREAM_INVALID_JSON' }, 502); }
-  // Normalize the upstream payload at the bridge, not just in the browser.
-  let reply = data?.reply ?? data;
-  for (let depth = 0; depth < 4; depth++) {
-   if (typeof reply === 'string' && reply.trim().startsWith('{')) {
-    try { reply = JSON.parse(reply); } catch { break; }
-   }
-   if (reply && typeof reply === 'object') {
-    reply = reply.reply ?? reply.choices?.[0]?.message?.content ?? '';
-   } else break;
+ // Seller net proceeds: distinguish sale from purchase.
+ if (/vender|vendo|venta|sell|seller|vendere|vendita/i.test(message) && /hipoteca|mortgage|mutuo|cierre|closing|neto|net proceeds/i.test(message)) {
+  const numbers = [...message.matchAll(/\$\s*([\d,]+(?:\.\d{1,2})?)/g)].map(m => Number(m[1].replace(/,/g, '')));
+  const price = numbers[0], debt = numbers[1];
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+  let reply = 'Para calcular el neto de una venta, se resta del precio el saldo hipotecario definitivo, las comisiones negociadas, los gastos de cierre y los ajustes aplicables.';
+  if (price > 0 && debt >= 0 && price > debt) {
+   reply = 'Precio de venta: ' + fmt(price) + '. Hipoteca pendiente: ' + fmt(debt) + '. Antes de comisiones y gastos: ' + fmt(price - debt) + '. ' +
+    'Ejemplo orientativo, suponiendo gastos totales del 6% al 9% del precio: entre ' + fmt(price - debt - price * 0.09) + ' y ' + fmt(price - debt - price * 0.06) + '. Estos porcentajes no son tarifas fijas; las comisiones son negociables.';
   }
-  if (typeof reply !== 'string' || !reply.trim()) return json({ error: 'Ask Tino: AI service returned an empty response.', code: 'UPSTREAM_EMPTY' }, 502);
-  return json({ reply: reply.trim().replace(/\\\\n/g, '\\n').replace(/\\*\\*/g, '') });
- } catch {
-  return json({ error: controller.signal.aborted ? 'Ask Tino: AI service timed out.' : 'Ask Tino: could not connect to AI service.', code: controller.signal.aborted ? 'UPSTREAM_TIMEOUT' : 'UPSTREAM_CONNECTION' }, controller.signal.aborted ? 504 : 502);
- } finally { clearTimeout(timer); }
-}
- + Math.round(n).toLocaleString('en-US');
-  const known = price && debt && price > debt;
-  const base = known ? 'Precio de venta: ' + fmt(price) + '. Saldo hipotecario aproximado: ' + fmt(debt) + '. Diferencia antes de comisiones y gastos: ' + fmt(price - debt) + '.\\n\\n' : '';
-  const example = known ? 'Como ejemplo ilustrativo, si las comisiones y demás gastos sumaran entre el 6% y el 9% del precio, el neto aproximado sería entre ' + fmt(price - debt - price * .09) + ' y ' + fmt(price - debt - price * .06) + '. Ese porcentaje NO es una tarifa fija ni una cotización: la comisión es negociable y los gastos reales dependen del contrato, el condado, los impuestos prorrateados, los gravámenes y el payoff hipotecario definitivo.\\n\\n' : '';
-  return json({ reply: base + example + 'Para vender, prepara la información de la hipoteca, título o escritura, impuestos, seguro, mejoras y reparaciones, datos de HOA si aplica y cualquier documentación relevante de la propiedad. Solicita un estado de pago final (mortgage payoff) y un Seller Net Sheet detallado antes de decidir el precio. Sabatino Campilii puede ayudarte a evaluar el mercado de Rotonda West, preparar la vivienda y estimar los ingresos netos con la compañía de cierre. Teléfono: (941) 270-4877.' });
+  reply += ' El resultado real depende del contrato, impuestos prorrateados, gravámenes, costos de título y pago final de la hipoteca. Prepara escritura, saldo de hipoteca, impuestos, seguro, reparaciones y documentos de HOA si corresponde. Solicita un Seller Net Sheet. Sabatino Campilii puede ayudarte con la valoración y venta en Rotonda West: (941) 270-4877.';
+  return json({ reply });
  }
  // Answer common closing-cost questions with useful general guidance first.
  // No property-specific estimate without a purchase price, financing and location.
