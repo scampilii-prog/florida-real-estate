@@ -77,3 +77,13 @@ A supplied clean criteria object is authoritative; old history is used to recons
 The owner’s exact mortgage/starting-steps question exposed a gap in the 50-turn suite: the seller-intent assertion accepted a generic contact handoff and did not verify substantive usefulness. A pass count is not a conversation-quality score. The seller policy now yields substantive questions to known answers/model routing; mortgage-selling guidance gives payoff and net-proceeds steps before contact. Four-language exact-question and seller-follow-up regressions increase the local suite to 55 turns.
 
 Editorial sources checked on 2026-11-07: CFPB payoff amount https://www.consumerfinance.gov/ask-cfpb/what-is-a-payoff-amount-and-is-it-the-same-as-my-current-balance-en-205/ and home-selling proceeds https://www.consumerfinance.gov/housing/housing-insecurity/help-for-homeowners/avoid-foreclosure/. General explanation, not a case-specific payoff, valuation or legal conclusion.
+
+## Exact ten-question conversation — 2026-11-07
+
+The owner asked the assistant to run all ten questions and fix failures without manual owner testing. Sequential public baseline showed four failures: mortgage shortfall follow-up repeated the opening answer; investment kept $500,000 instead of $350,000 and gave a generic handoff; condo-rental verification was replaced by government-permit links; document-upload question made an unverified no-storage claim.
+
+Fixes: bounded shortfall guidance with approval and written-debt-treatment caveats; investment budget parsing and expense/net-flow checklist; condominium-document and local-rule verification steps before source-index routing; explicit no-document-upload guidance with truthful provider limits. Permit lookup tokens now use word boundaries so “permite alquileres” does not imply a building-permit inquiry.
+
+`node scripts/check-ask-tino-owner-questions.mjs` tests the exact ten questions in a single conversation, with local external calls blocked. `--live` replays them against production. The broader suite now has 60 turns. These assertions verify useful topic-specific content and state transitions; they are not a guarantee of every possible answer.
+
+Sources checked: CFPB https://www.consumerfinance.gov/ask-cfpb/what-is-a-short-sale-en-290/ ; Florida DBPR https://www2.myfloridalicense.com/condominiums-and-cooperatives/faqs/ ; Florida Senate https://www.flsenate.gov/Laws/Statutes/2026/718.504 . No default rental term, appreciation, return, lender approval or debt forgiveness is assumed.

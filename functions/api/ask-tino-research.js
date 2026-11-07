@@ -23,7 +23,7 @@ export function selectSources(q){
  if(/fair housing|discrimin/i.test(q))add('fair');
  if(/ethic|ética|etica|etico|etico/i.test(q))add('ethics');
  if(/property tax|impuest|impost|tribut/i.test(q))add('tax');
- if(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea|govern/i.test(q)){
+ if(/city hall|ayuntamiento|municip|comune|prefeitura|\b(?:permits?|permitting|permisos?|permess[oi])\b|zon|county|condado|contea|govern/i.test(q)){
  if(/rotonda|cape haze|port charlotte|placida/i.test(q))add('charlotte');
  if(/englewood/i.test(q)){if(/charlotte/i.test(q))add('charlotte');else if(/sarasota/i.test(q))add('sarasota');else add('charlotte','sarasota');}
  if(/boca grande|gasparilla/i.test(q))add('lee','charlotte');
@@ -59,14 +59,14 @@ export async function consultSource(source,q,fetcher=fetch){
 export async function researchReply(message,lang,index,fetcher=fetch){
  const t=texts[lang]||texts.en;
  // Ask only the jurisdiction detail that is actually missing. Englewood spans two counties.
- if(/englewood/i.test(message)&&/permit|permis|licenc|city hall|ayuntamiento|municip|piscina|pool|zon/i.test(message)&&!/charlotte|sarasota/i.test(message))return {
+ if(/englewood/i.test(message)&&/\b(?:permits?|permitting|permisos?|permess[oi])\b|licenc|city hall|ayuntamiento|municip|piscina|pool|zon/i.test(message)&&!/charlotte|sarasota/i.test(message))return {
  es:'Englewood abarca partes de Charlotte y Sarasota County. ¿En cuál de los dos condados está la propiedad? Si no lo sabes, indícame su dirección para orientarte sobre dónde confirmar la jurisdicción.',
  en:'Englewood spans parts of Charlotte and Sarasota counties. Which county is the property in? If you do not know, share its address so I can point you to jurisdiction verification.',
  it:'Englewood comprende parti delle contee di Charlotte e Sarasota. In quale contea si trova l’immobile? Se non lo sai, indica l’indirizzo per orientarti sulla verifica della giurisdizione.',
  pt:'Englewood abrange partes dos condados de Charlotte e Sarasota. Em qual condado fica o imóvel? Se não souber, informe o endereço para orientar a confirmação da jurisdição.'
  }[lang]||texts.en.jur;
  const sources=selectSources(message);
- if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)).join('\n\n')+'\n\n'+t.legal;}
+ if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|\b(?:permits?|permitting|permisos?|permess[oi])\b|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)).join('\n\n')+'\n\n'+t.legal;}
  // Capability explanations use the same scope as successful official retrieval.
  if(/investiga|research|browse|cerca sul web|buscar en internet|search the web|busqueda web|búsqueda web/i.test(message))return t.scope;
  if(!/sitio|site|sito|website|gu[ií]a|guide|calculator|calculadora|calcol|question|pregunta|domand|comunidade|community|communities|comunidad|promocion|publicit/i.test(message))return null;

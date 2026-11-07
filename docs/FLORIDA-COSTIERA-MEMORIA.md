@@ -234,3 +234,11 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - El enrutamiento de venta ya no sustituye preguntas sustantivas por una derivación genérica. Explicación de hipoteca: solicitar payoff, estimar precio/gastos/neto, deuda al cierre y resolver diferencias; contacto después de la respuesta.
 - Añadidas cuatro versiones del caso y seguimiento sin repetir “vender”: 55 turnos locales pasan. Revisión estructural y privacidad pasan.
 - No repetir “todo califica” como valoración global. Ampliar pruebas por intención y utilidad, no solo palabras clave o integridad del estado.
+
+## 15. Las diez preguntas exactas: pruebas a cargo del asistente
+
+- Tino pidió explícitamente hacer yo las diez, revisar respuestas y agregar/corregir lo necesario, sin que él siga copiándolas.
+- Baseline público secuencial: fallos en 2 (repetición), 7 (presupuesto incorrecto y sin comparación), 8 (enlaces de permisos en lugar de revisión de alquiler), 10 (promesa de no guardar documentos no verificada).
+- Corregidos esos casos con contenido útil antes de contacto, preservando la diferencia entre capacidades reales y respuestas genéricas. Inversión actualiza $350,000; condo revisa documentos/enmiendas/confirmación escrita/reglas locales; documentos sensibles se derivan a canal adecuado sin prometer eliminación.
+- Nuevo script scripts/check-ask-tino-owner-questions.mjs: exactamente las 10 en la misma conversación; pruebas locales sin llamadas externas. Más 60 turnos generales y auditoría estructural local aprobados.
+- La comprobación pública posterior al despliegue se registra al terminar; no equiparar las pruebas locales con producción.

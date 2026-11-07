@@ -13,6 +13,12 @@ export function protectedSteering(q){
 export function policyReply(q,state,lang='en'){
  const t=L[lang]||L.en,s=norm(q);const contact='\n'+CONTACT.form;
  if(protectedSteering(q))return t.fair;
+ if(/licencia de conducir|driver.?s licen[sc]e|passport|pasaporte|patente|passaporto|carteira de motorista|bank statements?|estados bancarios|estratti conto|extratos bancarios/.test(s)&&/envi|send|upload|subir|mandar|caric|guardar|store|conservar/.test(s))return ({
+ es:'No envíes aquí tu licencia de conducir ni estados bancarios. El chat no es un canal seguro para esos documentos. Los mensajes pueden ser procesados por servicios externos; no puedo prometer su confidencialidad, conservación ni eliminación por esos proveedores. Si necesitas entregar documentos para una operación, acuerda con Sabatino el canal adecuado antes de enviarlos.',
+ en:'Do not send identity documents or bank statements here. This chat is not a secure document channel. External services may process messages; I cannot promise their confidentiality, retention or deletion by those providers. Arrange an appropriate channel with Sabatino before sending transaction documents.',
+ it:'Non inviare qui documenti di identità o estratti conto. La chat non è un canale sicuro per documenti. Servizi esterni possono elaborare i messaggi; non posso promettere riservatezza, conservazione o cancellazione da parte loro. Concorda prima con Sabatino un canale adeguato per i documenti della transazione.',
+ pt:'Não envie documentos de identidade nem extratos bancários aqui. O chat não é um canal seguro para documentos. Serviços externos podem processar mensagens; não posso prometer confidencialidade, retenção ou exclusão por esses provedores. Combine antes com Sabatino um canal adequado para os documentos.'
+ }[lang]||t.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
  const propertyPrivacy=/privacy|privacidad|riservatezza|privacidade/.test(s)&&/home|house|casa|vivienda|immobile|imovel/.test(s)&&!/data|datos|dati|dados|chat|conversa|policy|politica|mensaje|message/.test(s);
  if(!propertyPrivacy&&/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
  en:'Read the privacy policy before sharing personal information. Do not enter passwords, identity documents or bank details here. For privacy questions, contact Sabatino.',
@@ -25,6 +31,7 @@ export function policyReply(q,state,lang='en'){
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
  if(!/no busco|not looking|non cerco|nao procuro/.test(s)&&/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;
+ if(state.activity==='invest'&&/[?¿]|compar|evalu|valut|assess/.test(s))return null;
  // A seller's substantive question must reach an answer, not the intent-only handoff.
  if(state.activity==='sell'&&/[?¿]|hipoteca|mortgage|mutuo|financiamento|por donde|how to|where.*start|da dove|document|pasos|steps/.test(s))return null;
  const search=/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|house|condo|apartment|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);

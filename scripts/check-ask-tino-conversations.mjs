@@ -56,10 +56,10 @@ const scenarios=[
  ['session-en','en', [['Can you save my criteria for tomorrow?',{},'page']]],
  ['unknown-budget','es', [['¿Recuerdas mi presupuesto?',{},'Todavía no tengo']]],
  ['gasparilla','es', [['Busco una casa en Gasparilla Island por $600,000',{city:'Gasparilla Island',budget:'$600,000'}]]],
- ['seller-mortgage-es','es', [['Quiero vender mi casa en Rotonda West, pero todavía tengo hipoteca. ¿Por dónde empiezo?',{activity:'sell',city:'Rotonda West'},'saldo de cancelación']]],
- ['seller-mortgage-en','en', [['I want to sell my home in Rotonda West but still have a mortgage. Where do I start?',{activity:'sell'},'payoff statement']]],
- ['seller-mortgage-it','it', [['Voglio vendere la mia casa a Rotonda West ma ho ancora un mutuo. Da dove comincio?',{activity:'sell'},'conteggio di estinzione']]],
- ['seller-mortgage-pt','pt', [['Quero vender minha casa em Rotonda West, mas ainda tenho financiamento. Por onde começo?',{activity:'sell'},'valor de quitação']]],
+ ['seller-mortgage-es','es', [['Quiero vender mi casa en Rotonda West, pero todavía tengo hipoteca. ¿Por dónde empiezo?',{activity:'sell',city:'Rotonda West'},'saldo de cancelación'],['¿Y si el dinero de la venta no alcanza para pagar la hipoteca y los gastos?',{activity:'sell'},'venta corta'],['¿Y si no alcanza?',{activity:'sell'},'no perdona automáticamente']]],
+ ['seller-mortgage-en','en', [['I want to sell my home in Rotonda West but still have a mortgage. Where do I start?',{activity:'sell'},'payoff statement'],['What if the sale is not enough to pay the mortgage and costs?',{activity:'sell'},'short sale']]],
+ ['seller-mortgage-it','it', [['Voglio vendere la mia casa a Rotonda West ma ho ancora un mutuo. Da dove comincio?',{activity:'sell'},'conteggio di estinzione'],['E se la vendita non copre il mutuo e le spese?',{activity:'sell'},'short sale']]],
+ ['seller-mortgage-pt','pt', [['Quero vender minha casa em Rotonda West, mas ainda tenho financiamento. Por onde começo?',{activity:'sell'},'valor de quitação'],['E se a venda nao cobre o financiamento e as despesas?',{activity:'sell'},'short sale']]],
  ['switch-to-sell','es', [['Busco casa en Venice por $500,000',{budget:'$500,000'}],['Quiero vender mi casa',{activity:'sell',budget:null},'Para vender'],['Todavía tengo hipoteca. ¿Por dónde empiezo?',{activity:'sell',budget:null},'saldo de cancelación']]],
 ];
 function publicRequest(body){return new Promise((resolve,reject)=>{
@@ -77,6 +77,7 @@ async function run([name,initialLanguage,steps]){
    entry.response=data;assert.equal(typeof data.reply,'string');assert.equal(data.language,initialLanguage);
    for(const [key,value]of Object.entries(expected))assert.equal(data.criteria[key],value===null?undefined:value,`${name}: ${key}`);
    if(contains)assert(data.reply.includes(contains),`${name}: expected ${contains}`);
+   if(/short sale|venta corta/.test(contains||''))assert(!data.reply.includes('Empieza solicitando'),'A shortfall follow-up must not repeat the opening mortgage answer');
    if(name.startsWith('seller-mortgage'))assert(data.reply.indexOf(contains)<data.reply.indexOf('https://floridacostiera.com/contact'),'Useful mortgage answer must precede contact');
    if(name==='comparison')assert(!data.reply.includes('conexión de listados'),'A general comparison must not be replaced by an inventory refusal');
    if(name==='session')assert(!/no guardar[eé]|never store/i.test(data.reply),'Do not promise provider deletion');

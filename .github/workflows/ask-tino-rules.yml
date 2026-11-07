@@ -30,3 +30,4 @@ jobs:
       - run: node scripts/check-inquiry.mjs
       - run: node scripts/check-privacy-notices.mjs
       - run: node scripts/check-ask-tino-conversations.mjs
+      - run: node scripts/check-ask-tino-owner-questions.mjs
