@@ -56,12 +56,12 @@ export async function onRequest({ request }) {
  }
  // Foreign-buyer questions: use the visitor's actual language and property details.
  if (/italian[oa]?|italia|extranjero|foreign buyer|non.resident|no residente|non sono residente/i.test(message) && /comprar|compra|buy|acquist/i.test(message) && /florida|venice|boca grande/i.test(message)) {
-  const italian = /\\b(vorrei|acquistare|quali|spese|posso|servono|negli|dollari|propriet[aà])\\b/i.test(message);
-  const spanish = !italian && /\\b(quiero|comprar|cu[aá]les|gastos|puedo|vivo|casa|extranjero)\\b/i.test(message);
-  const priceMatch = message.match(/(?:\\$\\s*|\\b(?:por|per|for)\\s+)([\\d.,]+)(?:\\s*(?:d[oó]lares|dollari|dollars))?/i);
-  const price = priceMatch ? priceMatch[1] : null;
+  const italian = /vorrei|acquistare|quali|spese|posso|servono|negli|dollari|proprietà|mutuo|può aiutarmi|non sono residente/i.test(message);
+  const spanish = !italian && /quiero|comprar|cuáles|gastos|puedo|extranjero|hipoteca/i.test(message);
+  const money = message.match(/(?:[$€]\s*)?(\d{1,3}(?:[.,]\d{3})+|\d{4,9})(?:\s*(?:dollari|dólares|dolares|dollars|USD))?/i);
+  const price = money ? Number(money[1].replace(/[.,]/g, '')) : null;
   const place = /boca grande/i.test(message) ? 'Boca Grande' : /venice/i.test(message) ? 'Venice' : 'Florida';
-  const property = (price ? price + ' ' + (italian ? 'dollari' : spanish ? 'dólares' : 'dollars') + ' ' : '') + (italian ? 'a ' : spanish ? 'en ' : 'in ') + place;
+  const property = (price ? '$' + price.toLocaleString('en-US') + ' ' : '') + (italian ? 'a ' : spanish ? 'en ' : 'in ') + place;
   const reply = italian
    ? 'In generale, un cittadino italiano non residente può acquistare una casa in Florida, ma occorre verificare le restrizioni statali e federali applicabili, incluse quelle previste dal Capitolo 692, Parte III, con un avvocato immobiliare locale. Documenti tipici: passaporto, prova della disponibilità e provenienza dei fondi; per un mutuo sono richiesti ulteriori documenti finanziari. Un ITIN o un conto bancario statunitense non sono obbligatori in ogni acquisto. Per un immobile di ' + property + ', le spese di chiusura possono comprendere titolo, registrazione, servizi di chiusura, assicurazione, imposte anticipate e, con mutuo, perizia e costi del finanziamento. Il totale dipende dal contratto e dal finanziamento. Sabatino Campilii può aiutarti nella ricerca, nelle visite a distanza e nel preventivo dettagliato dei costi: (941) 270-4877.'
    : spanish
