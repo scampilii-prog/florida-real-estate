@@ -1,3 +1,4 @@
+import {dueDiligenceReply} from './ask-tino-due-diligence.js';
 // Topic answers precede generic handoff/retrieval; never imply property verification.
 import {CONTACT} from '../../assets/ask-tino-core.js';
 const T={
@@ -61,6 +62,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en'){
+ const due=dueDiligenceReply(message,lang);if(due)return due;
  const s=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');let key;
  if(/transfer|wire|bonific/.test(s)&&/instru|instruction|istruz|correo|email/.test(s))key='wire';
  else if(/vendedor|seller|venditore/.test(s)&&/gastos de cierre|closing costs|spese di chiusura|custos de fechamento/.test(s)&&/paga|pay|pagare|pagar/.test(s))key='credits';

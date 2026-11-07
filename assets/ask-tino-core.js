@@ -47,6 +47,9 @@ export function cleanCriteria(value={}) {
  if(value.budgetAny===true)c.budgetAny=true;
  if (!c.budgetAny && typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
  if (Number.isInteger(Number(value.bedrooms)) && Number(value.bedrooms)>0 && Number(value.bedrooms)<=30) c.bedrooms=Number(value.bedrooms);
+ if(Number.isFinite(value.bathrooms)&&value.bathrooms>0&&value.bathrooms<=20&&value.bathrooms*2%1===0)c.bathrooms=value.bathrooms;
+ if(['space','extra-room'].includes(value.office))c.office=value.office;
+ if(value.bathroomsRequired===true&&c.bathrooms)c.bathroomsRequired=true;
  if(['condo','house','townhouse','land'].includes(value.propertyType))c.propertyType=value.propertyType;
  if(['yes','no','any'].includes(value.pets))c.pets=value.pets;
  if(value.accessibility==='wheelchair')c.accessibility='wheelchair';
@@ -56,13 +59,16 @@ export function cleanCriteria(value={}) {
 export function updateCriteria(previous, text) {
  const c=cleanCriteria(previous);
  if(/wheelchair|silla de ruedas|sedia a rotelle|cadeira de rodas/i.test(text))c.accessibility='wheelchair';
- if(/busco|cerco|procuro|looking for|quiero|prefiero|preferisco|prefer|quero/i.test(text)){if(/condomin|\bcondo\b/i.test(text))c.propertyType='condo';else if(/casa|house|home/i.test(text))c.propertyType='house';}
+ if(/busco|cerco|procuro|looking for|quiero|prefiero|preferisco|prefer|quero/i.test(text)){if(/terreno|\bland\b|\blot\b/i.test(text))c.propertyType='land';else if(/condomin|\bcondo\b/i.test(text))c.propertyType='condo';else if(/casa|house|home/i.test(text))c.propertyType='house';}
  if(/mascotas|pets|animali|animais/i.test(text)){if(/sin mascotas|no pets|senza animali|sem animais/i.test(text))c.pets='no';else if(/permita|permit|allowed|indispens|necesit|need|accept|ammess|aceit/i.test(text))c.pets='yes';}
  const cities=text.match(CITIES);
  if(cities?.length){
+  const only=text.match(/(?:solamente|solo|only|soltanto|apenas)\s+(.+)/i)?.[1]?.match(CITIES);
+  const excluded=[...text.matchAll(/(?:descarta|elimina|quita|exclude|remove|drop|escludi|exclua)\s+([A-Za-z ]+?)(?=\s+(?:y|and|e)\b|[.,;]|$)/gi)].flatMap(m=>m[1].match(CITIES)||[]);
   const add=/tambien|also|anche|tambem/i.test(text.normalize('NFD').replace(/[\u0300-\u036f]/g,''));
-  const chosen=[...new Set([...(add?(c.cities||[c.city].filter(Boolean)):[]),...cities])];
-  if(chosen.length>1){c.cities=chosen;delete c.city;}else{c.city=chosen[0];delete c.cities;}
+  const chosen=[...new Set(only||[...(add||excluded.length?(c.cities||[c.city].filter(Boolean)):[]),...cities].filter(v=>!excluded.some(x=>x.toLowerCase()===v.toLowerCase())))];
+  delete c.city;delete c.cities;
+  if(chosen.length>1)c.cities=chosen;else if(chosen.length===1)c.city=chosen[0];
  }
  const normalized=text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
  const garage=normalized.match(/(?:garaje|garage|garagem).{0,12}\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:carros?|coches?|autos?|cars?)/);
@@ -91,7 +97,13 @@ export function updateCriteria(previous, text) {
    }
   }
  }
- const rooms=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|duas|three|tres|tre|três|four|cuatro|quattro|quatro|five|cinco|cinque|six|seis|sei)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i);
+ let rooms=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|duas|three|tres|tre|três|four|cuatro|quattro|quatro|five|cinco|cinque|six|seis|sei)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i);
+ if(rooms&&/oficina|office|ufficio|escritorio/i.test(text.slice(Math.max(0,rooms.index-45),rooms.index))&&/adicional|additional|extra|aggiuntiv/i.test(text.slice(rooms.index)))rooms=null;
+ const baths=normalized.match(/\b(\d{1,2}(?:[.,]5)?|one|un|uno|two|dos|due|dois|three|tres|tre|four|cuatro|quattro)\s*(?:banos?|bathrooms?|baths?|bagni|banheiros?)\b/);
+ if(baths)c.bathrooms=NUMBERS[baths[1]]||Number(baths[1].replace(',','.'));
+ if(/banos?|bathrooms?|bagni|banheiros?/.test(normalized)&&/indispens|essential|must.have|obligatori/.test(normalized)&&c.bathrooms)c.bathroomsRequired=true;
+ if(/banos?|bathrooms?|bagni|banheiros?/.test(normalized)&&/negociable|flexible|optional|opzional|opcional/.test(normalized))delete c.bathroomsRequired;
+ if(/oficina|office|ufficio|escritorio/.test(normalized))c.office=/habitacion adicional|extra (?:bed)?room|additional (?:bed)?room|camera aggiuntiva|quarto adicional/.test(normalized)?'extra-room':'space';
  const replacement=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|three|tres|tre|four|cuatro|quattro)\s+(?:ser[ií]a|would be|sarebbe)\s+(?:suficiente|enough|sufficiente)/i);
  if(replacement&&(rooms||c.bedrooms))c.bedrooms=NUMBERS[replacement[1].toLowerCase()]||Number(replacement[1]);
  else if(rooms) c.bedrooms=NUMBERS[rooms[1].toLowerCase()]||Number(rooms[1]);
@@ -120,6 +132,8 @@ export function criteriaText(state,lang='en',only) {
  if(c.budgetAny)parts.push(({en:'No maximum budget specified',es:'Sin presupuesto máximo indicado',it:'Nessun budget massimo indicato',pt:'Sem orçamento máximo informado'})[lang]||'No maximum budget specified');
  if(c.accessibility)parts.push(({en:'Accessibility: wheelchair access',es:'Accesibilidad: silla de ruedas',it:'Accessibilità: sedia a rotelle',pt:'Acessibilidade: cadeira de rodas'})[lang]||'Accessibility: wheelchair access');
  for(const key of ['city','budget','bedrooms','pool']) if((!only||key===only)&&c[key]!==undefined) parts.push(t[key]+': '+(key==='pool'?t[c[key]]:c[key]));
+ if(!only&&c.bathrooms)parts.push(({es:'Baños',en:'Bathrooms',it:'Bagni',pt:'Banheiros'}[lang])+': '+c.bathrooms+(c.bathroomsRequired?' ('+({es:'indispensables',en:'required',it:'indispensabili',pt:'indispensáveis'}[lang])+')':''));
+ if(!only&&c.office)parts.push(({es:'Oficina: '+(c.office==='extra-room'?'puede ser una habitación adicional':'espacio deseado'),en:'Office: '+(c.office==='extra-room'?'an extra room is acceptable':'space requested'),it:'Ufficio: '+(c.office==='extra-room'?'va bene una camera aggiuntiva':'spazio richiesto'),pt:'Escritório: '+(c.office==='extra-room'?'pode ser um quarto adicional':'espaço desejado')}[lang]));
  return parts.length ? (only?'':t.summary+': ')+parts.join('. ')+'.' : t.missing;
 }
 export function money(raw) {
@@ -150,6 +164,12 @@ function calculationReply(message,lang){
 }
 export function knownReply(message,state,lang='en') {
  const t=copy(lang);
+ if(/indispens|essential|required|obbligator/.test(message)&&/flexib|flessib/.test(message))return criteriaText(state,lang)+'\n\n'+({
+ es:(state.bathroomsRequired?'Indispensable confirmado: '+state.bathrooms+' baños. ':'No has marcado requisitos indispensables. ')+(state.office==='extra-room'?'Flexibilidad confirmada: la oficina puede resolverse con una habitación adicional; no has dicho que sea opcional. ':'')+'Los demás criterios indicados no se han marcado como negociables. '+(state.office?'Falta aclarar: ¿la oficina debe ser adicional a las habitaciones indicadas o puede ocupar una de ellas?':'¿Qué otros criterios son indispensables o negociables?'),
+ en:(state.bathroomsRequired?'Confirmed requirement: '+state.bathrooms+' bathrooms. ':'No must-have requirements confirmed. ')+(state.office==='extra-room'?'Confirmed flexibility: an extra room may serve as the office; you have not said the office is optional. ':'')+'Other stated criteria have not been marked negotiable. '+(state.office?'Should the office be additional to the stated bedrooms or may it occupy one of them?':'Which other criteria are required or flexible?'),
+ it:(state.bathroomsRequired?'Requisito confermato: '+state.bathrooms+' bagni. ':'Nessun requisito indispensabile confermato. ')+(state.office==='extra-room'?'Flessibilità: una camera aggiuntiva può essere l’ufficio; non hai detto che sia facoltativo. ':'')+'Gli altri criteri non sono stati dichiarati negoziabili. '+(state.office?'L’ufficio deve essere aggiuntivo alle camere indicate o può occuparne una?':'Quali altri criteri sono indispensabili o flessibili?'),
+ pt:(state.bathroomsRequired?'Requisito confirmado: '+state.bathrooms+' banheiros. ':'Nenhum requisito indispensável confirmado. ')+(state.office==='extra-room'?'Flexibilidade: um quarto adicional pode servir de escritório; você não disse que é opcional. ':'')+'Os demais critérios não foram declarados negociáveis. '+(state.office?'O escritório deve ser adicional aos quartos indicados ou pode ocupar um deles?':'Quais outros critérios são indispensáveis ou flexíveis?')
+ }[lang]);
  if(/prepar|draft|redact/.test(message.toLowerCase())&&/resum|summary|riepilog/.test(message.toLowerCase())&&/sabatino/i.test(message))return ({en:'Draft for you to copy and send; I have not sent it.\n\nHello Sabatino,\nHere are the preferences I have shared:\n',es:'Borrador para que lo copies y envíes; no lo he enviado.\n\nHola, Sabatino:\nEstos son los requisitos que he indicado:\n',it:'Bozza da copiare e inviare; non l’ho inviata.\n\nCiao Sabatino,\nEcco le preferenze indicate:\n',pt:'Rascunho para copiar e enviar; não o enviei.\n\nOlá Sabatino,\nEstas são minhas preferências:\n'}[lang]||'Draft:\n')+criteriaText(state,lang);
  const recall=/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra|summari[sz]e|summary|resumen|resume|resuma|riassumi|riassumere|riepilogo)\b|(?:qual|what|cu[aá]l).{0,40}(?:mio|my|mi |meu).{0,15}(?:budget|presupuesto|orçamento)/i.test(message);
  if(recall){if(/aclarar|clarif|chiarir|esclarec/i.test(message)&&!state.bedrooms)return criteriaText(state,lang)+'\n\n'+({en:'How many bedrooms do you need?',es:'¿Cuántas habitaciones necesitas?',it:'Quante camere da letto ti servono?',pt:'De quantos quartos precisa?'}[lang]||'How many bedrooms?');const only=/budget|presupuesto|orçamento/i.test(message)&&!/criteria|criteri|preferenc|search|ricerca|b[uú]squeda|pesquisa|città|city|ciudad|piscina|pool/i.test(message)?'budget':undefined;return criteriaText(state,lang,only);}
