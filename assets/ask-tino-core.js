@@ -35,6 +35,14 @@ export function cleanCriteria(value={}) {
  const c={};
  if (!value || typeof value!=='object') return c;
  if (typeof value.city==='string' && (value.city.match(CITIES)||[]).some(city=>city.toLowerCase()===value.city.toLowerCase())) c.city=value.city;
+ if(Array.isArray(value.cities)){
+  const cities=[...new Set(value.cities.filter(v=>typeof v==='string'&&(v.match(CITIES)||[]).some(c=>c.toLowerCase()===v.toLowerCase())))].slice(0,6);
+  if(cities.length>1){c.cities=cities;delete c.city;}else if(cities.length===1)c.city=cities[0];
+ }
+ if(Number.isInteger(value.garageSpaces)&&value.garageSpaces>0&&value.garageSpaces<=10)c.garageSpaces=value.garageSpaces;
+ if(['yes','no','any'].includes(value.hoa))c.hoa=value.hoa;
+ if(value.use==='mixed')c.use='mixed';
+ if(Number.isInteger(value.personalUseMonths)&&value.personalUseMonths>0&&value.personalUseMonths<=12)c.personalUseMonths=value.personalUseMonths;
  if(['sell','invest'].includes(value.activity))c.activity=value.activity;
  if(value.budgetAny===true)c.budgetAny=true;
  if (!c.budgetAny && typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
@@ -51,14 +59,25 @@ export function updateCriteria(previous, text) {
  if(/busco|cerco|procuro|looking for|quiero|prefiero|preferisco|prefer|quero/i.test(text)){if(/condomin|\bcondo\b/i.test(text))c.propertyType='condo';else if(/casa|house|home/i.test(text))c.propertyType='house';}
  if(/mascotas|pets|animali|animais/i.test(text)){if(/sin mascotas|no pets|senza animali|sem animais/i.test(text))c.pets='no';else if(/permita|permit|allowed|indispens|necesit|need|accept|ammess|aceit/i.test(text))c.pets='yes';}
  const cities=text.match(CITIES);
- if(cities?.length===1) c.city=cities[0];
+ if(cities?.length){
+  const add=/tambien|also|anche|tambem/i.test(text.normalize('NFD').replace(/[\u0300-\u036f]/g,''));
+  const chosen=[...new Set([...(add?(c.cities||[c.city].filter(Boolean)):[]),...cities])];
+  if(chosen.length>1){c.cities=chosen;delete c.city;}else{c.city=chosen[0];delete c.cities;}
+ }
  const normalized=text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ const garage=normalized.match(/(?:garaje|garage|garagem).{0,12}\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:carros?|coches?|autos?|cars?)/);
+ if(garage)c.garageSpaces=NUMBERS[garage[1]]||Number(garage[1]);
+ if(/sin (?:asociacion|hoa)|no hoa|senza (?:associazione|hoa)|sem (?:associacao|hoa)/.test(normalized))c.hoa='no';
+ else if(/con asociacion|with (?:an? )?hoa|com associacao|con associazione/.test(normalized))c.hoa='yes';
+ if(/alquil|rent|affitt|loca/.test(normalized)&&/personal|own use|uso proprio/.test(normalized)){
+  c.use='mixed';const months=normalized.match(/\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:meses?|months?|mesi)\b/);if(months)c.personalUseMonths=NUMBERS[months[1]]||Number(months[1]);
+ }
  const calculation=/calcul|cuota mensual|monthly payment|rata mensile|pagamento mensal|down payment|anticipo|net proceeds/.test(normalized);
  if(!calculation){
   if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
   else if(/invertir|investir|investire|\binvest\b/.test(normalized))c.activity='invest';
   else if(/comprar|acquistare|\bbuy\b|cerco|busco|looking for|procuro/.test(normalized))delete c.activity;
-  const budgetContext=/budget|presupuesto|orcamento|price range|subir hasta|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
+  const budgetContext=/budget|presupuesto|orcamento|price range|limite|limit|subir hasta|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
   if(/(?:remove|clear|drop|quita|elimina|togli|rimuovi|remova).{0,25}(?:budget|presupuesto|orcamento)|(?:sin limite|sem limite|senza limite|no limit).{0,25}(?:budget|presupuesto|orcamento)|(?:budget|presupuesto|orcamento).{0,25}(?:sin limite|sem limite|senza limite|no limit)/.test(normalized)){delete c.budget;c.budgetAny=true;}
   else if(budgetContext&&c.activity!=='sell'){
    const amounts=[...text.matchAll(/\$\s*\d[\d.,]*(?:\s*[kKmM]\b)?/g)];
@@ -76,7 +95,8 @@ export function updateCriteria(previous, text) {
  const replacement=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|three|tres|tre|four|cuatro|quattro)\s+(?:ser[ií]a|would be|sarebbe)\s+(?:suficiente|enough|sufficiente)/i);
  if(replacement&&(rooms||c.bedrooms))c.bedrooms=NUMBERS[replacement[1].toLowerCase()]||Number(replacement[1]);
  else if(rooms) c.bedrooms=NUMBERS[rooms[1].toLowerCase()]||Number(rooms[1]);
- if(/(?:pool|piscina).{0,20}(?:indifferente|indiferente|no preference)|(?:indifferente|indiferente|no preference).{0,20}(?:pool|piscina)/i.test(text)) c.pool='any';
+ if(/(?:pool|piscina).{0,25}(?:ya no es necesaria|no es necesaria|no longer (?:needed|required)|non e necessaria|nao e necessaria)/.test(normalized))c.pool='any';
+ else if(/(?:pool|piscina).{0,20}(?:indifferente|indiferente|no preference)|(?:indifferente|indiferente|no preference).{0,20}(?:pool|piscina)/i.test(text)) c.pool='any';
  else if(POOL_NO.test(text)) c.pool='no';
  else if(POOL_YES.test(text)) c.pool='yes';
  return cleanCriteria(c);
@@ -90,6 +110,10 @@ const COPY={
 export const copy=lang=>COPY[lang]||COPY.en;
 export function criteriaText(state,lang='en',only) {
  const c=cleanCriteria(state),t=copy(lang),parts=[];
+ if(!only&&c.cities)parts.push(({en:'Cities to consider',es:'Ciudades a considerar',it:'Città da considerare',pt:'Cidades a considerar'}[lang]||'Cities')+': '+c.cities.join(' / '));
+ if(!only&&c.garageSpaces)parts.push(({en:'Garage spaces',es:'Garaje para carros',it:'Posti auto in garage',pt:'Vagas na garagem'}[lang]||'Garage spaces')+': '+c.garageSpaces);
+ if(!only&&c.hoa)parts.push(({en:'Association',es:'Asociación',it:'Associazione',pt:'Associação'}[lang]||'Association')+': '+t[c.hoa]);
+ if(!only&&c.use==='mixed')parts.push(({en:'Use: rental and personal',es:'Uso: alquiler y personal',it:'Uso: affitto e personale',pt:'Uso: aluguel e pessoal'}[lang]||'Use: rental and personal')+(c.personalUseMonths?' ('+c.personalUseMonths+' '+({en:'personal-use months per year',es:'meses de uso personal al año',it:'mesi personali all’anno',pt:'meses pessoais por ano'}[lang]||'months')+')':''));
  if(!only&&c.propertyType)parts.push(({en:{condo:'Property: condominium',house:'Property: house',townhouse:'Property: townhouse',land:'Property: land'},es:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: townhouse',land:'Tipo: terreno'},it:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: villetta a schiera',land:'Tipo: terreno'},pt:{condo:'Tipo: condomínio',house:'Tipo: casa',townhouse:'Tipo: sobrado',land:'Tipo: terreno'}}[lang]||{})[c.propertyType]);
  if(!only&&c.pets)parts.push(({en:'Pets',es:'Mascotas',it:'Animali domestici',pt:'Animais de estimação'}[lang]||'Pets')+': '+t[c.pets]);
  if(c.activity)parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
@@ -126,8 +150,9 @@ function calculationReply(message,lang){
 }
 export function knownReply(message,state,lang='en') {
  const t=copy(lang);
+ if(/prepar|draft|redact/.test(message.toLowerCase())&&/resum|summary|riepilog/.test(message.toLowerCase())&&/sabatino/i.test(message))return ({en:'Draft for you to copy and send; I have not sent it.\n\nHello Sabatino,\nHere are the preferences I have shared:\n',es:'Borrador para que lo copies y envíes; no lo he enviado.\n\nHola, Sabatino:\nEstos son los requisitos que he indicado:\n',it:'Bozza da copiare e inviare; non l’ho inviata.\n\nCiao Sabatino,\nEcco le preferenze indicate:\n',pt:'Rascunho para copiar e enviar; não o enviei.\n\nOlá Sabatino,\nEstas são minhas preferências:\n'}[lang]||'Draft:\n')+criteriaText(state,lang);
  const recall=/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra|summari[sz]e|summary|resumen|resume|resuma|riassumi|riassumere|riepilogo)\b|(?:qual|what|cu[aá]l).{0,40}(?:mio|my|mi |meu).{0,15}(?:budget|presupuesto|orçamento)/i.test(message);
- if(recall){const only=/budget|presupuesto|orçamento/i.test(message)&&!/criteria|criteri|preferenc|search|ricerca|b[uú]squeda|pesquisa|città|city|ciudad|piscina|pool/i.test(message)?'budget':undefined;return criteriaText(state,lang,only);}
+ if(recall){if(/aclarar|clarif|chiarir|esclarec/i.test(message)&&!state.bedrooms)return criteriaText(state,lang)+'\n\n'+({en:'How many bedrooms do you need?',es:'¿Cuántas habitaciones necesitas?',it:'Quante camere da letto ti servono?',pt:'De quantos quartos precisa?'}[lang]||'How many bedrooms?');const only=/budget|presupuesto|orçamento/i.test(message)&&!/criteria|criteri|preferenc|search|ricerca|b[uú]squeda|pesquisa|città|city|ciudad|piscina|pool/i.test(message)?'budget':undefined;return criteriaText(state,lang,only);}
  const calculation=calculationReply(message,lang);if(calculation)return calculation;
  if(/garant|guarantee/i.test(message)&&/vend|sell|sale|prezzo|precio|price|giorni|d[ií]as|days/i.test(message))return t.guarantee;
  if(/prenot|book|reserv|concertar|agendar/i.test(message)&&/visit|tour|appunt|cita|appointment/i.test(message))return t.virtual+'\n'+CONTACT.form;

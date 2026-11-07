@@ -35,7 +35,7 @@ export function selectSources(q){
  else if(/sarasota/i.test(q))add('citysarasota','sarasota');
  if(!keys.length)add('charlotte','sarasota');
  }
- if(/law|laws|ley|leyes|legge|leggi|normativ|regulat|statut|frec|dbpr|regol|legisla/i.test(q)&&!keys.length)add('statutes','rules','frec');
+ if(/law|laws|ley|leyes|legge|leggi|normativ|regulat|statut|\bfrec\b|\bdbpr\b|regol|legisla/i.test(q)&&!keys.length)add('statutes','rules','frec');
  return [...new Set(keys)].slice(0,3).map(k=>official[k]);
 }
 const strip=s=>s.replace(/<!--[\s\S]*?-->/g,' ').replace(/<(script|style|nav|header|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/g,' ').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/\s+/g,' ').trim();
@@ -68,7 +68,7 @@ export async function researchReply(message,lang,index,fetcher=fetch){
  const sources=selectSources(message);
  if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|\b(?:permits?|permitting|permisos?|permess[oi])\b|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)).join('\n\n')+'\n\n'+t.legal;}
  // Capability explanations use the same scope as successful official retrieval.
- if(/investiga|research|browse|cerca sul web|buscar en internet|search the web|busqueda web|búsqueda web/i.test(message))return t.scope;
+ if(/investiga.{0,15}(?:internet|web)|research.{0,15}(?:internet|web)|browse (?:the )?(?:internet|web)|cerca sul web|buscar en internet|search the web|busqueda web|búsqueda web/i.test(message))return t.scope;
  if(!/\b(?:sitio|site|sito|website|gu[ií]as?|guides?|calculators?|calculadoras?|calcolatrice|questions?|preguntas?|domande|comunidades?|community|communities|comunidad|promocion|publicit[aà])\b/i.test(message))return null;
  const terms=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').match(/[a-z]{3,}/g)||[];
  const synonyms={calculadora:'calculator',calculadoras:'calculator',calcolatrice:'calculator',guia:'guide',guias:'guide',preguntas:'questions',domande:'questions',venta:'sell',vender:'sell',comprar:'buy',compra:'buy',hipoteca:'mortgage',mutuo:'mortgage',inversion:'investment',investimento:'investment',comunidades:'communities',contacto:'contact'};

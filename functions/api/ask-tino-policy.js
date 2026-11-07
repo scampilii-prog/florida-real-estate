@@ -41,7 +41,7 @@ export function policyReply(q,state,lang='en'){
  if(state.activity==='sell'&&(search||update||shortCriterion||/vender|vendere|selling|\bsell\b/.test(s)))return criteriaText(state,lang)+'\n\n'+(!state.city?({en:'In which city or community is the property you want to sell?',es:'¿En qué ciudad o comunidad está la propiedad que quieres vender?',it:'In quale città o comunità si trova l’immobile che vuoi vendere?',pt:'Em qual cidade ou comunidade fica o imóvel que deseja vender?'}[lang]||t.city):({en:'For selling guidance, contact Sabatino to review your property and next steps.',es:'Para vender, contacta a Sabatino para revisar tu propiedad y los próximos pasos.',it:'Per vendere, contatta Sabatino per esaminare l’immobile e i prossimi passi.',pt:'Para vender, contate Sabatino para analisar o imóvel e os próximos passos.'}[lang]||t.agent)+contact);
  if(search||update||shortCriterion||preferenceStatement||state.activity==='invest'&&/invert|invest/.test(s)){
  const summary=Object.keys(state).length?criteriaText(state,lang):'';
- const missing=!state.city?t.city:!state.budget&&!state.budgetAny?t.budget:null;
+ const missing=!state.city&&!state.cities?.length?t.city:!state.budget&&!state.budgetAny?t.budget:null;
  return (summary?summary+'\n\n':'')+(missing||t.inventory+'\n'+t.next+': '+CONTACT.buy+'\n'+t.contact+': '+CONTACT.form);
  }
  return null;

@@ -266,3 +266,12 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - En navegador real, 1–4 conservan condominio, mascotas, Venice, $400,000 y una habitación, sin añadir piscina.
 - Cloudflare Pages, rules y structural-audit: success. Local: 60 generales, diez anteriores, diez nuevas, privacidad y estructura aprobados.
 - Informe docs/ask-tino-owner-round2-2026-11-07.md y JSON antes/después asociado. No equivale a certificar todas las variantes ni propiedades específicas.
+
+## 17. Tercera ronda de diez preguntas — pruebas y mejoras a cargo del asistente
+
+- El usuario autorizó hacer las diez, investigar respuestas y realizar las mejoras necesarias.
+- Baseline publicado: perdía garaje/sin asociación, no volvía opcional la piscina, no restauraba $450,000 ni conservaba Englewood + Port Charlotte; faltaba respuesta útil sobre crédito de vendedor, reservas, uso mixto y verificación de transferencia; el resumen no era un borrador para enviar.
+- Campos nuevos garageSpaces/hoa/cities/use/personalUseMonths. Mantiene alternativas sin elegir por el usuario. Resumen puede pedir una aclaración y preparar texto para copiar, sin envío.
+- Guías temáticas nuevas y eliminación de falsos disparadores FREC dentro de “ofrece” y consulta web al decir “investigar”. No prometer autenticación de cuentas, recuperación de dinero, ausencia de fondos propios ni deducciones fiscales.
+- Local: diez de ronda 3, diez de ronda 2, diez anteriores, 60 generales, privacidad y auditoría estructural aprobados. Publicación/verificación real se documenta al terminar.
+- Cliente/core/cargadores/referencias HTML round3 para nuevos campos. No tocar OceanFL ni My Closing Timeline.

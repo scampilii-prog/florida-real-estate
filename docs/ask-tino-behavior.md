@@ -97,3 +97,13 @@ functions/api/ask-tino-guidance.js provides bounded multilingual topic guidance 
 Authoritative sources checked: NFIP/FEMA https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-zone ; https://agents.floodsmart.gov/topics/flood-insurance-101 ; DBPR https://condos.myfloridalicense.com/faqs/ and https://condos.myfloridalicense.com/inspections/ . No universal building age/deadline, rental term, exemption or all-remote eligibility is asserted.
 
 Second exact script: node scripts/check-ask-tino-owner-round2.mjs, with --live for production. Local network calls are blocked. Four-question preference continuity is also checked in the browser because older cached clients would otherwise discard new state fields. All module loaders and HTML references use round2 cache keys.
+
+## Third owner-question round — 2026-11-07
+
+Added typed garageSpaces, hoa, alternative cities and mixed-use/personal-use months. Alternative communities remain a list; the assistant does not silently choose the last mention. “Pool no longer necessary” means optional, not forbidden or still required. Explicit budget limits are restored without reviving old values. A requested clarification asks one missing bedroom detail; a requested summary for Sabatino is a copyable draft, never a sent message.
+
+Guidance adds stale-listing uncertainty, seller credits versus cash needed, reserve/special-assessment due diligence, mixed rental/personal use and independent verification of wire instructions. No account authentication, guaranteed recovery, guaranteed no-cash closing, rental return or tax deduction is asserted. FREC is matched as a whole word; “ofrece” no longer triggers legal retrieval. Generic “investigar” is not treated as an Internet-search capability question.
+
+Sources checked: CFPB https://www.consumerfinance.gov/owning-a-home/loan-estimate/ ; https://www.consumerfinance.gov/owning-a-home/closing-disclosure/ ; https://files.consumerfinance.gov/f/documents/cfpb_mortgages-scams_one-pager.pdf ; IRS https://www.irs.gov/publications/p527 . General guidance only, not verification of a particular contract, account or tax status.
+
+New exact sequential suite: node scripts/check-ask-tino-owner-round3.mjs; --live tests production. Local calls cannot use the network. New client/core cache version round3 preserves new fields between page submissions.
