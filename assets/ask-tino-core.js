@@ -55,6 +55,13 @@ export function cleanCriteria(value={}) {
  if(value.bathroomsRequired===true&&c.bathrooms)c.bathroomsRequired=true;
  if(['condo','house','townhouse','land'].includes(value.propertyType))c.propertyType=value.propertyType;
  if(['yes','no','any'].includes(value.pets))c.pets=value.pets;
+ if(['yes','no','any'].includes(value.elevator))c.elevator=value.elevator;
+ if(value.elevatorRequired===true&&c.elevator==='yes')c.elevatorRequired=true;
+ if(c.pets!=='no'&&value.petType==='dog')c.petType='dog';
+ if(value.petSize==='large'&&c.petType==='dog')c.petSize='large';
+ if(Number.isInteger(value.assignedParkingSpaces)&&value.assignedParkingSpaces>0&&value.assignedParkingSpaces<=10)c.assignedParkingSpaces=value.assignedParkingSpaces;
+ const cb=value.conditionalBudget;
+ if(!c.budgetAny&&c.budget&&cb&&typeof cb==='object'&&typeof cb.amount==='string'&&/^\$[\d,.]+(?:\s*[km])?$/i.test(cb.amount)&&cb.amount.length<25&&Number.isInteger(cb.assignedParkingSpaces)&&cb.assignedParkingSpaces>0&&cb.assignedParkingSpaces<=10)c.conditionalBudget={amount:cb.amount,assignedParkingSpaces:cb.assignedParkingSpaces};
  if(value.accessibility==='wheelchair')c.accessibility='wheelchair';
  if (['yes','no','any'].includes(value.pool)) c.pool=value.pool;
  return c;
@@ -81,6 +88,15 @@ export function updateCriteria(previous, text) {
   if(term)c.leaseRemainingMonths=({ocho:8,eight:8,otto:8,oito:8,seis:6,six:6,sei:6,doce:12,twelve:12,dodici:12})[term[1]]||Number(term[1]);
  }
  if(/ya no hay inquilino|ahora esta vacia|now vacant|no tenant remains|ora e vuota|agora esta vazio/.test(normalized)){c.occupancy='vacant';delete c.leaseRemainingMonths;}
+ const parking=normalized.match(/\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:estacionamientos|assigned parking spaces|posti auto|vagas)(?:\s+asignados|\s+assegnati|\s+atribuidas)?/);
+ const conditional=/solamente si|solo si|only if|solo se|apenas se/.test(normalized)&&parking&&/asignad|assigned|assegnat|atribuid/.test(normalized);
+ if(parking&&!conditional)c.assignedParkingSpaces=NUMBERS[parking[1]]||Number(parking[1]);
+ if(/ascensor|elevator|ascensore|elevador/.test(normalized)&&!/\?/.test(text)){
+  if(/descarta.{0,40}sin ascensor|exclude.{0,40}without.{0,10}elevator|indispens|must.have|obbligator/.test(normalized)){c.elevator='yes';c.elevatorRequired=true;}
+  else if(/sin ascensor|no elevator|senza ascensore|sem elevador/.test(normalized)){c.elevator='no';delete c.elevatorRequired;}
+  else if(/con ascensor|with (?:an? )?elevator|con ascensore|com elevador/.test(normalized))c.elevator='yes';
+ }
+ if(/perro|\bdog\b|\bcane\b|cachorro/.test(normalized)&&/permita|permit|allowed|accett|aceit|con |with /.test(normalized)){c.pets='yes';c.petType='dog';if(/grande|large|big|grosso/.test(normalized))c.petSize='large';}
  const garage=normalized.match(/(?:garaje|garage|garagem).{0,12}\b(\d{1,2}|dos|two|due|dois|tres|three|tre)\s*(?:carros?|coches?|autos?|cars?)/);
  if(garage)c.garageSpaces=NUMBERS[garage[1]]||Number(garage[1]);
  if(/sin (?:asociacion|hoa)|no hoa|senza (?:associazione|hoa)|sem (?:associacao|hoa)/.test(normalized))c.hoa='no';
@@ -94,11 +110,15 @@ export function updateCriteria(previous, text) {
   else if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
   else if(/invertir|investir|investire|\binvest\b/.test(normalized))c.activity='invest';
   else if(/comprar|acquistare|\bbuy\b|cerco|busco|looking for|procuro/.test(normalized))delete c.activity;
-  const budgetContext=/budget|presupuesto|orcamento|price range|limite|limit|subir hasta|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
-  if(/(?:remove|clear|drop|quita|elimina|togli|rimuovi|remova).{0,25}(?:budget|presupuesto|orcamento)|(?:sin limite|sem limite|senza limite|no limit).{0,25}(?:budget|presupuesto|orcamento)|(?:budget|presupuesto|orcamento).{0,25}(?:sin limite|sem limite|senza limite|no limit)/.test(normalized)){delete c.budget;c.budgetAny=true;}
+  const budgetContext=/budget|presupuesto|orcamento|price range|limite|limit|subir (?:hasta|a)|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
+  if(/(?:remove|clear|drop|quita|elimina|togli|rimuovi|remova).{0,25}(?:budget|presupuesto|orcamento)|(?:sin limite|sem limite|senza limite|no limit).{0,25}(?:budget|presupuesto|orcamento)|(?:budget|presupuesto|orcamento).{0,25}(?:sin limite|sem limite|senza limite|no limit)/.test(normalized)){delete c.budget;delete c.conditionalBudget;c.budgetAny=true;}
   else if(budgetContext&&c.activity!=='sell'){
    const amounts=[...text.matchAll(/\$\s*\d[\d.,]*(?:\s*[kKmM]\b)?/g)];
-   if(amounts.length===1){c.budget=amounts[0][0].replace(/\s/g,'').replace(/[.,]$/,'');delete c.budgetAny;}
+   if(amounts.length===1){
+    const amount=amounts[0][0].replace(/\s/g,'').replace(/[.,]$/,'');
+    if(conditional&&c.budget)c.conditionalBudget={amount,assignedParkingSpaces:NUMBERS[parking[1]]||Number(parking[1])};
+    else{c.budget=amount;delete c.budgetAny;delete c.conditionalBudget;}
+   }
    else if(!/euros?|reais|pounds?|sterline/.test(normalized)){
     const scaled=normalized.match(/\b(\d+(?:[.,]\d+)?)\s*(mil(?:a)?|thousand|millon(?:es)?|milion[ei]|million)\b/);
     const words={cien:100,doscientos:200,trescientos:300,cuatrocientos:400,quinientos:500,seiscientos:600,setecientos:700,ochocientos:800,novecientos:900};
@@ -139,6 +159,10 @@ export function criteriaText(state,lang='en',only) {
  if(!only&&c.use==='mixed')parts.push(({en:'Use: rental and personal',es:'Uso: alquiler y personal',it:'Uso: affitto e personale',pt:'Uso: aluguel e pessoal'}[lang]||'Use: rental and personal')+(c.personalUseMonths?' ('+c.personalUseMonths+' '+({en:'personal-use months per year',es:'meses de uso personal al año',it:'mesi personali all’anno',pt:'meses pessoais por ano'}[lang]||'months')+')':''));
  if(!only&&c.propertyType)parts.push(({en:{condo:'Property: condominium',house:'Property: house',townhouse:'Property: townhouse',land:'Property: land'},es:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: townhouse',land:'Tipo: terreno'},it:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: villetta a schiera',land:'Tipo: terreno'},pt:{condo:'Tipo: condomínio',house:'Tipo: casa',townhouse:'Tipo: sobrado',land:'Tipo: terreno'}}[lang]||{})[c.propertyType]);
  if(!only&&c.pets)parts.push(({en:'Pets',es:'Mascotas',it:'Animali domestici',pt:'Animais de estimação'}[lang]||'Pets')+': '+t[c.pets]);
+ if(!only&&c.elevator)parts.push(({es:'Ascensor',en:'Elevator',it:'Ascensore',pt:'Elevador'}[lang])+': '+t[c.elevator]+(c.elevatorRequired?' ('+({es:'indispensable incluso en planta baja',en:'required even on the ground floor',it:'indispensabile anche al piano terra',pt:'indispensável mesmo no térreo'}[lang])+')':''));
+ if(!only&&c.petType)parts.push(({es:'Mascota prevista: perro',en:'Intended pet: dog',it:'Animale previsto: cane',pt:'Animal previsto: cachorro'}[lang])+(c.petSize==='large'?' '+({es:'grande',en:'large',it:'grande',pt:'grande'}[lang]):''));
+ if(!only&&c.assignedParkingSpaces)parts.push(({es:'Estacionamientos asignados requeridos',en:'Required assigned parking spaces',it:'Posti auto assegnati richiesti',pt:'Vagas atribuídas necessárias'}[lang])+': '+c.assignedParkingSpaces);
+ if(!only&&c.conditionalBudget)parts.push(({es:'Presupuesto ampliado: hasta ',en:'Extended budget: up to ',it:'Budget esteso: fino a ',pt:'Orçamento ampliado: até '}[lang])+c.conditionalBudget.amount+({es:' solamente con ',en:' only with ',it:' solo con ',pt:' somente com '}[lang])+c.conditionalBudget.assignedParkingSpaces+({es:' estacionamientos asignados; sin esa condición se mantiene el presupuesto base',en:' assigned parking spaces; otherwise the base budget remains',it:' posti auto assegnati; altrimenti resta il budget base',pt:' vagas atribuídas; caso contrário permanece o orçamento base'}[lang]));
  if(c.activity&&c.activity!=='buy-sell')parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
  if(!only&&c.activity==='buy-sell')parts.push(({es:'Objetivo: comprar antes de vender',en:'Goal: buy before selling',it:'Obiettivo: comprare prima di vendere',pt:'Objetivo: comprar antes de vender'}[lang]));
  if(!only&&c.occupancy==='tenant')parts.push(({es:'Ocupación actual: con inquilino',en:'Current occupancy: tenant',it:'Occupazione attuale: inquilino',pt:'Ocupação atual: inquilino'}[lang]));
@@ -147,7 +171,7 @@ export function criteriaText(state,lang='en',only) {
  if(!only&&c.salePossession==='tenant')parts.push(({es:'Entrega prevista: con inquilino; no se ha acordado entrega vacía',en:'Intended possession: tenant in place; vacant delivery not agreed',it:'Consegna prevista: con inquilino; consegna libera non concordata',pt:'Entrega prevista: com inquilino; entrega desocupada não acordada'}[lang]));
  if(c.budgetAny)parts.push(({en:'No maximum budget specified',es:'Sin presupuesto máximo indicado',it:'Nessun budget massimo indicato',pt:'Sem orçamento máximo informado'})[lang]||'No maximum budget specified');
  if(c.accessibility)parts.push(({en:'Accessibility: wheelchair access',es:'Accesibilidad: silla de ruedas',it:'Accessibilità: sedia a rotelle',pt:'Acessibilidade: cadeira de rodas'})[lang]||'Accessibility: wheelchair access');
- for(const key of ['city','budget','bedrooms','pool']) if((!only||key===only)&&c[key]!==undefined) parts.push(t[key]+': '+(key==='pool'?t[c[key]]:c[key]));
+ for(const key of ['city','budget','bedrooms','pool']) if((!only||key===only)&&c[key]!==undefined) parts.push((key==='budget'&&c.conditionalBudget?({es:'Presupuesto base',en:'Base budget',it:'Budget base',pt:'Orçamento base'}[lang]):t[key])+': '+(key==='pool'?t[c[key]]:c[key]));
  if(!only&&c.bathrooms)parts.push(({es:'Baños',en:'Bathrooms',it:'Bagni',pt:'Banheiros'}[lang])+': '+c.bathrooms+(c.bathroomsRequired?' ('+({es:'indispensables',en:'required',it:'indispensabili',pt:'indispensáveis'}[lang])+')':''));
  if(!only&&c.office)parts.push(({es:'Oficina: '+(c.office==='extra-room'?'puede ser una habitación adicional':'espacio deseado'),en:'Office: '+(c.office==='extra-room'?'an extra room is acceptable':'space requested'),it:'Ufficio: '+(c.office==='extra-room'?'va bene una camera aggiuntiva':'spazio richiesto'),pt:'Escritório: '+(c.office==='extra-room'?'pode ser um quarto adicional':'espaço desejado')}[lang]));
  return parts.length ? (only?'':t.summary+': ')+parts.join('. ')+'.' : t.missing;

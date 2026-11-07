@@ -35,3 +35,4 @@ jobs:
       - run: node scripts/check-ask-tino-owner-round3.mjs
       - run: node scripts/check-ask-tino-owner-round4.mjs
       - run: node scripts/check-ask-tino-owner-round5.mjs
+      - run: node scripts/check-ask-tino-owner-round6.mjs

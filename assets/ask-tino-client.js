@@ -1,4 +1,4 @@
-import {CONTACT,cleanCriteria,updateCriteria,language,copy,sensitiveInput,sensitiveReply} from './ask-tino-core.js?v=20261107-round5';
+import {CONTACT,cleanCriteria,updateCriteria,language,copy,sensitiveInput,sensitiveReply} from './ask-tino-core.js?v=20261107-round6';
 
 // Exactly one sender; page-local structured state, not a shrinking list of facts.
 const state={criteria:{},history:[],lang:'en',busy:false};
