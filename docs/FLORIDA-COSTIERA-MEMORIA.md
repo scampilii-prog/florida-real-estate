@@ -183,3 +183,15 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Pruebas locales aprobadas: compra/inversión/venta, mailto, idempotencia, aviso previo, cuatro idiomas y suites Ask Tino. Workflow ampliado.
 - Pendientes: recepción real del correo, configuración interna del Worker/proveedor y sus registros/entrenamiento. No se encontró repositorio separado “ask” del propietario en la búsqueda realizada.
 - Referencia editorial FTC: https://www.ftc.gov/business-guidance/privacy-security. Sin certificación jurídica.
+
+### Publicación y verificación de Privacy/formulario
+
+- Privacy y avisos: 385e804f2d420cac3e725d924e6ab87adf1a9a56.
+- La revisión visual detectó toggleTino inexistente en Privacy; se restauró el controlador compartido de apertura/cierre: cb1937c939451d6d2028231ead692e6509d848d3.
+- Se observó Cache-Control public, max-age=14400, must-revalidate en JS. Para evitar versiones antiguas se actualizaron referencias de scripts en 49 páginas: b9e42da1a2a35781aad7abf4cbaf1032dea8c9b5.
+- El cargador de compatibilidad y language-dropdown ahora usan exactamente /assets/ask-tino-client.js?v=20261107-privacy3, evitando instancias de módulos con distintas URL.
+- Los 40 formularios se sincronizaron con la plantilla y el generador se actualizó al nuevo caché: 4a4c42569ad7aa4003b2256b741f53c94e0a5bb2.
+- Una prueba histórica exigía una clave de caché obsoleta. Se corrigió para verificar la presencia de una URL versionada manteniendo todas las comprobaciones de ShowingNew: 2848d35a2ffd9d72a79a7927d82b0dcbf7032807.
+- Check estructural completo y Cloudflare Pages del último commit: success. Suite de reglas/privacidad del commit de sincronización: success.
+- Verificación real en navegador: /privacy#ask-tino-privacy muestra el texto nuevo; el chat abre y responde «¿Qué pasa con mis datos personales?» en español con enlaces Privacy/Contact; aviso del chat cambia a español; /contact#tell-us-your-plans muestra enlace Privacy y explicación de correo preparado.
+- No se envió correo real ni se acreditó recepción. Conservación, proveedor final e instrucciones internas del Worker siguen pendientes de acceso/verificación.
