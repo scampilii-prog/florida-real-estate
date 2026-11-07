@@ -18,6 +18,26 @@ export async function onRequest({ request }) {
  } catch { return json({ error: 'Invalid message.' }, 400); }
  const message = typeof body?.message === 'string' ? body.message.trim() : '';
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
+ // Recall must quote visitor-provided context, never fabricate remembered criteria.
+ if (/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(message)) {
+  const prior = Array.isArray(body.history) ? body.history.slice(-8)
+   .filter(item => item && item.role === 'user' && typeof item.content === 'string')
+   .map(item => item.content.trim().slice(0,600))
+   .filter(text => text && !/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text)) : [];
+  const italian = /\b(ricordi|ricorda)\b/i.test(message);
+  const spanish = /\b(recuerdas|recuerda)\b/i.test(message);
+  const portuguese = /\b(lembra)\b/i.test(message);
+  if (!prior.length) return json({reply: italian
+   ? 'Non ho i messaggi precedenti in questa pagina. Puoi indicarmi di nuovo città, budget e preferenze?'
+   : spanish ? 'No tengo los mensajes anteriores en esta página. ¿Puedes indicarme de nuevo la ciudad, el presupuesto y tus preferencias?'
+   : portuguese ? 'Não tenho as mensagens anteriores nesta página. Pode indicar novamente a cidade, o orçamento e suas preferências?'
+   : 'I do not have earlier messages on this page. Please share the city, budget and preferences again.'});
+  const details = prior.slice(-4).map(text => '«' + text + '»').join('\n\n');
+  return json({reply: (italian ? 'Questi sono i dettagli che mi hai indicato:\n\n'
+   : spanish ? 'Estos son los datos que me indicaste:\n\n'
+   : portuguese ? 'Estes são os detalhes que você informou:\n\n'
+   : 'These are the details you gave me:\n\n') + details});
+ }
  // Introduce Florida Costiera as a platform, not just a contact referral.
  if (/florida\s+costiera/i.test(message) && /qu[eé]\s+es|qu[eé]\s+servicios|servicios\s+ofrece|what\s+is|what\s+services|cos['’]?\s*[eè]|servizi|ofrece|offers/i.test(message)) {
   const reply = /what\s+is|what\s+services|offers/i.test(message)
