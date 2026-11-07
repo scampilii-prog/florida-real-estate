@@ -87,3 +87,13 @@ Fixes: bounded shortfall guidance with approval and written-debt-treatment cavea
 `node scripts/check-ask-tino-owner-questions.mjs` tests the exact ten questions in a single conversation, with local external calls blocked. `--live` replays them against production. The broader suite now has 60 turns. These assertions verify useful topic-specific content and state transitions; they are not a guarantee of every possible answer.
 
 Sources checked: CFPB https://www.consumerfinance.gov/ask-cfpb/what-is-a-short-sale-en-290/ ; Florida DBPR https://www2.myfloridalicense.com/condominiums-and-cooperatives/faqs/ ; Florida Senate https://www.flsenate.gov/Laws/Statutes/2026/718.504 . No default rental term, appreciation, return, lender approval or debt forgiveness is assumed.
+
+## Second owner-question round — 2026-11-07
+
+New state fields: propertyType (condo/house/townhouse/land) and pets (yes/no/any), retained by the shared client and server. Numeric budget-increase phrasing and replacement bedroom counts are parsed without retaining a negated old number. Explicit preference statements remain on the criteria route; substantive questions no longer get a generic buying handoff. Internal-site lookup uses word boundaries to avoid interpreting “necesito” as Italian “sito”.
+
+functions/api/ask-tino-guidance.js provides bounded multilingual topic guidance for condominium costs, inspection documents, flood-insurance uncertainty, remote buying, conflicting Airbnb claims and unsupported message/callback confirmations. It runs after policy checks and before generic known/research/model routes. It does not verify actual property reports, permissions, flood zones, insurance obligations, bookings or sent messages.
+
+Authoritative sources checked: NFIP/FEMA https://www.floodsmart.gov/flood-zones-and-maps/what-is-my-flood-zone ; https://agents.floodsmart.gov/topics/flood-insurance-101 ; DBPR https://condos.myfloridalicense.com/faqs/ and https://condos.myfloridalicense.com/inspections/ . No universal building age/deadline, rental term, exemption or all-remote eligibility is asserted.
+
+Second exact script: node scripts/check-ask-tino-owner-round2.mjs, with --live for production. Local network calls are blocked. Four-question preference continuity is also checked in the browser because older cached clients would otherwise discard new state fields. All module loaders and HTML references use round2 cache keys.

@@ -39,6 +39,8 @@ export function cleanCriteria(value={}) {
  if(value.budgetAny===true)c.budgetAny=true;
  if (!c.budgetAny && typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
  if (Number.isInteger(Number(value.bedrooms)) && Number(value.bedrooms)>0 && Number(value.bedrooms)<=30) c.bedrooms=Number(value.bedrooms);
+ if(['condo','house','townhouse','land'].includes(value.propertyType))c.propertyType=value.propertyType;
+ if(['yes','no','any'].includes(value.pets))c.pets=value.pets;
  if(value.accessibility==='wheelchair')c.accessibility='wheelchair';
  if (['yes','no','any'].includes(value.pool)) c.pool=value.pool;
  return c;
@@ -46,6 +48,8 @@ export function cleanCriteria(value={}) {
 export function updateCriteria(previous, text) {
  const c=cleanCriteria(previous);
  if(/wheelchair|silla de ruedas|sedia a rotelle|cadeira de rodas/i.test(text))c.accessibility='wheelchair';
+ if(/busco|cerco|procuro|looking for|quiero|prefiero|preferisco|prefer|quero/i.test(text)){if(/condomin|\bcondo\b/i.test(text))c.propertyType='condo';else if(/casa|house|home/i.test(text))c.propertyType='house';}
+ if(/mascotas|pets|animali|animais/i.test(text)){if(/sin mascotas|no pets|senza animali|sem animais/i.test(text))c.pets='no';else if(/permita|permit|allowed|indispens|necesit|need|accept|ammess|aceit/i.test(text))c.pets='yes';}
  const cities=text.match(CITIES);
  if(cities?.length===1) c.city=cities[0];
  const normalized=text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -54,7 +58,7 @@ export function updateCriteria(previous, text) {
   if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
   else if(/invertir|investir|investire|\binvest\b/.test(normalized))c.activity='invest';
   else if(/comprar|acquistare|\bbuy\b|cerco|busco|looking for|procuro/.test(normalized))delete c.activity;
-  const budgetContext=/budget|presupuesto|orcamento|price range|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
+  const budgetContext=/budget|presupuesto|orcamento|price range|subir hasta|aumentar|increase|raise|invertir|investir|investire|\binvest\b/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
   if(/(?:remove|clear|drop|quita|elimina|togli|rimuovi|remova).{0,25}(?:budget|presupuesto|orcamento)|(?:sin limite|sem limite|senza limite|no limit).{0,25}(?:budget|presupuesto|orcamento)|(?:budget|presupuesto|orcamento).{0,25}(?:sin limite|sem limite|senza limite|no limit)/.test(normalized)){delete c.budget;c.budgetAny=true;}
   else if(budgetContext&&c.activity!=='sell'){
    const amounts=[...text.matchAll(/\$\s*\d[\d.,]*(?:\s*[kKmM]\b)?/g)];
@@ -69,7 +73,9 @@ export function updateCriteria(previous, text) {
   }
  }
  const rooms=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|duas|three|tres|tre|três|four|cuatro|quattro|quatro|five|cinco|cinque|six|seis|sei)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i);
- if(rooms) c.bedrooms=NUMBERS[rooms[1].toLowerCase()]||Number(rooms[1]);
+ const replacement=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|three|tres|tre|four|cuatro|quattro)\s+(?:ser[ií]a|would be|sarebbe)\s+(?:suficiente|enough|sufficiente)/i);
+ if(replacement&&(rooms||c.bedrooms))c.bedrooms=NUMBERS[replacement[1].toLowerCase()]||Number(replacement[1]);
+ else if(rooms) c.bedrooms=NUMBERS[rooms[1].toLowerCase()]||Number(rooms[1]);
  if(/(?:pool|piscina).{0,20}(?:indifferente|indiferente|no preference)|(?:indifferente|indiferente|no preference).{0,20}(?:pool|piscina)/i.test(text)) c.pool='any';
  else if(POOL_NO.test(text)) c.pool='no';
  else if(POOL_YES.test(text)) c.pool='yes';
@@ -84,6 +90,8 @@ const COPY={
 export const copy=lang=>COPY[lang]||COPY.en;
 export function criteriaText(state,lang='en',only) {
  const c=cleanCriteria(state),t=copy(lang),parts=[];
+ if(!only&&c.propertyType)parts.push(({en:{condo:'Property: condominium',house:'Property: house',townhouse:'Property: townhouse',land:'Property: land'},es:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: townhouse',land:'Tipo: terreno'},it:{condo:'Tipo: condominio',house:'Tipo: casa',townhouse:'Tipo: villetta a schiera',land:'Tipo: terreno'},pt:{condo:'Tipo: condomínio',house:'Tipo: casa',townhouse:'Tipo: sobrado',land:'Tipo: terreno'}}[lang]||{})[c.propertyType]);
+ if(!only&&c.pets)parts.push(({en:'Pets',es:'Mascotas',it:'Animali domestici',pt:'Animais de estimação'}[lang]||'Pets')+': '+t[c.pets]);
  if(c.activity)parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
  if(c.budgetAny)parts.push(({en:'No maximum budget specified',es:'Sin presupuesto máximo indicado',it:'Nessun budget massimo indicato',pt:'Sem orçamento máximo informado'})[lang]||'No maximum budget specified');
  if(c.accessibility)parts.push(({en:'Accessibility: wheelchair access',es:'Accesibilidad: silla de ruedas',it:'Accessibilità: sedia a rotelle',pt:'Acessibilidade: cadeira de rodas'})[lang]||'Accessibility: wheelchair access');

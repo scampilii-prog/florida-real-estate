@@ -34,11 +34,12 @@ export function policyReply(q,state,lang='en'){
  if(state.activity==='invest'&&/[?¿]|compar|evalu|valut|assess/.test(s))return null;
  // A seller's substantive question must reach an answer, not the intent-only handoff.
  if(state.activity==='sell'&&/[?¿]|hipoteca|mortgage|mutuo|financiamento|por donde|how to|where.*start|da dove|document|pasos|steps/.test(s))return null;
- const search=/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|house|condo|apartment|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);
+ const search=!/[?¿]/.test(q)&&/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|house|condo|apartment|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);
  const update=/\b(cambia|cambio|change|aggiorna|actualiza|atualiza|mude|togli|quita|remove|mantieni|keep|quiero|voglio|quero|want)\b/.test(s)&&/city|citta|ciudad|cidade|comunidad|community|budget|presupuesto|orcamento|piscina|pool|bedroom|habitacion|camere|quartos/.test(s)&&Object.keys(state).length>0;
+ const preferenceStatement=!/[?¿]/.test(q)&&/prefier|subir|necesito|suficiente|indispens/.test(s)&&/habitacion|bedroom|mascota|pets|presup|budget|\$/.test(s);
  const shortCriterion=(state.city&&s===norm(state.city))||(!/[?¿]/.test(q)&&q.length<90&&/budget|presupuesto|orcamento/.test(s))||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(q);
  if(state.activity==='sell'&&(search||update||shortCriterion||/vender|vendere|selling|\bsell\b/.test(s)))return criteriaText(state,lang)+'\n\n'+(!state.city?({en:'In which city or community is the property you want to sell?',es:'¿En qué ciudad o comunidad está la propiedad que quieres vender?',it:'In quale città o comunità si trova l’immobile che vuoi vendere?',pt:'Em qual cidade ou comunidade fica o imóvel que deseja vender?'}[lang]||t.city):({en:'For selling guidance, contact Sabatino to review your property and next steps.',es:'Para vender, contacta a Sabatino para revisar tu propiedad y los próximos pasos.',it:'Per vendere, contatta Sabatino per esaminare l’immobile e i prossimi passi.',pt:'Para vender, contate Sabatino para analisar o imóvel e os próximos passos.'}[lang]||t.agent)+contact);
- if(search||update||shortCriterion||state.activity==='invest'&&/invert|invest/.test(s)){
+ if(search||update||shortCriterion||preferenceStatement||state.activity==='invest'&&/invert|invest/.test(s)){
  const summary=Object.keys(state).length?criteriaText(state,lang):'';
  const missing=!state.city?t.city:!state.budget&&!state.budgetAny?t.budget:null;
  return (summary?summary+'\n\n':'')+(missing||t.inventory+'\n'+t.next+': '+CONTACT.buy+'\n'+t.contact+': '+CONTACT.form);

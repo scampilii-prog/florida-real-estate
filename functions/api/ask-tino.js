@@ -1,4 +1,5 @@
 import {policyReply,validateModelReply} from './ask-tino-policy.js';
+import {guidanceReply} from './ask-tino-guidance.js';
 import {researchReply} from './ask-tino-research.js';
 import {upstreamPrompt} from './ask-tino-instructions.js';
 import siteIndex from './ask-tino-index.js';
@@ -23,6 +24,7 @@ export async function onRequest({request}){
  const respond=reply=>json({reply,criteria,language:lang});
  const policy=policyReply(message,criteria,lang);if(policy)return respond(policy);
  const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && history.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
+ const guidance=guidanceReply(message,lang);if(guidance)return respond(guidance);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
  const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const prompt=upstreamPrompt(message,criteria,lang,history);if(!prompt)return respond(copy(lang).long);

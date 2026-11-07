@@ -7,8 +7,8 @@ import * as core from '../assets/ask-tino-core.js';
 import {onRequest} from '../functions/api/ask-tino.js';
 let checks=0;function check(fn){fn();checks++;}
 let criteria=core.updateCriteria({},'Busco una casa en Englewood, máximo $500,000, con tres habitaciones y sin piscina.');
-check(()=>assert.deepEqual(criteria,{city:'Englewood',budget:'$500,000',bedrooms:3,pool:'no'}));
-check(()=>assert.equal(core.knownReply('Can you summarize my search criteria in English?',criteria,'en'),'Current criteria: City: Englewood. Budget: $500,000. Bedrooms: 3. Pool: no.'));
+check(()=>assert.deepEqual(criteria,{city:'Englewood',budget:'$500,000',bedrooms:3,propertyType:'house',pool:'no'}));
+check(()=>assert.equal(core.knownReply('Can you summarize my search criteria in English?',criteria,'en'),'Current criteria: Property: house. City: Englewood. Budget: $500,000. Bedrooms: 3. Pool: no.'));
 criteria=core.updateCriteria(criteria,'Cambio solo la città: preferisco Venice. Mantieni il budget e la piscina.');
 check(()=>assert.equal(criteria.city,'Venice'));check(()=>assert.equal(criteria.budget,'$500,000'));check(()=>assert.equal(criteria.pool,'no'));
 criteria=core.updateCriteria(criteria,'Voglio di nuovo la piscina.');check(()=>assert.equal(criteria.pool,'yes'));

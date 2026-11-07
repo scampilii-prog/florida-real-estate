@@ -249,3 +249,12 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Repetición de las 10 exactas en una misma conversación pública: 10/10 comprobaciones; revisión de las diez respuestas completas. No se pidió a Tino que las repitiera.
 - 2: explica faltante, aprobación y deuda restante. 7: presupuesto $350,000 y gastos/vacancia/flujo. 8: documentos/enmiendas/confirmación escrita/reglas locales. 9: presupuesto $350,000 sin inventario inventado. 10: rechaza envío de documentos y expresa límites reales del proveedor.
 - Informe: docs/ask-tino-owner-10-2026-11-07.md; JSON antes/después asociado. No interpretar el resultado como garantía de toda respuesta posible.
+
+## 16. Segunda ronda de diez preguntas, a cargo del asistente
+
+- Autorizado: hacer yo las diez nuevas, mantener 1–4 en la misma conversación, corregir y volver a probar.
+- Baseline real: no retenía condominio/mascotas; $400,000 se aceptaba en texto pero se mantenían $350,000; no sustituía dos habitaciones por una; resumen incorrecto; gastos/inspecciones demasiado genéricos; inundación derivaba a MLS; compra remota se reducía a visita; conflicto Airbnb volvía a pedir tipo conocido; confirmación de envío no recibía respuesta explícita.
+- Nuevos campos propertyType y pets, presupuesto y reemplazo de habitaciones corregidos. Nuevas respuestas temáticas en functions/api/ask-tino-guidance.js (cuatro idiomas), sin prometer verificaciones o acciones reales.
+- Búsqueda de contenido usa límites de palabra. “necesito” ya no activa “sito”. Preguntas sustantivas no se sustituyen por resumen/MLS.
+- Nueva suite scripts/check-ask-tino-owner-round2.mjs: 10 casos locales. Más 60 generales, las 10 anteriores, privacidad y auditoría estructural pasan.
+- Cliente/core/cargadores/referencias HTML versionados round2 para preservar nuevos campos entre envíos. La comprobación pública y visual se registra tras el despliegue.
