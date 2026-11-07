@@ -1,0 +1,321 @@
+{
+  "date": "2026-11-07",
+  "implementationCommit": "0c3b379807057ba5ce6b466e4c3d04725ed03081",
+  "syntheticDataOnly": true,
+  "before": [
+    {
+      "number": 1,
+      "question": "Quiero vender mi casa en Rotonda West, pero todavía vive un inquilino. ¿Por dónde empiezo?",
+      "response": {
+        "reply": "Para empezar a vender su casa en Rotonda West con un inquilino, es importante considerar los términos de su contrato de alquiler y las leyes locales que rigen la relación entre propietarios e inquilinos. \n¿Cuál es la duración restante del contrato de alquiler actual?",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 2,
+      "question": "El contrato de alquiler termina dentro de ocho meses. ¿Puedo vender antes sin obligarlo a salir?",
+      "response": {
+        "reply": "Para vender su casa en Rotonda West con un inquilino, es importante considerar el contrato de alquiler vigente. En general, un contrato de alquiler es un acuerdo legal entre el propietario y el inquilino, y termina en la fecha especificada. \n\nSi el contrato de alquiler termina dentro de ocho meses, es posible que pueda vender la propiedad antes de que termine el contrato, pero el inquilino tiene derecho a permanecer en la propiedad hasta que termine el contrato, a menos que se acuerde algo diferente entre las partes.\n\n¿Cuál es el tipo de contrato de alquiler que tiene con el inquilino (por ejemplo, arrendamiento fijo, mes a mes)?",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 3,
+      "question": "Prefiero vender con el inquilino dentro. Resume mi situación sin asumir que la casa estará vacía al cierre.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Objetivo: vender. Ciudad: Rotonda West.\n\nPara vender, contacta a Sabatino para revisar tu propiedad y los próximos pasos.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 4,
+      "question": "¿Qué información debería preparar para Sabatino y qué datos personales del inquilino no debo compartir aquí?",
+      "response": {
+        "reply": "Consulta la política de privacidad antes de compartir datos personales. No introduzcas aquí contraseñas, documentos de identidad ni datos bancarios. Para preguntas de privacidad, contacta a Sabatino.\nhttps://floridacostiera.com/privacy\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 5,
+      "question": "Recibí dos ofertas: una en efectivo más baja y otra financiada más alta. ¿Qué condiciones debo comparar además del precio?",
+      "response": {
+        "reply": "Para comparar las ofertas, considera factores como la fecha de cierre, las condiciones de la venta, los costos de cierre, y cualquier contingencia asociada con cada oferta. \n\n¿Cuál es el plazo de tiempo que tienes disponible para considerar y responder a estas ofertas?",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 6,
+      "question": "El comprador ofrece un depósito grande. ¿Eso garantiza que recibiré ese dinero si cancela?",
+      "response": {
+        "reply": "Contenido de Florida Costiera\n\nFlorida Costiera | About Sabatino Campilii & Creative Partner Italo | Southwest Florida Gulf Coast Real Estate\n\nhttps://floridacostiera.com/about\n\nBoca Grande FL Real Estate Guide | Florida Costiera\nDiscover Boca Grande and Gasparilla Island real estate, island homes, waterfront considerations and coastal living with Florida Costiera.\nhttps://floridacostiera.com/boca-grande-florida-real-estate\n\nBoca Grande FL Homes for Sale & Real Estate | Florida Costiera\nExplore Boca Grande FL homes for sale, Gasparilla Island waterfront properties, beaches and historic village living with Sabatino Campilii, REALTOR®.\nhttps://floridacostiera.com/boca-grande\n\nPara orientación inmobiliaria personalizada: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 7,
+      "question": "La tasación salió por debajo del precio acordado. ¿Qué opciones podríamos revisar?",
+      "response": {
+        "reply": "Sabatino debe revisar la propiedad y los datos actuales para orientarte sobre valor, ofertas o negociación. No puedo darte una valoración verificada ni actuar como tu agente.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Rotonda West",
+          "activity": "sell",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 8,
+      "question": "Quiero comprar otra casa antes de vender la actual. ¿Qué riesgos y alternativas debería evaluar?",
+      "response": {
+        "reply": "Para comprar otra casa antes de vender la actual, debes considerar los riesgos de tener dos hipotecas al mismo tiempo, lo que podría afectar tu capacidad de pago y tu crédito. También debes evaluar las alternativas, como vender tu casa actual antes de comprar otra o considerar una hipoteca puente.\n\n¿Cuál es tu situación actual en cuanto a financiamiento y ahorros para manejar este proceso?",
+        "criteria": {
+          "city": "Rotonda West",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 9,
+      "question": "Soy propietario extranjero. ¿Cómo averiguo si FIRPTA afecta mi venta y cuánto podría retenerse, sin asumir que esa retención es mi impuesto final?",
+      "response": {
+        "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nIRS — FIRPTA\nhttps://www.irs.gov/individuals/international-taxpayers/firpta-withholding\nPágina consultada ahora — 2026-11-07\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+        "criteria": {
+          "city": "Rotonda West",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 10,
+      "question": "Necesito quedarme quince días después del cierre. ¿Qué debería acordar por escrito antes de aceptar la oferta?",
+      "response": {
+        "reply": "Para quedarse quince días después del cierre, deberías acordar un acuerdo de ocupación posterior al cierre por escrito antes de aceptar la oferta. Esto te permitiría permanecer en la propiedad durante un período determinado después de la fecha de cierre.\n\n¿Cuál es el estado actual de tu propiedad en Rotonda West (por ejemplo, está en el mercado, has recibido ofertas, etc.)?",
+        "criteria": {
+          "city": "Rotonda West",
+          "propertyType": "house"
+        },
+        "language": "es"
+      }
+    }
+  ],
+  "after": {
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "Quiero vender mi casa en Rotonda West, pero todavía vive un inquilino. ¿Por dónde empiezo?",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Objetivo: vender. Ocupación actual: con inquilino. Ciudad: Rotonda West.\n\nEmpieza revisando el contrato de alquiler, sus modificaciones, vencimiento, renovaciones, renta y depósito. Normalmente se puede vender una propiedad alquilada, pero vender no permite asumir que termina el alquiler ni exigir que el inquilino salga. Revisa con Sabatino y un abogado las obligaciones que pasarían al comprador y cómo reflejar la ocupación en la oferta y el cierre. Coordina visitas respetando el contrato y los derechos de acceso y aviso aplicables. Comprueba también ajustes de rentas, depósitos y entrega de documentos. No prometas posesión vacía sin una base válida y documentada.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "El contrato de alquiler termina dentro de ocho meses. ¿Puedo vender antes sin obligarlo a salir?",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Objetivo: vender. Ocupación actual: con inquilino. Plazo restante de alquiler indicado: 8 meses. Ciudad: Rotonda West.\n\nEn general, puedes vender antes de vencer el alquiler si se estructura la operación respetando el contrato y los derechos aplicables del inquilino. Busca un comprador que acepte esa ocupación y documenta la continuidad o cesión del alquiler, rentas, depósitos y responsabilidades al cierre. Vender no termina automáticamente el contrato ni autoriza a obligarlo a salir. Si alguien propone terminarlo anticipadamente, debe revisarse y acordarse válidamente por separado; no prometas entrega vacía.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "Prefiero vender con el inquilino dentro. Resume mi situación sin asumir que la casa estará vacía al cierre.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: casa. Objetivo: vender. Ocupación actual: con inquilino. Plazo restante de alquiler indicado: 8 meses. Entrega prevista: con inquilino; no se ha acordado entrega vacía. Ciudad: Rotonda West.",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "¿Qué información debería preparar para Sabatino y qué datos personales del inquilino no debo compartir aquí?",
+        "response": {
+          "reply": "Para Sabatino, prepara un resumen de la propiedad, estado, reparaciones, gastos, hipoteca si existe y plazo deseado de venta. Sobre el alquiler: vencimiento, renovaciones, renta, depósito, pagos pendientes y condiciones para visitas o entrega con inquilino. Los contratos y comprobantes necesarios deben revisarse por un canal adecuado acordado con Sabatino; no subas aquí el contrato completo. No compartas nombres ni contactos privados del inquilino, documentos de identidad, SSN, cuentas bancarias, informes de crédito, firmas o códigos de acceso. Para esta conversación basta información general sin identificarlo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "Recibí dos ofertas: una en efectivo más baja y otra financiada más alta. ¿Qué condiciones debo comparar además del precio?",
+        "response": {
+          "reply": "Compara el neto estimado después de créditos y gastos, prueba de fondos o solidez de la financiación, depósito y sus condiciones, contingencias de inspección, tasación y préstamo, fechas y riesgo de retraso. Comprueba también qué ocupación acepta cada comprador y cualquier condición de venta de otra propiedad. Una oferta en efectivo no elimina automáticamente inspecciones ni otros derechos de cancelación; una preaprobación no garantiza financiación. Sabatino puede ayudarte a comparar las condiciones por escrito, sin elegir solo por el precio.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "El comprador ofrece un depósito grande. ¿Eso garantiza que recibiré ese dinero si cancela?",
+        "response": {
+          "reply": "No. Un depósito grande no garantiza que lo recibas si el comprador cancela. Revisa si fue entregado al custodio de escrow, qué contingencias y plazos permiten devolución, y qué dispone el contrato ante incumplimiento. Cancelar válidamente y estar en incumplimiento son situaciones distintas. La liberación depende del contrato y del procedimiento aplicable; una disputa puede requerir acuerdo, mediación u otra resolución. No cuentes con ese dinero como ingreso disponible ni asumas que puedes quedártelo automáticamente. Pide revisión contractual con Sabatino y asesoramiento jurídico si hay desacuerdo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "La tasación salió por debajo del precio acordado. ¿Qué opciones podríamos revisar?",
+        "response": {
+          "reply": "Primero revisa el informe con Sabatino y el prestamista: si hay errores o comparables relevantes, pregunta por su procedimiento de reconsideración de valor, sin garantizar otro resultado. Podrían negociar una reducción de precio, que el comprador aporte una diferencia que pueda cubrir y el prestamista acepte, o una combinación. También puede haber opciones de cancelar, pero dependen de las contingencias y plazos del contrato; una tasación baja no cancela por sí sola la venta ni obliga al vendedor a bajar el precio. Confirma por escrito cualquier cambio y cómo afecta préstamo y fondos para cerrar.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Quiero comprar otra casa antes de vender la actual. ¿Qué riesgos y alternativas debería evaluar?",
+        "response": {
+          "reply": "Calcula cuánto tiempo podrías sostener dos viviendas: cuotas de préstamo si corresponden, impuestos, seguros, asociación, mantenimiento y fondos para el nuevo anticipo y cierre. Prueba un escenario de venta más lenta o por menos dinero. Confirma con el prestamista tu capacidad sin depender de una venta todavía pendiente. Alternativas: vender primero y alquilar temporalmente, negociar una compra condicionada a la venta, coordinar cierres o estudiar financiación puente con sus costos y riesgo de vencimiento. No hay garantía de que ambas operaciones cierren juntas; Sabatino puede ayudarte a preparar un plan alternativo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "buy-sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "Soy propietario extranjero. ¿Cómo averiguo si FIRPTA afecta mi venta y cuánto podría retenerse, sin asumir que esa retención es mi impuesto final?",
+        "response": {
+          "reply": "Ser extranjero por nacionalidad no determina por sí solo tu condición fiscal para FIRPTA. Antes de aceptar una oferta, pide a un profesional tributario y a la compañía de cierre que revisen tu condición fiscal, titularidad, importe realizado y posibles excepciones o certificado de retención. La regla general del IRS es retener el 15% del importe realizado, no de la ganancia ni del neto después de pagar la hipoteca; pueden aplicar tasas reducidas o exenciones según hechos y requisitos. La retención no es el impuesto final: la declaración determina el impuesto y el posible crédito o reembolso. No puedo calcular tu caso sin esa revisión. No publiques aquí TIN, pasaporte ni declaraciones fiscales. Referencia IRS: https://www.irs.gov/individuals/international-taxpayers/firpta-withholding\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "buy-sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "Necesito quedarme quince días después del cierre. ¿Qué debería acordar por escrito antes de aceptar la oferta?",
+        "response": {
+          "reply": "Negocia antes de aceptar la oferta un acuerdo escrito de ocupación posterior al cierre, sujeto a revisión jurídica y aceptación del comprador. Debe fijar fecha y hora exactas de salida, costo de ocupación, depósito o fondos retenidos en escrow y condiciones para liberarlos. Define servicios, mantenimiento, daños, seguro y responsabilidad, acceso e inspecciones, estado de entrega, llaves y consecuencias de retrasarse. Confirma compatibilidad con el préstamo y seguro del comprador y tus coberturas; no supongas que continúan iguales tras vender. No basta una promesa verbal ni el cierre concede automáticamente esos días.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Rotonda West",
+            "activity": "buy-sell",
+            "occupancy": "tenant",
+            "salePossession": "tenant",
+            "leaseRemainingMonths": 8,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  },
+  "browser": {
+    "url": "https://floridacostiera.com/contact",
+    "questions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "observed": "Rotonda West, sale, tenant occupancy, 8 months remaining, sale intended tenant-in-place, no assumed vacant possession; specific preparation and tenant privacy advice"
+  },
+  "checks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}

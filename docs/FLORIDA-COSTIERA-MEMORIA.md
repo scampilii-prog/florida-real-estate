@@ -293,3 +293,13 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Commit cac2d31b46da876273453c06c8a5be3b23e42e0e publicado; Cloudflare Pages, rules y structural-audit success. Diez consultas públicas exactas: 10/10 y lectura completa. Navegador 1–4: Nokomis, $600,000, 3 habitaciones, 2 baños indispensables, distribución oficina flexible; pide aclaración sin inventar cuarta habitación.
 - Pasaron las tres rondas anteriores, 60 turnos generales, privacidad y auditoría estructural. No equivale a aprobar todo el chat ni propiedades concretas.
 - Informe docs/ask-tino-owner-round4-2026-11-07.md; respuestas antes/después en JSON asociado. No tocar OceanFL ni My Closing Timeline.
+
+## 19. Quinta ronda — venta con inquilino y condiciones de cierre
+
+- Usuario: “hazlas tú”, sobre las diez preguntas de venta propuestas. Pruebas y mejoras completas sin pedirle copiar preguntas.
+- Baseline: no conservaba inquilino, plazo ni entrega ocupada; aviso de privacidad genérico; depósito devolvía enlaces ajenos; tasación baja bloqueada por handoff; FIRPTA solo directorio; ocupación posterior sin condiciones.
+- Campos occupancy/salePossession/leaseRemainingMonths y objetivo buy-sell; privacidad del inquilino sin guardar identidad. Actualizar a vivienda vacía explícitamente elimina el plazo anterior. No inferir fin del alquiler por venta.
+- Guías ES/EN/IT/PT: vender alquilado, preparar información sin PII, comparar ofertas, escrow/cancelación, tasación baja, comprar antes de vender, FIRPTA general y acuerdo de ocupación posterior. Protección de datos sensibles y características protegidas mantiene prioridad.
+- Commit 0c3b379807057ba5ce6b466e4c3d04725ed03081 publicado. Cloudflare Pages/rules/structural-audit success. Diez preguntas públicas exactas: 10/10 más lectura completa. Navegador 1–4: Rotonda West, vender, inquilino, ocho meses, entrega ocupada sin promesa de vacía.
+- Cuatro rondas previas, 60 turnos generales, privacidad y estructura aprobados. Cache compartida round5.
+- Informe docs/ask-tino-owner-round5-2026-11-07.md y JSON antes/después asociado. No equivale a aprobar todas las variantes ni un contrato o cálculo fiscal particular. No tocar OceanFL ni My Closing Timeline.

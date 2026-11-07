@@ -115,3 +115,11 @@ Explicit city exclusions remove the city; a sole remaining alternative becomes c
 New general due-diligence guidance in four languages covers permit scope/final closure, roof condition and written insurance terms, solar ownership/loan/lease/PPA, land feasibility, inspection waiver risk and formerly rented vacant possession. Topic replies do not drag previous topics into the current answer and do not claim property-specific verification. Sources and before/after evidence are in docs/ask-tino-owner-round4-2026-11-07.md and its JSON.
 
 Run node scripts/check-ask-tino-owner-round4.mjs; --live repeats the sequential public API conversation. Browser continuity 1–4 also passed after production deployment cac2d31b46da876273453c06c8a5be3b23e42e0e. Cache key round4 is shared by all loaders, generated inquiry markup and core import. Finite regression coverage, not universal chatbot certification.
+
+## Fifth owner-question round — 2026-11-07
+
+Tenant occupancy, intended sale possession and stated remaining lease months are validated page-local criteria. A tenant-in-place sale must not be summarized as vacant delivery. An explicit no-tenant-remains correction clears remaining months. Buying before selling retains a combined buy-sell goal rather than losing the sale objective. All loaders, generated markup and client/core imports use round5.
+
+Seller guidance adds lease-aware sale steps, preparation without tenant PII, offer comparison, escrow versus cancellation/default, low appraisal options, overlapping ownership risk, general FIRPTA withholding distinctions and written post-closing occupancy terms. It precedes generic handoffs but follows sensitive-data, identity-document and protected-steering guards. No individual legal/tax outcome or action completion is asserted. General FIRPTA rules have an IRS reference and are not described as freshly retrieved during each chat turn.
+
+Run node scripts/check-ask-tino-owner-round5.mjs, optionally --live. Ten exact sequential questions passed locally and after deployment 0c3b379807057ba5ce6b466e4c3d04725ed03081; browser continuity 1–4 passed. Prior four ten-question suites, 60 general turns, privacy and structural checks passed. See docs/ask-tino-owner-round5-2026-11-07.md and full before/after JSON. Finite coverage, not universal chatbot certification.
