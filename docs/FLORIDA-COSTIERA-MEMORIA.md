@@ -164,3 +164,11 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Documentación técnica reescrita como conjunto vigente, corrigiendo la ubicación de ask-tino-policy.js: está en functions/api/, no en assets/.
 - Pruebas locales: 44 comprobaciones clean, 16 policy, suite research y nueva suite consolidated aprobadas. Flujo GitHub Actions específico añadido.
 - Pendiente: instrucciones y registros del Worker externo, revisión completa de Privacy/formulario y recepción del correo. No afirmar limpieza del Worker sin acceso a su configuración.
+
+### Evidencia de publicación de la reforma
+
+- Commit de implementación: 6284aa1617902819572144b5698a48ff30d337d2.
+- GitHub Actions Ask Tino rules: éxito, run 42378735700.
+- Check Cloudflare Pages del mismo commit: completed / success, deployment 8b1b2709-9a31-4c0b-8f9b-2371d0d1dfec.
+- Comprobación HTTP real en https://floridacostiera.com/api/ask-tino: la pregunta «¿Qué pasa con mis datos personales?» devolvió la nueva respuesta en español con enlaces a /privacy y /contact#tell-us-your-plans.
+- Esta comprobación confirma esa ruta publicada, no una auditoría completa del Worker ni del contenido de Privacy.
