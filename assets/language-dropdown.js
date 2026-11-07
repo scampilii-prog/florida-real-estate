@@ -865,8 +865,9 @@
   if (!message || busy) return;
   busy = true;
   var messages = document.getElementById('tinoMessages');
+  history = Array.from(messages.querySelectorAll('.tino-bubble')).filter(function(item){return item.style.background;}).slice(-8).map(function(item){return {role:'user',content:(item.dataset.tinoOriginal || item.textContent).slice(0,600)};});
   var bubble = document.createElement('div');
-  bubble.className = 'tino-bubble'; bubble.textContent = message;
+  bubble.className = 'tino-bubble'; bubble.textContent = message; bubble.dataset.tinoOriginal = message;
   bubble.style.background = '#e8f3f0'; messages.appendChild(bubble);
   input.value = '';
   var reply = document.createElement('div');

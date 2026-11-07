@@ -23,10 +23,28 @@ export async function onRequest({ request }) {
   const prior = Array.isArray(body.history) ? body.history.slice(-8)
    .filter(item => item && item.role === 'user' && typeof item.content === 'string')
    .map(item => item.content.trim().slice(0,600))
-   .filter(text => text && !/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text)) : [];
+   .filter(Boolean) : [];
   const italian = /\b(ricordi|ricorda)\b/i.test(message);
   const spanish = /\b(recuerdas|recuerda)\b/i.test(message);
   const portuguese = /\b(lembra)\b/i.test(message);
+  const supplied = [...prior, message];
+  let city = '', budget = '', pool = '';
+  for (const text of supplied) {
+   const cities = text.match(/Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/gi);
+   if (cities && cities.length === 1) city = cities[0];
+   const amounts = [...text.matchAll(/\$\s*\d[\d.,]*(?:\s*(?:k|mila|mil))?/gi)];
+   if (amounts.length === 1) budget = amounts[0][0].replace(/[.,]$/, '');
+   if (/senza piscina|sin piscina|without (?:a )?pool|sem piscina/i.test(text)) pool = 'no';
+   else if (/con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina/i.test(text)) pool = 'yes';
+  }
+  if (city || budget || pool) {
+   const fields = [];
+   if (city) fields.push((italian ? 'Città: ' : spanish ? 'Ciudad: ' : portuguese ? 'Cidade: ' : 'City: ') + city);
+   if (budget) fields.push((spanish ? 'Presupuesto: ' : portuguese ? 'Orçamento: ' : 'Budget: ') + budget);
+   if (pool) fields.push((italian ? 'Piscina: ' : spanish ? 'Piscina: ' : portuguese ? 'Piscina: ' : 'Pool: ') +
+    (pool === 'yes' ? (italian || portuguese ? 'sì' : spanish ? 'sí' : 'yes') : 'no'));
+   return json({reply:(italian ? 'Criteri aggiornati: ' : spanish ? 'Criterios actualizados: ' : portuguese ? 'Critérios atualizados: ' : 'Updated criteria: ') + fields.join('. ') + '.'});
+  }
   if (!prior.length) return json({reply: italian
    ? 'Non ho i messaggi precedenti in questa pagina. Puoi indicarmi di nuovo città, budget e preferenze?'
    : spanish ? 'No tengo los mensajes anteriores en esta página. ¿Puedes indicarme de nuevo la ciudad, el presupuesto y tus preferencias?'
