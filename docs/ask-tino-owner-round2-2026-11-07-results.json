@@ -1,0 +1,302 @@
+{
+  "date": "2026-11-07",
+  "implementation_commit": "28572b4cd83c9fa8f8db303b47a6c90071856bbb",
+  "synthetic_only": true,
+  "before": [
+    {
+      "number": 1,
+      "question": "Busco un condominio en Sarasota por un máximo de $350,000, con dos habitaciones y que permita mascotas.",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Sarasota. Presupuesto: $350,000. Habitaciones: 2.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Sarasota",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 2,
+      "question": "Ahora prefiero Venice y puedo subir hasta $400,000. Mantén las demás preferencias.",
+      "response": {
+        "reply": "Hola, entiendo que ahora prefieres Venice en lugar de Sarasota, y estás dispuesto a aumentar tu presupuesto a $400,000. Sigues buscando un condominio con 2 habitaciones. ¿Es importante para ti que el condominio permita mascotas, como mencionaste anteriormente?",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 3,
+      "question": "Ya no necesito dos habitaciones; una sería suficiente, pero las mascotas siguen siendo indispensables.",
+      "response": {
+        "reply": "Contenido de Florida Costiera\n\nFlorida Costiera | Buy | Southwest Florida Gulf Coast Real Estate\n\nhttps://floridacostiera.com/buy\n\nSouthwest Florida Gulf Coast Condos for Sale | Florida Costiera\nExplore condos for sale along Southwest Florida's Gulf Coast. Compare coastal communities, condominium ownership costs and available properties.\nhttps://floridacostiera.com/florida-gulf-coast-condos-for-sale\n\nSarasota FL Homes for Sale & Real Estate | Florida Costiera\nExplore Sarasota FL homes for sale, condos, waterfront properties, downtown neighborhoods and coastal living with Sabatino Campilii, REALTOR®.\nhttps://floridacostiera.com/sarasota\n\nPara orientación inmobiliaria personalizada: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 4,
+      "question": "Resume mis requisitos actuales, sin añadir nada que yo no haya dicho.",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Venice. Presupuesto: $350,000. Habitaciones: 2.",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 5,
+      "question": "Un condominio cuesta $300,000 y tiene una cuota de asociación de $900 mensuales. ¿Qué otros gastos debería revisar antes de decidir?",
+      "response": {
+        "reply": "Para considerar un condominio en Venice, Florida, con un presupuesto de $350,000 y necesidad de 2 habitaciones, aunque ahora consideras que 1 habitación podría ser suficiente, y permitiendo mascotas, deberías revisar otros gastos como impuestos de propiedad, seguro, mantenimiento y servicios públicos. ¿Cuál es el tamaño aproximado del condominio que estás considerando?",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 6,
+      "question": "El vendedor dice que el edificio pasó todas las inspecciones. ¿Qué documentos debería pedir para comprobarlo?",
+      "response": {
+        "reply": "Para verificar que el edificio pasó todas las inspecciones, deberías pedir documentos como los informes de inspección y los certificados de cumplimiento con las normas de seguridad y construcción. \n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 7,
+      "question": "Quiero una casa fuera de zona de inundación para no tener que pagar seguro. ¿Eso me garantiza que no lo necesitaré?",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Venice. Presupuesto: $350,000. Habitaciones: 2.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 8,
+      "question": "Estoy comprando desde Italia y no puedo viajar. ¿Qué pasos puedo organizar a distancia y cuáles necesitan confirmación profesional?",
+      "response": {
+        "reply": "Criterios actuales: Ciudad: Venice. Presupuesto: $350,000. Habitaciones: 2.\n\nNo puedo reservar ni confirmar una visita. Envía a Sabatino la fecha, la hora y la zona horaria que prefieres mediante el formulario. Él podrá confirmar disponibilidad y coordinar una visita virtual.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 9,
+      "question": "El anuncio dice que se puede alquilar por Airbnb, pero el administrador del condominio dice que no. ¿Qué debería hacer antes de presentar una oferta?",
+      "response": {
+        "reply": "Para resolver la discrepancia entre el anuncio y la afirmación del administrador del condominio, es importante verificar las reglas de la asociación de propietarios (HOA) y los estatutos de la comunidad. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre esta propiedad.\n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, apartamento, casa, etc.)?",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 10,
+      "question": "¿Puedes confirmar que ya le enviaste a Sabatino mis preferencias y que mañana me llamará?",
+      "response": {
+        "reply": "Contacta a Sabatino Campilii, Realtor® de LoKation® Real Estate.\nTeléfono: (941) 270-4877\nCorreo: sabatino@floridacostiera.com\nFormulario: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Venice",
+          "budget": "$350,000",
+          "bedrooms": 2
+        },
+        "language": "es"
+      }
+    }
+  ],
+  "after": {
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "Busco un condominio en Sarasota por un máximo de $350,000, con dos habitaciones y que permita mascotas.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ciudad: Sarasota. Presupuesto: $350,000. Habitaciones: 2.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Sarasota",
+            "budget": "$350,000",
+            "bedrooms": 2,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "Ahora prefiero Venice y puedo subir hasta $400,000. Mantén las demás preferencias.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ciudad: Venice. Presupuesto: $400,000. Habitaciones: 2.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 2,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "Ya no necesito dos habitaciones; una sería suficiente, pero las mascotas siguen siendo indispensables.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ciudad: Venice. Presupuesto: $400,000. Habitaciones: 1.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "Resume mis requisitos actuales, sin añadir nada que yo no haya dicho.",
+        "response": {
+          "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ciudad: Venice. Presupuesto: $400,000. Habitaciones: 1.",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "Un condominio cuesta $300,000 y tiene una cuota de asociación de $900 mensuales. ¿Qué otros gastos debería revisar antes de decidir?",
+        "response": {
+          "reply": "Además de la cuota mensual que indicas, revisa impuestos, seguro de la unidad, qué cubre el seguro del edificio, servicios, mantenimiento y posibles cuotas extraordinarias. Pide el presupuesto de la asociación, estados financieros, reservas y estudios aplicables; comprueba qué incluye la cuota y si hay aumentos aprobados o reparaciones pendientes. Añade financiación y gastos de cierre si corresponden. El precio anunciado y la cuota mensual no son el costo total.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "El vendedor dice que el edificio pasó todas las inspecciones. ¿Qué documentos debería pedir para comprobarlo?",
+        "response": {
+          "reply": "Pide los informes completos, con fecha, alcance y profesional responsable; no basta con “pasó las inspecciones”. Para un condominio, solicita el milestone inspection y el estudio de reservas estructurales (SIRS), cuando correspondan, además de informes de ingeniería, reparaciones y constancias de cierre de observaciones o permisos. Revisa las actas y cuotas extraordinarias relacionadas. Confirma documentos y pendientes con la asociación y la autoridad local, y encarga una inspección independiente de la unidad. Un informe favorable no garantiza que no existan otros defectos.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "condo",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "Quiero una casa fuera de zona de inundación para no tener que pagar seguro. ¿Eso me garantiza que no lo necesitaré?",
+        "response": {
+          "reply": "No. Estar fuera de una zona de alto riesgo no significa riesgo cero ni garantiza que no necesites seguro de inundación. El prestamista puede exigirlo incluso fuera de esa zona. Revisa el mapa FEMA para la dirección exacta, la determinación del prestamista y cotizaciones con un profesional de seguros. Distingue seguro de vivienda de seguro de inundación: la póliza habitual normalmente no cubre inundaciones. No puedo confirmar la zona ni los requisitos de una propiedad sin esa revisión.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "house",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Estoy comprando desde Italia y no puedo viajar. ¿Qué pasos puedo organizar a distancia y cuáles necesitan confirmación profesional?",
+        "response": {
+          "reply": "Puedes coordinar búsqueda, visitas por video, revisión de documentos, inspecciones y reuniones a distancia con los profesionales correspondientes. Antes de comprometerte, confirma con la compañía de título y el prestamista qué firmas electrónicas, notarización remota o poder aceptan; depende de los documentos y participantes. Revisa identidad, entrega segura de documentos, financiación y calendario. Confirma instrucciones de transferencia por un teléfono verificado. Comprar desde el extranjero no permite asumir tu residencia fiscal ni que todos los pasos puedan hacerse remotamente. Sabatino puede ayudarte a coordinarlo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "house",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "El anuncio dice que se puede alquilar por Airbnb, pero el administrador del condominio dice que no. ¿Qué debería hacer antes de presentar una oferta?",
+        "response": {
+          "reply": "No des por válida la posibilidad de Airbnb solo porque aparece en el anuncio. Pide la declaración, reglamentos y enmiendas vigentes, y confirmación escrita de la asociación para esa unidad y el alquiler previsto. Comprueba por separado las reglas locales y aclara la contradicción antes de comprometerte. Si alquilar es esencial para tu compra, pide a Sabatino y al profesional jurídico que corresponda revisar cómo proteger ese requisito en la oferta; no supongas que una cláusula o el anuncio te protegen automáticamente.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "house",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "¿Puedes confirmar que ya le enviaste a Sabatino mis preferencias y que mañana me llamará?",
+        "response": {
+          "reply": "No: este chat no ha enviado tus preferencias a Sabatino ni ha confirmado una llamada. Para solicitarla, abre el formulario de contacto, indica tu horario y envía el correo preparado desde tu aplicación. La llamada solo queda confirmada cuando Sabatino la acuerde contigo.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Venice",
+            "budget": "$400,000",
+            "bedrooms": 1,
+            "propertyType": "house",
+            "pets": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  }
+}

@@ -258,3 +258,11 @@ Autorización del usuario: hacer yo las preguntas al chat, detectar fallos y sol
 - Búsqueda de contenido usa límites de palabra. “necesito” ya no activa “sito”. Preguntas sustantivas no se sustituyen por resumen/MLS.
 - Nueva suite scripts/check-ask-tino-owner-round2.mjs: 10 casos locales. Más 60 generales, las 10 anteriores, privacidad y auditoría estructural pasan.
 - Cliente/core/cargadores/referencias HTML versionados round2 para preservar nuevos campos entre envíos. La comprobación pública y visual se registra tras el despliegue.
+
+### Resultado publicado de la segunda ronda
+
+- Implementación 60a716a44969e0a531e42acea81174c700ef8bd0; generalización de cuota/país/fecha 28572b4cd83c9fa8f8db303b47a6c90071856bbb.
+- Las diez nuevas exactas se repitieron en producción: 10/10 comprobaciones y revisión de las respuestas completas. Repetición final tras el último ajuste: 10/10.
+- En navegador real, 1–4 conservan condominio, mascotas, Venice, $400,000 y una habitación, sin añadir piscina.
+- Cloudflare Pages, rules y structural-audit: success. Local: 60 generales, diez anteriores, diez nuevas, privacidad y estructura aprobados.
+- Informe docs/ask-tino-owner-round2-2026-11-07.md y JSON antes/después asociado. No equivale a certificar todas las variantes ni propiedades específicas.
