@@ -24,7 +24,7 @@ export async function onRequest({ request }) {
   const prior = Array.isArray(body.history) ? body.history.slice(-8)
    .filter(item => item && item.role === 'user' && typeof item.content === 'string')
    .map(item => item.content.trim().slice(0,600))
-   .filter(Boolean) : [];
+   .filter(text => text && (!/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text) || /\$\s*\d/.test(text))) : [];
   const italian = /\b(ricordi|ricorda|mio|tuo)\b/i.test(message);
   const spanish = /\b(recuerdas|recuerda|presupuesto)\b/i.test(message);
   const portuguese = /\b(lembra)\b/i.test(message);

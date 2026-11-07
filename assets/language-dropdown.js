@@ -865,7 +865,10 @@
   if (!message || busy) return;
   busy = true;
   var messages = document.getElementById('tinoMessages');
-  history = Array.from(messages.querySelectorAll('.tino-bubble')).filter(function(item){return item.style.background;}).slice(-8).map(function(item){return {role:'user',content:(item.dataset.tinoOriginal || item.textContent).slice(0,600)};});
+  var visitorMessages = Array.from(messages.querySelectorAll('.tino-bubble')).filter(function(item){return item.style.background;}).map(function(item){return {role:'user',content:(item.dataset.tinoOriginal || item.textContent).slice(0,600)};});
+  var factual = visitorMessages.map(function(item,index){return /\$\s*\d|\b(?:budget|presupuesto|orçamento)\s*[:=]?\s*\d|(?:con|sin|senza|with|without|com|sem)\s+(?:una?\s+)?(?:piscina|pool)/i.test(item.content) ? index : -1;}).filter(function(index){return index >= 0;}).slice(-3);
+  var recent = visitorMessages.map(function(item,index){return index;}).slice(-5);
+  history = Array.from(new Set(factual.concat(recent))).sort(function(a,b){return a-b;}).map(function(index){return visitorMessages[index];});
   var bubble = document.createElement('div');
   bubble.className = 'tino-bubble'; bubble.textContent = message; bubble.dataset.tinoOriginal = message;
   bubble.style.background = '#e8f3f0'; messages.appendChild(bubble);
