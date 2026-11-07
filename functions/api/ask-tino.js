@@ -69,17 +69,38 @@ export async function onRequest({ request }) {
    : 'A nonresident foreign buyer may generally purchase in Florida, subject to state and federal restrictions, including Florida Chapter 692 Part III. Consult a Florida real estate attorney to confirm eligibility. Typical documents include a passport and proof and source of funds; financing requires additional financial documents. An ITIN or US bank account is not universally required. For a home priced at ' + property + ', closing expenses can include title, recording, settlement, insurance, prepaid taxes and, if financed, lender and appraisal fees. The total depends on the contract. Sabatino can assist with property searches, remote tours and a detailed cost estimate: (941) 270-4877.';
   return json({ reply });
  }
- // Seller net proceeds: distinguish sale from purchase.
+ // Seller questions: answer the question first; never invent selling-cost percentages.
  if (/\b(vender|vendo|venta|selling|sell|seller|vendere|vendita)\b/i.test(message) && /hipoteca|mortgage|mutuo|cierre|closing|neto|net proceeds/i.test(message) && !/\b(i'm buying|i am buying|buying|comprar|compro|acquistando|acquistare)\b/i.test(message)) {
-  const numbers = [...message.matchAll(/\$\s*([\d,]+(?:\.\d{1,2})?)/g)].map(m => Number(m[1].replace(/,/g, '')));
-  const price = numbers[0], debt = numbers[1];
-  const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
-  let reply = 'Para calcular el neto de una venta, se resta del precio el saldo hipotecario definitivo, las comisiones negociadas, los gastos de cierre y los ajustes aplicables.';
-  if (price > 0 && debt >= 0 && price > debt) {
-   reply = 'Precio de venta: ' + fmt(price) + '. Hipoteca pendiente: ' + fmt(debt) + '. Antes de comisiones y gastos: ' + fmt(price - debt) + '. ' +
-    'Ejemplo orientativo, suponiendo gastos totales del 6% al 9% del precio: entre ' + fmt(price - debt - price * 0.09) + ' y ' + fmt(price - debt - price * 0.06) + '. Estos porcentajes no son tarifas fijas; las comisiones son negociables.';
+  const italian = /\b(vendere|vendita|mutuo|posso|quanto)\b/i.test(message);
+  const spanish = !italian && /\b(vender|vendo|venta|hipoteca|neto)\b/i.test(message);
+  const priceMatch = message.match(/(?:vendo\s+por|vender\s+por|venta\s*(?:de|por|:)|sell\s+for|selling\s+for|sale\s+price\s*:?|vendo\s+a|vendita\s*(?:a|:))\s*\$?\s*([\d,]+(?:\.\d{1,2})?)/i);
+  const debtMatch = message.match(/(?:debo|deuda\s*(?:de|:)?|hipoteca\s*(?:pendiente|de|:)|owe|mortgage\s*(?:balance|of|:)|mutuo\s*(?:residuo|di|:))\s*\$?\s*([\d,]+(?:\.\d{1,2})?)/i);
+  const price = priceMatch ? Number(priceMatch[1].replace(/,/g, '')) : null;
+  const debt = debtMatch ? Number(debtMatch[1].replace(/,/g, '')) : null;
+  const fmt = n => '$' + n.toLocaleString('en-US', {maximumFractionDigits:2});
+  let reply;
+  if (price > 0 && debt !== null && debt >= 0) {
+   const balance = price - debt;
+   reply = spanish
+    ? 'Precio de venta: ' + fmt(price) + '. Hipoteca pendiente: ' + fmt(debt) + '. Antes de comisiones y gastos: ' + fmt(balance) + '.'
+    : italian
+    ? 'Prezzo di vendita: ' + fmt(price) + '. Mutuo residuo: ' + fmt(debt) + '. Prima delle commissioni e delle spese: ' + fmt(balance) + '.'
+    : 'Sale price: ' + fmt(price) + '. Mortgage balance: ' + fmt(debt) + '. Before commissions and expenses: ' + fmt(balance) + '.';
+   if (balance < 0) reply += spanish
+    ? ' El precio no cubriría la hipoteca; habría que resolver la diferencia y los gastos para completar la venta.'
+    : italian ? ' Il prezzo non coprirebbe il mutuo: occorre risolvere la differenza e le spese prima della vendita.'
+    : 'The price would not cover the mortgage; the shortfall and selling costs would need to be resolved to complete the sale.';
+   else reply += spanish
+    ? ' El neto final será menor al descontar los gastos y ajustes reales del cierre.'
+    : italian ? ' Il ricavo netto finale sarà inferiore dopo le spese e i conguagli effettivi.'
+    : 'Final net proceeds will be lower after actual closing costs and adjustments.';
+  } else {
+   reply = spanish
+    ? 'Sí, normalmente puedes vender una casa aunque tenga hipoteca. La deuda se liquida con los fondos de la venta al cierre; si no alcanzan, hay que resolver la diferencia con el prestamista. Para estimar lo que te quedaría: precio de venta menos saldo de cancelación de la hipoteca, comisiones negociadas, gastos de cierre y ajustes. ¿Cuál sería el precio de venta y cuánto debes aproximadamente?'
+    : italian
+    ? 'Sì, normalmente puoi vendere una casa con un mutuo. Il debito viene estinto al rogito con il ricavato; se non basta, occorre risolvere la differenza con il finanziatore. Per stimare il netto: prezzo meno saldo di estinzione, commissioni concordate, spese e conguagli. Quale sarebbe il prezzo e quanto resta da pagare?'
+    : 'Yes, you can generally sell a home with a mortgage. The loan is paid off from the sale proceeds at closing; if those are insufficient, the shortfall must be resolved with the lender. To estimate your net: sale price minus the mortgage payoff, negotiated commissions, closing costs and adjustments. What sale price and approximate mortgage balance should we use?';
   }
-  reply += ' El resultado real depende del contrato, impuestos prorrateados, gravámenes, costos de título y pago final de la hipoteca. Prepara escritura, saldo de hipoteca, impuestos, seguro, reparaciones y documentos de HOA si corresponde. Solicita un Seller Net Sheet. Sabatino Campilii puede ayudarte con la valoración y venta en Rotonda West: (941) 270-4877.';
   return json({ reply });
  }
  // Answer common closing-cost questions with useful general guidance first.
@@ -106,7 +127,7 @@ export async function onRequest({ request }) {
   return json({ reply: details });
  }
  // Keep upstream payload short: the AI Worker rejects oversized messages with HTTP 400.
- const reference = 'You are Ask Tino, Florida Costiera assistant. Reply only in the question language; no mixed-language greetings. Never invent MLS listings, prices or addresses. For property searches restate criteria, explain that live listings require verification, and direct visitors to floridacostiera.com/buy.html and floridacostiera.com/contact.html for showings. For financed purchases, calculate down payment and loan separately; distinguish buyer and seller expenses and explain taxes may reset after sale. Realtor Sabatino Campilii: (941) 270-4877. Question: ';
+ const reference = 'You are Ask Tino, Florida Costiera assistant. Reply only in the question language; no mixed-language greetings. Answer every part of the question directly and briefly first. Use supplied figures; ask for missing inputs. Do not invent expense percentages or add unsolicited estimates. Do not repeat document checklists or contact details unless requested or needed. Never guarantee a sale price or deadline. Never invent MLS listings, prices or addresses. For property searches restate criteria, explain that live listings require verification, and direct visitors to floridacostiera.com/buy.html and floridacostiera.com/contact.html for showings. For financed purchases, calculate down payment and loan separately; distinguish buyer and seller expenses and explain taxes may reset after sale. Realtor Sabatino Campilii: (941) 270-4877. Question: ';
  const upstreamMessage = reference + message;
  const controller = new AbortController();
  const timer = setTimeout(() => controller.abort(), 25000);
