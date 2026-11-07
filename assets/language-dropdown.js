@@ -757,7 +757,7 @@
 
 /* First-visit privacy information. Dismissal acknowledges the notice, not tracking consent. */
 (function(){
- var key='fc_privacy_notice_20261020';
+ var key='fc_privacy_notice_20261107';
  function init(){
   if(document.getElementById('fc-privacy-notice'))return;
   var style=document.createElement('style');
@@ -766,7 +766,7 @@
   var box=document.createElement('aside');box.id='fc-privacy-notice';box.setAttribute('aria-label','Privacy and cookies');box.setAttribute('role','region');
   var copy=document.createElement('div'),title=document.createElement('strong'),p=document.createElement('p'),link=document.createElement('a'),dismiss=document.createElement('button');
   title.textContent='Your privacy matters';
-  p.textContent='This website uses browser storage for language preferences and timeline tools. External services, including translation and appointment scheduling, may process technical information under their own privacy policies.';
+  p.textContent='This website uses browser storage for language preferences and timeline tools. Ask Tino processes submitted messages and may send them to an external AI service. Translation and appointment services may also process information under their own policies.';
   link.href='privacy.html';link.textContent='Privacy Policy & your choices';
   dismiss.type='button';dismiss.textContent='Got it';
   copy.append(title,p,link);box.append(copy,dismiss);document.body.appendChild(box);
@@ -782,4 +782,5 @@
 
 
 /* Ask Tino uses one dedicated module; no conversation rules live here. */
-(function(){if(document.getElementById('fc-ask-tino-clean'))return;var script=document.createElement('script');script.id='fc-ask-tino-clean';script.type='module';script.src='/assets/ask-tino-client.js?v=20261107-clean1';document.head.appendChild(script);})();
+(function(){if(document.getElementById('fc-ask-tino-clean'))return;var script=document.createElement('script');script.id='fc-ask-tino-clean';script.type='module';script.src='/assets/ask-tino-client.js?v=20261107-privacy2';document.head.appendChild(script);})();
+

@@ -2,6 +2,20 @@ import {CONTACT,cleanCriteria,updateCriteria,language,copy} from './ask-tino-cor
 
 // Exactly one sender; page-local structured state, not a shrinking list of facts.
 const state={criteria:{},history:[],lang:'en',busy:false};
+const privacyCopy={
+ en:['Messages are processed by this website and may be sent to an external AI service. Do not share identity documents, passwords or bank details. ','Privacy Policy'],
+ es:['El sitio procesa tus mensajes y puede enviarlos a un servicio externo de IA. No compartas documentos de identidad, contraseñas ni datos bancarios. ','Política de privacidad'],
+ it:['Il sito elabora i messaggi e può inviarli a un servizio AI esterno. Non condividere documenti di identità, password o dati bancari. ','Privacy'],
+ pt:['O site processa suas mensagens e pode enviá-las a um serviço externo de IA. Não compartilhe documentos de identidade, senhas ou dados bancários. ','Política de privacidade']
+};
+function privacyNotice(lang='en'){
+ const form=document.querySelector?.('form.tino-input');if(!form)return;
+ let notice=form.parentNode.querySelector('.tino-data-notice');
+ if(!notice){notice=document.createElement('p');notice.className='tino-data-notice notranslate';notice.setAttribute('translate','no');notice.style.cssText='margin:8px 12px;font-size:12px;line-height:1.5;color:#435b6c';form.before(notice);}
+ const text=privacyCopy[lang]||privacyCopy.en,link=document.createElement('a');link.href='/privacy#ask-tino-privacy';link.textContent=text[1];link.style.cssText='color:#153e59;text-decoration:underline';
+ notice.replaceChildren(document.createTextNode(text[0]),link);
+}
+privacyNotice(document.documentElement?.lang?.slice(0,2)||'en');
 const labels={en:['Explore buying options','Contact Sabatino','Selling information','Visit Florida Costiera','Call','Send email','Open contact form'],es:['Ver opciones de compra','Contactar a Sabatino','Información para vender','Visitar Florida Costiera','Llamar','Enviar correo','Abrir formulario'],it:['Esplora le opzioni di acquisto','Contatta Sabatino','Informazioni per vendere','Visita Florida Costiera','Chiama','Invia email','Apri modulo'],pt:['Ver opções de compra','Contatar Sabatino','Informações para vender','Visitar Florida Costiera','Ligar','Enviar email','Abrir formulário']};
 function renderReply(bubble,text,lang){
  text=text.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,'$2');
@@ -37,7 +51,7 @@ async function submit(event){
  const input=document.getElementById('tinoText'),messages=document.getElementById('tinoMessages');
  if(!input||!messages||state.busy)return;
  const message=input.value.trim();if(!message)return;
- state.busy=true;state.lang=language(message,state.lang);state.criteria=updateCriteria(state.criteria,message);
+ state.busy=true;state.lang=language(message,state.lang);privacyNotice(state.lang);state.criteria=updateCriteria(state.criteria,message);
  const history=state.history.slice(-4);state.history.push({role:'user',content:message.slice(0,600)});state.history=state.history.slice(-4);
  const user=document.createElement('div');user.className='tino-bubble';user.textContent=message;user.style.background='#e8f3f0';messages.append(user);input.value='';
  const reply=document.createElement('div');reply.className='tino-bubble';reply.textContent='…';messages.append(reply);reply.scrollIntoView({behavior:'smooth',block:'end'});
@@ -53,3 +67,4 @@ async function submit(event){
 document.addEventListener('submit',event=>{if(event.target.matches('form.tino-input')){event.stopImmediatePropagation();submit(event);}},true);
 window.sendTino=submit;
 window.fcAskTino={submit};
+

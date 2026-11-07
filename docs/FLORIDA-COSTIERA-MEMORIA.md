@@ -172,3 +172,14 @@ Instrucción útil para próximos chats: “Continúa Florida Costiera leyendo p
 - Check Cloudflare Pages del mismo commit: completed / success, deployment 8b1b2709-9a31-4c0b-8f9b-2371d0d1dfec.
 - Comprobación HTTP real en https://floridacostiera.com/api/ask-tino: la pregunta «¿Qué pasa con mis datos personales?» devolvió la nueva respuesta en español con enlaces a /privacy y /contact#tell-us-your-plans.
 - Esta comprobación confirma esa ruta publicada, no una auditoría completa del Worker ni del contenido de Privacy.
+
+## 11. Privacy y avisos de entrada — 2026-11-07
+
+- Revisados Privacy, formulario compartido, cliente/API del chat y aviso general.
+- Privacy detalla mensaje, criterios, idioma e historial reciente enviados al endpoint y eventual servicio AI, memoria de página y límites de conservación/entrenamiento no verificados.
+- Aviso de chat visible antes del primer envío, EN/ES/IT/PT, enlace /privacy#ask-tino-privacy, sin duplicados.
+- Formulario: enlace Privacy, aviso de datos sensibles, estado de correo preparado y no enviado, alternativa de contacto por correo; se retiró “consulta enviada” del cuerpo preparado.
+- Aviso general actualizado para mencionar Ask Tino y servicio externo; reconocimiento renovado, no consentimiento publicitario.
+- Pruebas locales aprobadas: compra/inversión/venta, mailto, idempotencia, aviso previo, cuatro idiomas y suites Ask Tino. Workflow ampliado.
+- Pendientes: recepción real del correo, configuración interna del Worker/proveedor y sus registros/entrenamiento. No se encontró repositorio separado “ask” del propietario en la búsqueda realizada.
+- Referencia editorial FTC: https://www.ftc.gov/business-guidance/privacy-security. Sin certificación jurídica.

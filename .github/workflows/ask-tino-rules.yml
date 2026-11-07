@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths:
       - 'assets/ask-tino-*.js'
+      - 'assets/inquiry-form.js'
+      - 'assets/language-dropdown.js'
+      - 'privacy.html'
+      - 'scripts/check-inquiry.mjs'
+      - 'scripts/check-privacy-notices.mjs'
       - 'functions/api/ask-tino*.js'
       - 'scripts/check-ask-tino*.mjs'
       - '.github/workflows/ask-tino-rules.yml'
@@ -22,3 +27,5 @@ jobs:
       - run: node scripts/check-ask-tino-policy.mjs
       - run: node scripts/check-ask-tino-research.mjs
       - run: node scripts/check-ask-tino-consolidated.mjs
+      - run: node scripts/check-inquiry.mjs
+      - run: node scripts/check-privacy-notices.mjs
