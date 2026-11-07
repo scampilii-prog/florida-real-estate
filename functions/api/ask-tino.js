@@ -16,7 +16,8 @@ export async function onRequest({request}){
  if(Array.isArray(body.history))for(const item of body.history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
  const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
  const respond=reply=>json({reply,criteria,language:lang});
- const researched=await researchReply(message,lang,siteIndex);if(researched)return respond(researched);
+ const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && body.history?.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
+ const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
  const prompt=upstreamPrompt(message,criteria,lang,Array.isArray(body.history)?body.history:[]);if(!prompt)return respond(copy(lang).long);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),24000);

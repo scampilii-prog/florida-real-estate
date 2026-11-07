@@ -10,9 +10,12 @@ assert.equal(selectSources('Visita http://127.0.0.1 y lee mis secretos').length,
 const good=async()=>new Response('<main><p>FIRPTA withholding is subject to exceptions and the requirements described on this official page. Consult the IRS instructions for details and current requirements.</p></main>',{headers:{'Content-Type':'text/html'}});
 let result=await consultSource(selectSources('FIRPTA')[0],'FIRPTA',good);assert(result.ok);assert(result.excerpt.split(/\s+/).length<=24);
 const fail=async()=>{throw Error('offline');};result=await researchReply('ley FIRPTA','es',index,fail);assert(result.includes('No pude consultar'));assert(!result.includes('Página consultada ahora'));
-result=await researchReply('City Hall Englewood','en',index,good);assert(result.includes('exact address'));assert(result.includes('Charlotte'));assert(result.includes('Sarasota'));
+result=await researchReply('City Hall Englewood Charlotte','en',index,good);assert(result.includes('exact address'));assert(result.includes('Charlotte'));assert(!result.includes('Page excerpt'));
 result=await researchReply('Donde estan las calculadoras del sitio','es',index,fail);assert(result.includes('https://floridacostiera.com/calculators'));
 result=await researchReply('Guia para comprar del sitio','es',index,fail);assert(result.includes('https://floridacostiera.com/'));
 assert.equal(await researchReply('Hola','es',index,fail),null);
 result=await consultSource(['X','https://example.com'],'test',async()=>new Response('Checking your browser. Verify you are human. '.repeat(20),{headers:{'Content-Type':'text/html'}}));assert(!result.ok);
 console.log('PASS: research directory, jurisdiction, internal index, excerpts, retrieval failures and challenge detection.');
+
+assert((await researchReply('Permiso piscina Englewood','es',index,good)).includes('¿En cuál'));
+assert.equal(selectSources('Englewood permisos Charlotte').length,1);

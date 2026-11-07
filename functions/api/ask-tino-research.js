@@ -1,6 +1,6 @@
 // Bounded retrieval: public curated sources only. No arbitrary URLs or search-provider claims.
 const official={
- charlotte:['Charlotte County — Community Development','https://www.charlottecountyfl.gov/departments/community-development/'],
+ charlotte:['Charlotte County — Community Development','https://charlottecountyfl.gov/departments/community-development/building-construction/permits/'],
  sarasota:['Sarasota County','https://www.scgov.net/'],lee:['Lee County — Community Development','https://www.leefl.gov/dcd'],
  venice:['City of Venice','https://www.venicegov.com/'],northport:['City of North Port','https://www.northportfl.gov/'],
  punta:['City of Punta Gorda','https://www.cityofpuntagordafl.com/'],citysarasota:['City of Sarasota','https://www.sarasotafl.gov/'],
@@ -25,7 +25,7 @@ export function selectSources(q){
  if(/property tax|impuest|impost|tribut/i.test(q))add('tax');
  if(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea|govern/i.test(q)){
  if(/rotonda|cape haze|port charlotte|placida/i.test(q))add('charlotte');
- if(/englewood/i.test(q))add('charlotte','sarasota');
+ if(/englewood/i.test(q)){if(/charlotte/i.test(q))add('charlotte');else if(/sarasota/i.test(q))add('sarasota');else add('charlotte','sarasota');}
  if(/boca grande|gasparilla/i.test(q))add('lee','charlotte');
  if(/wellen park/i.test(q))add('northport','venice','sarasota');
  else if(/venice/i.test(q))add('venice','sarasota');
@@ -57,8 +57,16 @@ export async function consultSource(source,q,fetcher=fetch){
  }catch{return {name,url,ok:false};}finally{clearTimeout(timer);}
 }
 export async function researchReply(message,lang,index,fetcher=fetch){
- const t=texts[lang]||texts.en;const sources=selectSources(message);
- if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)+(r.excerpt?'\n'+t.excerpt+': «'+r.excerpt+'…»':'')).join('\n\n')+'\n\n'+t.legal;}
+ const t=texts[lang]||texts.en;
+ // Ask only the jurisdiction detail that is actually missing. Englewood spans two counties.
+ if(/englewood/i.test(message)&&/permit|permis|licenc|city hall|ayuntamiento|municip|piscina|pool|zon/i.test(message)&&!/charlotte|sarasota/i.test(message))return {
+ es:'Englewood abarca partes de Charlotte y Sarasota County. ¿En cuál de los dos condados está la propiedad? Si no lo sabes, indícame su dirección para orientarte sobre dónde confirmar la jurisdicción.',
+ en:'Englewood spans parts of Charlotte and Sarasota counties. Which county is the property in? If you do not know, share its address so I can point you to jurisdiction verification.',
+ it:'Englewood comprende parti delle contee di Charlotte e Sarasota. In quale contea si trova l’immobile? Se non lo sai, indica l’indirizzo per orientarti sulla verifica della giurisdizione.',
+ pt:'Englewood abrange partes dos condados de Charlotte e Sarasota. Em qual condado fica o imóvel? Se não souber, informe o endereço para orientar a confirmação da jurisdição.'
+ }[lang]||texts.en.jur;
+ const sources=selectSources(message);
+ if(sources.length){const results=await Promise.all(sources.map(s=>consultSource(s,message,fetcher)));return t.intro+'\n'+t.scope+'\n\n'+(/city hall|ayuntamiento|municip|comune|prefeitura|permit|permis|zon|county|condado|contea/i.test(message)?t.jur+'\n\n':'')+results.map(r=>r.name+'\n'+r.url+'\n'+(r.ok?t.live+' — '+r.date:t.fail)).join('\n\n')+'\n\n'+t.legal;}
  if(!/sitio|site|sito|website|gu[ií]a|guide|calculator|calculadora|calcol|question|pregunta|domand|comunidade|community|communities|comunidad|promocion|publicit/i.test(message))return null;
  const terms=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').match(/[a-z]{3,}/g)||[];
  const synonyms={calculadora:'calculator',calculadoras:'calculator',calcolatrice:'calculator',guia:'guide',guias:'guide',preguntas:'questions',domande:'questions',venta:'sell',vender:'sell',comprar:'buy',compra:'buy',hipoteca:'mortgage',mutuo:'mortgage',inversion:'investment',investimento:'investment',comunidades:'communities',contacto:'contact'};
