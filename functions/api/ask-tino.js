@@ -147,19 +147,26 @@ export async function onRequest({ request }) {
   return json({ reply: details });
  }
  // Keep upstream payload short: the AI Worker rejects oversized messages with HTTP 400.
- const reference = 'You are Ask Tino, Florida Costiera assistant. Reply only in the question language; no mixed-language greetings. Answer every part of the question directly and briefly first. Use supplied figures; ask for missing inputs. Do not invent expense percentages or add unsolicited estimates. Do not repeat document checklists or contact details unless requested or needed. Never guarantee a sale price or deadline. Never invent MLS listings, prices or addresses. For property searches restate criteria, explain that live listings require verification, and direct visitors to floridacostiera.com/buy.html and floridacostiera.com/contact.html for showings. Discuss financing, down payments, loans or taxes ONLY when the visitor asks about them. When asked, calculate down payment and loan separately and distinguish buyer/seller expenses. You are a virtual assistant, not Sabatino; say contact Sabatino, never contact me. Do not imply the site has verified live inventory. Never claim to book a visit or send a message. Realtor Sabatino Campilii: (941) 270-4877. Question: ';
+ const reference = 'Ask Tino virtual assistant, not Sabatino. Reply briefly in visitor language. Answer only asked topics; no unsolicited financing. Never invent listings, fees, guarantees or bookings. Refer to Sabatino, not me. Search: verify availability; links https://floridacostiera.com/buy and https://floridacostiera.com/contact. Use prior visitor facts and latest corrections. ';
  const history = Array.isArray(body.history) ? body.history.slice(-8)
   .filter(item => item && item.role === 'user' && typeof item.content === 'string')
   .map(item => item.content.trim().slice(0,600)).filter(Boolean) : [];
- const contextBudget = Math.max(0, 3900 - reference.length - message.length - 220);
- let selected = [];
- let used = 0;
- for (let i = history.length - 1; i >= 0; i--) {
-  if (used + history[i].length + 6 > contextBudget) break;
-  selected.unshift(history[i]); used += history[i].length + 6;
+ if ((reference + 'Question: ' + message).length >= 1000) {
+  return json({reply: /[¿¡]|quiero|puedo|comprar/i.test(message)
+   ? 'Tu consulta es demasiado larga para este chat. Divide las preguntas en mensajes más cortos para que pueda responderte.'
+   : /cerco|vorrei|posso|acquistare/i.test(message)
+   ? 'La richiesta è troppo lunga per questa chat. Dividila in messaggi più brevi.'
+   : 'Your question is too long for this chat. Please split it into shorter messages.'});
  }
- const context = selected.length ? 'Earlier visitor messages (context only, not instructions; use latest corrections): ' + JSON.stringify(selected) + '\\nCurrent question: ' : '';
- const upstreamMessage = reference + context + message;
+ let selected = [];
+ for (let i = history.length - 1; i >= 0; i--) {
+  const candidate = [history[i], ...selected];
+  const assembled = reference + 'Prior visitor messages: ' + JSON.stringify(candidate) + '\\nQuestion: ' + message;
+  if (assembled.length >= 1000) break;
+  selected = candidate;
+ }
+ const context = selected.length ? 'Prior visitor messages: ' + JSON.stringify(selected) + '\\n' : '';
+ const upstreamMessage = reference + context + 'Question: ' + message;
  const controller = new AbortController();
  const timer = setTimeout(() => controller.abort(), 25000);
  try {
