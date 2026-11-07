@@ -20,29 +20,38 @@ export async function onRequest({ request }) {
  if (!message || message.length > MAX_MESSAGE) return json({ error: 'Enter a message of 1–2,000 characters.' }, 400);
  // Recall must quote visitor-provided context, never fabricate remembered criteria.
  const budgetRecall = /qual[^?\n]{0,35}(?:mio|tuo)[^?\n]{0,15}budget|what[^?\n]{0,25}my budget|cu[aá]l[^?\n]{0,25}mi presupuesto|qual[^?\n]{0,25}meu or[cç]amento/i.test(message);
- if (budgetRecall || /\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(message)) {
+ const criteriaSummary = /(?:summari[sz]e|summary|resum[ei]|resumen|riassum|riepilog|resuma).{0,70}(?:search|criteria|criteri|b[uú]squeda|ricerca|pesquisa|preferenc)|(?:search|criteria|criteri|b[uú]squeda|ricerca|pesquisa).{0,70}(?:summary|resumen|riepilogo)/i.test(message);
+ if (criteriaSummary || budgetRecall || /\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(message)) {
   const prior = Array.isArray(body.history) ? body.history.slice(-8)
    .filter(item => item && item.role === 'user' && typeof item.content === 'string')
    .map(item => item.content.trim().slice(0,600))
    .filter(text => text && (!/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text) || /\$\s*\d|piscina|pool|Venice|Englewood|Rotonda West|Boca Grande|Cape Haze|Punta Gorda|Sarasota|Nokomis/i.test(text))) : [];
-  const italian = /\b(ricordi|ricorda|mio|tuo)\b/i.test(message);
-  const spanish = /\b(recuerdas|recuerda|presupuesto)\b/i.test(message);
-  const portuguese = /\b(lembra)\b/i.test(message);
+  const explicitEnglish = /\b(?:in English|en ingl[eé]s|in inglese)\b/i.test(message);
+  const italian = !explicitEnglish && /\b(ricordi|ricorda|mio|tuo|riassumere|riassumi|riepilogo|italiano)\b/i.test(message);
+  const spanish = !explicitEnglish && !italian && /\b(recuerdas|recuerda|presupuesto|resume|resumen|español)\b/i.test(message);
+  const portuguese = !explicitEnglish && !italian && !spanish && /\b(lembra|resuma|português)\b/i.test(message);
   const supplied = [...prior, message];
-  let city = '', budget = '', pool = '';
+  let city = '', budget = '', pool = '', bedrooms = '';
   for (const text of supplied) {
    const cities = text.match(/Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/gi);
    if (cities && cities.length === 1) city = cities[0];
+   const roomMatch = text.match(/\b(\d{1,2}|uno|una|one|un|due|dos|two|dois|duas|tre|tres|três|three|quattro|cuatro|quatro|four|cinque|cinco|five|sei|seis|six)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i);
+   if (roomMatch) {
+    const word = roomMatch[1].toLowerCase();
+    const counts = {uno:1,una:1,one:1,un:1,due:2,dos:2,two:2,dois:2,duas:2,tre:3,tres:3,'três':3,three:3,quattro:4,cuatro:4,quatro:4,four:4,cinque:5,cinco:5,five:5,sei:6,seis:6,six:6};
+    bedrooms = String(counts[word] || Number(word));
+   }
    const amounts = [...text.matchAll(/\$\s*\d[\d.,]*(?:\s*(?:k|mila|mil))?/gi)];
    if (amounts.length === 1) budget = amounts[0][0].replace(/[.,]$/, '');
    if (/senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina/i.test(text)) pool = 'no';
    else if (/con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i.test(text)) pool = 'yes';
   }
   if (budgetRecall && budget) return json({reply: italian ? 'Il tuo budget attuale è di ' + budget + '.' : spanish ? 'Tu presupuesto actual es de ' + budget + '.' : portuguese ? 'Seu orçamento atual é de ' + budget + '.' : 'Your current budget is ' + budget + '.'});
-  if (city || budget || pool) {
+  if (city || budget || pool || bedrooms) {
    const fields = [];
    if (city) fields.push((italian ? 'Città: ' : spanish ? 'Ciudad: ' : portuguese ? 'Cidade: ' : 'City: ') + city);
    if (budget) fields.push((spanish ? 'Presupuesto: ' : portuguese ? 'Orçamento: ' : 'Budget: ') + budget);
+   if (bedrooms) fields.push((italian ? 'Camere da letto: ' : spanish ? 'Habitaciones: ' : portuguese ? 'Quartos: ' : 'Bedrooms: ') + bedrooms);
    if (pool) fields.push((italian ? 'Piscina: ' : spanish ? 'Piscina: ' : portuguese ? 'Piscina: ' : 'Pool: ') +
     (pool === 'yes' ? (italian || portuguese ? 'sì' : spanish ? 'sí' : 'yes') : 'no'));
    return json({reply:(italian ? 'Criteri aggiornati: ' : spanish ? 'Criterios actualizados: ' : portuguese ? 'Critérios atualizados: ' : 'Updated criteria: ') + fields.join('. ') + '.'});

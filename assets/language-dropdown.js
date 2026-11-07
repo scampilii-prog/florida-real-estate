@@ -870,12 +870,13 @@
    /\$\s*\d|\b(?:budget|presupuesto|orçamento)\s*[:=]?\s*\d/i,
    /Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/i,
    /senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina|con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i
+   , /\b(?:\d{1,2}|one|two|three|four|five|six|uno|una|dos|tres|cuatro|cinco|due|tre|quattro|cinque|dois|duas|três)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i
   ];
   var factual = factPatterns.map(function(pattern){
    for (var i=visitorMessages.length-1;i>=0;i--) if(pattern.test(visitorMessages[i].content)) return i;
    return -1;
   }).filter(function(index){return index>=0;});
-  var recent = visitorMessages.map(function(item,index){return index;}).slice(-5);
+  var recent = visitorMessages.map(function(item,index){return index;}).slice(-4);
   history = Array.from(new Set(factual.concat(recent))).sort(function(a,b){return a-b;}).map(function(index){return visitorMessages[index];});
   var bubble = document.createElement('div');
   bubble.className = 'tino-bubble'; bubble.textContent = message; bubble.dataset.tinoOriginal = message;
