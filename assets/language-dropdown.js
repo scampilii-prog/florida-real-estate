@@ -869,7 +869,7 @@
   var factPatterns = [
    /\$\s*\d|\b(?:budget|presupuesto|orçamento)\s*[:=]?\s*\d/i,
    /Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/i,
-   /(?:con|sin|senza|with|without|com|sem)\s+(?:una?\s+)?(?:piscina|pool)|mantieni.{0,50}piscina/i
+   /senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina|con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i
   ];
   var factual = factPatterns.map(function(pattern){
    for (var i=visitorMessages.length-1;i>=0;i--) if(pattern.test(visitorMessages[i].content)) return i;

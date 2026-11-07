@@ -24,7 +24,7 @@ export async function onRequest({ request }) {
   const prior = Array.isArray(body.history) ? body.history.slice(-8)
    .filter(item => item && item.role === 'user' && typeof item.content === 'string')
    .map(item => item.content.trim().slice(0,600))
-   .filter(text => text && (!/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text) || /\$\s*\d/.test(text))) : [];
+   .filter(text => text && (!/\b(ricordi|ricorda|recuerdas|recuerda|remember|lembra)\b/i.test(text) || /\$\s*\d|piscina|pool|Venice|Englewood|Rotonda West|Boca Grande|Cape Haze|Punta Gorda|Sarasota|Nokomis/i.test(text))) : [];
   const italian = /\b(ricordi|ricorda|mio|tuo)\b/i.test(message);
   const spanish = /\b(recuerdas|recuerda|presupuesto)\b/i.test(message);
   const portuguese = /\b(lembra)\b/i.test(message);
@@ -35,8 +35,8 @@ export async function onRequest({ request }) {
    if (cities && cities.length === 1) city = cities[0];
    const amounts = [...text.matchAll(/\$\s*\d[\d.,]*(?:\s*(?:k|mila|mil))?/gi)];
    if (amounts.length === 1) budget = amounts[0][0].replace(/[.,]$/, '');
-   if (/senza piscina|sin piscina|without (?:a )?pool|sem piscina/i.test(text)) pool = 'no';
-   else if (/con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina/i.test(text)) pool = 'yes';
+   if (/senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina/i.test(text)) pool = 'no';
+   else if (/con (?:una )?piscina|with (?:a )?pool|com piscina|mantieni.{0,50}piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i.test(text)) pool = 'yes';
   }
   if (budgetRecall && budget) return json({reply: italian ? 'Il tuo budget attuale è di ' + budget + '.' : spanish ? 'Tu presupuesto actual es de ' + budget + '.' : portuguese ? 'Seu orçamento atual é de ' + budget + '.' : 'Your current budget is ' + budget + '.'});
   if (city || budget || pool) {
