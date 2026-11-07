@@ -133,18 +133,12 @@ export async function onRequest({ request }) {
   let answer = reply.trim().replace(/\\n/g, '\n').replace(/\*\*/g, '');
   const english = /\b(i'm|i am|looking for|can you|what should|show me|available properties|schedule a showing)\b/i.test(message);
   if (english) answer = answer.replace(/^(?:ciao|buongiorno)[!, .]*/i, '').replace(/\s*(?:grazie|arrivederci)[!. ]*$/i, '').trim();
-  if (english && /\b(listings?|available properties|show me|homes? for sale|schedule a showing)\b/i.test(message)) {
-   const criteria = [];
-   const bedrooms = message.match(/(\d+)\s*[- ]?bedroom/i);
-   const budget = message.match(/(?:under|below|up to|max(?:imum)?)\s*\$?([\d,]+)/i);
-   if (bedrooms) criteria.push(bedrooms[1] + '-bedroom');
-   if (/waterfront/i.test(message)) criteria.push('waterfront');
-   if (/private dock/i.test(message)) criteria.push('private dock preferred');
-   if (budget) criteria.push('budget up to $' + budget[1]);
-   if (/boca grande/i.test(message)) criteria.push('Boca Grande');
-   if (criteria.length) answer += '\n\nYour search criteria: ' + criteria.join(', ') + '.';
-   answer += '\nBuyer resources: https://floridacostiera.com/buy.html . Request verified listings and a showing: https://floridacostiera.com/contact.html#tell-us-your-plans .';
+  // Preserve the AI's natural answer; append useful links only when missing.
+  if (/\b(listings?|available properties|show me|homes? for sale|schedule a showing)\b/i.test(message)) {
+   if (!/floridacostiera\.com\/buy(?:\.html)?/i.test(answer)) answer += '\nBuyer resources: https://floridacostiera.com/buy.html';
+   if (!/floridacostiera\.com\/contact(?:\.html)?/i.test(answer)) answer += '\nRequest verified listings and a showing: https://floridacostiera.com/contact.html#tell-us-your-plans';
   }
+  answer = answer.replace(/(\$[\d,]+),+(?=[\s.;]|$)/g, '$1').replace(/(https?:\/\/[^\s]+)\s+\./g, '$1.');
   return json({ reply: answer });
  } catch {
   return json({ error: controller.signal.aborted ? 'Ask Tino: AI service timed out.' : 'Ask Tino: could not connect to AI service.', code: controller.signal.aborted ? 'UPSTREAM_TIMEOUT' : 'UPSTREAM_CONNECTION' }, controller.signal.aborted ? 504 : 502);
