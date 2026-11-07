@@ -15,36 +15,59 @@ export function sensitiveInput(text){
 export function sensitiveReply(lang='en'){
  return ({en:'Please remove identity, account or password details before sending. Ask Tino does not need them for an initial property question.',es:'Quita los datos de identidad, cuentas o contraseñas antes de enviar. Ask Tino no los necesita para una consulta inmobiliaria inicial.',it:'Rimuovi dati di identità, conti o password prima di inviare. Ask Tino non ne ha bisogno per una prima domanda immobiliare.',pt:'Remova dados de identidade, contas ou senhas antes de enviar. Ask Tino não precisa deles para uma consulta imobiliária inicial.'})[lang]||sensitiveReply('en');
 }
-const CITIES = /Rotonda West|Punta Gorda(?: Isles)?|Boca Grande|Cape Haze|Wellen Park|Englewood|Venice|Sarasota|Nokomis|Casey Key/gi;
+const CITIES = /Rotonda West|Port Charlotte|North Port|Punta Gorda(?: Isles)?|Boca Grande|Gasparilla Island|Cape Haze|Placida|Wellen Park|Englewood|Manasota Key|Venice|Sarasota|Siesta Key|Longboat Key|Nokomis|Casey Key/gi;
 const POOL_NO = /senza piscina|sin piscina|without (?:a )?pool|sem piscina|non (?:voglio|desidero)(?: più)? (?:una |la )?piscina|no (?:quiero|deseo)(?: ya)? (?:una |la )?piscina|(?:don't|do not|no longer) want (?:a |the )?pool|(?:remove|drop) (?:the )?pool|(?:togli|rimuovi|quita|elimina|retira) (?:la )?piscina/i;
-const POOL_YES = /con (?:una )?piscina|with (?:a )?pool|com piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i;
+const POOL_YES = /con (?:una )?piscina|with (?:a )?pool|and (?:a )?pool|y piscina|e piscina|com piscina|(?:voglio|desidero)(?: di nuovo)? (?:una |la )?piscina|(?:quiero|deseo)(?: de nuevo)? (?:una |la )?piscina|(?:want|add)(?: again)? (?:a |the )?pool/i;
 const NUMBERS = {one:1,uno:1,una:1,un:1,two:2,dos:2,due:2,dois:2,duas:2,three:3,tres:3,tre:3,'três':3,four:4,cuatro:4,quattro:4,quatro:4,five:5,cinco:5,cinque:5,six:6,seis:6,sei:6};
 export function language(text, fallback='en') {
  if (/in English|en ingl[eé]s|in inglese/i.test(text)) return 'en';
  if (/in italiano|en italiano/i.test(text)) return 'it';
  if (/in Spanish|en español|in spagnolo/i.test(text)) return 'es';
- if (/in Portuguese|em português/i.test(text)) return 'pt';
+ if (/in Portuguese|em português|en portugués/i.test(text)) return 'pt';
+ if (/\b(quero|você|orçamento|minha|mude|procuro|gostaria|resuma|quartos)\b/i.test(text)) return 'pt';
  if (/\b(cerco|vorrei|posso|puoi|ricordi|riassumi|preferisco|mantieni|voglio|mio|città|mutuo|vendere)\b/i.test(text)) return 'it';
  if (/[¿¡]|\b(busco|quiero|puedo|recuerdas|presupuesto|resumen|comprar|vender|habitaciones|hipoteca)\b/i.test(text)) return 'es';
- if (/\b(procuro|gostaria|você|orçamento|lembra|resuma|quartos)\b/i.test(text)) return 'pt';
- if (/\b(looking|want|can you|summari[sz]e|remember|what|my|budget now|buy|sell|mortgage)\b/i.test(text)) return 'en';
+ if (/\b(procuro|gostaria|você|orçamento|lembra|resuma|quartos|mude|cidade|minha|apenas)\b/i.test(text)) return 'pt';
+ if (/\b(looking|want|can you|summari[sz]e|remember|what|my|budget now|buy|sell|mortgage|remove|change)\b/i.test(text)) return 'en';
  return ['en','es','it','pt'].includes(fallback) ? fallback : 'en';
 }
 export function cleanCriteria(value={}) {
  const c={};
  if (!value || typeof value!=='object') return c;
  if (typeof value.city==='string' && (value.city.match(CITIES)||[]).some(city=>city.toLowerCase()===value.city.toLowerCase())) c.city=value.city;
- if (typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
+ if(['sell','invest'].includes(value.activity))c.activity=value.activity;
+ if(value.budgetAny===true)c.budgetAny=true;
+ if (!c.budgetAny && typeof value.budget==='string' && /^\$[\d,.]+(?:\s*[km])?$/i.test(value.budget) && value.budget.length<25) c.budget=value.budget;
  if (Number.isInteger(Number(value.bedrooms)) && Number(value.bedrooms)>0 && Number(value.bedrooms)<=30) c.bedrooms=Number(value.bedrooms);
+ if(value.accessibility==='wheelchair')c.accessibility='wheelchair';
  if (['yes','no','any'].includes(value.pool)) c.pool=value.pool;
  return c;
 }
 export function updateCriteria(previous, text) {
  const c=cleanCriteria(previous);
+ if(/wheelchair|silla de ruedas|sedia a rotelle|cadeira de rodas/i.test(text))c.accessibility='wheelchair';
  const cities=text.match(CITIES);
  if(cities?.length===1) c.city=cities[0];
- const amounts=[...text.matchAll(/\$\s*\d[\d.,]*(?:\s*[kKmM]\b)?/g)];
- if(amounts.length===1 && !/\b(vendo|vendo por|sell for|sale price|debo|owe)\b/i.test(text)) c.budget=amounts[0][0].replace(/\s/g,'').replace(/[.,]$/,'');
+ const normalized=text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ const calculation=/calcul|cuota mensual|monthly payment|rata mensile|pagamento mensal|down payment|anticipo|net proceeds/.test(normalized);
+ if(!calculation){
+  if(/(?:quiero|voy a|want to|planning to|voglio|vorrei|quero|pretendo)\s+(?:vender|sell|vendere)|^vendo\b/.test(normalized)){c.activity='sell';delete c.budget;delete c.budgetAny;}
+  else if(/invertir|investir|investire|\binvest\b/.test(normalized))c.activity='invest';
+  else if(/comprar|acquistare|\bbuy\b|cerco|busco|looking for|procuro/.test(normalized))delete c.activity;
+  const budgetContext=/budget|presupuesto|orcamento|price range/.test(normalized)||/busco|cerco|procuro|looking for|searching for/.test(normalized)||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(text);
+  if(/(?:remove|clear|drop|quita|elimina|togli|rimuovi|remova).{0,25}(?:budget|presupuesto|orcamento)|(?:sin limite|sem limite|senza limite|no limit).{0,25}(?:budget|presupuesto|orcamento)|(?:budget|presupuesto|orcamento).{0,25}(?:sin limite|sem limite|senza limite|no limit)/.test(normalized)){delete c.budget;c.budgetAny=true;}
+  else if(budgetContext&&c.activity!=='sell'){
+   const amounts=[...text.matchAll(/\$\s*\d[\d.,]*(?:\s*[kKmM]\b)?/g)];
+   if(amounts.length===1){c.budget=amounts[0][0].replace(/\s/g,'').replace(/[.,]$/,'');delete c.budgetAny;}
+   else if(!/euros?|reais|pounds?|sterline/.test(normalized)){
+    const scaled=normalized.match(/\b(\d+(?:[.,]\d+)?)\s*(mil(?:a)?|thousand|millon(?:es)?|milion[ei]|million)\b/);
+    const words={cien:100,doscientos:200,trescientos:300,cuatrocientos:400,quinientos:500,seiscientos:600,setecientos:700,ochocientos:800,novecientos:900};
+    const written=normalized.match(/\b(cien|doscientos|trescientos|cuatrocientos|quinientos|seiscientos|setecientos|ochocientos|novecientos)\s+mil\b/);
+    if(scaled){c.budget='$'+Number(Number(scaled[1].replace(',','.'))*(/millon|milion|million/.test(scaled[2])?1000000:1000));delete c.budgetAny;}
+    else if(written){c.budget='$'+words[written[1]]*1000;delete c.budgetAny;}
+   }
+  }
+ }
  const rooms=text.match(/\b(\d{1,2}|one|uno|una|un|two|dos|due|dois|duas|three|tres|tre|três|four|cuatro|quattro|quatro|five|cinco|cinque|six|seis|sei)\s*(?:bedrooms?|beds?|BR\b|habitaciones?|dormitorios?|camere(?: da letto)?|quartos?)\b/i);
  if(rooms) c.bedrooms=NUMBERS[rooms[1].toLowerCase()]||Number(rooms[1]);
  if(/(?:pool|piscina).{0,20}(?:indifferente|indiferente|no preference)|(?:indifferente|indiferente|no preference).{0,20}(?:pool|piscina)/i.test(text)) c.pool='any';
@@ -61,6 +84,9 @@ const COPY={
 export const copy=lang=>COPY[lang]||COPY.en;
 export function criteriaText(state,lang='en',only) {
  const c=cleanCriteria(state),t=copy(lang),parts=[];
+ if(c.activity)parts.push(({en:{sell:'Goal: sell',invest:'Goal: invest'},es:{sell:'Objetivo: vender',invest:'Objetivo: invertir'},it:{sell:'Obiettivo: vendere',invest:'Obiettivo: investire'},pt:{sell:'Objetivo: vender',invest:'Objetivo: investir'}}[lang]||{sell:'Goal: sell',invest:'Goal: invest'})[c.activity]);
+ if(c.budgetAny)parts.push(({en:'No maximum budget specified',es:'Sin presupuesto máximo indicado',it:'Nessun budget massimo indicato',pt:'Sem orçamento máximo informado'})[lang]||'No maximum budget specified');
+ if(c.accessibility)parts.push(({en:'Accessibility: wheelchair access',es:'Accesibilidad: silla de ruedas',it:'Accessibilità: sedia a rotelle',pt:'Acessibilidade: cadeira de rodas'})[lang]||'Accessibility: wheelchair access');
  for(const key of ['city','budget','bedrooms','pool']) if((!only||key===only)&&c[key]!==undefined) parts.push(t[key]+': '+(key==='pool'?t[c[key]]:c[key]));
  return parts.length ? (only?'':t.summary+': ')+parts.join('. ')+'.' : t.missing;
 }

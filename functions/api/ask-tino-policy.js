@@ -8,28 +8,31 @@ const L={
 };
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 export function protectedSteering(q){
- const s=norm(q);return /\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|black|blanco\w*|negro\w*|white|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
+ const s=norm(q);const colorGroup=/\b(white|black|blanc[oa]s?|negr[oa]s?)\b/.test(s)&&/people|famil|neighbors?|neighbours?|vecinos?|personas?|neighbou?rhood|barrio|quartier|bairro/.test(s);return colorGroup||/\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
 }
 export function policyReply(q,state,lang='en'){
  const t=L[lang]||L.en,s=norm(q);const contact='\n'+CONTACT.form;
  if(protectedSteering(q))return t.fair;
- if(/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
+ const propertyPrivacy=/privacy|privacidad|riservatezza|privacidade/.test(s)&&/home|house|casa|vivienda|immobile|imovel/.test(s)&&!/data|datos|dati|dados|chat|conversa|policy|politica|mensaje|message/.test(s);
+ if(!propertyPrivacy&&/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
  en:'Read the privacy policy before sharing personal information. Do not enter passwords, identity documents or bank details here. For privacy questions, contact Sabatino.',
  es:'Consulta la política de privacidad antes de compartir datos personales. No introduzcas aquí contraseñas, documentos de identidad ni datos bancarios. Para preguntas de privacidad, contacta a Sabatino.',
  it:'Consulta la privacy prima di condividere dati personali. Non inserire password, documenti di identità o dati bancari. Per domande sulla privacy, contatta Sabatino.',
  pt:'Consulte a política de privacidade antes de compartilhar dados pessoais. Não informe senhas, documentos de identidade ou dados bancários. Para questões de privacidade, contate Sabatino.'
  }[lang]||L.en.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
 
- if(/remember across|save my criteria|guardar mis criterios|recordaras manana|ricorderai domani|salva i criteri|lembra amanha/.test(s))return t.reset;
+ if(/guard.*convers|save.*conversation|remember.*tomorrow|ricord.*domani|conversa.*amanha|remember across|save my criteria|guardar mis criterios|recordaras manana|ricorderai domani|salva i criteri|lembra amanha/.test(s))return t.reset+'\nhttps://floridacostiera.com/privacy#ask-tino-privacy';
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
- if(/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;
- const search=/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);
- const update=/\b(cambia|change|aggiorna|actualiza|atualiza|togli|quita|remove|mantieni|keep)\b/.test(s)&&/city|citta|ciudad|comunidad|community|budget|presupuesto|orcamento|piscina|pool|bedroom|habitacion|camere|quartos/.test(s)&&Object.keys(state).length>0;
- if(search||update){
- const summary=criteriaText(state,lang);
- const missing=!state.city?t.city:!state.budget?t.budget:null;
- return summary+'\n\n'+(missing||t.inventory+'\n'+t.next+': '+CONTACT.buy+'\n'+t.contact+': '+CONTACT.form);
+ if(!/no busco|not looking|non cerco|nao procuro/.test(s)&&/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;
+ const search=/\b(cerco|busco|procuro|looking for|searching for|voglio|quiero)\b/.test(s)&&/casa|home|house|condo|apartment|property|propriet|vivienda|imovel/.test(s)&&!/finanz|financ|mutuo|mortgage|impuest|tax|gastos|cost|spese|document|puedo|posso|can i|ley|law|legal/.test(s);
+ const update=/\b(cambia|cambio|change|aggiorna|actualiza|atualiza|mude|togli|quita|remove|mantieni|keep|quiero|voglio|quero|want)\b/.test(s)&&/city|citta|ciudad|cidade|comunidad|community|budget|presupuesto|orcamento|piscina|pool|bedroom|habitacion|camere|quartos/.test(s)&&Object.keys(state).length>0;
+ const shortCriterion=(state.city&&s===norm(state.city))||(!/[?¿]/.test(q)&&q.length<90&&/budget|presupuesto|orcamento/.test(s))||/^\s*\$[\d.,]+\s*[km]?\s*$/i.test(q);
+ if(state.activity==='sell'&&(search||update||shortCriterion||/vender|vendere|selling|\bsell\b/.test(s)))return criteriaText(state,lang)+'\n\n'+(!state.city?({en:'In which city or community is the property you want to sell?',es:'¿En qué ciudad o comunidad está la propiedad que quieres vender?',it:'In quale città o comunità si trova l’immobile che vuoi vendere?',pt:'Em qual cidade ou comunidade fica o imóvel que deseja vender?'}[lang]||t.city):({en:'For selling guidance, contact Sabatino to review your property and next steps.',es:'Para vender, contacta a Sabatino para revisar tu propiedad y los próximos pasos.',it:'Per vendere, contatta Sabatino per esaminare l’immobile e i prossimi passi.',pt:'Para vender, contate Sabatino para analisar o imóvel e os próximos passos.'}[lang]||t.agent)+contact);
+ if(search||update||shortCriterion||state.activity==='invest'&&/invert|invest/.test(s)){
+ const summary=Object.keys(state).length?criteriaText(state,lang):'';
+ const missing=!state.city?t.city:!state.budget&&!state.budgetAny?t.budget:null;
+ return (summary?summary+'\n\n':'')+(missing||t.inventory+'\n'+t.next+': '+CONTACT.buy+'\n'+t.contact+': '+CONTACT.form);
  }
  return null;
 }

@@ -63,3 +63,11 @@ Pending: inspect external Worker instructions and data practices; align public P
 The shared core detects some formatted SSNs, explicitly labeled secrets/account identifiers and Luhn-valid card-like numbers. The browser shows a localized warning before fetch and does not append the sensitive message to the transcript or history; it leaves the input for editing. The endpoint independently blocks detected current/prior visitor messages before the external model call and does not echo them in its response. These are bounded pattern checks, not comprehensive personal-data detection. A request that bypasses the browser still reaches Cloudflare before endpoint filtering; do not claim it was never transmitted to the website.
 
 Malformed non-array history is ignored rather than causing an API exception. Both client loaders and the core import use privacy4 cache versions.
+
+## Conversation audit — 2026-11-07
+
+The first public API audit exercised 35 synthetic turns and exposed state/routing failures. Fixes: supported community names expanded; explicit selling/investing goals kept separate; math inputs no longer overwrite purchase budgets; dollar amounts with common numeric thousand/million suffixes and Spanish hundreds-of-thousands wording recognized; budget removal persists; short criterion replies remain deterministic; wheelchair access is retained; property privacy and house paint color are not mistaken for personal-data or protected-trait requests. Conversation-retention questions disclose page-local memory and link to Privacy instead of making provider-retention promises. Deterministic math runs before site-index keyword matching.
+
+A supplied clean criteria object is authoritative; old history is used to reconstruct criteria only for clients without a criteria object. This prevents removed fields from being resurrected by history. The shared client and API use the same core version.
+
+`node scripts/check-ask-tino-conversations.mjs`: 50 synthetic turns across EN/ES/IT/PT, deterministic local regression. `--live --report=/tmp/report.json` sends the same cases to the deployed public endpoint (three concurrent scenarios, sequential turns within each conversation). Local generic-model responses are mocked; live responses are evaluated separately. These samples are not exhaustive language or legal validation.

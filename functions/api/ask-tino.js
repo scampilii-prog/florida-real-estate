@@ -18,12 +18,13 @@ export async function onRequest({request}){
  let previous={};
  // Visitor history supplies criteria only; assistant text is never a fact.
  for(const item of history.slice(-8))if(item?.role==='user'&&typeof item.content==='string')previous=updateCriteria(previous,item.content.slice(0,600));
- const criteria=updateCriteria({...previous,...cleanCriteria(body.criteria)},message);
+ const supplied=body.criteria&&typeof body.criteria==='object'&&!Array.isArray(body.criteria);
+ const criteria=updateCriteria(supplied?cleanCriteria(body.criteria):previous,message);
  const respond=reply=>json({reply,criteria,language:lang});
  const policy=policyReply(message,criteria,lang);if(policy)return respond(policy);
  const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && history.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
- const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
+ const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const prompt=upstreamPrompt(message,criteria,lang,history);if(!prompt)return respond(copy(lang).long);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),24000);
  try{
