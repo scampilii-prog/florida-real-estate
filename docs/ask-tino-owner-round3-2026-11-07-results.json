@@ -1,0 +1,352 @@
+{
+  "date": "2026-11-07",
+  "implementation_commit": "306caa5c16d60dcae72e19a3e50eb7fc498b2aee",
+  "synthetic_only": true,
+  "before": [
+    {
+      "number": 1,
+      "question": "Busco una casa en Englewood por $450,000, con piscina, garaje para dos carros y sin asociación.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Ciudad: Englewood. Presupuesto: $450,000. Piscina: sí.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Englewood",
+          "budget": "$450,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 2,
+      "question": "Puedo subir hasta $475,000, pero la piscina ya no es necesaria. El garaje sigue siendo indispensable.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Ciudad: Englewood. Presupuesto: $475,000. Piscina: sí.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Englewood",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 3,
+      "question": "Prefiero conservar el límite de $450,000 y considerar también Port Charlotte.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Ciudad: Port Charlotte. Presupuesto: $475,000. Piscina: sí.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 4,
+      "question": "Resume mis requisitos y dime si hay algo que necesites aclarar, sin escoger una ciudad por mí.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Ciudad: Port Charlotte. Presupuesto: $475,000. Piscina: sí.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 5,
+      "question": "Vi una casa anunciada hace tres meses. ¿Puedes asegurarme que todavía está disponible al mismo precio?",
+      "response": {
+        "reply": "Lo siento, pero no puedo asegurarte que la casa que viste anunciada hace tres meses todavía esté disponible al mismo precio. La disponibilidad y los precios de las propiedades pueden cambiar con el tiempo. ¿Podrías proporcionarme más detalles sobre la ubicación exacta de la casa dentro de Port Charlotte?",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 6,
+      "question": "El vendedor ofrece pagar todos los gastos de cierre. ¿Eso significa que no necesitaré dinero para comprar?",
+      "response": {
+        "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Statutes — Florida Senate\nhttps://www.flsenate.gov/Laws/Statutes\nPágina consultada ahora — 2026-11-07\n\nFlorida Administrative Code\nhttps://flrules.org/\nPágina consultada ahora — 2026-11-07\n\nFlorida DBPR / Real Estate Commission\nhttps://www2.myfloridalicense.com/real-estate-commission/statutes-and-rules/\nPágina consultada ahora — 2026-11-07\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 7,
+      "question": "La asociación tiene reservas bajas y anuncia una cuota extraordinaria. ¿Qué debería investigar antes de presentar una oferta?",
+      "response": {
+        "reply": "Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 8,
+      "question": "Quiero comprar una propiedad para alquilarla y usarla personalmente dos meses al año. ¿Qué restricciones y costos debería comparar?",
+      "response": {
+        "reply": "Para comparar restricciones y costos, deberías considerar factores como las reglas de la asociación de propietarios (HOA), los costos de mantenimiento, impuestos, seguros y servicios públicos. También es importante investigar las leyes y regulaciones locales sobre alquileres.\n\n¿Cuál es el tamaño o número de dormitorios que estás buscando en la casa?",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 9,
+      "question": "Me enviaron por correo nuevas instrucciones para transferir el depósito. ¿Cómo verifico que sean auténticas?",
+      "response": {
+        "reply": "Contacta a Sabatino Campilii, Realtor® de LoKation® Real Estate.\nTeléfono: (941) 270-4877\nCorreo: sabatino@floridacostiera.com\nFormulario: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    },
+    {
+      "number": 10,
+      "question": "Mi inglés es limitado. ¿Puedes continuar en español y preparar un resumen para que yo se lo envíe a Sabatino, sin enviarlo tú?",
+      "response": {
+        "reply": "Criterios actuales: Tipo: casa. Ciudad: Port Charlotte. Presupuesto: $475,000. Piscina: sí.",
+        "criteria": {
+          "city": "Port Charlotte",
+          "budget": "$475,000",
+          "propertyType": "house",
+          "pool": "yes"
+        },
+        "language": "es"
+      }
+    }
+  ],
+  "after": {
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "Busco una casa en Englewood por $450,000, con piscina, garaje para dos carros y sin asociación.",
+        "response": {
+          "reply": "Criterios actuales: Garaje para carros: 2. Asociación: no. Tipo: casa. Ciudad: Englewood. Presupuesto: $450,000. Piscina: sí.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Englewood",
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "yes"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "Puedo subir hasta $475,000, pero la piscina ya no es necesaria. El garaje sigue siendo indispensable.",
+        "response": {
+          "reply": "Criterios actuales: Garaje para carros: 2. Asociación: no. Tipo: casa. Ciudad: Englewood. Presupuesto: $475,000. Piscina: sin preferencia.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "city": "Englewood",
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$475,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "Prefiero conservar el límite de $450,000 y considerar también Port Charlotte.",
+        "response": {
+          "reply": "Criterios actuales: Ciudades a considerar: Englewood / Port Charlotte. Garaje para carros: 2. Asociación: no. Tipo: casa. Presupuesto: $450,000. Piscina: sin preferencia.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "Resume mis requisitos y dime si hay algo que necesites aclarar, sin escoger una ciudad por mí.",
+        "response": {
+          "reply": "Criterios actuales: Ciudades a considerar: Englewood / Port Charlotte. Garaje para carros: 2. Asociación: no. Tipo: casa. Presupuesto: $450,000. Piscina: sin preferencia.\n\n¿Cuántas habitaciones necesitas?",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "Vi una casa anunciada hace tres meses. ¿Puedes asegurarme que todavía está disponible al mismo precio?",
+        "response": {
+          "reply": "No puedo asegurar que un anuncio antiguo siga disponible ni que conserve el mismo precio. Antes de decidir, Sabatino debe confirmar el estado y precio actuales con la fuente del listado o el agente responsable. No tengo un inventario MLS en vivo y no he verificado esa propiedad.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "El vendedor ofrece pagar todos los gastos de cierre. ¿Eso significa que no necesitaré dinero para comprar?",
+        "response": {
+          "reply": "No necesariamente. Que el vendedor pague gastos de cierre no significa que cubra el anticipo, el depósito, los prepagos ni todos los fondos que puedas necesitar. Revisa el contrato y los límites del préstamo con el prestamista; después, compara los créditos acordados con el Loan Estimate y el Closing Disclosure, especialmente Cash to Close. Pide a la compañía de título y al prestamista una estimación escrita de lo que debes aportar. No asumas una compra sin dinero propio.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "La asociación tiene reservas bajas y anuncia una cuota extraordinaria. ¿Qué debería investigar antes de presentar una oferta?",
+        "response": {
+          "reply": "Investiga por qué las reservas son bajas y qué financia la cuota extraordinaria. Pide presupuesto, estados financieros, estudio de reservas o SIRS si corresponde, actas, informes técnicos y el detalle de la cuota: importe, vencimientos y si ya fue aprobada. Averigua si quedan reparaciones o cobros adicionales pendientes. Confirma por escrito cómo se repartirá ese pago entre comprador y vendedor en el contrato; no lo des por supuesto. Revisa también si la situación afecta financiación o seguro antes de comprometerte.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Quiero comprar una propiedad para alquilarla y usarla personalmente dos meses al año. ¿Qué restricciones y costos debería comparar?",
+        "response": {
+          "reply": "Comprueba que las reglas de la asociación y las normas locales permitan el alquiler previsto y tu uso personal. Revisa plazo mínimo, frecuencia de alquiler, aprobación de inquilinos y posibles restricciones del préstamo o seguro. Calcula ingresos solo para los periodos realmente disponibles, descontando tu ocupación, vacancias, administración, limpieza, mantenimiento, impuestos y cuotas. Lleva un registro de días alquilados y de uso personal: esa combinación puede cambiar el tratamiento fiscal y la distribución de gastos. Revísalo con un profesional tributario, sin asumir rentabilidad ni deducciones.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "use": "mixed",
+            "personalUseMonths": 2,
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "Me enviaron por correo nuevas instrucciones para transferir el depósito. ¿Cómo verifico que sean auténticas?",
+        "response": {
+          "reply": "No transfieras el depósito basándote solo en ese correo. Llama a la compañía de título o al agente de cierre usando un número previamente verificado, no el que venga en el mensaje nuevo, y confirma las instrucciones y cualquier cambio por ese canal. No envíes por email números de cuenta ni códigos. Si ya transferiste y sospechas fraude, contacta inmediatamente a tu banco para intentar detener o recuperar la transferencia; no hay garantía de recuperación. Yo no puedo autenticar ese correo ni verificar una cuenta bancaria.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "use": "mixed",
+            "personalUseMonths": 2,
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "Mi inglés es limitado. ¿Puedes continuar en español y preparar un resumen para que yo se lo envíe a Sabatino, sin enviarlo tú?",
+        "response": {
+          "reply": "Borrador para que lo copies y envíes; no lo he enviado.\n\nHola, Sabatino:\nEstos son los requisitos que he indicado:\nCriterios actuales: Ciudades a considerar: Englewood / Port Charlotte. Garaje para carros: 2. Asociación: no. Uso: alquiler y personal (2 meses de uso personal al año). Tipo: casa. Presupuesto: $450,000. Piscina: sin preferencia.",
+          "criteria": {
+            "cities": [
+              "Englewood",
+              "Port Charlotte"
+            ],
+            "garageSpaces": 2,
+            "hoa": "no",
+            "use": "mixed",
+            "personalUseMonths": 2,
+            "budget": "$450,000",
+            "propertyType": "house",
+            "pool": "any"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  }
+}
