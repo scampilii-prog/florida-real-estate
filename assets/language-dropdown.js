@@ -854,3 +854,40 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initContactLinks);
   else initContactLinks();
 })();
+
+/* Ask Tino keeps recent visitor messages in this page only. */
+(function () {
+ var history = [], busy = false;
+ window.sendTino = async function (event) {
+  event.preventDefault();
+  var input = document.getElementById('tinoText');
+  var message = input.value.trim();
+  if (!message || busy) return;
+  busy = true;
+  var messages = document.getElementById('tinoMessages');
+  var bubble = document.createElement('div');
+  bubble.className = 'tino-bubble'; bubble.textContent = message;
+  bubble.style.background = '#e8f3f0'; messages.appendChild(bubble);
+  input.value = '';
+  var reply = document.createElement('div');
+  reply.className = 'tino-bubble'; reply.textContent = '…';
+  messages.appendChild(reply);
+  reply.scrollIntoView({behavior:'smooth',block:'end'});
+  var controller = new AbortController();
+  var timeout = setTimeout(function(){controller.abort();},28000);
+  try {
+   var response = await fetch('/api/ask-tino', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    signal:controller.signal, body:JSON.stringify({message:message,history:history.slice(-8)})
+   });
+   var data = await response.json();
+   if (!response.ok || typeof data.reply !== 'string') throw new Error('Request failed');
+   history.push({role:'user',content:message.slice(0,600)});
+   history = history.slice(-8);
+   reply.textContent = data.reply;
+  } catch(error) {
+   reply.textContent = 'The assistant could not respond. Please try again or contact Sabatino using the form below.';
+  } finally {clearTimeout(timeout);busy=false;}
+  reply.scrollIntoView({behavior:'smooth',block:'end'});
+ };
+})();
