@@ -1,3 +1,4 @@
+import {buildingGuidance} from './ask-tino-building-guidance.js';
 import {condoGuidance} from './ask-tino-condo-guidance.js';
 import {dueDiligenceReply} from './ask-tino-due-diligence.js';
 // Topic answers precede generic handoff/retrieval; never imply property verification.
@@ -63,6 +64,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const building=buildingGuidance(message,lang);if(building)return building;
  const condo=condoGuidance(message,state,lang);if(condo)return condo;
  const due=dueDiligenceReply(message,lang);if(due)return due;
  const s=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');let key;
