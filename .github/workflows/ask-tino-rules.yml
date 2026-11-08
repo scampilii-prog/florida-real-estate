@@ -37,3 +37,4 @@ jobs:
       - run: node scripts/check-ask-tino-owner-round5.mjs
       - run: node scripts/check-ask-tino-owner-round6.mjs
       - run: node scripts/check-ask-tino-building-documents.mjs
+      - run: node scripts/check-ask-tino-florida-laws.mjs
