@@ -1,6 +1,6 @@
 # Ask Tino — banco inicial de 100 preguntas, en grupos de diez
 
-Banco ampliable, no exhaustivo. Los grupos 2–10 son preguntas pendientes de auditoría individual; no se presentan como respuestas aprobadas. El primer grupo prueba consulta dirigida y respuesta alternativa útil.
+Banco ampliable, no exhaustivo. Los grupos 2–10 son preguntas pendientes de auditoría individual; no se presentan como respuestas aprobadas. El primer grupo fue probado contra el servicio público; [respuestas completas y continuidad](ask-tino-group1-owner-recheck-2026-11-08.md).
 
 ## Grupo 1 · Financiación y documentos del préstamo
 

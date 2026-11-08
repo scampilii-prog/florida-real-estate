@@ -389,3 +389,16 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 - Navegador real: Home → abrir chat → pregunta tasa/APR → se observó texto de espera y respuesta CFPB con estado de recuperación. Versiones research1 coherentes en cargadores y páginas, sin cambio visual del diseño ni esquema de criterios.
 - [Informe y respuestas completas](ask-tino-grounded-2026-11-08.md); [JSON público](ask-tino-grounded-2026-11-08-results.json). Tests locales de fallos, síntesis, URLs, datos sensibles y regresiones existentes aprobados.
 - Recuperar una página no certifica vigencia ni aplicabilidad. El catálogo es finito; no prometer respuesta definitiva a toda pregunta. Worker externo/retención siguen fuera del repositorio. Sin cola permanente ni callback enviado. OceanFL y My Closing Timeline intactos.
+
+
+## 25. Solicitud expresa de Tino: repetir diez y asegurar continuidad — 8 de noviembre de 2026
+
+- El usuario pidió hacer yo las diez preguntas, revisar sus respuestas, corregir y guardar todo para continuar si el chat se cierra. No pedirle que copie preguntas ni repetir permisos ya otorgados.
+- Se repitió el grupo 1 al API público. La lectura detectó una nota incompleta en la quinta respuesta; corregida en cedf73e0231828168a2db5f542310ad2afeede3b. Las notas recuperadas deben terminar como oración; siempre permanece la orientación práctica.
+- Cloudflare Pages, rules y structural-audit de ese commit: success. Diez rutas locales y síntesis aprobadas; se repitieron las diez públicas tras el despliegue y se guardaron completas, con fuentes, estado y criterios.
+- [Diez preguntas, respuestas y texto para otro chat](ask-tino-group1-owner-recheck-2026-11-08.md); [JSON completo](ask-tino-group1-owner-recheck-2026-11-08-results.json).
+- El banco de 100 marca grupo 1 comprobado y grupos 2–10 pendientes individualmente. Siguiente: **grupo 2, preguntas 11–20 — Preparación del comprador**. Realizarlas yo, comprobar fuentes, corregir, probar y registrar; no declarar aprobados los otros 90 por existir en el documento.
+
+### Instrucción lista para un chat nuevo
+
+> Continúa Florida Costiera y Ask Tino leyendo primero docs/FLORIDA-COSTIERA-MEMORIA.md en scampilii-prog/florida-real-estate y verificando el estado actual de main. El grupo 1 de diez ya está probado y sus respuestas completas están registradas. Continúa con el grupo 2, preguntas 11–20, de docs/ask-tino-question-bank-100.md. Haz tú las preguntas, verifica las respuestas y fuentes, corrige lo necesario, prueba local y públicamente y guarda evidencia y pendientes en esta memoria. Conserva el diseño aprobado y no modifiques OceanFL ni My Closing Timeline.
