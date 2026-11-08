@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-08",
+  "implementationCommit": "aa90a6d9d53e4290fb50a9c38a5fd66861784d7d",
+  "syntheticDataOnly": true,
+  "before": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre precio ofrecido y neto para el vendedor?",
+        "response": {
+          "reply": "La diferencia entre el precio ofrecido y el neto para el vendedor se refiere a la cantidad final que el vendedor recibe después de deducir los costos y comisiones asociados con la venta de la propiedad. El precio ofrecido es la cantidad que el comprador está dispuesto a pagar, mientras que el neto para el vendedor es la cantidad que el vendedor recibe después de pagar las comisiones de los agentes, impuestos, y otros gastos.\n\n¿Cuál es el tipo de propiedad que está considerando vender?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no garantiza/. Input:\n\n'La diferencia entre el precio ofrecido y el neto para el vendedor se refiere a la cantidad final que el vendedor recibe después de deducir los costos y comisiones asociados con la venta de la propiedad. El precio ofrecido es la cantidad que el comprador está dispuesto a pagar, mientras que el neto para el vendedor es la cantidad que el vendedor recibe después de pagar las comisiones de los agentes, impuestos, y otros gastos.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que está considerando vender?'\n",
+        "bankNumber": 21
+      },
+      {
+        "number": 2,
+        "question": "¿Qué debería comparar entre una oferta con contingencias y una sin ellas?",
+        "response": {
+          "reply": "Para comparar entre una oferta con contingencias y una sin ellas, deberías considerar los riesgos y la seguridad que cada una ofrece. Una oferta con contingencias puede ser más arriesgada para el vendedor, ya que depende de ciertas condiciones que deben cumplirse antes de que la venta se complete. Por otro lado, una oferta sin contingencias puede ser más atractiva, ya que ofrece una mayor certeza de que la venta se llevará a cabo.\n\n¿Cuál es el precio de la propiedad que estás considerando vender o comprar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /deposito|depósito/. Input:\n\n'Para comparar entre una oferta con contingencias y una sin ellas, deberías considerar los riesgos y la seguridad que cada una ofrece. Una oferta con contingencias puede ser más arriesgada para el vendedor, ya que depende de ciertas condiciones que deben cumplirse antes de que la venta se complete. Por otro lado, una oferta sin contingencias puede ser más atractiva, ya que ofrece una mayor certeza de que la venta se llevará a cabo.\\n' +\n  '\\n' +\n  '¿Cuál es el precio de la propiedad que estás considerando vender o comprar?'\n",
+        "bankNumber": 22
+      },
+      {
+        "number": 3,
+        "question": "¿Qué debo comprobar antes de firmar una cláusula de escalamiento?",
+        "response": {
+          "reply": "Antes de firmar una cláusula de escalamiento, debes comprobar los términos y condiciones específicas, como el precio inicial, los incrementos de precio, y las condiciones para que la cláusula se active. También es importante entender cómo afectará la cláusula al proceso de venta y tus ganancias netas.\n\n¿Cuál es el tipo de propiedad que estás considerando vender con una cláusula de escalamiento?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /oferta competidora/. Input:\n\n'Antes de firmar una cláusula de escalamiento, debes comprobar los términos y condiciones específicas, como el precio inicial, los incrementos de precio, y las condiciones para que la cláusula se active. También es importante entender cómo afectará la cláusula al proceso de venta y tus ganancias netas.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando vender con una cláusula de escalamiento?'\n",
+        "bankNumber": 23
+      },
+      {
+        "number": 4,
+        "question": "¿Qué diferencia hay entre fecha efectiva y fecha de cierre?",
+        "response": {
+          "reply": "La fecha efectiva y la fecha de cierre son dos conceptos importantes en el proceso de compraventa de una propiedad. La fecha efectiva se refiere al momento en que se considera que la oferta o el contrato es vinculante, mientras que la fecha de cierre es el día en que se completa la transferencia de la propiedad y se realizan los pagos.\n\n¿Cuál es el contexto específico en el que deseas entender la diferencia entre estas fechas?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /comunicacion|comunicación/. Input:\n\n'La fecha efectiva y la fecha de cierre son dos conceptos importantes en el proceso de compraventa de una propiedad. La fecha efectiva se refiere al momento en que se considera que la oferta o el contrato es vinculante, mientras que la fecha de cierre es el día en que se completa la transferencia de la propiedad y se realizan los pagos.\\n' +\n  '\\n' +\n  '¿Cuál es el contexto específico en el que deseas entender la diferencia entre estas fechas?'\n",
+        "bankNumber": 24
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo verifico el método de contar días en mi contrato?",
+        "response": {
+          "reply": "Para verificar el método de contar días en su contrato, es importante revisar cuidadosamente las cláusulas específicas relacionadas con el calendario y los plazos establecidos en el documento. ¿Cuál es el tipo de contrato del que está hablando (por ejemplo, contrato de compraventa, alquiler, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /formulario/. Input:\n\n'Para verificar el método de contar días en su contrato, es importante revisar cuidadosamente las cláusulas específicas relacionadas con el calendario y los plazos establecidos en el documento. ¿Cuál es el tipo de contrato del que está hablando (por ejemplo, contrato de compraventa, alquiler, etc.)?'\n",
+        "bankNumber": 25
+      },
+      {
+        "number": 6,
+        "question": "¿Qué debo hacer si un plazo contractual vence en feriado?",
+        "response": {
+          "reply": "Si un plazo contractual vence en un feriado, generalmente se considera que el plazo se extiende hasta el siguiente día hábil. Sin embargo, es importante verificar el contrato específico y las leyes locales para determinar el procedimiento correcto.\n\n¿Cuál es el tipo de contrato o transacción inmobiliaria que involucra este plazo contractual?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no asumas/. Input:\n\n'Si un plazo contractual vence en un feriado, generalmente se considera que el plazo se extiende hasta el siguiente día hábil. Sin embargo, es importante verificar el contrato específico y las leyes locales para determinar el procedimiento correcto.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de contrato o transacción inmobiliaria que involucra este plazo contractual?'\n",
+        "bankNumber": 26
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo se documenta una extensión aceptada por ambas partes?",
+        "response": {
+          "reply": "La documentación de una extensión aceptada por ambas partes generalmente se realiza a través de un acuerdo por escrito, firmado por ambas partes, que especifica los términos de la extensión, incluyendo la nueva fecha de vencimiento y cualquier otra condición relevante.\n\n¿Cuál es el tipo de contrato o acuerdo que está considerando para la extensión?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /firmas/. Input:\n\n'La documentación de una extensión aceptada por ambas partes generalmente se realiza a través de un acuerdo por escrito, firmado por ambas partes, que especifica los términos de la extensión, incluyendo la nueva fecha de vencimiento y cualquier otra condición relevante.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de contrato o acuerdo que está considerando para la extensión?'\n",
+        "bankNumber": 27
+      },
+      {
+        "number": 8,
+        "question": "¿Qué significa una contingencia de venta de mi casa actual?",
+        "response": {
+          "reply": "Una contingencia de venta de su casa actual significa que la compra de una nueva propiedad está condicionada a la venta de su propiedad actual. \n\n¿Cuál es el tipo de propiedad que está considerando comprar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /plazo/. Input:\n\n'Una contingencia de venta de su casa actual significa que la compra de una nueva propiedad está condicionada a la venta de su propiedad actual. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que está considerando comprar?'\n",
+        "bankNumber": 28
+      },
+      {
+        "number": 9,
+        "question": "¿Qué reviso antes de aceptar un backup contract?",
+        "response": {
+          "reply": "Antes de aceptar un contrato de respaldo (backup contract), es importante revisar los términos y condiciones del contrato original, así como las condiciones de la contingencia que permitió la oferta de respaldo. También debes considerar cómo afectará el contrato de respaldo a tu situación actual y futura.\n\n¿Cuál es el tipo de propiedad que estás considerando comprar con el contrato de respaldo?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /primario/. Input:\n\n'Antes de aceptar un contrato de respaldo (backup contract), es importante revisar los términos y condiciones del contrato original, así como las condiciones de la contingencia que permitió la oferta de respaldo. También debes considerar cómo afectará el contrato de respaldo a tu situación actual y futura.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar con el contrato de respaldo?'\n",
+        "bankNumber": 29
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo comprobar antes de firmar electrónicamente desde otro país?",
+        "response": {
+          "reply": "Antes de firmar electrónicamente desde otro país, debes comprobar la validez y seguridad del proceso de firma electrónica, así como la autenticidad del documento que estás firmando. También es importante entender las leyes y regulaciones aplicables en tu país y en el país donde se encuentra la propiedad.\n\n¿Cuál es el tipo de documento que estás considerando firmar electrónicamente (por ejemplo, un contrato de compraventa, un acuerdo de arrendamiento, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /notarizacion|notarización/. Input:\n\n'Antes de firmar electrónicamente desde otro país, debes comprobar la validez y seguridad del proceso de firma electrónica, así como la autenticidad del documento que estás firmando. También es importante entender las leyes y regulaciones aplicables en tu país y en el país donde se encuentra la propiedad.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de documento que estás considerando firmar electrónicamente (por ejemplo, un contrato de compraventa, un acuerdo de arrendamiento, etc.)?'\n",
+        "bankNumber": 30
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre precio ofrecido y neto para el vendedor?",
+        "response": {
+          "reply": "El precio ofrecido no es el neto que recibe el vendedor. Estima gastos de cierre, compensaciones pactadas, créditos, reparaciones, impuestos/prorrateos, cuotas y saldo de cancelación de hipotecas o gravámenes; separa retenciones de impuesto definitivo. Pide un net sheet con supuestos y revisa la liquidación con título y Sabatino. Una oferta mayor no garantiza mayor neto ni mejor probabilidad de cerrar.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.nar.realtor/the-facts/consumer-guide-navigating-multiple-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 21
+      },
+      {
+        "number": 2,
+        "question": "¿Qué debería comparar entre una oferta con contingencias y una sin ellas?",
+        "response": {
+          "reply": "Compara contingencias de financiación, tasación, inspección, venta de otra propiedad y otras pactadas, además de precio, depósito, fondos y fecha de cierre. Menos contingencias puede aumentar el atractivo para el vendedor, pero también el riesgo del comprador y del depósito. No todas las contingencias tienen iguales plazos o avisos. Revisa el texto y cualquier renuncia con Sabatino y, para efectos jurídicos, un abogado; no asumas devolución automática ni cierre garantizado.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2021/04/winning-best-practices-handling-multiple-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 22
+      },
+      {
+        "number": 3,
+        "question": "¿Qué debo comprobar antes de firmar una cláusula de escalamiento?",
+        "response": {
+          "reply": "Revisa en la cláusula de escalamiento incremento, tope máximo, oferta competidora válida que la activa y cómo se acredita, precio resultante, financiación y posible diferencia de tasación. No autoriza inventar una oferta ni revela automáticamente todos los datos privados del competidor. Pide revisar el addendum y su compatibilidad con el contrato; un abogado debe atender lenguaje especial o ambigüedades. No es obligatorio usar una cláusula de escalamiento ni garantiza que acepten tu oferta.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/tools-research/escalation-addendum-update-questions-answers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 23
+      },
+      {
+        "number": 4,
+        "question": "¿Qué diferencia hay entre fecha efectiva y fecha de cierre?",
+        "response": {
+          "reply": "La fecha efectiva inicia plazos según la aceptación, firmas y entrega o comunicación exigida por el contrato; no es necesariamente la primera firma. El cierre es la consumación con documentos y fondos conforme al acuerdo. Conserva evidencia de comunicación y revisa formulario, versión, contrapropuestas y addenda antes de fijar cualquiera de las dos fechas.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/sites/default/files/2024-12/Residential%20Contract%20for%20Sale%20and%20Purchase%20%28FloridaRealtors-FloridaBar-7%29%20Redline%20%281%29.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 24
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo verifico el método de contar días en mi contrato?",
+        "response": {
+          "reply": "Identifica formulario, versión/revisión, cláusula de tiempo, fecha inicial, dirección del conteo y modificaciones. No apliques una regla universal: FR/Bar y CRSP deben leerse por versión. Florida Realtors informó en julio de 2026 que el CRSP actualizado cambió de días hábiles a calendario; versiones antiguas difieren. Confirma también hora límite y excepciones antes de calcular. ¿Qué formulario y revisión tienes?\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/07/crsp-contract-flying-under-radar\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 25
+      },
+      {
+        "number": 6,
+        "question": "¿Qué debo hacer si un plazo contractual vence en feriado?",
+        "response": {
+          "reply": "Comprueba la cláusula de tiempo del contrato y si ese feriado está incluido, la versión, hora y tipo de plazo. No asumas que todo vencimiento pasa al lunes ni que aceptación, avisos y plazos legales siguen la misma regla. Antes de dar una fecha, contrasta el calendario y las excepciones con Sabatino y asesoramiento jurídico.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/law-ethics/library/florida-real-estate-contract-laws\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 26
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo se documenta una extensión aceptada por ambas partes?",
+        "response": {
+          "reply": "Documenta por escrito los plazos concretos y nuevas fechas, firmas/consentimientos necesarios y entrega conforme al contrato; conserva copia ejecutada. Revisa plazos relacionados: extender el cierre no extiende automáticamente aprobación del préstamo o inspección. Si ya venció un plazo, consulta efectos y redacción con abogado; una petición o promesa verbal no acredita extensión.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2024/07/financing-contingency-faqs\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 27
+      },
+      {
+        "number": 8,
+        "question": "¿Qué significa una contingencia de venta de mi casa actual?",
+        "response": {
+          "reply": "Una contingencia de venta de tu casa puede condicionar la compra a determinados hechos y plazo: revisa si exige contrato de venta o cierre, avisos, pruebas, depósito y consecuencias de no cumplir. Examina cualquier kick-out o derecho a seguir comercializando y cómo se coordina con tu financiación. No asegura vender a tiempo ni devolver automáticamente el depósito. Revisa el addendum completo y las fechas con Sabatino y abogado antes de firmar o renunciar.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/05/two-forms-can-protect-backup-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 28
+      },
+      {
+        "number": 9,
+        "question": "¿Qué reviso antes de aceptar un backup contract?",
+        "response": {
+          "reply": "Un backup contract debe subordinarse claramente al contrato primario: revisa prioridad, condición de entrada, aviso escrito, fecha efectiva aplicable, depósito, inspecciones y plazo de espera o salida. No comprometas una segunda venta incompatible ni asumas que el backup está activo porque hubo un problema con el primero. El texto del addendum controla; varias posiciones de respaldo o una terminación discutida requieren revisión jurídica.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/05/two-forms-can-protect-backup-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 29
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo comprobar antes de firmar electrónicamente desde otro país?",
+        "response": {
+          "reply": "La firma electrónica y la notarización son procesos distintos. Confirma consentimiento, identidad, capacidad, entrega y conservación de documentos. Desde otro país, coordina con abogado, título, prestamista y notario si ese documento admite firma electrónica, notarización remota o necesita otra formalidad, testigos o registro. No todo cierre puede hacerse de cualquier manera por internet; confirma aceptación, horarios y plazos antes de firmar. No envíes identificaciones al chat.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.flsenate.gov/Laws/Statutes/2026/668.50\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 30
+      }
+    ]
+  },
+  "formsAndVersionChecks": [
+    {
+      "question": "¿Tienes acceso a todos los contratos de Florida Realtors, MIAMI REALTORS y Stellar?",
+      "response": {
+        "reply": "Puedo orientar sobre familias de formularios y fuentes públicas, pero no tengo acceso autenticado ni el contenido completo y vigente de todas las bibliotecas de Florida Realtors, MIAMI o Stellar. Un formulario MLS de listado no es por sí solo un contrato de compraventa. Para explicar una cláusula concreta necesito nombre/código, versión o revisión y el fragmento anonimizado, sin nombres, firmas, cuentas o datos privados. No inventaré el texto ni asumiré que una copia antigua es la actual. Sabatino puede consultar la copia autorizada en su servicio de miembro; acceso personal no equivale a conexión automática del chat.\n\nFlorida Realtors — catálogo oficial\nhttps://www.floridarealtors.org/tools-research/form-descriptions\nAcceso autorizado\nhttps://www.floridarealtors.org/tools-research/form-simplicity\n\nMIAMI REALTORS — catálogo oficial\nhttps://miamirealtors.zendesk.com/hc/en-us/articles/9946105013787-MLS-FORMS-APPLICATIONS\nAcceso autorizado\nhttps://miamirealtors.zendesk.com/hc/en-us/articles/41789667134747-Form-Simplicity-Questions-and-Answers\n\nStellar MLS — catálogo oficial\nhttps://www.stellarmls.com/documents/listing-forms\nAcceso autorizado\nhttps://www.stellarmls.com/products/transactiondesk\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      }
+    },
+    {
+      "question": "Dame el texto exacto del párrafo 9 del FR/Bar.",
+      "response": {
+        "reply": "Puedo orientar sobre familias de formularios y fuentes públicas, pero no tengo acceso autenticado ni el contenido completo y vigente de todas las bibliotecas de Florida Realtors, MIAMI o Stellar. Un formulario MLS de listado no es por sí solo un contrato de compraventa. Para explicar una cláusula concreta necesito nombre/código, versión o revisión y el fragmento anonimizado, sin nombres, firmas, cuentas o datos privados. No inventaré el texto ni asumiré que una copia antigua es la actual. Sabatino puede consultar la copia autorizada en su servicio de miembro; acceso personal no equivale a conexión automática del chat.\n\nFlorida Realtors — catálogo oficial\nhttps://www.floridarealtors.org/tools-research/form-descriptions\nAcceso autorizado\nhttps://www.floridarealtors.org/tools-research/form-simplicity\n\nMIAMI REALTORS — catálogo oficial\nhttps://miamirealtors.zendesk.com/hc/en-us/articles/9946105013787-MLS-FORMS-APPLICATIONS\nAcceso autorizado\nhttps://miamirealtors.zendesk.com/hc/en-us/articles/41789667134747-Form-Simplicity-Questions-and-Answers\n\nStellar MLS — catálogo oficial\nhttps://www.stellarmls.com/documents/listing-forms\nAcceso autorizado\nhttps://www.stellarmls.com/products/transactiondesk\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      }
+    },
+    {
+      "question": "¿El CRSP siempre cuenta días hábiles?",
+      "response": {
+        "reply": "Identifica formulario, versión/revisión, cláusula de tiempo, fecha inicial, dirección del conteo y modificaciones. No apliques una regla universal: FR/Bar y CRSP deben leerse por versión. Florida Realtors informó en julio de 2026 que el CRSP actualizado cambió de días hábiles a calendario; versiones antiguas difieren. Confirma también hora límite y excepciones antes de calcular. ¿Qué formulario y revisión tienes?\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/07/crsp-contract-flying-under-radar\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      }
+    }
+  ]
+}

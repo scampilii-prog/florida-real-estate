@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 3, preguntas 21–30, Oferta y contrato. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 4, preguntas 31–40, Inspecciones y condición. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -423,3 +423,16 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - [Informe y respuestas completas](ask-tino-bank-group2-2026-11-08.md); [JSON antes/después y criterios](ask-tino-bank-group2-2026-11-08-results.json). Banco actualizado: grupos 1 y 2 comprobados, grupos 3–10 pendientes.
 - **Siguiente grupo: 3, preguntas 21–30 — Oferta y contrato.** Ante «sigue» o «seguimos con Ask Tino», leer esta memoria y ejecutar ese grupo, revisar y corregir con evidencia, sin pedir resumen al usuario. Al finalizar, avanzar el indicador al grupo siguiente.
 - No se modificaron OceanFL ni My Closing Timeline.
+
+
+## 28. Grupo 3 completado y alcance de formularios — 8 de noviembre de 2026
+
+- Tino pidió hacer las preguntas 21–30 y conocer/acceder a contratos Florida Realtors, MIAMI y Stellar. Se hicieron diez consultas públicas antes y después. Antes 0/10 condiciones programadas (omisiones/desvíos, no falsedad de toda frase); después 10/10 y lectura completa.
+- Nueva functions/api/ask-tino-contracts.js: precio/neto, contingencias, escalamiento, fechas, conteo por revisión, feriados, extensión, contingencia de venta, backup y firma electrónica/notarización. Español; sin cambio de diseño, cliente o esquema de criterios.
+- Implementación aa90a6d9d53e4290fb50a9c38a5fd66861784d7d: Cloudflare Pages, rules y structural-audit success. Locales, variantes y todas las regresiones anteriores aprobadas. Tres consultas públicas extra: límite de biblioteca completa, texto exacto de párrafo sin documento y CRSP por versión. No prueba visual del widget en esta ronda.
+- Hallazgo importante: guía general FR describe antiguo CRSP hábil; artículo oficial julio 2026 informa calendario en versión actualizada. No dar regla única por sigla ni fecha sin revisión aplicable. No trasladar automáticamente extensión de cierre a financiación/inspección.
+- [Diez respuestas y resultados](ask-tino-bank-group3-2026-11-08.md); [JSON antes/después y pruebas extra](ask-tino-bank-group3-2026-11-08-results.json).
+- **Acceso de formularios sigue siendo parcial:** no hay biblioteca privada completa autenticada de Form Simplicity/MIAMI/TransactionDesk en Ask Tino. Páginas FR de descripciones/actualizaciones redirigieron a login. Índices públicos MIAMI y Stellar observados; PDF MIAMI de publicidad leído (revisión 2021, sin asumir vigencia actual); PDF Residential Stellar devolvió 403 y no se verificó. No afirmar contenido leído de cada documento ni conexión realizada.
+- [Inventario de fuentes y acceso real](ask-tino-forms-access-2026-11-08.md). AGENTS.md incorpora la regla permanente solicitada por Tino: emisor/código/revisión/addenda, distinguir metadata de cuerpo leído, no inventar cláusulas ni almacenar documentos privados de clientes o credenciales en GitHub.
+- La API pública de Form Simplicity fue localizada como documentación, sin credenciales/alcance de producción ni derechos de publicación; no se llamó a acciones de transacción. No se encontró conector específico instalado. El acceso completo requiere integración/autorización real del proveedor; membresía personal no conecta el asistente automáticamente.
+- Banco: grupos 1–3 comprobados; grupos 4–10 pendientes. **Siguiente: grupo 4, preguntas 31–40 — Inspecciones y condición.** Continuar leyendo estado vigente y sin pedir a Tino que copie preguntas. OceanFL y My Closing Timeline intactos.

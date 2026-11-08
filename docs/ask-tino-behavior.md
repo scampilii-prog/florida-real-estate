@@ -127,7 +127,7 @@ Run node scripts/check-ask-tino-owner-round5.mjs, optionally --live. Ten exact s
 
 ## Curated lookup and useful fallback — 2026-11-08
 
-The first ten questions in docs/ask-tino-question-bank-100.md exercise new Spanish topic lookup: APR, PMI, mortgage escrow, Loan Estimate, Closing Disclosure, lead, radon, 1031, rental deposits and portability. The other nine groups are untested question candidates, not certified answers. The catalog is finite, not an open-web search or a claim to answer every real estate question.
+The first ten questions in docs/ask-tino-question-bank-100.md exercise new Spanish topic lookup: APR, PMI, mortgage escrow, Loan Estimate, Closing Disclosure, lead, radon, 1031, rental deposits and portability. Consult the current bank status for untested groups; question candidates are not certified answers. The catalog is finite, not an open-web search or a claim to answer every real estate question.
 
 After policy, known guidance and core replies, functions/api/ask-tino-grounded.js consults one selected public source through the existing bounded retriever. Requests use fixed catalog URLs, manual redirects, limited bytes/time and challenge detection; visitor questions and history are not sent to those source sites. A small evidence-only request may go to the already configured AI Worker, with a 10-second timeout and a prompt under 1,000 characters. Returned JSON is checked for support flag, bounded length, unexpected URLs/numbers and existing output policy. This reduces errors but is not proof that a model summary is correct or complete.
 
@@ -143,3 +143,12 @@ All client loaders share research1 cache versions; the core state schema remains
 Questions 11–20 now route through functions/api/ask-tino-buyer-preparation.js for Spanish general guidance before generic topic replies, while existing sensitive-input and protected-steering policies retain priority. Topics: budget beyond down payment, lender terminology/conditions, employment change, car debt, condo project review, genuine gift funds, foreign funds, co-ownership, trust authority and cash-purchase preparation. References are editorial, not live source checks or individualized underwriting. Fannie Mae program rules are not described as universal law. Do not ask nationality by default for a general cash-purchase checklist; do not collect financial or identity documents in chat.
 
 The ten exact cases run sequentially in scripts/check-ask-tino-bank-group2.mjs; --live tests production. Questions/responses before and after, state and publication evidence are in docs/ask-tino-bank-group2-2026-11-08.md and its JSON. Next untested bank group: 3 (21–30). This does not change core criteria schema or claim new translations.
+
+
+## Contract bank group 3 and forms access — 2026-11-08
+
+Questions 21–30 use functions/api/ask-tino-contracts.js for Spanish guidance and provider references. Require form identity/revision and modifications before specific clause or date analysis. Public metadata is not full authenticated access to Florida Realtors, MIAMI or Stellar libraries. Exact text requests without the document receive a scope explanation and request for a redacted excerpt, not an invented clause. MLS listing forms are distinct from purchase contracts.
+
+The official July 2026 CRSP article describes updated calendar-day counting, while a general legal-library page still describes older business-day rules. The assistant does not apply a fixed rule solely from the CRSP name. Signed revision and applicable clause control. No current full forms library has been ingested or authenticated.
+
+See docs/ask-tino-forms-access-2026-11-08.md for source/access status and docs/ask-tino-bank-group3-2026-11-08.md for ten before/after cases and three live version/access probes. Next group: 4, questions 31–40. Existing privacy/fair-housing guards remain first. No new translations or visitor document-upload workflow.

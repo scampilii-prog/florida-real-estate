@@ -19,3 +19,8 @@ Hacer las preguntas al servicio público con datos sintéticos, revisar las resp
 - Comunicación breve en español; informar resultados comprobados y enlaces útiles.
 
 Estas instrucciones orientan el trabajo al recibir una solicitud; no crean tareas programadas ni actividad automática fuera de una sesión.
+
+
+## Formularios y contratos: instrucción permanente de Tino
+
+Leer docs/ask-tino-forms-access-2026-11-08.md antes de ampliar conocimiento de Florida Realtors, MIAMI o Stellar. Distinguir catálogo, descripción pública, cuerpo efectivamente leído y biblioteca de miembro autenticada. No afirmar acceso completo o vigencia de cada formulario sin evidencia. Identificar código/revisión y addenda antes de explicar cláusulas o calcular plazos; no usar una regla única para todo CRSP o FR/Bar. Para documentos privados falta conexión/autorización real; no guardar credenciales ni contratos ejecutados de clientes en el repositorio. Mantener el inventario y las limitaciones al continuar en otro chat.
