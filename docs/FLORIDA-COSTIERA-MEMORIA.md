@@ -492,3 +492,12 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Código bafa7fe9c2f06e57358c961fa22b75a1818e44d5, refinamiento ccbb954979784272fc47be6d39f73dcb8f47e300 y ajuste de negación d481c726d0ce500be041f129097337880d685ea0. Cloudflare Pages, rules y structural-audit success antes de repetir final; suites locales y adversarial 31/31. Sin nuevo QA visual de widget ni nuevas traducciones.
 - Evidencia: docs/ask-tino-full-audit-2026-11-08.md y cuatro JSON con las cien antes/después y trampas antes/después íntegras. Esta vez sí se repitieron las 100 completas en producción después de cambios, además de 31 casos adicionales; 131 finales. Scripts audit-ask-tino-100.mjs y check-ask-tino-adversarial.mjs.
 - Banco inicial sigue completo. Permanecen pendientes biblioteca privada Florida Realtors/MIAMI/Stellar, revisión de Worker externo/datos y entrega real del correo. No afirmar acceso contractual completo ni exención jurídica universal; no modificar OceanFL ni My Closing Timeline.
+
+
+## 35. Pregunta de Tino sobre open house — 2026-11-08
+
+- Se consultó al servicio público su propósito, efectividad, pros/contras y beneficio para vendedor. Respuesta inicial parcialmente útil; faltaban seguridad/privacidad, límites explícitos y medición de beneficio. Se corrigió.
+- Nueva guía española ask-tino-open-house.js: exposición/visitas/comentarios; preparación, tiempo/costos y riesgos; sin garantía de venta, rapidez o precio; seguimiento por interés concreto, segundas visitas, ofertas e informe al propietario. Recoger contactos del agente no demuestra beneficio de venta. Sin estadísticas inventadas.
+- Código cde9a1c727c992d124d7d68f9d81ad0c24408262. Cloudflare Pages, rules y structural-audit success. Suites locales aprobadas y cinco variantes públicas 5/5, incluida garantía de siete días. No otro replay público de las cien ni nueva revisión visual del widget.
+- docs/ask-tino-open-house-2026-11-08.md y .json registran pregunta/respuesta original, cinco posteriores, fuentes y cambios. Script check-ask-tino-open-house.mjs, opcional --live.
+- Mantener pendientes de formularios privados, Worker externo/prácticas de datos y recepción real de correo. No modificar OceanFL ni My Closing Timeline.

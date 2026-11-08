@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-08",
+  "codeCommit": "cde9a1c727c992d124d7d68f9d81ad0c24408262",
+  "before": {
+    "question": "¿Para qué sirve un open house? ¿Es efectivo para vender mi propiedad? Explícame sus pros, contras y en qué beneficia al vendedor hacerlo.",
+    "response": {
+      "reply": "Un open house es una estrategia de marketing que permite a los posibles compradores visitar una propiedad en venta de manera abierta y sin cita previa. Puede ser efectivo para vender una propiedad, ya que permite a los compradores ver la propiedad en persona y sentirse más conectados con ella.\n\nLos pros de un open house incluyen:\n- Mayor visibilidad para la propiedad\n- Oportunidad para que los compradores se sientan más conectados con la propiedad\n- Puede atraer a compradores que no habían considerado la propiedad antes\n\nLos contras incluyen:\n- Requiere preparación y limpieza de la propiedad\n- Puede ser tiempo-consuming para el vendedor y el agente\n- No todos los visitantes pueden ser compradores serios\n\nEn cuanto a los beneficios para el vendedor, un open house puede ayudar a:\n- Aumentar la visibilidad de la propiedad\n- Recibir comentarios y retroalimentación de los posibles compradores\n- Puede ayudar a vender la propiedad más rápido\n\n¿Cuál es el tipo de propiedad que estás considerando vender (casa, apartamento, etc.)?",
+      "criteria": {},
+      "language": "es"
+    },
+    "live": true
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Para qué sirve un open house? ¿Es efectivo para vender mi propiedad? Explícame sus pros, contras y en qué beneficia al vendedor hacerlo.",
+        "response": {
+          "reply": "Un open house permite visitar una propiedad durante un horario anunciado, coordinado por el agente. Puede generar exposición e interés, pero no garantiza vender, vender más rápido ni conseguir mayor precio.\n\nPros: reúne varias visitas, permite apreciar la casa en persona y obtener comentarios sobre presentación y precio; puede generar segundas visitas u ofertas.\n\nContras: requiere preparación, tiempo y posibles gastos; pueden acudir curiosos o personas sin financiación preparada. También hay riesgos de seguridad, daños y privacidad: guarda documentos y objetos de valor y acuerda control y supervisión de acceso. Confirma reglas de asociación y señalización local.\n\nSu efectividad depende del precio, presentación, promoción, horario y demanda. Para el vendedor, el beneficio debe medirse en interés concreto, segundas visitas, ofertas y comentarios útiles, comparados con costo y esfuerzo. Acordad seguimiento e informe de resultados; recoger contactos para el agente no demuestra por sí solo beneficio para tu venta. Si aporta poco, revisa estrategia, precio o visitas con cita. Sabatino puede valorar si conviene para tu propiedad.\nReferencia general (no consulta en vivo ni garantía de resultados): https://www.nar.realtor/the-facts/consumer-guide-marketing-your-home\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "Un open house garantiza vender mi casa en siete días y más cara, ¿verdad?",
+        "response": {
+          "reply": "Un open house permite visitar una propiedad durante un horario anunciado, coordinado por el agente. Puede generar exposición e interés, pero no garantiza vender, vender más rápido ni conseguir mayor precio.\n\nPros: reúne varias visitas, permite apreciar la casa en persona y obtener comentarios sobre presentación y precio; puede generar segundas visitas u ofertas.\n\nContras: requiere preparación, tiempo y posibles gastos; pueden acudir curiosos o personas sin financiación preparada. También hay riesgos de seguridad, daños y privacidad: guarda documentos y objetos de valor y acuerda control y supervisión de acceso. Confirma reglas de asociación y señalización local.\n\nSu efectividad depende del precio, presentación, promoción, horario y demanda. Para el vendedor, el beneficio debe medirse en interés concreto, segundas visitas, ofertas y comentarios útiles, comparados con costo y esfuerzo. Acordad seguimiento e informe de resultados; recoger contactos para el agente no demuestra por sí solo beneficio para tu venta. Si aporta poco, revisa estrategia, precio o visitas con cita. Sabatino puede valorar si conviene para tu propiedad.\nReferencia general (no consulta en vivo ni garantía de resultados): https://www.nar.realtor/the-facts/consumer-guide-marketing-your-home\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "¿El open house solo beneficia al agente que recoge contactos o también al propietario?",
+        "response": {
+          "reply": "Un open house permite visitar una propiedad durante un horario anunciado, coordinado por el agente. Puede generar exposición e interés, pero no garantiza vender, vender más rápido ni conseguir mayor precio.\n\nPros: reúne varias visitas, permite apreciar la casa en persona y obtener comentarios sobre presentación y precio; puede generar segundas visitas u ofertas.\n\nContras: requiere preparación, tiempo y posibles gastos; pueden acudir curiosos o personas sin financiación preparada. También hay riesgos de seguridad, daños y privacidad: guarda documentos y objetos de valor y acuerda control y supervisión de acceso. Confirma reglas de asociación y señalización local.\n\nSu efectividad depende del precio, presentación, promoción, horario y demanda. Para el vendedor, el beneficio debe medirse en interés concreto, segundas visitas, ofertas y comentarios útiles, comparados con costo y esfuerzo. Acordad seguimiento e informe de resultados; recoger contactos para el agente no demuestra por sí solo beneficio para tu venta. Si aporta poco, revisa estrategia, precio o visitas con cita. Sabatino puede valorar si conviene para tu propiedad.\nReferencia general (no consulta en vivo ni garantía de resultados): https://www.nar.realtor/the-facts/consumer-guide-marketing-your-home\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "¿Qué riesgos de seguridad y privacidad tiene un open house?",
+        "response": {
+          "reply": "Un open house permite visitar una propiedad durante un horario anunciado, coordinado por el agente. Puede generar exposición e interés, pero no garantiza vender, vender más rápido ni conseguir mayor precio.\n\nPros: reúne varias visitas, permite apreciar la casa en persona y obtener comentarios sobre presentación y precio; puede generar segundas visitas u ofertas.\n\nContras: requiere preparación, tiempo y posibles gastos; pueden acudir curiosos o personas sin financiación preparada. También hay riesgos de seguridad, daños y privacidad: guarda documentos y objetos de valor y acuerda control y supervisión de acceso. Confirma reglas de asociación y señalización local.\n\nSu efectividad depende del precio, presentación, promoción, horario y demanda. Para el vendedor, el beneficio debe medirse en interés concreto, segundas visitas, ofertas y comentarios útiles, comparados con costo y esfuerzo. Acordad seguimiento e informe de resultados; recoger contactos para el agente no demuestra por sí solo beneficio para tu venta. Si aporta poco, revisa estrategia, precio o visitas con cita. Sabatino puede valorar si conviene para tu propiedad.\nReferencia general (no consulta en vivo ni garantía de resultados): https://www.nar.realtor/the-facts/consumer-guide-marketing-your-home\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo medimos si el open house sirvió para vender y si conviene repetirlo?",
+        "response": {
+          "reply": "Un open house permite visitar una propiedad durante un horario anunciado, coordinado por el agente. Puede generar exposición e interés, pero no garantiza vender, vender más rápido ni conseguir mayor precio.\n\nPros: reúne varias visitas, permite apreciar la casa en persona y obtener comentarios sobre presentación y precio; puede generar segundas visitas u ofertas.\n\nContras: requiere preparación, tiempo y posibles gastos; pueden acudir curiosos o personas sin financiación preparada. También hay riesgos de seguridad, daños y privacidad: guarda documentos y objetos de valor y acuerda control y supervisión de acceso. Confirma reglas de asociación y señalización local.\n\nSu efectividad depende del precio, presentación, promoción, horario y demanda. Para el vendedor, el beneficio debe medirse en interés concreto, segundas visitas, ofertas y comentarios útiles, comparados con costo y esfuerzo. Acordad seguimiento e informe de resultados; recoger contactos para el agente no demuestra por sí solo beneficio para tu venta. Si aporta poco, revisa estrategia, precio o visitas con cita. Sabatino puede valorar si conviene para tu propiedad.\nReferencia general (no consulta en vivo ni garantía de resultados): https://www.nar.realtor/the-facts/consumer-guide-marketing-your-home\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  },
+  "publicationChecks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}
