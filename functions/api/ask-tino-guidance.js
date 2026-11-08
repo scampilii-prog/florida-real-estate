@@ -1,3 +1,4 @@
+import {propertyDiligence} from './ask-tino-property-diligence.js';
 import {floridaLawGuidance} from './ask-tino-florida-laws.js';
 import {buildingGuidance} from './ask-tino-building-guidance.js';
 import {condoGuidance} from './ask-tino-condo-guidance.js';
@@ -65,6 +66,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const property=propertyDiligence(message,lang);if(property)return property;
  const law=floridaLawGuidance(message,lang);if(law)return law;
  const building=buildingGuidance(message,lang);if(building)return building;
  const condo=condoGuidance(message,state,lang);if(condo)return condo;
