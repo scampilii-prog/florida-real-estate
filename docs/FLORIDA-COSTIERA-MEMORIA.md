@@ -501,3 +501,10 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Código cde9a1c727c992d124d7d68f9d81ad0c24408262. Cloudflare Pages, rules y structural-audit success. Suites locales aprobadas y cinco variantes públicas 5/5, incluida garantía de siete días. No otro replay público de las cien ni nueva revisión visual del widget.
 - docs/ask-tino-open-house-2026-11-08.md y .json registran pregunta/respuesta original, cinco posteriores, fuentes y cambios. Script check-ask-tino-open-house.mjs, opcional --live.
 - Mantener pendientes de formularios privados, Worker externo/prácticas de datos y recepción real de correo. No modificar OceanFL ni My Closing Timeline.
+
+
+## 36. Open house: observación de Tino sobre vecinos — 2026-11-08
+
+- Tino aprobó incorporar que algunos visitantes pueden ser vecinos comparando mejoras/distribución/precio (“CMA mental”) y que el evento hace visible el trabajo del agente y puede generar contactos. Sin generalizar a todos ni atribuir intención de engaño; comparación informal no es tasación. Mantiene evaluación de beneficio concreto para vendedor.
+- Código 50eb8c9a890dc0a40310b462c1a3cda8287614dd y corrección de plural 6c7e69496e3c4e68462c3dcd6f6a349e4d10bf36. Cloudflare Pages y rules success. Suites locales Ask Tino aprobadas; siete variantes públicas 7/7, leídas completas. Sin nuevo QA visual ni replay público del banco entero.
+- Evidencia docs/ask-tino-open-house-owner-note-2026-11-08.md y .json. No estadísticas nuevas, no cambios en bibliotecas privadas/Worker/correo pendientes. OceanFL y My Closing Timeline intactos.
