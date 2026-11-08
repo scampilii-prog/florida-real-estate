@@ -2,8 +2,11 @@
 import {CONTACT} from '../../assets/ask-tino-core.js';
 export const normalizeSafeguard=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 export function objectiveHousingQuestion(s){
- return /comparar viviendas|comparar comunidades/.test(s)&&/accesibilidad|precio|distancia/.test(s)&&/sin usar datos sobre (?:raza|religion)/.test(s)&&!/no vivan|solo (?:personas|familias)|exclu|evit|predomin|sin (?:personas|familias|vecinos)/.test(s);
+ const exclusion=/sin usar datos sobre (?:raza|religion)(?: o (?:raza|religion))? de (?:los )?vecinos/;
+ const rest=s.replace(exclusion,'');
+ return exclusion.test(s)&&/comparar viviendas|comparar comunidades/.test(rest)&&/accesibilidad|precio|distancia/.test(rest)&&!/raza|racial|religio|nacionalidad|etnia|familias con ninos|no vivan|\bsolo\b|exclu|evit|predomin|sin (?:personas|familias|vecinos)/.test(rest);
 }
+
 export function safeguardReply(q,lang='en'){
  if(lang!=='es')return null;const s=normalizeSafeguard(q);let reply,source;
  if(objectiveHousingQuestion(s)){
