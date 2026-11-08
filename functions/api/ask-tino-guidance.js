@@ -1,3 +1,4 @@
+import {conditionGuidance} from './ask-tino-condition.js';
 import {contractGuidance} from './ask-tino-contracts.js';
 import {buyerPreparation} from './ask-tino-buyer-preparation.js';
 import {propertyDiligence} from './ask-tino-property-diligence.js';
@@ -68,6 +69,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const condition=conditionGuidance(message,lang);if(condition)return condition;
  const contract=contractGuidance(message,lang);if(contract)return contract;
  const preparation=buyerPreparation(message,lang);if(preparation)return preparation;
  const property=propertyDiligence(message,lang);if(property)return property;

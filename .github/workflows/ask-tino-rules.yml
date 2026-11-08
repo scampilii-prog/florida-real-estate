@@ -43,3 +43,4 @@ jobs:
       - run: node scripts/check-ask-tino-grounded-live.mjs
       - run: node scripts/check-ask-tino-bank-group2.mjs
       - run: node scripts/check-ask-tino-bank-group3.mjs
+      - run: node scripts/check-ask-tino-bank-group4.mjs
