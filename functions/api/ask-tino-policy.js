@@ -20,7 +20,8 @@ export function policyReply(q,state,lang='en'){
  it:'Non inviare qui documenti di identità o estratti conto. La chat non è un canale sicuro per documenti. Servizi esterni possono elaborare i messaggi; non posso promettere riservatezza, conservazione o cancellazione da parte loro. Concorda prima con Sabatino un canale adeguato per i documenti della transazione.',
  pt:'Não envie documentos de identidade nem extratos bancários aqui. O chat não é um canal seguro para documentos. Serviços externos podem processar mensagens; não posso prometer confidencialidade, retenção ou exclusão por esses provedores. Combine antes com Sabatino um canal adequado para os documentos.'
  }[lang]||t.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
- const seller=sellerGuidance(q,state,lang);if(seller)return seller;
+ const leaseTermination=lang==='es'&&/terminar.*alquiler.*vender/.test(s);
+ const seller=leaseTermination?null:sellerGuidance(q,state,lang);if(seller)return seller;
  const propertyPrivacy=/privacy|privacidad|riservatezza|privacidade/.test(s)&&/home|house|casa|vivienda|immobile|imovel/.test(s)&&!/data|datos|dati|dados|chat|conversa|policy|politica|mensaje|message/.test(s);
  if(!propertyPrivacy&&/\b(privacy|privacidad|privacidade|riservatezza|datos personales|dati personali|personal data|dados pessoais)\b/.test(s))return ({
  en:'Read the privacy policy before sharing personal information. Do not enter passwords, identity documents or bank details here. For privacy questions, contact Sabatino.',
@@ -30,6 +31,8 @@ export function policyReply(q,state,lang='en'){
  }[lang]||L.en.unknown)+'\nhttps://floridacostiera.com/privacy'+contact;
 
  if(/guard.*convers|save.*conversation|remember.*tomorrow|ricord.*domani|conversa.*amanha|remember across|save my criteria|guardar mis criterios|recordaras manana|ricorderai domani|salva i criteri|lembra amanha/.test(s))return t.reset+'\nhttps://floridacostiera.com/privacy#ask-tino-privacy';
+ // General CMA/appraisal education may proceed; actual valuations remain a professional handoff.
+ if(lang==='es'&&/opinion.*precio.*tasacion/.test(s))return null;
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
  if(!/no busco|not looking|non cerco|nao procuro/.test(s)&&/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;

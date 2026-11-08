@@ -1,3 +1,6 @@
+import {rentalReview} from './ask-tino-rental-review.js';
+import {landReview} from './ask-tino-land-review.js';
+import {closingReview} from './ask-tino-closing-review.js';
 import {titleReview} from './ask-tino-title-review.js';
 import {insuranceReview} from './ask-tino-insurance-review.js';
 import {associationReview} from './ask-tino-association-review.js';
@@ -72,6 +75,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const bank=rentalReview(message,lang)||landReview(message,lang)||closingReview(message,lang);if(bank)return bank;
  const title=titleReview(message,lang);if(title)return title;
  const insurance=insuranceReview(message,lang);if(insurance)return insurance;
  const association=associationReview(message,lang);if(association)return association;

@@ -47,3 +47,6 @@ jobs:
       - run: node scripts/check-ask-tino-bank-group5.mjs
       - run: node scripts/check-ask-tino-bank-group6.mjs
       - run: node scripts/check-ask-tino-bank-group7.mjs
+      - run: node scripts/check-ask-tino-bank-group8.mjs
+      - run: node scripts/check-ask-tino-bank-group9.mjs
+      - run: node scripts/check-ask-tino-bank-group10.mjs
