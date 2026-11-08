@@ -352,3 +352,14 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 - Implementación 70f25d6b9c8bb9bafdfef9cfe57a003cd508ca94: Cloudflare Pages, rules y structural-audit success. Diez preguntas públicas posteriores: 10/10, con lectura completa; suites anteriores y variantes locales aprobadas.
 - [Informe de edificios y diez respuestas completas](ask-tino-building-documents-2026-11-08.md); [JSON público](ask-tino-building-documents-2026-11-08-results.json).
 - No hubo verificación visual del widget en esta revisión. Cobertura finita, sin garantía de toda respuesta ni certificación de un edificio. No se modificaron OceanFL ni My Closing Timeline.
+
+
+## 22. Diez preguntas sobre reglas de Florida — 8 de noviembre de 2026
+
+- Usuario pidió preguntar, reexaminar y corregir las diez sobre aplazamiento SIRS, pausa de reservas, reutilización de inspección visual, documentos/plazos de condominio, desarrollador, declaración de inundaciones, riesgo residual, edad del techo y resumen HOA.
+- Se conservaron respuestas públicas antes/después en [JSON](ask-tino-florida-laws-2026-11-08-results.json) y las diez posteriores completas en [informe](ask-tino-florida-laws-2026-11-08.md).
+- Antes: omisiones y desvíos en las diez; no significa que cada frase fuera falsa. Después: 10/10 comprobaciones públicas y lectura completa. Diez locales, variantes, protección de datos, seis rondas anteriores, edificios, 60 turnos, privacidad e integridad aprobadas.
+- Nueva orientación en español: functions/api/ask-tino-florida-laws.js antes de guías genéricas, después de los controles de seguridad existentes. No afirmar nueva cobertura traducida.
+- Commit 221a6c732f68c3baab06c23187d9ab6904cb25aa: Cloudflare Pages, rules y structural-audit success. Fuentes oficiales 2026 consultadas y enlazadas en informe.
+- Distinguir cambios recientes de obligaciones antiguas vigentes; no atribuir todo a una sola ley del gobernador. No determinar derechos o vencimientos de un comprador concreto sin documentos y fechas. No hubo prueba visual del widget en esta ronda.
+- El intento de reset local fue rechazado automáticamente; se conservó el trabajo anterior y se usó un worktree separado. No se descartaron commits ni archivos locales. OceanFL y My Closing Timeline intactos.
