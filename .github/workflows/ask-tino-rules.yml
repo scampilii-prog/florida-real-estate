@@ -51,3 +51,4 @@ jobs:
       - run: node scripts/check-ask-tino-bank-group9.mjs
       - run: node scripts/check-ask-tino-bank-group10.mjs
       - run: node scripts/check-ask-tino-adversarial.mjs
+      - run: node scripts/check-ask-tino-open-house.mjs

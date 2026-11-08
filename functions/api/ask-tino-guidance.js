@@ -1,3 +1,4 @@
+import {openHouseGuidance} from './ask-tino-open-house.js';
 import {rentalReview} from './ask-tino-rental-review.js';
 import {landReview} from './ask-tino-land-review.js';
 import {closingReview} from './ask-tino-closing-review.js';
@@ -75,6 +76,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const openHouse=openHouseGuidance(message,lang);if(openHouse)return openHouse;
  const bank=rentalReview(message,lang)||landReview(message,lang)||closingReview(message,lang);if(bank)return bank;
  const title=titleReview(message,lang);if(title)return title;
  const insurance=insuranceReview(message,lang);if(insurance)return insurance;
