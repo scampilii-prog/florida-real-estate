@@ -1,0 +1,256 @@
+{
+  "date": "2026-11-08",
+  "codeCommit": "5606105079ee9a38f3544eb14abc71cde2af93ea",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo identifico qué edificio y fase cubre un informe de inspección?",
+        "response": {
+          "reply": "Para identificar el edificio y la fase cubierta por un informe de inspección, generalmente debes buscar la información específica del proyecto o desarrollo en el informe mismo o en la documentación relacionada. ¿Cuál es el tipo de propiedad o proyecto que estás inspeccionando (por ejemplo, condominio, casa, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /553/. Input:\n\n'Para identificar el edificio y la fase cubierta por un informe de inspección, generalmente debes buscar la información específica del proyecto o desarrollo en el informe mismo o en la documentación relacionada. ¿Cuál es el tipo de propiedad o proyecto que estás inspeccionando (por ejemplo, condominio, casa, etc.)?'\n",
+        "bankNumber": 41
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre reservas contables y dinero realmente disponible?",
+        "response": {
+          "reply": "La diferencia entre reservas contables y dinero realmente disponible es que las reservas contables se refieren a los fondos asignados o presupuestados para un propósito específico, mientras que el dinero realmente disponible se refiere a los fondos líquidos y accesibles para ser utilizados.\n\n¿En qué contexto específico de la propiedad inmobiliaria te gustaría saber más sobre esta diferencia?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /concili/. Input:\n\n'La diferencia entre reservas contables y dinero realmente disponible es que las reservas contables se refieren a los fondos asignados o presupuestados para un propósito específico, mientras que el dinero realmente disponible se refiere a los fondos líquidos y accesibles para ser utilizados.\\n' +\n  '\\n' +\n  '¿En qué contexto específico de la propiedad inmobiliaria te gustaría saber más sobre esta diferencia?'\n",
+        "bankNumber": 42
+      },
+      {
+        "number": 3,
+        "question": "¿Cómo comparo el presupuesto aprobado con el propuesto?",
+        "response": {
+          "reply": "Para comparar el presupuesto aprobado con el propuesto, generalmente se necesita conocer los detalles específicos de ambos presupuestos, como los montos asignados a diferentes categorías y las fechas de vigencia. ¿Cuál es el contexto específico en el que deseas hacer esta comparación, como por ejemplo, en una asociación de propietarios o en un proyecto de construcción?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /acta/. Input:\n\n'Para comparar el presupuesto aprobado con el propuesto, generalmente se necesita conocer los detalles específicos de ambos presupuestos, como los montos asignados a diferentes categorías y las fechas de vigencia. ¿Cuál es el contexto específico en el que deseas hacer esta comparación, como por ejemplo, en una asociación de propietarios o en un proyecto de construcción?'\n",
+        "bankNumber": 43
+      },
+      {
+        "number": 4,
+        "question": "¿Qué actas pueden revelar reparaciones aún no presupuestadas?",
+        "response": {
+          "reply": "Para revelar posibles reparaciones aún no presupuestadas, es posible que debas revisar actas de reuniones de la asociación de propietarios (HOA) o documentos de mantenimiento. Estos documentos pueden contener información sobre problemas identificados pero no aún abordados.\n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /contratos/. Input:\n\n'Para revelar posibles reparaciones aún no presupuestadas, es posible que debas revisar actas de reuniones de la asociación de propietarios (HOA) o documentos de mantenimiento. Estos documentos pueden contener información sobre problemas identificados pero no aún abordados.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?'\n",
+        "bankNumber": 44
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar si la asociación tiene muchos propietarios morosos?",
+        "response": {
+          "reply": "Para entender mejor la situación de la asociación de propietarios con muchos propietarios morosos, debes verificar los estados financieros y las actas de las reuniones de la junta directiva. Estos documentos pueden proporcionar información sobre la cantidad de propietarios morosos, el impacto en las finanzas de la asociación y cualquier plan para abordar la situación.\n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa adosada, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /morosidad/. Input:\n\n'Para entender mejor la situación de la asociación de propietarios con muchos propietarios morosos, debes verificar los estados financieros y las actas de las reuniones de la junta directiva. Estos documentos pueden proporcionar información sobre la cantidad de propietarios morosos, el impacto en las finanzas de la asociación y cualquier plan para abordar la situación.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa adosada, etc.)?'\n",
+        "bankNumber": 45
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo averiguo si hay una votación pendiente antes de cerrar?",
+        "response": {
+          "reply": "Para averiguar si hay una votación pendiente antes de cerrar, es recomendable revisar los documentos y comunicaciones de la asociación de propietarios (HOA) o consultar directamente con ellos. También puede ser útil revisar las actas de las reuniones pasadas y presentes de la HOA para estar al tanto de cualquier votación pendiente.\n\n¿Cuál es el tipo de propiedad que está considerando (por ejemplo, condominio, casa unifamiliar, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /agenda/. Input:\n\n'Para averiguar si hay una votación pendiente antes de cerrar, es recomendable revisar los documentos y comunicaciones de la asociación de propietarios (HOA) o consultar directamente con ellos. También puede ser útil revisar las actas de las reuniones pasadas y presentes de la HOA para estar al tanto de cualquier votación pendiente.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que está considerando (por ejemplo, condominio, casa unifamiliar, etc.)?'\n",
+        "bankNumber": 46
+      },
+      {
+        "number": 7,
+        "question": "¿Qué reviso si el seguro del edificio tiene un deducible alto?",
+        "response": {
+          "reply": "Si el seguro del edificio tiene un deducible alto, debes revisar el presupuesto de la asociación de propietarios para ver cómo se manejarían los costos de reparación o reemplazo en caso de un siniestro. También sería útil revisar los estatutos y reglamentos de la asociación para entender cómo se toman decisiones sobre el seguro y el mantenimiento del edificio.\n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /HO.6/. Input:\n\n'Si el seguro del edificio tiene un deducible alto, debes revisar el presupuesto de la asociación de propietarios para ver cómo se manejarían los costos de reparación o reemplazo en caso de un siniestro. También sería útil revisar los estatutos y reglamentos de la asociación para entender cómo se toman decisiones sobre el seguro y el mantenimiento del edificio.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?'\n",
+        "bankNumber": 47
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo pedir si el edificio tuvo una orden de evacuación?",
+        "response": {
+          "reply": "Si el edificio tuvo una orden de evacuación, debes pedir información sobre el motivo de la evacuación, las reparaciones realizadas y cualquier informe de inspección o certificado de habitabilidad posterior. ¿Cuál es el tipo de propiedad que estás considerando (apartamento, casa, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /autoridad/. Input:\n\n'Si el edificio tuvo una orden de evacuación, debes pedir información sobre el motivo de la evacuación, las reparaciones realizadas y cualquier informe de inspección o certificado de habitabilidad posterior. ¿Cuál es el tipo de propiedad que estás considerando (apartamento, casa, etc.)?'\n",
+        "bankNumber": 48
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo verifico quién es dueño de un estacionamiento o depósito?",
+        "response": {
+          "reply": "Contenido de Florida Costiera\n\nNo encontré una página del sitio que coincida con suficiente precisión. Puedes consultar el mapa del sitio.\nhttps://floridacostiera.com/site-map\n\nPara orientación inmobiliaria personalizada: https://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /declaracion|declaración/. Input:\n\n'Contenido de Florida Costiera\\n' +\n  '\\n' +\n  'No encontré una página del sitio que coincida con suficiente precisión. Puedes consultar el mapa del sitio.\\n' +\n  'https://floridacostiera.com/site-map\\n' +\n  '\\n' +\n  'Para orientación inmobiliaria personalizada: https://floridacostiera.com/contact#tell-us-your-plans'\n",
+        "bankNumber": 49
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo confirmar sobre aprobación del comprador por la asociación?",
+        "response": {
+          "reply": "Para confirmar la aprobación del comprador por la asociación, generalmente debes verificar los requisitos y procedimientos específicos de la asociación de propietarios (HOA) de la propiedad en cuestión. Esto puede incluir la revisión de los documentos de la propiedad, como los estatutos de la asociación y las reglas de la comunidad.\n\n¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /prestamista/. Input:\n\n'Para confirmar la aprobación del comprador por la asociación, generalmente debes verificar los requisitos y procedimientos específicos de la asociación de propietarios (HOA) de la propiedad en cuestión. Esto puede incluir la revisión de los documentos de la propiedad, como los estatutos de la asociación y las reglas de la comunidad.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, condominio, casa unifamiliar, etc.)?'\n",
+        "bankNumber": 50
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo identifico qué edificio y fase cubre un informe de inspección?",
+        "response": {
+          "reply": "Coteja nombre legal del condominio, dirección, número de edificio, parcela o plano, fecha y anexos del informe con la unidad que compras. Distingue fase constructiva del proyecto de fase 1/fase 2 de la Milestone bajo F.S.553.899: no son lo mismo. Pide informes completos firmados y sellados, planos del alcance y confirmación escrita del ingeniero y la autoridad sobre qué estructuras y fases están incluidas o pendientes. No extrapoles el informe de una torre a otra ni confundas Milestone con SIRS. Un resumen favorable no acredita reparación ni seguridad de todos los edificios.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/553.899\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 41
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre reservas contables y dinero realmente disponible?",
+        "response": {
+          "reply": "Una reserva contable no equivale necesariamente a efectivo disponible para cualquier obra. Pide estados financieros recientes, extractos y conciliaciones bancarias obtenidos por el canal autorizado, detalle por fondo, inversiones y vencimientos, cuentas por cobrar, cuentas por pagar y compromisos de obras. Contrasta el saldo con restricciones de uso, SIRS y calendario de desembolsos; una línea de crédito disponible es deuda, no ahorro acumulado. Revisa préstamos y cualquier pausa o reducción de aportaciones con su aprobación y fundamento vigente: no supongas que toda reserva puede eliminarse por votación ni que toda pausa es ilegal. No compartas extractos ni datos bancarios en este chat; solicita revisión contable profesional.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 42
+      },
+      {
+        "number": 3,
+        "question": "¿Cómo comparo el presupuesto aprobado con el propuesto?",
+        "response": {
+          "reply": "Pide el presupuesto aprobado, acta y fecha de adopción, ejercicio al que corresponde y cualquier modificación; separa el propuesto, que aún puede cambiar. Compara por partida cuotas, seguros, mantenimiento, reservas/SIRS, préstamos, obras y derramas, e identifica a qué edificio o condominio corresponden. Contrasta también ejecución real y desviaciones del año actual. Pide importe y fecha efectiva de la cuota de tu unidad y supuestos de aumentos. Un presupuesto aprobado no garantiza gastos finales ni ausencia de nuevos cobros; el propuesto no prueba una obligación ya aprobada.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 43
+      },
+      {
+        "number": 4,
+        "question": "¿Qué actas pueden revelar reparaciones aún no presupuestadas?",
+        "response": {
+          "reply": "Solicita actas de junta, asambleas y comités pertinentes, avisos/agendas recientes, informes de ingeniería y SIRS, ofertas, contratos y comunicaciones oficiales sobre obras. Busca recomendaciones o estudios en curso, presupuestos solicitados, litigios y financiación discutida; distingue propuesta, aprobación, contratación y ejecución. Pide confirmación escrita de reparaciones pendientes y estimación para la unidad cuando exista. La ausencia de una reparación en las actas entregadas no garantiza que no haya obras futuras; cruza los documentos con administración y profesionales. Canaliza la solicitud por vendedor o representante autorizado, sin presumir acceso irrestricto del comprador a todos los registros.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.111\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 44
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar si la asociación tiene muchos propietarios morosos?",
+        "response": {
+          "reply": "Pide información agregada de morosidad: número y porcentaje de unidades, importes, antigüedad de cuotas ordinarias y derramas, tendencia, provisiones y medidas de cobro. No solicites nombres ni datos financieros personales de vecinos. Evalúa efecto en efectivo, mantenimiento, préstamos y posibles aumentos de cuotas con un contador. Distingue deudas de tu unidad, que título debe revisar, de la situación global de la asociación. El prestamista debe comprobar elegibilidad del proyecto para su programa; no hay un porcentaje universal que apruebe o rechace todos los préstamos. No puedo declarar insolvencia por un dato aislado.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://selling-guide.fanniemae.com/sel/b4-2.2-02/full-review-process\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 45
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo averiguo si hay una votación pendiente antes de cerrar?",
+        "response": {
+          "reply": "Pide por escrito a administración y vendedor avisos, agenda y calendario de reuniones o votaciones pendientes, incluidas derramas, presupuesto, reservas, préstamos y cambios de uso. Revisa actas y resultados cuando se celebren, y actualiza la consulta cerca del cierre; una conversación no acredita que nada esté pendiente. Obtén copias mediante el canal de acceso autorizado del vendedor. Si una decisión puede afectar tu compra, revisa con Sabatino y abogado cómo documentar avisos, distribución de costos o protección contractual antes de vencer plazos; no asumas que la votación permite cancelar automáticamente.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 46
+      },
+      {
+        "number": 7,
+        "question": "¿Qué reviso si el seguro del edificio tiene un deducible alto?",
+        "response": {
+          "reply": "Pide pólizas completas, declaraciones, endosos, vigencias y deducibles del edificio por riesgo, incluida su base de cálculo: un porcentaje puede aplicarse al valor asegurado, no al precio de tu unidad. Solicita cómo se distribuye una pérdida no cubierta o deducible, según ley y documentos. Revisa con un profesional tu HO-6, límites y exclusiones de loss assessment, sublímites por deducible y cobertura separada de inundación si corresponde. Una póliza HO-6 o un certificado no garantiza que pague toda derrama ni todo deducible; pide confirmación de escenarios y cotizaciones antes de comprometerte.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 47
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo pedir si el edificio tuvo una orden de evacuación?",
+        "response": {
+          "reply": "Pide la orden original de evacuación, causa, fecha, alcance por edificio/unidad y modificaciones; solicita informes técnicos, permisos, inspecciones finales y estado actual del expediente. Obtén de la autoridad que corresponda constancia escrita de levantamiento y autorización de ocupación aplicable, con condiciones y áreas aún restringidas. La afirmación del administrador, una reparación o que otros vivan allí no acredita que la orden esté levantada. Confirma además pendientes, financiación de obras, seguro y requisitos del prestamista; encarga revisión técnica independiente. No entres en áreas restringidas ni supongas que el levantamiento elimina todos los riesgos.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/553.899\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 48
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo verifico quién es dueño de un estacionamiento o depósito?",
+        "response": {
+          "reply": "Identifica número y ubicación exactos del estacionamiento o depósito y compara declaración registrada, planos, enmiendas, escritura y documentos de asignación. Puede ser unidad separada, elemento común de uso limitado o derecho asignado o arrendado; uso exclusivo no equivale siempre a propiedad separada. Pide a título o abogado confirmar titularidad, gravámenes y si el derecho pasa con esta venta o requiere otro acto, consentimiento o registro. Contrasta con confirmación escrita de la asociación. Una llave, pintura, uso histórico o anuncio no prueba título; verifica costos y restricciones antes de incluirlo como propiedad del vendedor.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.106\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 49
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo confirmar sobre aprobación del comprador por la asociación?",
+        "response": {
+          "reply": "Confirma primero si la declaración y reglas vigentes exigen aprobación del comprador y qué órgano la emite. Pide procedimiento escrito, solicitud, cargos autorizados, plazos, entrevista si aplica y constancia de expediente completo; coordina el calendario contractual sin inventar un plazo universal. Entrega documentación sensible solo por el canal seguro autorizado de la asociación, no aquí. La solicitud presentada no garantiza aprobación; la aprobación de la asociación no sustituye la del prestamista ni autoriza automáticamente alquiler u ocupación. Si hay demora o negativa, pide fundamento escrito y revisión jurídica de derechos y opciones, respetando vivienda justa.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www2.myfloridalicense.com/condominiums-and-cooperatives/faqs/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 50
+      }
+    ]
+  },
+  "checks": {
+    "rules": "success",
+    "structural-audit": "success",
+    "Cloudflare Pages": "success"
+  },
+  "extraLocalChecks": [
+    "sensitive-input priority",
+    "authorized records access",
+    "aggregate delinquency privacy and nonuniversal lender thresholds"
+  ]
+}

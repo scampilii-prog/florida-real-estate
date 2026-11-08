@@ -161,3 +161,12 @@ Questions 31–40 use functions/api/ask-tino-condition.js for Spanish general gu
 Current CFO guidance requires OIR-B1-1802 Rev.04/26 for inspections from April 1, 2026; an earlier report is not invalid solely for using Rev.01/12. F.S.559.956 governs applicable automatic, fee-free HVAC manufacturer warranty transfers; service agreements and installation quality are separate. No universal warranty term or insurer acceptance is promised.
 
 Run scripts/check-ask-tino-bank-group4.mjs, optionally --live. Full before/after evidence is in docs/ask-tino-bank-group4-2026-11-08.md and JSON. This is finite Spanish API coverage, without new translations or visual widget QA. Private forms-library access remains pending as documented in docs/ask-tino-forms-access-2026-11-08.md.
+
+
+## Association review bank group 5 — 2026-11-08
+
+Questions 41–50 now use functions/api/ask-tino-association-review.js: report scope/building versus inspection phase, reserve cash and restrictions, approved/proposed budgets, meeting/repair records, aggregate delinquencies, pending votes, master deductibles versus HO-6, evacuation orders, title versus assigned parking/storage, and association versus lender approval. Spanish editorial education; policy guards retain priority. No unrestricted buyer access to owner records or collection of neighbors' financial data is implied. No universal loan delinquency threshold, HOA approval deadline, safety or insurance guarantee.
+
+References reviewed include 2026 F.S.718.111/.112/.106/.503 and 553.899, DBPR, CFO insurance guidance and Fannie Mae's current Full Review page. Conditional reserve pauses/alternative funding are not described as universally allowed or universally unlawful. Read recorded documents and applicable rules for the specific entity; chapter 718 condominium rules are not automatically chapter 720 HOA rules.
+
+Use scripts/check-ask-tino-bank-group5.mjs (--live for public API); full before/after evidence in docs/ask-tino-bank-group5-2026-11-08.md and JSON. Finite Spanish API validation only; no new language claims or visual widget changes. Private forms access remains pending.

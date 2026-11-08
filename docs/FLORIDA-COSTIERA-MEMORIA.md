@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 5, preguntas 41–50, Condominios y asociaciones. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 6, preguntas 51–60, Seguro, inundación y clima. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -446,3 +446,12 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Estado vigente del banco: grupos 1–4 comprobados, 5–10 pendientes. Siguiente grupo 5, preguntas 41–50 (Condominios y asociaciones). La sección anterior conserva historia; este es el estado actual.
 - Continúa pendiente acceso autenticado y autorizado a bibliotecas privadas Florida Realtors, MIAMI y Stellar; no afirmar conocimiento íntegro de cada formulario. Mantener identificación de código/revisión y addenda antes de cláusulas/plazos concretos.
 - Siguen pendientes revisión del Worker externo y prácticas reales de datos, entrega efectiva de correo y demás tareas que no resolvió esta serie. No modificar OceanFL ni My Closing Timeline.
+
+
+## 30. Serie 5 del banco completada — 2026-11-08
+
+- Preguntas 41–50 enviadas públicamente a Ask Tino antes y después. Respuestas leídas completas. Antes 0/10 criterios de detalle, después 10/10; la primera cuenta indica carencias, no falsedad de todo el contenido.
+- Nueva guía española de revisión de asociación: alcance del informe, liquidez/restricciones de reservas, presupuesto aprobado/propuesto, actas y obras, morosidad agregada, votaciones, deducibles/HO-6, evacuación, título/uso de estacionamiento y aprobación de comprador versus préstamo. No afirmar acceso irrestricto a datos ni aplicar capítulo 718 a toda HOA.
+- Código 5606105079ee9a38f3544eb14abc71cde2af93ea; Cloudflare Pages, rules y structural-audit success; regresiones locales, estructura y tres comprobaciones extra de API pasaron. Diez preguntas repetidas en producción: 10/10. Sin nueva revisión visual del widget.
+- Evidencia: docs/ask-tino-bank-group5-2026-11-08.md y .json con antes/después íntegro. Banco vigente: grupos 1–5 comprobados; grupos 6–10 pendientes. Siguiente: grupo 6, preguntas 51–60, Seguro, inundación y clima.
+- Continúan pendientes bibliotecas privadas autenticadas de Florida Realtors/MIAMI/Stellar, inspección del Worker externo/prácticas de datos y recepción real de correo. Mantener distinción de catálogo público frente a cuerpo leído y emisor/código/revisión/addenda para cláusulas o fechas. No modificar OceanFL ni My Closing Timeline.

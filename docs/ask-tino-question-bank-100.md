@@ -1,6 +1,6 @@
 # Ask Tino — banco inicial de 100 preguntas, en grupos de diez
 
-Banco ampliable, no exhaustivo. Grupos 1, 2, 3 y 4 comprobados públicamente: [grupo 1](ask-tino-group1-owner-recheck-2026-11-08.md), [grupo 2](ask-tino-bank-group2-2026-11-08.md) y [grupo 3](ask-tino-bank-group3-2026-11-08.md). [Grupo 4](ask-tino-bank-group4-2026-11-08.md): 10/10 tras correcciones. Grupos 5–10 pendientes de auditoría individual.
+Banco ampliable, no exhaustivo. Grupos 1–5 comprobados públicamente: [grupo 1](ask-tino-group1-owner-recheck-2026-11-08.md), [grupo 2](ask-tino-bank-group2-2026-11-08.md) y [grupo 3](ask-tino-bank-group3-2026-11-08.md). [Grupo 4](ask-tino-bank-group4-2026-11-08.md): 10/10 tras correcciones. [Grupo 5](ask-tino-bank-group5-2026-11-08.md): 10/10 después de corregir. Grupos 6–10 pendientes de auditoría individual.
 
 ## Grupo 1 · Financiación y documentos del préstamo
 
