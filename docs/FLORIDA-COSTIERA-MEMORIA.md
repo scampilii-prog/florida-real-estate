@@ -335,10 +335,20 @@ Se encontró `scripts/check-ask-tino-owner-round6.mjs` en main. Contiene diez pr
 9. Venta estando casado con escritura a un solo nombre.
 10. Oferta sin prueba de fondos todavía.
 
-**Estado observado en esta revisión:** existe el script de la sexta ronda, pero el inventario del repositorio no incluye informe ni JSON de resultados de esa ronda. Sus afirmaciones programadas no equivalen a respuestas reales ni a una ejecución aprobada. Falta registrar respuestas completas, resultado local/público y evidencia de publicación antes de declararla terminada.
+**Pendiente cerrado el 8 de noviembre de 2026:** repetición de las diez preguntas al API público: 10/10, lectura de respuestas y suite local aprobadas. [Informe con las diez respuestas completas](ask-tino-owner-round6-2026-11-08.md) y [JSON con criterios](ask-tino-owner-round6-2026-11-08-results.json). Es una comprobación actual; no se reconstruyen resultados antiguos ausentes.
 
 ### Correo y límites de la continuidad
 
 El chat anterior informó recepción en Gmail mediante Cloudflare Email Routing y apertura de Apple Mail con sabatino@floridacostiera.com. Es evidencia recuperada del chat, no una nueva comprobación de recepción. Mantener separados ese antecedente y los intentos posteriores bloqueados por reautenticación. El formulario prepara el mensaje y el visitante pulsa Enviar.
 
 Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni My Closing Timeline. Para continuar, leer esta memoria y los informes enlazados; no pedir a Tino que vuelva a copiar las preguntas ya guardadas.
+
+
+## 21. Sexta ronda registrada y nueva serie de edificios — 8 de noviembre de 2026
+
+- Sexta ronda anterior: respuestas reales registradas y 10/10 comprobaciones públicas y locales. Incluye presupuesto condicional, ascensor, mascota, edad de ocupación, cuotas, litigios, LLC, cónyuge y fondos. No requirió correcciones adicionales en esta repetición.
+- Nueva serie separada: diez preguntas sobre inspecciones por edad, fases Milestone, deficiencias, cierre de reparaciones, próximas obras, SIRS, derramas, pago acreditado a la unidad, préstamos y seguro/ocupación.
+- Se corrigieron respuestas genéricas y definición incorrecta de SIRS mediante functions/api/ask-tino-building-guidance.js. Alcance nuevo: español; otras lenguas sin cambios. No presentar cobertura multilingüe de esta serie.
+- Implementación 70f25d6b9c8bb9bafdfef9cfe57a003cd508ca94: Cloudflare Pages, rules y structural-audit success. Diez preguntas públicas posteriores: 10/10, con lectura completa; suites anteriores y variantes locales aprobadas.
+- [Informe de edificios y diez respuestas completas](ask-tino-building-documents-2026-11-08.md); [JSON público](ask-tino-building-documents-2026-11-08-results.json).
+- No hubo verificación visual del widget en esta revisión. Cobertura finita, sin garantía de toda respuesta ni certificación de un edificio. No se modificaron OceanFL ni My Closing Timeline.

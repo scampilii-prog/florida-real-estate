@@ -1,0 +1,230 @@
+{
+  "live": true,
+  "results": [
+    {
+      "number": 1,
+      "question": "Busco un condominio en Punta Gorda por hasta $350,000, con ascensor y que permita un perro grande.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ascensor: sí. Mascota prevista: perro grande. Ciudad: Punta Gorda. Presupuesto: $350,000.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "petType": "dog",
+          "petSize": "large"
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 2,
+      "question": "Descarta los edificios sin ascensor, aunque el apartamento esté en planta baja.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ascensor: sí (indispensable incluso en planta baja). Mascota prevista: perro grande. Ciudad: Punta Gorda. Presupuesto: $350,000.",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large"
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 3,
+      "question": "Puedo subir a $375,000, pero solamente si tiene dos estacionamientos asignados.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ascensor: sí (indispensable incluso en planta baja). Mascota prevista: perro grande. Presupuesto ampliado: hasta $375,000 solamente con 2 estacionamientos asignados; sin esa condición se mantiene el presupuesto base. Ciudad: Punta Gorda. Presupuesto base: $350,000.\n\nNo tengo una conexión de listados MLS en vivo. Sabatino debe verificar disponibilidad, precios y detalles de las propiedades.\nVer opciones de compra: https://floridacostiera.com/buy\nContactar a Sabatino: https://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 4,
+      "question": "Resume mis requisitos y distingue qué condiciones todavía necesitan verificarse con la asociación.",
+      "response": {
+        "reply": "Criterios actuales: Tipo: condominio. Mascotas: sí. Ascensor: sí (indispensable incluso en planta baja). Mascota prevista: perro grande. Presupuesto ampliado: hasta $375,000 solamente con 2 estacionamientos asignados; sin esa condición se mantiene el presupuesto base. Ciudad: Punta Gorda. Presupuesto base: $350,000.\n\nSon criterios de búsqueda, no características verificadas de una unidad. Confirma con la asociación y los documentos vigentes los criterios indicados: para mascotas, permiso, límites de peso, número, raza y cargos; para ascensor, existencia, funcionamiento y acceso, incluso para planta baja; y los estacionamientos asignados si se usa el presupuesto ampliado. Pide identificar sus números, naturaleza jurídica, uso exclusivo o compartido, costos y posibilidad de transferirlos con la venta; no equivalen a plazas de visitantes. Contrasta reglamentos, declaración y documentos de título y solicita confirmación escrita para la unidad concreta. No he verificado ninguna propiedad.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 5,
+      "question": "El anuncio dice “sin restricciones de edad”. ¿Cómo compruebo si la comunidad tiene requisitos de ocupación por edad?",
+      "response": {
+        "reply": "No te bases solo en el anuncio. Pide la declaración, reglamentos y enmiendas vigentes, la política de ocupación por edad y confirmación escrita de la asociación para esa unidad y sus futuros ocupantes. Si se presenta como comunidad 55+ o 62+, solicita que explique el régimen aplicable y cómo verifica su cumplimiento; no deduzcas elegibilidad de una etiqueta comercial ni de la edad de otros residentes. Aclara diferencias entre ser propietario y poder ocupar la vivienda. Si el anuncio y los documentos discrepan, resuélvelo con Sabatino y asesoramiento jurídico antes de comprometerte. No envíes documentos de edad de residentes al chat.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 6,
+      "question": "El vendedor dice que una cuota extraordinaria ya está pagada. ¿Qué comprobantes debería pedir antes del cierre?",
+      "response": {
+        "reply": "Pide el aviso y aprobación de esa cuota, su importe total, calendario de pagos y comprobantes del vendedor. Confirma que el pago fue aplicado a esa unidad con el estado de cuenta de la asociación y un estoppel actualizado gestionado para el cierre, no solo con un recibo aislado. Comprueba saldo pendiente, plazos futuros y cualquier cuota adicional aprobada; pagar una cuota no demuestra que todas las obligaciones estén cubiertas. La compañía de cierre debe contrastarlo y dejar clara en el contrato la responsabilidad de comprador y vendedor. \nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 7,
+      "question": "El condominio está en litigio. ¿Qué debería investigar sobre sus posibles efectos en gastos, seguro y financiación?",
+      "response": {
+        "reply": "Solicita descripción del litigio, partes, estado procesal, documentos disponibles, actas y una explicación autorizada de la asociación o su abogado, respetando información confidencial. Revisa gastos de defensa, posibles cuotas, reservas, reparaciones relacionadas y cobertura del seguro, deducibles o exclusiones con los profesionales correspondientes. Pide al prestamista que evalúe ese proyecto y litigio: algunas demandas pueden afectar elegibilidad o condiciones del préstamo, pero no toda demanda impide toda financiación. Obtén revisión jurídica del riesgo antes de comprometerte; no puedo predecir el resultado ni asegurar que el seguro pagará.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 8,
+      "question": "Quiero poner la propiedad a nombre de una LLC. ¿Qué debería revisar antes de decidirlo?",
+      "response": {
+        "reply": "Antes de decidir, revisa con abogado y profesional tributario el uso previsto, integrantes y administración de la LLC, responsabilidad, costos y obligaciones fiscales. Examina posibles efectos sobre homestead y beneficios de impuestos de propiedad, financiación, cláusulas de transferencia del préstamo, seguro y reglas de la asociación para propietarios que sean entidades. La compañía de título debe revisar cómo adquirir o transferir, quién puede firmar y los gastos o impuestos del trámite. Una LLC no garantiza anonimato, protección total ni ahorro fiscal, y el préstamo no pasa automáticamente a su nombre. No transfieras la escritura sin coordinar esas revisiones.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 9,
+      "question": "Estoy casado, pero la escritura está solamente a mi nombre. ¿Qué debería comprobar antes de firmar para vender?",
+      "response": {
+        "reply": "No asumas que puedes firmar solo porque la escritura está únicamente a tu nombre. Pide a la compañía de título y a un abogado que revisen escritura, estado civil, uso de la propiedad como homestead y cualquier acuerdo u orden judicial relevante. En Florida, si es homestead, pueden existir requisitos de participación del cónyuge en la transmisión aunque no figure como titular. Confirma quién debe intervenir en el contrato, escritura y documentos de cierre antes de firmar; no añadas ni elimines propietarios por tu cuenta. No envíes aquí documentos matrimoniales o identificaciones.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    },
+    {
+      "number": 10,
+      "question": "Un comprador quiere que acepte una oferta sin entregar todavía la prueba de fondos. ¿Cómo debería evaluar ese riesgo?",
+      "response": {
+        "reply": "Sin prueba de fondos hay más incertidumbre sobre la capacidad de cerrar; una promesa, captura o depósito ofrecido no la garantiza. Pide, por medio de Sabatino y un canal adecuado, evidencia reciente de fondos líquidos suficientes y disponibles para la operación; si hay financiación, distingue la preaprobación de los fondos propios necesarios. Verifica autenticidad y cualquier condición para liberar el dinero con el profesional responsable, sin publicar cuentas o estados bancarios aquí. Compara contingencias, depósito, fecha de cierre y un plazo escrito para entregar y revisar esa evidencia. Aceptar antes puede dejarte comprometido sin resolver el riesgo: revisa cómo protegerte contractualmente antes de firmar. Yo no puedo autenticar fondos ni garantizar el cierre.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {
+          "city": "Punta Gorda",
+          "budget": "$350,000",
+          "propertyType": "condo",
+          "pets": "yes",
+          "elevator": "yes",
+          "elevatorRequired": true,
+          "petType": "dog",
+          "petSize": "large",
+          "conditionalBudget": {
+            "amount": "$375,000",
+            "assignedParkingSpaces": 2
+          }
+        },
+        "language": "es"
+      },
+      "pass": true
+    }
+  ],
+  "date": "2026-11-08",
+  "syntheticDataOnly": true,
+  "observedProductionSourceCommit": "52b7952ffb9797df6fdeef82f705d75b46be2f79",
+  "note": "New direct public replay of existing sixth-round implementation; not a historical before/after reconstruction."
+}
