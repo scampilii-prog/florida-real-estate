@@ -1,3 +1,4 @@
+import {titleReview} from './ask-tino-title-review.js';
 import {insuranceReview} from './ask-tino-insurance-review.js';
 import {associationReview} from './ask-tino-association-review.js';
 import {conditionGuidance} from './ask-tino-condition.js';
@@ -71,6 +72,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const title=titleReview(message,lang);if(title)return title;
  const insurance=insuranceReview(message,lang);if(insurance)return insurance;
  const association=associationReview(message,lang);if(association)return association;
  const condition=conditionGuidance(message,lang);if(condition)return condition;
