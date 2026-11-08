@@ -1,0 +1,256 @@
+{
+  "date": "2026-11-08",
+  "codeCommit": "6b55b6e39a636097c25d5173703ccb5ab58b3d5d",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre compromiso de título y póliza emitida?",
+        "response": {
+          "reply": "La diferencia entre un compromiso de título y una póliza emitida es que el compromiso de título es un documento que garantiza que el título de una propiedad es claro y libre de defectos, mientras que la póliza emitida es el documento final que se proporciona después de que se ha completado la investigación de título y se ha emitido la póliza de título. \n\n¿Cuál es el contexto específico en el que está considerando la diferencia entre estos dos documentos, por ejemplo, en una compra o venta de propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /requisitos/. Input:\n\n'La diferencia entre un compromiso de título y una póliza emitida es que el compromiso de título es un documento que garantiza que el título de una propiedad es claro y libre de defectos, mientras que la póliza emitida es el documento final que se proporciona después de que se ha completado la investigación de título y se ha emitido la póliza de título. \\n' +\n  '\\n' +\n  '¿Cuál es el contexto específico en el que está considerando la diferencia entre estos dos documentos, por ejemplo, en una compra o venta de propiedad?'\n",
+        "bankNumber": 61
+      },
+      {
+        "number": 2,
+        "question": "¿Qué protege la póliza del prestamista y qué protege la del propietario?",
+        "response": {
+          "reply": "La póliza del prestamista protege los intereses del prestamista en la propiedad, mientras que la póliza del propietario protege los intereses del propietario. ¿Estás considerando comprar o vender una propiedad en la costa del Golfo de Florida?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /exclusiones/. Input:\n\n'La póliza del prestamista protege los intereses del prestamista en la propiedad, mientras que la póliza del propietario protege los intereses del propietario. ¿Estás considerando comprar o vender una propiedad en la costa del Golfo de Florida?'\n",
+        "bankNumber": 62
+      },
+      {
+        "number": 3,
+        "question": "¿Qué documentos reviso si hay un judgment contra el vendedor?",
+        "response": {
+          "reply": "Para revisar un juicio (judgment) contra el vendedor, generalmente se revisan los registros públicos de la propiedad y los informes de título. ¿Cuál es el condado o ubicación específica de la propiedad que está considerando?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /identidad/. Input:\n\n'Para revisar un juicio (judgment) contra el vendedor, generalmente se revisan los registros públicos de la propiedad y los informes de título. ¿Cuál es el condado o ubicación específica de la propiedad que está considerando?'\n",
+        "bankNumber": 63
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo verifico un gravamen por obras antes del cierre?",
+        "response": {
+          "reply": "Para verificar un gravamen por obras antes del cierre, generalmente se recomienda revisar el registro de la propiedad y los documentos relacionados con la titularidad. ¿Cuál es el tipo de propiedad (residencial, comercial, etc.) sobre la que deseas obtener más información?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /contratista/. Input:\n\n'Para verificar un gravamen por obras antes del cierre, generalmente se recomienda revisar el registro de la propiedad y los documentos relacionados con la titularidad. ¿Cuál es el tipo de propiedad (residencial, comercial, etc.) sobre la que deseas obtener más información?'\n",
+        "bankNumber": 64
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impuestos atrasados o tax certificates?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /tax certificates/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'Florida Department of Revenue — Property Tax\\n' +\n  'https://floridarevenue.com/property/Pages/default.aspx\\n' +\n  'No pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 65
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo reviso prorrateos de impuestos al cierre?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /prorrateo/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'Florida Department of Revenue — Property Tax\\n' +\n  'https://floridarevenue.com/property/Pages/default.aspx\\n' +\n  'No pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 66
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo consulto el efecto de cambiar mi residencia principal?",
+        "response": {
+          "reply": "Para consultar el efecto de cambiar tu residencia principal, es importante considerar varios factores, incluyendo impuestos, seguro y requisitos legales. Te recomiendo que consultes con un profesional licenciado, como un abogado o un asesor fiscal, para obtener asesoramiento personalizado.\n\n¿Cuál es tu situación actual de residencia y a dónde estás considerando mudarte?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /homestead/. Input:\n\n'Para consultar el efecto de cambiar tu residencia principal, es importante considerar varios factores, incluyendo impuestos, seguro y requisitos legales. Te recomiendo que consultes con un profesional licenciado, como un abogado o un asesor fiscal, para obtener asesoramiento personalizado.\\n' +\n  '\\n' +\n  '¿Cuál es tu situación actual de residencia y a dónde estás considerando mudarte?'\n",
+        "bankNumber": 67
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar antes de quitar o añadir un nombre a la escritura?",
+        "response": {
+          "reply": "Antes de quitar o añadir un nombre a la escritura, es importante revisar los aspectos legales y fiscales que puedan afectar la propiedad. Te recomiendo consultar con un profesional licenciado para obtener asesoramiento personalizado.\n\n¿Cuál es el tipo de propiedad que estás considerando modificar en la escritura (por ejemplo, residencial, comercial, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /hipoteca/. Input:\n\n'Antes de quitar o añadir un nombre a la escritura, es importante revisar los aspectos legales y fiscales que puedan afectar la propiedad. Te recomiendo consultar con un profesional licenciado para obtener asesoramiento personalizado.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando modificar en la escritura (por ejemplo, residencial, comercial, etc.)?'\n",
+        "bankNumber": 68
+      },
+      {
+        "number": 9,
+        "question": "¿Qué reviso si el vendedor heredó la propiedad pero no terminó probate?",
+        "response": {
+          "reply": "Para una propiedad heredada sin haber terminado el proceso de probate, es importante revisar la validez de la transferencia de la propiedad y los derechos del vendedor para vender. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre esta situación.\n\n¿Cuál es el estado actual del proceso de probate o si hay algún documento que indique la intención del dueño original de transferir la propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /autoridad/. Input:\n\n'Para una propiedad heredada sin haber terminado el proceso de probate, es importante revisar la validez de la transferencia de la propiedad y los derechos del vendedor para vender. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre esta situación.\\n' +\n  '\\n' +\n  '¿Cuál es el estado actual del proceso de probate o si hay algún documento que indique la intención del dueño original de transferir la propiedad?'\n",
+        "bankNumber": 69
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo preguntar sobre costos de compra sin asumir una tarifa universal?",
+        "response": {
+          "reply": "Para discutir costos de compra sin asumir una tarifa universal, debes considerar varios factores como gastos de cierre, impuestos, seguros y posibles honorarios de agentes. \n\n¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencial, comercial, waterfront)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /desglose/. Input:\n\n'Para discutir costos de compra sin asumir una tarifa universal, debes considerar varios factores como gastos de cierre, impuestos, seguros y posibles honorarios de agentes. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencial, comercial, waterfront)?'\n",
+        "bankNumber": 70
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre compromiso de título y póliza emitida?",
+        "response": {
+          "reply": "El compromiso de título indica aseguradora, asegurados propuestos, inmueble, importe, requisitos previos y excepciones para emitir la póliza. No equivale a la póliza emitida ni certifica título libre de toda carga. Pide el documento completo con anexos y copias de las excepciones; revisa con título o abogado qué debe subsanarse y los plazos de objeción del contrato. Después del cierre, solicita la póliza y coteja asegurado, descripción legal, fecha, cobertura, endosos y excepciones con lo acordado. No supongas cobertura solo por pagar la prima.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 61
+      },
+      {
+        "number": 2,
+        "question": "¿Qué protege la póliza del prestamista y qué protege la del propietario?",
+        "response": {
+          "reply": "La póliza de título del prestamista protege su interés en el préstamo; no sustituye la protección del propietario. La póliza del propietario protege su interés frente a pérdidas por riesgos de título cubiertos, dentro del importe, exclusiones, excepciones y condiciones aplicables. Pide ambas propuestas y endosos, identifica asegurados y revisa servidumbres, restricciones y gravámenes excluidos con título o abogado. No es seguro contra todos los defectos físicos, inundación o incumplimiento futuro; una póliza del préstamo no garantiza recuperar tu inversión.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 62
+      },
+      {
+        "number": 3,
+        "question": "¿Qué documentos reviso si hay un judgment contra el vendedor?",
+        "response": {
+          "reply": "Pide a título y abogado copia del judgment y su registro, expediente judicial, identidad del deudor, fechas, monto actualizado y documentos de satisfacción, liberación o resolución que correspondan. Un nombre parecido no prueba que sea el vendedor; una sentencia tampoco grava automáticamente todos sus inmuebles. Hay que revisar si afecta esta parcela, vigencia, prioridad y posibles protecciones de homestead sin presumirlas. Solicita requisitos escritos del asegurador para cerrar y evidencia de su cumplimiento/registro; no aceptes como solución solo la promesa del vendedor ni determines por chat que el título está limpio.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.flsenate.gov/Laws/Statutes/2026/0055.10\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 63
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo verifico un gravamen por obras antes del cierre?",
+        "response": {
+          "reply": "Pide a título o abogado búsqueda actualizada de gravámenes, Notice of Commencement, avisos, claim of lien y expediente, junto con contrato de obra, pagos y declaración final del contratista cuando corresponda. Revisa liberaciones de contratista, subcontratistas y proveedores, su alcance, condiciones y registro requerido. No basta una factura pagada al contratista: podría no haber pagado a terceros. Obras recientes pueden generar derechos aún no registrados; confirma cómo los resolverá el asegurador antes de cerrar. La inspección final del permiso no elimina por sí sola un gravamen ni sustituye revisión jurídica.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www2.myfloridalicense.com/pro/cilb/documents/florida_lien_law.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 64
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impuestos atrasados o tax certificates?",
+        "response": {
+          "reply": "Consulta por la parcela exacta con el recaudador de impuestos del condado los años pendientes, tax certificates, intereses/cargos y monto de redención vigente; verifica también con el Clerk si hay procedimiento o subasta de tax deed. Pide a título cómo se pagará y acreditará la liberación antes del cierre, con cifras actualizadas a la fecha de pago. Un tax certificate es un derecho de cobro/gravamen por impuestos, no propiedad del inmueble; pagarlo no transfiere automáticamente la propiedad. No confundas impuestos de la cuenta corriente con certificados o actuaciones pendientes ni asumas que el prorrateo los extingue.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.pinellastaxcollector.gov/property-tax/faq/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 65
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo reviso prorrateos de impuestos al cierre?",
+        "response": {
+          "reply": "Revisa en el contrato y liquidación qué período corresponde a cada parte, fecha de corte, base de días y si el prorrateo usa la factura real o un importe estimado. Contrasta con el recaudador pagos, descuentos, cargos y evaluaciones no ad valorem; separa impuestos atrasados de los del año corriente. Si es estimado, aclara por escrito si habrá reprorrateo, quién lo solicita y cómo se ajusta al llegar la factura. No presupongas una regla universal ni que la exención del vendedor o su factura reflejan tus impuestos futuros; pide estimación al Property Appraiser y revisa cifras con título.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.consumerfinance.gov/owning-a-home/closing-disclosure/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 66
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo consulto el efecto de cambiar mi residencia principal?",
+        "response": {
+          "reply": "Consulta al Property Appraiser del condado fechas y requisitos de homestead, obligación de informar cambios y efecto sobre Save Our Homes e impuestos de ambas viviendas. La exención homestead no se traslada automáticamente; la portabilidad de diferencia de valoración es distinta y requiere elegibilidad y solicitud. Contrasta ocupación real, titularidad y calendario, sin asumir dos residencias principales exentas. Si cambias de estado o país, revisa por separado domicilio y residencia fiscal con asesor tributario; también informa a seguro y prestamista cuando corresponda. El chat no determina tu residencia ni calcula ahorro sin datos verificados.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://floridarevenue.com/faq/Pages/FAQDetails.aspx?FAQID=1641\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 67
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar antes de quitar o añadir un nombre a la escritura?",
+        "response": {
+          "reply": "Antes de modificar la escritura, pide revisión de abogado, título, prestamista y asesor tributario: titularidad actual, forma de copropiedad, derechos del cónyuge/herederos, hipoteca, seguro de título, homestead y consecuencias de donación, impuestos y registro. Quitar un nombre de la escritura no libera automáticamente de la deuda hipotecaria; añadirlo tampoco convierte por sí solo al nuevo titular en prestatario. No supongas que un quitclaim resuelve cargas o evita impuestos: una transferencia sin efectivo puede tener consideración por deuda y excepciones que deben analizarse. Confirma efectos y requisitos antes de firmar o registrar.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 68
+      },
+      {
+        "number": 9,
+        "question": "¿Qué reviso si el vendedor heredó la propiedad pero no terminó probate?",
+        "response": {
+          "reply": "Pide revisión de abogado de probate y título sobre escritura vigente, certificado de defunción y expediente: testamento admitido si existe, nombramiento/letters del representante, órdenes y autoridad para vender. Ser heredero o tener un testamento no prueba por sí solo facultad para transmitir título asegurable. La vía depende de titularidad, supervivencia, trust y posible homestead; no toda venta exige probate terminado ni toda herencia exige probate. Confirma quién debe firmar, qué autorizaciones y registros faltan, requisitos del asegurador y calendario realista antes de comprometer cierre o liberar fondos.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.floridabar.org/public/consumer/pamphlet026/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 69
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo preguntar sobre costos de compra sin asumir una tarifa universal?",
+        "response": {
+          "reply": "Pide un desglose escrito y específico de préstamo, título/cierre, impuestos de documentos y registro, inspecciones, seguro, prepagos, escrow, asociación y compensaciones pactadas. Identifica quién cobra, quién paga según contrato, qué es estimado y qué cargos son negociados o regulados; una prima de título regulada no hace universal el costo total. Con financiación, compara Loan Estimate y Closing Disclosure; al contado, pide liquidación detallada. Separa down payment de costos y prepagos, revisa créditos y evita duplicidades. No uses un porcentaje único ni asumas que toda comisión o gasto es obligatorio o negociable.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.consumerfinance.gov/owning-a-home/closing-disclosure/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 70
+      }
+    ]
+  },
+  "checks": {
+    "rules": "success",
+    "structural-audit": "success",
+    "Cloudflare Pages": "success"
+  },
+  "extraLocalChecks": [
+    "sensitive-input priority",
+    "probate sale authority without universal completion requirement",
+    "deed change does not release debt and may have taxable consideration"
+  ]
+}

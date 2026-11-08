@@ -179,3 +179,12 @@ Questions 51–60 route through functions/api/ask-tino-insurance-review.js for S
 CFO, NFIP, NAIC and regulator references were reviewed; Chubb's vacancy explanation is a primary insurer example, not universal terms. NFIP generally has a 30-day wait with qualified exceptions; cash purchase alone does not remove the wait. Deductible base, calendar-year treatment, occupancy definitions, payment and effective time require the applicable policy/agent. CLUE access is through the owner/authorized channel, not public buyer lookup. No sensitive policy or claim documents are requested in chat.
 
 Use scripts/check-ask-tino-bank-group6.mjs with --live for public API. Full before/after evidence: docs/ask-tino-bank-group6-2026-11-08.md and JSON. Finite Spanish coverage; no new translations, UI changes or claim of unrestricted web search. Private form-library and external Worker/data-practice limitations remain.
+
+
+## Title/tax review bank group 7 — 2026-11-08
+
+Questions 61–70 use functions/api/ask-tino-title-review.js for Spanish education on title commitment versus policy, lender versus owner coverage, judgment identity/effect, construction liens, delinquent taxes/tax certificates, tax prorations, homestead/residency, deed changes versus mortgage debt, probate authority and itemized costs. Policy guards retain priority. No title examination, lien clearance, estate authority, tax residence or actual closing cost is certified.
+
+Corrects a live answer falsely claiming a title commitment guarantees clear title. Requires actual requirements/exceptions and issued policy review. Tax certificates do not themselves convey ownership; a paid contractor invoice need not eliminate third-party lien rights. Homestead exemption is distinct from portability. A deed change does not itself release mortgage debt; transfers may involve documentary taxes even without cash. Probate treatment depends on title and authority, not a universal requirement that administration finish before sale.
+
+Sources: CFO, Florida Bar, DBPR construction-lien guidance, 2026 F.S.55.10/733.613/193.155, DOR homestead/doc stamps, county tax collector and CFPB Closing Disclosure. Provider forms-library access remains unchanged and partial; no specific private clause interpreted. Use scripts/check-ask-tino-bank-group7.mjs (--live for production). Full before/after evidence: docs/ask-tino-bank-group7-2026-11-08.md and JSON. No new translations or visual widget QA.

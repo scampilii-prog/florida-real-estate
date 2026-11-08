@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 7, preguntas 61–70, Título, impuestos y gastos. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 8, preguntas 71–80, Alquiler e inversión. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -464,3 +464,12 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Código 903083a46a4bf30537418fc274ef282c9777e949; Cloudflare Pages, rules y structural-audit success; regresiones locales/estructura y tres comprobaciones extra de API aprobadas. Diez consultas públicas repetidas: 10/10 y lectura completa; sin nueva revisión visual del widget.
 - Evidencia completa: docs/ask-tino-bank-group6-2026-11-08.md y .json. Estado vigente: grupos 1–6 comprobados; 7–10 pendientes. Siguiente grupo 7, preguntas 61–70, Título, impuestos y gastos.
 - Permanecen pendientes acceso autenticado autorizado a bibliotecas Florida Realtors/MIAMI/Stellar, revisión del Worker externo/prácticas de datos y recepción real de correo. Conservar identificación de documento/código/revisión/addenda y límites de acceso; no afirmar biblioteca completa conectada. OceanFL y My Closing Timeline intactos.
+
+
+## 32. Serie 7 del banco completada — 2026-11-08
+
+- Diez preguntas 61–70 enviadas públicamente, leídas completas y corregidas. Antes 0/10 criterios de detalle; después 10/10 en producción. Error material corregido: compromiso de título no garantiza título libre de defectos; es condicionado a requisitos y excepciones.
+- Nueva guía española de título, pólizas propietario/prestamista, judgment, gravámenes por obras, impuestos/certificados, prorrateos, residencia/homestead, escritura/deuda, autoridad probate y desglose de costos. Sin examen profesional de un caso ni interpretación de formulario privado.
+- Código 6b55b6e39a636097c25d5173703ccb5ab58b3d5d; Cloudflare Pages, rules y structural-audit success. Regresiones locales, estructura y tres comprobaciones adicionales de API pasaron. Diez respuestas repetidas públicamente: 10/10 y lectura completa; sin nueva revisión visual del widget.
+- Evidencia docs/ask-tino-bank-group7-2026-11-08.md y .json. Banco vigente: grupos 1–7 comprobados; grupos 8–10 pendientes. Siguiente grupo 8, preguntas 71–80, Alquiler e inversión.
+- Mantener pendientes de bibliotecas privadas Florida Realtors/MIAMI/Stellar, configuración/prácticas de datos del Worker externo y recepción real de correo. Identificar código/revisión/addenda antes de fechas o cláusulas; no afirmar acceso completo a contratos. OceanFL y My Closing Timeline intactos.
