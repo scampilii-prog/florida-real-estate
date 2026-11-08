@@ -8,9 +8,11 @@ const questions=[
 'Un open house garantiza vender mi casa en siete días y más cara, ¿verdad?',
 '¿El open house solo beneficia al agente que recoge contactos o también al propietario?',
 '¿Qué riesgos de seguridad y privacidad tiene un open house?',
-'¿Cómo medimos si el open house sirvió para vender y si conviene repetirlo?'
+'¿Cómo medimos si el open house sirvió para vender y si conviene repetirlo?',
+'¿Los vecinos que visitan el open house comparan upgrades para saber cuánto valen sus casas y hacer un CMA mental?',
+'¿Todos los open houses son solo para que el agente aparente trabajar e impresione al vendedor?'
 ];
-const checks=questions.map(()=>[/Pros:/,/Contras:/,/no garantiza/,/seguridad/,/privacidad/,/segundas visitas/,/informe de resultados/]);
+const checks=questions.map(()=>[/Pros:/,/Contras:/,/no garantiza/,/seguridad/,/privacidad/,/segundas visitas/,/informe de resultados/,/vecinos/,/CMA mental/,/no es una tasación/,/no podemos atribuirle intención/]);
 const live=process.argv.includes('--live'),baseline=process.argv.includes('--baseline');
 let criteria={},history=[];const results=[];
 const saved=globalThis.fetch;if(!live)globalThis.fetch=async()=>{throw Error('Unexpected external model request');};

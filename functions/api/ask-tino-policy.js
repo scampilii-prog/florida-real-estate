@@ -35,6 +35,8 @@ export function policyReply(q,state,lang='en'){
  if(/guard.*convers|save.*conversation|remember.*tomorrow|ricord.*domani|conversa.*amanha|remember across|save my criteria|guardar mis criterios|recordaras manana|ricorderai domani|salva i criteri|lembra amanha/.test(s))return t.reset+'\nhttps://floridacostiera.com/privacy#ask-tino-privacy';
  // General CMA/appraisal education may proceed; actual valuations remain a professional handoff.
  if(lang==='es'&&/opinion.*precio.*tasacion/.test(s))return null;
+ // General discussion of neighbors comparing open-house features is not an actual valuation.
+ if(lang==='es'&&/open[ -]?house/.test(s)&&/vecin|cma mental/.test(s))return null;
  if(/what.*(?:worth|offer)|cuanto vale|cuanto (?:debo|ofrezco)|que oferta|valoracion|tasacion|valutazione|quanto (?:vale|offr)|negotia|negocia|trattativ/.test(s))return t.agent+contact;
  // Real inventory must come from a real feed. This application has none.
  if(!/no busco|not looking|non cerco|nao procuro/.test(s)&&/(?:show|find|give|dame|muestr|busc|trova|mostra|encontr|procuro|cerco|looking for)/.test(s)&&/address|direcciones|indirizz|enderec|available|disponib|listing|listad/.test(s))return criteriaText(state,lang)+'\n\n'+t.inventory+contact;
