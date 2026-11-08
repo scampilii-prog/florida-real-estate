@@ -1,6 +1,6 @@
 # Ask Tino — banco inicial de 100 preguntas, en grupos de diez
 
-Las diez series del banco inicial fueron consultadas públicamente, revisadas y registradas. [Cierre de series 8–10 y evidencia](ask-tino-bank-final-three-2026-11-08.md). Las primeras siete conservan sus informes individuales. Cobertura finita: no certifica todas las preguntas posibles ni acceso íntegro a bibliotecas privadas de contratos.
+Las diez series del banco inicial fueron consultadas públicamente, revisadas y registradas. [Repetición completa de las 100 y 31 trampas](ask-tino-full-audit-2026-11-08.md): 100/100 y 31/31 finales en API pública el 8 de noviembre de 2026. [Cierre de series 8–10 y evidencia](ask-tino-bank-final-three-2026-11-08.md). Las primeras siete conservan sus informes individuales. Cobertura finita: no certifica todas las preguntas posibles ni acceso íntegro a bibliotecas privadas de contratos.
 
 ## Grupo 1 · Financiación y documentos del préstamo
 

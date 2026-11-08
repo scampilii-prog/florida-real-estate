@@ -1,0 +1,1249 @@
+{
+  "date": "2026-11-08",
+  "live": true,
+  "groups": [
+    {
+      "group": 1,
+      "exitCode": 0
+    },
+    {
+      "group": 2,
+      "exitCode": 0
+    },
+    {
+      "group": 3,
+      "exitCode": 0
+    },
+    {
+      "group": 4,
+      "exitCode": 0
+    },
+    {
+      "group": 5,
+      "exitCode": 0
+    },
+    {
+      "group": 6,
+      "exitCode": 0
+    },
+    {
+      "group": 7,
+      "exitCode": 0
+    },
+    {
+      "group": 8,
+      "exitCode": 0
+    },
+    {
+      "group": 9,
+      "exitCode": 0
+    },
+    {
+      "group": 10,
+      "exitCode": 0
+    }
+  ],
+  "results": [
+    {
+      "number": 1,
+      "question": "¿Qué diferencia hay entre la tasa de interés y el APR de una hipoteca?",
+      "response": {
+        "reply": "Orientación general de referencia:\nLa tasa de interés y el APR no miden lo mismo: el APR incorpora determinados costos del préstamo. Compara ofertas equivalentes y pide al prestamista explicar cargos y condiciones; no sirve para garantizar cuál préstamo te conviene.\n\nCFPB — Interest rate and APR\nhttps://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-mortgage-interest-rate-and-an-apr-en-135/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 1,
+      "group": 1
+    },
+    {
+      "number": 2,
+      "question": "¿Qué es el PMI y a quién protege?",
+      "response": {
+        "reply": "Orientación general de referencia:\nEl PMI es un seguro hipotecario privado que protege al prestamista, no tu vivienda. Pregunta costo, modalidad y condiciones de cancelación para tu préstamo; no lo confundas con seguro de vivienda o inundación.\n\nCFPB — Private mortgage insurance\nhttps://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 2,
+      "group": 1
+    },
+    {
+      "number": 3,
+      "question": "¿Qué diferencia hay entre una cuenta escrow hipotecaria y el depósito de compraventa?",
+      "response": {
+        "reply": "Orientación general de referencia:\nLa cuenta escrow hipotecaria se utiliza para pagar determinados impuestos y seguros. Es distinta del depósito de compraventa. Pide al administrador del préstamo el análisis, cargos y explicación de cualquier diferencia; no asumas que un aumento significa un cambio en tu tasa.\n\nNota del fragmento recuperado:\nUna cuenta escrow se utiliza para pagar gastos relacionados con la propiedad, como impuestos y seguros.\n\nCFPB — Escrow account\nhttps://www.consumerfinance.gov/ask-cfpb/what-is-an-escrow-or-impound-account-en-140/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 3,
+      "group": 1
+    },
+    {
+      "number": 4,
+      "question": "¿Cómo comparo dos Loan Estimates con gastos y créditos diferentes?",
+      "response": {
+        "reply": "Orientación general de referencia:\nRevisa el Loan Estimate para comparar tasa, costos, créditos y efectivo estimado al cierre. Compara ofertas bajo los mismos supuestos y pide al prestamista explicar las diferencias. Una estimación no es una garantía de aprobación ni de costos finales.\n\nCFPB — Loan Estimate\nhttps://www.consumerfinance.gov/owning-a-home/loan-estimate/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 4,
+      "group": 1
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo comparar entre el Closing Disclosure y el Loan Estimate?",
+      "response": {
+        "reply": "Orientación general de referencia:\nContrasta el Closing Disclosure con tu Loan Estimate y acuerdos: nombres, préstamo, tasa, gastos y efectivo al cierre. Señala discrepancias al prestamista y compañía de cierre antes de firmar. El plazo aplicable y si un cambio exige nueva espera deben confirmarse para tu operación.\n\nCFPB — Closing Disclosure\nhttps://www.consumerfinance.gov/owning-a-home/closing-disclosure/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 5,
+      "group": 1
+    },
+    {
+      "number": 6,
+      "question": "¿Qué debo revisar sobre pintura con plomo antes de comprar una casa antigua?",
+      "response": {
+        "reply": "Orientación general de referencia:\nConsulta las divulgaciones federales aplicables de pintura con plomo, antecedentes e informes disponibles y opciones de evaluación profesional. Una divulgación no demuestra ausencia de plomo. Antes de renovar, revisa los requisitos y profesionales adecuados; no puedo determinar exposición o seguridad de una casa.\n\nEPA — Lead disclosures\nhttps://www.epa.gov/lead/real-estate-disclosures-about-potential-lead-hazards\nNo pude recuperar la página ahora; el enlace es de referencia y no está verificado en esta consulta.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 6,
+      "group": 1
+    },
+    {
+      "number": 7,
+      "question": "¿Cómo compruebo si una casa tiene radón?",
+      "response": {
+        "reply": "Orientación general de referencia:\nPara evaluar radón se necesita una prueba adecuada; la apariencia de la casa no permite descartarlo. Pide resultados anteriores y considera medición y mitigación por profesionales cualificados dentro de tus plazos contractuales. No puedo determinar el nivel de una propiedad.\n\nNota del fragmento recuperado:\nPuedes obtener información adicional sobre radón y pruebas de radón en el departamento de salud de tu condado.\n\nFlorida Health — Radon and real estate\nhttps://www.floridahealth.gov/community-environmental-public-health/environmental-public-health/air-quality/radon/real-estate-transactions/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 7,
+      "group": 1
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debería consultar antes de intentar un intercambio 1031?",
+      "response": {
+        "reply": "Orientación general de referencia:\nUn intercambio 1031 puede diferir reconocimiento de ganancias en operaciones inmobiliarias de inversión que cumplan requisitos. No es una exención automática ni se aplica por llamar inversión a una casa. Consulta asesor tributario e intermediario cualificado antes de vender o recibir fondos.\n\nIRS — Like-kind exchanges\nhttps://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 8,
+      "group": 1
+    },
+    {
+      "number": 9,
+      "question": "¿Qué documentos necesito para consultar la devolución de un depósito de alquiler?",
+      "response": {
+        "reply": "Orientación general de referencia:\nRevisa contrato, pagos, avisos y hechos concretos con un profesional. Los depósitos, reclamaciones y terminación del alquiler tienen reglas y plazos; no supongas que puedes retener renta, cambiar cerraduras o desalojar por tu cuenta. No pegues datos privados del inquilino.\n\nFlorida Bar — Tenants and landlords\nhttps://www.floridabar.org/public/consumer/tip014/\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 9,
+      "group": 1
+    },
+    {
+      "number": 10,
+      "question": "¿Cómo averiguo si califico para portabilidad del beneficio Save Our Homes?",
+      "response": {
+        "reply": "Orientación general de referencia:\nEl tasador del condado determina elegibilidad para exenciones y portabilidad. Pide requisitos, fechas y formularios para tu situación; la exención del vendedor no se traslada automáticamente al comprador. La portabilidad del beneficio de valoración es una cuestión distinta.\n\nFlorida Revenue — Exemptions\nhttps://floridarevenue.com/property/Pages/Taxpayers_Exemptions.aspx\nPágina recuperada ahora — 2026-11-08. Recuperarla no confirma que aplique a tu caso.\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 10,
+      "group": 1
+    },
+    {
+      "number": 1,
+      "question": "¿Qué gastos debo presupuestar además del down payment?",
+      "response": {
+        "reply": "Además del down payment, presupuesta gastos de cierre: prestamista si hay préstamo, tasación, inspecciones, título, registro, honorarios pactados y otros cargos aplicables. Revisa impuestos, seguro, prepagos, depósitos escrow, cuotas de asociación o distrito, mudanza y una reserva para mantenimiento. Separa pagos previos de importes al cierre para no duplicarlos; descuenta depósitos ya acreditados. Pide estimaciones desglosadas al prestamista y compañía de cierre, sin usar un porcentaje universal ni confundir cash to close con costo mensual.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/what-costs-come-with-taking-out-a-mortgage-en-153/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 11,
+      "group": 2
+    },
+    {
+      "number": 2,
+      "question": "¿Qué diferencia hay entre prequalification, preapproval y aprobación final?",
+      "response": {
+        "reply": "Los términos prequalification y preapproval no tienen un proceso idéntico en todos los prestamistas: pregunta qué datos verificaron, vigencia y condiciones pendientes. La preaprobación no garantiza el préstamo. La aprobación final requiere resolver las condiciones del prestamista sobre ingresos, activos, crédito, propiedad y proyecto cuando aplique. Tampoco una aprobación o un resultado DU equivale por sí solo a fondos desembolsados. Pide confirmación escrita del estado y lo que falta antes de comprometer plazos.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/whats-the-difference-between-a-prequalification-letter-and-a-preapproval-letter-en-127/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 12,
+      "group": 2
+    },
+    {
+      "number": 3,
+      "question": "¿Qué pasa si cambio de empleo antes del cierre?",
+      "response": {
+        "reply": "Avisa al prestamista antes de cambiar de empleo o tan pronto conozcas un cambio; no ocultes información. El prestamista debe revisar estabilidad, ingresos, forma de remuneración, fecha de inicio y documentos actualizados; pasar a comisión o trabajo independiente puede cambiar el análisis. No supongas rechazo automático ni aprobación asegurada. Pide por escrito si afecta condiciones y fecha de cierre; coordina con Sabatino y asesoramiento jurídico cualquier plazo o extensión contractual. No envíes nóminas o contratos laborales aquí.\nReferencia general (no consulta en vivo ni aprobación individual): https://guide-selling.fanniemae.com/sel/b3-3.1-04/verbal-verification-employment\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 13,
+      "group": 2
+    },
+    {
+      "number": 4,
+      "question": "¿Cómo debo consultar el efecto de comprar un automóvil durante la hipoteca?",
+      "response": {
+        "reply": "Consulta al prestamista antes de financiar el automóvil, abrir crédito o asumir una deuda nueva. La cuota, consulta crediticia y reducción de fondos pueden afectar relación deuda/ingresos, crédito, reservas y capacidad de cerrar, incluso con preaprobación. Pide evaluar el efecto usando las cifras reales por su canal seguro; no asumas que una compra en efectivo evita todo impacto. Comunica cambios con honestidad y revisa condiciones y plazos antes de obligarte; no puedo aprobar tu préstamo.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/what-exactly-happens-when-a-mortgage-lender-checks-my-credit-en-2005/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 14,
+      "group": 2
+    },
+    {
+      "number": 5,
+      "question": "¿Qué significa que el préstamo esté condicionado a la aprobación del condominio?",
+      "response": {
+        "reply": "La revisión del proyecto de condominio es distinta de la evaluación del comprador: tu preaprobación no basta para aprobar el edificio. Pide al prestamista confirmar revisión, condiciones pendientes y documentos que exige sobre reservas, presupuesto, seguro, reparaciones, derramas, litigios y otros criterios del programa. Coordina entrega con la asociación y comprueba plazos contractuales. Reglas de Fannie Mae u otro programa no son una ley universal para todos los préstamos; no garantizo elegibilidad ni que una revisión favorable de otro banco se aplique al tuyo.\nReferencia general (no consulta en vivo ni aprobación individual): https://selling-guide.fanniemae.com/sel/b4-2.1-01/general-information-project-standards\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 15,
+      "group": 2
+    },
+    {
+      "number": 6,
+      "question": "¿Qué debo saber antes de usar dinero regalado para comprar?",
+      "response": {
+        "reply": "Confirma con el prestamista si el programa admite el regalo, de quién y para qué gastos. Debe ser genuino: no es un préstamo escondido ni debe esperarse devolución. Pide requisitos de gift letter y documentación del origen, disponibilidad y transferencia; la carta sola puede no bastar. No muevas dinero suponiendo aprobación ni apliques reglas de un programa a todos. Revisa cuestiones fiscales con un profesional. No envíes datos bancarios o documentos del donante al chat; usa el canal seguro indicado por el prestamista.\nReferencia general (no consulta en vivo ni aprobación individual): https://guide-selling.fanniemae.com/sel/b3-4.3-04/personal-gifts\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 16,
+      "group": 2
+    },
+    {
+      "number": 7,
+      "question": "¿Qué verifico si parte de mis fondos viene del extranjero?",
+      "response": {
+        "reply": "Consulta antes de transferir con banco, prestamista y compañía de cierre cómo documentar origen y titularidad de fondos, moneda, conversión, traducción de documentos, disponibilidad y plazos. Revisa comisiones y requisitos del programa; reglas de Fannie Mae no son universales para compras en efectivo u otros préstamos. No dividas transferencias para eludir controles ni ocultes la procedencia. Confirma instrucciones por un canal independiente ya verificado. No envíes estados de cuenta ni identificaciones al chat; acuerda un canal seguro.\nReferencia general (no consulta en vivo ni aprobación individual): https://selling-guide.fanniemae.com/sel/b3-4.2-05/foreign-assets\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 17,
+      "group": 2
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debo revisar antes de comprar con otra persona?",
+      "response": {
+        "reply": "Antes de comprar juntos, acuerden aportaciones, porcentajes, pagos, mantenimiento y uso, y qué ocurrirá ante separación, fallecimiento, incumplimiento o salida de un propietario. Un abogado debe revisar el tipo de titularidad y la escritura: que aparezcan dos nombres no define por sí solo derechos de supervivencia o reparto. Distingue propiedad de responsabilidad por el préstamo; quitar un nombre de la escritura no libera automáticamente la deuda. Coordina título, financiación, impuestos y acuerdos por escrito sin asumir iguales derechos en todos los casos.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 18,
+      "group": 2
+    },
+    {
+      "number": 9,
+      "question": "¿Cómo compruebo quién debe firmar cuando compra un trust?",
+      "response": {
+        "reply": "Pide a la compañía de título y al abogado revisar identidad y vigencia del trust, trustee actual, sucesión si existe, facultades para adquirir, financiar y firmar, y cualquier consentimiento necesario. Una certificación del trust puede servir para ciertos fines, pero no sustituye automáticamente todo documento que legalmente corresponda. Confirma con título y prestamista quién firma cada instrumento y en qué capacidad; no asumas que cualquier beneficiario puede hacerlo. No envíes el instrumento completo, identificaciones ni datos privados al chat.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.flsenate.gov/Laws/Statutes/2026/736.1017\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 19,
+      "group": 2
+    },
+    {
+      "number": 10,
+      "question": "¿Qué documentos debería preparar para una compra en efectivo sin enviarlos al chat?",
+      "response": {
+        "reply": "Para una compra en efectivo, prepara por el canal seguro que acuerdes con Sabatino y la compañía de cierre: datos de identidad y titularidad del comprador, evidencia reciente de fondos líquidos disponibles, información sobre su origen cuando se solicite y autoridad para firmar si compra una entidad o trust. Pide la lista exacta y qué datos pueden ocultarse sin impedir verificación. No envíes documentos ni cuentas al chat. Una captura o prueba de fondos no garantiza autenticidad ni cierre; confirma transferencias por un contacto independiente verificado y respeta controles aplicables.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 20,
+      "group": 2
+    },
+    {
+      "number": 1,
+      "question": "¿Qué diferencia hay entre precio ofrecido y neto para el vendedor?",
+      "response": {
+        "reply": "El precio ofrecido no es el neto que recibe el vendedor. Estima gastos de cierre, compensaciones pactadas, créditos, reparaciones, impuestos/prorrateos, cuotas y saldo de cancelación de hipotecas o gravámenes; separa retenciones de impuesto definitivo. Pide un net sheet con supuestos y revisa la liquidación con título y Sabatino. Una oferta mayor no garantiza mayor neto ni mejor probabilidad de cerrar.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.nar.realtor/the-facts/consumer-guide-navigating-multiple-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 21,
+      "group": 3
+    },
+    {
+      "number": 2,
+      "question": "¿Qué debería comparar entre una oferta con contingencias y una sin ellas?",
+      "response": {
+        "reply": "Compara contingencias de financiación, tasación, inspección, venta de otra propiedad y otras pactadas, además de precio, depósito, fondos y fecha de cierre. Menos contingencias puede aumentar el atractivo para el vendedor, pero también el riesgo del comprador y del depósito. No todas las contingencias tienen iguales plazos o avisos. Revisa el texto y cualquier renuncia con Sabatino y, para efectos jurídicos, un abogado; no asumas devolución automática ni cierre garantizado.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2021/04/winning-best-practices-handling-multiple-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 22,
+      "group": 3
+    },
+    {
+      "number": 3,
+      "question": "¿Qué debo comprobar antes de firmar una cláusula de escalamiento?",
+      "response": {
+        "reply": "Revisa en la cláusula de escalamiento incremento, tope máximo, oferta competidora válida que la activa y cómo se acredita, precio resultante, financiación y posible diferencia de tasación. No autoriza inventar una oferta ni revela automáticamente todos los datos privados del competidor. Pide revisar el addendum y su compatibilidad con el contrato; un abogado debe atender lenguaje especial o ambigüedades. No es obligatorio usar una cláusula de escalamiento ni garantiza que acepten tu oferta.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/tools-research/escalation-addendum-update-questions-answers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 23,
+      "group": 3
+    },
+    {
+      "number": 4,
+      "question": "¿Qué diferencia hay entre fecha efectiva y fecha de cierre?",
+      "response": {
+        "reply": "La fecha efectiva inicia plazos según la aceptación, firmas y entrega o comunicación exigida por el contrato; no es necesariamente la primera firma. El cierre es la consumación con documentos y fondos conforme al acuerdo. Conserva evidencia de comunicación y revisa formulario, versión, contrapropuestas y addenda antes de fijar cualquiera de las dos fechas.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/sites/default/files/2024-12/Residential%20Contract%20for%20Sale%20and%20Purchase%20%28FloridaRealtors-FloridaBar-7%29%20Redline%20%281%29.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 24,
+      "group": 3
+    },
+    {
+      "number": 5,
+      "question": "¿Cómo verifico el método de contar días en mi contrato?",
+      "response": {
+        "reply": "Identifica formulario, versión/revisión, cláusula de tiempo, fecha inicial, dirección del conteo y modificaciones. No apliques una regla universal: FR/Bar y CRSP deben leerse por versión. Florida Realtors informó en julio de 2026 que el CRSP actualizado cambió de días hábiles a calendario; versiones antiguas difieren. Confirma también hora límite y excepciones antes de calcular. ¿Qué formulario y revisión tienes?\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/07/crsp-contract-flying-under-radar\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 25,
+      "group": 3
+    },
+    {
+      "number": 6,
+      "question": "¿Qué debo hacer si un plazo contractual vence en feriado?",
+      "response": {
+        "reply": "Comprueba la cláusula de tiempo del contrato y si ese feriado está incluido, la versión, hora y tipo de plazo. No asumas que todo vencimiento pasa al lunes ni que aceptación, avisos y plazos legales siguen la misma regla. Antes de dar una fecha, contrasta el calendario y las excepciones con Sabatino y asesoramiento jurídico.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/law-ethics/library/florida-real-estate-contract-laws\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 26,
+      "group": 3
+    },
+    {
+      "number": 7,
+      "question": "¿Cómo se documenta una extensión aceptada por ambas partes?",
+      "response": {
+        "reply": "Documenta por escrito los plazos concretos y nuevas fechas, firmas/consentimientos necesarios y entrega conforme al contrato; conserva copia ejecutada. Revisa plazos relacionados: extender el cierre no extiende automáticamente aprobación del préstamo o inspección. Si ya venció un plazo, consulta efectos y redacción con abogado; una petición o promesa verbal no acredita extensión.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2024/07/financing-contingency-faqs\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 27,
+      "group": 3
+    },
+    {
+      "number": 8,
+      "question": "¿Qué significa una contingencia de venta de mi casa actual?",
+      "response": {
+        "reply": "Una contingencia de venta de tu casa puede condicionar la compra a determinados hechos y plazo: revisa si exige contrato de venta o cierre, avisos, pruebas, depósito y consecuencias de no cumplir. Examina cualquier kick-out o derecho a seguir comercializando y cómo se coordina con tu financiación. No asegura vender a tiempo ni devolver automáticamente el depósito. Revisa el addendum completo y las fechas con Sabatino y abogado antes de firmar o renunciar.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/05/two-forms-can-protect-backup-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 28,
+      "group": 3
+    },
+    {
+      "number": 9,
+      "question": "¿Qué reviso antes de aceptar un backup contract?",
+      "response": {
+        "reply": "Un backup contract debe subordinarse claramente al contrato primario: revisa prioridad, condición de entrada, aviso escrito, fecha efectiva aplicable, depósito, inspecciones y plazo de espera o salida. No comprometas una segunda venta incompatible ni asumas que el backup está activo porque hubo un problema con el primero. El texto del addendum controla; varias posiciones de respaldo o una terminación discutida requieren revisión jurídica.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.floridarealtors.org/news-media/news-articles/2026/05/two-forms-can-protect-backup-offers\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 29,
+      "group": 3
+    },
+    {
+      "number": 10,
+      "question": "¿Qué debo comprobar antes de firmar electrónicamente desde otro país?",
+      "response": {
+        "reply": "La firma electrónica y la notarización son procesos distintos. Confirma consentimiento, identidad, capacidad, entrega y conservación de documentos. Desde otro país, coordina con abogado, título, prestamista y notario si ese documento admite firma electrónica, notarización remota o necesita otra formalidad, testigos o registro. No todo cierre puede hacerse de cualquier manera por internet; confirma aceptación, horarios y plazos antes de firmar. No envíes identificaciones al chat.\nReferencia general (no lectura de tu contrato ni consulta en vivo): https://www.flsenate.gov/Laws/Statutes/2026/668.50\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 30,
+      "group": 3
+    },
+    {
+      "number": 1,
+      "question": "¿Qué incluye y qué excluye una inspección general de vivienda?",
+      "response": {
+        "reply": "Una inspección general es una revisión visual de sistemas y componentes instalados y accesibles: estructura, cubierta, electricidad, plomería, climatización, interiores, exteriores y condiciones del terreno que afectan la estructura. Revisa el alcance escrito, exclusiones y áreas inaccesibles del informe. No incluye automáticamente pruebas destructivas, diagnóstico de defectos ocultos, WDO/termitas, moho, piscina o sistemas especiales; acuerda servicios adicionales. No es tasación ni certificación integral de códigos y no garantiza ausencia de defectos ni vida útil futura. Pide evaluación especializada de los hallazgos antes del plazo contractual.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www2.myfloridalicense.com/home-inspectors/faqs/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 31,
+      "group": 4
+    },
+    {
+      "number": 2,
+      "question": "¿Qué reviso si el inspector detecta humedad pero no conoce su causa?",
+      "response": {
+        "reply": "Pide ubicación, mediciones, fotos, áreas inaccesibles y limitaciones del hallazgo de humedad. Encarga a un profesional apropiado investigar la causa: filtración de cubierta o ventanas, tuberías, condensación, drenaje u otra; no diagnostiques solo por una mancha. Solicita alcance y presupuesto de reparación, secado y comprobación posterior. Pintar o limpiar no basta si sigue entrando agua. Si sospechan moho, evalúa con un profesional competente; una prueba de aire no es obligatoria en todos los casos ni certifica que la casa sea saludable. Coordina investigaciones y cualquier extensión por escrito antes del vencimiento contractual.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www.epa.gov/mold/samplingtesting-mold-necessary\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 32,
+      "group": 4
+    },
+    {
+      "number": 3,
+      "question": "¿Cómo verifico antecedentes de termitas y tratamientos?",
+      "response": {
+        "reply": "Pide informes WDO anteriores, fechas, empresa y licencia, evidencia de termitas activas o daños, tratamientos, reparaciones y contrato de protección. Encarga una inspección WDO independiente por personal habilitado y revisa el formulario FDACS 13645, sus áreas inaccesibles y limitaciones. Distingue eliminar la plaga de reparar madera o estructura dañada. Confirma por escrito cobertura, exclusiones, renovación y transferencia del contrato al comprador. Un tratamiento o informe sin evidencia visible no garantiza ausencia de infestación o daño oculto.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://forms.fdacs.gov/13645.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 33,
+      "group": 4
+    },
+    {
+      "number": 4,
+      "question": "¿Qué diferencias hay entre inspección de cuatro puntos y wind mitigation?",
+      "response": {
+        "reply": "La inspección de cuatro puntos evalúa cubierta, electricidad, plomería y HVAC para requisitos de aseguramiento; cada aseguradora fija sus criterios. Wind mitigation (mitigación de viento) documenta características de resistencia al viento y posibles descuentos; ninguna de las dos sustituye una inspección general ni garantiza cobertura o descuento. Para inspecciones desde el 1 de abril de 2026 corresponde OIR-B1-1802 Rev. 04/26; una inspección anterior puede usar Rev. 01/12 y no queda inválida solo por esa revisión. Confirma fecha, cambios posteriores, vigencia y aceptación con la aseguradora y un inspector habilitado.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www.myfloridacfo.com/division/consumers/storm/mitigation-notices-inspections-and-forms\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 34,
+      "group": 4
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo pedir sobre reparación de grietas estructurales?",
+      "response": {
+        "reply": "Pide diagnóstico de causa y alcance por ingeniero estructural habilitado, planos o especificaciones de reparación, permisos aplicables, contratista, inspecciones finales y carta o informe de seguimiento que corresponda. Revisa movimientos activos, monitoreo, garantías y daños relacionados; encarga una evaluación independiente si hay dudas. Una grieta sellada o una factura no prueba estabilidad estructural ni reparación completa. Confirma pendientes con la autoridad local; no asumas que toda grieta es cosmética o que un permiso cerrado elimina defectos.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www2.myfloridalicense.com/home-inspectors/faqs/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 35,
+      "group": 4
+    },
+    {
+      "number": 6,
+      "question": "¿Qué compruebo si una casa fue remodelada por el propietario?",
+      "response": {
+        "reply": "Revisa qué trabajos hizo el propietario, fechas, planos, permisos, inspecciones finales y cierre de expedientes con la autoridad competente. La excepción owner-builder (propietario constructor) tiene condiciones y no equivale a estar libre de permisos o de reglas de oficios especializados; revisa su aplicación y eventuales restricciones con la autoridad y asesor jurídico. Pide facturas, quién ejecutó cada trabajo y evaluación independiente de estructura e instalaciones. El registro fiscal o que la casa se vea renovada no demuestra legalidad o calidad de la remodelación.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www.flsenate.gov/Laws/Statutes/2026/489.103\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 36,
+      "group": 4
+    },
+    {
+      "number": 7,
+      "question": "¿Qué permisos y garantías reviso de un aire acondicionado nuevo?",
+      "response": {
+        "reply": "Pide permiso aplicable, inspección final y cierre del expediente ante la autoridad local, factura e identificación/licencia del instalador, fecha, marca, modelo y número de serie de cada unidad y mantenimiento. Separa garantía de piezas del fabricante de mano de obra y servicio del instalador. Pide el texto y la cobertura restante: según F.S. 559.956, en ventas residenciales desde el 1 de julio de 2024, la garantía vigente del fabricante de HVAC fijado a la propiedad se transfiere automáticamente, sin cargo y sin ampliar el plazo; no puede condicionarse al registro. No confundas esa garantía con un contrato de servicio. Una unidad nueva no asegura instalación correcta ni una duración universal de garantía. Encarga revisión del sistema y coteja números de serie con documentos.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www.flsenate.gov/Laws/Statutes/2026/559.956\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 37,
+      "group": 4
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debo comprobar sobre cableado o paneles eléctricos antiguos?",
+      "response": {
+        "reply": "Encarga revisión a un electricista con licencia apropiada: tipo y condición de cableado, marca/modelo del panel, capacidad, protecciones, puesta a tierra, conexiones y señales de daño o sobrecalentamiento. No manipules paneles ni retires tapas para comprobarlo tú. Pide permisos e inspecciones finales de cambios anteriores y presupuesto de correcciones; confirma aceptabilidad con la aseguradora. La antigüedad por sí sola no acredita peligro ni obliga siempre a sustituir todo; una inspección de cuatro puntos no certifica toda la instalación. Ante humo, chispas u olor a quemado, aléjate y llama a emergencias.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www2.myfloridalicense.com/construction-industry/construction-industry-business-information/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 38,
+      "group": 4
+    },
+    {
+      "number": 9,
+      "question": "¿Cómo verifico si una reparación fue terminada por contratista licenciado?",
+      "response": {
+        "reply": "Comprueba dos cosas por separado: licencia adecuada y vigente del profesional y empresa que lo respalda en DBPR, y terminación real del trabajo. Pide contrato/alcance, facturas, permisos aplicables, inspecciones finales y cierre de observaciones con la autoridad local; compara dirección y trabajo autorizado con lo ejecutado. Verifica también pagos y posibles gravámenes con título o abogado. Tener licencia no demuestra que esa reparación esté terminada o correcta, ni una factura pagada elimina automáticamente gravámenes. Solicita revisión independiente cuando corresponda.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www2.myfloridalicense.com/construction-industry/construction-industry-business-information/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 39,
+      "group": 4
+    },
+    {
+      "number": 10,
+      "question": "¿Qué reviso sobre restricciones de uso después de daños por tormenta?",
+      "response": {
+        "reply": "Consulta a la autoridad local de construcción y emergencias si hay órdenes de inmueble inseguro, desalojo, acceso limitado o prohibición de ocupación; pide por escrito los requisitos para levantarlas. Revisa evaluación de daños, permisos, inspecciones y autorización de ocupación que corresponda. Si está en zona regulada de inundación, confirma determinación de daño sustancial y requisitos de reconstrucción con el administrador local de floodplain; no presupongas una exención. Revisa por separado asociación, seguro y uso previsto. Una reparación, electricidad restablecida o pago del seguro no autoriza por sí solo a habitar, alquilar o ampliar.\nReferencia general (no consulta en vivo ni verificación de esta propiedad): https://www.charlottecountyfl.gov/departments/community-development/building-construction/permits/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 40,
+      "group": 4
+    },
+    {
+      "number": 1,
+      "question": "¿Cómo identifico qué edificio y fase cubre un informe de inspección?",
+      "response": {
+        "reply": "Coteja nombre legal del condominio, dirección, número de edificio, parcela o plano, fecha y anexos del informe con la unidad que compras. Distingue fase constructiva del proyecto de fase 1/fase 2 de la Milestone bajo F.S.553.899: no son lo mismo. Pide informes completos firmados y sellados, planos del alcance y confirmación escrita del ingeniero y la autoridad sobre qué estructuras y fases están incluidas o pendientes. No extrapoles el informe de una torre a otra ni confundas Milestone con SIRS. Un resumen favorable no acredita reparación ni seguridad de todos los edificios.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/553.899\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 41,
+      "group": 5
+    },
+    {
+      "number": 2,
+      "question": "¿Qué diferencia hay entre reservas contables y dinero realmente disponible?",
+      "response": {
+        "reply": "Una reserva contable no equivale necesariamente a efectivo disponible para cualquier obra. Pide estados financieros recientes, extractos y conciliaciones bancarias obtenidos por el canal autorizado, detalle por fondo, inversiones y vencimientos, cuentas por cobrar, cuentas por pagar y compromisos de obras. Contrasta el saldo con restricciones de uso, SIRS y calendario de desembolsos; una línea de crédito disponible es deuda, no ahorro acumulado. Revisa préstamos y cualquier pausa o reducción de aportaciones con su aprobación y fundamento vigente: no supongas que toda reserva puede eliminarse por votación ni que toda pausa es ilegal. No compartas extractos ni datos bancarios en este chat; solicita revisión contable profesional.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 42,
+      "group": 5
+    },
+    {
+      "number": 3,
+      "question": "¿Cómo comparo el presupuesto aprobado con el propuesto?",
+      "response": {
+        "reply": "Pide el presupuesto aprobado, acta y fecha de adopción, ejercicio al que corresponde y cualquier modificación; separa el propuesto, que aún puede cambiar. Compara por partida cuotas, seguros, mantenimiento, reservas/SIRS, préstamos, obras y derramas, e identifica a qué edificio o condominio corresponden. Contrasta también ejecución real y desviaciones del año actual. Pide importe y fecha efectiva de la cuota de tu unidad y supuestos de aumentos. Un presupuesto aprobado no garantiza gastos finales ni ausencia de nuevos cobros; el propuesto no prueba una obligación ya aprobada.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 43,
+      "group": 5
+    },
+    {
+      "number": 4,
+      "question": "¿Qué actas pueden revelar reparaciones aún no presupuestadas?",
+      "response": {
+        "reply": "Solicita actas de junta, asambleas y comités pertinentes, avisos/agendas recientes, informes de ingeniería y SIRS, ofertas, contratos y comunicaciones oficiales sobre obras. Busca recomendaciones o estudios en curso, presupuestos solicitados, litigios y financiación discutida; distingue propuesta, aprobación, contratación y ejecución. Pide confirmación escrita de reparaciones pendientes y estimación para la unidad cuando exista. La ausencia de una reparación en las actas entregadas no garantiza que no haya obras futuras; cruza los documentos con administración y profesionales. Canaliza la solicitud por vendedor o representante autorizado, sin presumir acceso irrestricto del comprador a todos los registros.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.111\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 44,
+      "group": 5
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo comprobar si la asociación tiene muchos propietarios morosos?",
+      "response": {
+        "reply": "Pide información agregada de morosidad: número y porcentaje de unidades, importes, antigüedad de cuotas ordinarias y derramas, tendencia, provisiones y medidas de cobro. No solicites nombres ni datos financieros personales de vecinos. Evalúa efecto en efectivo, mantenimiento, préstamos y posibles aumentos de cuotas con un contador. Distingue deudas de tu unidad, que título debe revisar, de la situación global de la asociación. El prestamista debe comprobar elegibilidad del proyecto para su programa; no hay un porcentaje universal que apruebe o rechace todos los préstamos. No puedo declarar insolvencia por un dato aislado.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://selling-guide.fanniemae.com/sel/b4-2.2-02/full-review-process\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 45,
+      "group": 5
+    },
+    {
+      "number": 6,
+      "question": "¿Cómo averiguo si hay una votación pendiente antes de cerrar?",
+      "response": {
+        "reply": "Pide por escrito a administración y vendedor avisos, agenda y calendario de reuniones o votaciones pendientes, incluidas derramas, presupuesto, reservas, préstamos y cambios de uso. Revisa actas y resultados cuando se celebren, y actualiza la consulta cerca del cierre; una conversación no acredita que nada esté pendiente. Obtén copias mediante el canal de acceso autorizado del vendedor. Si una decisión puede afectar tu compra, revisa con Sabatino y abogado cómo documentar avisos, distribución de costos o protección contractual antes de vencer plazos; no asumas que la votación permite cancelar automáticamente.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.112\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 46,
+      "group": 5
+    },
+    {
+      "number": 7,
+      "question": "¿Qué reviso si el seguro del edificio tiene un deducible alto?",
+      "response": {
+        "reply": "Pide pólizas completas, declaraciones, endosos, vigencias y deducibles del edificio por riesgo, incluida su base de cálculo: un porcentaje puede aplicarse al valor asegurado, no al precio de tu unidad. Solicita cómo se distribuye una pérdida no cubierta o deducible, según ley y documentos. Revisa con un profesional tu HO-6, límites y exclusiones de loss assessment, sublímites por deducible y cobertura separada de inundación si corresponde. Una póliza HO-6 o un certificado no garantiza que pague toda derrama ni todo deducible; pide confirmación de escenarios y cotizaciones antes de comprometerte.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 47,
+      "group": 5
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debo pedir si el edificio tuvo una orden de evacuación?",
+      "response": {
+        "reply": "Pide la orden original de evacuación, causa, fecha, alcance por edificio/unidad y modificaciones; solicita informes técnicos, permisos, inspecciones finales y estado actual del expediente. Obtén de la autoridad que corresponda constancia escrita de levantamiento y autorización de ocupación aplicable, con condiciones y áreas aún restringidas. La afirmación del administrador, una reparación o que otros vivan allí no acredita que la orden esté levantada. Confirma además pendientes, financiación de obras, seguro y requisitos del prestamista; encarga revisión técnica independiente. No entres en áreas restringidas ni supongas que el levantamiento elimina todos los riesgos.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/553.899\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 48,
+      "group": 5
+    },
+    {
+      "number": 9,
+      "question": "¿Cómo verifico quién es dueño de un estacionamiento o depósito?",
+      "response": {
+        "reply": "Identifica número y ubicación exactos del estacionamiento o depósito y compara declaración registrada, planos, enmiendas, escritura y documentos de asignación. Puede ser unidad separada, elemento común de uso limitado o derecho asignado o arrendado; uso exclusivo no equivale siempre a propiedad separada. Pide a título o abogado confirmar titularidad, gravámenes y si el derecho pasa con esta venta o requiere otro acto, consentimiento o registro. Contrasta con confirmación escrita de la asociación. Una llave, pintura, uso histórico o anuncio no prueba título; verifica costos y restricciones antes de incluirlo como propiedad del vendedor.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www.flsenate.gov/Laws/Statutes/2026/718.106\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 49,
+      "group": 5
+    },
+    {
+      "number": 10,
+      "question": "¿Qué debo confirmar sobre aprobación del comprador por la asociación?",
+      "response": {
+        "reply": "Confirma primero si la declaración y reglas vigentes exigen aprobación del comprador y qué órgano la emite. Pide procedimiento escrito, solicitud, cargos autorizados, plazos, entrevista si aplica y constancia de expediente completo; coordina el calendario contractual sin inventar un plazo universal. Entrega documentación sensible solo por el canal seguro autorizado de la asociación, no aquí. La solicitud presentada no garantiza aprobación; la aprobación de la asociación no sustituye la del prestamista ni autoriza automáticamente alquiler u ocupación. Si hay demora o negativa, pide fundamento escrito y revisión jurídica de derechos y opciones, respetando vivienda justa.\nReferencia general (no consulta en vivo ni verificación de esta asociación): https://www2.myfloridalicense.com/condominiums-and-cooperatives/faqs/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 50,
+      "group": 5
+    },
+    {
+      "number": 1,
+      "question": "¿Qué diferencia hay entre seguro de viento, vivienda e inundación?",
+      "response": {
+        "reply": "El seguro de vivienda reúne coberturas de inmueble, bienes y responsabilidad según la póliza; el viento puede estar incluido, excluido o asegurado por separado. El seguro de inundación cubre pérdidas por inundación definidas en su contrato, normalmente excluidas de la póliza habitual de vivienda. Distingue lluvia que entra por daño de viento de agua que sube o marejada: la causa y las exclusiones importan. Compara pólizas y deducibles por riesgo con un agente; una cobertura no reemplaza automáticamente a las otras ni estar fuera de zona de alto riesgo elimina la posibilidad de inundación.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 51,
+      "group": 6
+    },
+    {
+      "number": 2,
+      "question": "¿Cómo reviso si la póliza cubre uso vacacional o alquiler?",
+      "response": {
+        "reply": "Describe al agente por escrito uso vacacional, meses de ocupación, períodos vacíos, alquiler largo o corto y cualquier plataforma de hospedaje. Pide confirmación escrita de que la aseguradora acepta ese uso y qué póliza/endosos exige; revisa responsabilidad, daños de huéspedes, bienes y pérdida de renta, límites y exclusiones. La protección de una plataforma no equivale necesariamente a seguro integral del propietario. Permiso de HOA o municipio no prueba cobertura; avisa cambios de uso antes de alquilar y no supongas que una póliza de residencia principal sirve para todo.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://content.naic.org/article/consumer-insight-renting-out-your-home-you-need-insurance-coverage-home-sharing-rentals\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 52,
+      "group": 6
+    },
+    {
+      "number": 3,
+      "question": "¿Qué debo comprobar antes de aceptar una cotización de seguro?",
+      "response": {
+        "reply": "Compara cotizaciones con iguales datos y coberturas: aseguradora y agente verificables, dirección, uso real, límites por inmueble/bienes/responsabilidad, valor de reemplazo o depreciado, deducibles por riesgo, exclusiones de viento/inundación y endosos. Revisa prima total, cargos, vigencia de oferta, inspecciones, reparaciones y condiciones de emisión, además de aceptación del prestamista. Una cotización no equivale a cobertura contratada; pide evidencia escrita de emisión o binder autorizado, pago y fecha/hora efectiva. No evalúes solo la prima ni supongas que todos los daños por agua están cubiertos.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/ica/shoppingforinsurance/tips\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 53,
+      "group": 6
+    },
+    {
+      "number": 4,
+      "question": "¿Qué significa un deducible porcentual por huracán?",
+      "response": {
+        "reply": "Un deducible porcentual por huracán se calcula sobre el valor asegurado o límite indicado en la póliza, no sobre el precio de compra ni necesariamente sobre el importe del daño. Pide que el agente lo convierta a dólares y confirme base vigente, endosos de inflación y aplicación por estructura. En pólizas residenciales personales de Florida, revisa la regla de acumulación por año calendario con la misma aseguradora o grupo y cómo opera en huracanes posteriores; no presupongas que siempre se paga todo otra vez o que nunca hay otro deducible. Verifica también deducible de otros riesgos e inundación.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 54,
+      "group": 6
+    },
+    {
+      "number": 5,
+      "question": "¿Cómo comparo valor de reemplazo y valor real depreciado?",
+      "response": {
+        "reply": "Valor de reemplazo estima reparar o sustituir con materiales de clase y calidad similares sin deducir depreciación, sujeto a límites y condiciones; valor real depreciado (ACV) descuenta antigüedad y desgaste. No equivalen al precio de venta ni al valor del terreno. Compara por separado vivienda, techo y bienes personales, endosos, límites, deducibles y requisitos para recuperar depreciación. Pide al agente explicar si el pago inicial y final difieren y qué pruebas y plazos aplican; reemplazo no garantiza pago ilimitado ni actualización de códigos sin cobertura correspondiente.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/ica/shoppingforinsurance/tips\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 55,
+      "group": 6
+    },
+    {
+      "number": 6,
+      "question": "¿Qué comprobaciones necesito sobre elevación y drenaje del lote?",
+      "response": {
+        "reply": "Pide levantamiento topográfico y certificado de elevación si existe; verifica dirección, fecha, cotas y referencia vertical con un agrimensor competente. Contrasta mapa FEMA vigente, elevación base aplicable, historial de inundación, permisos y determinaciones con el administrador local de floodplain. Encarga revisión del drenaje real: pendientes, escorrentía vecina, zanjas, alcantarillas, servidumbres y obras permitidas; un certificado de la casa no evalúa todo el lote. No modificar drenaje sin confirmar autorizaciones. Un lote elevado o zona de menor riesgo no garantiza ausencia de agua ni prima o exención de seguro; pide cotización específica.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.floodsmart.gov/get-insured/elevation-certificates\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 56,
+      "group": 6
+    },
+    {
+      "number": 7,
+      "question": "¿Qué debería consultar si una casa tuvo varias reclamaciones de agua?",
+      "response": {
+        "reply": "Pide al vendedor historial y documentos autorizados de reclamaciones, causa, fechas, daños, reparaciones, secado y permisos aplicables. Un reporte CLUE debe obtenerse por el propietario/canal autorizado; el comprador no tiene acceso libre al historial personal. Distingue tubería, filtración, inundación y daños aún abiertos; encarga inspección y evaluación de humedad independientes. Revisa con aseguradora elegibilidad, exclusiones y prima antes de comprometerte. Una reclamación pagada no demuestra reparación ni que la causa esté resuelta; ausencia de reclamaciones tampoco prueba ausencia de daños. No envíes pólizas ni datos personales al chat.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.insurance.wa.gov/insurance-resources/auto-insurance/credit-and-insurance/clue-comprehensive-loss-underwriting-exchange\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 57,
+      "group": 6
+    },
+    {
+      "number": 8,
+      "question": "¿Qué reviso antes de comprar una vivienda que lleva tiempo vacía?",
+      "response": {
+        "reply": "Confirma cuánto tiempo estuvo vacía y en qué condiciones: servicios, climatización, fugas, humedad, plagas, mantenimiento, seguridad y reparaciones pendientes. Encarga inspección independiente de instalaciones y estructura; coordina activación segura de servicios con profesionales para no ocultar limitaciones de la inspección. Pregunta al agente cómo define la póliza vacante frente a desocupada temporalmente, qué exclusiones o endosos aplican y si acepta el uso futuro. No hay un plazo universal de vacancia válido para todas las pólizas; estar anunciada en venta o tener muebles no prueba cobertura. Revisa también posesión y acceso autorizados.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.chubb.com/us-en/individuals-families/resources/vacant-but-protected-tips-for-safeguarding-vacant-homes.html\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 58,
+      "group": 6
+    },
+    {
+      "number": 9,
+      "question": "¿Cómo verifico que una póliza empiece a tiempo para el cierre?",
+      "response": {
+        "reply": "Obtén de aseguradora o agente autorizado evidencia escrita de emisión/binder aceptable, dirección y asegurados correctos, pago, coberturas y fecha y hora efectiva; confirma requisitos con prestamista y título. Una cotización, solicitud o recibo por sí solo no acredita toda cobertura. El NFIP generalmente tiene espera de 30 días con excepciones, como determinadas operaciones de préstamo; una compra al contado no elimina por sí sola la espera. El seguro privado puede tener otras reglas. Confirma por escrito cualquier excepción y restricciones de contratación por tormenta antes del cierre; no canceles una cobertura previa ni asumas transferencia automática de la póliza del vendedor.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.floodsmart.gov/get-insured/buy-a-policy\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 59,
+      "group": 6
+    },
+    {
+      "number": 10,
+      "question": "¿Qué debo pedir si el seguro exige reparaciones después de comprar?",
+      "response": {
+        "reply": "Pide por escrito el informe de inspección, reparaciones exigidas, plazo y fecha límite, pruebas aceptadas y consecuencias de incumplir; distingue recomendación de condición de cobertura, cancelación o no renovación. Obtén presupuestos de contratistas habilitados, permisos aplicables y reinspection cuando corresponda; entrega pruebas por canal seguro y solicita aceptación escrita de la aseguradora. Si no llegas, pide extensión antes de vencer: solicitarla no garantiza aprobación ni suspende el plazo. Revisa los avisos y opciones con el agente y, si hay disputa, Florida DFS o asesor jurídico; no supongas cobertura continua ni que la inspección privada sustituye la revisión del seguro.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 60,
+      "group": 6
+    },
+    {
+      "number": 1,
+      "question": "¿Qué diferencia hay entre compromiso de título y póliza emitida?",
+      "response": {
+        "reply": "El compromiso de título indica aseguradora, asegurados propuestos, inmueble, importe, requisitos previos y excepciones para emitir la póliza. No equivale a la póliza emitida ni certifica título libre de toda carga. Pide el documento completo con anexos y copias de las excepciones; revisa con título o abogado qué debe subsanarse y los plazos de objeción del contrato. Después del cierre, solicita la póliza y coteja asegurado, descripción legal, fecha, cobertura, endosos y excepciones con lo acordado. No supongas cobertura solo por pagar la prima.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 61,
+      "group": 7
+    },
+    {
+      "number": 2,
+      "question": "¿Qué protege la póliza del prestamista y qué protege la del propietario?",
+      "response": {
+        "reply": "La póliza de título del prestamista protege su interés en el préstamo; no sustituye la protección del propietario. La póliza del propietario protege su interés frente a pérdidas por riesgos de título cubiertos, dentro del importe, exclusiones, excepciones y condiciones aplicables. Pide ambas propuestas y endosos, identifica asegurados y revisa servidumbres, restricciones y gravámenes excluidos con título o abogado. No es seguro contra todos los defectos físicos, inundación o incumplimiento futuro; una póliza del préstamo no garantiza recuperar tu inversión.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://myfloridacfo.com/division/consumers/understanding-insurance/title-insurance-overview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 62,
+      "group": 7
+    },
+    {
+      "number": 3,
+      "question": "¿Qué documentos reviso si hay un judgment contra el vendedor?",
+      "response": {
+        "reply": "Pide a título y abogado copia del judgment y su registro, expediente judicial, identidad del deudor, fechas, monto actualizado y documentos de satisfacción, liberación o resolución que correspondan. Un nombre parecido no prueba que sea el vendedor; una sentencia tampoco grava automáticamente todos sus inmuebles. Hay que revisar si afecta esta parcela, vigencia, prioridad y posibles protecciones de homestead sin presumirlas. Solicita requisitos escritos del asegurador para cerrar y evidencia de su cumplimiento/registro; no aceptes como solución solo la promesa del vendedor ni determines por chat que el título está limpio.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.flsenate.gov/Laws/Statutes/2026/0055.10\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 63,
+      "group": 7
+    },
+    {
+      "number": 4,
+      "question": "¿Cómo verifico un gravamen por obras antes del cierre?",
+      "response": {
+        "reply": "Pide a título o abogado búsqueda actualizada de gravámenes, Notice of Commencement, avisos, claim of lien y expediente, junto con contrato de obra, pagos y declaración final del contratista cuando corresponda. Revisa liberaciones de contratista, subcontratistas y proveedores, su alcance, condiciones y registro requerido. No basta una factura pagada al contratista: podría no haber pagado a terceros. Obras recientes pueden generar derechos aún no registrados; confirma cómo los resolverá el asegurador antes de cerrar. La inspección final del permiso no elimina por sí sola un gravamen ni sustituye revisión jurídica.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www2.myfloridalicense.com/pro/cilb/documents/florida_lien_law.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 64,
+      "group": 7
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo comprobar sobre impuestos atrasados o tax certificates?",
+      "response": {
+        "reply": "Consulta por la parcela exacta con el recaudador de impuestos del condado los años pendientes, tax certificates, intereses/cargos y monto de redención vigente; verifica también con el Clerk si hay procedimiento o subasta de tax deed. Pide a título cómo se pagará y acreditará la liberación antes del cierre, con cifras actualizadas a la fecha de pago. Un tax certificate es un derecho de cobro/gravamen por impuestos, no propiedad del inmueble; pagarlo no transfiere automáticamente la propiedad. No confundas impuestos de la cuenta corriente con certificados o actuaciones pendientes ni asumas que el prorrateo los extingue.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.pinellastaxcollector.gov/property-tax/faq/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 65,
+      "group": 7
+    },
+    {
+      "number": 6,
+      "question": "¿Cómo reviso prorrateos de impuestos al cierre?",
+      "response": {
+        "reply": "Revisa en el contrato y liquidación qué período corresponde a cada parte, fecha de corte, base de días y si el prorrateo usa la factura real o un importe estimado. Contrasta con el recaudador pagos, descuentos, cargos y evaluaciones no ad valorem; separa impuestos atrasados de los del año corriente. Si es estimado, aclara por escrito si habrá reprorrateo, quién lo solicita y cómo se ajusta al llegar la factura. No presupongas una regla universal ni que la exención del vendedor o su factura reflejan tus impuestos futuros; pide estimación al Property Appraiser y revisa cifras con título.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.consumerfinance.gov/owning-a-home/closing-disclosure/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 66,
+      "group": 7
+    },
+    {
+      "number": 7,
+      "question": "¿Cómo consulto el efecto de cambiar mi residencia principal?",
+      "response": {
+        "reply": "Consulta al Property Appraiser del condado fechas y requisitos de homestead, obligación de informar cambios y efecto sobre Save Our Homes e impuestos de ambas viviendas. La exención homestead no se traslada automáticamente; la portabilidad de diferencia de valoración es distinta y requiere elegibilidad y solicitud. Contrasta ocupación real, titularidad y calendario, sin asumir dos residencias principales exentas. Si cambias de estado o país, revisa por separado domicilio y residencia fiscal con asesor tributario; también informa a seguro y prestamista cuando corresponda. El chat no determina tu residencia ni calcula ahorro sin datos verificados.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://floridarevenue.com/faq/Pages/FAQDetails.aspx?FAQID=1641\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 67,
+      "group": 7
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debo revisar antes de quitar o añadir un nombre a la escritura?",
+      "response": {
+        "reply": "Antes de modificar la escritura, pide revisión de abogado, título, prestamista y asesor tributario: titularidad actual, forma de copropiedad, derechos del cónyuge/herederos, hipoteca, seguro de título, homestead y consecuencias de donación, impuestos y registro. Quitar un nombre de la escritura no libera automáticamente de la deuda hipotecaria; añadirlo tampoco convierte por sí solo al nuevo titular en prestatario. No supongas que un quitclaim resuelve cargas o evita impuestos: una transferencia sin efectivo puede tener consideración por deuda y excepciones que deben analizarse. Confirma efectos y requisitos antes de firmar o registrar.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://floridarevenue.com/taxes/taxesfees/Pages/doc_stamp.aspx\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 68,
+      "group": 7
+    },
+    {
+      "number": 9,
+      "question": "¿Qué reviso si el vendedor heredó la propiedad pero no terminó probate?",
+      "response": {
+        "reply": "Pide revisión de abogado de probate y título sobre escritura vigente, certificado de defunción y expediente: testamento admitido si existe, nombramiento/letters del representante, órdenes y autoridad para vender. Ser heredero o tener un testamento no prueba por sí solo facultad para transmitir título asegurable. La vía depende de titularidad, supervivencia, trust y posible homestead; no toda venta exige probate terminado ni toda herencia exige probate. Confirma quién debe firmar, qué autorizaciones y registros faltan, requisitos del asegurador y calendario realista antes de comprometer cierre o liberar fondos.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.floridabar.org/public/consumer/pamphlet026/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 69,
+      "group": 7
+    },
+    {
+      "number": 10,
+      "question": "¿Qué debo preguntar sobre costos de compra sin asumir una tarifa universal?",
+      "response": {
+        "reply": "Pide un desglose escrito y específico de préstamo, título/cierre, impuestos de documentos y registro, inspecciones, seguro, prepagos, escrow, asociación y compensaciones pactadas. Identifica quién cobra, quién paga según contrato, qué es estimado y qué cargos son negociados o regulados; una prima de título regulada no hace universal el costo total. Con financiación, compara Loan Estimate y Closing Disclosure; al contado, pide liquidación detallada. Separa down payment de costos y prepagos, revisa créditos y evita duplicidades. No uses un porcentaje único ni asumas que toda comisión o gasto es obligatorio o negociable.\nReferencia general (no consulta en vivo ni examen de título o contrato): https://www.consumerfinance.gov/owning-a-home/closing-disclosure/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 70,
+      "group": 7
+    },
+    {
+      "number": 1,
+      "question": "¿Cómo verifico si puedo alquilar una propiedad por temporadas?",
+      "response": {
+        "reply": "Para alquilar por temporadas, identifica dirección, jurisdicción y duración/frecuencia previstas. Verifica zonificación, permisos y registro local, licencia DBPR cuando aplique, impuestos y seguro; por separado, pide declaración, reglamentos y enmiendas de la asociación sobre plazo mínimo, cupos, espera y aprobación. Solicita confirmación escrita para esa unidad. Un anuncio o registro tributario no garantiza permiso de alquiler; resuelve contradicciones antes de comprar y protege el uso esencial en el contrato con asesoramiento jurídico.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 71,
+      "group": 8
+    },
+    {
+      "number": 2,
+      "question": "¿Qué diferencia hay entre permiso local y autorización de asociación?",
+      "response": {
+        "reply": "El permiso local atiende las reglas de la ciudad/condado; la autorización de la asociación deriva de sus documentos privados y requisitos aplicables. Una no sustituye a la otra ni a licencia estatal, impuestos o seguro. Pide ambas por escrito para dirección, unidad y uso concreto; revisa restricciones de alquiler, ocupación, mascotas y obras que correspondan. Si discrepan, aclara con autoridad, asociación y abogado antes de comprometerte; no presupongas que manda el anuncio.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 72,
+      "group": 8
+    },
+    {
+      "number": 3,
+      "question": "¿Qué gastos incluyo al estimar ingreso neto de alquiler?",
+      "response": {
+        "reply": "Para estimar ingreso neto, parte de renta efectivamente cobrable y descuenta vacancia, impagos, administración, publicidad/plataformas, limpieza no recuperada, servicios, mantenimiento, reparaciones, seguros, impuestos y asociación. Separa reservas para reemplazos, derramas e inversiones de capital. Distingue resultado operativo de flujo después del servicio de deuda; depreciación fiscal no es salida de efectivo. Usa supuestos documentados y evita duplicar gastos o contar depósitos reembolsables como ingreso disponible. No garantiza rentabilidad ni equivale al cálculo tributario.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 73,
+      "group": 8
+    },
+    {
+      "number": 4,
+      "question": "¿Cómo analizo vacancia sin asumir ocupación garantizada?",
+      "response": {
+        "reply": "Analiza escenarios de ocupación baja, media y alta con rentas y meses comparables, estacionalidad, días fuera de servicio, restricciones y cancelaciones. Separa noches disponibles de todas las del año y días de uso personal; contrasta historial verificable, no solo reservas futuras o anuncios. Calcula gastos fijos durante vacancia, punto de equilibrio y colchón de efectivo. Una ocupación histórica no garantiza la futura; no puedo inventar tasas locales ni prometer ingreso.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 74,
+      "group": 8
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo comprobar sobre impuestos de alojamiento?",
+      "response": {
+        "reply": "Consulta al Florida DOR y al recaudador del condado impuestos estatales sobre alquiler transitorio, surtax y tourist development tax aplicables, registro, base imponible, declaraciones y vencimientos. Verifica duración y posibles excepciones con asesor tributario. Si usas una plataforma, confirma exactamente qué impuestos recauda y remite, en qué jurisdicción y qué sigue siendo responsabilidad tuya; no supongas que cubre todos ni uses una tasa universal. Pagar impuestos no autoriza un alquiler prohibido.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://floridarevenue.com/taxes/taxesfees/Pages/local_option.aspx\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 75,
+      "group": 8
+    },
+    {
+      "number": 6,
+      "question": "¿Qué reviso antes de contratar un property manager?",
+      "response": {
+        "reply": "Revisa contrato, identidad de empresa, licencia de real estate que corresponda a las actividades y excepciones con DBPR; una licencia CAM no sustituye automáticamente la necesaria para alquileres por terceros. Compara honorarios, servicios, selección objetiva de inquilinos, límites de reparaciones, proveedores vinculados, seguros, rendición de cuentas y manejo de fondos/depósitos. Define facultades, acceso a registros, cancelación, entrega de llaves y fondos al terminar. Pide referencias y revisión jurídica antes de firmar; no entregues dinero basándote solo en publicidad.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/475.01\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 76,
+      "group": 8
+    },
+    {
+      "number": 7,
+      "question": "¿Cómo se documentan depósitos y rentas al comprar con inquilino?",
+      "response": {
+        "reply": "Pide lease ejecutado y modificaciones, registro de rentas, depósitos y rentas adelantadas, intereses y saldos, sin datos personales innecesarios. Distingue prorrateo de renta de transferencia de fondos mantenidos para el inquilino. Documenta cesión de lease, contabilidad por cuenta de inquilino, transferencia y recibo escrito conforme a F.S.83.49 cuando aplique, además de avisos/canal de pago. No supongas que un crédito genérico cubre todo ni que la venta termina el lease. Revisa discrepancias con título y abogado; no subas contratos personales al chat.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/0083.49\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 77,
+      "group": 8
+    },
+    {
+      "number": 8,
+      "question": "¿Qué debo revisar si quiero usar personalmente una vivienda de inversión?",
+      "response": {
+        "reply": "Coordina días de uso personal con reservas/lease y reglas de asociación, municipio, seguro y prestamista. Mantén registro de días alquilados, disponibles y personales e ingresos/gastos; IRS Publication 527 distingue usos y limita ciertas deducciones según el caso. Uso por familiares o por debajo de renta justa puede contar como personal. Consulta reparto fiscal de gastos con contador; no supongas deducción total, estatus homestead o rentabilidad por llamarla inversión. Revisa también costos y meses que ya no generarían renta.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 78,
+      "group": 8
+    },
+    {
+      "number": 9,
+      "question": "¿Cómo compruebo si una proyección del vendedor usa ingresos reales?",
+      "response": {
+        "reply": "Pide separar ingresos reales cobrados de reservas futuras y proyección. Contrasta rent roll, reportes de administrador/plataforma y documentación contable autorizada, fechas, cancelaciones, reembolsos, uso del dueño y gastos incluidos, con datos personales redactados. Verifica si la cifra es bruta, operativa o flujo después de deuda y si incluye impuestos o depósitos de huéspedes. Pide supuestos de tarifa y ocupación y costos omitidos. El historial no garantiza rendimiento futuro ni que las licencias o contratos sean transferibles; encarga revisión contable.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 79,
+      "group": 8
+    },
+    {
+      "number": 10,
+      "question": "¿Qué debo consultar antes de terminar un alquiler para vender?",
+      "response": {
+        "reply": "Revisa lease, modificaciones, plazo, renovación, avisos, causales y acuerdos de salida con abogado antes de prometer entrega vacante. La venta no termina automáticamente el alquiler. Una salida anticipada consensuada debe quedar por escrito con fecha, pagos, depósitos y entrega; si no hay acuerdo, sigue el procedimiento legal aplicable. No cambies cerraduras, cortes servicios ni retires bienes para forzar salida. Coordina visitas respetando acceso legal, y refleja ocupación real en oferta y cierre. No inventes un plazo de aviso sin contrato y régimen aplicable.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/0083.67\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 80,
+      "group": 8
+    },
+    {
+      "number": 1,
+      "question": "¿Qué diferencia hay entre lote residencial y permiso para construir?",
+      "response": {
+        "reply": "La zonificación residencial indica usos sujetos a normas; no equivale a permiso aprobado ni garantiza que puedas construir la casa prevista. Confirma parcela y jurisdicción, tamaño, retranqueos, altura, acceso legal, servicios, drenaje, inundación, suelos, restricciones privadas y autorizaciones ambientales. Pide viabilidad escrita del proyecto y permisos necesarios a profesionales y autoridades; la clasificación fiscal o un lote vecino construido no prueba edificabilidad. No aplico reglas de Charlotte a todos los condados.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 81,
+      "group": 9
+    },
+    {
+      "number": 2,
+      "question": "¿Cómo verifico acceso legal a un terreno sin calle pavimentada?",
+      "response": {
+        "reply": "Pide a título o abogado escritura, plano y servidumbre de acceso registrada, su alcance, beneficiarios, ancho, mantenimiento y continuidad hasta vía pública; contrasta con levantamiento y autoridad vial. Verifica por separado acceso físico para vehículos de obra, emergencias y servicios, permisos y costo de mejorar el camino. Una senda usada o una calle dibujada en mapa no prueba derecho legal ni permiso de construir; el pavimento tampoco garantiza que sea vía pública. Resuelve acceso antes de comprometer la compra.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 82,
+      "group": 9
+    },
+    {
+      "number": 3,
+      "question": "¿Qué reviso sobre humedales y especies protegidas?",
+      "response": {
+        "reply": "Encarga evaluación ambiental del sitio y delimitación de humedales cuando corresponda; mapas son una primera referencia, no autorización de rellenar. Confirma jurisdicción y permisos con DEP, distrito de aguas y autoridades federales/locales que correspondan. Para especies protegidas, consulta FWC; no limpies, rellenes, muevas tortugas ni dañes madrigueras sin evaluación y permiso necesario. Estima áreas utilizables, mitigación, costos y plazos antes de comprar. Un lote anunciado como limpio o residencial no acredita ausencia de restricciones.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://myfwc.com/license/wildlife/gopher-tortoise-permits/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 83,
+      "group": 9
+    },
+    {
+      "number": 4,
+      "question": "¿Cómo averiguo costos de conexión a servicios?",
+      "response": {
+        "reply": "Pide por escrito a cada proveedor disponibilidad, capacidad y punto de conexión para agua, alcantarillado, electricidad y comunicaciones. Solicita costos vigentes de conexión, medidor, capacidad, extensión de redes, servidumbres, excavación y obras en vía, quién paga y vigencia del cálculo. Si requiere pozo o septic, confirma viabilidad, permisos y presupuesto con profesionales y autoridad competente. Que haya una tubería o poste cerca no prueba servicio disponible ni costo incluido; separa estas tarifas de impact fees y cuotas de asociación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 84,
+      "group": 9
+    },
+    {
+      "number": 5,
+      "question": "¿Qué debo comprobar sobre impact fees?",
+      "response": {
+        "reply": "Consulta impact fees con la autoridad de la parcela para uso, tamaño y proyecto concretos: tabla vigente, momento de cálculo/pago, ajustes, créditos por uso previo, exenciones y constancia de pagos existentes. Separa tarifas de permiso, conexión/capacidad de servicios y otras evaluaciones. Pide estimación escrita con supuestos; una cifra del anuncio o de un proyecto antiguo no garantiza el monto final ni que un crédito sea transferible. No hay una tarifa única para toda Florida.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/planning-zoning/impact-fees/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 85,
+      "group": 9
+    },
+    {
+      "number": 6,
+      "question": "¿Cómo reviso limitaciones para ampliar una casa costera?",
+      "response": {
+        "reply": "Para una ampliación costera, confirma zonificación local, retranqueos, altura, servidumbres, asociación, estructura y capacidad de servicios. Revisa floodplain, requisitos de elevación y posible substantial improvement/damage con autoridad local. Comprueba si está en jurisdicción CCCL y qué exige DEP para playas, dunas y acceso público; no toda costa tiene idéntico régimen. Pide diseño viable y permisos aplicables antes de contratar; una estructura existente o reparación anterior no autoriza ampliación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/rcp/coastal-construction-control-line\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 86,
+      "group": 9
+    },
+    {
+      "number": 7,
+      "question": "¿Qué verifico sobre un seawall compartido?",
+      "response": {
+        "reply": "Pide a título o abogado documentos de propiedad, servidumbres y acuerdo del seawall: responsabilidad de mantenimiento, reparto de costos, acceso para obras, seguro, incumplimiento y aprobación entre vecinos/asociación. Un ingeniero o contratista competente debe evaluar condición, drenaje, anclajes y vida útil; solicita permisos e historial de reparaciones y presupuestos. Confirma autorizaciones ambientales/locales para reparar o reemplazar. Compartir uso no determina por sí solo quién es dueño o paga; no garantizo estabilidad ni precio de reparación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/environmental-resource-permitting\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 87,
+      "group": 9
+    },
+    {
+      "number": 8,
+      "question": "¿Cómo compruebo si puedo instalar un boat lift?",
+      "response": {
+        "reply": "Confirma derechos sobre frente de agua y muelle, límites/servidumbres, permiso existente y si autoriza ese boat lift. Consulta DEP/distrito competente, autoridad local y otras agencias aplicables sobre permiso o exención documentada, fondos sumergidos, hábitat y navegación; una exención de una agencia no exime de todas. Revisa diseño, capacidad, electricidad, profundidad/mareas, asociación y espacio con técnico competente. El muelle o lift del vecino no prueba derecho a instalar el tuyo ni permiso de dragar.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/environmental-resource-permitting\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 88,
+      "group": 9
+    },
+    {
+      "number": 9,
+      "question": "¿Qué debería revisar antes de firmar con un constructor?",
+      "response": {
+        "reply": "Antes de firmar con un constructor, verifica licencia adecuada y empresa cualificada en DBPR, seguros, referencias y proyecto/terreno. Revisa contrato completo: planos, alcance, precio fijo o cost-plus, allowances, calendario, pagos ligados a avance, permisos, cambios por escrito, retrasos, garantías, resolución de disputas y terminación. Pide revisión jurídica y controles de gravámenes/liberaciones antes de desembolsos; no anticipes pagos desproporcionados al avance ni asumas que licencia garantiza cumplimiento. No hay un único contrato ni porcentaje universal de costo adicional.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.floridabar.org/public/consumer/pamphlet005/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 89,
+      "group": 9
+    },
+    {
+      "number": 10,
+      "question": "¿Cómo verifico garantías y pendientes en una casa recién construida?",
+      "response": {
+        "reply": "Pide certificado de ocupación o autorización aplicable, permisos e inspecciones finales, punch list escrita con responsables/fechas y una inspección independiente. Separa garantía del constructor, fabricantes y contratos de servicio; revisa cobertura, exclusiones, inicio, avisos y transferencia. F.S.553.837 prevé para viviendas nuevas definidas en esa norma una garantía de un año sobre defectos que causen violación material del código, desde primera transmisión u ocupación, lo que ocurra antes, con excepciones; no cubre todo defecto. Confirma aplicabilidad y garantía escrita con abogado. Un certificado no garantiza ausencia de pendientes.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.flsenate.gov/Laws/Statutes/2026/553.837\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 90,
+      "group": 9
+    },
+    {
+      "number": 1,
+      "question": "¿Cómo confirmo instrucciones de transferencia sin confiar en un correo nuevo?",
+      "response": {
+        "reply": "No transfieras por ese correo ni por presión de urgencia. Verifica el cambio por teléfono con título/escrow usando un número previamente verificado por un canal independiente, no el del mensaje nuevo. Si ya enviaste dinero, contacta inmediatamente al banco para intentar detener o recuperar la transferencia y reporta a FBI IC3. No hay garantía de recuperación; no compartas cuentas aquí y este chat no puede autenticar instrucciones ni enviar dinero.\nReferencia general (no consulta en vivo ni verificación individual): https://www.ic3.gov/PSA/2023/psa230609\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 91,
+      "group": 10
+    },
+    {
+      "number": 2,
+      "question": "¿Qué hago si recibo un cambio de cuenta bancaria a última hora?",
+      "response": {
+        "reply": "Detén la transferencia y llama a título/escrow por teléfono previamente verificado para comprobar el cambio; no respondas al correo sospechoso ni uses su número. Si ya enviaste dinero, contacta inmediatamente al departamento de fraude del banco para intentar detener/recuperar la transferencia y presenta reporte en FBI IC3; avisa también a la compañía de cierre por canal seguro. Conserva mensajes y comprobantes sin publicarlos aquí. Actuar rápido no garantiza recuperación; el chat no puede bloquear pagos ni verificar la cuenta.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.ic3.gov/PSA/2023/psa230609\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 92,
+      "group": 10
+    },
+    {
+      "number": 3,
+      "question": "¿Puede el agente prometerme que una propiedad subirá de valor?",
+      "response": {
+        "reply": "No debe prometer que una propiedad subirá de valor. Puede explicar comparables, tendencias, supuestos y riesgos con datos actuales y alcance claro, pero ninguna proyección garantiza apreciación, renta o precio de reventa. Pide evidencia y escenarios de caída, costos, vacancia y plazo; distingue orientación comercial de tasación e inversión asesorada. No decidas basándote en una garantía verbal de rentabilidad ni en cifras que no estén verificadas.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 93,
+      "group": 10
+    },
+    {
+      "number": 4,
+      "question": "¿Qué información debe tratarse con confidencialidad profesional?",
+      "response": {
+        "reply": "La confidencialidad profesional depende de la relación de corretaje y de la ley: por ejemplo, precio mínimo/máximo negociable, motivación, términos alternativos y datos que deban protegerse. En Florida, transaction broker tiene confidencialidad limitada y single agent deberes distintos; pide el disclosure y acuerdo aplicables. Hay excepciones legales: no permite ocultar defectos materiales que deben divulgarse ni ignorar obligaciones legales. Este chat no crea secreto profesional de abogado ni garantiza privacidad de proveedores; usa un canal seguro para documentos y no compartas información sensible.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.flsenate.gov/Laws/Statutes/2026/475.278\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 94,
+      "group": 10
+    },
+    {
+      "number": 5,
+      "question": "¿Cómo se diferencia una opinión de precio de una tasación?",
+      "response": {
+        "reply": "Una opinión de precio o CMA de un agente compara ventas/listados y condiciones para orientar comercialización u oferta, con supuestos y fecha. Una tasación es un análisis profesional con normas, finalidad y alcance propios, normalmente realizado por un tasador habilitado cuando se requiere. El CMA no sustituye automáticamente la tasación que exija un prestamista ni garantiza valor aceptado o precio de venta. Confirma quién prepara el informe, credenciales, datos, uso autorizado y limitaciones; no presento aquí una valoración verificada.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 95,
+      "group": 10
+    },
+    {
+      "number": 6,
+      "question": "¿Qué hago si un anuncio contradice los documentos de la propiedad?",
+      "response": {
+        "reply": "Detén la decisión sobre ese punto y documenta la contradicción: guarda anuncio, fecha y documentos completos aplicables. Pide aclaración y corrección por escrito al responsable; contrasta según el tema con título, asociación, autoridad o profesional técnico, identificando unidad y versión. No asumas que el anuncio modifica la escritura o crea permiso de uso, ni que un documento aislado resuelve todo conflicto. Si afecta tu compra, consulta protección, objeciones y plazos contractuales con Sabatino y abogado antes de firmar, renunciar o desembolsar.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 96,
+      "group": 10
+    },
+    {
+      "number": 7,
+      "question": "¿Cómo consulto una comunidad usando criterios objetivos sin discriminar?",
+      "response": {
+        "reply": "Compara criterios objetivos: precio, tipo de vivienda, accesibilidad física, tiempos de traslado, servicios, gastos y restricciones verificadas. Aplica los mismos criterios sin recomendar o excluir comunidades por características protegidas de personas; respeta vivienda justa y normas estatales/locales. Para escuelas, riesgos o servicios usa fuentes oficiales y límites claros, sin inferir quién vive allí ni garantizar resultados. Sabatino puede ayudarte a contrastar propiedades concretas; no tengo datos MLS verificados en vivo.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.nar.realtor/the-facts/consumer-guide-fair-housing\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 97,
+      "group": 10
+    },
+    {
+      "number": 8,
+      "question": "¿Qué acuerdos deben quedar por escrito antes de entregar posesión?",
+      "response": {
+        "reply": "Antes de entregar posesión, acuerda por escrito quién ocupa, fecha/hora, llaves y acceso, condición, bienes incluidos, servicios, mantenimiento, seguro y responsabilidad. Si ocurre antes o después del cierre, revisa acuerdo específico de ocupación, pagos, depósito/escrow, inspección, salida y consecuencias de retraso, con consentimiento de partes, prestamista y aseguradoras cuando corresponda. Entregar llaves no sustituye condiciones contractuales ni garantiza cierre; pide revisión jurídica y no presupongas que un acuerdo verbal o una firma transfiere por sí sola todos los derechos.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 98,
+      "group": 10
+    },
+    {
+      "number": 9,
+      "question": "¿Qué debo verificar antes de autorizar el desembolso final?",
+      "response": {
+        "reply": "Antes del desembolso final de una compra, confirma con título/abogado contrato y addenda, liquidación final, fondos recibidos y condiciones de financiación, firmas y facultades, requisitos de título, payoff/liberaciones y proceso de registro. Revisa walkthrough, reparaciones, posesión, seguro y pendientes; cualquier retención debe quedar acordada por escrito, con autorización de quienes corresponda. Verifica instrucciones bancarias por canal independiente. No presupongas que firmar autoriza toda salida de fondos ni retengas unilateralmente pagos sin revisar obligaciones. Si es pago final de construcción, exige además avance/aceptación y liberaciones adecuadas.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 99,
+      "group": 10
+    },
+    {
+      "number": 10,
+      "question": "¿Qué puedo hacer si la escritura registrada no refleja lo acordado?",
+      "response": {
+        "reply": "Obtén copia oficial de la escritura registrada y compara descripción legal, titulares y derechos con contrato, documentos firmados y póliza de título. Comunica la discrepancia cuanto antes a compañía de título y abogado; identifica si es error de registro, redacción o desacuerdo sustantivo. No edites la copia ni registres por tu cuenta otro quitclaim: puede requerir instrumento correctivo, firmas/consentimientos, aprobación de asegurador o procedimiento judicial. Guarda evidencia y consulta plazos, cobertura y consecuencias fiscales; una corrección no es automática ni puede garantizarse por chat.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+        "criteria": {},
+        "language": "es"
+      },
+      "pass": true,
+      "bankNumber": 100,
+      "group": 10
+    }
+  ],
+  "scope": "Public API replay; finite Spanish synthetic coverage, not a universal certification."
+}
