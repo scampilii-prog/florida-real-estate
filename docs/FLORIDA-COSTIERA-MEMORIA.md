@@ -1,6 +1,6 @@
 # Florida Costiera — Memoria y continuidad del sitio
 
-Última actualización: 2026-11-07 (America/New_York).
+Última actualización: 2026-11-08 (America/New_York).
 Documento de continuidad entre conversaciones. Registrar decisiones y evidencia; no confundir código, pruebas y publicación.
 Solicitud del propietario: conservar aquí toda la información importante del sitio y actualizarla al completar cambios.
 
@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 6, preguntas 51–60, Seguro, inundación y clima. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 7, preguntas 61–70, Título, impuestos y gastos. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -455,3 +455,12 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Código 5606105079ee9a38f3544eb14abc71cde2af93ea; Cloudflare Pages, rules y structural-audit success; regresiones locales, estructura y tres comprobaciones extra de API pasaron. Diez preguntas repetidas en producción: 10/10. Sin nueva revisión visual del widget.
 - Evidencia: docs/ask-tino-bank-group5-2026-11-08.md y .json con antes/después íntegro. Banco vigente: grupos 1–5 comprobados; grupos 6–10 pendientes. Siguiente: grupo 6, preguntas 51–60, Seguro, inundación y clima.
 - Continúan pendientes bibliotecas privadas autenticadas de Florida Realtors/MIAMI/Stellar, inspección del Worker externo/prácticas de datos y recepción real de correo. Mantener distinción de catálogo público frente a cuerpo leído y emisor/código/revisión/addenda para cláusulas o fechas. No modificar OceanFL ni My Closing Timeline.
+
+
+## 31. Serie 6 del banco completada — 2026-11-08
+
+- Preguntas 51–60 enviadas públicamente, respuestas leídas completas y corregidas. Antes 0/10 criterios de detalle; después 10/10 en producción. No interpretar como falsedad total previa ni garantía universal de calidad.
+- Nueva guía española de seguro/viento/inundación, uso vacacional/alquiler, cotización versus cobertura, deducibles por huracán, reemplazo versus depreciación, elevación/drenaje, reclamaciones de agua, vivienda vacía, inicio de cobertura y reparaciones exigidas. No realiza acciones de seguro ni determina cobertura.
+- Código 903083a46a4bf30537418fc274ef282c9777e949; Cloudflare Pages, rules y structural-audit success; regresiones locales/estructura y tres comprobaciones extra de API aprobadas. Diez consultas públicas repetidas: 10/10 y lectura completa; sin nueva revisión visual del widget.
+- Evidencia completa: docs/ask-tino-bank-group6-2026-11-08.md y .json. Estado vigente: grupos 1–6 comprobados; 7–10 pendientes. Siguiente grupo 7, preguntas 61–70, Título, impuestos y gastos.
+- Permanecen pendientes acceso autenticado autorizado a bibliotecas Florida Realtors/MIAMI/Stellar, revisión del Worker externo/prácticas de datos y recepción real de correo. Conservar identificación de documento/código/revisión/addenda y límites de acceso; no afirmar biblioteca completa conectada. OceanFL y My Closing Timeline intactos.

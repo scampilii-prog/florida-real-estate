@@ -170,3 +170,12 @@ Questions 41–50 now use functions/api/ask-tino-association-review.js: report s
 References reviewed include 2026 F.S.718.111/.112/.106/.503 and 553.899, DBPR, CFO insurance guidance and Fannie Mae's current Full Review page. Conditional reserve pauses/alternative funding are not described as universally allowed or universally unlawful. Read recorded documents and applicable rules for the specific entity; chapter 718 condominium rules are not automatically chapter 720 HOA rules.
 
 Use scripts/check-ask-tino-bank-group5.mjs (--live for public API); full before/after evidence in docs/ask-tino-bank-group5-2026-11-08.md and JSON. Finite Spanish API validation only; no new language claims or visual widget changes. Private forms access remains pending.
+
+
+## Insurance review bank group 6 — 2026-11-08
+
+Questions 51–60 route through functions/api/ask-tino-insurance-review.js for Spanish editorial guidance: wind/home/flood distinctions, rental use, quote versus binding, percentage hurricane deductible, replacement cost versus depreciation, elevation/drainage, water claims, vacancy, effective date and post-purchase repair demands. Existing policy guards retain priority. No insurance sale, quote, binder, policy access, safety certification or coverage determination is performed.
+
+CFO, NFIP, NAIC and regulator references were reviewed; Chubb's vacancy explanation is a primary insurer example, not universal terms. NFIP generally has a 30-day wait with qualified exceptions; cash purchase alone does not remove the wait. Deductible base, calendar-year treatment, occupancy definitions, payment and effective time require the applicable policy/agent. CLUE access is through the owner/authorized channel, not public buyer lookup. No sensitive policy or claim documents are requested in chat.
+
+Use scripts/check-ask-tino-bank-group6.mjs with --live for public API. Full before/after evidence: docs/ask-tino-bank-group6-2026-11-08.md and JSON. Finite Spanish coverage; no new translations, UI changes or claim of unrestricted web search. Private form-library and external Worker/data-practice limitations remain.

@@ -1,0 +1,256 @@
+{
+  "date": "2026-11-08",
+  "codeCommit": "903083a46a4bf30537418fc274ef282c9777e949",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre seguro de viento, vivienda e inundación?",
+        "response": {
+          "reply": "No. Estar fuera de una zona de alto riesgo no significa riesgo cero ni garantiza que no necesites seguro de inundación. El prestamista puede exigirlo incluso fuera de esa zona. Revisa el mapa FEMA para la dirección exacta, la determinación del prestamista y cotizaciones con un profesional de seguros. Distingue seguro de vivienda de seguro de inundación: la póliza habitual normalmente no cubre inundaciones. No puedo confirmar la zona ni los requisitos de una propiedad sin esa revisión.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /viento/. Input:\n\n'No. Estar fuera de una zona de alto riesgo no significa riesgo cero ni garantiza que no necesites seguro de inundación. El prestamista puede exigirlo incluso fuera de esa zona. Revisa el mapa FEMA para la dirección exacta, la determinación del prestamista y cotizaciones con un profesional de seguros. Distingue seguro de vivienda de seguro de inundación: la póliza habitual normalmente no cubre inundaciones. No puedo confirmar la zona ni los requisitos de una propiedad sin esa revisión.\\n' +\n  'https://floridacostiera.com/contact#tell-us-your-plans'\n",
+        "bankNumber": 51
+      },
+      {
+        "number": 2,
+        "question": "¿Cómo reviso si la póliza cubre uso vacacional o alquiler?",
+        "response": {
+          "reply": "Para revisar si la póliza cubre uso vacacional o alquiler, generalmente debes revisar las condiciones y términos específicos de tu póliza de seguro. ¿Cuál es el tipo de propiedad que deseas asegurar (por ejemplo, casa, apartamento, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /escrito/. Input:\n\n'Para revisar si la póliza cubre uso vacacional o alquiler, generalmente debes revisar las condiciones y términos específicos de tu póliza de seguro. ¿Cuál es el tipo de propiedad que deseas asegurar (por ejemplo, casa, apartamento, etc.)?'\n",
+        "bankNumber": 52
+      },
+      {
+        "number": 3,
+        "question": "¿Qué debo comprobar antes de aceptar una cotización de seguro?",
+        "response": {
+          "reply": "Para aceptar una cotización de seguro, debes comprobar los detalles de la cobertura, como los límites de responsabilidad, las deducibles y las exclusiones. También es importante revisar si la póliza cubre los riesgos específicos de tu propiedad, como daños por viento, inundaciones o terremotos.\n\n¿Cuál es el tipo de propiedad que deseas asegurar (vivienda, condominio, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no equivale/. Input:\n\n'Para aceptar una cotización de seguro, debes comprobar los detalles de la cobertura, como los límites de responsabilidad, las deducibles y las exclusiones. También es importante revisar si la póliza cubre los riesgos específicos de tu propiedad, como daños por viento, inundaciones o terremotos.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que deseas asegurar (vivienda, condominio, etc.)?'\n",
+        "bankNumber": 53
+      },
+      {
+        "number": 4,
+        "question": "¿Qué significa un deducible porcentual por huracán?",
+        "response": {
+          "reply": "Un deducible porcentual por huracán se refiere a una cláusula en las pólizas de seguro que especifica que, en caso de daños causados por un huracán, el propietario debe pagar una cantidad equivalente a un porcentaje determinado del valor de la propiedad antes de que el seguro cubra el resto de los daños. \n\n¿Cuál es el tipo de propiedad que estás considerando asegurar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /valor asegurado/. Input:\n\n'Un deducible porcentual por huracán se refiere a una cláusula en las pólizas de seguro que especifica que, en caso de daños causados por un huracán, el propietario debe pagar una cantidad equivalente a un porcentaje determinado del valor de la propiedad antes de que el seguro cubra el resto de los daños. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando asegurar?'\n",
+        "bankNumber": 54
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo comparo valor de reemplazo y valor real depreciado?",
+        "response": {
+          "reply": "Para comparar el valor de reemplazo y el valor real depreciado, generalmente se considera el costo de reconstruir o reemplazar una propiedad con materiales y características similares, versus el valor actual de la propiedad después de considerar su depreciación debido al desgaste y la edad. \n\n¿Cuál es el tipo de propiedad que estás intentando valorar (residencial, comercial, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no.*terreno/. Input:\n\n'Para comparar el valor de reemplazo y el valor real depreciado, generalmente se considera el costo de reconstruir o reemplazar una propiedad con materiales y características similares, versus el valor actual de la propiedad después de considerar su depreciación debido al desgaste y la edad. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás intentando valorar (residencial, comercial, etc.)?'\n",
+        "bankNumber": 55
+      },
+      {
+        "number": 6,
+        "question": "¿Qué comprobaciones necesito sobre elevación y drenaje del lote?",
+        "response": {
+          "reply": "Para determinar las comprobaciones necesarias sobre la elevación y el drenaje del lote, es importante considerar factores como la ubicación del terreno, la zona de inundación y las regulaciones locales. ¿En qué área de la costa del Golfo de Florida estás considerando comprar una propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no garantiza/. Input:\n\n'Para determinar las comprobaciones necesarias sobre la elevación y el drenaje del lote, es importante considerar factores como la ubicación del terreno, la zona de inundación y las regulaciones locales. ¿En qué área de la costa del Golfo de Florida estás considerando comprar una propiedad?'\n",
+        "bankNumber": 56
+      },
+      {
+        "number": 7,
+        "question": "¿Qué debería consultar si una casa tuvo varias reclamaciones de agua?",
+        "response": {
+          "reply": "Para una casa con varias reclamaciones de agua, es importante consultar los registros de daños anteriores y los informes de inspección para entender el historial de problemas de agua. También sería útil verificar si se han realizado reparaciones o mejoras para abordar estos problemas.\n\n¿Cuál es el tipo de propiedad que está considerando (por ejemplo, residencial, comercial, costa o interior)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /causa/. Input:\n\n'Para una casa con varias reclamaciones de agua, es importante consultar los registros de daños anteriores y los informes de inspección para entender el historial de problemas de agua. También sería útil verificar si se han realizado reparaciones o mejoras para abordar estos problemas.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que está considerando (por ejemplo, residencial, comercial, costa o interior)?'\n",
+        "bankNumber": 57
+      },
+      {
+        "number": 8,
+        "question": "¿Qué reviso antes de comprar una vivienda que lleva tiempo vacía?",
+        "response": {
+          "reply": "Antes de comprar una vivienda que lleva tiempo vacía, es importante revisar varios aspectos para asegurarse de que la propiedad esté en buen estado y no tenga problemas ocultos. Algunos de los aspectos que debes considerar incluyen el estado general de la propiedad, la presencia de daños por agua, la condición de los sistemas eléctricos y de plomería, y la posible presencia de plagas o daños estructurales.\n\n¿Cuál es el tipo de vivienda que estás considerando comprar (casa, apartamento, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /vacancia|vacancia|vacante/. Input:\n\n'Antes de comprar una vivienda que lleva tiempo vacía, es importante revisar varios aspectos para asegurarse de que la propiedad esté en buen estado y no tenga problemas ocultos. Algunos de los aspectos que debes considerar incluyen el estado general de la propiedad, la presencia de daños por agua, la condición de los sistemas eléctricos y de plomería, y la posible presencia de plagas o daños estructurales.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de vivienda que estás considerando comprar (casa, apartamento, etc.)?'\n",
+        "bankNumber": 58
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo verifico que una póliza empiece a tiempo para el cierre?",
+        "response": {
+          "reply": "Para verificar que una póliza empiece a tiempo para el cierre, generalmente es recomendable revisar los detalles de la póliza con el proveedor de seguros y confirmar la fecha de inicio de cobertura. ¿Cuál es el tipo de póliza que estás considerando (por ejemplo, seguro de vivienda, título, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /hora/. Input:\n\n'Para verificar que una póliza empiece a tiempo para el cierre, generalmente es recomendable revisar los detalles de la póliza con el proveedor de seguros y confirmar la fecha de inicio de cobertura. ¿Cuál es el tipo de póliza que estás considerando (por ejemplo, seguro de vivienda, título, etc.)?'\n",
+        "bankNumber": 59
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo pedir si el seguro exige reparaciones después de comprar?",
+        "response": {
+          "reply": "Si el seguro exige reparaciones después de comprar, debes pedir un informe detallado sobre los daños y las reparaciones necesarias, así como una estimación de los costos. También es importante preguntar sobre el plazo para realizar las reparaciones y cómo afectarán la póliza de seguro.\n\n¿Cuál es el tipo de propiedad que estás considerando comprar (casa, condominio, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /escrito/. Input:\n\n'Si el seguro exige reparaciones después de comprar, debes pedir un informe detallado sobre los daños y las reparaciones necesarias, así como una estimación de los costos. También es importante preguntar sobre el plazo para realizar las reparaciones y cómo afectarán la póliza de seguro.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar (casa, condominio, etc.)?'\n",
+        "bankNumber": 60
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre seguro de viento, vivienda e inundación?",
+        "response": {
+          "reply": "El seguro de vivienda reúne coberturas de inmueble, bienes y responsabilidad según la póliza; el viento puede estar incluido, excluido o asegurado por separado. El seguro de inundación cubre pérdidas por inundación definidas en su contrato, normalmente excluidas de la póliza habitual de vivienda. Distingue lluvia que entra por daño de viento de agua que sube o marejada: la causa y las exclusiones importan. Compara pólizas y deducibles por riesgo con un agente; una cobertura no reemplaza automáticamente a las otras ni estar fuera de zona de alto riesgo elimina la posibilidad de inundación.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 51
+      },
+      {
+        "number": 2,
+        "question": "¿Cómo reviso si la póliza cubre uso vacacional o alquiler?",
+        "response": {
+          "reply": "Describe al agente por escrito uso vacacional, meses de ocupación, períodos vacíos, alquiler largo o corto y cualquier plataforma de hospedaje. Pide confirmación escrita de que la aseguradora acepta ese uso y qué póliza/endosos exige; revisa responsabilidad, daños de huéspedes, bienes y pérdida de renta, límites y exclusiones. La protección de una plataforma no equivale necesariamente a seguro integral del propietario. Permiso de HOA o municipio no prueba cobertura; avisa cambios de uso antes de alquilar y no supongas que una póliza de residencia principal sirve para todo.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://content.naic.org/article/consumer-insight-renting-out-your-home-you-need-insurance-coverage-home-sharing-rentals\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 52
+      },
+      {
+        "number": 3,
+        "question": "¿Qué debo comprobar antes de aceptar una cotización de seguro?",
+        "response": {
+          "reply": "Compara cotizaciones con iguales datos y coberturas: aseguradora y agente verificables, dirección, uso real, límites por inmueble/bienes/responsabilidad, valor de reemplazo o depreciado, deducibles por riesgo, exclusiones de viento/inundación y endosos. Revisa prima total, cargos, vigencia de oferta, inspecciones, reparaciones y condiciones de emisión, además de aceptación del prestamista. Una cotización no equivale a cobertura contratada; pide evidencia escrita de emisión o binder autorizado, pago y fecha/hora efectiva. No evalúes solo la prima ni supongas que todos los daños por agua están cubiertos.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/ica/shoppingforinsurance/tips\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 53
+      },
+      {
+        "number": 4,
+        "question": "¿Qué significa un deducible porcentual por huracán?",
+        "response": {
+          "reply": "Un deducible porcentual por huracán se calcula sobre el valor asegurado o límite indicado en la póliza, no sobre el precio de compra ni necesariamente sobre el importe del daño. Pide que el agente lo convierta a dólares y confirme base vigente, endosos de inflación y aplicación por estructura. En pólizas residenciales personales de Florida, revisa la regla de acumulación por año calendario con la misma aseguradora o grupo y cómo opera en huracanes posteriores; no presupongas que siempre se paga todo otra vez o que nunca hay otro deducible. Verifica también deducible de otros riesgos e inundación.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 54
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo comparo valor de reemplazo y valor real depreciado?",
+        "response": {
+          "reply": "Valor de reemplazo estima reparar o sustituir con materiales de clase y calidad similares sin deducir depreciación, sujeto a límites y condiciones; valor real depreciado (ACV) descuenta antigüedad y desgaste. No equivalen al precio de venta ni al valor del terreno. Compara por separado vivienda, techo y bienes personales, endosos, límites, deducibles y requisitos para recuperar depreciación. Pide al agente explicar si el pago inicial y final difieren y qué pruebas y plazos aplican; reemplazo no garantiza pago ilimitado ni actualización de códigos sin cobertura correspondiente.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/ica/shoppingforinsurance/tips\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 55
+      },
+      {
+        "number": 6,
+        "question": "¿Qué comprobaciones necesito sobre elevación y drenaje del lote?",
+        "response": {
+          "reply": "Pide levantamiento topográfico y certificado de elevación si existe; verifica dirección, fecha, cotas y referencia vertical con un agrimensor competente. Contrasta mapa FEMA vigente, elevación base aplicable, historial de inundación, permisos y determinaciones con el administrador local de floodplain. Encarga revisión del drenaje real: pendientes, escorrentía vecina, zanjas, alcantarillas, servidumbres y obras permitidas; un certificado de la casa no evalúa todo el lote. No modificar drenaje sin confirmar autorizaciones. Un lote elevado o zona de menor riesgo no garantiza ausencia de agua ni prima o exención de seguro; pide cotización específica.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.floodsmart.gov/get-insured/elevation-certificates\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 56
+      },
+      {
+        "number": 7,
+        "question": "¿Qué debería consultar si una casa tuvo varias reclamaciones de agua?",
+        "response": {
+          "reply": "Pide al vendedor historial y documentos autorizados de reclamaciones, causa, fechas, daños, reparaciones, secado y permisos aplicables. Un reporte CLUE debe obtenerse por el propietario/canal autorizado; el comprador no tiene acceso libre al historial personal. Distingue tubería, filtración, inundación y daños aún abiertos; encarga inspección y evaluación de humedad independientes. Revisa con aseguradora elegibilidad, exclusiones y prima antes de comprometerte. Una reclamación pagada no demuestra reparación ni que la causa esté resuelta; ausencia de reclamaciones tampoco prueba ausencia de daños. No envíes pólizas ni datos personales al chat.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.insurance.wa.gov/insurance-resources/auto-insurance/credit-and-insurance/clue-comprehensive-loss-underwriting-exchange\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 57
+      },
+      {
+        "number": 8,
+        "question": "¿Qué reviso antes de comprar una vivienda que lleva tiempo vacía?",
+        "response": {
+          "reply": "Confirma cuánto tiempo estuvo vacía y en qué condiciones: servicios, climatización, fugas, humedad, plagas, mantenimiento, seguridad y reparaciones pendientes. Encarga inspección independiente de instalaciones y estructura; coordina activación segura de servicios con profesionales para no ocultar limitaciones de la inspección. Pregunta al agente cómo define la póliza vacante frente a desocupada temporalmente, qué exclusiones o endosos aplican y si acepta el uso futuro. No hay un plazo universal de vacancia válido para todas las pólizas; estar anunciada en venta o tener muebles no prueba cobertura. Revisa también posesión y acceso autorizados.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.chubb.com/us-en/individuals-families/resources/vacant-but-protected-tips-for-safeguarding-vacant-homes.html\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 58
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo verifico que una póliza empiece a tiempo para el cierre?",
+        "response": {
+          "reply": "Obtén de aseguradora o agente autorizado evidencia escrita de emisión/binder aceptable, dirección y asegurados correctos, pago, coberturas y fecha y hora efectiva; confirma requisitos con prestamista y título. Una cotización, solicitud o recibo por sí solo no acredita toda cobertura. El NFIP generalmente tiene espera de 30 días con excepciones, como determinadas operaciones de préstamo; una compra al contado no elimina por sí sola la espera. El seguro privado puede tener otras reglas. Confirma por escrito cualquier excepción y restricciones de contratación por tormenta antes del cierre; no canceles una cobertura previa ni asumas transferencia automática de la póliza del vendedor.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://www.floodsmart.gov/get-insured/buy-a-policy\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 59
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo pedir si el seguro exige reparaciones después de comprar?",
+        "response": {
+          "reply": "Pide por escrito el informe de inspección, reparaciones exigidas, plazo y fecha límite, pruebas aceptadas y consecuencias de incumplir; distingue recomendación de condición de cobertura, cancelación o no renovación. Obtén presupuestos de contratistas habilitados, permisos aplicables y reinspection cuando corresponda; entrega pruebas por canal seguro y solicita aceptación escrita de la aseguradora. Si no llegas, pide extensión antes de vencer: solicitarla no garantiza aprobación ni suspende el plazo. Revisa los avisos y opciones con el agente y, si hay disputa, Florida DFS o asesor jurídico; no supongas cobertura continua ni que la inspección privada sustituye la revisión del seguro.\nReferencia general (no consulta en vivo ni confirmación de cobertura): https://myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 60
+      }
+    ]
+  },
+  "checks": {
+    "rules": "success",
+    "structural-audit": "success",
+    "Cloudflare Pages": "success"
+  },
+  "extraLocalChecks": [
+    "sensitive-input priority",
+    "cash purchase does not automatically waive NFIP waiting period",
+    "authorized claims history and claim payment does not prove repair"
+  ]
+}
