@@ -12,6 +12,8 @@ for(const [i,message] of questions.entries()){
  try{response=live?JSON.parse(execFileSync('curl',['-fsS','--max-time','40','https://floridacostiera.com/api/ask-tino','-H','Content-Type: application/json','--data-binary','@-'],{input:JSON.stringify(body),encoding:'utf8',timeout:45000})):await(await onRequest({request:new Request('https://floridacostiera.com/api/ask-tino',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})})).json();
  assert.equal(response.language,'es');for(const pattern of checks[i])assert.match(response.reply,pattern);
  assert(!/he (verificado|consultado|revisado)/i.test(response.reply));
+ if(i===5)assert(!/PACE|reclamación de seguro/.test(response.reply));
+ if(i===8)assert(!/garantizo|puedes cancelar automáticamente/.test(response.reply));
  }catch(e){error=e.message;}
  if(response?.criteria)criteria=response.criteria;history.push({role:'user',content:message});results.push({number:i+1,question:message,response,pass:!error,...(error?{error}:{})});
 }

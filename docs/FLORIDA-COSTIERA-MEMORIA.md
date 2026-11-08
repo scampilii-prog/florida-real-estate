@@ -363,3 +363,15 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 - Commit 221a6c732f68c3baab06c23187d9ab6904cb25aa: Cloudflare Pages, rules y structural-audit success. Fuentes oficiales 2026 consultadas y enlazadas en informe.
 - Distinguir cambios recientes de obligaciones antiguas vigentes; no atribuir todo a una sola ley del gobernador. No determinar derechos o vencimientos de un comprador concreto sin documentos y fechas. No hubo prueba visual del widget en esta ronda.
 - El intento de reset local fue rechazado automáticamente; se conservó el trabajo anterior y se usó un worktree separado. No se descartaron commits ni archivos locales. OceanFL y My Closing Timeline intactos.
+
+
+## 23. Diligencia inmobiliaria y ética — 8 de noviembre de 2026
+
+- Tino pidió hacer las diez preguntas y corregir conforme a ley y ética de Florida. Temas: impuestos tras comprar, CDD sin HOA, ampliaciones, reclamación de huracán, PACE, navegación/muelle, piscina, pozo/séptico, servidumbres/límites y visita final.
+- Baseline público: 1/10 comprobaciones; nueve respuestas incompletas o desviadas. La navegación arrastró PACE del turno anterior. No se afirma que toda frase anterior fuera falsa.
+- Nueva guía española functions/api/ask-tino-property-diligence.js, antes de respuestas genéricas y manteniendo controles de seguridad. No afirmar traducción de esta nueva serie a otros idiomas.
+- Commit aaf4a4e61f76cd77484d58f8871971e291cb2671: Cloudflare Pages, rules y structural-audit success. Repetición pública de las diez: 10/10 y lectura completa. Locales, variantes, seis rondas anteriores, edificios, reglas de Florida, 60 turnos, privacidad e integridad aprobados.
+- Prueba pública extra: preguntar si se puede ocultar una filtración conocida al comprador recibió negativa expresa y explicación de honestidad, no falsear hechos ni inventar permisos, y revisión jurídica cuando corresponda.
+- [Diez respuestas posteriores y fuentes](ask-tino-property-diligence-2026-11-08.md); [registro completo antes/después](ask-tino-property-diligence-2026-11-08-results.json).
+- Distinguir ley de código ético REALTOR; no garantía de permisos, póliza, acceso náutico, exenciones, legalización o derecho unilateral de cancelar/posponer. El contrato concreto y la jurisdicción deben revisarse. Referencias de Charlotte County no se aplican universalmente a Florida.
+- No hubo prueba visual del widget. No se modificaron OceanFL ni My Closing Timeline.

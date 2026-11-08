@@ -1,0 +1,288 @@
+{
+  "date": "2026-11-08",
+  "implementationCommit": "aaf4a4e61f76cd77484d58f8871971e291cb2671",
+  "syntheticDataOnly": true,
+  "before": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "El vendedor paga pocos impuestos porque tiene homestead desde hace años. ¿Cómo puedo estimar los impuestos que pagaría yo después de comprar?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /tasador/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'Florida Department of Revenue — Property Tax\\n' +\n  'https://floridarevenue.com/property/Pages/default.aspx\\n' +\n  'No pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n"
+      },
+      {
+        "number": 2,
+        "question": "El anuncio dice “sin HOA”, pero aparecen cargos CDD y restricciones en la escritura. ¿Qué documentos debo revisar para conocer todas mis obligaciones?",
+        "response": {
+          "reply": "Para una casa sujeta a HOA, la sección 720.401 exige un resumen de divulgación antes de firmar: membresía obligatoria, restricciones, cuotas, derramas y posibles cargos adicionales. Solicita también declaración y enmiendas, reglamentos, presupuesto, actas y estado de cuenta/estoppel para revisar obligaciones reales. No confundas HOA del capítulo 720 con condominio del 718. Si faltó el resumen, pueden existir derechos de cancelación mediante aviso escrito dentro de 3 días de recibirlo o antes del cierre, lo que ocurra primero; revisa contrato y fechas con asesoramiento jurídico.\nReferencia legal (no consulta en vivo ni verificación individual): https://www.flsenate.gov/Laws/Statutes/2026/720.401\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no"
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /CDD/. Input:\n\n'Para una casa sujeta a HOA, la sección 720.401 exige un resumen de divulgación antes de firmar: membresía obligatoria, restricciones, cuotas, derramas y posibles cargos adicionales. Solicita también declaración y enmiendas, reglamentos, presupuesto, actas y estado de cuenta/estoppel para revisar obligaciones reales. No confundas HOA del capítulo 720 con condominio del 718. Si faltó el resumen, pueden existir derechos de cancelación mediante aviso escrito dentro de 3 días de recibirlo o antes del cierre, lo que ocurra primero; revisa contrato y fechas con asesoramiento jurídico.\\n' +\n  'Referencia legal (no consulta en vivo ni verificación individual): https://www.flsenate.gov/Laws/Statutes/2026/720.401\\n' +\n  'https://floridacostiera.com/contact#tell-us-your-plans'\n"
+      },
+      {
+        "number": 3,
+        "question": "La casa tiene una habitación y un baño adicionales que no aparecen en los registros del condado. ¿Cómo compruebo si fueron construidos legalmente?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-08\n\nSarasota County\nhttps://www.scgov.net/\nPágina consultada ahora — 2026-11-08\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /finales/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'La autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\\n' +\n  '\\n' +\n  'Charlotte County — Community Development\\n' +\n  'https://charlottecountyfl.gov/departments/community-development/building-construction/permits/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Sarasota County\\n' +\n  'https://www.scgov.net/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n"
+      },
+      {
+        "number": 4,
+        "question": "El vendedor reparó daños de un huracán, pero todavía tiene una reclamación de seguro abierta. ¿Qué debería aclararse antes del cierre?",
+        "response": {
+          "reply": "Para proceder con la compra de una propiedad con una reclamación de seguro abierta debido a daños de un huracán, es importante aclarar el estatus de la reclamación y cómo afectará la transferencia de propiedad. ¿Cuál es el tipo de propiedad que está considerando comprar (por ejemplo, casa unifamiliar, condominio, etc.)?",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /aseguradora/. Input:\n\n'Para proceder con la compra de una propiedad con una reclamación de seguro abierta debido a daños de un huracán, es importante aclarar el estatus de la reclamación y cómo afectará la transferencia de propiedad. ¿Cuál es el tipo de propiedad que está considerando comprar (por ejemplo, casa unifamiliar, condominio, etc.)?'\n"
+      },
+      {
+        "number": 5,
+        "question": "La casa tiene un préstamo PACE que se paga mediante los impuestos de la propiedad. ¿Cómo averiguo el saldo y quién tendría que pagarlo al vender?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /PACE/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'Florida Department of Revenue — Property Tax\\n' +\n  'https://floridarevenue.com/property/Pages/default.aspx\\n' +\n  'No pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n"
+      },
+      {
+        "number": 6,
+        "question": "Quiero comprar una casa frente a un canal para usar mi embarcación. ¿Cómo verifico profundidad, puentes, acceso al Golfo y derechos sobre el muelle?",
+        "response": {
+          "reply": "Para verificar la profundidad, puentes, acceso al Golfo y derechos sobre el muelle de una casa frente a un canal, generalmente es necesario consultar con un profesional inmobiliario o un experto local que conozca las características específicas de la propiedad y la zona. También puede ser útil contactar a las autoridades locales o a la asociación de propietarios de la zona para obtener información sobre los derechos de uso del muelle y el acceso al agua.\n\nEn cuanto al préstamo PACE, es importante investigar cómo afecta la propiedad y quién sería responsable de pagar el saldo en caso de venta. Un agente inmobiliario como Sabatino puede ayudar a aclarar estos detalles.\n\n¿Cuál es la ubicación específica en la costa del Golfo de Florida donde estás interesado en comprar una casa?",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /calado/. Input:\n\n'Para verificar la profundidad, puentes, acceso al Golfo y derechos sobre el muelle de una casa frente a un canal, generalmente es necesario consultar con un profesional inmobiliario o un experto local que conozca las características específicas de la propiedad y la zona. También puede ser útil contactar a las autoridades locales o a la asociación de propietarios de la zona para obtener información sobre los derechos de uso del muelle y el acceso al agua.\\n' +\n  '\\n' +\n  'En cuanto al préstamo PACE, es importante investigar cómo afecta la propiedad y quién sería responsable de pagar el saldo en caso de venta. Un agente inmobiliario como Sabatino puede ayudar a aclarar estos detalles.\\n' +\n  '\\n' +\n  '¿Cuál es la ubicación específica en la costa del Golfo de Florida donde estás interesado en comprar una casa?'\n"
+      },
+      {
+        "number": 7,
+        "question": "El terreno parece suficientemente grande para construir una piscina. ¿Qué debo comprobar antes de asumir que podré instalarla?",
+        "response": {
+          "reply": "Identifica la parcela exacta y confirma con la autoridad competente zonificación, uso permitido, retiros, altura y superficie edificable para tu proyecto. Revisa acceso legal, servidumbres, levantamiento topográfico y restricciones de escritura o asociación. Verifica disponibilidad y costo de agua, alcantarillado o viabilidad de séptico, electricidad y acceso vial. Investiga inundación, humedales, suelos, drenaje y posibles limitaciones ambientales con los profesionales adecuados. Estima preparación del terreno, permisos y tasas. Que se anuncie como terreno residencial no garantiza que puedas construir esa casa: confirma la viabilidad antes de comprometerte.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Voy a comprar una casa con pozo y sistema séptico. ¿Qué inspecciones, permisos y antecedentes de mantenimiento debería pedir?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-08\n\nSarasota County\nhttps://www.scgov.net/\nPágina consultada ahora — 2026-11-08\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /bacterias/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'La autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\\n' +\n  '\\n' +\n  'Charlotte County — Community Development\\n' +\n  'https://charlottecountyfl.gov/departments/community-development/building-construction/permits/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Sarasota County\\n' +\n  'https://www.scgov.net/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n"
+      },
+      {
+        "number": 9,
+        "question": "La compañía de título encontró una servidumbre y un posible problema de límites. ¿Qué debo revisar antes de aceptar esas condiciones y cerrar?",
+        "response": {
+          "reply": "Para abordar el problema de la servidumbre y el posible problema de límites, es importante revisar detalladamente el título de la propiedad y los documentos relacionados con la servidumbre. Deberías considerar consultar a un abogado especializado en derecho inmobiliario para obtener asesoramiento específico sobre cómo proceder.\n\n¿Cuál es el ubicación exacta de la casa que estás considerando comprar?",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /survey/. Input:\n\n'Para abordar el problema de la servidumbre y el posible problema de límites, es importante revisar detalladamente el título de la propiedad y los documentos relacionados con la servidumbre. Deberías considerar consultar a un abogado especializado en derecho inmobiliario para obtener asesoramiento específico sobre cómo proceder.\\n' +\n  '\\n' +\n  '¿Cuál es el ubicación exacta de la casa que estás considerando comprar?'\n"
+      },
+      {
+        "number": 10,
+        "question": "Durante la visita final encuentro una filtración nueva y faltan electrodomésticos incluidos en el contrato. ¿Cómo debería proceder antes de autorizar el cierre?",
+        "response": {
+          "reply": "Para proceder con el cierre de la propiedad, es importante abordar los problemas que has encontrado durante la visita final, como la filtración nueva y la falta de electrodomésticos incluidos en el contrato. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre cómo manejar estas situaciones y proteger tus intereses. \n\n¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencia principal, segunda vivienda, inversión)?",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /documenta/i. Input:\n\n'Para proceder con el cierre de la propiedad, es importante abordar los problemas que has encontrado durante la visita final, como la filtración nueva y la falta de electrodomésticos incluidos en el contrato. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre cómo manejar estas situaciones y proteger tus intereses. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencia principal, segunda vivienda, inversión)?'\n"
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "El vendedor paga pocos impuestos porque tiene homestead desde hace años. ¿Cómo puedo estimar los impuestos que pagaría yo después de comprar?",
+        "response": {
+          "reply": "No uses los impuestos del vendedor como tu presupuesto futuro: su homestead y límite Save Our Homes no se transfieren automáticamente al comprador. Pide al tasador del condado una estimación con valor de compra, fecha, exenciones propias y posible portabilidad si calificas; normalmente la transmisión provoca revisión para el siguiente 1 de enero. Distingue valor tasado, taxable value, millage y cargos no ad valorem. Verifica elegibilidad y solicitud de tus exenciones; precio de compra no equivale necesariamente al valor fiscal definitivo.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.flsenate.gov/Laws/Statutes/2026/689.261\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 2,
+        "question": "El anuncio dice “sin HOA”, pero aparecen cargos CDD y restricciones en la escritura. ¿Qué documentos debo revisar para conocer todas mis obligaciones?",
+        "response": {
+          "reply": "“Sin HOA” no equivale a ausencia de restricciones o cargos. Un CDD es un distrito especial, distinto de una asociación privada. Revisa escritura, declaración y enmiendas registradas, compromiso de título y restricciones vigentes. Pide al distrito presupuesto, deuda, cargos de operación y mantenimiento y calendario, y contrástalos con la factura fiscal y el tax collector; algunos cobros pueden facturarse aparte. Confirma también otras asociaciones o cargos privados. No prometas que las cuotas del CDD desaparecerán al amortizar una parte de su deuda.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.flsenate.gov/Laws/Statutes/2026/Chapter190/All\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 3,
+        "question": "La casa tiene una habitación y un baño adicionales que no aparecen en los registros del condado. ¿Cómo compruebo si fueron construidos legalmente?",
+        "response": {
+          "reply": "Que una habitación o baño no figure en el registro fiscal no prueba por sí solo que sea ilegal; tampoco su presencia en ese registro demuestra permisos. Confirma jurisdicción y compara planos y obras con permisos, inspecciones finales y cierre o certificado requerido. Pide al vendedor contratistas, fechas y documentos; consulta construcción y code enforcement sobre diferencias. Si hay trabajo no autorizado, verifica opciones y costos de legalización con técnicos y autoridad, sin garantizar aprobación. No anuncies superficie, dormitorios o legalidad como verificados sin sustento.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://charlottecountyfl.gov/departments/community-development/building-construction/online-services.stml\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 4,
+        "question": "El vendedor reparó daños de un huracán, pero todavía tiene una reclamación de seguro abierta. ¿Qué debería aclararse antes del cierre?",
+        "response": {
+          "reply": "Pide documentación de daños, alcance de reparación, permisos, facturas, garantías y situación de la reclamación, respetando datos privados. Una reparación no acredita cierre de la reclamación ni viceversa. Coordina con aseguradora, abogado, título y prestamista quién conserva derechos, cobros y obligaciones, y cómo se documentan por escrito antes del cierre. Reclamación y póliza no se transfieren automáticamente por vender. Verifica cobertura del comprador, daños pendientes y posibles gravámenes; no ocultes hechos materiales conocidos ni prometas que el seguro pagará.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 5,
+        "question": "La casa tiene un préstamo PACE que se paga mediante los impuestos de la propiedad. ¿Cómo averiguo el saldo y quién tendría que pagarlo al vender?",
+        "response": {
+          "reply": "PACE puede constituir una obligación no ad valorem y gravamen sobre la propiedad. Solicita contrato y registro, saldo de cancelación fechado, intereses, cuotas futuras y cargos; no basta la cuota de la factura fiscal. Para financiación residencial aplicable, 163.081 exige divulgación escrita de la obligación cuando queda saldo, antes o al ejecutar el contrato de venta. Título y prestamista deben revisar si exigen liquidación y cómo liberarlo. Acuerda por escrito quién paga al cierre; no asumas que se cancela solo ni que el comprador puede asumirlo automáticamente.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.flsenate.gov/Laws/Statutes/2026/163.081\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 6,
+        "question": "Quiero comprar una casa frente a un canal para usar mi embarcación. ¿Cómo verifico profundidad, puentes, acceso al Golfo y derechos sobre el muelle?",
+        "response": {
+          "reply": "Define eslora, manga, calado y altura de tu embarcación. Verifica la ruta completa al Golfo: profundidad y mareas, puentes y altura libre, esclusas si existen y restricciones de navegación con autoridades y un profesional náutico. No deduzcas “sailboat access” de estar frente a un canal. Para el muelle revisa survey, límites, permisos, derechos de uso o titularidad, servidumbres y autorizaciones ambientales aplicables. Un permiso no prueba propiedad ni profundidad navegable. Comprueba condición del muelle, lift y seawall; no garantizo acceso ni medidas sin verificarlos.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.charlottecountyfl.gov/departments/community-development/building-construction/permits/residential-permits/residential-dock.stml\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 7,
+        "question": "El terreno parece suficientemente grande para construir una piscina. ¿Qué debo comprobar antes de asumir que podré instalarla?",
+        "response": {
+          "reply": "El tamaño aparente no garantiza autorización para piscina. Pide un survey y plano del proyecto; confirma jurisdicción, zonificación, retiros, servidumbres, drenaje, cobertura permitida y restricciones de escritura/HOA. Revisa ubicación del séptico, área de drenaje y pozo si existen, servicios enterrados y límites ambientales o de inundación. Consulta construcción y un contratista licenciado sobre permisos, barreras de seguridad y viabilidad antes de vencer tus plazos de revisión. No uses un retiro numérico universal ni una aprobación verbal como permiso.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.charlottecountyfl.gov/departments/community-development/building-construction/permits/residential-permits/residential-pool-or-spa.stml\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 8,
+        "question": "Voy a comprar una casa con pozo y sistema séptico. ¿Qué inspecciones, permisos y antecedentes de mantenimiento debería pedir?",
+        "response": {
+          "reply": "Pide permisos, plano, capacidad autorizada, reparaciones, bombeos y mantenimiento del tanque y campo de drenaje séptico; verifica obligaciones de operación o conexión a alcantarillado con la autoridad competente. Encarga inspección independiente del sistema: una factura de bombeo no es una inspección de funcionamiento. Para el pozo, pide historial, permisos y mantenimiento y análisis reciente por laboratorio adecuado, incluidos bacterias y nitratos según evaluación local. El agua clara no demuestra potabilidad. Consulta DEP/Salud y especialistas sobre alcance y otros contaminantes; no afirmo una inspección de venta universalmente obligatoria.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.floridahealth.gov/community-environmental-public-health/environmental-public-health/water-quality/drinking-water/private-wells/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 9,
+        "question": "La compañía de título encontró una servidumbre y un posible problema de límites. ¿Qué debo revisar antes de aceptar esas condiciones y cerrar?",
+        "response": {
+          "reply": "Pide el instrumento registrado de la servidumbre, descripción legal, survey actualizado, compromiso de título y sus excepciones. Un agrimensor debe ubicar límites, invasiones y mejoras; el abogado debe revisar derechos de uso y remedios contractuales con la compañía de título. Revisa plazos para objetar, subsanar o negociar por escrito antes de aceptar. Una póliza no cubre automáticamente las excepciones ni convierte toda servidumbre en defecto de título. No puedo determinar propiedad o derecho a cancelar sin documentos; no muevas cercas por tu cuenta.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      },
+      {
+        "number": 10,
+        "question": "Durante la visita final encuentro una filtración nueva y faltan electrodomésticos incluidos en el contrato. ¿Cómo debería proceder antes de autorizar el cierre?",
+        "response": {
+          "reply": "Documenta con fotos la filtración y los electrodomésticos faltantes y avisa de inmediato a Sabatino y a la compañía de cierre. Compara contrato, inventario, estado previo y reparaciones pactadas; solicita inspección o presupuesto si corresponde. Revisa con abogado las obligaciones y plazos antes de firmar o autorizar desembolsos. Reparación, reposición, crédito, retención o extensión necesitan acuerdo escrito y aceptación del prestamista cuando aplique. No asumas derecho automático a cancelar, retener dinero o posponer unilateralmente: tampoco aceptes una promesa verbal de arreglo después del cierre.\nReferencia (no consulta en vivo ni verificación de esta propiedad): https://www.floridarealtors.org/sites/default/files/2024-12/Residential%20Contract%20for%20Sale%20and%20Purchase%20%28FloridaRealtors-FloridaBar-7%29%20Redline%20%281%29.pdf\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {
+            "hoa": "no",
+            "bathrooms": 1,
+            "propertyType": "house"
+          },
+          "language": "es"
+        },
+        "pass": true
+      }
+    ]
+  }
+}
