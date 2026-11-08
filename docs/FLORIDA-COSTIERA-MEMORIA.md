@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 4, preguntas 31–40, Inspecciones y condición. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 5, preguntas 41–50, Condominios y asociaciones. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -436,3 +436,13 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - [Inventario de fuentes y acceso real](ask-tino-forms-access-2026-11-08.md). AGENTS.md incorpora la regla permanente solicitada por Tino: emisor/código/revisión/addenda, distinguir metadata de cuerpo leído, no inventar cláusulas ni almacenar documentos privados de clientes o credenciales en GitHub.
 - La API pública de Form Simplicity fue localizada como documentación, sin credenciales/alcance de producción ni derechos de publicación; no se llamó a acciones de transacción. No se encontró conector específico instalado. El acceso completo requiere integración/autorización real del proveedor; membresía personal no conecta el asistente automáticamente.
 - Banco: grupos 1–3 comprobados; grupos 4–10 pendientes. **Siguiente: grupo 4, preguntas 31–40 — Inspecciones y condición.** Continuar leyendo estado vigente y sin pedir a Tino que copie preguntas. OceanFL y My Closing Timeline intactos.
+
+
+## 29. Cuarta serie del banco completada — 2026-11-08
+
+- Preguntas 31–40 enviadas a Ask Tino públicamente, revisadas y corregidas. Antes 0/10 alcanzaron los criterios de detalle; después 10/10. No significa que todo el contenido anterior fuera falso ni certifica respuestas futuras.
+- Nueva guía de condición: inspección visual, humedad, WDO, cuatro puntos/wind mitigation, grietas, owner-builder, HVAC, electricidad, contratista y ocupación tras tormenta. Incluye actualización wind mitigation 2026 y garantía HVAC de F.S.559.956.
+- Código 76eb7e0f28cba97d3c08e9509530143f510db2f8; rules, structural-audit y Cloudflare Pages success; suites locales e inspección estructural pasaron. Diez respuestas públicas completas guardadas en docs/ask-tino-bank-group4-2026-11-08.md y JSON antes/después. API comprobada; sin nueva revisión visual del widget.
+- Estado vigente del banco: grupos 1–4 comprobados, 5–10 pendientes. Siguiente grupo 5, preguntas 41–50 (Condominios y asociaciones). La sección anterior conserva historia; este es el estado actual.
+- Continúa pendiente acceso autenticado y autorizado a bibliotecas privadas Florida Realtors, MIAMI y Stellar; no afirmar conocimiento íntegro de cada formulario. Mantener identificación de código/revisión y addenda antes de cláusulas/plazos concretos.
+- Siguen pendientes revisión del Worker externo y prácticas reales de datos, entrega efectiva de correo y demás tareas que no resolvió esta serie. No modificar OceanFL ni My Closing Timeline.

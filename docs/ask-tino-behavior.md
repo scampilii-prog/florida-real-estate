@@ -152,3 +152,12 @@ Questions 21–30 use functions/api/ask-tino-contracts.js for Spanish guidance a
 The official July 2026 CRSP article describes updated calendar-day counting, while a general legal-library page still describes older business-day rules. The assistant does not apply a fixed rule solely from the CRSP name. Signed revision and applicable clause control. No current full forms library has been ingested or authenticated.
 
 See docs/ask-tino-forms-access-2026-11-08.md for source/access status and docs/ask-tino-bank-group3-2026-11-08.md for ten before/after cases and three live version/access probes. Next group: 4, questions 31–40. Existing privacy/fair-housing guards remain first. No new translations or visitor document-upload workflow.
+
+
+## Property condition bank group 4 — 2026-11-08
+
+Questions 31–40 use functions/api/ask-tino-condition.js for Spanish general guidance: visual inspection limits, moisture cause, WDO, four-point versus wind mitigation, structural cracks, owner-builder remodeling, HVAC permits/warranties, electrical review, contractor license versus completion, and post-storm occupancy. Policy guards retain priority. No property, permit, safety, coverage or contract deadline is certified; references are labeled editorial rather than live retrieval.
+
+Current CFO guidance requires OIR-B1-1802 Rev.04/26 for inspections from April 1, 2026; an earlier report is not invalid solely for using Rev.01/12. F.S.559.956 governs applicable automatic, fee-free HVAC manufacturer warranty transfers; service agreements and installation quality are separate. No universal warranty term or insurer acceptance is promised.
+
+Run scripts/check-ask-tino-bank-group4.mjs, optionally --live. Full before/after evidence is in docs/ask-tino-bank-group4-2026-11-08.md and JSON. This is finite Spanish API coverage, without new translations or visual widget QA. Private forms-library access remains pending as documented in docs/ask-tino-forms-access-2026-11-08.md.
