@@ -1,3 +1,4 @@
+import {safeguardReply,objectiveHousingQuestion} from './ask-tino-safeguards.js';
 import {sellerGuidance} from './ask-tino-seller-guidance.js';
 // Application rules enforce the public design patterns; no proprietary prompts or listing access.
 import {CONTACT,criteriaText} from '../../assets/ask-tino-core.js';
@@ -9,11 +10,12 @@ const L={
 };
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 export function protectedSteering(q){
- const s=norm(q);const colorGroup=/\b(white|black|blanc[oa]s?|negr[oa]s?)\b/.test(s)&&/people|famil|neighbors?|neighbours?|vecinos?|personas?|neighbou?rhood|barrio|quartier|bairro/.test(s);return colorGroup||/\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
+ const s=norm(q);if(objectiveHousingQuestion(s))return false;const colorGroup=/\b(white|black|blanc[oa]s?|negr[oa]s?)\b/.test(s)&&/people|famil|neighbors?|neighbours?|vecinos?|personas?|neighbou?rhood|barrio|quartier|bairro/.test(s);return colorGroup||/\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
 }
 export function policyReply(q,state,lang='en'){
  const t=L[lang]||L.en,s=norm(q);const contact='\n'+CONTACT.form;
  if(protectedSteering(q))return t.fair;
+ const safeguard=safeguardReply(q,lang);if(safeguard)return safeguard;
  if(/licencia de conducir|driver.?s licen[sc]e|passport|pasaporte|patente|passaporto|carteira de motorista|bank statements?|estados bancarios|estratti conto|extratos bancarios/.test(s)&&/envi|send|upload|subir|mandar|caric|guardar|store|conservar/.test(s))return ({
  es:'No envíes aquí tu licencia de conducir ni estados bancarios. El chat no es un canal seguro para esos documentos. Los mensajes pueden ser procesados por servicios externos; no puedo prometer su confidencialidad, conservación ni eliminación por esos proveedores. Si necesitas entregar documentos para una operación, acuerda con Sabatino el canal adecuado antes de enviarlos.',
  en:'Do not send identity documents or bank statements here. This chat is not a secure document channel. External services may process messages; I cannot promise their confidentiality, retention or deletion by those providers. Arrange an appropriate channel with Sabatino before sending transaction documents.',

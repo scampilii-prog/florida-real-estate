@@ -33,7 +33,7 @@ export function contractGuidance(message,lang='en'){
  else if(/fecha efectiva/.test(s)&&/fecha de cierre|diferencia|cierre/.test(s))key='dates';
  else if(/contar dias|metodo de contar|computo|conteo|dias habiles|dias calendario/.test(s)&&/contrato|plazo|crsp|fr.?bar/.test(s))key='counting';
  else if(/feriado|festivo/.test(s)&&/plazo|contrato|vence|vencim/.test(s))key='holiday';
- else if(/extension|prorroga/.test(s)&&/document|aceptad|firm|plazo/.test(s))key='extension';
+ else if(/extension|prorroga|extiend|extende/.test(s)&&/document|aceptad|firm|plazo|inspeccion|aprobacion|cierre/.test(s))key='extension';
  else if(/electronicamente|firma electronica|firmar/.test(s)&&/otro pais|extranjero|electronica/.test(s))key='electronic';
  if(!key)return null;
  return A[key][0]+'\nReferencia general (no lectura de tu contrato ni consulta en vivo): '+A[key][1]+'\n'+CONTACT.form;
