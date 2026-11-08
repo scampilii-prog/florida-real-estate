@@ -10,7 +10,7 @@ for(const [i,row]of questions.entries()){
  const body={message:row.question,criteria,history:history.slice(-4),language:'es'};let response,error;
  try{
  response=live?JSON.parse(execFileSync('curl',['-fsS','--max-time','40','https://floridacostiera.com/api/ask-tino','-H','Content-Type: application/json','--data-binary','@-'],{input:JSON.stringify(body),encoding:'utf8',timeout:45000})):await(await onRequest({request:new Request('https://floridacostiera.com/api/ask-tino',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})})).json();
- assert.equal(response.language,'es');assert(response.reply.includes(topics[i].url));assert(response.reply.includes('#tell-us-your-plans'));assert(response.reply.length>150);
+ assert.equal(response.language,'es');assert(response.reply.includes(topics[i].url));assert(response.reply.includes('#tell-us-your-plans'));assert(response.reply.length>150);assert(response.reply.includes(topics[i].answer));
  assert(/Página recuperada ahora|No pude recuperar la página ahora/.test(response.reply));
  assert(!/he verificado|garantizo|busqué en todo internet/i.test(response.reply));
  criteria=response.criteria;

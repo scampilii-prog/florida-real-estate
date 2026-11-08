@@ -25,7 +25,7 @@ export async function groundedReply(message,lang='en',fetcher=fetch){
  if(lang!=='es')return null;
  const topic=lookupTopic(message);if(!topic)return null;
  const result=await consultSource([topic.name,topic.url],topic.terms,fetcher);
- let answer=topic.answer,synthesized=false;
+ let supplement='',synthesized=false;
  if(result.ok&&result.excerpt){
   const prompt=evidencePrompt(message,result.excerpt);const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
   try{
@@ -33,12 +33,12 @@ export async function groundedReply(message,lang='en',fetcher=fetch){
     const data=r.ok?parse(await r.json()):null;
     const text=typeof data?.answer==='string'?data.answer.trim():'';
     const numbers=text.match(/\d+(?:[.,]\d+)?/g)||[];
-    if(data?.supported===true&&text.length>20&&text.length<600&&!/https?:|www\.|\b(?:garantizo|garantizado|he verificado|he consultado|ignora|ignore|system prompt)\b/i.test(text)&&numbers.every(n=>result.excerpt.includes(n))&&validateModelReply(text,'es')===text){answer=text;synthesized=true;}
+    if(data?.supported===true&&text.length>=60&&text.length<600&&!/https?:|www\.|\b(?:garantizo|garantizado|he verificado|he consultado|ignora|ignore|system prompt)\b/i.test(text)&&numbers.every(n=>result.excerpt.includes(n))&&validateModelReply(text,'es')===text){supplement=text;synthesized=true;}
    }
   }catch{}finally{clearTimeout(timer);}
  }
  const status=result.ok?'Página recuperada ahora — '+result.date+'. Recuperarla no confirma que aplique a tu caso.':'No pude recuperar la página ahora; el enlace es de referencia y no está verificado en esta consulta.';
- return (synthesized?'Resumen del fragmento recuperado:\n':'Orientación general de referencia:\n')+answer+'\n\n'+topic.name+'\n'+topic.url+'\n'+status+'\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\n'+CONTACT.form;
+ return 'Orientación general de referencia:\n'+topic.answer+(synthesized?'\n\nNota del fragmento recuperado:\n'+supplement:'')+'\n\n'+topic.name+'\n'+topic.url+'\n'+status+'\n\nPara el caso concreto, revisa documentos y requisitos con el profesional correspondiente. Si me indicas qué punto necesitas aclarar, puedo orientarte sobre el siguiente paso.\n'+CONTACT.form;
 }
 
 export function usefulFallback(lang='en'){
