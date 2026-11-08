@@ -508,3 +508,9 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Tino aprobó incorporar que algunos visitantes pueden ser vecinos comparando mejoras/distribución/precio (“CMA mental”) y que el evento hace visible el trabajo del agente y puede generar contactos. Sin generalizar a todos ni atribuir intención de engaño; comparación informal no es tasación. Mantiene evaluación de beneficio concreto para vendedor.
 - Código 50eb8c9a890dc0a40310b462c1a3cda8287614dd y corrección de plural 6c7e69496e3c4e68462c3dcd6f6a349e4d10bf36. Cloudflare Pages y rules success. Suites locales Ask Tino aprobadas; siete variantes públicas 7/7, leídas completas. Sin nuevo QA visual ni replay público del banco entero.
 - Evidencia docs/ask-tino-open-house-owner-note-2026-11-08.md y .json. No estadísticas nuevas, no cambios en bibliotecas privadas/Worker/correo pendientes. OceanFL y My Closing Timeline intactos.
+
+
+## 37. Ask Tino: espacio para respuestas — 2026-11-08
+- Cuatro enlaces conservados: comprar, vender, invertir y solicitar llamada. Barra compacta de cuatro columnas en escritorio y dos en pantallas pequeñas.
+- Panel ampliado hasta 480 × 720 px, limitado por la ventana; encabezado y pie compactos. Conversación flexible con min-height:0 y desplazamiento independiente para leer respuestas completas.
+- CSS compartido ask-tino-contact.css con versión 20261108-reading1 en todas las páginas que lo cargan.
