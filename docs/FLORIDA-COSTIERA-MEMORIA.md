@@ -514,3 +514,9 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Cuatro enlaces conservados: comprar, vender, invertir y solicitar llamada. Barra compacta de cuatro columnas en escritorio y dos en pantallas pequeñas.
 - Panel ampliado hasta 480 × 720 px, limitado por la ventana; encabezado y pie compactos. Conversación flexible con min-height:0 y desplazamiento independiente para leer respuestas completas.
 - CSS compartido ask-tino-contact.css con versión 20261108-reading1 en todas las páginas que lo cargan.
+
+
+## 38. Ask Tino: accesos con resultados distintos — 2026-11-08
+- Sustituye la barra anterior: Buying guide → /buyers-guide.html; Selling guide → /sellers-guide.html; Investment calculator → /investment-center.html#investment-calculator. Tres recursos concretos, no etiquetas ambiguas de intención.
+- Se elimina Request a callback de la barra porque duplicaba contacto. Queda un único botón inferior Contact Sabatino al formulario existente, sin prometer llamada solicitada ni enviada.
+- Se conserva el panel ampliado y la lectura con desplazamiento; CSS compartido versión 20261108-actions1.

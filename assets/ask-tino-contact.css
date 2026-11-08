@@ -6,13 +6,12 @@
 #tinoPanel .tino-direct-contact a:focus-visible{outline:3px solid #b58a49;outline-offset:2px}
 
 /* Reception choices remain available even if the AI service is unavailable. */
-#tinoPanel .tino-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:8px 12px;flex-shrink:0}
+#tinoPanel .tino-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px 12px;flex-shrink:0}
 #tinoPanel .tino-options a{display:flex;align-items:center;justify-content:center;min-height:32px;padding:5px 6px;border:1px solid #c7ae80;border-radius:10px;background:#fff;color:#102b43;text-decoration:none;text-align:center;font:700 11px/1.3 Manrope,Arial,sans-serif}
-#tinoPanel .tino-options a:last-child{background:#ead8b7;border-color:#b99458}
 #tinoPanel .tino-options a:hover{background:#f6eddc}
 #tinoPanel .tino-options a:focus-visible{outline:3px solid #b58a49;outline-offset:2px}
 
-/* Keep the conversation as the main area; all four destinations stay available. */
+/* Keep the conversation as the main area; the three resource destinations stay available. */
 html body #tinoPanel{width:480px;height:720px;max-height:calc(100dvh - 125px)}
 #tinoPanel .tino-header{padding:12px 16px;flex-shrink:0}
 #tinoPanel .tino-header strong{font-size:20px}
@@ -25,6 +24,6 @@ html body #tinoPanel{width:480px;height:720px;max-height:calc(100dvh - 125px)}
 #tinoPanel .tino-data-notice{flex-shrink:0}
 @media(max-width:480px){
  html body #tinoPanel{width:calc(100vw - 16px);max-height:calc(100dvh - 100px);bottom:85px}
- #tinoPanel .tino-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:5px 12px}
+ #tinoPanel .tino-options{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:5px 12px}
  #tinoPanel .tino-options a{min-height:28px;padding:4px 6px}
 }
