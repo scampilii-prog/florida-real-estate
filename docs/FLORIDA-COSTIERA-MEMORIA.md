@@ -402,3 +402,12 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 ### Instrucción lista para un chat nuevo
 
 > Continúa Florida Costiera y Ask Tino leyendo primero docs/FLORIDA-COSTIERA-MEMORIA.md en scampilii-prog/florida-real-estate y verificando el estado actual de main. El grupo 1 de diez ya está probado y sus respuestas completas están registradas. Continúa con el grupo 2, preguntas 11–20, de docs/ask-tino-question-bank-100.md. Haz tú las preguntas, verifica las respuestas y fuentes, corrige lo necesario, prueba local y públicamente y guarda evidencia y pendientes en esta memoria. Conserva el diseño aprobado y no modifiques OceanFL ni My Closing Timeline.
+
+
+## 26. Continuación sin copiar resúmenes — instrucción de Tino, 8 de noviembre de 2026
+
+Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
+
+Punto actual: grupo 2, preguntas 11–20, Preparación del comprador. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+
+Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
