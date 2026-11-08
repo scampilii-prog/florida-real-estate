@@ -1,3 +1,4 @@
+import {insuranceReview} from './ask-tino-insurance-review.js';
 import {associationReview} from './ask-tino-association-review.js';
 import {conditionGuidance} from './ask-tino-condition.js';
 import {contractGuidance} from './ask-tino-contracts.js';
@@ -70,6 +71,7 @@ const EXTRA={
 };
 
 export function guidanceReply(message,lang='en',state={}){
+ const insurance=insuranceReview(message,lang);if(insurance)return insurance;
  const association=associationReview(message,lang);if(association)return association;
  const condition=conditionGuidance(message,lang);if(condition)return condition;
  const contract=contractGuidance(message,lang);if(contract)return contract;
