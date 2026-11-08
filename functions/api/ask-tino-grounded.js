@@ -33,7 +33,7 @@ export async function groundedReply(message,lang='en',fetcher=fetch){
     const data=r.ok?parse(await r.json()):null;
     const text=typeof data?.answer==='string'?data.answer.trim():'';
     const numbers=text.match(/\d+(?:[.,]\d+)?/g)||[];
-    if(data?.supported===true&&text.length>=60&&text.length<600&&!/https?:|www\.|\b(?:garantizo|garantizado|he verificado|he consultado|ignora|ignore|system prompt)\b/i.test(text)&&numbers.every(n=>result.excerpt.includes(n))&&validateModelReply(text,'es')===text){supplement=text;synthesized=true;}
+    if(data?.supported===true&&text.length>=60&&text.length<600&&/[.!?]$/.test(text)&&!/https?:|www\.|\b(?:garantizo|garantizado|he verificado|he consultado|ignora|ignore|system prompt)\b/i.test(text)&&numbers.every(n=>result.excerpt.includes(n))&&validateModelReply(text,'es')===text){supplement=text;synthesized=true;}
    }
   }catch{}finally{clearTimeout(timer);}
  }
