@@ -375,3 +375,17 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 - [Diez respuestas posteriores y fuentes](ask-tino-property-diligence-2026-11-08.md); [registro completo antes/después](ask-tino-property-diligence-2026-11-08-results.json).
 - Distinguir ley de código ético REALTOR; no garantía de permisos, póliza, acceso náutico, exenciones, legalización o derecho unilateral de cancelar/posponer. El contrato concreto y la jurisdicción deben revisarse. Referencias de Charlotte County no se aplican universalmente a Florida.
 - No hubo prueba visual del widget. No se modificaron OceanFL ni My Closing Timeline.
+
+
+## 24. Banco de preguntas y consulta dirigida — 8 de noviembre de 2026
+
+- Solicitud: ampliar preguntas en grupos de diez y conectar fuentes para responder dudas no cubiertas, mostrando espera y un siguiente paso útil sin inventar certeza.
+- [Banco inicial de 100 preguntas](ask-tino-question-bank-100.md), diez grupos. No exhaustivo. Grupo 1 auditado; grupos 2–10 pendientes de revisión individual, no respuestas certificadas.
+- Nueva consulta dirigida en español para diez temas: APR, PMI, escrow hipotecario, Loan Estimate, Closing Disclosure, plomo, radón, 1031, depósito de alquiler y portabilidad. Fuentes CFPB, IRS, EPA, Florida Health, Florida Revenue y Florida Bar, además del directorio existente. No búsqueda completa de Internet ni MLS.
+- Estado de preparación/consulta-si-hace-falta en EN/ES/IT/PT durante la petición real; sin espera artificial. Siguiente paso útil ante fallo genérico en cuatro idiomas. La orientación temática nueva sigue siendo española.
+- Se solicitan URLs fijas: no se envían preguntas del visitante a las fuentes. Recuperación limitada, sin redirecciones arbitrarias. El AI existente recibe pregunta y fragmento limitados, no acceso libre a web.
+- Primera versión 14eeeb92c65a3401ee92d9e2186c0d380539b11b pasó condiciones, pero lectura detectó resúmenes cortos. Corregido en 2cd97a1244433f74d32cb709f3542192549b5943: preservar siempre orientación práctica; fragmentos solo complementan.
+- Cloudflare Pages, rules y structural-audit de versión final success. Diez preguntas públicas finales: 10/10 incluyendo orientación completa, fuente, estado real y contacto; lectura manual de todas. Una fuente EPA no pudo recuperarse y mostró correctamente referencia no verificada con orientación útil.
+- Navegador real: Home → abrir chat → pregunta tasa/APR → se observó texto de espera y respuesta CFPB con estado de recuperación. Versiones research1 coherentes en cargadores y páginas, sin cambio visual del diseño ni esquema de criterios.
+- [Informe y respuestas completas](ask-tino-grounded-2026-11-08.md); [JSON público](ask-tino-grounded-2026-11-08-results.json). Tests locales de fallos, síntesis, URLs, datos sensibles y regresiones existentes aprobados.
+- Recuperar una página no certifica vigencia ni aplicabilidad. El catálogo es finito; no prometer respuesta definitiva a toda pregunta. Worker externo/retención siguen fuera del repositorio. Sin cola permanente ni callback enviado. OceanFL y My Closing Timeline intactos.

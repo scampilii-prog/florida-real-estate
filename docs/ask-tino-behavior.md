@@ -123,3 +123,16 @@ Tenant occupancy, intended sale possession and stated remaining lease months are
 Seller guidance adds lease-aware sale steps, preparation without tenant PII, offer comparison, escrow versus cancellation/default, low appraisal options, overlapping ownership risk, general FIRPTA withholding distinctions and written post-closing occupancy terms. It precedes generic handoffs but follows sensitive-data, identity-document and protected-steering guards. No individual legal/tax outcome or action completion is asserted. General FIRPTA rules have an IRS reference and are not described as freshly retrieved during each chat turn.
 
 Run node scripts/check-ask-tino-owner-round5.mjs, optionally --live. Ten exact sequential questions passed locally and after deployment 0c3b379807057ba5ce6b466e4c3d04725ed03081; browser continuity 1–4 passed. Prior four ten-question suites, 60 general turns, privacy and structural checks passed. See docs/ask-tino-owner-round5-2026-11-07.md and full before/after JSON. Finite coverage, not universal chatbot certification.
+
+
+## Curated lookup and useful fallback — 2026-11-08
+
+The first ten questions in docs/ask-tino-question-bank-100.md exercise new Spanish topic lookup: APR, PMI, mortgage escrow, Loan Estimate, Closing Disclosure, lead, radon, 1031, rental deposits and portability. The other nine groups are untested question candidates, not certified answers. The catalog is finite, not an open-web search or a claim to answer every real estate question.
+
+After policy, known guidance and core replies, functions/api/ask-tino-grounded.js consults one selected public source through the existing bounded retriever. Requests use fixed catalog URLs, manual redirects, limited bytes/time and challenge detection; visitor questions and history are not sent to those source sites. A small evidence-only request may go to the already configured AI Worker, with a 10-second timeout and a prompt under 1,000 characters. Returned JSON is checked for support flag, bounded length, unexpected URLs/numbers and existing output policy. This reduces errors but is not proof that a model summary is correct or complete.
+
+Always retain editorial practical guidance. A usable source summary may only supplement it; it never replaces it with an isolated fragment. Display actual source retrieval success/failure separately from general guidance. Retrieval date is not a legal effective date or confirmation of applicability. On failure, give guidance, a reference labeled unverified in this request and an actionable next step. Generic model failures also receive a useful localized next step.
+
+The client displays a localized preparing/consulting-if-needed status during the actual request; it adds no artificial delay and does not claim a source has already been consulted. New source lookup/guidance is Spanish; the waiting state and generic failure handoff cover EN/ES/IT/PT. Existing languages and topic routes remain in place.
+
+All client loaders share research1 cache versions; the core state schema remains round6. Live source retrieval is subject to provider availability. The external Worker's hidden instructions and retention remain uninspected. No permanent visitor-question queue or human callback is created by this feature.
