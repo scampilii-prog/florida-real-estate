@@ -1,0 +1,476 @@
+{
+  "date": "2026-11-08",
+  "scope": "Banco inicial, ampliable y no exhaustivo. No supone que las 100 preguntas estén verificadas.",
+  "groups": [
+    {
+      "number": 1,
+      "title": "Financiación y documentos del préstamo",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 1,
+          "question": "¿Qué diferencia hay entre la tasa de interés y el APR de una hipoteca?"
+        },
+        {
+          "number": 2,
+          "question": "¿Qué es el PMI y a quién protege?"
+        },
+        {
+          "number": 3,
+          "question": "¿Qué diferencia hay entre una cuenta escrow hipotecaria y el depósito de compraventa?"
+        },
+        {
+          "number": 4,
+          "question": "¿Cómo comparo dos Loan Estimates con gastos y créditos diferentes?"
+        },
+        {
+          "number": 5,
+          "question": "¿Qué debo comparar entre el Closing Disclosure y el Loan Estimate?"
+        },
+        {
+          "number": 6,
+          "question": "¿Qué debo revisar sobre pintura con plomo antes de comprar una casa antigua?"
+        },
+        {
+          "number": 7,
+          "question": "¿Cómo compruebo si una casa tiene radón?"
+        },
+        {
+          "number": 8,
+          "question": "¿Qué debería consultar antes de intentar un intercambio 1031?"
+        },
+        {
+          "number": 9,
+          "question": "¿Qué documentos necesito para consultar la devolución de un depósito de alquiler?"
+        },
+        {
+          "number": 10,
+          "question": "¿Cómo averiguo si califico para portabilidad del beneficio Save Our Homes?"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Preparación del comprador",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 11,
+          "question": "¿Qué gastos debo presupuestar además del down payment?"
+        },
+        {
+          "number": 12,
+          "question": "¿Qué diferencia hay entre prequalification, preapproval y aprobación final?"
+        },
+        {
+          "number": 13,
+          "question": "¿Qué pasa si cambio de empleo antes del cierre?"
+        },
+        {
+          "number": 14,
+          "question": "¿Cómo debo consultar el efecto de comprar un automóvil durante la hipoteca?"
+        },
+        {
+          "number": 15,
+          "question": "¿Qué significa que el préstamo esté condicionado a la aprobación del condominio?"
+        },
+        {
+          "number": 16,
+          "question": "¿Qué debo saber antes de usar dinero regalado para comprar?"
+        },
+        {
+          "number": 17,
+          "question": "¿Qué verifico si parte de mis fondos viene del extranjero?"
+        },
+        {
+          "number": 18,
+          "question": "¿Qué debo revisar antes de comprar con otra persona?"
+        },
+        {
+          "number": 19,
+          "question": "¿Cómo compruebo quién debe firmar cuando compra un trust?"
+        },
+        {
+          "number": 20,
+          "question": "¿Qué documentos debería preparar para una compra en efectivo sin enviarlos al chat?"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Oferta y contrato",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 21,
+          "question": "¿Qué diferencia hay entre precio ofrecido y neto para el vendedor?"
+        },
+        {
+          "number": 22,
+          "question": "¿Qué debería comparar entre una oferta con contingencias y una sin ellas?"
+        },
+        {
+          "number": 23,
+          "question": "¿Qué debo comprobar antes de firmar una cláusula de escalamiento?"
+        },
+        {
+          "number": 24,
+          "question": "¿Qué diferencia hay entre fecha efectiva y fecha de cierre?"
+        },
+        {
+          "number": 25,
+          "question": "¿Cómo verifico el método de contar días en mi contrato?"
+        },
+        {
+          "number": 26,
+          "question": "¿Qué debo hacer si un plazo contractual vence en feriado?"
+        },
+        {
+          "number": 27,
+          "question": "¿Cómo se documenta una extensión aceptada por ambas partes?"
+        },
+        {
+          "number": 28,
+          "question": "¿Qué significa una contingencia de venta de mi casa actual?"
+        },
+        {
+          "number": 29,
+          "question": "¿Qué reviso antes de aceptar un backup contract?"
+        },
+        {
+          "number": 30,
+          "question": "¿Qué debo comprobar antes de firmar electrónicamente desde otro país?"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Inspecciones y condición",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 31,
+          "question": "¿Qué incluye y qué excluye una inspección general de vivienda?"
+        },
+        {
+          "number": 32,
+          "question": "¿Qué reviso si el inspector detecta humedad pero no conoce su causa?"
+        },
+        {
+          "number": 33,
+          "question": "¿Cómo verifico antecedentes de termitas y tratamientos?"
+        },
+        {
+          "number": 34,
+          "question": "¿Qué diferencias hay entre inspección de cuatro puntos y wind mitigation?"
+        },
+        {
+          "number": 35,
+          "question": "¿Qué debo pedir sobre reparación de grietas estructurales?"
+        },
+        {
+          "number": 36,
+          "question": "¿Qué compruebo si una casa fue remodelada por el propietario?"
+        },
+        {
+          "number": 37,
+          "question": "¿Qué permisos y garantías reviso de un aire acondicionado nuevo?"
+        },
+        {
+          "number": 38,
+          "question": "¿Qué debo comprobar sobre cableado o paneles eléctricos antiguos?"
+        },
+        {
+          "number": 39,
+          "question": "¿Cómo verifico si una reparación fue terminada por contratista licenciado?"
+        },
+        {
+          "number": 40,
+          "question": "¿Qué reviso sobre restricciones de uso después de daños por tormenta?"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Condominios y asociaciones",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 41,
+          "question": "¿Cómo identifico qué edificio y fase cubre un informe de inspección?"
+        },
+        {
+          "number": 42,
+          "question": "¿Qué diferencia hay entre reservas contables y dinero realmente disponible?"
+        },
+        {
+          "number": 43,
+          "question": "¿Cómo comparo el presupuesto aprobado con el propuesto?"
+        },
+        {
+          "number": 44,
+          "question": "¿Qué actas pueden revelar reparaciones aún no presupuestadas?"
+        },
+        {
+          "number": 45,
+          "question": "¿Qué debo comprobar si la asociación tiene muchos propietarios morosos?"
+        },
+        {
+          "number": 46,
+          "question": "¿Cómo averiguo si hay una votación pendiente antes de cerrar?"
+        },
+        {
+          "number": 47,
+          "question": "¿Qué reviso si el seguro del edificio tiene un deducible alto?"
+        },
+        {
+          "number": 48,
+          "question": "¿Qué debo pedir si el edificio tuvo una orden de evacuación?"
+        },
+        {
+          "number": 49,
+          "question": "¿Cómo verifico quién es dueño de un estacionamiento o depósito?"
+        },
+        {
+          "number": 50,
+          "question": "¿Qué debo confirmar sobre aprobación del comprador por la asociación?"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Seguro, inundación y clima",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 51,
+          "question": "¿Qué diferencia hay entre seguro de viento, vivienda e inundación?"
+        },
+        {
+          "number": 52,
+          "question": "¿Cómo reviso si la póliza cubre uso vacacional o alquiler?"
+        },
+        {
+          "number": 53,
+          "question": "¿Qué debo comprobar antes de aceptar una cotización de seguro?"
+        },
+        {
+          "number": 54,
+          "question": "¿Qué significa un deducible porcentual por huracán?"
+        },
+        {
+          "number": 55,
+          "question": "¿Cómo comparo valor de reemplazo y valor real depreciado?"
+        },
+        {
+          "number": 56,
+          "question": "¿Qué comprobaciones necesito sobre elevación y drenaje del lote?"
+        },
+        {
+          "number": 57,
+          "question": "¿Qué debería consultar si una casa tuvo varias reclamaciones de agua?"
+        },
+        {
+          "number": 58,
+          "question": "¿Qué reviso antes de comprar una vivienda que lleva tiempo vacía?"
+        },
+        {
+          "number": 59,
+          "question": "¿Cómo verifico que una póliza empiece a tiempo para el cierre?"
+        },
+        {
+          "number": 60,
+          "question": "¿Qué debo pedir si el seguro exige reparaciones después de comprar?"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Título, impuestos y gastos",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 61,
+          "question": "¿Qué diferencia hay entre compromiso de título y póliza emitida?"
+        },
+        {
+          "number": 62,
+          "question": "¿Qué protege la póliza del prestamista y qué protege la del propietario?"
+        },
+        {
+          "number": 63,
+          "question": "¿Qué documentos reviso si hay un judgment contra el vendedor?"
+        },
+        {
+          "number": 64,
+          "question": "¿Cómo verifico un gravamen por obras antes del cierre?"
+        },
+        {
+          "number": 65,
+          "question": "¿Qué debo comprobar sobre impuestos atrasados o tax certificates?"
+        },
+        {
+          "number": 66,
+          "question": "¿Cómo reviso prorrateos de impuestos al cierre?"
+        },
+        {
+          "number": 67,
+          "question": "¿Cómo consulto el efecto de cambiar mi residencia principal?"
+        },
+        {
+          "number": 68,
+          "question": "¿Qué debo revisar antes de quitar o añadir un nombre a la escritura?"
+        },
+        {
+          "number": 69,
+          "question": "¿Qué reviso si el vendedor heredó la propiedad pero no terminó probate?"
+        },
+        {
+          "number": 70,
+          "question": "¿Qué debo preguntar sobre costos de compra sin asumir una tarifa universal?"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Alquiler e inversión",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 71,
+          "question": "¿Cómo verifico si puedo alquilar una propiedad por temporadas?"
+        },
+        {
+          "number": 72,
+          "question": "¿Qué diferencia hay entre permiso local y autorización de asociación?"
+        },
+        {
+          "number": 73,
+          "question": "¿Qué gastos incluyo al estimar ingreso neto de alquiler?"
+        },
+        {
+          "number": 74,
+          "question": "¿Cómo analizo vacancia sin asumir ocupación garantizada?"
+        },
+        {
+          "number": 75,
+          "question": "¿Qué debo comprobar sobre impuestos de alojamiento?"
+        },
+        {
+          "number": 76,
+          "question": "¿Qué reviso antes de contratar un property manager?"
+        },
+        {
+          "number": 77,
+          "question": "¿Cómo se documentan depósitos y rentas al comprar con inquilino?"
+        },
+        {
+          "number": 78,
+          "question": "¿Qué debo revisar si quiero usar personalmente una vivienda de inversión?"
+        },
+        {
+          "number": 79,
+          "question": "¿Cómo compruebo si una proyección del vendedor usa ingresos reales?"
+        },
+        {
+          "number": 80,
+          "question": "¿Qué debo consultar antes de terminar un alquiler para vender?"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Terrenos, construcción y costa",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 81,
+          "question": "¿Qué diferencia hay entre lote residencial y permiso para construir?"
+        },
+        {
+          "number": 82,
+          "question": "¿Cómo verifico acceso legal a un terreno sin calle pavimentada?"
+        },
+        {
+          "number": 83,
+          "question": "¿Qué reviso sobre humedales y especies protegidas?"
+        },
+        {
+          "number": 84,
+          "question": "¿Cómo averiguo costos de conexión a servicios?"
+        },
+        {
+          "number": 85,
+          "question": "¿Qué debo comprobar sobre impact fees?"
+        },
+        {
+          "number": 86,
+          "question": "¿Cómo reviso limitaciones para ampliar una casa costera?"
+        },
+        {
+          "number": 87,
+          "question": "¿Qué verifico sobre un seawall compartido?"
+        },
+        {
+          "number": 88,
+          "question": "¿Cómo compruebo si puedo instalar un boat lift?"
+        },
+        {
+          "number": 89,
+          "question": "¿Qué debería revisar antes de firmar con un constructor?"
+        },
+        {
+          "number": 90,
+          "question": "¿Cómo verifico garantías y pendientes en una casa recién construida?"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Seguridad, ética y cierre",
+      "status": "Primer grupo: prueba de consulta dirigida; demás grupos pendientes de auditoría individual.",
+      "questions": [
+        {
+          "number": 91,
+          "question": "¿Cómo confirmo instrucciones de transferencia sin confiar en un correo nuevo?"
+        },
+        {
+          "number": 92,
+          "question": "¿Qué hago si recibo un cambio de cuenta bancaria a última hora?"
+        },
+        {
+          "number": 93,
+          "question": "¿Puede el agente prometerme que una propiedad subirá de valor?"
+        },
+        {
+          "number": 94,
+          "question": "¿Qué información debe tratarse con confidencialidad profesional?"
+        },
+        {
+          "number": 95,
+          "question": "¿Cómo se diferencia una opinión de precio de una tasación?"
+        },
+        {
+          "number": 96,
+          "question": "¿Qué hago si un anuncio contradice los documentos de la propiedad?"
+        },
+        {
+          "number": 97,
+          "question": "¿Cómo consulto una comunidad usando criterios objetivos sin discriminar?"
+        },
+        {
+          "number": 98,
+          "question": "¿Qué acuerdos deben quedar por escrito antes de entregar posesión?"
+        },
+        {
+          "number": 99,
+          "question": "¿Qué debo verificar antes de autorizar el desembolso final?"
+        },
+        {
+          "number": 100,
+          "question": "¿Qué puedo hacer si la escritura registrada no refleja lo acordado?"
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ for(const [file,data] of Object.entries(config)){
  next=next.replace('</head>','<link rel="stylesheet" href="assets/inquiry-form.css?v=20261101-width1"><link rel="stylesheet" href="assets/inquiry-layout.css?v=20261101-width1"></head>');
  const bodyEnd=next.lastIndexOf('</body>');
  if(bodyEnd<0)throw Error('Missing closing body: '+file);
- next=next.slice(0,bodyEnd)+'<script src="assets/inquiry-form.js?v=20261107-round6" defer></script>'+next.slice(bodyEnd);
+ next=next.slice(0,bodyEnd)+'<script src="assets/inquiry-form.js?v=20261108-research1" defer></script>'+next.slice(bodyEnd);
  if(next!==original){changes++;if(!process.argv.includes('--check'))writeFileSync(path.join(root,file),next);}
 }
 if(process.argv.includes('--check')&&changes)throw Error(changes+' inquiry pages differ from the common template. Run node scripts/sync-inquiry.mjs.');

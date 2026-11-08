@@ -1,3 +1,4 @@
+import {groundedReply,usefulFallback} from './ask-tino-grounded.js';
 import {policyReply,validateModelReply} from './ask-tino-policy.js';
 import {guidanceReply} from './ask-tino-guidance.js';
 import {researchReply} from './ask-tino-research.js';
@@ -26,6 +27,7 @@ export async function onRequest({request}){
  const researchMessage=/^(?:charlotte|sarasota)(?:\s+county)?[.!]?$/i.test(message.trim()) && history.some(x=>x?.role==='user'&&/englewood/i.test(x.content||'')&&/permit|permis|piscina|pool|zon/i.test(x.content||'')) ? 'Englewood permisos '+message : message;
  const guidance=guidanceReply(message,lang,criteria);if(guidance)return respond(guidance);
  const known=knownReply(message,criteria,lang);if(known)return respond(known);
+ const grounded=await groundedReply(message,lang);if(grounded)return respond(grounded);
  const researched=await researchReply(researchMessage,lang,siteIndex);if(researched)return respond(researched);
  const prompt=upstreamPrompt(message,criteria,lang,history);if(!prompt)return respond(copy(lang).long);
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),24000);
@@ -38,8 +40,10 @@ export async function onRequest({request}){
    if(reply&&typeof reply==='object')reply=reply.reply??reply.choices?.[0]?.message?.content??'';else break;
   }
   if(typeof reply!=='string'||!reply.trim())throw Error('Empty reply');
-  return respond(validateModelReply(reply.trim().replace(/\\n/g,'\n').replace(/\*\*/g,''),lang));
- }catch{return respond(copy(lang).error+CONTACT.form);}
+  const checked=validateModelReply(reply.trim().replace(/\\n/g,'\n').replace(/\*\*/g,''),lang);
+  if(/no sé|no se (?:la respuesta|como responder)|no tengo (?:esa|informacion|información)|cannot answer|do not know|don't know/i.test(checked))return respond(usefulFallback(lang));
+  return respond(checked);
+ }catch{return respond(copy(lang).error+usefulFallback(lang));}
  finally{clearTimeout(timer);}
 }
 

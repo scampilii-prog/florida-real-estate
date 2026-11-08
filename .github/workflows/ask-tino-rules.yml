@@ -39,3 +39,5 @@ jobs:
       - run: node scripts/check-ask-tino-building-documents.mjs
       - run: node scripts/check-ask-tino-florida-laws.mjs
       - run: node scripts/check-ask-tino-property-diligence.mjs
+      - run: node scripts/check-ask-tino-grounded.mjs
+      - run: node scripts/check-ask-tino-grounded-live.mjs

@@ -58,7 +58,7 @@ async function submit(event){
  state.busy=true;state.lang=language(message,state.lang);privacyNotice(state.lang);state.criteria=updateCriteria(state.criteria,message);
  const history=state.history.slice(-4);state.history.push({role:'user',content:message.slice(0,600)});state.history=state.history.slice(-4);
  const user=document.createElement('div');user.className='tino-bubble';user.textContent=message;user.style.background='#e8f3f0';messages.append(user);input.value='';
- const reply=document.createElement('div');reply.className='tino-bubble';reply.textContent='…';messages.append(reply);reply.scrollIntoView({behavior:'smooth',block:'end'});
+ const reply=document.createElement('div');reply.className='tino-bubble';reply.textContent=({es:'Estoy preparando tu respuesta y, si hace falta, consultando fuentes oficiales…',en:'Preparing your answer and consulting official sources if needed…',it:'Sto preparando la risposta e, se necessario, consultando fonti ufficiali…',pt:'Estou preparando a resposta e, se necessário, consultando fontes oficiais…'}[state.lang]||'…');messages.append(reply);reply.scrollIntoView({behavior:'smooth',block:'end'});
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),28000);
  try{
   const response=await fetch('/api/ask-tino',{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,body:JSON.stringify({message,criteria:state.criteria,history,language:state.lang})});
