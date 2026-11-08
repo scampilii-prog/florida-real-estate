@@ -1,0 +1,247 @@
+{
+  "date": "2026-11-08",
+  "implementationCommit": "662ad926290c357079f3bf9ee33c78fdb54adae2",
+  "syntheticDataOnly": true,
+  "before": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué gastos debo presupuestar además del down payment?",
+        "response": {
+          "reply": "Para adquirir una propiedad, es importante considerar gastos adicionales além del pago inicial (down payment). Estos pueden incluir costos de cierre, impuestos, seguros y posiblemente gastos de inspección y evaluación. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, residencial, comercial, waterfront)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /reserva/. Input:\n\n'Para adquirir una propiedad, es importante considerar gastos adicionales além del pago inicial (down payment). Estos pueden incluir costos de cierre, impuestos, seguros y posiblemente gastos de inspección y evaluación. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, residencial, comercial, waterfront)?'\n",
+        "bankNumber": 11
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre prequalification, preapproval y aprobación final?",
+        "response": {
+          "reply": "La diferencia entre precalificación, preaprobación y aprobación final es el nivel de revisión y aprobación de su solicitud de préstamo. La precalificación es una estimación inicial, la preaprobación es una revisión más detallada y la aprobación final es la decisión definitiva después de revisar toda la documentación. \n\n¿Cuál es su situación financiera actual (por ejemplo, primera vez que compra, tiene un préstamo existente)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /terminos|términos/. Input:\n\n'La diferencia entre precalificación, preaprobación y aprobación final es el nivel de revisión y aprobación de su solicitud de préstamo. La precalificación es una estimación inicial, la preaprobación es una revisión más detallada y la aprobación final es la decisión definitiva después de revisar toda la documentación. \\n' +\n  '\\n' +\n  '¿Cuál es su situación financiera actual (por ejemplo, primera vez que compra, tiene un préstamo existente)?'\n",
+        "bankNumber": 12
+      },
+      {
+        "number": 3,
+        "question": "¿Qué pasa si cambio de empleo antes del cierre?",
+        "response": {
+          "reply": "Si cambias de empleo antes del cierre, es posible que afecte tu capacidad para obtener una hipoteca o mantener las condiciones actuales de tu préstamo. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre tu situación. ¿Cuál es el tipo de propiedad que estás considerando comprar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /prestamista/. Input:\n\n'Si cambias de empleo antes del cierre, es posible que afecte tu capacidad para obtener una hipoteca o mantener las condiciones actuales de tu préstamo. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre tu situación. ¿Cuál es el tipo de propiedad que estás considerando comprar?'\n",
+        "bankNumber": 13
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo debo consultar el efecto de comprar un automóvil durante la hipoteca?",
+        "response": {
+          "reply": "Para consultar sobre el efecto de comprar un automóvil durante la hipoteca, te recomiendo hablar con un profesional de finanzas o un asesor hipotecario. Sin embargo, en general, es importante considerar cómo un nuevo pago de automóvil podría afectar tus finanzas personales y tu capacidad para pagar la hipoteca.\n\n¿Cuál es el monto aproximado de la hipoteca que estás considerando?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /deuda/. Input:\n\n'Para consultar sobre el efecto de comprar un automóvil durante la hipoteca, te recomiendo hablar con un profesional de finanzas o un asesor hipotecario. Sin embargo, en general, es importante considerar cómo un nuevo pago de automóvil podría afectar tus finanzas personales y tu capacidad para pagar la hipoteca.\\n' +\n  '\\n' +\n  '¿Cuál es el monto aproximado de la hipoteca que estás considerando?'\n",
+        "bankNumber": 14
+      },
+      {
+        "number": 5,
+        "question": "¿Qué significa que el préstamo esté condicionado a la aprobación del condominio?",
+        "response": {
+          "reply": "El préstamo condicionado a la aprobación del condominio significa que la entidad prestamista requiere que el condominio donde se encuentra la propiedad cumpla con ciertos requisitos o condiciones antes de aprobar el préstamo. ¿Cuál es el tipo de propiedad que estás considerando comprar, es decir, un condominio o una casa unifamiliar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /proyecto/. Input:\n\n'El préstamo condicionado a la aprobación del condominio significa que la entidad prestamista requiere que el condominio donde se encuentra la propiedad cumpla con ciertos requisitos o condiciones antes de aprobar el préstamo. ¿Cuál es el tipo de propiedad que estás considerando comprar, es decir, un condominio o una casa unifamiliar?'\n",
+        "bankNumber": 15
+      },
+      {
+        "number": 6,
+        "question": "¿Qué debo saber antes de usar dinero regalado para comprar?",
+        "response": {
+          "reply": "Antes de usar dinero regalado para comprar una propiedad, es importante entender que los prestamadores pueden tener requisitos específicos para documentar y verificar la procedencia de esos fondos. \n\n¿Cuál es el monto aproximado del dinero regalado que planea utilizar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /regalo/. Input:\n\n'Antes de usar dinero regalado para comprar una propiedad, es importante entender que los prestamadores pueden tener requisitos específicos para documentar y verificar la procedencia de esos fondos. \\n' +\n  '\\n' +\n  '¿Cuál es el monto aproximado del dinero regalado que planea utilizar?'\n",
+        "bankNumber": 16
+      },
+      {
+        "number": 7,
+        "question": "¿Qué verifico si parte de mis fondos viene del extranjero?",
+        "response": {
+          "reply": "Para verificar si parte de tus fondos viene del extranjero, es importante considerar las regulaciones y requisitos de reporte de transacciones financieras internacionales. Te recomiendo consultar con un profesional licenciado, como Sabatino, para obtener asesoramiento específico sobre tu situación.\n\n¿Cuál es el propósito de la compra que estás considerando (por ejemplo, residencia principal, segunda residencia, inversión)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /origen/. Input:\n\n'Para verificar si parte de tus fondos viene del extranjero, es importante considerar las regulaciones y requisitos de reporte de transacciones financieras internacionales. Te recomiendo consultar con un profesional licenciado, como Sabatino, para obtener asesoramiento específico sobre tu situación.\\n' +\n  '\\n' +\n  '¿Cuál es el propósito de la compra que estás considerando (por ejemplo, residencia principal, segunda residencia, inversión)?'\n",
+        "bankNumber": 17
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar antes de comprar con otra persona?",
+        "response": {
+          "reply": "Antes de comprar una propiedad con otra persona, debes revisar varios aspectos importantes. Algunos de estos incluyen los acuerdos financieros, la responsabilidad compartida, los derechos de propiedad y cómo se tomarán las decisiones respecto a la propiedad. También es crucial considerar cómo se manejarán los impuestos, los gastos de mantenimiento y las posibles disputas.\n\nPara obtener asesoramiento específico y personalizado, te recomiendo contactar a Sabatino Campilii, quien puede ofrecerte orientación detallada basada en tus circunstancias únicas.\n\n¿Cuál es el tipo de propiedad que estás considerando comprar con la otra persona?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /escritura/. Input:\n\n'Antes de comprar una propiedad con otra persona, debes revisar varios aspectos importantes. Algunos de estos incluyen los acuerdos financieros, la responsabilidad compartida, los derechos de propiedad y cómo se tomarán las decisiones respecto a la propiedad. También es crucial considerar cómo se manejarán los impuestos, los gastos de mantenimiento y las posibles disputas.\\n' +\n  '\\n' +\n  'Para obtener asesoramiento específico y personalizado, te recomiendo contactar a Sabatino Campilii, quien puede ofrecerte orientación detallada basada en tus circunstancias únicas.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar con la otra persona?'\n",
+        "bankNumber": 18
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo compruebo quién debe firmar cuando compra un trust?",
+        "response": {
+          "reply": "Para verificar quién debe firmar cuando se compra un trust, es importante considerar la estructura y los términos específicos del trust en cuestión, así como las leyes y regulaciones aplicables. Generalmente, los documentos del trust y los acuerdos contractuales involucrados en la compra pueden proporcionar información sobre quién tiene la autoridad para firmar en nombre del trust.\n\n¿Cuál es el tipo específico de trust del que estás hablando (por ejemplo, trust de revocación, trust irrevocable, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /facultades/. Input:\n\n'Para verificar quién debe firmar cuando se compra un trust, es importante considerar la estructura y los términos específicos del trust en cuestión, así como las leyes y regulaciones aplicables. Generalmente, los documentos del trust y los acuerdos contractuales involucrados en la compra pueden proporcionar información sobre quién tiene la autoridad para firmar en nombre del trust.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo específico de trust del que estás hablando (por ejemplo, trust de revocación, trust irrevocable, etc.)?'\n",
+        "bankNumber": 19
+      },
+      {
+        "number": 10,
+        "question": "¿Qué documentos debería preparar para una compra en efectivo sin enviarlos al chat?",
+        "response": {
+          "reply": "Para una compra en efectivo, generalmente se requiere documentación que verifique la identidad del comprador y el origen de los fondos. ¿Cuál es su nacionalidad o país de residencia, para poder ofrecer una guía más específica sobre los documentos necesarios?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /canal/. Input:\n\n'Para una compra en efectivo, generalmente se requiere documentación que verifique la identidad del comprador y el origen de los fondos. ¿Cuál es su nacionalidad o país de residencia, para poder ofrecer una guía más específica sobre los documentos necesarios?'\n",
+        "bankNumber": 20
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-07",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué gastos debo presupuestar además del down payment?",
+        "response": {
+          "reply": "Además del down payment, presupuesta gastos de cierre: prestamista si hay préstamo, tasación, inspecciones, título, registro, honorarios pactados y otros cargos aplicables. Revisa impuestos, seguro, prepagos, depósitos escrow, cuotas de asociación o distrito, mudanza y una reserva para mantenimiento. Separa pagos previos de importes al cierre para no duplicarlos; descuenta depósitos ya acreditados. Pide estimaciones desglosadas al prestamista y compañía de cierre, sin usar un porcentaje universal ni confundir cash to close con costo mensual.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/what-costs-come-with-taking-out-a-mortgage-en-153/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 11
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre prequalification, preapproval y aprobación final?",
+        "response": {
+          "reply": "Los términos prequalification y preapproval no tienen un proceso idéntico en todos los prestamistas: pregunta qué datos verificaron, vigencia y condiciones pendientes. La preaprobación no garantiza el préstamo. La aprobación final requiere resolver las condiciones del prestamista sobre ingresos, activos, crédito, propiedad y proyecto cuando aplique. Tampoco una aprobación o un resultado DU equivale por sí solo a fondos desembolsados. Pide confirmación escrita del estado y lo que falta antes de comprometer plazos.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/whats-the-difference-between-a-prequalification-letter-and-a-preapproval-letter-en-127/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 12
+      },
+      {
+        "number": 3,
+        "question": "¿Qué pasa si cambio de empleo antes del cierre?",
+        "response": {
+          "reply": "Avisa al prestamista antes de cambiar de empleo o tan pronto conozcas un cambio; no ocultes información. El prestamista debe revisar estabilidad, ingresos, forma de remuneración, fecha de inicio y documentos actualizados; pasar a comisión o trabajo independiente puede cambiar el análisis. No supongas rechazo automático ni aprobación asegurada. Pide por escrito si afecta condiciones y fecha de cierre; coordina con Sabatino y asesoramiento jurídico cualquier plazo o extensión contractual. No envíes nóminas o contratos laborales aquí.\nReferencia general (no consulta en vivo ni aprobación individual): https://guide-selling.fanniemae.com/sel/b3-3.1-04/verbal-verification-employment\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 13
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo debo consultar el efecto de comprar un automóvil durante la hipoteca?",
+        "response": {
+          "reply": "Consulta al prestamista antes de financiar el automóvil, abrir crédito o asumir una deuda nueva. La cuota, consulta crediticia y reducción de fondos pueden afectar relación deuda/ingresos, crédito, reservas y capacidad de cerrar, incluso con preaprobación. Pide evaluar el efecto usando las cifras reales por su canal seguro; no asumas que una compra en efectivo evita todo impacto. Comunica cambios con honestidad y revisa condiciones y plazos antes de obligarte; no puedo aprobar tu préstamo.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.consumerfinance.gov/ask-cfpb/what-exactly-happens-when-a-mortgage-lender-checks-my-credit-en-2005/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 14
+      },
+      {
+        "number": 5,
+        "question": "¿Qué significa que el préstamo esté condicionado a la aprobación del condominio?",
+        "response": {
+          "reply": "La revisión del proyecto de condominio es distinta de la evaluación del comprador: tu preaprobación no basta para aprobar el edificio. Pide al prestamista confirmar revisión, condiciones pendientes y documentos que exige sobre reservas, presupuesto, seguro, reparaciones, derramas, litigios y otros criterios del programa. Coordina entrega con la asociación y comprueba plazos contractuales. Reglas de Fannie Mae u otro programa no son una ley universal para todos los préstamos; no garantizo elegibilidad ni que una revisión favorable de otro banco se aplique al tuyo.\nReferencia general (no consulta en vivo ni aprobación individual): https://selling-guide.fanniemae.com/sel/b4-2.1-01/general-information-project-standards\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 15
+      },
+      {
+        "number": 6,
+        "question": "¿Qué debo saber antes de usar dinero regalado para comprar?",
+        "response": {
+          "reply": "Confirma con el prestamista si el programa admite el regalo, de quién y para qué gastos. Debe ser genuino: no es un préstamo escondido ni debe esperarse devolución. Pide requisitos de gift letter y documentación del origen, disponibilidad y transferencia; la carta sola puede no bastar. No muevas dinero suponiendo aprobación ni apliques reglas de un programa a todos. Revisa cuestiones fiscales con un profesional. No envíes datos bancarios o documentos del donante al chat; usa el canal seguro indicado por el prestamista.\nReferencia general (no consulta en vivo ni aprobación individual): https://guide-selling.fanniemae.com/sel/b3-4.3-04/personal-gifts\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 16
+      },
+      {
+        "number": 7,
+        "question": "¿Qué verifico si parte de mis fondos viene del extranjero?",
+        "response": {
+          "reply": "Consulta antes de transferir con banco, prestamista y compañía de cierre cómo documentar origen y titularidad de fondos, moneda, conversión, traducción de documentos, disponibilidad y plazos. Revisa comisiones y requisitos del programa; reglas de Fannie Mae no son universales para compras en efectivo u otros préstamos. No dividas transferencias para eludir controles ni ocultes la procedencia. Confirma instrucciones por un canal independiente ya verificado. No envíes estados de cuenta ni identificaciones al chat; acuerda un canal seguro.\nReferencia general (no consulta en vivo ni aprobación individual): https://selling-guide.fanniemae.com/sel/b3-4.2-05/foreign-assets\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 17
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar antes de comprar con otra persona?",
+        "response": {
+          "reply": "Antes de comprar juntos, acuerden aportaciones, porcentajes, pagos, mantenimiento y uso, y qué ocurrirá ante separación, fallecimiento, incumplimiento o salida de un propietario. Un abogado debe revisar el tipo de titularidad y la escritura: que aparezcan dos nombres no define por sí solo derechos de supervivencia o reparto. Distingue propiedad de responsabilidad por el préstamo; quitar un nombre de la escritura no libera automáticamente la deuda. Coordina título, financiación, impuestos y acuerdos por escrito sin asumir iguales derechos en todos los casos.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 18
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo compruebo quién debe firmar cuando compra un trust?",
+        "response": {
+          "reply": "Pide a la compañía de título y al abogado revisar identidad y vigencia del trust, trustee actual, sucesión si existe, facultades para adquirir, financiar y firmar, y cualquier consentimiento necesario. Una certificación del trust puede servir para ciertos fines, pero no sustituye automáticamente todo documento que legalmente corresponda. Confirma con título y prestamista quién firma cada instrumento y en qué capacidad; no asumas que cualquier beneficiario puede hacerlo. No envíes el instrumento completo, identificaciones ni datos privados al chat.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.flsenate.gov/Laws/Statutes/2026/736.1017\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 19
+      },
+      {
+        "number": 10,
+        "question": "¿Qué documentos debería preparar para una compra en efectivo sin enviarlos al chat?",
+        "response": {
+          "reply": "Para una compra en efectivo, prepara por el canal seguro que acuerdes con Sabatino y la compañía de cierre: datos de identidad y titularidad del comprador, evidencia reciente de fondos líquidos disponibles, información sobre su origen cuando se solicite y autoridad para firmar si compra una entidad o trust. Pide la lista exacta y qué datos pueden ocultarse sin impedir verificación. No envíes documentos ni cuentas al chat. Una captura o prueba de fondos no garantiza autenticidad ni cierre; confirma transferencias por un contacto independiente verificado y respeta controles aplicables.\nReferencia general (no consulta en vivo ni aprobación individual): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 20
+      }
+    ]
+  }
+}

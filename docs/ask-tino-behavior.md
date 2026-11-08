@@ -136,3 +136,10 @@ Always retain editorial practical guidance. A usable source summary may only sup
 The client displays a localized preparing/consulting-if-needed status during the actual request; it adds no artificial delay and does not claim a source has already been consulted. New source lookup/guidance is Spanish; the waiting state and generic failure handoff cover EN/ES/IT/PT. Existing languages and topic routes remain in place.
 
 All client loaders share research1 cache versions; the core state schema remains round6. Live source retrieval is subject to provider availability. The external Worker's hidden instructions and retention remain uninspected. No permanent visitor-question queue or human callback is created by this feature.
+
+
+## Buyer preparation bank group 2 — 2026-11-08
+
+Questions 11–20 now route through functions/api/ask-tino-buyer-preparation.js for Spanish general guidance before generic topic replies, while existing sensitive-input and protected-steering policies retain priority. Topics: budget beyond down payment, lender terminology/conditions, employment change, car debt, condo project review, genuine gift funds, foreign funds, co-ownership, trust authority and cash-purchase preparation. References are editorial, not live source checks or individualized underwriting. Fannie Mae program rules are not described as universal law. Do not ask nationality by default for a general cash-purchase checklist; do not collect financial or identity documents in chat.
+
+The ten exact cases run sequentially in scripts/check-ask-tino-bank-group2.mjs; --live tests production. Questions/responses before and after, state and publication evidence are in docs/ask-tino-bank-group2-2026-11-08.md and its JSON. Next untested bank group: 3 (21–30). This does not change core criteria schema or claim new translations.

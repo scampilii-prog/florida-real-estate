@@ -408,6 +408,18 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 2, preguntas 11–20, Preparación del comprador. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: grupo 3, preguntas 21–30, Oferta y contrato. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
+
+
+## 27. Grupo 2 completado — 8 de noviembre de 2026
+
+- Se ejecutó la continuación autorizada: preguntas 11–20 de preparación del comprador, sin pedirle a Tino que las copiara.
+- Baseline público secuencial: 0/10 condiciones programadas; respuestas incompletas/preguntas innecesarias, no falsedad de cada frase. La lista general de compra en efectivo pedía nacionalidad sin necesidad.
+- Nueva functions/api/ask-tino-buyer-preparation.js: gastos, términos de aprobación variables, empleo, deuda de automóvil, proyecto condo, regalo genuino, fondos extranjeros, copropiedad, trust y efectivo. Español; sin nuevas traducciones ni cambio de diseño/esquema de criterios. Referencias editoriales, no consulta en vivo ni aprobación individual.
+- Fuentes CFPB, Fannie Mae, Florida Bar y Florida Statutes 736.1017 revisadas. Distinguir reglas de programa de ley universal, propiedad de deuda y beneficiario de autoridad para firmar. Privacidad de documentos conserva prioridad.
+- Implementación 662ad926290c357079f3bf9ee33c78fdb54adae2: Cloudflare Pages, rules y structural-audit success. Diez públicas después: 10/10 y lectura completa; locales, variantes y regresiones existentes aprobadas. No prueba visual del widget en esta ronda.
+- [Informe y respuestas completas](ask-tino-bank-group2-2026-11-08.md); [JSON antes/después y criterios](ask-tino-bank-group2-2026-11-08-results.json). Banco actualizado: grupos 1 y 2 comprobados, grupos 3–10 pendientes.
+- **Siguiente grupo: 3, preguntas 21–30 — Oferta y contrato.** Ante «sigue» o «seguimos con Ask Tino», leer esta memoria y ejecutar ese grupo, revisar y corregir con evidencia, sin pedir resumen al usuario. Al finalizar, avanzar el indicador al grupo siguiente.
+- No se modificaron OceanFL ni My Closing Timeline.
