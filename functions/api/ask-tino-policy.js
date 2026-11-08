@@ -10,7 +10,7 @@ const L={
 };
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 export function protectedSteering(q){
- const s=norm(q);if(objectiveHousingQuestion(s))return false;const colorGroup=/\b(white|black|blanc[oa]s?|negr[oa]s?)\b/.test(s)&&/people|famil|neighbors?|neighbours?|vecinos?|personas?|neighbou?rhood|barrio|quartier|bairro/.test(s);return colorGroup||/\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
+ let s=norm(q);if(objectiveHousingQuestion(s))s=s.replace(/sin usar datos sobre (?:raza|religion)(?: o (?:raza|religion))? de (?:los )?vecinos/,'');const colorGroup=/\b(white|black|blanc[oa]s?|negr[oa]s?)\b/.test(s)&&/people|famil|neighbors?|neighbours?|vecinos?|personas?|neighbou?rhood|barrio|quartier|bairro/.test(s);return colorGroup||/\b(race|racial|raza|razza|religio\w*|ethnic\w*|etni\w*|muslim\w*|musulman\w*|jew\w*|judi\w*|ebre\w*|christian\w*|cristian\w*|gay|gays|disab\w*|discap\w*|families with children|familias con ninos|famiglie con bambini|national origin|nacionalidad|nazionalita)\b/.test(s)&&/\b(area\w*|neighbou?rhood\w*|barrio\w*|vecindario\w*|quartier\w*|bairro\w*|vivienda\w*|homes?|casa\w*|live|vivir|vivere|morar|avoid|evita\w*|exclude|exclu\w*)\b/.test(s);
 }
 export function policyReply(q,state,lang='en'){
  const t=L[lang]||L.en,s=norm(q);const contact='\n'+CONTACT.form;
