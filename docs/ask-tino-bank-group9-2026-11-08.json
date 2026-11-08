@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-08",
+  "group": 9,
+  "codeCommit": "c469f764f4d724276a9e24ad8f6eafedc4c71b64",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre lote residencial y permiso para construir?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-08\n\nSarasota County\nhttps://www.scgov.net/\nPágina consultada ahora — 2026-11-08\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /zonificacion|zonificación/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'La autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\\n' +\n  '\\n' +\n  'Charlotte County — Community Development\\n' +\n  'https://charlottecountyfl.gov/departments/community-development/building-construction/permits/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Sarasota County\\n' +\n  'https://www.scgov.net/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 81
+      },
+      {
+        "number": 2,
+        "question": "¿Cómo verifico acceso legal a un terreno sin calle pavimentada?",
+        "response": {
+          "reply": "Para verificar el acceso legal a un terreno sin calle pavimentada, generalmente es necesario revisar los documentos de propiedad y los registros públicos relacionados con el terreno. ¿Cuál es el ubicación del terreno que estás considerando?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /servidumbre/. Input:\n\n'Para verificar el acceso legal a un terreno sin calle pavimentada, generalmente es necesario revisar los documentos de propiedad y los registros públicos relacionados con el terreno. ¿Cuál es el ubicación del terreno que estás considerando?'\n",
+        "bankNumber": 82
+      },
+      {
+        "number": 3,
+        "question": "¿Qué reviso sobre humedales y especies protegidas?",
+        "response": {
+          "reply": "Para revisar información sobre humedales y especies protegidas en una propiedad, es importante considerar las regulaciones y restricciones ambientales que pueden aplicar. En general, se debe verificar si la propiedad se encuentra en un área designada como humedal o hábitat de especies protegidas, lo que puede afectar el uso y desarrollo del terreno.\n\n¿En qué área de la costa del Golfo de Florida estás considerando adquirir una propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /FWC/. Input:\n\n'Para revisar información sobre humedales y especies protegidas en una propiedad, es importante considerar las regulaciones y restricciones ambientales que pueden aplicar. En general, se debe verificar si la propiedad se encuentra en un área designada como humedal o hábitat de especies protegidas, lo que puede afectar el uso y desarrollo del terreno.\\n' +\n  '\\n' +\n  '¿En qué área de la costa del Golfo de Florida estás considerando adquirir una propiedad?'\n",
+        "bankNumber": 83
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo averiguo costos de conexión a servicios?",
+        "response": {
+          "reply": "Para averiguar los costos de conexión a servicios como agua, electricidad o alcantarillado, es recomendable contactar directamente a las compañías de servicios públicos locales o a la municipalidad correspondiente, ya que ellos pueden proporcionar información actualizada y precisa sobre los costos y los requisitos necesarios para la conexión.\n\n¿Cuál es el tipo de servicio (agua, electricidad, etc.) para el que deseas obtener información de costos?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /escrito/. Input:\n\n'Para averiguar los costos de conexión a servicios como agua, electricidad o alcantarillado, es recomendable contactar directamente a las compañías de servicios públicos locales o a la municipalidad correspondiente, ya que ellos pueden proporcionar información actualizada y precisa sobre los costos y los requisitos necesarios para la conexión.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de servicio (agua, electricidad, etc.) para el que deseas obtener información de costos?'\n",
+        "bankNumber": 84
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impact fees?",
+        "response": {
+          "reply": "Para obtener información precisa sobre las \"impact fees\" (tarifas de impacto), es importante verificarlas a través de fuentes oficiales locales, como la página web del condado o municipio donde se encuentra la propiedad. Estas tarifas pueden variar dependiendo de la ubicación y el tipo de proyecto.\n\n¿En qué área específica de la Costa del Golfo de Florida estás considerando comprar o construir una propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /vigente/. Input:\n\n'Para obtener información precisa sobre las \"impact fees\" (tarifas de impacto), es importante verificarlas a través de fuentes oficiales locales, como la página web del condado o municipio donde se encuentra la propiedad. Estas tarifas pueden variar dependiendo de la ubicación y el tipo de proyecto.\\n' +\n  '\\n' +\n  '¿En qué área específica de la Costa del Golfo de Florida estás considerando comprar o construir una propiedad?'\n",
+        "bankNumber": 85
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo reviso limitaciones para ampliar una casa costera?",
+        "response": {
+          "reply": "Para revisar limitaciones para ampliar una casa costera, es importante investigar las regulaciones y restricciones locales, como las ordenanzas de zonificación, permisos necesarios y regulaciones ambientales. \n\n¿Cuál es la ubicación específica de la casa costera que deseas ampliar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /CCCL/. Input:\n\n'Para revisar limitaciones para ampliar una casa costera, es importante investigar las regulaciones y restricciones locales, como las ordenanzas de zonificación, permisos necesarios y regulaciones ambientales. \\n' +\n  '\\n' +\n  '¿Cuál es la ubicación específica de la casa costera que deseas ampliar?'\n",
+        "bankNumber": 86
+      },
+      {
+        "number": 7,
+        "question": "¿Qué verifico sobre un seawall compartido?",
+        "response": {
+          "reply": "Para un seawall compartido, es importante verificar quién es responsable del mantenimiento y las reparaciones, así como los costos asociados. También es crucial revisar los acuerdos o contratos existentes entre los propietarios que comparten el seawall.\n\n¿Cuál es el condado o la ubicación específica donde se encuentra el seawall compartido que estás considerando?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /responsabilidad/. Input:\n\n'Para un seawall compartido, es importante verificar quién es responsable del mantenimiento y las reparaciones, así como los costos asociados. También es crucial revisar los acuerdos o contratos existentes entre los propietarios que comparten el seawall.\\n' +\n  '\\n' +\n  '¿Cuál es el condado o la ubicación específica donde se encuentra el seawall compartido que estás considerando?'\n",
+        "bankNumber": 87
+      },
+      {
+        "number": 8,
+        "question": "¿Cómo compruebo si puedo instalar un boat lift?",
+        "response": {
+          "reply": "Para determinar si puedes instalar un boat lift, es importante verificar las regulaciones y restricciones locales, así como los posibles permisos necesarios. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre tu propiedad. ¿Cuál es la ubicación exacta de la propiedad costera que estás considerando?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /navegacion|navegación/. Input:\n\n'Para determinar si puedes instalar un boat lift, es importante verificar las regulaciones y restricciones locales, así como los posibles permisos necesarios. Te recomiendo contactar a Sabatino para obtener asesoramiento específico sobre tu propiedad. ¿Cuál es la ubicación exacta de la propiedad costera que estás considerando?'\n",
+        "bankNumber": 88
+      },
+      {
+        "number": 9,
+        "question": "¿Qué debería revisar antes de firmar con un constructor?",
+        "response": {
+          "reply": "Antes de firmar con un constructor, es importante revisar varios aspectos, como el contrato, los planos y especificaciones del proyecto, los materiales y acabados, los plazos de entrega y los costos totales. También es recomendable verificar las referencias y la reputación del constructor.\n\n¿Cuál es el tipo de propiedad que estás considerando construir, como una casa en una zona costera o un proyecto de desarrollo en una zona específica como Rotonda West o Englewood?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /licencia/. Input:\n\n'Antes de firmar con un constructor, es importante revisar varios aspectos, como el contrato, los planos y especificaciones del proyecto, los materiales y acabados, los plazos de entrega y los costos totales. También es recomendable verificar las referencias y la reputación del constructor.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando construir, como una casa en una zona costera o un proyecto de desarrollo en una zona específica como Rotonda West o Englewood?'\n",
+        "bankNumber": 89
+      },
+      {
+        "number": 10,
+        "question": "¿Cómo verifico garantías y pendientes en una casa recién construida?",
+        "response": {
+          "reply": "Para verificar garantías y pendientes en una casa recién construida, es importante revisar los documentos del constructor y el contrato de compra. Generalmente, los constructores ofrecen garantías para ciertos aspectos de la construcción, como la calidad de los materiales y la mano de obra.\n\n¿Cuál es el tipo de garantía que te preocupa verificar en particular, como la garantía del constructor o la garantía de los materiales?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /ocupacion|ocupación/. Input:\n\n'Para verificar garantías y pendientes en una casa recién construida, es importante revisar los documentos del constructor y el contrato de compra. Generalmente, los constructores ofrecen garantías para ciertos aspectos de la construcción, como la calidad de los materiales y la mano de obra.\\n' +\n  '\\n' +\n  '¿Cuál es el tipo de garantía que te preocupa verificar en particular, como la garantía del constructor o la garantía de los materiales?'\n",
+        "bankNumber": 90
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Qué diferencia hay entre lote residencial y permiso para construir?",
+        "response": {
+          "reply": "La zonificación residencial indica usos sujetos a normas; no equivale a permiso aprobado ni garantiza que puedas construir la casa prevista. Confirma parcela y jurisdicción, tamaño, retranqueos, altura, acceso legal, servicios, drenaje, inundación, suelos, restricciones privadas y autorizaciones ambientales. Pide viabilidad escrita del proyecto y permisos necesarios a profesionales y autoridades; la clasificación fiscal o un lote vecino construido no prueba edificabilidad. No aplico reglas de Charlotte a todos los condados.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 81
+      },
+      {
+        "number": 2,
+        "question": "¿Cómo verifico acceso legal a un terreno sin calle pavimentada?",
+        "response": {
+          "reply": "Pide a título o abogado escritura, plano y servidumbre de acceso registrada, su alcance, beneficiarios, ancho, mantenimiento y continuidad hasta vía pública; contrasta con levantamiento y autoridad vial. Verifica por separado acceso físico para vehículos de obra, emergencias y servicios, permisos y costo de mejorar el camino. Una senda usada o una calle dibujada en mapa no prueba derecho legal ni permiso de construir; el pavimento tampoco garantiza que sea vía pública. Resuelve acceso antes de comprometer la compra.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 82
+      },
+      {
+        "number": 3,
+        "question": "¿Qué reviso sobre humedales y especies protegidas?",
+        "response": {
+          "reply": "Encarga evaluación ambiental del sitio y delimitación de humedales cuando corresponda; mapas son una primera referencia, no autorización de rellenar. Confirma jurisdicción y permisos con DEP, distrito de aguas y autoridades federales/locales que correspondan. Para especies protegidas, consulta FWC; no limpies, rellenes, muevas tortugas ni dañes madrigueras sin evaluación y permiso necesario. Estima áreas utilizables, mitigación, costos y plazos antes de comprar. Un lote anunciado como limpio o residencial no acredita ausencia de restricciones.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://myfwc.com/license/wildlife/gopher-tortoise-permits/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 83
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo averiguo costos de conexión a servicios?",
+        "response": {
+          "reply": "Pide por escrito a cada proveedor disponibilidad, capacidad y punto de conexión para agua, alcantarillado, electricidad y comunicaciones. Solicita costos vigentes de conexión, medidor, capacidad, extensión de redes, servidumbres, excavación y obras en vía, quién paga y vigencia del cálculo. Si requiere pozo o septic, confirma viabilidad, permisos y presupuesto con profesionales y autoridad competente. Que haya una tubería o poste cerca no prueba servicio disponible ni costo incluido; separa estas tarifas de impact fees y cuotas de asociación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 84
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impact fees?",
+        "response": {
+          "reply": "Consulta impact fees con la autoridad de la parcela para uso, tamaño y proyecto concretos: tabla vigente, momento de cálculo/pago, ajustes, créditos por uso previo, exenciones y constancia de pagos existentes. Separa tarifas de permiso, conexión/capacidad de servicios y otras evaluaciones. Pide estimación escrita con supuestos; una cifra del anuncio o de un proyecto antiguo no garantiza el monto final ni que un crédito sea transferible. No hay una tarifa única para toda Florida.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.charlottecountyfl.gov/departments/community-development/planning-zoning/impact-fees/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 85
+      },
+      {
+        "number": 6,
+        "question": "¿Cómo reviso limitaciones para ampliar una casa costera?",
+        "response": {
+          "reply": "Para una ampliación costera, confirma zonificación local, retranqueos, altura, servidumbres, asociación, estructura y capacidad de servicios. Revisa floodplain, requisitos de elevación y posible substantial improvement/damage con autoridad local. Comprueba si está en jurisdicción CCCL y qué exige DEP para playas, dunas y acceso público; no toda costa tiene idéntico régimen. Pide diseño viable y permisos aplicables antes de contratar; una estructura existente o reparación anterior no autoriza ampliación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/rcp/coastal-construction-control-line\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 86
+      },
+      {
+        "number": 7,
+        "question": "¿Qué verifico sobre un seawall compartido?",
+        "response": {
+          "reply": "Pide a título o abogado documentos de propiedad, servidumbres y acuerdo del seawall: responsabilidad de mantenimiento, reparto de costos, acceso para obras, seguro, incumplimiento y aprobación entre vecinos/asociación. Un ingeniero o contratista competente debe evaluar condición, drenaje, anclajes y vida útil; solicita permisos e historial de reparaciones y presupuestos. Confirma autorizaciones ambientales/locales para reparar o reemplazar. Compartir uso no determina por sí solo quién es dueño o paga; no garantizo estabilidad ni precio de reparación.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/environmental-resource-permitting\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 87
+      },
+      {
+        "number": 8,
+        "question": "¿Cómo compruebo si puedo instalar un boat lift?",
+        "response": {
+          "reply": "Confirma derechos sobre frente de agua y muelle, límites/servidumbres, permiso existente y si autoriza ese boat lift. Consulta DEP/distrito competente, autoridad local y otras agencias aplicables sobre permiso o exención documentada, fondos sumergidos, hábitat y navegación; una exención de una agencia no exime de todas. Revisa diseño, capacidad, electricidad, profundidad/mareas, asociación y espacio con técnico competente. El muelle o lift del vecino no prueba derecho a instalar el tuyo ni permiso de dragar.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://floridadep.gov/water/submerged-lands-environmental-resources-coordination/content/environmental-resource-permitting\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 88
+      },
+      {
+        "number": 9,
+        "question": "¿Qué debería revisar antes de firmar con un constructor?",
+        "response": {
+          "reply": "Antes de firmar con un constructor, verifica licencia adecuada y empresa cualificada en DBPR, seguros, referencias y proyecto/terreno. Revisa contrato completo: planos, alcance, precio fijo o cost-plus, allowances, calendario, pagos ligados a avance, permisos, cambios por escrito, retrasos, garantías, resolución de disputas y terminación. Pide revisión jurídica y controles de gravámenes/liberaciones antes de desembolsos; no anticipes pagos desproporcionados al avance ni asumas que licencia garantiza cumplimiento. No hay un único contrato ni porcentaje universal de costo adicional.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.floridabar.org/public/consumer/pamphlet005/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 89
+      },
+      {
+        "number": 10,
+        "question": "¿Cómo verifico garantías y pendientes en una casa recién construida?",
+        "response": {
+          "reply": "Pide certificado de ocupación o autorización aplicable, permisos e inspecciones finales, punch list escrita con responsables/fechas y una inspección independiente. Separa garantía del constructor, fabricantes y contratos de servicio; revisa cobertura, exclusiones, inicio, avisos y transferencia. F.S.553.837 prevé para viviendas nuevas definidas en esa norma una garantía de un año sobre defectos que causen violación material del código, desde primera transmisión u ocupación, lo que ocurra antes, con excepciones; no cubre todo defecto. Confirma aplicabilidad y garantía escrita con abogado. Un certificado no garantiza ausencia de pendientes.\nReferencia general (no consulta en vivo ni autorización de este proyecto): https://www.flsenate.gov/Laws/Statutes/2026/553.837\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 90
+      }
+    ]
+  },
+  "publicationChecks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}

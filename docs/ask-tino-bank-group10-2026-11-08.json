@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-08",
+  "group": 10,
+  "codeCommit": "c469f764f4d724276a9e24ad8f6eafedc4c71b64",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo confirmo instrucciones de transferencia sin confiar en un correo nuevo?",
+        "response": {
+          "reply": "No transfieras el depósito basándote solo en ese correo. Llama a la compañía de título o al agente de cierre usando un número previamente verificado, no el que venga en el mensaje nuevo, y confirma las instrucciones y cualquier cambio por ese canal. No envíes por email números de cuenta ni códigos. Si ya transferiste y sospechas fraude, contacta inmediatamente a tu banco para intentar detener o recuperar la transferencia; no hay garantía de recuperación. Yo no puedo autenticar ese correo ni verificar una cuenta bancaria.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /telefono|teléfono/. Input:\n\n'No transfieras el depósito basándote solo en ese correo. Llama a la compañía de título o al agente de cierre usando un número previamente verificado, no el que venga en el mensaje nuevo, y confirma las instrucciones y cualquier cambio por ese canal. No envíes por email números de cuenta ni códigos. Si ya transferiste y sospechas fraude, contacta inmediatamente a tu banco para intentar detener o recuperar la transferencia; no hay garantía de recuperación. Yo no puedo autenticar ese correo ni verificar una cuenta bancaria.\\n' +\n  'https://floridacostiera.com/contact#tell-us-your-plans'\n",
+        "bankNumber": 91
+      },
+      {
+        "number": 2,
+        "question": "¿Qué hago si recibo un cambio de cuenta bancaria a última hora?",
+        "response": {
+          "reply": "Si recibes un cambio de cuenta bancaria a última hora, es importante verificar la autenticidad de la información antes de tomar cualquier acción. Te recomiendo contactar directamente a la persona o entidad que te envió el cambio para confirmar su legitimidad.\n\n¿Cuál es el contexto de este cambio de cuenta bancaria, es relacionado con una transacción inmobiliaria o algo más?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /deten|pausa/i. Input:\n\n'Si recibes un cambio de cuenta bancaria a última hora, es importante verificar la autenticidad de la información antes de tomar cualquier acción. Te recomiendo contactar directamente a la persona o entidad que te envió el cambio para confirmar su legitimidad.\\n' +\n  '\\n' +\n  '¿Cuál es el contexto de este cambio de cuenta bancaria, es relacionado con una transacción inmobiliaria o algo más?'\n",
+        "bankNumber": 92
+      },
+      {
+        "number": 3,
+        "question": "¿Puede el agente prometerme que una propiedad subirá de valor?",
+        "response": {
+          "reply": "No, como asistente virtual, no puedo garantizar el aumento de valor de una propiedad. La valoración y las ofertas deben ser evaluadas por un agente inmobiliario como Sabatino. ¿En qué área de la costa del Golfo de Florida está interesado en comprar o vender una propiedad?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /https:\\/\\/floridacostiera.com\\/contact/. Input:\n\n'No, como asistente virtual, no puedo garantizar el aumento de valor de una propiedad. La valoración y las ofertas deben ser evaluadas por un agente inmobiliario como Sabatino. ¿En qué área de la costa del Golfo de Florida está interesado en comprar o vender una propiedad?'\n",
+        "bankNumber": 93
+      },
+      {
+        "number": 4,
+        "question": "¿Qué información debe tratarse con confidencialidad profesional?",
+        "response": {
+          "reply": "La información que debe tratarse con confidencialidad profesional incluye detalles personales, financieros y de propiedades específicas. ¿Cuál es el contexto o situación específica en la que te gustaría saber más sobre confidencialidad profesional en el ámbito de la propiedad inmobiliaria?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /excepciones/. Input:\n\n'La información que debe tratarse con confidencialidad profesional incluye detalles personales, financieros y de propiedades específicas. ¿Cuál es el contexto o situación específica en la que te gustaría saber más sobre confidencialidad profesional en el ámbito de la propiedad inmobiliaria?'\n",
+        "bankNumber": 94
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo se diferencia una opinión de precio de una tasación?",
+        "response": {
+          "reply": "Sabatino debe revisar la propiedad y los datos actuales para orientarte sobre valor, ofertas o negociación. No puedo darte una valoración verificada ni actuar como tu agente.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /CMA/. Input:\n\n'Sabatino debe revisar la propiedad y los datos actuales para orientarte sobre valor, ofertas o negociación. No puedo darte una valoración verificada ni actuar como tu agente.\\n' +\n  'https://floridacostiera.com/contact#tell-us-your-plans'\n",
+        "bankNumber": 95
+      },
+      {
+        "number": 6,
+        "question": "¿Qué hago si un anuncio contradice los documentos de la propiedad?",
+        "response": {
+          "reply": "Si un anuncio contradice los documentos de la propiedad, lo mejor es verificar la información a través de fuentes confiables y actuales. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, residencial, comercial, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /contradiccion|contradicción/. Input:\n\n'Si un anuncio contradice los documentos de la propiedad, lo mejor es verificar la información a través de fuentes confiables y actuales. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, residencial, comercial, etc.)?'\n",
+        "bankNumber": 96
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo consulto una comunidad usando criterios objetivos sin discriminar?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nHUD — Fair Housing\nhttps://www.hud.gov/program_offices/fair_housing_equal_opp\nPágina consultada ahora — 2026-11-08\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /objetivos/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'HUD — Fair Housing\\n' +\n  'https://www.hud.gov/program_offices/fair_housing_equal_opp\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 97
+      },
+      {
+        "number": 8,
+        "question": "¿Qué acuerdos deben quedar por escrito antes de entregar posesión?",
+        "response": {
+          "reply": "Para proteger los intereses de todas las partes involucradas, es crucial que ciertos acuerdos queden por escrito antes de entregar la posesión de una propiedad. Estos pueden incluir, pero no se limitan a, el precio de venta, las condiciones de la venta, y cualquier acuerdo sobre reparaciones o mejoras. \n\n¿Cuál es el tipo de propiedad (residencial, comercial, etc.) sobre la que está haciendo la consulta?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /seguro/. Input:\n\n'Para proteger los intereses de todas las partes involucradas, es crucial que ciertos acuerdos queden por escrito antes de entregar la posesión de una propiedad. Estos pueden incluir, pero no se limitan a, el precio de venta, las condiciones de la venta, y cualquier acuerdo sobre reparaciones o mejoras. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad (residencial, comercial, etc.) sobre la que está haciendo la consulta?'\n",
+        "bankNumber": 98
+      },
+      {
+        "number": 9,
+        "question": "¿Qué debo verificar antes de autorizar el desembolso final?",
+        "response": {
+          "reply": "Antes de autorizar el desembolso final, debes verificar que todos los documentos de la propiedad estén en orden, que se hayan cumplido todas las condiciones del contrato y que hayas inspeccionado la propiedad para asegurarte de que se encuentra en el estado acordado. ¿Cuál es el tipo de propiedad que estás considerando comprar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /titulo|título/. Input:\n\n'Antes de autorizar el desembolso final, debes verificar que todos los documentos de la propiedad estén en orden, que se hayan cumplido todas las condiciones del contrato y que hayas inspeccionado la propiedad para asegurarte de que se encuentra en el estado acordado. ¿Cuál es el tipo de propiedad que estás considerando comprar?'\n",
+        "bankNumber": 99
+      },
+      {
+        "number": 10,
+        "question": "¿Qué puedo hacer si la escritura registrada no refleja lo acordado?",
+        "response": {
+          "reply": "Si la escritura registrada no refleja lo acordado, es importante buscar asesoramiento legal para resolver la discrepancia. ¿Cuál es el tipo de propiedad que está involucrada en esta situación?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /abogado/. Input:\n\n'Si la escritura registrada no refleja lo acordado, es importante buscar asesoramiento legal para resolver la discrepancia. ¿Cuál es el tipo de propiedad que está involucrada en esta situación?'\n",
+        "bankNumber": 100
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo confirmo instrucciones de transferencia sin confiar en un correo nuevo?",
+        "response": {
+          "reply": "Verifica instrucciones por teléfono con título/escrow usando un número ya verificado por un canal independiente, no el del correo nuevo ni sus enlaces. Confirma beneficiario, banco, cuenta e importe mediante el procedimiento seguro de la entidad; no envíes esos datos al chat. No confíes solo en firma, logotipo, voz o información correcta de la operación. Cualquier cambio requiere nueva comprobación independiente antes de transferir; confirma recepción por el canal acordado. Este chat no autentica cuentas ni envía dinero.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.ic3.gov/PSA/2023/psa230609\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 91
+      },
+      {
+        "number": 2,
+        "question": "¿Qué hago si recibo un cambio de cuenta bancaria a última hora?",
+        "response": {
+          "reply": "Detén la transferencia y llama a título/escrow por teléfono previamente verificado para comprobar el cambio; no respondas al correo sospechoso ni uses su número. Si ya enviaste dinero, contacta inmediatamente al departamento de fraude del banco para intentar detener/recuperar la transferencia y presenta reporte en FBI IC3; avisa también a la compañía de cierre por canal seguro. Conserva mensajes y comprobantes sin publicarlos aquí. Actuar rápido no garantiza recuperación; el chat no puede bloquear pagos ni verificar la cuenta.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.ic3.gov/PSA/2023/psa230609\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 92
+      },
+      {
+        "number": 3,
+        "question": "¿Puede el agente prometerme que una propiedad subirá de valor?",
+        "response": {
+          "reply": "No debe prometer que una propiedad subirá de valor. Puede explicar comparables, tendencias, supuestos y riesgos con datos actuales y alcance claro, pero ninguna proyección garantiza apreciación, renta o precio de reventa. Pide evidencia y escenarios de caída, costos, vacancia y plazo; distingue orientación comercial de tasación e inversión asesorada. No decidas basándote en una garantía verbal de rentabilidad ni en cifras que no estén verificadas.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 93
+      },
+      {
+        "number": 4,
+        "question": "¿Qué información debe tratarse con confidencialidad profesional?",
+        "response": {
+          "reply": "La confidencialidad profesional depende de la relación de corretaje y de la ley: por ejemplo, precio mínimo/máximo negociable, motivación, términos alternativos y datos que deban protegerse. En Florida, transaction broker tiene confidencialidad limitada y single agent deberes distintos; pide el disclosure y acuerdo aplicables. Hay excepciones legales: no permite ocultar defectos materiales que deben divulgarse ni ignorar obligaciones legales. Este chat no crea secreto profesional de abogado ni garantiza privacidad de proveedores; usa un canal seguro para documentos y no compartas información sensible.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.flsenate.gov/Laws/Statutes/2026/475.278\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 94
+      },
+      {
+        "number": 5,
+        "question": "¿Cómo se diferencia una opinión de precio de una tasación?",
+        "response": {
+          "reply": "Una opinión de precio o CMA de un agente compara ventas/listados y condiciones para orientar comercialización u oferta, con supuestos y fecha. Una tasación es un análisis profesional con normas, finalidad y alcance propios, normalmente realizado por un tasador habilitado cuando se requiere. El CMA no sustituye automáticamente la tasación que exija un prestamista ni garantiza valor aceptado o precio de venta. Confirma quién prepara el informe, credenciales, datos, uso autorizado y limitaciones; no presento aquí una valoración verificada.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 95
+      },
+      {
+        "number": 6,
+        "question": "¿Qué hago si un anuncio contradice los documentos de la propiedad?",
+        "response": {
+          "reply": "Detén la decisión sobre ese punto y documenta la contradicción: guarda anuncio, fecha y documentos completos aplicables. Pide aclaración y corrección por escrito al responsable; contrasta según el tema con título, asociación, autoridad o profesional técnico, identificando unidad y versión. No asumas que el anuncio modifica la escritura o crea permiso de uso, ni que un documento aislado resuelve todo conflicto. Si afecta tu compra, consulta protección, objeciones y plazos contractuales con Sabatino y abogado antes de firmar, renunciar o desembolsar.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 96
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo consulto una comunidad usando criterios objetivos sin discriminar?",
+        "response": {
+          "reply": "Compara criterios objetivos: precio, tipo de vivienda, accesibilidad física, tiempos de traslado, servicios, gastos y restricciones verificadas. Aplica los mismos criterios sin recomendar o excluir comunidades por características protegidas de personas; respeta vivienda justa y normas estatales/locales. Para escuelas, riesgos o servicios usa fuentes oficiales y límites claros, sin inferir quién vive allí ni garantizar resultados. Sabatino puede ayudarte a contrastar propiedades concretas; no tengo datos MLS verificados en vivo.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.nar.realtor/the-facts/consumer-guide-fair-housing\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 97
+      },
+      {
+        "number": 8,
+        "question": "¿Qué acuerdos deben quedar por escrito antes de entregar posesión?",
+        "response": {
+          "reply": "Antes de entregar posesión, acuerda por escrito quién ocupa, fecha/hora, llaves y acceso, condición, bienes incluidos, servicios, mantenimiento, seguro y responsabilidad. Si ocurre antes o después del cierre, revisa acuerdo específico de ocupación, pagos, depósito/escrow, inspección, salida y consecuencias de retraso, con consentimiento de partes, prestamista y aseguradoras cuando corresponda. Entregar llaves no sustituye condiciones contractuales ni garantiza cierre; pide revisión jurídica y no presupongas que un acuerdo verbal o una firma transfiere por sí sola todos los derechos.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 98
+      },
+      {
+        "number": 9,
+        "question": "¿Qué debo verificar antes de autorizar el desembolso final?",
+        "response": {
+          "reply": "Antes del desembolso final de una compra, confirma con título/abogado contrato y addenda, liquidación final, fondos recibidos y condiciones de financiación, firmas y facultades, requisitos de título, payoff/liberaciones y proceso de registro. Revisa walkthrough, reparaciones, posesión, seguro y pendientes; cualquier retención debe quedar acordada por escrito, con autorización de quienes corresponda. Verifica instrucciones bancarias por canal independiente. No presupongas que firmar autoriza toda salida de fondos ni retengas unilateralmente pagos sin revisar obligaciones. Si es pago final de construcción, exige además avance/aceptación y liberaciones adecuadas.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 99
+      },
+      {
+        "number": 10,
+        "question": "¿Qué puedo hacer si la escritura registrada no refleja lo acordado?",
+        "response": {
+          "reply": "Obtén copia oficial de la escritura registrada y compara descripción legal, titulares y derechos con contrato, documentos firmados y póliza de título. Comunica la discrepancia cuanto antes a compañía de título y abogado; identifica si es error de registro, redacción o desacuerdo sustantivo. No edites la copia ni registres por tu cuenta otro quitclaim: puede requerir instrumento correctivo, firmas/consentimientos, aprobación de asegurador o procedimiento judicial. Guarda evidencia y consulta plazos, cobertura y consecuencias fiscales; una corrección no es automática ni puede garantizarse por chat.\nReferencia general (no consulta en vivo ni acción de cierre realizada): https://www.floridabar.org/public/consumer/pamphlet006/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 100
+      }
+    ]
+  },
+  "publicationChecks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}

@@ -408,7 +408,7 @@ Esta actualización es documental: no cambia diseño, funciones, DNS, OceanFL ni
 
 Cuando Tino diga «seguimos con Ask Tino», «continúa Ask Tino» o equivalente, el asistente debe recuperar este documento directamente desde este repositorio, comprobar el estado vigente y ejecutar el siguiente grupo pendiente. No pedir al usuario que pegue rutas, instrucciones o preguntas que ya estén registradas aquí.
 
-Punto actual: grupo 8, preguntas 71–80, Alquiler e inversión. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
+Punto actual: banco inicial de 100 preguntas completado por series; no quedan grupos pendientes en este banco. Hacer las consultas, revisar cada respuesta y fuentes, corregir problemas dentro del alcance autorizado, probar y registrar respuestas completas y publicación. Al terminar, actualizar aquí el siguiente grupo para no repetir trabajo. La indicación del grupo actual debe leerse de la memoria vigente, no de un número fijo en instrucciones antiguas.
 
 Esta instrucción permite retomar al recibir un mensaje del usuario; no crea ejecución en segundo plano, tareas programadas ni inicio automático de chats nuevos. No afirmar que un chat futuro ya leyó el repositorio. AGENTS.md en la raíz apunta a esta memoria como entrada de continuidad.
 
@@ -473,3 +473,13 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Código 6b55b6e39a636097c25d5173703ccb5ab58b3d5d; Cloudflare Pages, rules y structural-audit success. Regresiones locales, estructura y tres comprobaciones adicionales de API pasaron. Diez respuestas repetidas públicamente: 10/10 y lectura completa; sin nueva revisión visual del widget.
 - Evidencia docs/ask-tino-bank-group7-2026-11-08.md y .json. Banco vigente: grupos 1–7 comprobados; grupos 8–10 pendientes. Siguiente grupo 8, preguntas 71–80, Alquiler e inversión.
 - Mantener pendientes de bibliotecas privadas Florida Realtors/MIAMI/Stellar, configuración/prácticas de datos del Worker externo y recepción real de correo. Identificar código/revisión/addenda antes de fechas o cláusulas; no afirmar acceso completo a contratos. OceanFL y My Closing Timeline intactos.
+
+
+## 33. Series 8–10 terminadas: banco inicial completo — 2026-11-08
+
+- Tino pidió terminar juntas las tres series restantes y avisar al final. Se hicieron públicamente preguntas 71–100 antes y después, con lectura completa y contraste oficial. Después: 10/10 por serie, 30/30 total en API pública. No implica perfección universal; había respuestas previas parcialmente útiles, como 91 y 80.
+- Guías españolas nuevas de alquiler/inversión, terrenos/construcción/costa y seguridad/ética/cierre. Dos correcciones de ruta: terminación de lease para venta recibe no-autoayuda; comparación educativa CMA/tasación no se confunde con solicitud de valoración real. Los guards de secreto, vivienda justa y privacidad conservan prioridad.
+- Código c469f764f4d724276a9e24ad8f6eafedc4c71b64; Cloudflare Pages, rules y structural-audit success. Todas las suites locales Ask Tino/privacidad/integridad y check-website14 pasaron. Cinco comprobaciones adicionales de API guardaron prioridad de secreto, steering, handoff de valoración, educación CMA y derechos del inquilino. Sin nuevo QA visual del widget ni nuevas traducciones.
+- Evidencia conjunta: docs/ask-tino-bank-final-three-2026-11-08.md, respuestas públicas completas, fuentes, cambios y límites. JSON de grupos 8, 9, 10 conserva antes/después íntegro. Banco 100 actualizado: grupos 1–10 completos por series. En esta sesión se repitieron 30 en producción y las suites anteriores localmente; no afirmar una nueva repetición pública de las 100 juntas.
+- No hay siguiente grupo pendiente en este banco inicial. Al recibir «sigue», leer memoria vigente y no inventar serie 11 ni repetir trabajo ya completado; abordar pendientes aplicables sin afirmar acceso que no existe.
+- Siguen pendientes bibliotecas privadas autenticadas/autorizadas de Florida Realtors/MIAMI/Stellar, configuración y prácticas de datos del Worker externo y recepción real de correo. No afirmar contenido leído de cada formulario; identificar emisor/código/revisión y addenda para cláusulas/plazos. Mantener docs/ask-tino-forms-access-2026-11-08.md. OceanFL y My Closing Timeline intactos.

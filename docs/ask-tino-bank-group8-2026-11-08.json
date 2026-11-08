@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-08",
+  "group": 8,
+  "codeCommit": "c469f764f4d724276a9e24ad8f6eafedc4c71b64",
+  "before": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo verifico si puedo alquilar una propiedad por temporadas?",
+        "response": {
+          "reply": "Para verificar si puedes alquilar una propiedad por temporadas, es importante investigar las regulaciones y restricciones locales, así como las posibles restricciones de la asociación de propietarios (HOA) si corresponde. También debes considerar los requisitos y regulaciones específicas de la zona donde se encuentra la propiedad.\n\n¿Cuál es la ubicación específica de la propiedad que estás considerando alquilar por temporadas?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no garantiza/. Input:\n\n'Para verificar si puedes alquilar una propiedad por temporadas, es importante investigar las regulaciones y restricciones locales, así como las posibles restricciones de la asociación de propietarios (HOA) si corresponde. También debes considerar los requisitos y regulaciones específicas de la zona donde se encuentra la propiedad.\\n' +\n  '\\n' +\n  '¿Cuál es la ubicación específica de la propiedad que estás considerando alquilar por temporadas?'\n",
+        "bankNumber": 71
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre permiso local y autorización de asociación?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nLa autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\n\nCharlotte County — Community Development\nhttps://charlottecountyfl.gov/departments/community-development/building-construction/permits/\nPágina consultada ahora — 2026-11-08\n\nSarasota County\nhttps://www.scgov.net/\nPágina consultada ahora — 2026-11-08\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /local/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'La autoridad depende de la dirección exacta y de los límites municipales y del condado. No todas las comunidades tienen ayuntamiento propio. Confirma la jurisdicción de la parcela antes de solicitar permisos.\\n' +\n  '\\n' +\n  'Charlotte County — Community Development\\n' +\n  'https://charlottecountyfl.gov/departments/community-development/building-construction/permits/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Sarasota County\\n' +\n  'https://www.scgov.net/\\n' +\n  'Página consultada ahora — 2026-11-08\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 72
+      },
+      {
+        "number": 3,
+        "question": "¿Qué gastos incluyo al estimar ingreso neto de alquiler?",
+        "response": {
+          "reply": "Para estimar el ingreso neto de alquiler, generalmente se incluyen gastos como impuestos sobre la propiedad, seguros, mantenimiento, y posiblemente cuotas de asociación de propietarios, si corresponden. ¿Cuál es el tipo de propiedad que estás considerando alquilar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /vacancia/. Input:\n\n'Para estimar el ingreso neto de alquiler, generalmente se incluyen gastos como impuestos sobre la propiedad, seguros, mantenimiento, y posiblemente cuotas de asociación de propietarios, si corresponden. ¿Cuál es el tipo de propiedad que estás considerando alquilar?'\n",
+        "bankNumber": 73
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo analizo vacancia sin asumir ocupación garantizada?",
+        "response": {
+          "reply": "Para analizar la vacancia sin asumir ocupación garantizada, considera factores como la ubicación, la temporada alta y baja, y la demanda de alquiler en el área. También es importante investigar las estadísticas de ocupación históricas y las tendencias del mercado local. \n\n¿Cuál es el tipo de propiedad que estás considerando analizar (residencial, comercial, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /escenarios/. Input:\n\n'Para analizar la vacancia sin asumir ocupación garantizada, considera factores como la ubicación, la temporada alta y baja, y la demanda de alquiler en el área. También es importante investigar las estadísticas de ocupación históricas y las tendencias del mercado local. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando analizar (residencial, comercial, etc.)?'\n",
+        "bankNumber": 74
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impuestos de alojamiento?",
+        "response": {
+          "reply": "Fuentes oficiales para consultar\nPuedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\n\nFlorida Department of Revenue — Property Tax\nhttps://floridarevenue.com/property/Pages/default.aspx\nNo pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\n\nLeer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /impuestos/. Input:\n\n'Fuentes oficiales para consultar\\n' +\n  'Puedo consultar páginas de un directorio oficial seleccionado; no hago una búsqueda completa de Internet. No conozco todas las leyes ni puedo certificar su vigencia o aplicación a una propiedad.\\n' +\n  '\\n' +\n  'Florida Department of Revenue — Property Tax\\n' +\n  'https://floridarevenue.com/property/Pages/default.aspx\\n' +\n  'No pude consultar esta página ahora; enlace de referencia, contenido no verificado en esta consulta\\n' +\n  '\\n' +\n  'Leer una página no confirma todas las normas aplicables, modificaciones o restricciones de HOA. Para tu caso, confirma con la autoridad y un abogado o profesional tributario.'\n",
+        "bankNumber": 75
+      },
+      {
+        "number": 6,
+        "question": "¿Qué reviso antes de contratar un property manager?",
+        "response": {
+          "reply": "Antes de contratar un administrador de propiedades, debes revisar su experiencia, reputación, servicios ofrecidos, costos y contratos. También es importante investigar sobre sus políticas de comunicación, gestión de mantenimiento y manejo de emergencias. \n\n¿Cuál es el tipo de propiedad que deseas administrar (residencial, comercial, vacacional)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /licencia/. Input:\n\n'Antes de contratar un administrador de propiedades, debes revisar su experiencia, reputación, servicios ofrecidos, costos y contratos. También es importante investigar sobre sus políticas de comunicación, gestión de mantenimiento y manejo de emergencias. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que deseas administrar (residencial, comercial, vacacional)?'\n",
+        "bankNumber": 76
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo se documentan depósitos y rentas al comprar con inquilino?",
+        "response": {
+          "reply": "Para documentar depósitos y rentas al comprar una propiedad con inquilino, generalmente se requiere un contrato de arrendamiento vigente y registros de pagos de renta. ¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencial, comercial)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /lease/. Input:\n\n'Para documentar depósitos y rentas al comprar una propiedad con inquilino, generalmente se requiere un contrato de arrendamiento vigente y registros de pagos de renta. ¿Cuál es el tipo de propiedad que estás considerando comprar (por ejemplo, residencial, comercial)?'\n",
+        "bankNumber": 77
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar si quiero usar personalmente una vivienda de inversión?",
+        "response": {
+          "reply": "Si deseas usar personalmente una vivienda de inversión, debes revisar los términos de tu hipoteca y los acuerdos de inversión para asegurarte de que no violen ninguna restricción. También es importante considerar los impuestos y las posibles implicaciones legales. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, casa, apartamento, etc.)?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /IRS/. Input:\n\n'Si deseas usar personalmente una vivienda de inversión, debes revisar los términos de tu hipoteca y los acuerdos de inversión para asegurarte de que no violen ninguna restricción. También es importante considerar los impuestos y las posibles implicaciones legales. ¿Cuál es el tipo de propiedad que estás considerando (por ejemplo, casa, apartamento, etc.)?'\n",
+        "bankNumber": 78
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo compruebo si una proyección del vendedor usa ingresos reales?",
+        "response": {
+          "reply": "Para verificar si una proyección del vendedor utiliza ingresos reales, es importante solicitar documentos que respalden los ingresos declarados, como estados financieros y registros de alquiler. También es recomendable verificar la información con fuentes independientes. \n\n¿Cuál es el tipo de propiedad que estás considerando comprar?",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /no garantiza/. Input:\n\n'Para verificar si una proyección del vendedor utiliza ingresos reales, es importante solicitar documentos que respalden los ingresos declarados, como estados financieros y registros de alquiler. También es recomendable verificar la información con fuentes independientes. \\n' +\n  '\\n' +\n  '¿Cuál es el tipo de propiedad que estás considerando comprar?'\n",
+        "bankNumber": 79
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo consultar antes de terminar un alquiler para vender?",
+        "response": {
+          "reply": "Todavía no tengo esos datos en esta conversación. Indícame la ciudad, el presupuesto y tus preferencias.\n\nEmpieza revisando el contrato de alquiler, sus modificaciones, vencimiento, renovaciones, renta y depósito. Normalmente se puede vender una propiedad alquilada, pero vender no permite asumir que termina el alquiler ni exigir que el inquilino salga. Revisa con Sabatino y un abogado las obligaciones que pasarían al comprador y cómo reflejar la ocupación en la oferta y el cierre. Coordina visitas respetando el contrato y los derechos de acceso y aviso aplicables. Comprueba también ajustes de rentas, depósitos y entrega de documentos. No prometas posesión vacía sin una base válida y documentada.\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": false,
+        "error": "The input did not match the regular expression /lease/. Input:\n\n'Todavía no tengo esos datos en esta conversación. Indícame la ciudad, el presupuesto y tus preferencias.\\n' +\n  '\\n' +\n  'Empieza revisando el contrato de alquiler, sus modificaciones, vencimiento, renovaciones, renta y depósito. Normalmente se puede vender una propiedad alquilada, pero vender no permite asumir que termina el alquiler ni exigir que el inquilino salga. Revisa con Sabatino y un abogado las obligaciones que pasarían al comprador y cómo reflejar la ocupación en la oferta y el cierre. Coordina visitas respetando el contrato y los derechos de acceso y aviso aplicables. Comprueba también ajustes de rentas, depósitos y entrega de documentos. No prometas posesión vacía sin una base válida y documentada.\\n' +\n  'https://floridacostiera.com/contact#tell-us-your-plans'\n",
+        "bankNumber": 80
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-11-08",
+    "live": true,
+    "results": [
+      {
+        "number": 1,
+        "question": "¿Cómo verifico si puedo alquilar una propiedad por temporadas?",
+        "response": {
+          "reply": "Para alquilar por temporadas, identifica dirección, jurisdicción y duración/frecuencia previstas. Verifica zonificación, permisos y registro local, licencia DBPR cuando aplique, impuestos y seguro; por separado, pide declaración, reglamentos y enmiendas de la asociación sobre plazo mínimo, cupos, espera y aprobación. Solicita confirmación escrita para esa unidad. Un anuncio o registro tributario no garantiza permiso de alquiler; resuelve contradicciones antes de comprar y protege el uso esencial en el contrato con asesoramiento jurídico.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 71
+      },
+      {
+        "number": 2,
+        "question": "¿Qué diferencia hay entre permiso local y autorización de asociación?",
+        "response": {
+          "reply": "El permiso local atiende las reglas de la ciudad/condado; la autorización de la asociación deriva de sus documentos privados y requisitos aplicables. Una no sustituye a la otra ni a licencia estatal, impuestos o seguro. Pide ambas por escrito para dirección, unidad y uso concreto; revisa restricciones de alquiler, ocupación, mascotas y obras que correspondan. Si discrepan, aclara con autoridad, asociación y abogado antes de comprometerte; no presupongas que manda el anuncio.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www2.myfloridalicense.com/hotels-restaurants/licensing/vrtsp-guide/\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 72
+      },
+      {
+        "number": 3,
+        "question": "¿Qué gastos incluyo al estimar ingreso neto de alquiler?",
+        "response": {
+          "reply": "Para estimar ingreso neto, parte de renta efectivamente cobrable y descuenta vacancia, impagos, administración, publicidad/plataformas, limpieza no recuperada, servicios, mantenimiento, reparaciones, seguros, impuestos y asociación. Separa reservas para reemplazos, derramas e inversiones de capital. Distingue resultado operativo de flujo después del servicio de deuda; depreciación fiscal no es salida de efectivo. Usa supuestos documentados y evita duplicar gastos o contar depósitos reembolsables como ingreso disponible. No garantiza rentabilidad ni equivale al cálculo tributario.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 73
+      },
+      {
+        "number": 4,
+        "question": "¿Cómo analizo vacancia sin asumir ocupación garantizada?",
+        "response": {
+          "reply": "Analiza escenarios de ocupación baja, media y alta con rentas y meses comparables, estacionalidad, días fuera de servicio, restricciones y cancelaciones. Separa noches disponibles de todas las del año y días de uso personal; contrasta historial verificable, no solo reservas futuras o anuncios. Calcula gastos fijos durante vacancia, punto de equilibrio y colchón de efectivo. Una ocupación histórica no garantiza la futura; no puedo inventar tasas locales ni prometer ingreso.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 74
+      },
+      {
+        "number": 5,
+        "question": "¿Qué debo comprobar sobre impuestos de alojamiento?",
+        "response": {
+          "reply": "Consulta al Florida DOR y al recaudador del condado impuestos estatales sobre alquiler transitorio, surtax y tourist development tax aplicables, registro, base imponible, declaraciones y vencimientos. Verifica duración y posibles excepciones con asesor tributario. Si usas una plataforma, confirma exactamente qué impuestos recauda y remite, en qué jurisdicción y qué sigue siendo responsabilidad tuya; no supongas que cubre todos ni uses una tasa universal. Pagar impuestos no autoriza un alquiler prohibido.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://floridarevenue.com/taxes/taxesfees/Pages/local_option.aspx\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 75
+      },
+      {
+        "number": 6,
+        "question": "¿Qué reviso antes de contratar un property manager?",
+        "response": {
+          "reply": "Revisa contrato, identidad de empresa, licencia de real estate que corresponda a las actividades y excepciones con DBPR; una licencia CAM no sustituye automáticamente la necesaria para alquileres por terceros. Compara honorarios, servicios, selección objetiva de inquilinos, límites de reparaciones, proveedores vinculados, seguros, rendición de cuentas y manejo de fondos/depósitos. Define facultades, acceso a registros, cancelación, entrega de llaves y fondos al terminar. Pide referencias y revisión jurídica antes de firmar; no entregues dinero basándote solo en publicidad.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/475.01\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 76
+      },
+      {
+        "number": 7,
+        "question": "¿Cómo se documentan depósitos y rentas al comprar con inquilino?",
+        "response": {
+          "reply": "Pide lease ejecutado y modificaciones, registro de rentas, depósitos y rentas adelantadas, intereses y saldos, sin datos personales innecesarios. Distingue prorrateo de renta de transferencia de fondos mantenidos para el inquilino. Documenta cesión de lease, contabilidad por cuenta de inquilino, transferencia y recibo escrito conforme a F.S.83.49 cuando aplique, además de avisos/canal de pago. No supongas que un crédito genérico cubre todo ni que la venta termina el lease. Revisa discrepancias con título y abogado; no subas contratos personales al chat.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/0083.49\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 77
+      },
+      {
+        "number": 8,
+        "question": "¿Qué debo revisar si quiero usar personalmente una vivienda de inversión?",
+        "response": {
+          "reply": "Coordina días de uso personal con reservas/lease y reglas de asociación, municipio, seguro y prestamista. Mantén registro de días alquilados, disponibles y personales e ingresos/gastos; IRS Publication 527 distingue usos y limita ciertas deducciones según el caso. Uso por familiares o por debajo de renta justa puede contar como personal. Consulta reparto fiscal de gastos con contador; no supongas deducción total, estatus homestead o rentabilidad por llamarla inversión. Revisa también costos y meses que ya no generarían renta.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 78
+      },
+      {
+        "number": 9,
+        "question": "¿Cómo compruebo si una proyección del vendedor usa ingresos reales?",
+        "response": {
+          "reply": "Pide separar ingresos reales cobrados de reservas futuras y proyección. Contrasta rent roll, reportes de administrador/plataforma y documentación contable autorizada, fechas, cancelaciones, reembolsos, uso del dueño y gastos incluidos, con datos personales redactados. Verifica si la cifra es bruta, operativa o flujo después de deuda y si incluye impuestos o depósitos de huéspedes. Pide supuestos de tarifa y ocupación y costos omitidos. El historial no garantiza rendimiento futuro ni que las licencias o contratos sean transferibles; encarga revisión contable.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.irs.gov/publications/p527\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 79
+      },
+      {
+        "number": 10,
+        "question": "¿Qué debo consultar antes de terminar un alquiler para vender?",
+        "response": {
+          "reply": "Revisa lease, modificaciones, plazo, renovación, avisos, causales y acuerdos de salida con abogado antes de prometer entrega vacante. La venta no termina automáticamente el alquiler. Una salida anticipada consensuada debe quedar por escrito con fecha, pagos, depósitos y entrega; si no hay acuerdo, sigue el procedimiento legal aplicable. No cambies cerraduras, cortes servicios ni retires bienes para forzar salida. Coordina visitas respetando acceso legal, y refleja ocupación real en oferta y cierre. No inventes un plazo de aviso sin contrato y régimen aplicable.\nReferencia general (no consulta en vivo ni verificación del alquiler): https://www.flsenate.gov/Laws/Statutes/2026/0083.67\nhttps://floridacostiera.com/contact#tell-us-your-plans",
+          "criteria": {},
+          "language": "es"
+        },
+        "pass": true,
+        "bankNumber": 80
+      }
+    ]
+  },
+  "publicationChecks": {
+    "Cloudflare Pages": "success",
+    "rules": "success",
+    "structural-audit": "success"
+  }
+}
