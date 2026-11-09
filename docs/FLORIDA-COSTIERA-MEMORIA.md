@@ -561,3 +561,10 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Archivos calculator-help.js/css versión 20261109-help1. Conserva controles, PDF y email existentes.
 
 - Ajuste adicional solicitado: título/texto/pasos/navegación usan todo el marco de las calculadoras, alineados a su borde izquierdo. Siete enlaces en una fila; en pantallas estrechas hay desplazamiento horizontal sin desbordar la página. CSS del conjunto versión 20261109-help2.
+
+
+## 44. Ayuda visible con procedimiento y ejemplos — 2026-11-09
+- Tino señala que un subrayado y definiciones no explican el proceso. Se añade bloque de ayuda destacado en la introducción con demostración real «Down payment», instrucciones de hover/clic/tacto y cierre.
+- Cada encabezado contiene un desplegable visible How to use this calculator / Step-by-step guide & worked example: objetivo, cinco pasos específicos, interpretación, ejemplo numérico, ejercicio para probar y enlace al primer campo. Las guías no cambian entradas automáticamente.
+- Se elimina el tooltip genérico del título y la pista pequeña; se conservan ventanas para campos/resultados. Instrucciones de PDF/email incluidas en las siete guías; ejemplos de inversión, hipoteca, cash-to-close, subtotal del vendedor, ratios ilustrativos, comparación de préstamos y aritmética de fechas. Sin presentar muestras como cotizaciones, aprobación o plazos legales.
+- CSS/JS de ayuda versión 20261109-guides2. Mantiene selector de una fila alineado, cálculos y exportaciones.

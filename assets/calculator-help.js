@@ -133,8 +133,6 @@
  function wrap(node,text){const button=document.createElement('button');button.type='button';button.className='fc-help-term';button.textContent=node.textContent;button.dataset.explanation=text;button.setAttribute('aria-haspopup','dialog');button.setAttribute('aria-expanded','false');node.replaceWith(button);return button;}
  function explainName(name,section){const key=name.trim().replace(/:$/,'').toLowerCase();if(results[key])return results[key];const ids=Array.from(section.querySelectorAll('input,select'));for(const el of ids){const label=el.labels?.[0]?.textContent||'';if(label.toLowerCase().startsWith(key)&&help[el.id])return help[el.id];}return 'This is the '+name.replace(/:$/,'').toLowerCase()+' used in this '+section.querySelector('h2').textContent.replace(/^\d+\s*·\s*/,'').toLowerCase()+' estimate. Review the entered assumptions and confirm transaction-specific charges or terms with the appropriate professional.';}
  for(const section of document.querySelectorAll('.tool-box')){
-  const h=section.querySelector('.fc-calc-head h2');if(h){const text=document.createTextNode(h.textContent);h.replaceChildren(text);wrap(text,help[section.id]);}
-  const hint=document.createElement('p');hint.className='fc-help-hint';hint.textContent='Underlined names explain themselves — hover or tap to learn more.';section.querySelector('.fc-calc-head').append(hint);
   for(const label of section.querySelectorAll('label')){
    const el=label.control||label.querySelector('input,select');if(!el||!help[el.id])continue;
    if(!label.htmlFor&&el.id)label.htmlFor=el.id;
