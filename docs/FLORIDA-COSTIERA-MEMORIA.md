@@ -520,3 +520,9 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Sustituye la barra anterior: Buying guide → /buyers-guide.html; Selling guide → /sellers-guide.html; Investment calculator → /investment-center.html#investment-calculator. Tres recursos concretos, no etiquetas ambiguas de intención.
 - Se elimina Request a callback de la barra porque duplicaba contacto. Queda un único botón inferior Contact Sabatino al formulario existente, sin prometer llamada solicitada ni enviada.
 - Se conserva el panel ampliado y la lectura con desplazamiento; CSS compartido versión 20261108-actions1.
+
+
+## 39. Ask Tino: un solo selector de ayuda — 2026-11-09
+- Sustituye los accesos visibles y el contacto separado por un único «Choose how we can help» (details/summary nativo, cerrado inicialmente).
+- Cuatro destinos del menú: Buying guide, Selling guide, Investment calculator y Contact Sabatino; mismos enlaces distintos de sección 38, en la misma pestaña. Se cierra al elegir; Escape cierra y devuelve foco al control.
+- Menú flotante hacia arriba, sin reducir la conversación al desplegar. Funciona al pulsar con ratón, tacto y teclado; no depende de hover ni del servicio IA. CSS 20261109-chooser1 en las 48 páginas.

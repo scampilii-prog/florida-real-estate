@@ -147,7 +147,9 @@ for(const page of productionPages){
  const source=read(page);
  assert.equal((source.match(/id="tinoPanel"/g)||[]).length,1,page+' must include one Ask Tino panel');
  assert.equal((source.match(/class="tino-launcher"/g)||[]).length,1,page+' must include one Ask Tino launcher');
- assert(source.includes('class="tino-direct-contact"'),page+' must retain direct personal contact in Ask Tino');
+ const chooser=source.match(/<details class="tino-help-chooser"[^>]*>([\s\S]*?)<\/details>/)?.[1];
+ assert(chooser && chooser.includes('Choose how we can help') && chooser.includes('href="/contact.html#tell-us-your-plans"'),page+' must retain personal contact inside the single help chooser');
+ assert(!source.includes('class="tino-direct-contact"') && !source.includes('<div class="tino-options">'),page+' must not duplicate the help actions');
  assert(!/<aside\b[^>]*id="sideMenu"/.test(source),page+' retains the retired duplicate side menu');
  assert(source.includes('assets/language-dropdown.js'),page+' lacks shared navigation and Back to Top');
 }
