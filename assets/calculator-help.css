@@ -1,0 +1,12 @@
+html body .tool-box .fc-help-term{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;color:inherit;font:inherit;line-height:inherit;text-align:inherit;cursor:help;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-color:#95aaba;text-underline-offset:4px;text-decoration-thickness:1px}
+html body .tool-box .fc-calc-head .fc-help-term{text-decoration-color:#9eb3c2}
+html body .tool-box .fc-help-term:hover{color:#376d8b;text-decoration-style:solid}
+html body .tool-box .fc-calc-head .fc-help-term:hover{color:#fff}
+html body .tool-box .fc-help-term:focus-visible{outline:2px solid #7fa1b8;outline-offset:4px;border-radius:3px}
+.fc-calc-head .fc-help-hint{margin-top:12px;font-size:11px;color:#b7cbd9}
+.fc-help-card{position:fixed;z-index:100030;box-sizing:border-box;width:340px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:21px 24px;border:1px solid #d5e0e8;border-top:3px solid #537d98;border-radius:12px;background:#fff;color:#17364b;box-shadow:0 12px 36px #102b4330;font:400 13px/1.75 Manrope,Arial,sans-serif}
+.fc-help-card[hidden]{display:none}
+.fc-help-card>strong{display:block;padding-right:20px;font-size:15px;line-height:1.45;color:#102b43}
+.fc-help-card p{margin:10px 0 0}
+.fc-help-close{position:absolute;right:8px;top:6px;display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:50%;background:transparent;color:#526b7d;font:24px/1 Arial,sans-serif;cursor:pointer}
+.fc-help-close:hover{background:#edf3f7}.fc-help-close:focus-visible{outline:2px solid #7fa1b8}

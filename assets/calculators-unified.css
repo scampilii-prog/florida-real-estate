@@ -53,3 +53,10 @@ html body main #loans .tool-grid{grid-template-columns:1fr}
 .fc-calc-export button:focus-visible{outline:3px solid #9bb4c5;outline-offset:3px}
 .fc-invest-actions button[hidden]{display:none}
 @media(max-width:480px){.fc-calc-export{padding:16px}}
+/* The introduction and its single-row selector share the calculator frame. */
+html body main .tool-intro{max-width:none;width:100%;margin:30px 0;box-sizing:border-box}
+html body main .tool-nav{display:flex;flex-wrap:nowrap;gap:8px;width:100%;box-sizing:border-box;overflow-x:auto;padding-bottom:7px;scrollbar-width:thin}
+html body main .tool-nav a{flex:1 0 auto;white-space:nowrap;text-align:center;font-size:13px;line-height:1.4;padding:11px 12px;text-decoration:none;border:1px solid #dce5ec;border-radius:8px;background:#eaf0f4;color:#173b54}
+html body main .tool-nav a:hover{background:#dce7ef;border-color:#9fb6c6}
+html body main .tool-nav a:focus-visible{outline:2px solid #6f94ae;outline-offset:2px}
+@media(max-width:700px){html body main .tool-nav a{flex:0 0 auto}}

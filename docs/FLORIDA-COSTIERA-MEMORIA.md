@@ -552,3 +552,12 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Ampliación de Tino: cada una de las siete calculadoras tiene Print / Save PDF y Email results. El informe recoge entradas actuales y resultados; inversión incluye también seguro alternativo. Email prepara un mailto sin destinatario para revisar/enviar desde la aplicación del cliente, sin envío automático ni almacenamiento en servidor. PDF abre informe imprimible; el usuario elige Guardar como PDF en su navegador. Assets del hub versión 20261109-unified3.
 
 - Petición explícita de Tino: Investment calculator en el selector de Ask Tino apunta directamente a /calculators.html#investment-calculator en las 48 páginas, sin depender de la redirección antigua.
+
+
+## 43. Ayuda contextual en calculadoras — 2026-11-09
+- Tino solicita ventanitas al pasar mouse o pulsar, sin iconos al lado. Nombres y encabezados pasan a controles con subrayado punteado discreto, manteniendo asociación de etiquetas y campos.
+- Tarjeta flotante blanca de hasta 340 px con título, explicación y cierre; hover/foco muestra, clic fija, segundo clic/Escape/fuera cierra. Accesible con teclado y tacto, sin depender de hover. Se limita a la ventana.
+- Explicaciones de siete herramientas, campos de entrada, tabla de préstamos y resultados; términos dinámicos se reactivan tras recalcular. Contenido descriptivo del modelo, sin prometer aprobación o certeza contractual.
+- Archivos calculator-help.js/css versión 20261109-help1. Conserva controles, PDF y email existentes.
+
+- Ajuste adicional solicitado: título/texto/pasos/navegación usan todo el marco de las calculadoras, alineados a su borde izquierdo. Siete enlaces en una fila; en pantallas estrechas hay desplazamiento horizontal sin desbordar la página. CSS del conjunto versión 20261109-help2.
