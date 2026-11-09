@@ -550,3 +550,5 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Assets del hub versión 20261109-unified2. Mantener Ask Tino y otros proyectos separados.
 
 - Ampliación de Tino: cada una de las siete calculadoras tiene Print / Save PDF y Email results. El informe recoge entradas actuales y resultados; inversión incluye también seguro alternativo. Email prepara un mailto sin destinatario para revisar/enviar desde la aplicación del cliente, sin envío automático ni almacenamiento en servidor. PDF abre informe imprimible; el usuario elige Guardar como PDF en su navegador. Assets del hub versión 20261109-unified3.
+
+- Petición explícita de Tino: Investment calculator en el selector de Ask Tino apunta directamente a /calculators.html#investment-calculator en las 48 páginas, sin depender de la redirección antigua.
