@@ -529,3 +529,8 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 
 - Ampliación solicitada por Tino: primera opción «Ask Tino a question» cierra selector y enfoca la entrada sin salir del chat; los cuatro recursos quedan debajo.
 - Enlace compartible https://floridacostiera.com/?ask=tino abre el asistente automáticamente sin enviar mensajes ni crear consultas/contactos. Útil para dirigir clientes a preguntas iniciales. La apertura normal conserva control manual. Loader/cliente versión 20261109-chooser2.
+
+
+## 40. Selector más discreto — 2026-11-09
+- A petición de Tino, botón centrado de 260 px máximo, adaptable a pantallas estrechas; fondo blanco, borde gris azulado fino, texto azul marino y extremos redondeados. Se elimina fondo beige/dorado del selector y del menú.
+- Menú flotante de 300 px máximo, centrado; conserva las cinco acciones y acceso con teclado. CSS compartido 20261109-polish1. No cambia destinos ni comportamiento de Ask Tino.
