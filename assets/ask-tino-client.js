@@ -79,3 +79,9 @@ window.toggleTino=function(){
  if(open)document.getElementById('tinoText')?.focus();else launcher?.focus();
 };
 
+
+// A shareable entry point opens the assistant without submitting a message.
+if(window.location?.search && new URLSearchParams(window.location.search).get('ask')==='tino'){
+ const panel=document.getElementById('tinoPanel');
+ if(panel&&!panel.classList.contains('open'))window.toggleTino();
+}

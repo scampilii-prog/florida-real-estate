@@ -526,3 +526,6 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Sustituye los accesos visibles y el contacto separado por un único «Choose how we can help» (details/summary nativo, cerrado inicialmente).
 - Cuatro destinos del menú: Buying guide, Selling guide, Investment calculator y Contact Sabatino; mismos enlaces distintos de sección 38, en la misma pestaña. Se cierra al elegir; Escape cierra y devuelve foco al control.
 - Menú flotante hacia arriba, sin reducir la conversación al desplegar. Funciona al pulsar con ratón, tacto y teclado; no depende de hover ni del servicio IA. CSS 20261109-chooser1 en las 48 páginas.
+
+- Ampliación solicitada por Tino: primera opción «Ask Tino a question» cierra selector y enfoca la entrada sin salir del chat; los cuatro recursos quedan debajo.
+- Enlace compartible https://floridacostiera.com/?ask=tino abre el asistente automáticamente sin enviar mensajes ni crear consultas/contactos. Útil para dirigir clientes a preguntas iniciales. La apertura normal conserva control manual. Loader/cliente versión 20261109-chooser2.

@@ -396,6 +396,7 @@ footer.footer .lokation-logo{display:block!important;width:240px!important;max-w
 <details class="tino-help-chooser" onkeydown="if(event.key==='Escape'){this.removeAttribute('open');this.querySelector('summary').focus()}">
 <summary>Choose how we can help <span aria-hidden="true">⌃</span></summary>
 <nav aria-label="How we can help">
+<a href="#tinoText" onclick="event.preventDefault();this.closest('details').removeAttribute('open');document.getElementById('tinoText').focus()">Ask Tino a question</a>
 <a href="/buyers-guide.html" onclick="this.closest('details').removeAttribute('open')">Buying guide</a>
 <a href="/sellers-guide.html" onclick="this.closest('details').removeAttribute('open')">Selling guide</a>
 <a href="/investment-center.html#investment-calculator" onclick="this.closest('details').removeAttribute('open')">Investment calculator</a>
@@ -465,7 +466,7 @@ html body footer.footer .footer-inner > div:not(:first-child) > h3 {margin:0 0 2
   var d=document.createElement('div');d.id='google_translate_element';document.body.appendChild(d);
   var sc=document.createElement('script');sc.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';sc.async=true;sc.onerror=function(){console.warn('Translation service unavailable')};document.body.appendChild(sc);
 })();
-</script><script src="assets/language-dropdown.js?v=20261108-research1" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
+</script><script src="assets/language-dropdown.js?v=20261109-chooser2" defer></script><script src="assets/hero-photos.js?v=20261101-width1" defer></script>
 <script src="assets/inquiry-form.js?v=20261108-research1" defer></script></body></html>
 
 
