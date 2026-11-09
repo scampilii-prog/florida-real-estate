@@ -568,3 +568,9 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Cada encabezado contiene un desplegable visible How to use this calculator / Step-by-step guide & worked example: objetivo, cinco pasos específicos, interpretación, ejemplo numérico, ejercicio para probar y enlace al primer campo. Las guías no cambian entradas automáticamente.
 - Se elimina el tooltip genérico del título y la pista pequeña; se conservan ventanas para campos/resultados. Instrucciones de PDF/email incluidas en las siete guías; ejemplos de inversión, hipoteca, cash-to-close, subtotal del vendedor, ratios ilustrativos, comparación de préstamos y aritmética de fechas. Sin presentar muestras como cotizaciones, aprobación o plazos legales.
 - CSS/JS de ayuda versión 20261109-guides2. Mantiene selector de una fila alineado, cálculos y exportaciones.
+
+
+## 45. Destinos directos y pertenencia de PDF/email — 2026-11-09
+- Tino muestra barra de exportación anterior junto al título de herramienta 03. Se identifica cada barra con Results for + nombre de su calculadora; PDF/email validan el section.tool-box contenedor, detienen navegación ajena y conservan su propio alcance.
+- Prueba inicial de los siete enlaces durante desplazamiento mostró destinos inconsistentes en varios clics. Se desactiva scroll suave global solo en Calculators y se instala salto directo explícito a cada ID con compensación del encabezado fijo y foco sin scroll. No cambia el orden de herramientas.
+- Nuevo calculator-navigation.js; CSS/exportador versión 20261109-navigation1. Se conservan guías, ayuda, PDF/email y todas las fórmulas.

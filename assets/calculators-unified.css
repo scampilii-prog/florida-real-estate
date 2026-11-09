@@ -60,3 +60,8 @@ html body main .tool-nav a{flex:1 0 auto;white-space:nowrap;text-align:center;fo
 html body main .tool-nav a:hover{background:#dce7ef;border-color:#9fb6c6}
 html body main .tool-nav a:focus-visible{outline:2px solid #6f94ae;outline-offset:2px}
 @media(max-width:700px){html body main .tool-nav a{flex:0 0 auto}}
+
+/* Direct jumps keep a moving page from changing the selected destination. */
+html[data-fc-calculators],html[data-fc-calculators] body{scroll-behavior:auto!important}
+.fc-calc-export-name{flex-basis:100%;display:block;color:#153e59;font-size:13px;line-height:1.5}
+.tool-box:focus{outline:none}

@@ -29,10 +29,20 @@ vm.runInNewContext(read('assets/calculators-export.js'),exportScope);
 for(const id of Object.keys(sections)){
  assert(html.includes('data-calc-action="pdf" data-calc-id="'+id+'"'));
  assert(html.includes('data-calc-action="email" data-calc-id="'+id+'"'));
- exportClick({target:{closest(){return {dataset:{calcAction:'email',calcId:id}}}}});
+ exportClick({preventDefault(){},stopImmediatePropagation(){},target:{closest(){return {dataset:{calcAction:'email',calcId:id},closest(){return sections[id]}}}}});
  const email=new URL(exportScope.window.location.href);assert.equal(email.protocol,'mailto:');assert(email.searchParams.get('body').includes('Estimated result: $123.45 <example>'));assert(email.searchParams.get('body').includes('Sample & input: 123'));
- exportClick({target:{closest(){return {dataset:{calcAction:'pdf',calcId:id}}}}});
+ exportClick({preventDefault(){},stopImmediatePropagation(){},target:{closest(){return {dataset:{calcAction:'pdf',calcId:id},closest(){return sections[id]}}}}});
  if(id!=='investment-calculator')assert(reportHtml.includes('Sample &amp; input')&&reportHtml.includes('&lt;example&gt;'),'PDF data must be escaped');
 }
 assert(delegated,'Investment PDF must retain its detailed scenario report');
 console.log('All seven PDF/email controls: snapshots, mail draft content and escaped reports passed.');
+let navigationClick,lastScroll;
+const navigationLocation={hash:''};
+const navigationSections=Object.fromEntries(Object.keys(sections).map(id=>[id,{id,classList:{contains(c){return c==='tool-box'}},getBoundingClientRect(){return {top:300}},setAttribute(){},focus(options){assert.equal(options.preventScroll,true)}}]));
+const navigationRoot={addEventListener(type,fn){navigationClick=fn},contains(){return true}};
+vm.runInNewContext(read('assets/calculator-navigation.js'),{document:{querySelector(selector){return selector==='.tool-nav'?navigationRoot:{getBoundingClientRect(){return {bottom:98}}}},getElementById(id){return navigationSections[id]}},location:navigationLocation,history:{pushState(a,b,hash){navigationLocation.hash=hash}},window:{scrollY:100,scrollTo(options){lastScroll=options}}});
+for(const id of Object.keys(navigationSections)){
+ let prevented=false;navigationClick({preventDefault(){prevented=true},stopImmediatePropagation(){},target:{closest(){return {getAttribute(){return '#'+id}}}}});
+ assert(prevented);assert.equal(navigationLocation.hash,'#'+id);assert.equal(lastScroll.top,288);assert.equal(lastScroll.behavior,'instant');
+}
+console.log('Seven navigation destinations: direct jump, fixed-header offset and focus passed.');

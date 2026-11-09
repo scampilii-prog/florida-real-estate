@@ -24,7 +24,8 @@
  }
  document.addEventListener('click',event=>{
   const button=event.target.closest?.('[data-calc-action]');if(!button)return;
-  const section=document.getElementById(button.dataset.calcId);if(!section)return;
+  const section=button.closest('.tool-box');if(!section||section.id!==button.dataset.calcId)return;
+  event.preventDefault();event.stopImmediatePropagation();
   const data=collect(section);
   if(button.dataset.calcAction==='pdf'){
    if(section.id==='investment-calculator'){document.getElementById('inv-investment-report-print').click();return;}
@@ -32,5 +33,5 @@
   }
   const body=data.title+'\nFlorida Costiera · '+new Date().toLocaleDateString('en-US')+'\n\nENTERED ASSUMPTIONS\n'+data.fields.map(([k,v])=>k+': '+v).join('\n')+'\n\nESTIMATED RESULTS\n'+data.results+'\n\nPlanning estimates only. Confirm property-specific costs and contract terms with the appropriate professional.\n\nSabatino Campilii, Realtor® · LoKation® Real Estate\n(941) 270-4877 · sabatino@floridacostiera.com\nhttps://floridacostiera.com/calculators#'+section.id;
   window.location.href='mailto:?subject='+encodeURIComponent(data.title+' — Florida Costiera')+'&body='+encodeURIComponent(body);
- });
+ },true);
 })();
