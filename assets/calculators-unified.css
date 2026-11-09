@@ -21,3 +21,35 @@ html body main #loans .tool-grid{grid-template-columns:1fr}
 #loans .tool-results{overflow-x:auto}
 @media(max-width:800px){.fc-calc-layout{grid-template-columns:1fr;padding:20px;gap:20px}.fc-calc-head{padding:22px 20px}}
 @media(max-width:480px){html body main .tool-box .tool-grid{grid-template-columns:1fr}.fc-calc-layout{padding:16px}.fc-calc-head{padding:20px 16px}html body main .tool-box .fc-calc-head h2{font-size:21px}}
+
+/* Investment detail stays close to the estimates, without a second destination. */
+.fc-calc-steps{display:flex;flex-wrap:wrap;gap:12px 26px;margin:24px 0;color:#476174;font-size:13px}
+.fc-calc-steps span{display:flex;align-items:center;gap:8px}.fc-calc-steps b{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#102b43;color:#fff}
+.fc-invest-extras{margin:-8px 0 42px;color:#102b43}
+.fc-invest-detail{margin:10px 0;border:1px solid #d8e2e9;border-radius:12px;background:white;overflow:hidden}
+.fc-invest-detail>summary{padding:18px 22px;cursor:pointer;font:700 15px/1.5 Manrope,Arial,sans-serif;color:#173b54;background:#f7f9fb}
+.fc-invest-detail>summary:hover{background:#eef3f7}
+.fc-invest-detail-body{padding:22px 26px;font-size:14px;line-height:1.75}
+.fc-invest-detail-body h2{font-size:23px}.fc-invest-detail-body h3{font-size:19px}.fc-invest-detail-body h4{font-size:15px;margin:0 0 8px}
+.fc-invest-detail-body .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#667b8b}
+.fc-invest-detail-body .compare,.fc-invest-detail-body .risk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}
+.fc-invest-detail-body .metric-card,.fc-invest-detail-body .risk-grid article{padding:20px;background:#f4f7fa;border-radius:10px}
+.metric-card>span{font-size:11px;font-weight:800}.metric-card>strong{display:block;font-size:30px;margin:8px 0;color:#153e59}
+.bar-track{height:7px;background:#dce6ed;border-radius:6px;overflow:hidden}.bar-fill{height:100%;background:#bd965b}.bar-fill.net{background:#326d86}
+.key-note{font-size:12px;line-height:1.75;color:#526b7d}
+.investment-scenario-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px;align-items:center;margin:20px 0}
+.investment-scenario-input{font-size:13px;font-weight:700}.investment-scenario-input input{box-sizing:border-box;display:block;width:100%;padding:12px;margin-top:8px;border:1px solid #cbd7df;border-radius:7px;font:inherit}
+.investment-scenario-result{padding:18px;background:#f4f7fa;border-radius:10px}.investment-scenario-result small{display:block}.investment-scenario-result strong{display:block;font-size:25px;margin-top:6px}
+.community{display:flex;gap:8px;flex-wrap:wrap}.community a{padding:8px 12px;border:1px solid #d9e3ea;border-radius:20px;text-decoration:none;background:#fff;font-size:12px;color:#153e59}
+.fc-invest-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:22px 25px;background:#edf3f7;border-radius:12px;margin-top:15px}.fc-invest-actions>div{flex:1 1 300px}.fc-invest-actions p{font-size:12px;line-height:1.7;margin:5px 0 0;color:#526b7d}
+.fc-invest-actions button{padding:12px 18px;border:0;border-radius:8px;background:#102b43;color:white;font:700 13px Manrope,Arial,sans-serif;cursor:pointer}.fc-invest-actions a{font-size:13px;font-weight:700;color:#153e59}
+.fc-invest-extras :is(summary,button,a,input):focus-visible{outline:3px solid #9bb4c5;outline-offset:3px}
+@media(max-width:700px){.fc-invest-detail-body .compare,.fc-invest-detail-body .risk-grid,.investment-scenario-grid{grid-template-columns:1fr}.fc-invest-detail-body{padding:18px}.fc-calc-steps{gap:10px;font-size:12px}}
+
+.fc-calc-export{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:16px 30px;border-top:1px solid #e2e9ef;background:#f9fbfc}
+.fc-calc-export button{min-height:40px;padding:10px 16px;border:1px solid #bccbd6;border-radius:7px;background:#fff;color:#102b43;font:700 12px Manrope,Arial,sans-serif;cursor:pointer}
+.fc-calc-export button:first-child{background:#102b43;border-color:#102b43;color:#fff}
+.fc-calc-export button:hover{box-shadow:0 2px 8px #102b4320}.fc-calc-export small{flex:1 1 260px;color:#617383;font-size:11px;line-height:1.6}
+.fc-calc-export button:focus-visible{outline:3px solid #9bb4c5;outline-offset:3px}
+.fc-invest-actions button[hidden]{display:none}
+@media(max-width:480px){.fc-calc-export{padding:16px}}

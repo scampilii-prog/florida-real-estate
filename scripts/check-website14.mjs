@@ -113,7 +113,7 @@ console.log('Website 15 Questions navigation and form safeguards present.');
 // Google launch guard: sitemap lists every public page once, excludes offline/demo pages.
 const sitemapXml=read('sitemap.xml');
 const listed=[...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
-const expectedPublic=productionPages.filter(n=>n!=='index.html').map(n=>'https://floridacostiera.com/'+n.replace(/\.html$/,''));
+const expectedPublic=productionPages.filter(n=>!['index.html','investment-center.html'].includes(n)).map(n=>'https://floridacostiera.com/'+n.replace(/\.html$/,''));
 expectedPublic.push('https://floridacostiera.com/');
 assert.equal(new Set(listed).size,listed.length,'Duplicate sitemap locations');
 for(const u of expectedPublic)assert(listed.includes(u),'Missing sitemap URL: '+u);
@@ -131,7 +131,7 @@ for(const url of listed){
 }
 
 for(const page of productionPages){
- const html=read(page), expected='https://floridacostiera.com/'+(page==='index.html'?'':page.replace(/\.html$/,''));
+ const html=read(page), expected='https://floridacostiera.com/'+(page==='index.html'?'':page==='investment-center.html'?'calculators':page.replace(/\.html$/,''));
  const canonicals=[...html.matchAll(/<link\b[^>]*\brel="canonical"[^>]*>/g)];
  assert.equal(canonicals.length,1,page+' must have one canonical');
  assert(canonicals[0][0].includes('href="'+expected+'"'),page+' canonical must match its final Cloudflare URL');
@@ -179,3 +179,5 @@ console.log('Structural regression and common inquiry checks passed. Browser vis
 
 execFileSync(process.execPath,[new URL('./check-ask-tino-research.mjs',import.meta.url).pathname],{stdio:'inherit'});
 execFileSync(process.execPath,[new URL('./check-ask-tino-policy.mjs',import.meta.url).pathname],{stdio:'inherit'});
+
+execFileSync(process.execPath,[new URL('./check-investment-hub.mjs',import.meta.url).pathname],{stdio:'inherit'});

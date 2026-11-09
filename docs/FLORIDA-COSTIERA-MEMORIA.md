@@ -540,3 +540,13 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 - Se incorpora Investment Property Calculator completa como herramienta 01 en /calculators, antes de Mortgage. Conserva 14 campos y 8 resultados (renta efectiva, gastos, NOI, cap rate, deuda, flujo, efectivo invertido y cash-on-cash), con IDs inv- para evitar colisiones. Se conserva Investment Center original.
 - Siete herramientas, accesos y numeración actualizados. Las seis anteriores conservan IDs, fórmulas y controles desplegables; se agrupan con encabezado azul marino, campos a la izquierda/resultados claros a la derecha. Comparación de préstamos mantiene ancho completo para tres escenarios; móvil apila columnas.
 - CSS específico calculators-unified.css e inversión investment-calculator-hub.js versionados 20261109-invest1. Sin cambios a otros proyectos.
+
+
+## 42. Una sola página de calculadoras e inversión — 2026-11-09
+- /calculators integra siete herramientas y la información útil de Investment Center. Inversión sigue primero; introducción compacta de tres pasos y eliminación de la foto decorativa intermedia para llegar antes a la herramienta.
+- Tras la calculadora de inversión: tres desplegables para entender rentabilidad bruta/cap rate/flujo, probar otra prima de seguro y revisar propiedad/comunidad (seguros, alquileres, impuestos, HOA/CDD, mantenimiento, mercado, waterfront y 1031 con asesor). Conserva enlaces a nueve comunidades.
+- Vuelve el informe imprimible con entradas, resultados y escenario; botón visible junto a Ask Tino. Nuevos módulos usan IDs inv- sin afectar las seis herramientas anteriores.
+- _redirects dirige /investment-center, variante .html y barra final a /calculators#investment-calculator. Archivo anterior conservado como fuente de respaldo; canonical apunta a Calculators y se elimina URL antigua de sitemap. Comprobación de canonical/sitemap reconoce esta consolidación.
+- Assets del hub versión 20261109-unified2. Mantener Ask Tino y otros proyectos separados.
+
+- Ampliación de Tino: cada una de las siete calculadoras tiene Print / Save PDF y Email results. El informe recoge entradas actuales y resultados; inversión incluye también seguro alternativo. Email prepara un mailto sin destinatario para revisar/enviar desde la aplicación del cliente, sin envío automático ni almacenamiento en servidor. PDF abre informe imprimible; el usuario elige Guardar como PDF en su navegador. Assets del hub versión 20261109-unified3.
