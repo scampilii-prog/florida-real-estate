@@ -534,3 +534,9 @@ Esta instrucción permite retomar al recibir un mensaje del usuario; no crea eje
 ## 40. Selector más discreto — 2026-11-09
 - A petición de Tino, botón centrado de 260 px máximo, adaptable a pantallas estrechas; fondo blanco, borde gris azulado fino, texto azul marino y extremos redondeados. Se elimina fondo beige/dorado del selector y del menú.
 - Menú flotante de 300 px máximo, centrado; conserva las cinco acciones y acceso con teclado. CSS compartido 20261109-polish1. No cambia destinos ni comportamiento de Ask Tino.
+
+
+## 41. Calculators: inversión primero y estilo uniforme — 2026-11-09
+- Se incorpora Investment Property Calculator completa como herramienta 01 en /calculators, antes de Mortgage. Conserva 14 campos y 8 resultados (renta efectiva, gastos, NOI, cap rate, deuda, flujo, efectivo invertido y cash-on-cash), con IDs inv- para evitar colisiones. Se conserva Investment Center original.
+- Siete herramientas, accesos y numeración actualizados. Las seis anteriores conservan IDs, fórmulas y controles desplegables; se agrupan con encabezado azul marino, campos a la izquierda/resultados claros a la derecha. Comparación de préstamos mantiene ancho completo para tres escenarios; móvil apila columnas.
+- CSS específico calculators-unified.css e inversión investment-calculator-hub.js versionados 20261109-invest1. Sin cambios a otros proyectos.
